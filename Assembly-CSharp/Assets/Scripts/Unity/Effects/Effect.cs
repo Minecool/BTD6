@@ -28,7 +28,7 @@ public class Effect : CascadingItemProxy
 
 	public EffectModel Def
 	{
-		 get { } //Length: 649
+		 get { } //Length: 650
 	}
 
 	public virtual Model Model

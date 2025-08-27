@@ -7,13 +7,13 @@ public abstract class BasePopupField : BaseField<TValueType>
 	private sealed class <>c
 	{
 		public static readonly <>c<TValueType, TValueChoice> <>9; //Field offset: 0x0
-		public static EventCallback<MouseDownEvent> <>9__23_0; //Field offset: 0x0
+		public static EventCallback<MouseDownEvent> <>9__28_0; //Field offset: 0x0
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <.ctor>b__23_0(MouseDownEvent e) { }
+		internal void <.ctor>b__28_0(MouseDownEvent e) { }
 
 	}
 
@@ -26,6 +26,8 @@ public abstract class BasePopupField : BaseField<TValueType>
 
 	}
 
+	internal static readonly BindingId choicesProperty; //Field offset: 0x0
+	internal static readonly BindingId textProperty; //Field offset: 0x0
 	public static readonly string ussClassName; //Field offset: 0x0
 	public static readonly string textUssClassName; //Field offset: 0x0
 	public static readonly string arrowUssClassName; //Field offset: 0x0
@@ -34,13 +36,24 @@ public abstract class BasePopupField : BaseField<TValueType>
 	internal List<TValueChoice> m_Choices; //Field offset: 0x0
 	private TextElement m_TextElement; //Field offset: 0x0
 	private VisualElement m_ArrowElement; //Field offset: 0x0
+	private IVisualElementScheduledItem m_ScheduledShowMenuItem; //Field offset: 0x0
 	internal Func<TValueChoice, String> m_FormatSelectedValueCallback; //Field offset: 0x0
 	internal Func<TValueChoice, String> m_FormatListItemCallback; //Field offset: 0x0
 	internal Func<IGenericMenu> createMenuCallback; //Field offset: 0x0
+	internal IGenericMenu m_GenericMenu; //Field offset: 0x0
+	internal bool m_AutoCloseMenu; //Field offset: 0x0
 
+	[CreateProperty]
 	public override List<TValueChoice> choices
 	{
-		 set { } //Length: 141
+		 get { } //Length: 10
+		 set { } //Length: 244
+	}
+
+	[CreateProperty(ReadOnly = True)]
+	public string text
+	{
+		 get { } //Length: 45
 	}
 
 	protected TextElement textElement
@@ -56,6 +69,10 @@ public abstract class BasePopupField : BaseField<TValueType>
 
 	private bool ContainsPointer(int pointerId) { }
 
+	public override List<TValueChoice> get_choices() { }
+
+	public string get_text() { }
+
 	protected TextElement get_textElement() { }
 
 	internal abstract string GetListItemToDisplay(TValueType item) { }
@@ -67,6 +84,8 @@ public abstract class BasePopupField : BaseField<TValueType>
 	private void OnPointerDownEvent(PointerDownEvent evt) { }
 
 	private void OnPointerMoveEvent(PointerMoveEvent evt) { }
+
+	private void OnPointerUpEvent(PointerUpEvent evt) { }
 
 	private void ProcessPointerDown(PointerEventBase<T> evt) { }
 

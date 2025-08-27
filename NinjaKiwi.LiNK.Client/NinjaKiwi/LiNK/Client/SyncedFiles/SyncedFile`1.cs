@@ -3,7 +3,7 @@ namespace NinjaKiwi.LiNK.Client.SyncedFiles;
 public abstract class SyncedFile
 {
 	[CompilerGenerated]
-	private struct <Sync>d__14 : IAsyncStateMachine
+	private struct <Sync>d__17 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x0
@@ -69,6 +69,7 @@ public abstract class SyncedFile
 	protected readonly File<T> file; //Field offset: 0x0
 	protected readonly Flag<T> modifiedSinceSync; //Field offset: 0x0
 	protected private readonly Logger logger; //Field offset: 0x0
+	private ILiNKAccountHolder liNKAccountHolder; //Field offset: 0x0
 	private bool isFirstSync; //Field offset: 0x0
 	[CompilerGenerated]
 	private Action CheckingEtagEvent; //Field offset: 0x0
@@ -95,6 +96,11 @@ public abstract class SyncedFile
 	{
 		 get { } //Length: 27
 		 set { } //Length: 27
+	}
+
+	protected LiNKAccount LiNKAccount
+	{
+		 get { } //Length: 73
 	}
 
 	public private Action<DataConflict`1<T>> OnDataConflict
@@ -129,6 +135,8 @@ public abstract class SyncedFile
 
 	public T get_Content() { }
 
+	protected LiNKAccount get_LiNKAccount() { }
+
 	[CompilerGenerated]
 	private Action<DataConflict`1<T>> get_OnDataConflict() { }
 
@@ -159,9 +167,11 @@ public abstract class SyncedFile
 
 	public void SetContentAndSave(T newContent) { }
 
+	internal void SetLiNKAccountHolder(ILiNKAccountHolder liNKAccountHolder) { }
+
 	protected abstract Task Sync(SyncContext<T> syncContext) { }
 
-	[AsyncStateMachine(typeof(<Sync>d__14))]
+	[AsyncStateMachine(typeof(<Sync>d__17))]
 	public Task Sync() { }
 
 	public void WipeLocalStorage() { }

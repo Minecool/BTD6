@@ -146,8 +146,8 @@ public class XmlSchema : XmlSchemaObject
 		internal get { } //Length: 111
 	}
 
-	[XmlElement("include", typeof(XmlSchemaInclude))]
 	[XmlElement("import", typeof(XmlSchemaImport))]
+	[XmlElement("include", typeof(XmlSchemaInclude))]
 	[XmlElement("redefine", typeof(XmlSchemaRedefine))]
 	public XmlSchemaObjectCollection Includes
 	{
@@ -182,14 +182,14 @@ public class XmlSchema : XmlSchemaObject
 		internal set { } //Length: 511
 	}
 
-	[XmlElement("annotation", typeof(XmlSchemaAnnotation))]
-	[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
-	[XmlElement("complexType", typeof(XmlSchemaComplexType))]
-	[XmlElement("element", typeof(XmlSchemaElement))]
-	[XmlElement("group", typeof(XmlSchemaGroup))]
-	[XmlElement("attribute", typeof(XmlSchemaAttribute))]
 	[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroup))]
+	[XmlElement("annotation", typeof(XmlSchemaAnnotation))]
 	[XmlElement("notation", typeof(XmlSchemaNotation))]
+	[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+	[XmlElement("group", typeof(XmlSchemaGroup))]
+	[XmlElement("element", typeof(XmlSchemaElement))]
+	[XmlElement("complexType", typeof(XmlSchemaComplexType))]
+	[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
 	public XmlSchemaObjectCollection Items
 	{
 		 get { } //Length: 5

@@ -1,7 +1,7 @@
 namespace Assets.Scripts.Simulation.Objects;
 
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public class RootObjectLockList : LockList<T>
 {
 	[CompilerGenerated]

@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class Slider : BaseSlider<Single>
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Slider, UxmlTraits>
 	{
 
@@ -9,14 +10,15 @@ public class Slider : BaseSlider<Single>
 
 	}
 
-	internal class UxmlTraits : UxmlTraits<Single>
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
+	internal class UxmlTraits : UxmlTraits<Single, UxmlFloatAttributeDescription>
 	{
-		private UxmlFloatAttributeDescription m_LowValue; //Field offset: 0x80
-		private UxmlFloatAttributeDescription m_HighValue; //Field offset: 0x88
-		private UxmlFloatAttributeDescription m_PageSize; //Field offset: 0x90
-		private UxmlBoolAttributeDescription m_ShowInputField; //Field offset: 0x98
-		private UxmlEnumAttributeDescription<SliderDirection> m_Direction; //Field offset: 0xA0
-		private UxmlBoolAttributeDescription m_Inverted; //Field offset: 0xA8
+		private UxmlFloatAttributeDescription m_LowValue; //Field offset: 0xA0
+		private UxmlFloatAttributeDescription m_HighValue; //Field offset: 0xA8
+		private UxmlFloatAttributeDescription m_PageSize; //Field offset: 0xB0
+		private UxmlBoolAttributeDescription m_ShowInputField; //Field offset: 0xB8
+		private UxmlEnumAttributeDescription<SliderDirection> m_Direction; //Field offset: 0xC0
+		private UxmlBoolAttributeDescription m_Inverted; //Field offset: 0xC8
 
 		public UxmlTraits() { }
 
@@ -45,6 +47,8 @@ public class Slider : BaseSlider<Single>
 	internal virtual float SliderLerpUnclamped(float a, float b, float interpolant) { }
 
 	internal virtual float SliderNormalizeValue(float currentValue, float lowerValue, float higherValue) { }
+
+	internal virtual float SliderRange() { }
 
 }
 

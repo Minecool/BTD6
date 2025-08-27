@@ -7,9 +7,9 @@ public class SpawnPowerAtLocation : SimulationBehavior
 	[PowerType]
 	public string power; //Field offset: 0x38
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
-		 get { } //Length: 190
+		 get { } //Length: 193
 	}
 
 	public virtual string Type
@@ -19,7 +19,7 @@ public class SpawnPowerAtLocation : SimulationBehavior
 
 	public SpawnPowerAtLocation() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

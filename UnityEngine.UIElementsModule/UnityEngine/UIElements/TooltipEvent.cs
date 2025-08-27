@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::Tooltip (15))]
+[EventCategory(EventCategory::Tooltip (16))]
 public class TooltipEvent : EventBase<TooltipEvent>
 {
 	[CompilerGenerated]
@@ -18,21 +18,21 @@ public class TooltipEvent : EventBase<TooltipEvent>
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <tooltip>k__BackingField; //Field offset: 0x88
+	private string <tooltip>k__BackingField; //Field offset: 0x68
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Rect <rect>k__BackingField; //Field offset: 0x90
+	private Rect <rect>k__BackingField; //Field offset: 0x70
 
 	public Rect rect
 	{
 		[CompilerGenerated]
-		 set { } //Length: 11
+		 set { } //Length: 8
 	}
 
 	public string tooltip
 	{
 		[CompilerGenerated]
-		 set { } //Length: 8
+		 set { } //Length: 5
 	}
 
 	private static TooltipEvent() { }

@@ -39,8 +39,8 @@ public class ObjectParameter : VolumeParameter<T>
 
 	public virtual T value
 	{
-		 get { } //Length: 172
-		 set { } //Length: 1446
+		 get { } //Length: 144
+		 set { } //Length: 1420
 	}
 
 	public ObjectParameter`1(T value) { }

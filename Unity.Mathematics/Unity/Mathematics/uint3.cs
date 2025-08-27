@@ -24,6 +24,8 @@ public struct uint3 : IEquatable<uint3>, IFormattable
 
 	public static uint3 op_Addition(uint3 lhs, uint3 rhs) { }
 
+	public static uint3 op_BitwiseAnd(uint3 lhs, uint rhs) { }
+
 	public static uint3 op_ExclusiveOr(uint3 lhs, uint3 rhs) { }
 
 	public static uint3 op_Multiply(uint3 lhs, uint3 rhs) { }

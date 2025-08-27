@@ -24,7 +24,7 @@ public class RemoveDamageTypeModifierModel : ProjectileBehaviorModel
 
 	public RemoveDamageTypeModifierMutator mutator
 	{
-		 get { } //Length: 227
+		 get { } //Length: 231
 	}
 
 	public RemoveDamageTypeModifierModel(string name, float lifespan, string mutationId, int layers, BloonProperties bloonPropertiesToRemove, RemoveDamageTypeModifierMutator mutator = null) { }

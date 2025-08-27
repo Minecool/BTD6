@@ -13,7 +13,9 @@ public class UniversalRenderPipelineDebugDisplaySettings : DebugDisplaySettings<
 	[CompilerGenerated]
 	private DebugDisplaySettingsVolume <volumeSettings>k__BackingField; //Field offset: 0x38
 	[CompilerGenerated]
-	private DebugDisplayStats <displayStats>k__BackingField; //Field offset: 0x40
+	private DebugDisplaySettingsStats<URPProfileId> <displayStats>k__BackingField; //Field offset: 0x40
+	[CompilerGenerated]
+	private DebugDisplayGPUResidentDrawer <gpuResidentDrawerSettings>k__BackingField; //Field offset: 0x48
 
 	private DebugDisplaySettingsCommon commonSettings
 	{
@@ -23,7 +25,15 @@ public class UniversalRenderPipelineDebugDisplaySettings : DebugDisplaySettings<
 		private set { } //Length: 5
 	}
 
-	internal DebugDisplayStats displayStats
+	internal DebugDisplaySettingsStats<URPProfileId> displayStats
+	{
+		[CompilerGenerated]
+		internal get { } //Length: 5
+		[CompilerGenerated]
+		private set { } //Length: 5
+	}
+
+	internal DebugDisplayGPUResidentDrawer gpuResidentDrawerSettings
 	{
 		[CompilerGenerated]
 		internal get { } //Length: 5
@@ -74,7 +84,10 @@ public class UniversalRenderPipelineDebugDisplaySettings : DebugDisplaySettings<
 	private DebugDisplaySettingsCommon get_commonSettings() { }
 
 	[CompilerGenerated]
-	internal DebugDisplayStats get_displayStats() { }
+	internal DebugDisplaySettingsStats<URPProfileId> get_displayStats() { }
+
+	[CompilerGenerated]
+	internal DebugDisplayGPUResidentDrawer get_gpuResidentDrawerSettings() { }
 
 	public virtual bool get_IsPostProcessingAllowed() { }
 
@@ -96,7 +109,10 @@ public class UniversalRenderPipelineDebugDisplaySettings : DebugDisplaySettings<
 	private void set_commonSettings(DebugDisplaySettingsCommon value) { }
 
 	[CompilerGenerated]
-	private void set_displayStats(DebugDisplayStats value) { }
+	private void set_displayStats(DebugDisplaySettingsStats<URPProfileId> value) { }
+
+	[CompilerGenerated]
+	private void set_gpuResidentDrawerSettings(DebugDisplayGPUResidentDrawer value) { }
 
 	[CompilerGenerated]
 	private void set_lightingSettings(DebugDisplaySettingsLighting value) { }
@@ -110,7 +126,9 @@ public class UniversalRenderPipelineDebugDisplaySettings : DebugDisplaySettings<
 	[CompilerGenerated]
 	private void set_volumeSettings(DebugDisplaySettingsVolume value) { }
 
-	internal void UpdateFrameTiming() { }
+	internal void UpdateDisplayStats() { }
+
+	internal void UpdateMaterials() { }
 
 }
 

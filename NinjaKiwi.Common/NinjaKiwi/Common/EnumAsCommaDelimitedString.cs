@@ -45,8 +45,8 @@ public class EnumAsCommaDelimitedString : PropertyAttribute
 
 	}
 
-	public Type enumType; //Field offset: 0x10
-	public bool representEverythingAsEmptyString; //Field offset: 0x18
+	public Type enumType; //Field offset: 0x18
+	public bool representEverythingAsEmptyString; //Field offset: 0x20
 
 	public EnumAsCommaDelimitedString(Type enumType, bool representEverythingAsEmptyString) { }
 

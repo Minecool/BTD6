@@ -23,7 +23,7 @@ public class SslStream : AuthenticatedStream
 
 	public virtual bool CanRead
 	{
-		 get { } //Length: 34
+		 get { } //Length: 32
 	}
 
 	public virtual bool CanSeek
@@ -38,50 +38,50 @@ public class SslStream : AuthenticatedStream
 
 	public virtual bool CanWrite
 	{
-		 get { } //Length: 34
+		 get { } //Length: 32
 	}
 
 	internal MobileAuthenticatedStream Impl
 	{
-		internal get { } //Length: 102
+		internal get { } //Length: 100
 	}
 
 	internal string InternalTargetHost
 	{
-		internal get { } //Length: 109
+		internal get { } //Length: 107
 	}
 
 	public virtual bool IsAuthenticated
 	{
-		 get { } //Length: 121
+		 get { } //Length: 119
 	}
 
 	public virtual long Length
 	{
-		 get { } //Length: 121
+		 get { } //Length: 119
 	}
 
 	public override X509Certificate LocalCertificate
 	{
-		 get { } //Length: 108
+		 get { } //Length: 106
 	}
 
 	public virtual long Position
 	{
-		 get { } //Length: 121
+		 get { } //Length: 119
 		 set { } //Length: 95
 	}
 
 	public virtual int ReadTimeout
 	{
-		 get { } //Length: 121
-		 set { } //Length: 118
+		 get { } //Length: 119
+		 set { } //Length: 116
 	}
 
 	public virtual int WriteTimeout
 	{
-		 get { } //Length: 121
-		 set { } //Length: 118
+		 get { } //Length: 119
+		 set { } //Length: 116
 	}
 
 	public SslStream(Stream innerStream, bool leaveInnerStreamOpen, RemoteCertificateValidationCallback userCertificateValidationCallback) { }

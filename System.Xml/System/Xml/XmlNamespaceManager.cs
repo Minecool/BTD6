@@ -24,7 +24,7 @@ public class XmlNamespaceManager : IXmlNamespaceResolver, IEnumerable
 
 	public override string DefaultNamespace
 	{
-		 get { } //Length: 104
+		 get { } //Length: 67
 	}
 
 	public override XmlNameTable NameTable

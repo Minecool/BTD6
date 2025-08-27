@@ -8,7 +8,7 @@ public class FilterTowerByPlaceableArea : TowerFilter
 
 	public virtual TowerFilterModel Def
 	{
-		 get { } //Length: 608
+		 get { } //Length: 606
 	}
 
 	public FilterTowerByPlaceableArea() { }

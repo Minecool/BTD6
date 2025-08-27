@@ -16,7 +16,7 @@ public class EjectMultipleTestEffect : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 505
+		 get { } //Length: 506
 	}
 
 	public EjectMultipleTestEffect() { }

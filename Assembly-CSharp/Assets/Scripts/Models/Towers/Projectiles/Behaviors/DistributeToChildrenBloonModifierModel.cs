@@ -18,7 +18,7 @@ public class DistributeToChildrenBloonModifierModel : ProjectileBehaviorModel
 
 	public Mutator mutator
 	{
-		 get { } //Length: 220
+		 get { } //Length: 224
 	}
 
 	public DistributeToChildrenBloonModifierModel(string name, string tag, Mutator mutator = null) { }

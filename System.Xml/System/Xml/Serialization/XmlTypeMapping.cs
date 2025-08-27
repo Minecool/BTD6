@@ -68,7 +68,7 @@ public class XmlTypeMapping : XmlMapping
 
 	internal string XmlTypeNamespace
 	{
-		internal get { } //Length: 69
+		internal get { } //Length: 27
 		internal set { } //Length: 5
 	}
 

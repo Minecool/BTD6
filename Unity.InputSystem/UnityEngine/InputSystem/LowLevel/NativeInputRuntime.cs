@@ -60,14 +60,15 @@ internal class NativeInputRuntime : IInputRuntime
 		 get { } //Length: 64
 	}
 
-	public override bool isInBatchMode
+	public override bool isPlayerFocused
 	{
 		 get { } //Length: 64
 	}
 
-	public override bool isPlayerFocused
+	public override bool normalizeScrollWheelDelta
 	{
 		 get { } //Length: 64
+		 set { } //Length: 73
 	}
 
 	public override Action<InputUpdateType> onBeforeUpdate
@@ -125,7 +126,12 @@ internal class NativeInputRuntime : IInputRuntime
 
 	public override Vector2 screenSize
 	{
-		 get { } //Length: 55
+		 get { } //Length: 58
+	}
+
+	public override float scrollWheelDeltaPerTick
+	{
+		 get { } //Length: 64
 	}
 
 	public override float unscaledGameTime
@@ -147,9 +153,9 @@ internal class NativeInputRuntime : IInputRuntime
 
 	public override double get_currentTimeOffsetToRealtimeSinceStartup() { }
 
-	public override bool get_isInBatchMode() { }
-
 	public override bool get_isPlayerFocused() { }
+
+	public override bool get_normalizeScrollWheelDelta() { }
 
 	public override Action<InputUpdateType> get_onBeforeUpdate() { }
 
@@ -171,6 +177,8 @@ internal class NativeInputRuntime : IInputRuntime
 
 	public override Vector2 get_screenSize() { }
 
+	public override float get_scrollWheelDeltaPerTick() { }
+
 	public override float get_unscaledGameTime() { }
 
 	private void OnFocusChanged(bool focus) { }
@@ -181,7 +189,7 @@ internal class NativeInputRuntime : IInputRuntime
 
 	public override void QueueEvent(InputEvent* ptr) { }
 
-	public override void SendAnalytic(IInputAnalytic analytic) { }
+	public override void set_normalizeScrollWheelDelta(bool value) { }
 
 	public override void set_onBeforeUpdate(Action<InputUpdateType> value) { }
 

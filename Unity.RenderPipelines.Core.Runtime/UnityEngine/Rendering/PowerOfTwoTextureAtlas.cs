@@ -70,7 +70,7 @@ public class PowerOfTwoTextureAtlas : Texture2DAtlas
 
 	public bool ReserveSpace(Texture textureA, Texture textureB, int width, int height) { }
 
-	private bool ReserveSpace(int id, int width, int height) { }
+	public bool ReserveSpace(int id, int width, int height) { }
 
 	public void ResetRequestedTexture() { }
 

@@ -19,7 +19,7 @@ public class XmlTypeAttribute : Attribute
 
 	public string TypeName
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	internal void AddKeyHash(StringBuilder sb) { }

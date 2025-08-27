@@ -28,6 +28,8 @@ public abstract class TowerBehavior : EntityBehavior, ITowerBehavior, IEntityBeh
 
 	public override void OnRangeChanged() { }
 
+	public override void OnTowerCrit(Projectile projectile) { }
+
 	public override void OnTsmThemeAction(string themeId, string buttonId, TSMInfoModel info) { }
 
 	public override void PerformCustomUIAction() { }

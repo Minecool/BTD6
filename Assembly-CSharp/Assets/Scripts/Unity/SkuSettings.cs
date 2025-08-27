@@ -27,12 +27,15 @@ public class SkuSettings
 		public static Func<ServerMaintenanceEvent, Boolean> <>9__22_1; //Field offset: 0x8
 		public static Func<String, Exception> <>9__22_0; //Field offset: 0x10
 		public static Func<ServerMaintenanceEvent, DateTime> <>9__57_0; //Field offset: 0x18
+		public static Func<KeyValuePair`2<String, Single>, Boolean> <>9__58_0; //Field offset: 0x20
 
 		private static <>c() { }
 
 		public <>c() { }
 
 		internal DateTime <GetActiveOrNextServerMaintenanceEvent>b__57_0(ServerMaintenanceEvent x) { }
+
+		internal bool <GetTutorialType>b__58_0(KeyValuePair<String, Single> x) { }
 
 		internal Exception <ParseAndValidate>b__22_0(string error) { }
 
@@ -293,7 +296,7 @@ public class SkuSettings
 
 	private static DateTime LegendsChallengeZeroTime
 	{
-		private get { } //Length: 202
+		private get { } //Length: 198
 	}
 
 	private static TimeSpan Now
@@ -377,6 +380,8 @@ public class SkuSettings
 	public static int GetMmCostOfSkin(string skinName, int baseCost) { }
 
 	public static T GetNextEvent() { }
+
+	public static TutorialType GetTutorialType() { }
 
 	public static bool HasActive() { }
 

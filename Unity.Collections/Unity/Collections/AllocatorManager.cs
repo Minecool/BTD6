@@ -3,7 +3,7 @@ namespace Unity.Collections;
 [Extension]
 public static class AllocatorManager
 {
-	internal struct AllocatorHandle : IAllocator, IDisposable
+	internal struct AllocatorHandle : IAllocator, IDisposable, IEquatable<AllocatorHandle>, IComparable<AllocatorHandle>
 	{
 		public ushort Index; //Field offset: 0x0
 		public ushort Version; //Field offset: 0x2
@@ -28,7 +28,13 @@ public static class AllocatorManager
 			 get { } //Length: 4
 		}
 
+		public override int CompareTo(AllocatorHandle other) { }
+
 		public override void Dispose() { }
+
+		public virtual bool Equals(object obj) { }
+
+		public override bool Equals(AllocatorHandle other) { }
 
 		public override AllocatorHandle get_Handle() { }
 
@@ -37,6 +43,8 @@ public static class AllocatorManager
 		public override Allocator get_ToAllocator() { }
 
 		public int get_Value() { }
+
+		public virtual int GetHashCode() { }
 
 		public static AllocatorHandle op_Implicit(Allocator a) { }
 
@@ -88,7 +96,7 @@ public static class AllocatorManager
 
 	}
 
-	public struct Array32768
+	public struct Array32768 : IIndexable<T>
 	{
 		internal Array4096<T> f0; //Field offset: 0x0
 		internal Array4096<T> f1; //Field offset: 0x0
@@ -99,7 +107,14 @@ public static class AllocatorManager
 		internal Array4096<T> f6; //Field offset: 0x0
 		internal Array4096<T> f7; //Field offset: 0x0
 
+		public override int Length
+		{
+			 get { } //Length: 6
+		}
+
 		public override T ElementAt(int index) { }
+
+		public override int get_Length() { }
 
 	}
 
@@ -142,12 +157,12 @@ public static class AllocatorManager
 
 		public long AllocatedBytes
 		{
-			 get { } //Length: 10
+			 get { } //Length: 13
 		}
 
 		public long Bytes
 		{
-			 get { } //Length: 10
+			 get { } //Length: 13
 		}
 
 		public override void Dispose() { }
@@ -209,130 +224,6 @@ public static class AllocatorManager
 
 	}
 
-	[BurstCompile(CompileSynchronously = True)]
-	public struct SlabAllocator : IAllocator, IDisposable
-	{
-		public static class Try_0000098E$BurstDirectCall
-		{
-			private static IntPtr Pointer; //Field offset: 0x0
-			private static IntPtr DeferredCompilation; //Field offset: 0x8
-
-			private static Try_0000098E$BurstDirectCall() { }
-
-			public static void Constructor() { }
-
-			private static IntPtr GetFunctionPointer() { }
-
-			[BurstDiscard]
-			private static void GetFunctionPointerDiscard(ref IntPtr unnamed_param_0) { }
-
-			public static void Initialize() { }
-
-			public static int Invoke(IntPtr allocatorState, ref Block block) { }
-
-		}
-
-		internal sealed class Try_0000098E$PostfixBurstDelegate : MulticastDelegate
-		{
-
-			public Try_0000098E$PostfixBurstDelegate(object unnamed_param_0, IntPtr unnamed_param_1) { }
-
-			public override int Invoke(IntPtr allocatorState, ref Block block) { }
-
-		}
-
-		internal AllocatorHandle m_handle; //Field offset: 0x0
-		internal Block Storage; //Field offset: 0x8
-		internal int Log2SlabSizeInBytes; //Field offset: 0x28
-		internal FixedList4096Bytes<Int32> Occupied; //Field offset: 0x2C
-		internal long budgetInBytes; //Field offset: 0x1030
-		internal long allocatedBytes; //Field offset: 0x1038
-
-		public override AllocatorHandle Handle
-		{
-			 get { } //Length: 3
-		}
-
-		internal int SlabSizeInBytes
-		{
-			internal get { } //Length: 14
-		}
-
-		public override void Dispose() { }
-
-		public override AllocatorHandle get_Handle() { }
-
-		internal int get_SlabSizeInBytes() { }
-
-		public override int Try(ref Block block) { }
-
-		[BurstCompile(CompileSynchronously = True)]
-		[MonoPInvokeCallback(typeof(TryFunction))]
-		public static int Try(IntPtr allocatorState, ref Block block) { }
-
-		[BurstCompile(CompileSynchronously = True)]
-		[MonoPInvokeCallback(typeof(TryFunction))]
-		public static int Try$BurstManaged(IntPtr allocatorState, ref Block block) { }
-
-	}
-
-	[BurstCompile(CompileSynchronously = True)]
-	public struct StackAllocator : IAllocator, IDisposable
-	{
-		public static class Try_00000980$BurstDirectCall
-		{
-			private static IntPtr Pointer; //Field offset: 0x0
-			private static IntPtr DeferredCompilation; //Field offset: 0x8
-
-			private static Try_00000980$BurstDirectCall() { }
-
-			public static void Constructor() { }
-
-			private static IntPtr GetFunctionPointer() { }
-
-			[BurstDiscard]
-			private static void GetFunctionPointerDiscard(ref IntPtr unnamed_param_0) { }
-
-			public static void Initialize() { }
-
-			public static int Invoke(IntPtr allocatorState, ref Block block) { }
-
-		}
-
-		internal sealed class Try_00000980$PostfixBurstDelegate : MulticastDelegate
-		{
-
-			public Try_00000980$PostfixBurstDelegate(object unnamed_param_0, IntPtr unnamed_param_1) { }
-
-			public override int Invoke(IntPtr allocatorState, ref Block block) { }
-
-		}
-
-		internal AllocatorHandle m_handle; //Field offset: 0x0
-		internal Block m_storage; //Field offset: 0x8
-		internal long m_top; //Field offset: 0x28
-
-		public override AllocatorHandle Handle
-		{
-			 get { } //Length: 3
-		}
-
-		public override void Dispose() { }
-
-		public override AllocatorHandle get_Handle() { }
-
-		public override int Try(ref Block block) { }
-
-		[BurstCompile(CompileSynchronously = True)]
-		[MonoPInvokeCallback(typeof(TryFunction))]
-		public static int Try(IntPtr allocatorState, ref Block block) { }
-
-		[BurstCompile(CompileSynchronously = True)]
-		[MonoPInvokeCallback(typeof(TryFunction))]
-		public static int Try$BurstManaged(IntPtr allocatorState, ref Block block) { }
-
-	}
-
 	public struct TableEntry
 	{
 		internal IntPtr function; //Field offset: 0x0
@@ -356,11 +247,15 @@ public static class AllocatorManager
 	public static readonly AllocatorHandle TempJob; //Field offset: 0xC
 	public static readonly AllocatorHandle Persistent; //Field offset: 0x10
 	public static readonly AllocatorHandle AudioKernel; //Field offset: 0x14
+	internal static readonly ushort NumGlobalScratchAllocators; //Field offset: 0x18
+	internal static readonly ushort MaxNumGlobalAllocators; //Field offset: 0x1A
+	internal static readonly uint GlobalAllocatorBaseIndex; //Field offset: 0x1C
+	internal static readonly uint FirstGlobalScratchpadAllocatorIndex; //Field offset: 0x20
 
 	private static AllocatorManager() { }
 
 	[Extension]
-	internal static Void* Allocate(ref T t, int sizeOf, int alignOf, int items) { }
+	public static Void* Allocate(ref T t, int sizeOf, int alignOf, int items = 1) { }
 
 	[Extension]
 	internal static U* Allocate(ref T t, U u, int items) { }
@@ -382,14 +277,12 @@ public static class AllocatorManager
 	[Extension]
 	internal static void Free(ref T t, U* pointer, int items) { }
 
+	public static void Free(AllocatorHandle handle, Void* pointer) { }
+
 	public static void Free(AllocatorHandle handle, T* pointer, int items = 1) { }
 
 	[Extension]
 	internal static void FreeBlock(ref T t, ref Block block) { }
-
-	public static void Initialize$SlabAllocator_Try_0000098E$BurstDirectCall() { }
-
-	public static void Initialize$StackAllocator_Try_00000980$BurstDirectCall() { }
 
 	internal static Allocator LegacyOf(AllocatorHandle handle) { }
 

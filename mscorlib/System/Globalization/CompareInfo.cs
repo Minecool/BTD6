@@ -48,9 +48,9 @@ public class CompareInfo : IDeserializationCallback
 
 	internal static int CompareOrdinalIgnoreCase(string strA, int indexA, int lengthA, string strB, int indexB, int lengthB) { }
 
-	private int CompareString(ReadOnlySpan<Char> string1, ReadOnlySpan<Char> string2, CompareOptions options) { }
-
 	private int CompareString(ReadOnlySpan<Char> string1, string string2, CompareOptions options) { }
+
+	private int CompareString(ReadOnlySpan<Char> string1, ReadOnlySpan<Char> string2, CompareOptions options) { }
 
 	private static int CompareStringOrdinalIgnoreCase(Char* pString1, int length1, Char* pString2, int length2) { }
 
@@ -86,7 +86,11 @@ public class CompareInfo : IDeserializationCallback
 
 	public override int IndexOf(string source, string value, int startIndex, int count, CompareOptions options) { }
 
+	public override int IndexOf(string source, char value, int startIndex, int count, CompareOptions options) { }
+
 	public override int IndexOf(string source, string value, CompareOptions options) { }
+
+	public override int IndexOf(string source, char value, CompareOptions options) { }
 
 	private int IndexOfCore(string source, string target, int startIndex, int count, CompareOptions options, Int32* matchLengthPtr) { }
 

@@ -8,11 +8,13 @@ public struct StyleInt : IStyleValue<Int32>, IEquatable<StyleInt>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override int value
 	{
 		 get { } //Length: 12
+		 set { } //Length: 10
 	}
 
 	public StyleInt(StyleKeyword keyword) { }
@@ -32,6 +34,10 @@ public struct StyleInt : IStyleValue<Int32>, IEquatable<StyleInt>
 	public static bool op_Equality(StyleInt lhs, StyleInt rhs) { }
 
 	public static StyleInt op_Implicit(StyleKeyword keyword) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(int value) { }
 
 	public virtual string ToString() { }
 

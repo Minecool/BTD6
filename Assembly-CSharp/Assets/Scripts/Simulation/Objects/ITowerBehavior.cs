@@ -19,6 +19,8 @@ public interface ITowerBehavior : IEntityBehavior
 
 	public void OnRangeChanged() { }
 
+	public void OnTowerCrit(Projectile projectile) { }
+
 	public void OnTsmThemeAction(string themeId, string buttonId, TSMInfoModel info) { }
 
 	public void PerformCustomUIAction() { }

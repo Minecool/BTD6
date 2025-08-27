@@ -7,6 +7,11 @@ internal class InvokableCallList
 	private List<BaseInvokableCall> m_ExecutingCalls; //Field offset: 0x20
 	private bool m_NeedsUpdate; //Field offset: 0x28
 
+	public int Count
+	{
+		 get { } //Length: 72
+	}
+
 	public InvokableCallList() { }
 
 	public void AddListener(BaseInvokableCall call) { }
@@ -16,6 +21,8 @@ internal class InvokableCallList
 	public void Clear() { }
 
 	public void ClearPersistent() { }
+
+	public int get_Count() { }
 
 	public List<BaseInvokableCall> PrepareInvoke() { }
 

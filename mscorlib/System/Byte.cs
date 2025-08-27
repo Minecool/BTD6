@@ -3,8 +3,6 @@ namespace System;
 [IsReadOnly]
 public struct byte : IComparable, IConvertible, IFormattable, IComparable<Byte>, IEquatable<Byte>, ISpanFormattable
 {
-	public const byte MaxValue = 255; //Field offset: 0x0
-	public const byte MinValue = 0; //Field offset: 0x0
 	private readonly byte m_value; //Field offset: 0x0
 
 	public override int CompareTo(object value) { }
@@ -71,6 +69,8 @@ public struct byte : IComparable, IConvertible, IFormattable, IComparable<Byte>,
 	private static bool TryParse(ReadOnlySpan<Char> s, NumberStyles style, NumberFormatInfo info, out byte result) { }
 
 	public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out byte result) { }
+
+	public static bool TryParse(string s, out byte result) { }
 
 }
 

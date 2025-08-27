@@ -20,12 +20,12 @@ internal sealed class RenderTargetBufferSystem
 
 	private SwapBuffer backBuffer
 	{
-		private get { } //Length: 99
+		private get { } //Length: 94
 	}
 
 	private SwapBuffer frontBuffer
 	{
-		private get { } //Length: 99
+		private get { } //Length: 94
 	}
 
 	private static RenderTargetBufferSystem() { }

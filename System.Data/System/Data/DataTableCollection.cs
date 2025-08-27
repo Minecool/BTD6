@@ -16,17 +16,17 @@ public sealed class DataTableCollection : InternalDataCollectionBase
 
 	public DataTable Item
 	{
-		 get { } //Length: 216
+		 get { } //Length: 212
 	}
 
 	public DataTable Item
 	{
-		 get { } //Length: 261
+		 get { } //Length: 268
 	}
 
 	public DataTable Item
 	{
-		 get { } //Length: 297
+		 get { } //Length: 309
 	}
 
 	protected virtual ArrayList List

@@ -17,7 +17,7 @@ public class BountyHunterZoneModel : SupportModel
 
 	public BountyHunterMutator Mutator
 	{
-		 get { } //Length: 234
+		 get { } //Length: 238
 	}
 
 	public BountyHunterZoneModel(string name, string buffLocsName, string buffIconName) { }

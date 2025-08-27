@@ -3,7 +3,7 @@ namespace NinjaKiwi.LiNK.Client;
 public class LiNKAccountController
 {
 	[CompilerGenerated]
-	private struct <GetAuthProviderToken>d__30 : IAsyncStateMachine
+	private struct <GetAuthProviderToken>d__31 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<AuthenticationProviderToken> <>t__builder; //Field offset: 0x8
@@ -30,81 +30,14 @@ public class LiNKAccountController
 	}
 
 	[CompilerGenerated]
-	private struct <LinkToAuthProvider>d__24 : IAsyncStateMachine
+	private struct <LinkToAuthProvider>d__15 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public LiNKAccountController <>4__this; //Field offset: 0x20
 		public AuthProviderType providerType; //Field offset: 0x28
-		private TaskAwaiter<AuthenticationProviderToken> <>u__1; //Field offset: 0x30
-		private TaskAwaiter <>u__2; //Field offset: 0x38
-
-		private override void MoveNext() { }
-
-		[DebuggerHidden]
-		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
-
-	}
-
-	[CompilerGenerated]
-	private struct <LinkToAuthProvider>d__25 : IAsyncStateMachine
-	{
-		public int <>1__state; //Field offset: 0x0
-		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
-		public LiNKAccountController <>4__this; //Field offset: 0x20
-		public AuthenticationProviderToken token; //Field offset: 0x28
-		private TaskAwaiter<UserModel> <>u__1; //Field offset: 0x30
-
-		private override void MoveNext() { }
-
-		[DebuggerHidden]
-		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
-
-	}
-
-	[CompilerGenerated]
-	private struct <LoadNewLiNKAccount>d__29 : IAsyncStateMachine
-	{
-		public int <>1__state; //Field offset: 0x0
-		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
-		public LiNKAccountController <>4__this; //Field offset: 0x20
-		public Identity newIdentity; //Field offset: 0x28
-		private TaskAwaiter <>u__1; //Field offset: 0x30
-
-		private override void MoveNext() { }
-
-		[DebuggerHidden]
-		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
-
-	}
-
-	[CompilerGenerated]
-	private struct <LoginToAuthProvider>d__21 : IAsyncStateMachine
-	{
-		public int <>1__state; //Field offset: 0x0
-		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
-		public LiNKAccountController <>4__this; //Field offset: 0x20
-		public AuthProviderType providerType; //Field offset: 0x28
-		public bool tryCreateFirst; //Field offset: 0x2C
-		private TaskAwaiter<AuthenticationProviderToken> <>u__1; //Field offset: 0x30
-		private TaskAwaiter <>u__2; //Field offset: 0x38
-
-		private override void MoveNext() { }
-
-		[DebuggerHidden]
-		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
-
-	}
-
-	[CompilerGenerated]
-	private struct <LoginToAuthProvider>d__22 : IAsyncStateMachine
-	{
-		public int <>1__state; //Field offset: 0x0
-		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
-		public LiNKAccountController <>4__this; //Field offset: 0x20
-		public AuthenticationProviderToken token; //Field offset: 0x28
-		public bool tryCreateFirst; //Field offset: 0x30
-		private TaskAwaiter<Identity> <>u__1; //Field offset: 0x38
+		private LiNKAccount <>7__wrap1; //Field offset: 0x30
+		private TaskAwaiter<AuthenticationProviderToken> <>u__1; //Field offset: 0x38
 		private TaskAwaiter <>u__2; //Field offset: 0x40
 
 		private override void MoveNext() { }
@@ -115,13 +48,13 @@ public class LiNKAccountController
 	}
 
 	[CompilerGenerated]
-	private struct <LogInToNewChildAccount>d__23 : IAsyncStateMachine
+	private struct <Load>d__19 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
-		public AsyncTaskMethodBuilder<String> <>t__builder; //Field offset: 0x8
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public LiNKAccountController <>4__this; //Field offset: 0x20
-		private string <recoverCode>5__2; //Field offset: 0x28
-		private TaskAwaiter<Response> <>u__1; //Field offset: 0x30
+		public LiNKAccountModel liNKAccountModel; //Field offset: 0x28
+		private TaskAwaiter<LiNKAccount> <>u__1; //Field offset: 0x30
 		private TaskAwaiter <>u__2; //Field offset: 0x38
 
 		private override void MoveNext() { }
@@ -132,13 +65,15 @@ public class LiNKAccountController
 	}
 
 	[CompilerGenerated]
-	private struct <RefreshLiNKAccountDetails>d__27 : IAsyncStateMachine
+	private struct <Login>d__18 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public LiNKAccountController <>4__this; //Field offset: 0x20
-		public CancellationToken canceller; //Field offset: 0x28
-		private TaskAwaiter<UserModel> <>u__1; //Field offset: 0x30
+		public AuthenticationProviderToken token; //Field offset: 0x28
+		public bool trySignUpFirst; //Field offset: 0x30
+		private TaskAwaiter <>u__1; //Field offset: 0x38
+		private TaskAwaiter<LiNKAccountModel> <>u__2; //Field offset: 0x40
 
 		private override void MoveNext() { }
 
@@ -148,33 +83,74 @@ public class LiNKAccountController
 	}
 
 	[CompilerGenerated]
-	private Action<LiNKAccount> NewLiNKAccountEvent; //Field offset: 0x10
-	[CompilerGenerated]
-	private Action<LiNKAccount> LiNKAccountUpdatedEvent; //Field offset: 0x18
-	public readonly Api liNK; //Field offset: 0x20
-	public readonly AuthenticationProvidersCollection authenticationProviders; //Field offset: 0x28
-	[CompilerGenerated]
-	private LiNKAccount <LiNKAccount>k__BackingField; //Field offset: 0x30
-	[CompilerGenerated]
-	private Func<LiNKAccount, Task> LoadNewLiNKAccountEvent; //Field offset: 0x38
-	internal readonly Logger logger; //Field offset: 0x40
-	private AuthenticationProviderToken currentAuthProviderToken; //Field offset: 0x48
-	private bool deactivated; //Field offset: 0x50
+	private struct <LoginToAuthProvider>d__10 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		public LiNKAccountController <>4__this; //Field offset: 0x20
+		public AuthProviderType providerType; //Field offset: 0x28
+		public bool trySignUpFirst; //Field offset: 0x2C
+		private TaskAwaiter<AuthenticationProviderToken> <>u__1; //Field offset: 0x30
+		private TaskAwaiter <>u__2; //Field offset: 0x38
 
-	public event Action<LiNKAccount> LiNKAccountUpdatedEvent
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <LogInToExistingChildAccount>d__13 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		public LiNKAccountController <>4__this; //Field offset: 0x20
+		public string recoveryCode; //Field offset: 0x28
+		private TaskAwaiter<ChildLiNKAccountModel> <>u__1; //Field offset: 0x30
+		private TaskAwaiter <>u__2; //Field offset: 0x38
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <LogInToNewChildAccount>d__12 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder<String> <>t__builder; //Field offset: 0x8
+		public LiNKAccountController <>4__this; //Field offset: 0x20
+		private ChildLiNKAccountModel <response>5__2; //Field offset: 0x28
+		private TaskAwaiter<ChildLiNKAccountModel> <>u__1; //Field offset: 0x30
+		private TaskAwaiter <>u__2; //Field offset: 0x38
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	public readonly Api liNK; //Field offset: 0x10
+	public readonly AuthenticationProvidersCollection authenticationProviders; //Field offset: 0x18
+	internal readonly Logger logger; //Field offset: 0x20
+	private readonly ILiNKAccountHolder liNKAccountHolder; //Field offset: 0x28
+	private AuthenticationProviderToken currentAuthProviderToken; //Field offset: 0x30
+	private bool deactivated; //Field offset: 0x38
+	[CompilerGenerated]
+	private Action<LiNKAccount> NewLiNKAccountEvent; //Field offset: 0x40
+	[CompilerGenerated]
+	private Action<LiNKAccount> LiNKAccountModifiedEvent; //Field offset: 0x48
+
+	public event Action<LiNKAccount> LiNKAccountModifiedEvent
 	{
 		[CompilerGenerated]
 		 add { } //Length: 172
 		[CompilerGenerated]
 		 remove { } //Length: 172
-	}
-
-	internal event Func<LiNKAccount, Task> LoadNewLiNKAccountEvent
-	{
-		[CompilerGenerated]
-		internal add { } //Length: 172
-		[CompilerGenerated]
-		internal remove { } //Length: 172
 	}
 
 	public event Action<LiNKAccount> NewLiNKAccountEvent
@@ -185,75 +161,70 @@ public class LiNKAccountController
 		 remove { } //Length: 172
 	}
 
-	public private LiNKAccount LiNKAccount
+	public LiNKAccount LiNKAccount
 	{
-		[CompilerGenerated]
-		 get { } //Length: 5
-		[CompilerGenerated]
-		private set { } //Length: 5
+		 get { } //Length: 184
 	}
 
-	public LiNKAccountController(Api liNK, LiNKAccount existingLiNKAccount = null) { }
+	internal LiNKAccountController(Api liNK, ILiNKAccountHolder liNKAccountHolder) { }
 
 	[CompilerGenerated]
-	public void add_LiNKAccountUpdatedEvent(Action<LiNKAccount> value) { }
+	private void <MonitorLiNKAccountModification>b__26_0(LiNKAccount account) { }
 
 	[CompilerGenerated]
-	internal void add_LoadNewLiNKAccountEvent(Func<LiNKAccount, Task> value) { }
+	public void add_LiNKAccountModifiedEvent(Action<LiNKAccount> value) { }
 
 	[CompilerGenerated]
 	public void add_NewLiNKAccountEvent(Action<LiNKAccount> value) { }
 
-	private void CheckDeactivated() { }
+	private void CheckNotDeactivated() { }
 
 	internal void Deactivate() { }
 
-	[CompilerGenerated]
+	private void EnsureLiNKAccountExists() { }
+
+	private void EnsureNoLiNKAccount() { }
+
 	public LiNKAccount get_LiNKAccount() { }
 
-	[AsyncStateMachine(typeof(<GetAuthProviderToken>d__30))]
+	[AsyncStateMachine(typeof(<GetAuthProviderToken>d__31))]
 	private Task<AuthenticationProviderToken> GetAuthProviderToken(AuthProviderType type) { }
 
-	[AsyncStateMachine(typeof(<LinkToAuthProvider>d__25))]
-	public Task LinkToAuthProvider(AuthenticationProviderToken token) { }
-
-	[AsyncStateMachine(typeof(<LinkToAuthProvider>d__24))]
+	[AsyncStateMachine(typeof(<LinkToAuthProvider>d__15))]
 	public Task LinkToAuthProvider(AuthProviderType providerType) { }
 
-	[AsyncStateMachine(typeof(<LoadNewLiNKAccount>d__29))]
-	private Task LoadNewLiNKAccount(Identity newIdentity) { }
+	public Task LinkToAuthProvider(AuthenticationProviderToken token) { }
 
-	public void LoadNewLiNKAccountDetails(UserModel userModel) { }
+	[AsyncStateMachine(typeof(<Load>d__19))]
+	private Task Load(LiNKAccountModel liNKAccountModel) { }
 
-	[AsyncStateMachine(typeof(<LoginToAuthProvider>d__21))]
-	public Task LoginToAuthProvider(AuthProviderType providerType, bool tryCreateFirst = true) { }
+	public void LoadNewLiNKAccountDetails(UserModel newUserModel) { }
 
-	public Task LoginToAuthProvider() { }
+	[AsyncStateMachine(typeof(<Login>d__18))]
+	private Task Login(AuthenticationProviderToken token, bool trySignUpFirst) { }
 
-	[AsyncStateMachine(typeof(<LoginToAuthProvider>d__22))]
-	public Task LoginToAuthProvider(AuthenticationProviderToken token, bool tryCreateFirst = true) { }
+	public Task LoginToAuthProvider(AuthenticationProviderToken token, bool trySignUpFirst = true) { }
 
-	[AsyncStateMachine(typeof(<LogInToNewChildAccount>d__23))]
+	[AsyncStateMachine(typeof(<LoginToAuthProvider>d__10))]
+	public Task LoginToAuthProvider(AuthProviderType providerType, bool trySignUpFirst = true) { }
+
+	public Task LoginToAuthProvider(bool trySignUpFirst = true) { }
+
+	[AsyncStateMachine(typeof(<LogInToExistingChildAccount>d__13))]
+	public Task LogInToExistingChildAccount(string recoveryCode) { }
+
+	[AsyncStateMachine(typeof(<LogInToNewChildAccount>d__12))]
 	public Task<String> LogInToNewChildAccount() { }
 
-	public Task LogPlayerIn(LoginResponseModel loginResponseModel) { }
+	public Task LogPlayerIn(LiNKAccountModel liNKAccountModel) { }
 
-	[AsyncStateMachine(typeof(<RefreshLiNKAccountDetails>d__27))]
-	public Task RefreshLiNKAccountDetails(CancellationToken canceller) { }
-
-	[CompilerGenerated]
-	public void remove_LiNKAccountUpdatedEvent(Action<LiNKAccount> value) { }
+	private void MonitorLiNKAccountModification(LiNKAccount liNKAccount) { }
 
 	[CompilerGenerated]
-	internal void remove_LoadNewLiNKAccountEvent(Func<LiNKAccount, Task> value) { }
+	public void remove_LiNKAccountModifiedEvent(Action<LiNKAccount> value) { }
 
 	[CompilerGenerated]
 	public void remove_NewLiNKAccountEvent(Action<LiNKAccount> value) { }
-
-	[CompilerGenerated]
-	private void set_LiNKAccount(LiNKAccount value) { }
-
-	private void TriggerEvent(Action<T> eventToTrigger, T data) { }
 
 }
 

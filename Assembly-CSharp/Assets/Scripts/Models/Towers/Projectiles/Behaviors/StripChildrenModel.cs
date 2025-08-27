@@ -30,7 +30,7 @@ public class StripChildrenModel : ProjectileBehaviorWithOverlayModel
 
 	public StripChildrenMutator Mutator
 	{
-		 get { } //Length: 248
+		 get { } //Length: 252
 	}
 
 	public StripChildrenModel(string name, string overlayType) { }

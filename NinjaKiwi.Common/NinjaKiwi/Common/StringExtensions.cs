@@ -4,23 +4,6 @@ namespace NinjaKiwi.Common;
 public static class StringExtensions
 {
 	[CompilerGenerated]
-	private sealed class <>c
-	{
-		public static readonly <>c <>9; //Field offset: 0x0
-		public static ParseSpanDelegate<String> <>9__11_0; //Field offset: 0x8
-		public static ParseSpanDelegate<String> <>9__11_1; //Field offset: 0x10
-
-		private static <>c() { }
-
-		public <>c() { }
-
-		internal string <ToDictionary>b__11_0(ReadOnlySpan<Char> i) { }
-
-		internal string <ToDictionary>b__11_1(ReadOnlySpan<Char> i) { }
-
-	}
-
-	[CompilerGenerated]
 	private sealed class <CommaSeparatedListToStringEnumerable>d__5 : IEnumerable<String>, IEnumerable, IEnumerator<String>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
@@ -97,7 +80,7 @@ public static class StringExtensions
 
 	}
 
-	private const char comma = '\u2C'; //Field offset: 0x0
+	private const char kComma = '\u2C'; //Field offset: 0x0
 	private static readonly Dictionary<String, String[]> splitStrings; //Field offset: 0x0
 	private const char kEntryDelimiter = '\u2C'; //Field offset: 0x0
 	private const char kPairDelimiter = '\u3A'; //Field offset: 0x0
@@ -119,11 +102,23 @@ public static class StringExtensions
 	[Extension]
 	public static T[] DelimitedListToArray(string input, TryParseSpanDelegate<T> tryParse, char delimiter, bool removeWhiteSpace = true) { }
 
+	public static TEnum EnumParser(ReadOnlySpan<Char> span) { }
+
 	[Extension]
 	public static string FromDictionary(Dictionary<TKey, TValue> dictionary, char entryDelimiter = ,, char pairDelimiter = :) { }
 
+	public static int IntParser(ReadOnlySpan<Char> span) { }
+
+	public static string StringParser(ReadOnlySpan<Char> span) { }
+
+	[Extension]
+	public static void ToDictionary(string input, Dictionary<String, String> result, char entryDelimiter = ,, char pairDelimiter = :) { }
+
 	[Extension]
 	public static Dictionary<String, String> ToDictionary(string input, char entryDelimiter = ,, char pairDelimiter = :) { }
+
+	[Extension]
+	public static void ToDictionary(string input, ParseSpanDelegate<TKey> keyParser, ParseSpanDelegate<TValue> valueParser, Dictionary<TKey, TValue> result, char entryDelimiter = ,, char pairDelimiter = :) { }
 
 	[Extension]
 	public static Dictionary<TKey, TValue> ToDictionary(string input, ParseSpanDelegate<TKey> keyParser, ParseSpanDelegate<TValue> valueParser, char entryDelimiter = ,, char pairDelimiter = :) { }

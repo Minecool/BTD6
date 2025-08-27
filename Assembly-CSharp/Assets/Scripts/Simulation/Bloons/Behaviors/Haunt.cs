@@ -11,7 +11,7 @@ public class Haunt : BloonBehavior
 
 	public void EmitProjectile() { }
 
-	public virtual float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile) { }
+	public virtual float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile, out bool preventFurtherModification) { }
 
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 

@@ -81,7 +81,7 @@ public class Tower : Upgradeable, CascadeProxyAnchor
 
 	public TowerModel Def
 	{
-		 get { } //Length: 6446
+		 get { } //Length: 6389
 	}
 
 	public bool IsCrossPathed

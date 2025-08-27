@@ -142,7 +142,7 @@ public class UserManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 268
+		private get { } //Length: 256
 	}
 
 	internal UserManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

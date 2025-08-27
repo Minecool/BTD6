@@ -263,7 +263,7 @@ public class StorageManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 302
+		private get { } //Length: 290
 	}
 
 	internal StorageManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

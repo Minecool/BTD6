@@ -6,7 +6,7 @@ internal class ClientIdentity : Identity
 
 	public MarshalByRefObject ClientProxy
 	{
-		 get { } //Length: 138
+		 get { } //Length: 137
 		 set { } //Length: 98
 	}
 

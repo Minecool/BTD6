@@ -6,12 +6,12 @@ public class ObjectDisposedException : InvalidOperationException
 
 	public virtual string Message
 	{
-		 get { } //Length: 197
+		 get { } //Length: 163
 	}
 
 	public string ObjectName
 	{
-		 get { } //Length: 83
+		 get { } //Length: 30
 	}
 
 	private ObjectDisposedException() { }

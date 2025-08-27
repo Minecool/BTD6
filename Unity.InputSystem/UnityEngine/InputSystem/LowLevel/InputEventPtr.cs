@@ -11,36 +11,36 @@ public struct InputEventPtr : IEquatable<InputEventPtr>
 
 	public int deviceId
 	{
-		 get { } //Length: 17
-		 set { } //Length: 104
+		 get { } //Length: 14
+		 set { } //Length: 103
 	}
 
 	public bool handled
 	{
-		 get { } //Length: 22
-		 set { } //Length: 127
+		 get { } //Length: 19
+		 set { } //Length: 129
 	}
 
 	public int id
 	{
-		 get { } //Length: 20
-		 set { } //Length: 113
+		 get { } //Length: 17
+		 set { } //Length: 109
 	}
 
 	internal double internalTime
 	{
-		internal get { } //Length: 19
-		internal set { } //Length: 105
+		internal get { } //Length: 18
+		internal set { } //Length: 104
 	}
 
 	public uint sizeInBytes
 	{
-		 get { } //Length: 17
+		 get { } //Length: 14
 	}
 
 	internal FourCC stateFormat
 	{
-		internal get { } //Length: 196
+		internal get { } //Length: 193
 	}
 
 	internal uint stateOffset
@@ -55,13 +55,13 @@ public struct InputEventPtr : IEquatable<InputEventPtr>
 
 	public double time
 	{
-		 get { } //Length: 88
-		 set { } //Length: 158
+		 get { } //Length: 81
+		 set { } //Length: 157
 	}
 
 	public FourCC type
 	{
-		 get { } //Length: 15
+		 get { } //Length: 12
 	}
 
 	public bool valid

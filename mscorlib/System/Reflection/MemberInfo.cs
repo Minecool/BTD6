@@ -20,7 +20,7 @@ public abstract class MemberInfo : ICustomAttributeProvider
 
 	public override Module Module
 	{
-		 get { } //Length: 218
+		 get { } //Length: 177
 	}
 
 	public abstract string Name

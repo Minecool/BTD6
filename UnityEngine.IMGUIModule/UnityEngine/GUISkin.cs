@@ -88,13 +88,13 @@ public sealed class GUISkin : ScriptableObject
 
 	internal static GUIStyle error
 	{
-		internal get { } //Length: 237
+		internal get { } //Length: 196
 	}
 
 	public Font font
 	{
 		 get { } //Length: 7
-		 set { } //Length: 295
+		 set { } //Length: 388
 	}
 
 	public GUIStyle horizontalScrollbar

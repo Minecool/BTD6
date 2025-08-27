@@ -27,7 +27,7 @@ public static class AppleArcadeUtils
 
 	public static bool IsRankLocked
 	{
-		 get { } //Length: 99
+		 get { } //Length: 115
 	}
 
 	private static bool LocalConsentFlag

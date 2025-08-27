@@ -20,7 +20,7 @@ public interface ICreatorModel
 
 	protected static string NewId
 	{
-		 get { } //Length: 85
+		 get { } //Length: 77
 	}
 
 	public string SharedId

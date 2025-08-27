@@ -44,7 +44,7 @@ public class DataSet : MarshalByValueComponent, IXmlSerializable, ISerializable
 	public bool CaseSensitive
 	{
 		 get { } //Length: 5
-		 set { } //Length: 657
+		 set { } //Length: 660
 	}
 
 	[DefaultValue(null)]
@@ -58,7 +58,7 @@ public class DataSet : MarshalByValueComponent, IXmlSerializable, ISerializable
 	public bool EnforceConstraints
 	{
 		 get { } //Length: 5
-		 set { } //Length: 310
+		 set { } //Length: 359
 	}
 
 	[Browsable(False)]
@@ -70,7 +70,7 @@ public class DataSet : MarshalByValueComponent, IXmlSerializable, ISerializable
 	public CultureInfo Locale
 	{
 		 get { } //Length: 5
-		 set { } //Length: 348
+		 set { } //Length: 397
 	}
 
 	internal string MainTableName
@@ -83,7 +83,7 @@ public class DataSet : MarshalByValueComponent, IXmlSerializable, ISerializable
 	public string Namespace
 	{
 		 get { } //Length: 5
-		 set { } //Length: 950
+		 set { } //Length: 958
 	}
 
 	internal int ObjectID
@@ -95,7 +95,7 @@ public class DataSet : MarshalByValueComponent, IXmlSerializable, ISerializable
 	public string Prefix
 	{
 		 get { } //Length: 5
-		 set { } //Length: 276
+		 set { } //Length: 264
 	}
 
 	[DesignerSerializationVisibility(DesignerSerializationVisibility::Content (2))]

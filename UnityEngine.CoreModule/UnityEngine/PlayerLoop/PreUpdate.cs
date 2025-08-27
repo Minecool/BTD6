@@ -23,6 +23,12 @@ public struct PreUpdate
 	}
 
 	[RequiredByNativeCode]
+	internal struct InputForUIUpdate
+	{
+
+	}
+
+	[RequiredByNativeCode]
 	internal struct NewInputUpdate
 	{
 

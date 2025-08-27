@@ -43,7 +43,7 @@ public class UmAlQuraCalendar : Calendar
 	public virtual int TwoDigitYearMax
 	{
 		 get { } //Length: 67
-		 set { } //Length: 292
+		 set { } //Length: 276
 	}
 
 	private static UmAlQuraCalendar() { }

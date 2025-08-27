@@ -26,7 +26,7 @@ public abstract class SetMemberBinder : DynamicMetaObjectBinder
 
 	public virtual Type ReturnType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 50
 	}
 
 	protected SetMemberBinder(string name, bool ignoreCase) { }

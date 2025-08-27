@@ -11,7 +11,7 @@ internal class DigestClient : IAuthenticationModule
 
 	private static Hashtable Cache
 	{
-		private get { } //Length: 360
+		private get { } //Length: 350
 	}
 
 	private static DigestClient() { }

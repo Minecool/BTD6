@@ -13,14 +13,17 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 		Highest = 6,
 	}
 
-	internal class UxmlTraits : UxmlTraits<TValueType>
+	[Obsolete("UxmlTraits<TValueUxmlAttributeType> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
+	internal class UxmlTraits : BaseFieldTraits<TValueType, TValueUxmlAttributeType>
 	{
 
-		public UxmlTraits() { }
+		public UxmlTraits`1() { }
 
 	}
 
+	internal static readonly BindingId lowValueProperty; //Field offset: 0x0
 	public static readonly string textFieldClassName; //Field offset: 0x0
+	public static readonly string draggerBorderUssClassName; //Field offset: 0x0
 	public static readonly string draggerUssClassName; //Field offset: 0x0
 	public static readonly string trackerUssClassName; //Field offset: 0x0
 	public static readonly string dragContainerUssClassName; //Field offset: 0x0
@@ -29,38 +32,69 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 	public static readonly string inputUssClassName; //Field offset: 0x0
 	public static readonly string labelUssClassName; //Field offset: 0x0
 	public static readonly string ussClassName; //Field offset: 0x0
-	public static readonly string draggerBorderUssClassName; //Field offset: 0x0
-	private bool m_Inverted; //Field offset: 0x0
-	private SliderDirection m_Direction; //Field offset: 0x0
-	private Rect m_DragElementStartPos; //Field offset: 0x0
+	public static readonly string fillUssClassName; //Field offset: 0x0
+	public static readonly string movableUssClassName; //Field offset: 0x0
+	internal static readonly BindingId highValueProperty; //Field offset: 0x0
+	internal static readonly BindingId rangeProperty; //Field offset: 0x0
+	internal static readonly BindingId pageSizeProperty; //Field offset: 0x0
+	internal static readonly BindingId showInputFieldProperty; //Field offset: 0x0
+	internal static readonly BindingId directionProperty; //Field offset: 0x0
+	internal static readonly BindingId invertedProperty; //Field offset: 0x0
+	internal static readonly BindingId fillProperty; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <clamped>k__BackingField; //Field offset: 0x0
-	private bool m_ShowInputField; //Field offset: 0x0
-	private float m_PageSize; //Field offset: 0x0
-	[SerializeField]
-	private TValueType m_HighValue; //Field offset: 0x0
-	[SerializeField]
-	private TValueType m_LowValue; //Field offset: 0x0
-	private bool m_IsEditingTextField; //Field offset: 0x0
+	private VisualElement <fillElement>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private TextField <inputTextField>k__BackingField; //Field offset: 0x0
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private VisualElement <dragBorderElement>k__BackingField; //Field offset: 0x0
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private VisualElement <trackElement>k__BackingField; //Field offset: 0x0
+	private VisualElement <dragContainer>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private VisualElement <dragElement>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private VisualElement <trackElement>k__BackingField; //Field offset: 0x0
+	private bool m_Inverted; //Field offset: 0x0
+	private SliderDirection m_Direction; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Action<TValueType> onSetValueWithoutNotify; //Field offset: 0x0
+	private Rect m_DragElementStartPos; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private ClampedDragger<TValueType> <clampedDragger>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private VisualElement <dragContainer>k__BackingField; //Field offset: 0x0
+	private bool <clamped>k__BackingField; //Field offset: 0x0
+	private bool m_ShowInputField; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private VisualElement <dragBorderElement>k__BackingField; //Field offset: 0x0
+	[DontCreateProperty]
+	[SerializeField]
+	private TValueType m_HighValue; //Field offset: 0x0
+	[DontCreateProperty]
+	[SerializeField]
+	private TValueType m_LowValue; //Field offset: 0x0
+	private bool m_Fill; //Field offset: 0x0
+	private bool m_IsEditingTextField; //Field offset: 0x0
+	private float m_AdjustedPageSizeFromClick; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private TextField <inputTextField>k__BackingField; //Field offset: 0x0
+	private float m_PageSize; //Field offset: 0x0
+
+	internal event Action<TValueType> onSetValueWithoutNotify
+	{
+		[CompilerGenerated]
+		internal add { } //Length: 195
+		[CompilerGenerated]
+		internal remove { } //Length: 195
+	}
+
+	virtual bool canSwitchToMixedValue
+	{
+		 get { } //Length: 116
+	}
 
 	internal bool clamped
 	{
@@ -78,10 +112,11 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 		private set { } //Length: 8
 	}
 
+	[CreateProperty]
 	public SliderDirection direction
 	{
 		 get { } //Length: 9
-		 set { } //Length: 348
+		 set { } //Length: 476
 	}
 
 	internal VisualElement dragBorderElement
@@ -108,10 +143,26 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 		private set { } //Length: 8
 	}
 
+	[CreateProperty]
+	public bool fill
+	{
+		 get { } //Length: 8
+		 set { } //Length: 207
+	}
+
+	internal VisualElement fillElement
+	{
+		[CompilerGenerated]
+		internal get { } //Length: 8
+		[CompilerGenerated]
+		private set { } //Length: 8
+	}
+
+	[CreateProperty]
 	public TValueType highValue
 	{
 		 get { } //Length: 9
-		 set { } //Length: 211
+		 set { } //Length: 321
 	}
 
 	internal TextField inputTextField
@@ -122,28 +173,38 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 		private set { } //Length: 8
 	}
 
+	[CreateProperty]
 	public bool inverted
 	{
 		 get { } //Length: 10
-		 set { } //Length: 35
+		 set { } //Length: 171
 	}
 
+	[CreateProperty]
 	public TValueType lowValue
 	{
 		 get { } //Length: 9
-		 set { } //Length: 211
+		 set { } //Length: 314
 	}
 
+	[CreateProperty]
 	public override float pageSize
 	{
 		 get { } //Length: 11
-		 set { } //Length: 9
+		 set { } //Length: 156
 	}
 
+	[CreateProperty(ReadOnly = True)]
+	public TValueType range
+	{
+		 get { } //Length: 20
+	}
+
+	[CreateProperty]
 	public override bool showInputField
 	{
 		 get { } //Length: 10
-		 set { } //Length: 35
+		 set { } //Length: 174
 	}
 
 	internal VisualElement trackElement
@@ -164,6 +225,9 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 
 	internal BaseSlider`1(string label, TValueType start, TValueType end, SliderDirection direction = 0, float pageSize = 0) { }
 
+	[CompilerGenerated]
+	internal void add_onSetValueWithoutNotify(Action<TValueType> value) { }
+
 	public void AdjustDragElement(float factor) { }
 
 	public override void ApplyInputDeviceDelta(Vector3 delta, DeltaSpeed speed, TValueType startValue) { }
@@ -178,8 +242,11 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 
 	internal abstract void ComputeValueFromKey(SliderKey<TValueType> sliderKey, bool isShift) { }
 
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(GeometryChangedEvent)}])]
+	[EventInterest(EventInterestOptions::Inherit (0))]
+	[Obsolete("ExecuteDefaultAction override has been removed because default event handling was migrated to HandleEventBubbleUp. Please use HandleEventBubbleUp.", False)]
 	protected virtual void ExecuteDefaultAction(EventBase evt) { }
+
+	virtual bool get_canSwitchToMixedValue() { }
 
 	[CompilerGenerated]
 	internal bool get_clamped() { }
@@ -198,6 +265,11 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 	[CompilerGenerated]
 	internal VisualElement get_dragElement() { }
 
+	public bool get_fill() { }
+
+	[CompilerGenerated]
+	internal VisualElement get_fillElement() { }
+
 	public TValueType get_highValue() { }
 
 	[CompilerGenerated]
@@ -209,6 +281,8 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 
 	public override float get_pageSize() { }
 
+	public TValueType get_range() { }
+
 	public override bool get_showInputField() { }
 
 	[CompilerGenerated]
@@ -218,13 +292,20 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 
 	private TValueType GetClampedValue(TValueType newValue) { }
 
-	protected static float GetClosestPowerOfTen(float positiveNumber) { }
+	protected private static float GetClosestPowerOfTen(float positiveNumber) { }
 
-	private void OnInputNavigationMoveEvent(NavigationMoveEvent evt) { }
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(GeometryChangedEvent)}])]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
+
+	private void OnFocusIn(FocusInEvent evt) { }
+
+	private void OnFocusOut(FocusOutEvent evt) { }
 
 	private void OnKeyDown(KeyDownEvent evt) { }
 
 	private void OnNavigationMove(NavigationMoveEvent evt) { }
+
+	private void OnNavigationSubmit(NavigationSubmitEvent evt) { }
 
 	private void OnTextFieldFocusIn(FocusInEvent evt) { }
 
@@ -238,7 +319,10 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 
 	internal virtual void RegisterEditingCallbacks() { }
 
-	protected static float RoundToMultipleOf(float value, float roundingValue) { }
+	[CompilerGenerated]
+	internal void remove_onSetValueWithoutNotify(Action<TValueType> value) { }
+
+	protected private static float RoundToMultipleOf(float value, float roundingValue) { }
 
 	private bool SameValues(float a, float b, float epsilon) { }
 
@@ -258,6 +342,11 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 
 	[CompilerGenerated]
 	private void set_dragElement(VisualElement value) { }
+
+	public void set_fill(bool value) { }
+
+	[CompilerGenerated]
+	private void set_fillElement(VisualElement value) { }
 
 	public void set_highValue(TValueType value) { }
 
@@ -291,6 +380,8 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 
 	internal abstract float SliderNormalizeValue(TValueType currentValue, TValueType lowerValue, TValueType higherValue) { }
 
+	internal abstract TValueType SliderRange() { }
+
 	private override void UnityEngine.UIElements.IValueField<TValueType>.StartDragging() { }
 
 	private override void UnityEngine.UIElements.IValueField<TValueType>.StopDragging() { }
@@ -300,6 +391,8 @@ public abstract class BaseSlider : BaseField<TValueType>, IValueField<TValueType
 	private void UpdateDragElementPosition() { }
 
 	private void UpdateDragElementPosition(GeometryChangedEvent evt) { }
+
+	private void UpdateFill(float normalizedValue) { }
 
 	protected virtual void UpdateMixedValueContent() { }
 

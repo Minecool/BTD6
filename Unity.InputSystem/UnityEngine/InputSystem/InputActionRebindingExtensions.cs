@@ -232,12 +232,12 @@ public static class InputActionRebindingExtensions
 
 		public InputControl selectedControl
 		{
-			 get { } //Length: 92
+			 get { } //Length: 88
 		}
 
 		public bool started
 		{
-			 get { } //Length: 11
+			 get { } //Length: 10
 		}
 
 		public double startTime

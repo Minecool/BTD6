@@ -7,7 +7,7 @@ internal sealed class RuntimeEventInfo : EventInfo, ISerializable
 
 	internal BindingFlags BindingFlags
 	{
-		internal get { } //Length: 350
+		internal get { } //Length: 339
 	}
 
 	public virtual Type DeclaringType
@@ -37,7 +37,7 @@ internal sealed class RuntimeEventInfo : EventInfo, ISerializable
 
 	private RuntimeType ReflectedTypeInternal
 	{
-		private get { } //Length: 125
+		private get { } //Length: 129
 	}
 
 	public RuntimeEventInfo() { }

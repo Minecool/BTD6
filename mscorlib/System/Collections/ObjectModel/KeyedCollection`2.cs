@@ -22,7 +22,7 @@ public abstract class KeyedCollection : Collection<TItem>
 
 	private List<TItem> Items
 	{
-		private get { } //Length: 134
+		private get { } //Length: 130
 	}
 
 	protected KeyedCollection`2() { }

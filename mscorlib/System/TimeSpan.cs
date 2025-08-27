@@ -3,26 +3,7 @@ namespace System;
 [IsReadOnly]
 public struct TimeSpan : IComparable, IComparable<TimeSpan>, IEquatable<TimeSpan>, IFormattable, ISpanFormattable
 {
-	public const long TicksPerMillisecond = 10000; //Field offset: 0x0
 	public static readonly TimeSpan Zero; //Field offset: 0x0
-	internal const long TicksPerTenthSecond = 1000000; //Field offset: 0x0
-	internal const long MinMilliSeconds = -922337203685477; //Field offset: 0x0
-	internal const long MaxMilliSeconds = 922337203685477; //Field offset: 0x0
-	internal const long MinSeconds = -922337203685; //Field offset: 0x0
-	internal const long MaxSeconds = 922337203685; //Field offset: 0x0
-	private const int MillisPerDay = 86400000; //Field offset: 0x0
-	private const int MillisPerHour = 3600000; //Field offset: 0x0
-	private const int MillisPerSecond = 1000; //Field offset: 0x0
-	private const int MillisPerMinute = 60000; //Field offset: 0x0
-	public const long TicksPerDay = 864000000000; //Field offset: 0x0
-	private const double HoursPerTick = 2.7777777777777777E-11; //Field offset: 0x0
-	public const long TicksPerHour = 36000000000; //Field offset: 0x0
-	private const double MinutesPerTick = 1.6666666666666667E-09; //Field offset: 0x0
-	public const long TicksPerMinute = 600000000; //Field offset: 0x0
-	private const double SecondsPerTick = 1E-07; //Field offset: 0x0
-	public const long TicksPerSecond = 10000000; //Field offset: 0x0
-	private const double MillisecondsPerTick = 0.0001; //Field offset: 0x0
-	private const double DaysPerTick = 1.1574074074074074E-12; //Field offset: 0x0
 	public static readonly TimeSpan MaxValue; //Field offset: 0x8
 	public static readonly TimeSpan MinValue; //Field offset: 0x10
 	internal readonly long _ticks; //Field offset: 0x0
@@ -152,6 +133,8 @@ public struct TimeSpan : IComparable, IComparable<TimeSpan>, IEquatable<TimeSpan
 
 	public static double op_Division(TimeSpan t1, TimeSpan t2) { }
 
+	public static TimeSpan op_Division(TimeSpan timeSpan, double divisor) { }
+
 	public static bool op_Equality(TimeSpan t1, TimeSpan t2) { }
 
 	public static bool op_GreaterThan(TimeSpan t1, TimeSpan t2) { }
@@ -164,17 +147,17 @@ public struct TimeSpan : IComparable, IComparable<TimeSpan>, IEquatable<TimeSpan
 
 	public static bool op_LessThanOrEqual(TimeSpan t1, TimeSpan t2) { }
 
-	public static TimeSpan op_Multiply(double factor, TimeSpan timeSpan) { }
-
 	public static TimeSpan op_Multiply(TimeSpan timeSpan, double factor) { }
+
+	public static TimeSpan op_Multiply(double factor, TimeSpan timeSpan) { }
 
 	public static TimeSpan op_Subtraction(TimeSpan t1, TimeSpan t2) { }
 
 	public static TimeSpan op_UnaryNegation(TimeSpan t) { }
 
-	public static TimeSpan Parse(string input, IFormatProvider formatProvider) { }
-
 	public static TimeSpan Parse(string s) { }
+
+	public static TimeSpan Parse(string input, IFormatProvider formatProvider) { }
 
 	public TimeSpan Subtract(TimeSpan ts) { }
 

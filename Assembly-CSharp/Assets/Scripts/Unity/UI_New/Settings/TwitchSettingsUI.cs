@@ -104,7 +104,7 @@ public class TwitchSettingsUI : GameMenu
 
 	private bool IsCreateBtnEnabled
 	{
-		private set { } //Length: 189
+		private set { } //Length: 186
 	}
 
 	private TwitchAnalytics TwitchAnalytics

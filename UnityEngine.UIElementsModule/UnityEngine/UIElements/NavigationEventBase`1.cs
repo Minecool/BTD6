@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::Navigation (13))]
+[EventCategory(EventCategory::Navigation (14))]
 public abstract class NavigationEventBase : EventBase<T>, INavigationEvent
 {
 	[CompilerGenerated]
@@ -12,31 +12,33 @@ public abstract class NavigationEventBase : EventBase<T>, INavigationEvent
 
 	public override bool altKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 10
 	}
 
 	internal NavigationDeviceType deviceType
 	{
 		[CompilerGenerated]
-		internal get { } //Length: 7
+		internal get { } //Length: 4
 		[CompilerGenerated]
-		private set { } //Length: 7
+		private set { } //Length: 4
 	}
 
 	public override EventModifiers modifiers
 	{
 		[CompilerGenerated]
-		 get { } //Length: 7
+		 get { } //Length: 4
 		[CompilerGenerated]
-		 set { } //Length: 7
+		 set { } //Length: 4
 	}
 
 	public override bool shiftKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 10
 	}
 
 	protected NavigationEventBase`1() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	public override bool get_altKey() { }
 

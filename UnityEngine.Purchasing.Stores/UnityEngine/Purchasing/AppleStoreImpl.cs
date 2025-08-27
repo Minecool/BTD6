@@ -104,7 +104,7 @@ internal class AppleStoreImpl : JSONStore, IAppleExtensions, IStoreExtension, IA
 	public override string appReceipt
 	{
 		[NullableContext(2)]
-		 get { } //Length: 356
+		 get { } //Length: 365
 	}
 
 	private Nullable<Double> appReceiptModificationDate

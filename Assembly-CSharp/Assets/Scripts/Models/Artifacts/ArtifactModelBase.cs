@@ -32,7 +32,7 @@ public abstract class ArtifactModelBase : Model
 
 	public bool IsBoost
 	{
-		 get { } //Length: 125
+		 get { } //Length: 121
 	}
 
 	private static ArtifactModelBase() { }

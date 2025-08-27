@@ -8,7 +8,7 @@ public struct DownloadStatus
 
 	public float Percent
 	{
-		 get { } //Length: 47
+		 get { } //Length: 49
 	}
 
 	public float get_Percent() { }

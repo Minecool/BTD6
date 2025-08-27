@@ -1,6 +1,6 @@
 namespace UnityEngine.Bindings;
 
-[AttributeUsage(AttributeTargets::Parameter (2048))]
+[AttributeUsage(10240)]
 [VisibleToOtherModules]
 internal class UnmarshalledAttribute : Attribute
 {

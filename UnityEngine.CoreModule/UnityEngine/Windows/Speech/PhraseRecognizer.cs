@@ -17,7 +17,7 @@ public abstract class PhraseRecognizer
 	private PhraseRecognizedDelegate OnPhraseRecognized; //Field offset: 0x18
 
 	[RequiredByNativeCode]
-	private void InvokePhraseRecognizedEvent(string text, ConfidenceLevel confidence, SemanticMeaning[] semanticMeanings, long phraseStartFileTime, long phraseDurationTicks) { }
+	private void InvokePhraseRecognizedEvent(IntPtr rawText, int rawTextLength, ConfidenceLevel confidence, SemanticMeaning[] semanticMeanings, long phraseStartFileTime, long phraseDurationTicks) { }
 
 	[RequiredByNativeCode]
 	private static SemanticMeaning[] MarshalSemanticMeaning(IntPtr keys, IntPtr values, IntPtr valueSizes, int valueCount) { }

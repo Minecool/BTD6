@@ -49,7 +49,7 @@ internal sealed class TlsOverPerCoreLockedStacksArrayPool : ArrayPool<T>
 
 	private int Id
 	{
-		private get { } //Length: 38
+		private get { } //Length: 461
 	}
 
 	private static TlsOverPerCoreLockedStacksArrayPool`1() { }

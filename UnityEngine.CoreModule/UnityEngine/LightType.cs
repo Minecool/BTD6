@@ -8,5 +8,8 @@ public enum LightType
 	Area = 3,
 	Rectangle = 3,
 	Disc = 4,
+	Pyramid = 5,
+	Box = 6,
+	Tube = 7,
 }
 

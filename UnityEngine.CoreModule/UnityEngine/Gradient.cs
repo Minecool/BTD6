@@ -4,24 +4,84 @@ namespace UnityEngine;
 [RequiredByNativeCode]
 public class Gradient : IEquatable<Gradient>
 {
+	public static class BindingsMarshaller
+	{
+
+		public static Gradient ConvertToManaged(IntPtr ptr) { }
+
+		public static IntPtr ConvertToNative(Gradient graident) { }
+
+	}
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.ParticleSystemModule"}])]
 	internal IntPtr m_Ptr; //Field offset: 0x10
+	private bool m_RequiresNativeCleanup; //Field offset: 0x18
+
+	public GradientAlphaKey[] alphaKeys
+	{
+		[FreeFunction("Gradient_Bindings::GetAlphaKeys", IsThreadSafe = True, HasExplicitThis = True)]
+		 get { } //Length: 261
+	}
+
+	public GradientColorKey[] colorKeys
+	{
+		[FreeFunction("Gradient_Bindings::GetColorKeys", IsThreadSafe = True, HasExplicitThis = True)]
+		 get { } //Length: 261
+	}
+
+	[NativeProperty(IsThreadSafe = True)]
+	public ColorSpace colorSpace
+	{
+		 get { } //Length: 81
+		 set { } //Length: 88
+	}
+
+	[NativeProperty(IsThreadSafe = True)]
+	public GradientMode mode
+	{
+		 get { } //Length: 81
+		 set { } //Length: 88
+	}
 
 	[RequiredByNativeCode]
 	public Gradient() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.ParticleSystemModule"}])]
+	internal Gradient(IntPtr ptr) { }
+
 	[FreeFunction(Name = "Gradient_Bindings::Cleanup", IsThreadSafe = True, HasExplicitThis = True)]
 	private void Cleanup() { }
 
-	public virtual bool Equals(object o) { }
+	private static void Cleanup_Injected(IntPtr _unity_self) { }
 
 	public override bool Equals(Gradient other) { }
+
+	public virtual bool Equals(object o) { }
 
 	[FreeFunction(Name = "Gradient_Bindings::Evaluate", IsThreadSafe = True, HasExplicitThis = True)]
 	public Color Evaluate(float time) { }
 
-	private void Evaluate_Injected(float time, out Color ret) { }
+	private static void Evaluate_Injected(IntPtr _unity_self, float time, out Color ret) { }
 
 	protected virtual void Finalize() { }
+
+	[FreeFunction("Gradient_Bindings::GetAlphaKeys", IsThreadSafe = True, HasExplicitThis = True)]
+	public GradientAlphaKey[] get_alphaKeys() { }
+
+	private static void get_alphaKeys_Injected(IntPtr _unity_self, out BlittableArrayWrapper ret) { }
+
+	[FreeFunction("Gradient_Bindings::GetColorKeys", IsThreadSafe = True, HasExplicitThis = True)]
+	public GradientColorKey[] get_colorKeys() { }
+
+	private static void get_colorKeys_Injected(IntPtr _unity_self, out BlittableArrayWrapper ret) { }
+
+	public ColorSpace get_colorSpace() { }
+
+	private static ColorSpace get_colorSpace_Injected(IntPtr _unity_self) { }
+
+	public GradientMode get_mode() { }
+
+	private static GradientMode get_mode_Injected(IntPtr _unity_self) { }
 
 	public virtual int GetHashCode() { }
 
@@ -31,8 +91,20 @@ public class Gradient : IEquatable<Gradient>
 	[FreeFunction("Gradient_Bindings::Internal_Equals", IsThreadSafe = True, HasExplicitThis = True)]
 	private bool Internal_Equals(IntPtr other) { }
 
+	private static bool Internal_Equals_Injected(IntPtr _unity_self, IntPtr other) { }
+
+	public void set_colorSpace(ColorSpace value) { }
+
+	private static void set_colorSpace_Injected(IntPtr _unity_self, ColorSpace value) { }
+
+	public void set_mode(GradientMode value) { }
+
+	private static void set_mode_Injected(IntPtr _unity_self, GradientMode value) { }
+
 	[FreeFunction(Name = "Gradient_Bindings::SetKeys", IsThreadSafe = True, HasExplicitThis = True)]
 	public void SetKeys(GradientColorKey[] colorKeys, GradientAlphaKey[] alphaKeys) { }
+
+	private static void SetKeys_Injected(IntPtr _unity_self, ref ManagedSpanWrapper colorKeys, ref ManagedSpanWrapper alphaKeys) { }
 
 }
 

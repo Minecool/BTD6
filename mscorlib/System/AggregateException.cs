@@ -41,8 +41,6 @@ public class AggregateException : Exception
 
 	public virtual string get_Message() { }
 
-	public virtual Exception GetBaseException() { }
-
 	public virtual void GetObjectData(SerializationInfo info, StreamingContext context) { }
 
 	public virtual string ToString() { }

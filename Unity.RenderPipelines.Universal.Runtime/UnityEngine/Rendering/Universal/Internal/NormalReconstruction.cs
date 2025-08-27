@@ -9,5 +9,11 @@ public static class NormalReconstruction
 
 	public static void SetupProperties(CommandBuffer cmd, in CameraData cameraData) { }
 
+	public static void SetupProperties(RasterCommandBuffer cmd, in CameraData cameraData) { }
+
+	public static void SetupProperties(CommandBuffer cmd, UniversalCameraData cameraData) { }
+
+	public static void SetupProperties(RasterCommandBuffer cmd, in UniversalCameraData cameraData) { }
+
 }
 

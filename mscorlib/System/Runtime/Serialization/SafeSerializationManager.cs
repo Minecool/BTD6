@@ -2,7 +2,6 @@ namespace System.Runtime.Serialization;
 
 internal sealed class SafeSerializationManager : IObjectReference, ISerializable
 {
-	private const string RealTypeSerializationName = "CLR_SafeSerializationManager_RealType"; //Field offset: 0x0
 	private IList<Object> m_serializedStates; //Field offset: 0x10
 	private SerializationInfo m_savedSerializationInfo; //Field offset: 0x18
 	private object m_realObject; //Field offset: 0x20

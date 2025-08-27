@@ -8,6 +8,8 @@ public class CreateSoundOnProjectileCreated : WeaponBehavior
 	private const string SourceTrance = "Trance"; //Field offset: 0x0
 	private const string SourceFireBurst = "FireBurst"; //Field offset: 0x0
 	private const string SourceSniper = "Sniper"; //Field offset: 0x0
+	private const string SourceIceWall = "IceWall"; //Field offset: 0x0
+	private const string SourceSuperMonkeyBeacon = "SuperMonkeyBeacon"; //Field offset: 0x0
 	public CreateSoundOnProjectileCreatedModel createSoundOnProjectileCreatedModel; //Field offset: 0x68
 
 	public CreateSoundOnProjectileCreated() { }

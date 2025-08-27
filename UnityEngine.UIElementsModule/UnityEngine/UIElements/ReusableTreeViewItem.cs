@@ -4,7 +4,7 @@ internal class ReusableTreeViewItem : ReusableCollectionItem
 {
 	private Toggle m_Toggle; //Field offset: 0x48
 	private VisualElement m_Container; //Field offset: 0x50
-	private VisualElement m_IndentElement; //Field offset: 0x58
+	internal VisualElement m_IndentElement; //Field offset: 0x58
 	private VisualElement m_BindableContainer; //Field offset: 0x60
 	private VisualElement m_Checkmark; //Field offset: 0x68
 	[CompilerGenerated]
@@ -13,11 +13,12 @@ internal class ReusableTreeViewItem : ReusableCollectionItem
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private Action<ChangeEvent`1<Boolean>> onToggleValueChanged; //Field offset: 0x78
-	private int m_Depth; //Field offset: 0x80
+	internal int m_Depth; //Field offset: 0x80
 	private float m_IndentWidth; //Field offset: 0x84
-	private EventCallback<PointerUpEvent> m_PointerUpCallback; //Field offset: 0x88
-	private EventCallback<ChangeEvent`1<Boolean>> m_ToggleValueChangedCallback; //Field offset: 0x90
-	private EventCallback<GeometryChangedEvent> m_ToggleGeometryChangedCallback; //Field offset: 0x98
+	internal Nullable<Single> customIndentWidth; //Field offset: 0x88
+	private EventCallback<PointerUpEvent> m_PointerUpCallback; //Field offset: 0x90
+	private EventCallback<ChangeEvent`1<Boolean>> m_ToggleValueChangedCallback; //Field offset: 0x98
+	private EventCallback<GeometryChangedEvent> m_ToggleGeometryChangedCallback; //Field offset: 0xA0
 
 	public event Action<PointerUpEvent> onPointerUp
 	{
@@ -35,6 +36,11 @@ internal class ReusableTreeViewItem : ReusableCollectionItem
 		 remove { } //Length: 172
 	}
 
+	internal float indentWidth
+	{
+		internal get { } //Length: 91
+	}
+
 	public virtual VisualElement rootElement
 	{
 		 get { } //Length: 14
@@ -49,6 +55,8 @@ internal class ReusableTreeViewItem : ReusableCollectionItem
 	public void add_onToggleValueChanged(Action<ChangeEvent`1<Boolean>> value) { }
 
 	public virtual void DetachElement() { }
+
+	internal float get_indentWidth() { }
 
 	public virtual VisualElement get_rootElement() { }
 

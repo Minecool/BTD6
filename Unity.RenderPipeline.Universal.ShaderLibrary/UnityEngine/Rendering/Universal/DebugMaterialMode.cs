@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering.Universal;
 
-[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\ShaderLibrary\\Debug\\DebugViewEnums.cs")]
+[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.universal@056626336c36\\ShaderLibrary\\Debug\\DebugViewEnums.cs")]
 public enum DebugMaterialMode
 {
 	None = 0,
@@ -15,5 +15,6 @@ public enum DebugMaterialMode
 	LightingComplexity = 9,
 	Metallic = 10,
 	SpriteMask = 11,
+	RenderingLayerMasks = 12,
 }
 

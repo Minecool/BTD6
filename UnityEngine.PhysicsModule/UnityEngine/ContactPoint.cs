@@ -1,7 +1,5 @@
 namespace UnityEngine;
 
-[NativeHeader("Modules/Physics/MessageParameters.h")]
-[UsedByNativeCode]
 public struct ContactPoint
 {
 	internal Vector3 m_Point; //Field offset: 0x0

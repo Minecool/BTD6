@@ -15,12 +15,12 @@ public struct UIntPtr : ISerializable, IEquatable<UIntPtr>
 
 	private static UIntPtr() { }
 
+	[CLSCompliant(False)]
+	public UIntPtr(Void* value) { }
+
 	public UIntPtr(ulong value) { }
 
 	public UIntPtr(uint value) { }
-
-	[CLSCompliant(False)]
-	public UIntPtr(Void* value) { }
 
 	public virtual bool Equals(object obj) { }
 
@@ -32,6 +32,12 @@ public struct UIntPtr : ISerializable, IEquatable<UIntPtr>
 
 	public static UIntPtr op_Explicit(ulong value) { }
 
+	[CLSCompliant(False)]
+	public static UIntPtr op_Explicit(Void* value) { }
+
+	[CLSCompliant(False)]
+	public static Void* op_Explicit(UIntPtr value) { }
+
 	public static UIntPtr op_Explicit(uint value) { }
 
 	public static bool op_Inequality(UIntPtr value1, UIntPtr value2) { }
@@ -39,6 +45,9 @@ public struct UIntPtr : ISerializable, IEquatable<UIntPtr>
 	private override bool System.IEquatable<System.UIntPtr>.Equals(UIntPtr other) { }
 
 	private override void System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo info, StreamingContext context) { }
+
+	[CLSCompliant(False)]
+	public Void* ToPointer() { }
 
 	public virtual string ToString() { }
 

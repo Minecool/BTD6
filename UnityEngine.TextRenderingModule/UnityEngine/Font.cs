@@ -1,8 +1,8 @@
 namespace UnityEngine;
 
 [NativeClass("TextRendering::Font")]
-[NativeHeader("Modules/TextRendering/Public/Font.h")]
 [NativeHeader("Modules/TextRendering/Public/FontImpl.h")]
+[NativeHeader("Modules/TextRendering/Public/Font.h")]
 [StaticAccessor("TextRenderingPrivate", StaticAccessorType::DoubleColon (2))]
 public sealed class Font : object
 {
@@ -40,43 +40,43 @@ public sealed class Font : object
 
 	public int ascent
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public CharacterInfo[] characterInfo
 	{
 		[FreeFunction("TextRenderingPrivate::GetFontCharacterInfo", HasExplicitThis = True)]
-		 get { } //Length: 51
+		 get { } //Length: 273
 		[FreeFunction("TextRenderingPrivate::SetFontCharacterInfo", HasExplicitThis = True)]
-		 set { } //Length: 66
+		 set { } //Length: 261
 	}
 
 	public bool dynamic
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public String[] fontNames
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 118
+		 set { } //Length: 133
 	}
 
 	public int fontSize
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	[NativeProperty("LineSpacing", False, TargetType::Function (0))]
 	public int lineHeight
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public Material material
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 144
+		 set { } //Length: 177
 	}
 
 	[Obsolete("Font.textureRebuildCallback has been deprecated. Use Font.textureRebuilt instead.")]
@@ -98,26 +98,43 @@ public sealed class Font : object
 	[CompilerGenerated]
 	public static void add_textureRebuilt(Action<Font> value) { }
 
-	public static Font CreateDynamicFontFromOSFont(String[] fontnames, int size) { }
-
 	public static Font CreateDynamicFontFromOSFont(string fontname, int size) { }
 
+	public static Font CreateDynamicFontFromOSFont(String[] fontnames, int size) { }
+
 	public int get_ascent() { }
+
+	private static int get_ascent_Injected(IntPtr _unity_self) { }
 
 	[FreeFunction("TextRenderingPrivate::GetFontCharacterInfo", HasExplicitThis = True)]
 	public CharacterInfo[] get_characterInfo() { }
 
+	private static void get_characterInfo_Injected(IntPtr _unity_self, out BlittableArrayWrapper ret) { }
+
 	public bool get_dynamic() { }
+
+	private static bool get_dynamic_Injected(IntPtr _unity_self) { }
 
 	public String[] get_fontNames() { }
 
+	private static String[] get_fontNames_Injected(IntPtr _unity_self) { }
+
 	public int get_fontSize() { }
+
+	private static int get_fontSize_Injected(IntPtr _unity_self) { }
 
 	public int get_lineHeight() { }
 
+	private static int get_lineHeight_Injected(IntPtr _unity_self) { }
+
 	public Material get_material() { }
 
+	private static IntPtr get_material_Injected(IntPtr _unity_self) { }
+
 	public FontTextureRebuildCallback get_textureRebuildCallback() { }
+
+	[ExcludeFromDocs]
+	public bool GetCharacterInfo(char ch, out CharacterInfo info) { }
 
 	[ExcludeFromDocs]
 	public bool GetCharacterInfo(char ch, out CharacterInfo info, int size) { }
@@ -125,12 +142,16 @@ public sealed class Font : object
 	[FreeFunction("TextRenderingPrivate::GetCharacterInfo", HasExplicitThis = True)]
 	public bool GetCharacterInfo(char ch, out CharacterInfo info, int size, FontStyle style) { }
 
-	[ExcludeFromDocs]
-	public bool GetCharacterInfo(char ch, out CharacterInfo info) { }
+	private static bool GetCharacterInfo_Injected(IntPtr _unity_self, char ch, out CharacterInfo info, int size, FontStyle style) { }
 
 	internal static Font GetDefault() { }
 
+	private static IntPtr GetDefault_Injected() { }
+
 	public static int GetMaxVertsForString(string str) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.TextCoreTextEngineModule"}])]
+	internal static String[] GetOSFallbacks() { }
 
 	public static String[] GetOSInstalledFontNames() { }
 
@@ -140,11 +161,17 @@ public sealed class Font : object
 
 	public bool HasCharacter(char c) { }
 
+	private static bool HasCharacter_Injected(IntPtr _unity_self, int c) { }
+
 	private static void Internal_CreateDynamicFont(Font self, String[] _names, int size) { }
 
 	private static void Internal_CreateFont(Font self, string name) { }
 
+	private static void Internal_CreateFont_Injected(Font self, ref ManagedSpanWrapper name) { }
+
 	private static void Internal_CreateFontFromPath(Font self, string fontPath) { }
+
+	private static void Internal_CreateFontFromPath_Injected(Font self, ref ManagedSpanWrapper fontPath) { }
 
 	[RequiredByNativeCode]
 	internal static void InvokeTextureRebuilt_Internal(Font font) { }
@@ -158,17 +185,25 @@ public sealed class Font : object
 	public void RequestCharactersInTexture(string characters, int size, FontStyle style) { }
 
 	[ExcludeFromDocs]
-	public void RequestCharactersInTexture(string characters) { }
+	public void RequestCharactersInTexture(string characters, int size) { }
 
 	[ExcludeFromDocs]
-	public void RequestCharactersInTexture(string characters, int size) { }
+	public void RequestCharactersInTexture(string characters) { }
+
+	private static void RequestCharactersInTexture_Injected(IntPtr _unity_self, ref ManagedSpanWrapper characters, int size, FontStyle style) { }
 
 	[FreeFunction("TextRenderingPrivate::SetFontCharacterInfo", HasExplicitThis = True)]
 	public void set_characterInfo(CharacterInfo[] value) { }
 
+	private static void set_characterInfo_Injected(IntPtr _unity_self, ref ManagedSpanWrapper value) { }
+
 	public void set_fontNames(String[] value) { }
 
+	private static void set_fontNames_Injected(IntPtr _unity_self, String[] value) { }
+
 	public void set_material(Material value) { }
+
+	private static void set_material_Injected(IntPtr _unity_self, IntPtr value) { }
 
 	public void set_textureRebuildCallback(FontTextureRebuildCallback value) { }
 

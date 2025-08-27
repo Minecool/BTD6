@@ -12,7 +12,7 @@ public class SlowModel : ProjectileBehaviorWithOverlayModel
 		public bool didMutatorAffectBloon; //Field offset: 0x91
 		public float multiplier; //Field offset: 0x94
 
-		public SlowMutator(float multiplier, string mutationId, string overlayType, bool isUnique, bool dontRefreshDuration, int glueLevel) { }
+		public SlowMutator(float multiplier, string mutationId, string overlayType, bool isUnique, bool dontRefreshDuration, int glueLevel, bool dontRemoveOnBloonDgrade) { }
 
 		public virtual bool Mutate(Model baseModel, Model model) { }
 
@@ -36,6 +36,7 @@ public class SlowModel : ProjectileBehaviorWithOverlayModel
 	private float multiplier; //Field offset: 0x74
 	private SlowMutator mutator; //Field offset: 0x78
 	public float chance; //Field offset: 0x80
+	public bool dontRemoveOnBloonDegrade; //Field offset: 0x84
 
 	public float Lifespan
 	{
@@ -46,15 +47,15 @@ public class SlowModel : ProjectileBehaviorWithOverlayModel
 	public float Multiplier
 	{
 		 get { } //Length: 6
-		 set { } //Length: 278
+		 set { } //Length: 308
 	}
 
 	public SlowMutator Mutator
 	{
-		 get { } //Length: 242
+		 get { } //Length: 280
 	}
 
-	public SlowModel(string name, float multiplier, float lifespan, string mutationId, int layers, string overlayType, bool isUnique, bool dontRefreshDuration, EffectModel effectModel, bool cascadeMutators, bool removeMutatorIfNotMatching, bool countGlueAchievement, float chance, int glueLevel = 0, bool matchLayersWithDamage = false) { }
+	public SlowModel(string name, float multiplier, float lifespan, string mutationId, int layers, string overlayType, bool isUnique, bool dontRefreshDuration, EffectModel effectModel, bool cascadeMutators, bool removeMutatorIfNotMatching, bool countGlueAchievement, float chance, int glueLevel = 0, bool matchLayersWithDamage = false, bool dontRemoveOnBloonDegrade = false) { }
 
 	public virtual Model Clone() { }
 

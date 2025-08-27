@@ -12,7 +12,7 @@ public class SwitchDisplay : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 302
+		 get { } //Length: 303
 	}
 
 	public SwitchDisplay() { }

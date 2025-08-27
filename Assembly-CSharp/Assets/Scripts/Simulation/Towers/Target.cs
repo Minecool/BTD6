@@ -19,7 +19,7 @@ public struct Target
 
 	public bool IsValid
 	{
-		 get { } //Length: 179
+		 get { } //Length: 172
 	}
 
 	public Vector3 LastPosition

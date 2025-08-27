@@ -13,12 +13,12 @@ public struct Color : IEquatable<Color>, IFormattable
 
 	public static Color black
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public static Color blue
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public static Color clear
@@ -28,32 +28,32 @@ public struct Color : IEquatable<Color>, IFormattable
 
 	public Color gamma
 	{
-		 get { } //Length: 133
+		 get { } //Length: 234
 	}
 
 	public static Color gray
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public static Color green
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public static Color grey
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public Color linear
 	{
-		 get { } //Length: 133
+		 get { } //Length: 234
 	}
 
 	public static Color magenta
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public float maxColorComponent
@@ -63,17 +63,17 @@ public struct Color : IEquatable<Color>, IFormattable
 
 	public static Color red
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public static Color white
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public static Color yellow
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	public Color(float r, float g, float b, float a) { }
@@ -132,6 +132,7 @@ public struct Color : IEquatable<Color>, IFormattable
 
 	public static Color op_Multiply(Color a, Color b) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal Color RGBMultiplied(float multiplier) { }
 
 	public override string ToString(string format, IFormatProvider formatProvider) { }

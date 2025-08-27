@@ -16,7 +16,7 @@ public struct XRNodeState
 
 	public XRNode nodeType
 	{
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public bool tracked

@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::EnterLeave (3))]
+[EventCategory(EventCategory::EnterLeave (4))]
 public class MouseOverEvent : MouseEventBase<MouseOverEvent>
 {
 	[CompilerGenerated]
@@ -20,6 +20,10 @@ public class MouseOverEvent : MouseEventBase<MouseOverEvent>
 	private static MouseOverEvent() { }
 
 	public MouseOverEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
+
+	protected private virtual void PreDispatch(IPanel panel) { }
 
 }
 

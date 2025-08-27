@@ -16,5 +16,7 @@ public class CrashReportHandler
 	[NativeThrows]
 	public static void SetUserMetadata(string key, string value) { }
 
+	private static void SetUserMetadata_Injected(ref ManagedSpanWrapper key, ref ManagedSpanWrapper value) { }
+
 }
 

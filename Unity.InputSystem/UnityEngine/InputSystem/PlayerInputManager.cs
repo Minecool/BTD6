@@ -1,7 +1,7 @@
 namespace UnityEngine.InputSystem;
 
 [AddComponentMenu("Input/Player Input Manager")]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/PlayerInputManager.html")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/PlayerInputManager.html")]
 public class PlayerInputManager : MonoBehaviour
 {
 	internal class PlayerJoinedEvent : UnityEvent<PlayerInput>
@@ -83,13 +83,13 @@ public class PlayerInputManager : MonoBehaviour
 	public InputActionProperty joinAction
 	{
 		 get { } //Length: 21
-		 set { } //Length: 151
+		 set { } //Length: 153
 	}
 
 	public PlayerJoinBehavior joinBehavior
 	{
 		 get { } //Length: 4
-		 set { } //Length: 71
+		 set { } //Length: 70
 	}
 
 	public bool joiningEnabled
@@ -142,7 +142,7 @@ public class PlayerInputManager : MonoBehaviour
 	public bool splitScreen
 	{
 		 get { } //Length: 5
-		 set { } //Length: 643
+		 set { } //Length: 616
 	}
 
 	public Rect splitScreenArea

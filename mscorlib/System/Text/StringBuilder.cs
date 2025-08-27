@@ -3,14 +3,6 @@ namespace System.Text;
 [DefaultMember("Chars")]
 public sealed class StringBuilder : ISerializable
 {
-	internal const int DefaultCapacity = 16; //Field offset: 0x0
-	private const string CapacityField = "Capacity"; //Field offset: 0x0
-	private const string MaxCapacityField = "m_MaxCapacity"; //Field offset: 0x0
-	private const string StringValueField = "m_StringValue"; //Field offset: 0x0
-	private const string ThreadIDField = "m_currentThread"; //Field offset: 0x0
-	internal const int MaxChunkSize = 8000; //Field offset: 0x0
-	private const int IndexLimit = 1000000; //Field offset: 0x0
-	private const int WidthLimit = 1000000; //Field offset: 0x0
 	internal Char[] m_ChunkChars; //Field offset: 0x10
 	internal StringBuilder m_ChunkPrevious; //Field offset: 0x18
 	internal int m_ChunkLength; //Field offset: 0x20
@@ -32,7 +24,7 @@ public sealed class StringBuilder : ISerializable
 	public int Length
 	{
 		 get { } //Length: 7
-		 set { } //Length: 640
+		 set { } //Length: 639
 	}
 
 	public int MaxCapacity
@@ -42,7 +34,7 @@ public sealed class StringBuilder : ISerializable
 
 	private Span<Char> RemainingCurrentChunk
 	{
-		private get { } //Length: 159
+		private get { } //Length: 141
 	}
 
 	public StringBuilder() { }

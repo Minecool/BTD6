@@ -4,7 +4,7 @@ namespace NinjaKiwi.Common.ResourceUtils;
 public class AssetNameAttribute : PropertyAttribute
 {
 	public const char kSeparator = '\u2C'; //Field offset: 0x0
-	public Type objType; //Field offset: 0x10
+	public Type objType; //Field offset: 0x18
 
 	public AssetNameAttribute(Type objType) { }
 

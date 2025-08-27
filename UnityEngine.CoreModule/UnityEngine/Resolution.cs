@@ -17,7 +17,7 @@ public struct Resolution
 	[Obsolete("Resolution.refreshRate is obsolete. Use refreshRateRatio instead.", False)]
 	public int refreshRate
 	{
-		 get { } //Length: 112
+		 get { } //Length: 278
 		 set { } //Length: 11
 	}
 
@@ -30,7 +30,7 @@ public struct Resolution
 	public int width
 	{
 		 get { } //Length: 5
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int get_height() { }

@@ -74,7 +74,7 @@ internal class CultureData
 
 	public static CultureData Invariant
 	{
-		 get { } //Length: 811
+		 get { } //Length: 809
 	}
 
 	internal bool IsInvariantCulture

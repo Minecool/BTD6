@@ -13,7 +13,7 @@ internal sealed class LogicalBinaryExpression : BinaryExpression
 
 	public virtual Type Type
 	{
-		 get { } //Length: 89
+		 get { } //Length: 50
 	}
 
 	internal LogicalBinaryExpression(ExpressionType nodeType, Expression left, Expression right) { }

@@ -204,7 +204,7 @@ public class PanelEventHandler : UIBehaviour, IPointerMoveHandler, IEventSystemH
 
 		public override bool shiftKey
 		{
-			 get { } //Length: 11
+			 get { } //Length: 10
 		}
 
 		public private override float tangentialPressure
@@ -393,7 +393,7 @@ public class PanelEventHandler : UIBehaviour, IPointerMoveHandler, IEventSystemH
 
 	private EventSystem eventSystem
 	{
-		private get { } //Length: 218
+		private get { } //Length: 214
 	}
 
 	private bool isCurrentFocusedPanel
@@ -404,7 +404,7 @@ public class PanelEventHandler : UIBehaviour, IPointerMoveHandler, IEventSystemH
 	public override IPanel panel
 	{
 		 get { } //Length: 5
-		 set { } //Length: 141
+		 set { } //Length: 530
 	}
 
 	private GameObject selectableGameObject

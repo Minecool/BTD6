@@ -9,21 +9,24 @@ public static class Assert
 	private static Assert() { }
 
 	[Conditional("UNITY_ASSERTIONS")]
-	public static void AreEqual(T expected, T actual) { }
-
-	[Conditional("UNITY_ASSERTIONS")]
-	public static void AreEqual(T expected, T actual, string message) { }
+	public static void AreEqual(int expected, int actual) { }
 
 	[Conditional("UNITY_ASSERTIONS")]
 	public static void AreEqual(T expected, T actual, string message, IEqualityComparer<T> comparer) { }
 
 	[Conditional("UNITY_ASSERTIONS")]
-	public static void AreEqual(object expected, object actual, string message) { }
+	public static void AreEqual(T expected, T actual, string message) { }
 
 	[Conditional("UNITY_ASSERTIONS")]
-	public static void AreEqual(int expected, int actual) { }
+	public static void AreEqual(T expected, T actual) { }
+
+	[Conditional("UNITY_ASSERTIONS")]
+	public static void AreEqual(object expected, object actual, string message) { }
 
 	private static void Fail(string message, string userMessage) { }
+
+	[Conditional("UNITY_ASSERTIONS")]
+	public static void IsFalse(bool condition) { }
 
 	[Conditional("UNITY_ASSERTIONS")]
 	public static void IsFalse(bool condition, string message) { }
@@ -47,10 +50,10 @@ public static class Assert
 	public static void IsNull(object value, string message) { }
 
 	[Conditional("UNITY_ASSERTIONS")]
-	public static void IsTrue(bool condition) { }
+	public static void IsTrue(bool condition, string message) { }
 
 	[Conditional("UNITY_ASSERTIONS")]
-	public static void IsTrue(bool condition, string message) { }
+	public static void IsTrue(bool condition) { }
 
 }
 

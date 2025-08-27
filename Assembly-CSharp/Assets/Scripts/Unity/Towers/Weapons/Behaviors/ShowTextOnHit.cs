@@ -14,7 +14,7 @@ public class ShowTextOnHit : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 1063
+		 get { } //Length: 1104
 	}
 
 	public ShowTextOnHit() { }

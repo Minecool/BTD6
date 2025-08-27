@@ -29,7 +29,7 @@ public class IncreaseBloonWorthModel : ProjectileBehaviorWithOverlayModel
 
 	public BloonWorthMutator mutator
 	{
-		 get { } //Length: 314
+		 get { } //Length: 318
 	}
 
 	public IncreaseBloonWorthModel(string name, string mutatorId, float cash, float cashMultiplier, FilterModel filter, int charges, string overlayType, float duration, BloonProperties bloonPropertiesToRemove, BloonWorthMutator mutator = null) { }

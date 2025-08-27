@@ -1,5 +1,7 @@
 namespace UnityEngine.Rendering;
 
+[DebuggerDisplay("Count = {Count}")]
+[DebuggerTypeProxy(typeof(SerializedDictionaryDebugView`2))]
 public class SerializedDictionary : SerializedDictionary<K, V, K, V>
 {
 

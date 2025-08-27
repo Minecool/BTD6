@@ -60,6 +60,16 @@ public class DecalProjector : MonoBehaviour
 	[SerializeField]
 	private float m_FadeFactor; //Field offset: 0x70
 	private Material m_OldMaterial; //Field offset: 0x78
+	private float m_OldDrawDistance; //Field offset: 0x80
+	private float m_OldFadeScale; //Field offset: 0x84
+	private float m_OldStartAngleFade; //Field offset: 0x88
+	private float m_OldEndAngleFade; //Field offset: 0x8C
+	private Vector2 m_OldUVScale; //Field offset: 0x90
+	private Vector2 m_OldUVBias; //Field offset: 0x98
+	private DecalScaleMode m_OldScaleMode; //Field offset: 0xA0
+	private Vector3 m_OldOffset; //Field offset: 0xA4
+	private Vector3 m_OldSize; //Field offset: 0xB0
+	private float m_OldFadeFactor; //Field offset: 0xBC
 
 	internal static event Action onAllDecalPropertyChange
 	{
@@ -274,6 +284,8 @@ public class DecalProjector : MonoBehaviour
 	private void InitMaterial() { }
 
 	public bool IsValid() { }
+
+	private void OnDidApplyAnimationProperties() { }
 
 	private void OnDisable() { }
 

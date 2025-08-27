@@ -2,10 +2,10 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeDesperado : TSMThemeDefault
 {
-	public GameObject camoTickbox; //Field offset: 0xC0
-	public TSMButton camoButton; //Field offset: 0xC8
-	public GameObject bountyHunterTickbox; //Field offset: 0xD0
-	public TSMButton bountyHunterButton; //Field offset: 0xD8
+	public GameObject camoTickbox; //Field offset: 0xD8
+	public TSMButton camoButton; //Field offset: 0xE0
+	public GameObject bountyHunterTickbox; //Field offset: 0xE8
+	public TSMButton bountyHunterButton; //Field offset: 0xF0
 
 	public TSMThemeDesperado() { }
 

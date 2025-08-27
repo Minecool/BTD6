@@ -37,7 +37,7 @@ public class XmlDocumentFragment : XmlNode
 
 	public virtual XmlDocument OwnerDocument
 	{
-		 get { } //Length: 107
+		 get { } //Length: 103
 	}
 
 	public virtual XmlNode ParentNode

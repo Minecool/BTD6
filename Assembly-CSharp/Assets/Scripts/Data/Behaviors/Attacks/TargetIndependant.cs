@@ -7,7 +7,7 @@ public class TargetIndependant : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 318
+		 get { } //Length: 314
 	}
 
 	public TargetIndependant() { }

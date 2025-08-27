@@ -25,7 +25,7 @@ internal struct RegexPrefix
 	internal string Prefix
 	{
 		[CompilerGenerated]
-		internal get { } //Length: 5
+		internal get { } //Length: 291
 	}
 
 	private static RegexPrefix() { }

@@ -3,12 +3,13 @@ namespace Assets.Scripts.Unity.UI_New.Popups;
 public class Popup : MonoBehaviour
 {
 	[CompilerGenerated]
-	private struct <CancelClicked>d__63 : IAsyncStateMachine
+	private struct <CancelClickedAsync>d__64 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
-		public Popup <>4__this; //Field offset: 0x28
-		private TaskAwaiter <>u__1; //Field offset: 0x30
+		public bool muteClickSound; //Field offset: 0x28
+		public Popup <>4__this; //Field offset: 0x30
+		private TaskAwaiter <>u__1; //Field offset: 0x38
 
 		private override void MoveNext() { }
 
@@ -94,17 +95,17 @@ public class Popup : MonoBehaviour
 	public event Action<Popup> popupEnd
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action<Popup> popupHide
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	protected private bool active
@@ -138,8 +139,10 @@ public class Popup : MonoBehaviour
 
 	private void AnimStateEnd() { }
 
-	[AsyncStateMachine(typeof(<CancelClicked>d__63))]
 	public override void CancelClicked() { }
+
+	[AsyncStateMachine(typeof(<CancelClickedAsync>d__64))]
+	public void CancelClickedAsync(bool muteClickSound) { }
 
 	[CompilerGenerated]
 	protected bool get_active() { }

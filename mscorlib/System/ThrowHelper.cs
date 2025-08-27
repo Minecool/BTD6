@@ -16,6 +16,8 @@ internal static class ThrowHelper
 
 	private static Exception CreateIndexOutOfRangeException() { }
 
+	private static Exception CreateObjectDisposedException_ArrayMemoryPoolBuffer() { }
+
 	private static Exception CreateThrowNotSupportedException() { }
 
 	private static ArgumentException GetAddingDuplicateWithKeyArgumentException(object key) { }
@@ -91,6 +93,8 @@ internal static class ThrowHelper
 	internal static void ThrowNotSupportedException() { }
 
 	internal static void ThrowNotSupportedException(ExceptionResource resource) { }
+
+	internal static void ThrowObjectDisposedException_ArrayMemoryPoolBuffer() { }
 
 	internal static void ThrowSerializationException(ExceptionResource resource) { }
 

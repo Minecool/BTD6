@@ -38,6 +38,7 @@ public class Vector4Field : BaseCompositeField<Vector4, FloatField, Single>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Vector4Field, UxmlTraits>
 	{
 
@@ -45,12 +46,13 @@ public class Vector4Field : BaseCompositeField<Vector4, FloatField, Single>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits<Vector4>
 	{
-		private UxmlFloatAttributeDescription m_XValue; //Field offset: 0x80
-		private UxmlFloatAttributeDescription m_YValue; //Field offset: 0x88
-		private UxmlFloatAttributeDescription m_ZValue; //Field offset: 0x90
-		private UxmlFloatAttributeDescription m_WValue; //Field offset: 0x98
+		private UxmlFloatAttributeDescription m_XValue; //Field offset: 0x98
+		private UxmlFloatAttributeDescription m_YValue; //Field offset: 0xA0
+		private UxmlFloatAttributeDescription m_ZValue; //Field offset: 0xA8
+		private UxmlFloatAttributeDescription m_WValue; //Field offset: 0xB0
 
 		public UxmlTraits() { }
 

@@ -11,12 +11,9 @@ public class ResourceManagerRuntimeData
 	[FormerlySerializedAs("m_catalogLocations")]
 	[SerializeField]
 	private List<ResourceLocationData> m_CatalogLocations; //Field offset: 0x20
-	[FormerlySerializedAs("m_profileEvents")]
-	[SerializeField]
-	private bool m_ProfileEvents; //Field offset: 0x28
 	[FormerlySerializedAs("m_logResourceManagerExceptions")]
 	[SerializeField]
-	private bool m_LogResourceManagerExceptions; //Field offset: 0x29
+	private bool m_LogResourceManagerExceptions; //Field offset: 0x28
 	[FormerlySerializedAs("m_extraInitializationData")]
 	[SerializeField]
 	private List<ObjectInitializationData> m_ExtraInitializationData; //Field offset: 0x30
@@ -91,12 +88,6 @@ public class ResourceManagerRuntimeData
 		 set { } //Length: 33
 	}
 
-	public bool ProfileEvents
-	{
-		 get { } //Length: 5
-		 set { } //Length: 4
-	}
-
 	public string SettingsHash
 	{
 		 get { } //Length: 5
@@ -125,8 +116,6 @@ public class ResourceManagerRuntimeData
 
 	public int get_MaxConcurrentWebRequests() { }
 
-	public bool get_ProfileEvents() { }
-
 	public string get_SettingsHash() { }
 
 	public void set_AddressablesVersion(string value) { }
@@ -144,8 +133,6 @@ public class ResourceManagerRuntimeData
 	public void set_LogResourceManagerExceptions(bool value) { }
 
 	public void set_MaxConcurrentWebRequests(int value) { }
-
-	public void set_ProfileEvents(bool value) { }
 
 	public void set_SettingsHash(string value) { }
 

@@ -14,7 +14,7 @@ public class ActivateDamageModifierSupportZone : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 401
+		 get { } //Length: 397
 	}
 
 	public ActivateDamageModifierSupportZone() { }

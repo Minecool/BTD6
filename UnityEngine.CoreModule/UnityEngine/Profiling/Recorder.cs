@@ -10,28 +10,28 @@ public sealed class Recorder
 
 	public long elapsedNanoseconds
 	{
-		 get { } //Length: 48
+		 get { } //Length: 47
 	}
 
 	public bool enabled
 	{
 		 get { } //Length: 13
-		 set { } //Length: 108
+		 set { } //Length: 91
 	}
 
 	public long gpuElapsedNanoseconds
 	{
-		 get { } //Length: 48
+		 get { } //Length: 47
 	}
 
 	public int gpuSampleBlockCount
 	{
-		 get { } //Length: 86
+		 get { } //Length: 84
 	}
 
 	public int sampleBlockCount
 	{
-		 get { } //Length: 86
+		 get { } //Length: 84
 	}
 
 	private static Recorder() { }

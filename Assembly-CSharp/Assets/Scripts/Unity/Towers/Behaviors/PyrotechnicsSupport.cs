@@ -14,7 +14,7 @@ public class PyrotechnicsSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 333
+		 get { } //Length: 273
 	}
 
 	public PyrotechnicsSupport() { }

@@ -18,7 +18,7 @@ internal class X509CertificateImplBtls : X509Certificate2ImplUnix
 
 	public virtual bool IsValid
 	{
-		 get { } //Length: 27
+		 get { } //Length: 22
 	}
 
 	internal MonoBtlsKey NativePrivateKey
@@ -28,8 +28,8 @@ internal class X509CertificateImplBtls : X509Certificate2ImplUnix
 
 	public virtual AsymmetricAlgorithm PrivateKey
 	{
-		 get { } //Length: 52
-		 set { } //Length: 179
+		 get { } //Length: 47
+		 set { } //Length: 167
 	}
 
 	internal MonoBtlsX509 X509

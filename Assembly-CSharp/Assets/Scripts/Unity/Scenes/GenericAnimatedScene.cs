@@ -117,8 +117,8 @@ public abstract class GenericAnimatedScene : MonoBehaviour
 	}
 
 	private bool SkipAnimations; //Field offset: 0x20
-	private bool CloseAnimationFinished; //Field offset: 0x21
-	private bool OpenAnimationFinished; //Field offset: 0x22
+	protected bool CloseAnimationFinished; //Field offset: 0x21
+	protected bool OpenAnimationFinished; //Field offset: 0x22
 
 	protected GenericAnimatedScene() { }
 

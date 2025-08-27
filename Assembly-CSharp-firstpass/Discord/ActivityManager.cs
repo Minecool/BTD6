@@ -409,7 +409,7 @@ public class ActivityManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 286
+		private get { } //Length: 274
 	}
 
 	internal ActivityManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

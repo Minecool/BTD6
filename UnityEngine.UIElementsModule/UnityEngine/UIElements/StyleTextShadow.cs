@@ -8,11 +8,13 @@ public struct StyleTextShadow : IStyleValue<TextShadow>, IEquatable<StyleTextSha
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 5
+		 set { } //Length: 8900
 	}
 
 	public override TextShadow value
 	{
 		 get { } //Length: 75
+		 set { } //Length: 30
 	}
 
 	public StyleTextShadow(StyleKeyword keyword) { }
@@ -32,6 +34,10 @@ public struct StyleTextShadow : IStyleValue<TextShadow>, IEquatable<StyleTextSha
 	public static bool op_Equality(StyleTextShadow lhs, StyleTextShadow rhs) { }
 
 	public static StyleTextShadow op_Implicit(StyleKeyword keyword) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(TextShadow value) { }
 
 	public virtual string ToString() { }
 

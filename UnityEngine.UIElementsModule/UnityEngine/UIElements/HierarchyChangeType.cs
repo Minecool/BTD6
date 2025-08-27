@@ -2,8 +2,10 @@ namespace UnityEngine.UIElements;
 
 internal enum HierarchyChangeType
 {
-	Add = 0,
-	Remove = 1,
-	Move = 2,
+	AddedToParent = 0,
+	RemovedFromParent = 1,
+	ChildrenReordered = 2,
+	AttachedToPanel = 3,
+	DetachedFromPanel = 4,
 }
 

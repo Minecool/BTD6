@@ -50,7 +50,7 @@ public class PlayerContentStatsPanel : MonoBehaviour
 	public private bool IsLoading
 	{
 		 get { } //Length: 8
-		private set { } //Length: 567
+		private set { } //Length: 568
 	}
 
 	public PlayerContentStatsPanel() { }

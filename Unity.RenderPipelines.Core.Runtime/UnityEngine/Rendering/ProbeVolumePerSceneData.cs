@@ -2,9 +2,9 @@ namespace UnityEngine.Rendering;
 
 [AddComponentMenu(null)]
 [ExecuteAlways]
-public class ProbeVolumePerSceneData : MonoBehaviour, ISerializationCallbackReceiver
+public class ProbeVolumePerSceneData : MonoBehaviour
 {
-	public struct PerScenarioData
+	public struct ObsoletePerScenarioData
 	{
 		public int sceneHash; //Field offset: 0x0
 		public TextAsset cellDataAsset; //Field offset: 0x8
@@ -12,29 +12,41 @@ public class ProbeVolumePerSceneData : MonoBehaviour, ISerializationCallbackRece
 
 	}
 
-	private struct SerializablePerScenarioDataItem
+	private struct ObsoleteSerializablePerScenarioDataItem
 	{
 		public string scenario; //Field offset: 0x0
-		public PerScenarioData data; //Field offset: 0x8
+		public ObsoletePerScenarioData data; //Field offset: 0x8
 
 	}
 
+	[FormerlySerializedAs("bakingSet")]
 	[SerializeField]
-	internal ProbeVolumeAsset asset; //Field offset: 0x20
+	internal ProbeVolumeBakingSet serializedBakingSet; //Field offset: 0x20
 	[SerializeField]
-	internal TextAsset cellSharedDataAsset; //Field offset: 0x28
+	internal string sceneGUID; //Field offset: 0x28
+	[FormerlySerializedAs("asset")]
 	[SerializeField]
-	internal TextAsset cellSupportDataAsset; //Field offset: 0x30
+	internal ObsoleteProbeVolumeAsset obsoleteAsset; //Field offset: 0x30
+	[FormerlySerializedAs("cellSharedDataAsset")]
 	[SerializeField]
-	private List<SerializablePerScenarioDataItem> serializedScenarios; //Field offset: 0x38
-	internal Dictionary<String, PerScenarioData> scenarios; //Field offset: 0x40
-	private bool assetLoaded; //Field offset: 0x48
-	private string activeScenario; //Field offset: 0x50
-	private string otherScenario; //Field offset: 0x58
+	internal TextAsset obsoleteCellSharedDataAsset; //Field offset: 0x38
+	[FormerlySerializedAs("cellSupportDataAsset")]
+	[SerializeField]
+	internal TextAsset obsoleteCellSupportDataAsset; //Field offset: 0x40
+	[FormerlySerializedAs("serializedScenarios")]
+	[SerializeField]
+	private List<ObsoleteSerializablePerScenarioDataItem> obsoleteSerializedScenarios; //Field offset: 0x48
+
+	public ProbeVolumeBakingSet bakingSet
+	{
+		 get { } //Length: 5
+	}
 
 	public ProbeVolumePerSceneData() { }
 
 	internal void Clear() { }
+
+	public ProbeVolumeBakingSet get_bakingSet() { }
 
 	internal void Initialize() { }
 
@@ -42,25 +54,13 @@ public class ProbeVolumePerSceneData : MonoBehaviour, ISerializationCallbackRece
 
 	private void OnEnable() { }
 
-	internal void QueueAssetLoading() { }
+	private void OnValidate() { }
 
-	internal void QueueAssetRemoval() { }
+	internal void QueueSceneLoading() { }
 
-	internal void RemoveScenario(string scenario) { }
+	internal void QueueSceneRemoval() { }
 
-	internal void RenameScenario(string scenario, string newName) { }
-
-	internal bool ResolveCells() { }
-
-	private bool ResolvePerScenarioCellData() { }
-
-	internal bool ResolveSharedCellData() { }
-
-	private override void UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize() { }
-
-	private override void UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize() { }
-
-	internal void UpdateActiveScenario(string activeScenario, string otherScenario) { }
+	internal bool ResolveCellData() { }
 
 }
 

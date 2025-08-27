@@ -91,13 +91,13 @@ public static class Enumerable
 		private override TSource System.Collections.Generic.IEnumerator<TSource>.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 27
+			private get { } //Length: 5
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 61
+			private get { } //Length: 43
 		}
 
 		[DebuggerHidden]
@@ -250,13 +250,13 @@ public static class Enumerable
 		private override TSource System.Collections.Generic.IEnumerator<TSource>.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 175
+			private get { } //Length: 147
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 176
+			private get { } //Length: 156
 		}
 
 		[DebuggerHidden]
@@ -473,7 +473,7 @@ public static class Enumerable
 		private override object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 1112
+			private get { } //Length: 1043
 		}
 
 		[DebuggerHidden]
@@ -1180,6 +1180,9 @@ public static class Enumerable
 	public static TAccumulate Aggregate(IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func) { }
 
 	[Extension]
+	public static TSource Aggregate(IEnumerable<TSource> source, Func<TSource, TSource, TSource> func) { }
+
+	[Extension]
 	public static bool All(IEnumerable<TSource> source, Func<TSource, Boolean> predicate) { }
 
 	[Extension]
@@ -1189,13 +1192,13 @@ public static class Enumerable
 	public static bool Any(IEnumerable<TSource> source, Func<TSource, Boolean> predicate) { }
 
 	[Extension]
-	public static float Average(IEnumerable<Single> source) { }
+	public static double Average(IEnumerable<Int32> source) { }
 
 	[Extension]
 	public static double Average(IEnumerable<Int64> source) { }
 
 	[Extension]
-	public static double Average(IEnumerable<Int32> source) { }
+	public static float Average(IEnumerable<Single> source) { }
 
 	[Extension]
 	public static IEnumerable<TResult> Cast(IEnumerable source) { }
@@ -1220,10 +1223,10 @@ public static class Enumerable
 	public static bool Contains(IEnumerable<TSource> source, TSource value, IEqualityComparer<TSource> comparer) { }
 
 	[Extension]
-	public static int Count(IEnumerable<TSource> source, Func<TSource, Boolean> predicate) { }
+	public static int Count(IEnumerable<TSource> source) { }
 
 	[Extension]
-	public static int Count(IEnumerable<TSource> source) { }
+	public static int Count(IEnumerable<TSource> source, Func<TSource, Boolean> predicate) { }
 
 	[Extension]
 	public static IEnumerable<TSource> DefaultIfEmpty(IEnumerable<TSource> source, TSource defaultValue) { }
@@ -1233,6 +1236,9 @@ public static class Enumerable
 
 	[Extension]
 	public static IEnumerable<TSource> Distinct(IEnumerable<TSource> source) { }
+
+	[Extension]
+	public static IEnumerable<TSource> Distinct(IEnumerable<TSource> source, IEqualityComparer<TSource> comparer) { }
 
 	[IteratorStateMachine(typeof(<DistinctIterator>d__68`1))]
 	private static IEnumerable<TSource> DistinctIterator(IEnumerable<TSource> source, IEqualityComparer<TSource> comparer) { }
@@ -1285,10 +1291,19 @@ public static class Enumerable
 	public static TSource Last(IEnumerable<TSource> source) { }
 
 	[Extension]
+	public static TSource LastOrDefault(IEnumerable<TSource> source, Func<TSource, Boolean> predicate) { }
+
+	[Extension]
 	public static TSource LastOrDefault(IEnumerable<TSource> source) { }
 
 	[Extension]
-	public static TSource LastOrDefault(IEnumerable<TSource> source, Func<TSource, Boolean> predicate) { }
+	public static long Max(IEnumerable<Int64> source) { }
+
+	[Extension]
+	public static int Max(IEnumerable<TSource> source, Func<TSource, Int32> selector) { }
+
+	[Extension]
+	public static TResult Max(IEnumerable<TSource> source, Func<TSource, TResult> selector) { }
 
 	[Extension]
 	public static int Max(IEnumerable<Int32> source) { }
@@ -1297,16 +1312,7 @@ public static class Enumerable
 	public static Nullable<Int32> Max(IEnumerable<Nullable`1<Int32>> source) { }
 
 	[Extension]
-	public static TResult Max(IEnumerable<TSource> source, Func<TSource, TResult> selector) { }
-
-	[Extension]
-	public static long Max(IEnumerable<Int64> source) { }
-
-	[Extension]
 	public static TSource Max(IEnumerable<TSource> source) { }
-
-	[Extension]
-	public static int Max(IEnumerable<TSource> source, Func<TSource, Int32> selector) { }
 
 	[Extension]
 	public static long Max(IEnumerable<TSource> source, Func<TSource, Int64> selector) { }

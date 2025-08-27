@@ -3,7 +3,7 @@ namespace Assets.Scripts.Simulation.SimulationBehaviors;
 public class ImfLoanCollection : SimulationBehavior
 {
 	private float collected; //Field offset: 0x58
-	private ImfLoanCollectionModel imfLoanCollectionModel; //Field offset: 0x60
+	public ImfLoanCollectionModel imfLoanCollectionModel; //Field offset: 0x60
 	public ObjectId towerId; //Field offset: 0x68
 	public int inputId; //Field offset: 0x6C
 

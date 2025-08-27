@@ -26,7 +26,12 @@ public static class IJobParallelForExtensions
 	}
 
 
+	public static void EarlyJobInit() { }
+
 	private static IntPtr GetReflectionData() { }
+
+	[Extension]
+	public static void Run(T jobData, int arrayLength) { }
 
 	[Extension]
 	public static JobHandle Schedule(T jobData, int arrayLength, int innerloopBatchCount, JobHandle dependsOn = null) { }

@@ -17,7 +17,7 @@ internal struct ProbeVolumeBakingProcessSettings
 
 	internal static ProbeVolumeBakingProcessSettings Default
 	{
-		internal get { } //Length: 114
+		internal get { } //Length: 108
 	}
 
 	internal ProbeVolumeBakingProcessSettings(ProbeDilationSettings dilationSettings, VirtualOffsetSettings virtualOffsetSettings) { }

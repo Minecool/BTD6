@@ -62,7 +62,7 @@ internal class RuntimePropertyInfo : PropertyInfo, ISerializable
 
 	public virtual Module Module
 	{
-		 get { } //Length: 137
+		 get { } //Length: 136
 	}
 
 	public virtual string Name
@@ -72,7 +72,7 @@ internal class RuntimePropertyInfo : PropertyInfo, ISerializable
 
 	public virtual Type PropertyType
 	{
-		 get { } //Length: 170
+		 get { } //Length: 163
 	}
 
 	public virtual Type ReflectedType
@@ -82,7 +82,7 @@ internal class RuntimePropertyInfo : PropertyInfo, ISerializable
 
 	private RuntimeType ReflectedTypeInternal
 	{
-		private get { } //Length: 125
+		private get { } //Length: 129
 	}
 
 	public RuntimePropertyInfo() { }

@@ -19,13 +19,13 @@ public struct SerializedType
 
 	public string ClassName
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public Type Value
 	{
-		 get { } //Length: 374
-		 set { } //Length: 202
+		 get { } //Length: 338
+		 set { } //Length: 174
 	}
 
 	public bool ValueChanged

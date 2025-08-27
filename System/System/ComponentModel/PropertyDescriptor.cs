@@ -15,7 +15,7 @@ public abstract class PropertyDescriptor : MemberDescriptor
 
 	public override TypeConverter Converter
 	{
-		 get { } //Length: 649
+		 get { } //Length: 628
 	}
 
 	public abstract bool IsReadOnly

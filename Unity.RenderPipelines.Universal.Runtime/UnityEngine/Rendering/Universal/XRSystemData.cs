@@ -1,7 +1,9 @@
 namespace UnityEngine.Rendering.Universal;
 
+[Obsolete("Moved to UniversalRenderPipelineRuntimeXRResources on GraphicsSettings. #from(2023.3)", False)]
 public class XRSystemData : ScriptableObject
 {
+	[Obsolete("Moved to UniversalRenderPipelineRuntimeXRResources on GraphicsSettings. #from(2023.3)", False)]
 	[ReloadGroup]
 	internal sealed class ShaderResources
 	{
@@ -14,6 +16,7 @@ public class XRSystemData : ScriptableObject
 
 	}
 
+	[Obsolete("Moved to UniversalRenderPipelineRuntimeXRResources on GraphicsSettings. #from(2023.3)", False)]
 	public ShaderResources shaders; //Field offset: 0x18
 
 	public XRSystemData() { }

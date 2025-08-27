@@ -24,7 +24,7 @@ public class CreateProjectileOnExhaustPierce : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 1163
+		 get { } //Length: 1164
 	}
 
 	public CreateProjectileOnExhaustPierce() { }

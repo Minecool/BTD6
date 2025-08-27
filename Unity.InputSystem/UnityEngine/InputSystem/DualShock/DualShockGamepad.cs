@@ -114,11 +114,11 @@ public class DualShockGamepad : Gamepad, IDualShockHaptics, IDualMotorRumble, IH
 		 set { } //Length: 8
 	}
 
+	[InputControl(name = "buttonWest", displayName = "Square", shortDisplayName = "Square")]
+	[InputControl(name = "buttonNorth", displayName = "Triangle", shortDisplayName = "Triangle")]
 	[InputControl(name = "buttonEast", displayName = "Circle", shortDisplayName = "Circle")]
 	[InputControl(name = "buttonSouth", displayName = "Cross", shortDisplayName = "Cross")]
 	[InputControl]
-	[InputControl(name = "buttonNorth", displayName = "Triangle", shortDisplayName = "Triangle")]
-	[InputControl(name = "buttonWest", displayName = "Square", shortDisplayName = "Square")]
 	public ButtonControl touchpadButton
 	{
 		[CompilerGenerated]

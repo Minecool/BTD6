@@ -7,7 +7,7 @@ public abstract class XObject : IXmlLineInfo
 
 	public string BaseUri
 	{
-		 get { } //Length: 126
+		 get { } //Length: 114
 	}
 
 	internal bool HasBaseUri
@@ -22,7 +22,7 @@ public abstract class XObject : IXmlLineInfo
 
 	public XElement Parent
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	private override int System.Xml.IXmlLineInfo.LineNumber

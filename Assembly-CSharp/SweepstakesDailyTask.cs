@@ -33,7 +33,8 @@ public class SweepstakesDailyTask : MonoBehaviour
 	private bool isReadyToUnlock; //Field offset: 0x89
 	private bool isTimerRunning; //Field offset: 0x8A
 	private DateTime nextUnlockTime; //Field offset: 0x90
-	private float updateSecondTimer; //Field offset: 0x98
+	private SweepStakesEventScreen eventScreen; //Field offset: 0x98
+	private float updateSecondTimer; //Field offset: 0xA0
 
 	private static DateTime now
 	{
@@ -42,7 +43,7 @@ public class SweepstakesDailyTask : MonoBehaviour
 
 	public SweepstakesDailyTask() { }
 
-	public void Bind(SweepstakesEvent sweepstakesEvent, SweepstakesTaskSettings taskSettings, int taskIndex, DateTime nextUnlockTime, SweepstakesStatusResponse sweepstakesStatus, bool hasUnlockedNewDay) { }
+	public void Bind(SweepstakesEvent sweepstakesEvent, SweepstakesTaskSettings taskSettings, int taskIndex, DateTime nextUnlockTime, SweepstakesStatusResponse sweepstakesStatus, bool hasUnlockedNewDay, SweepStakesEventScreen eventScreen) { }
 
 	private static DateTime get_now() { }
 

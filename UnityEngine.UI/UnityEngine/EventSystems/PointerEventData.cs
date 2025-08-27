@@ -158,7 +158,7 @@ public class PointerEventData : BaseEventData
 
 	public Camera enterEventCamera
 	{
-		 get { } //Length: 152
+		 get { } //Length: 143
 	}
 
 	public bool fullyExited
@@ -249,7 +249,7 @@ public class PointerEventData : BaseEventData
 
 	public Camera pressEventCamera
 	{
-		 get { } //Length: 158
+		 get { } //Length: 149
 	}
 
 	public Vector2 pressPosition

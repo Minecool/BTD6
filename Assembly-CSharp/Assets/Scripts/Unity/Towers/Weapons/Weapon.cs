@@ -28,7 +28,7 @@ public class Weapon : CascadingItemProxy
 
 	public WeaponModel Def
 	{
-		 get { } //Length: 1567
+		 get { } //Length: 1600
 	}
 
 	public virtual Model Model

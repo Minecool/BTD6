@@ -8,12 +8,12 @@ internal sealed class XmlChildEnumerator : IEnumerator
 
 	internal XmlNode Current
 	{
-		internal get { } //Length: 131
+		internal get { } //Length: 129
 	}
 
 	private override object System.Collections.IEnumerator.Current
 	{
-		private get { } //Length: 131
+		private get { } //Length: 129
 	}
 
 	internal XmlChildEnumerator(XmlNode container) { }

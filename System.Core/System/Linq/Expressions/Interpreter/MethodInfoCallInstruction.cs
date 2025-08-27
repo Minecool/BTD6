@@ -12,7 +12,7 @@ internal class MethodInfoCallInstruction : CallInstruction
 
 	public virtual int ProducedStack
 	{
-		 get { } //Length: 162
+		 get { } //Length: 127
 	}
 
 	internal MethodInfoCallInstruction(MethodInfo target, int argumentCount) { }

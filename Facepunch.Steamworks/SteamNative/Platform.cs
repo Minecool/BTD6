@@ -441,7 +441,7 @@ internal static class Platform
 
 		public override bool IsValid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		internal Linux32(IntPtr pointer) { }
@@ -879,7 +879,7 @@ internal static class Platform
 
 		public override bool IsValid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		internal Linux64(IntPtr pointer) { }
@@ -1317,7 +1317,7 @@ internal static class Platform
 
 		public override bool IsValid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		internal Mac(IntPtr pointer) { }
@@ -1755,7 +1755,7 @@ internal static class Platform
 
 		public override bool IsValid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		internal Win32(IntPtr pointer) { }
@@ -2193,7 +2193,7 @@ internal static class Platform
 
 		public override bool IsValid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		internal Win64(IntPtr pointer) { }
@@ -2453,7 +2453,7 @@ internal static class Platform
 
 	internal static OperatingSystem Os
 	{
-		internal get { } //Length: 78
+		internal get { } //Length: 85
 		internal set { } //Length: 58
 	}
 

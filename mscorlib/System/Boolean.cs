@@ -3,10 +3,6 @@ namespace System;
 [IsReadOnly]
 public struct bool : IComparable, IConvertible, IComparable<Boolean>, IEquatable<Boolean>
 {
-	internal const int True = 1; //Field offset: 0x0
-	internal const int False = 0; //Field offset: 0x0
-	internal const string TrueLiteral = "True"; //Field offset: 0x0
-	internal const string FalseLiteral = "False"; //Field offset: 0x0
 	public static readonly string TrueString; //Field offset: 0x0
 	public static readonly string FalseString; //Field offset: 0x8
 	private readonly bool m_value; //Field offset: 0x0

@@ -44,7 +44,7 @@ internal class DecalEntityManager : IDisposable
 
 	public Mesh decalProjectorMesh
 	{
-		 get { } //Length: 226
+		 get { } //Length: 245
 	}
 
 	public Material errorMaterial

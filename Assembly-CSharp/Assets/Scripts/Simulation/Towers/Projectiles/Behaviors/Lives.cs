@@ -18,7 +18,7 @@ public class Lives : ProjectileBehavior
 
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 
-	public virtual float Pickup() { }
+	public virtual float Pickup(Tower towerPickingUp) { }
 
 	public virtual void UpdatedModel(Model modelToUse) { }
 

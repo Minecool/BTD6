@@ -42,7 +42,7 @@ public class CashRushGameMode : SimulationBehavior
 
 	public int cashGoal; //Field offset: 0x18
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 86
 	}
@@ -60,7 +60,7 @@ public class CashRushGameMode : SimulationBehavior
 
 	private void AddListeners() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

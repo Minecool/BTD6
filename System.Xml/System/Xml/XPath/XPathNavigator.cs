@@ -40,7 +40,7 @@ public abstract class XPathNavigator : XPathItem, ICloneable, IXmlNamespaceResol
 
 	public virtual object TypedValue
 	{
-		 get { } //Length: 493
+		 get { } //Length: 491
 	}
 
 	public override object UnderlyingObject
@@ -50,37 +50,37 @@ public abstract class XPathNavigator : XPathItem, ICloneable, IXmlNamespaceResol
 
 	public virtual bool ValueAsBoolean
 	{
-		 get { } //Length: 485
+		 get { } //Length: 480
 	}
 
 	public virtual DateTime ValueAsDateTime
 	{
-		 get { } //Length: 485
+		 get { } //Length: 480
 	}
 
 	public virtual double ValueAsDouble
 	{
-		 get { } //Length: 485
+		 get { } //Length: 480
 	}
 
 	public virtual int ValueAsInt
 	{
-		 get { } //Length: 485
+		 get { } //Length: 480
 	}
 
 	public virtual long ValueAsLong
 	{
-		 get { } //Length: 485
+		 get { } //Length: 480
 	}
 
 	public virtual Type ValueType
 	{
-		 get { } //Length: 242
+		 get { } //Length: 219
 	}
 
 	public virtual XmlSchemaType XmlType
 	{
-		 get { } //Length: 147
+		 get { } //Length: 143
 	}
 
 	private static XPathNavigator() { }

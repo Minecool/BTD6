@@ -7,7 +7,7 @@ public class SellStackedTowers : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 138
+		 get { } //Length: 127
 	}
 
 	public SellStackedTowers() { }

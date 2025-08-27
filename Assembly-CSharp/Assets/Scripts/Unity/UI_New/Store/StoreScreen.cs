@@ -98,7 +98,7 @@ public class StoreScreen : GameMenu
 
 	public static bool CanBuyLegends
 	{
-		 get { } //Length: 501
+		 get { } //Length: 503
 	}
 
 	public private StoreCategoryFilter SelectedTab

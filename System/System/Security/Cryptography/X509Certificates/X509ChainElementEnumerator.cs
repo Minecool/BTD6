@@ -6,7 +6,7 @@ public sealed class X509ChainElementEnumerator : IEnumerator
 
 	public X509ChainElement Current
 	{
-		 get { } //Length: 149
+		 get { } //Length: 151
 	}
 
 	private override object System.Collections.IEnumerator.Current

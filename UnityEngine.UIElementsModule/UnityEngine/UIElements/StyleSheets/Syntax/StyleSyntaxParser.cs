@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets.Syntax;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class StyleSyntaxParser
 {
 	private List<Expression> m_ProcessExpressionList; //Field offset: 0x10

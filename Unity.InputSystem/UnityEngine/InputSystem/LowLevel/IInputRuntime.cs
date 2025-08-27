@@ -18,14 +18,15 @@ internal interface IInputRuntime
 		 get { } //Length: 0
 	}
 
-	public bool isInBatchMode
+	public bool isPlayerFocused
 	{
 		 get { } //Length: 0
 	}
 
-	public bool isPlayerFocused
+	public bool normalizeScrollWheelDelta
 	{
 		 get { } //Length: 0
+		 set { } //Length: 0
 	}
 
 	public Action<InputUpdateType> onBeforeUpdate
@@ -86,6 +87,11 @@ internal interface IInputRuntime
 		 get { } //Length: 0
 	}
 
+	public float scrollWheelDeltaPerTick
+	{
+		 get { } //Length: 0
+	}
+
 	public float unscaledGameTime
 	{
 		 get { } //Length: 0
@@ -101,9 +107,9 @@ internal interface IInputRuntime
 
 	public double get_currentTimeOffsetToRealtimeSinceStartup() { }
 
-	public bool get_isInBatchMode() { }
-
 	public bool get_isPlayerFocused() { }
+
+	public bool get_normalizeScrollWheelDelta() { }
 
 	public Action<InputUpdateType> get_onBeforeUpdate() { }
 
@@ -125,11 +131,13 @@ internal interface IInputRuntime
 
 	public Vector2 get_screenSize() { }
 
+	public float get_scrollWheelDeltaPerTick() { }
+
 	public float get_unscaledGameTime() { }
 
 	public void QueueEvent(InputEvent* ptr) { }
 
-	public void SendAnalytic(IInputAnalytic analytic) { }
+	public void set_normalizeScrollWheelDelta(bool value) { }
 
 	public void set_onBeforeUpdate(Action<InputUpdateType> value) { }
 

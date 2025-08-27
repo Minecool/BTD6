@@ -1,7 +1,5 @@
 namespace NinjaKiwi.GUTS.Models.Sweepstakes;
 
-[Nullable(0)]
-[NullableContext(2)]
 public class SweepstakesSettings
 {
 	[CompilerGenerated]
@@ -16,13 +14,11 @@ public class SweepstakesSettings
 	[CompilerGenerated]
 	private TimeSpan <LocalCacheTime>k__BackingField; //Field offset: 0x28
 	[CompilerGenerated]
-	private string <TermsAndConditionsUrl>k__BackingField; //Field offset: 0x30
+	private TimeSpan <WinnersCheckTimeout>k__BackingField; //Field offset: 0x30
 	[CompilerGenerated]
-	private TimeSpan <WinnersCheckTimeout>k__BackingField; //Field offset: 0x38
+	private TimeSpan <EndedEventLingeringTime>k__BackingField; //Field offset: 0x38
 	[CompilerGenerated]
-	private TimeSpan <EndedEventLingeringTime>k__BackingField; //Field offset: 0x40
-	[CompilerGenerated]
-	private bool <ForceShowEndedEvent>k__BackingField; //Field offset: 0x48
+	private bool <ForceShowEndedEvent>k__BackingField; //Field offset: 0x40
 
 	public bool CanFlagsParticipate
 	{
@@ -73,14 +69,6 @@ public class SweepstakesSettings
 		 set { } //Length: 5
 	}
 
-	public string TermsAndConditionsUrl
-	{
-		[CompilerGenerated]
-		 get { } //Length: 5
-		[CompilerGenerated]
-		 set { } //Length: 5
-	}
-
 	public int WinnerCount
 	{
 		[CompilerGenerated]
@@ -118,9 +106,6 @@ public class SweepstakesSettings
 	public TimeSpan get_LocalCacheTime() { }
 
 	[CompilerGenerated]
-	public string get_TermsAndConditionsUrl() { }
-
-	[CompilerGenerated]
 	public int get_WinnerCount() { }
 
 	[CompilerGenerated]
@@ -143,9 +128,6 @@ public class SweepstakesSettings
 
 	[CompilerGenerated]
 	public void set_LocalCacheTime(TimeSpan value) { }
-
-	[CompilerGenerated]
-	public void set_TermsAndConditionsUrl(string value) { }
 
 	[CompilerGenerated]
 	public void set_WinnerCount(int value) { }

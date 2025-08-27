@@ -40,7 +40,7 @@ public abstract class XmlSchemaDatatype
 
 	internal string TypeCodeString
 	{
-		internal get { } //Length: 345
+		internal get { } //Length: 333
 	}
 
 	internal abstract XmlValueConverter ValueConverter

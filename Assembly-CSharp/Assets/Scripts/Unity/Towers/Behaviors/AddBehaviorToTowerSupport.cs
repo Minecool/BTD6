@@ -6,10 +6,12 @@ public class AddBehaviorToTowerSupport : SupportBehavior
 	public string mutationId; //Field offset: 0xD0
 	public string expMutationId; //Field offset: 0xD8
 	public TowerBehavior behavior; //Field offset: 0xE0
+	public bool isGlobal; //Field offset: 0xE8
+	public string expIsGlobal; //Field offset: 0xF0
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 376
+		 get { } //Length: 408
 	}
 
 	public AddBehaviorToTowerSupport() { }

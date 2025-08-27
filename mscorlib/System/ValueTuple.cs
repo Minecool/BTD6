@@ -24,6 +24,8 @@ public struct ValueTuple : IEquatable<ValueTuple>, IStructuralEquatable, IStruct
 
 	public override int CompareTo(ValueTuple other) { }
 
+	public static ValueTuple<T1, T2> Create(T1 item1, T2 item2) { }
+
 	public virtual bool Equals(object obj) { }
 
 	public override bool Equals(ValueTuple other) { }

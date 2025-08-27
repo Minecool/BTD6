@@ -28,7 +28,7 @@ public class Ability : EntityBehavior<TowerBehaviorModel>
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 775
+		 get { } //Length: 790
 	}
 
 	public Ability() { }

@@ -44,12 +44,12 @@ public abstract class SummaryScreen : GameMenu
 
 	private string ContinueMapSaveId
 	{
-		private get { } //Length: 302
+		private get { } //Length: 301
 	}
 
 	private bool IsMapReviewAllowed
 	{
-		private get { } //Length: 73
+		private get { } //Length: 76
 	}
 
 	protected abstract bool IsVictoryScreen

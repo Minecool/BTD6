@@ -17,7 +17,7 @@ public class ConcurrentBag : IEnumerable<T>, IEnumerable, ICollection, IReadOnly
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 149
+			private get { } //Length: 152
 		}
 
 		public Enumerator(T[] array) { }
@@ -73,7 +73,7 @@ public class ConcurrentBag : IEnumerable<T>, IEnumerable, ICollection, IReadOnly
 
 	private int DangerousCount
 	{
-		private get { } //Length: 138
+		private get { } //Length: 164
 	}
 
 	private object GlobalQueuesLock

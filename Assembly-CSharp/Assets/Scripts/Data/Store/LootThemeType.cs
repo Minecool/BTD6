@@ -6,5 +6,6 @@ public enum LootThemeType
 	Medium = 2,
 	Store = 3,
 	StoreBonus = 4,
+	Animated = 5,
 }
 

@@ -7,8 +7,9 @@ public class SendBloonActionModel : EntityActionModel
 	public bool camo; //Field offset: 0x40
 	public bool regrow; //Field offset: 0x41
 	public bool fortified; //Field offset: 0x42
+	public float startingDist; //Field offset: 0x44
 
-	public SendBloonActionModel(string name, string bloonId, bool camo, bool regrow, bool fortified) { }
+	public SendBloonActionModel(string name, string bloonId, bool camo, bool regrow, bool fortified, float startingDist = 0) { }
 
 	public virtual Model Clone() { }
 

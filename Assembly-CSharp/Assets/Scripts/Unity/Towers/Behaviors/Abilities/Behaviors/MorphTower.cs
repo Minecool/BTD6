@@ -38,7 +38,7 @@ public class MorphTower : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 893
+		 get { } //Length: 888
 	}
 
 	public MorphTower() { }

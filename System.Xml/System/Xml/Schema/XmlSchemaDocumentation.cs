@@ -10,7 +10,7 @@ public class XmlSchemaDocumentation : XmlSchemaObject
 	[XmlAttribute("xml:lang")]
 	public string Language
 	{
-		 set { } //Length: 236
+		 set { } //Length: 224
 	}
 
 	[XmlAnyElement]

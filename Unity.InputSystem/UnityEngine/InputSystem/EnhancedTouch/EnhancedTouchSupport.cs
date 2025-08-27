@@ -10,8 +10,8 @@ public static class EnhancedTouchSupport
 		 get { } //Length: 57
 	}
 
-	[Conditional("UNITY_EDITOR")]
 	[Conditional("DEVELOPMENT_BUILD")]
+	[Conditional("UNITY_EDITOR")]
 	internal static void CheckEnabled() { }
 
 	public static void Disable() { }

@@ -52,8 +52,8 @@ public struct RenderTextureDescriptor
 
 	public RenderTextureFormat colorFormat
 	{
-		 get { } //Length: 105
-		 set { } //Length: 190
+		 get { } //Length: 117
+		 set { } //Length: 287
 	}
 
 	internal bool createdFromScript
@@ -64,7 +64,6 @@ public struct RenderTextureDescriptor
 	public int depthBufferBits
 	{
 		 get { } //Length: 75
-		 set { } //Length: 33
 	}
 
 	public GraphicsFormat depthStencilFormat
@@ -94,7 +93,7 @@ public struct RenderTextureDescriptor
 	public GraphicsFormat graphicsFormat
 	{
 		 get { } //Length: 6
-		 set { } //Length: 188
+		 set { } //Length: 117
 	}
 
 	public int height
@@ -145,7 +144,7 @@ public struct RenderTextureDescriptor
 	public bool sRGB
 	{
 		 get { } //Length: 75
-		 set { } //Length: 182
+		 set { } //Length: 152
 	}
 
 	public GraphicsFormat stencilFormat
@@ -155,6 +154,12 @@ public struct RenderTextureDescriptor
 	}
 
 	public bool useDynamicScale
+	{
+		 get { } //Length: 13
+		 set { } //Length: 27
+	}
+
+	public bool useDynamicScaleExplicit
 	{
 		 get { } //Length: 13
 		 set { } //Length: 27
@@ -190,8 +195,14 @@ public struct RenderTextureDescriptor
 		[IsReadOnly]
 		 get { } //Length: 3
 		[CompilerGenerated]
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
+
+	[ExcludeFromDocs]
+	public RenderTextureDescriptor(int width, int height) { }
+
+	[ExcludeFromDocs]
+	public RenderTextureDescriptor(int width, int height, RenderTextureFormat colorFormat) { }
 
 	[ExcludeFromDocs]
 	public RenderTextureDescriptor(int width, int height, GraphicsFormat colorFormat, GraphicsFormat depthStencilFormat, int mipCount) { }
@@ -200,21 +211,15 @@ public struct RenderTextureDescriptor
 	public RenderTextureDescriptor(int width, int height, GraphicsFormat colorFormat, GraphicsFormat depthStencilFormat) { }
 
 	[ExcludeFromDocs]
-	public RenderTextureDescriptor(int width, int height) { }
-
-	[ExcludeFromDocs]
 	public RenderTextureDescriptor(int width, int height, GraphicsFormat colorFormat, int depthBufferBits, int mipCount) { }
 
 	[ExcludeFromDocs]
-	public RenderTextureDescriptor(int width, int height, RenderTextureFormat colorFormat) { }
+	public RenderTextureDescriptor(int width, int height, RenderTextureFormat colorFormat, int depthBufferBits) { }
 
 	public RenderTextureDescriptor(int width, int height, RenderTextureFormat colorFormat, int depthBufferBits, int mipCount, RenderTextureReadWrite readWrite) { }
 
 	[ExcludeFromDocs]
 	public RenderTextureDescriptor(int width, int height, RenderTextureFormat colorFormat, int depthBufferBits, int mipCount) { }
-
-	[ExcludeFromDocs]
-	public RenderTextureDescriptor(int width, int height, RenderTextureFormat colorFormat, int depthBufferBits) { }
 
 	[ExcludeFromDocs]
 	public RenderTextureDescriptor(int width, int height, GraphicsFormat colorFormat, int depthBufferBits) { }
@@ -263,6 +268,8 @@ public struct RenderTextureDescriptor
 
 	public bool get_useDynamicScale() { }
 
+	public bool get_useDynamicScaleExplicit() { }
+
 	public bool get_useMipMap() { }
 
 	[CompilerGenerated]
@@ -284,8 +291,6 @@ public struct RenderTextureDescriptor
 	public void set_colorFormat(RenderTextureFormat value) { }
 
 	internal void set_createdFromScript(bool value) { }
-
-	public void set_depthBufferBits(int value) { }
 
 	[CompilerGenerated]
 	public void set_depthStencilFormat(GraphicsFormat value) { }
@@ -318,6 +323,8 @@ public struct RenderTextureDescriptor
 	public void set_stencilFormat(GraphicsFormat value) { }
 
 	public void set_useDynamicScale(bool value) { }
+
+	public void set_useDynamicScaleExplicit(bool value) { }
 
 	public void set_useMipMap(bool value) { }
 

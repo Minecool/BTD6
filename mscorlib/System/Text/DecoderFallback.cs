@@ -17,7 +17,7 @@ public abstract class DecoderFallback
 
 	public static DecoderFallback ReplacementFallback
 	{
-		 get { } //Length: 153
+		 get { } //Length: 189
 	}
 
 	protected DecoderFallback() { }

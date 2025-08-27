@@ -9,7 +9,7 @@ public class AlternateRoundSplitter : Splitter
 
 	public virtual SplitterModel Def
 	{
-		 get { } //Length: 576
+		 get { } //Length: 562
 	}
 
 	public AlternateRoundSplitter() { }

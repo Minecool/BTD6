@@ -2,7 +2,6 @@ namespace System.IO;
 
 public class MemoryStream : Stream
 {
-	private const int MemStreamMaxLength = 2147483647; //Field offset: 0x0
 	private Byte[] _buffer; //Field offset: 0x28
 	private int _origin; //Field offset: 0x30
 	private int _position; //Field offset: 0x34
@@ -32,7 +31,7 @@ public class MemoryStream : Stream
 	public override int Capacity
 	{
 		 get { } //Length: 64
-		 set { } //Length: 438
+		 set { } //Length: 436
 	}
 
 	public virtual long Length

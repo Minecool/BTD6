@@ -18,7 +18,7 @@ public class DepletionToCash : ProjectileBehavior
 
 	protected virtual void OnDestroy() { }
 
-	public virtual float Pickup() { }
+	public virtual float Pickup(Tower towerPickingUp) { }
 
 	public virtual void UpdatedModel(Model modelToUse) { }
 

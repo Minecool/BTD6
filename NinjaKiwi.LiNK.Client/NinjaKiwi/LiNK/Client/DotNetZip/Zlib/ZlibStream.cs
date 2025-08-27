@@ -8,7 +8,7 @@ public class ZlibStream : Stream
 	public int BufferSize
 	{
 		 get { } //Length: 26
-		 set { } //Length: 374
+		 set { } //Length: 358
 	}
 
 	public virtual bool CanRead
@@ -40,7 +40,7 @@ public class ZlibStream : Stream
 	public virtual long Position
 	{
 		 get { } //Length: 73
-		 set { } //Length: 236
+		 set { } //Length: 62
 	}
 
 	public override long TotalIn

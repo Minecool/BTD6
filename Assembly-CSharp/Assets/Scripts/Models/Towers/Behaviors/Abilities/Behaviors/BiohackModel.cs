@@ -52,12 +52,12 @@ public class BiohackModel : AbilityBehaviorBuffModel
 
 	public Mutator BehaviorMutator
 	{
-		 get { } //Length: 320
+		 get { } //Length: 324
 	}
 
 	public BiohackDamageMutator DamageMutator
 	{
-		 get { } //Length: 295
+		 get { } //Length: 299
 	}
 
 	public BiohackModel(string name, float lifespan, float damageIncrease, int affectedCount, TowerBehaviorModel[] behaviors, String[] filterTowers, EffectModel effectModel, string buffLocsName, string buffIconName) { }

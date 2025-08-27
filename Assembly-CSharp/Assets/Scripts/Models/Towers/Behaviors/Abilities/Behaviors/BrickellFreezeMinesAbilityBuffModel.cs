@@ -23,7 +23,7 @@ public class BrickellFreezeMinesAbilityBuffModel : AbilityBehaviorBuffModel
 
 	public BrickellFreezeMinesMutator Mutator
 	{
-		 get { } //Length: 321
+		 get { } //Length: 325
 	}
 
 	public BrickellFreezeMinesAbilityBuffModel(string name, float multiplier, float projectileSpeedMultiplier, float lifespan, string buffLocsName, string buffIconName) { }

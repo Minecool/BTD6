@@ -25,15 +25,16 @@ public class AbilityModel : TowerBehaviorModel
 	public bool hideAbilityIfInCooldown; //Field offset: 0x78
 	public bool startOffCooldown; //Field offset: 0x79
 	public bool alwaysSetAnimationState; //Field offset: 0x7A
-	public bool restrictAbilityAfterMaxRoundTimer; //Field offset: 0x7B
+	public int rechargeMonkeyMoneyCost; //Field offset: 0x7C
+	public bool restrictAbilityAfterMaxRoundTimer; //Field offset: 0x80
 	[SerializeField]
-	private float cooldownSpeedScale; //Field offset: 0x7C
+	private float cooldownSpeedScale; //Field offset: 0x84
 	[SerializeField]
-	private float animationOffset; //Field offset: 0x80
-	public int animationOffsetFrames; //Field offset: 0x84
+	private float animationOffset; //Field offset: 0x88
+	public int animationOffsetFrames; //Field offset: 0x8C
 	[SerializeField]
-	private float cooldown; //Field offset: 0x88
-	public int cooldownFrames; //Field offset: 0x8C
+	private float cooldown; //Field offset: 0x90
+	public int cooldownFrames; //Field offset: 0x94
 
 	public float AnimationOffset
 	{
@@ -49,8 +50,8 @@ public class AbilityModel : TowerBehaviorModel
 
 	public float CooldownSpeedScale
 	{
-		 get { } //Length: 6
-		 set { } //Length: 22
+		 get { } //Length: 9
+		 set { } //Length: 28
 	}
 
 	public bool IsPassive
@@ -58,7 +59,7 @@ public class AbilityModel : TowerBehaviorModel
 		 get { } //Length: 20
 	}
 
-	public AbilityModel(string name, string displayName, string description, int animation, float animationOffset, SpriteReference icon, float cooldown, Model[] behaviors, bool activateOnPreLeak, bool activateOnLeak, string addedViaUpgrade, float cooldownSpeedScale, int livesCost, int maxActivationsPerRound, bool resetCooldownOnTierUpgrade, bool activateOnLivesLost, bool enabled = true, bool canActivateBetweenRounds = false, bool sharedCooldown = false, bool dontShowStacked = false, bool animateOnMainAttackDisplay = false, bool restrictAbilityAfterMaxRoundTimer = false, int additionalCharges = 0, bool hideAbilityIfInCooldown = false, bool startOffCooldown = false, bool alwaysSetAnimationState = false) { }
+	public AbilityModel(string name, string displayName, string description, int animation, float animationOffset, SpriteReference icon, float cooldown, Model[] behaviors, bool activateOnPreLeak, bool activateOnLeak, string addedViaUpgrade, float cooldownSpeedScale, int livesCost, int maxActivationsPerRound, bool resetCooldownOnTierUpgrade, bool activateOnLivesLost, bool enabled = true, bool canActivateBetweenRounds = false, bool sharedCooldown = false, bool dontShowStacked = false, bool animateOnMainAttackDisplay = false, bool restrictAbilityAfterMaxRoundTimer = false, int additionalCharges = 0, bool hideAbilityIfInCooldown = false, bool startOffCooldown = false, bool alwaysSetAnimationState = false, int rechargeMonkeyMoneyCost = 0) { }
 
 	public virtual Model[] BehaviorModels() { }
 

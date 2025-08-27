@@ -28,23 +28,23 @@ public class NavigationMoveEvent : NavigationEventBase<NavigationMoveEvent>
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Direction <direction>k__BackingField; //Field offset: 0x90
+	private Direction <direction>k__BackingField; //Field offset: 0x70
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Vector2 <move>k__BackingField; //Field offset: 0x94
+	private Vector2 <move>k__BackingField; //Field offset: 0x74
 
 	public private Direction direction
 	{
 		[CompilerGenerated]
-		 get { } //Length: 7
+		 get { } //Length: 4
 		[CompilerGenerated]
-		private set { } //Length: 7
+		private set { } //Length: 4
 	}
 
 	private Vector2 move
 	{
 		[CompilerGenerated]
-		private set { } //Length: 8
+		private set { } //Length: 5
 	}
 
 	private static NavigationMoveEvent() { }
@@ -67,6 +67,8 @@ public class NavigationMoveEvent : NavigationEventBase<NavigationMoveEvent>
 	protected virtual void Init() { }
 
 	private void LocalInit() { }
+
+	protected private virtual void PostDispatch(IPanel panel) { }
 
 	[CompilerGenerated]
 	private void set_direction(Direction value) { }

@@ -24,7 +24,7 @@ public class AddMakeshiftArea : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1099
+		 get { } //Length: 1100
 	}
 
 	public AddMakeshiftArea() { }

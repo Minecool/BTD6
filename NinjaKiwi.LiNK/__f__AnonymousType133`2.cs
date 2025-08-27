@@ -4,29 +4,29 @@
 internal sealed class <>f__AnonymousType133
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <success>j__TPar <success>i__Field; //Field offset: 0x0
+	private readonly <accessToken>j__TPar <accessToken>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <deleteUserDelay>j__TPar <deleteUserDelay>i__Field; //Field offset: 0x0
+	private readonly <displayName>j__TPar <displayName>i__Field; //Field offset: 0x0
 
-	public <deleteUserDelay>j__TPar deleteUserDelay
+	public <accessToken>j__TPar accessToken
 	{
-		 get { } //Length: 4
+		 get { } //Length: 5
 	}
 
-	public <success>j__TPar success
+	public <displayName>j__TPar displayName
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType133`2(<success>j__TPar success, <deleteUserDelay>j__TPar deleteUserDelay) { }
+	public <>f__AnonymousType133`2(<accessToken>j__TPar accessToken, <displayName>j__TPar displayName) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <deleteUserDelay>j__TPar get_deleteUserDelay() { }
+	public <accessToken>j__TPar get_accessToken() { }
 
-	public <success>j__TPar get_success() { }
+	public <displayName>j__TPar get_displayName() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

@@ -8,7 +8,7 @@ public static class PlayerInfoExtensions
 
 	private static JsonSerializerSettings SerialisationSettings
 	{
-		private get { } //Length: 94
+		private get { } //Length: 93
 	}
 
 	private static PlayerInfoExtensions() { }

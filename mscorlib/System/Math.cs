@@ -87,9 +87,7 @@ public static class Math
 	[NonVersionable]
 	public static ulong Min(ulong val1, ulong val2) { }
 
-	[CLSCompliant(False)]
-	[NonVersionable]
-	public static sbyte Min(sbyte val1, sbyte val2) { }
+	public static float Min(float val1, float val2) { }
 
 	[NonVersionable]
 	public static byte Min(byte val1, byte val2) { }
@@ -107,7 +105,9 @@ public static class Math
 	[NonVersionable]
 	public static long Min(long val1, long val2) { }
 
-	public static float Min(float val1, float val2) { }
+	[CLSCompliant(False)]
+	[NonVersionable]
+	public static sbyte Min(sbyte val1, sbyte val2) { }
 
 	[CLSCompliant(False)]
 	[NonVersionable]
@@ -126,6 +126,8 @@ public static class Math
 	public static double Round(double a) { }
 
 	public static double Round(double value, int digits, MidpointRounding mode) { }
+
+	public static double Round(double value, MidpointRounding mode) { }
 
 	public static double Round(double value, int digits) { }
 

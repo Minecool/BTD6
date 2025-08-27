@@ -66,8 +66,8 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int actionIndex
 		{
-			 get { } //Length: 22
-			 set { } //Length: 167
+			 get { } //Length: 20
+			 set { } //Length: 165
 		}
 
 		public bool chainsWithNext
@@ -78,8 +78,8 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int compositeOrCompositeBindingIndex
 		{
-			 get { } //Length: 22
-			 set { } //Length: 167
+			 get { } //Length: 20
+			 set { } //Length: 165
 		}
 
 		public int controlCount
@@ -114,8 +114,8 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int interactionStartIndex
 		{
-			 get { } //Length: 22
-			 set { } //Length: 167
+			 get { } //Length: 20
+			 set { } //Length: 165
 		}
 
 		public bool isComposite
@@ -132,7 +132,7 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public bool isPartOfChain
 		{
-			 get { } //Length: 18
+			 get { } //Length: 16
 		}
 
 		public bool isPartOfComposite
@@ -167,8 +167,8 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int processorStartIndex
 		{
-			 get { } //Length: 22
-			 set { } //Length: 167
+			 get { } //Length: 20
+			 set { } //Length: 165
 		}
 
 		public int triggerEventIdForComposite
@@ -346,8 +346,8 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int triggerControlIndex
 		{
-			 get { } //Length: 20
-			 set { } //Length: 117
+			 get { } //Length: 19
+			 set { } //Length: 120
 		}
 
 		public bool get_isTimerRunning() { }
@@ -423,7 +423,10 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 		private uint m_PressedInUpdate; //Field offset: 0x28
 		private uint m_ReleasedInUpdate; //Field offset: 0x2C
 		private uint m_LastCompletedInUpdate; //Field offset: 0x30
-		private int m_Frame; //Field offset: 0x34
+		internal int framePerformed; //Field offset: 0x34
+		internal int framePressed; //Field offset: 0x38
+		internal int frameReleased; //Field offset: 0x3C
+		internal int frameCompleted; //Field offset: 0x40
 
 		public int bindingIndex
 		{
@@ -433,20 +436,14 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int controlIndex
 		{
-			 get { } //Length: 22
-			 set { } //Length: 119
+			 get { } //Length: 20
+			 set { } //Length: 122
 		}
 
 		public Flags flags
 		{
 			 get { } //Length: 5
 			 set { } //Length: 4
-		}
-
-		internal int frame
-		{
-			internal get { } //Length: 4
-			internal set { } //Length: 4
 		}
 
 		public bool hasMultipleConcurrentActuations
@@ -468,8 +465,8 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int interactionIndex
 		{
-			 get { } //Length: 22
-			 set { } //Length: 119
+			 get { } //Length: 20
+			 set { } //Length: 122
 		}
 
 		public bool isButton
@@ -587,8 +584,6 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public Flags get_flags() { }
 
-		internal int get_frame() { }
-
 		public bool get_hasMultipleConcurrentActuations() { }
 
 		public bool get_haveMagnitude() { }
@@ -640,8 +635,6 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 		public void set_controlIndex(int value) { }
 
 		public void set_flags(Flags value) { }
-
-		internal void set_frame(int value) { }
 
 		public void set_hasMultipleConcurrentActuations(bool value) { }
 
@@ -708,10 +701,12 @@ internal class InputActionState : IInputStateChangeMonitor, ICloneable, IDisposa
 
 		public int sizeInBytes
 		{
-			 get { } //Length: 63
+			 get { } //Length: 64
 		}
 
 		public void Allocate(int mapCount, int actionCount, int bindingCount, int controlCount, int interactionCount, int compositeCount) { }
+
+		private static Byte* AllocFromBlob(ref Byte* top, int size) { }
 
 		public UnmanagedMemory Clone() { }
 

@@ -6,31 +6,31 @@ internal class InitializationOperation : AsyncOperationBase<IResourceLocator>
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<IResourceProvider, Boolean> <>9__13_0; //Field offset: 0x8
+		public static Func<IResourceProvider, Boolean> <>9__12_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <Execute>b__13_0(IResourceProvider rp) { }
+		internal bool <Execute>b__12_0(IResourceProvider rp) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass16_0
+	private sealed class <>c__DisplayClass15_0
 	{
 		public AddressablesImpl addressables; //Field offset: 0x10
 		public string providerSuffix; //Field offset: 0x18
 		public IResourceLocation remoteHashLocation; //Field offset: 0x20
 
-		public <>c__DisplayClass16_0() { }
+		public <>c__DisplayClass15_0() { }
 
 		internal AsyncOperationHandle<IResourceLocator> <LoadContentCatalog>b__0(AsyncOperationHandle<ContentCatalogData> res) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass18_0
+	private sealed class <>c__DisplayClass17_0
 	{
 		public InitializationOperation <>4__this; //Field offset: 0x10
 		public IList<IResourceLocation> catalogs; //Field offset: 0x18
@@ -38,7 +38,7 @@ internal class InitializationOperation : AsyncOperationBase<IResourceLocator>
 		public int index; //Field offset: 0x28
 		public IResourceLocation remoteHashLocation; //Field offset: 0x30
 
-		public <>c__DisplayClass18_0() { }
+		public <>c__DisplayClass17_0() { }
 
 		internal void <LoadContentCatalogInternal>b__0(AsyncOperationHandle<IResourceLocator> op) { }
 
@@ -48,8 +48,7 @@ internal class InitializationOperation : AsyncOperationBase<IResourceLocator>
 	private AsyncOperationHandle<IResourceLocator> m_loadCatalogOp; //Field offset: 0xB0
 	private string m_ProviderSuffix; //Field offset: 0xC8
 	private AddressablesImpl m_Addressables; //Field offset: 0xD0
-	private ResourceManagerDiagnostics m_Diagnostics; //Field offset: 0xD8
-	private InitalizationObjectsOperation m_InitGroupOps; //Field offset: 0xE0
+	private InitalizationObjectsOperation m_InitGroupOps; //Field offset: 0xD8
 
 	protected virtual string DebugName
 	{

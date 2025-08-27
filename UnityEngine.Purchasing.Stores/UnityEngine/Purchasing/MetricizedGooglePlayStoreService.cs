@@ -44,7 +44,7 @@ internal class MetricizedGooglePlayStoreService : GooglePlayStoreService
 		public ProductDefinition product; //Field offset: 0x18
 		[Nullable(0)]
 		public Product oldProduct; //Field offset: 0x20
-		public Nullable<GooglePlayProrationMode> desiredProrationMode; //Field offset: 0x28
+		public Nullable<GooglePlayReplacementMode> desiredReplacementMode; //Field offset: 0x28
 
 		public <>c__DisplayClass6_0() { }
 
@@ -67,13 +67,13 @@ internal class MetricizedGooglePlayStoreService : GooglePlayStoreService
 
 	[CompilerGenerated]
 	[DebuggerHidden]
-	private void <>n__2(ProductDefinition product, Product oldProduct, Nullable<GooglePlayProrationMode> desiredProrationMode) { }
+	private void <>n__2(ProductDefinition product, Product oldProduct, Nullable<GooglePlayReplacementMode> desiredReplacementMode) { }
 
 	protected virtual void DequeueFetchPurchases() { }
 
 	protected virtual void DequeueQueryProducts(GoogleBillingResponseCode googleBillingResponseCode) { }
 
-	public virtual void Purchase(ProductDefinition product, Product oldProduct, Nullable<GooglePlayProrationMode> desiredProrationMode) { }
+	public virtual void Purchase(ProductDefinition product, Product oldProduct, Nullable<GooglePlayReplacementMode> desiredReplacementMode) { }
 
 	public virtual void RetrieveProducts(ReadOnlyCollection<ProductDefinition> products, Action<List`1<ProductDescription>, IGoogleBillingResult> onProductsReceived, Action<GoogleRetrieveProductsFailureReason, GoogleBillingResponseCode> onRetrieveProductsFailed) { }
 

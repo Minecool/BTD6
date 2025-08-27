@@ -22,7 +22,7 @@ public class EjectEffect : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 582
+		 get { } //Length: 583
 	}
 
 	public EjectEffect() { }

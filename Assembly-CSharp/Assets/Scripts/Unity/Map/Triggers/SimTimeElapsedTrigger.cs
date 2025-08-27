@@ -9,7 +9,7 @@ public class SimTimeElapsedTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 220
+		 get { } //Length: 211
 	}
 
 	public SimTimeElapsedTrigger() { }

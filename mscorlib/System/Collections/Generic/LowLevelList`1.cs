@@ -4,7 +4,6 @@ namespace System.Collections.Generic;
 [DefaultMember("Item")]
 internal class LowLevelList
 {
-	private const int _defaultCapacity = 4; //Field offset: 0x0
 	private static readonly T[] s_emptyArray; //Field offset: 0x0
 	protected T[] _items; //Field offset: 0x0
 	protected int _size; //Field offset: 0x0

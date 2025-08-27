@@ -7,7 +7,5 @@ internal enum VertexFlags
 	IsTextured = 2,
 	IsDynamic = 3,
 	IsSvgGradients = 4,
-	LastType = 10,
-	IsGraphViewEdge = 10,
 }
 

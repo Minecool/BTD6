@@ -228,12 +228,12 @@ public class HID : InputDevice
 
 		internal float maxFloatValue
 		{
-			internal get { } //Length: 220
+			internal get { } //Length: 203
 		}
 
 		internal float minFloatValue
 		{
-			internal get { } //Length: 220
+			internal get { } //Length: 193
 		}
 
 		internal void AddChildControls(ref HIDElementDescriptor element, string controlName, ref Builder builder) { }
@@ -435,17 +435,17 @@ public class HID : InputDevice
 
 	public static FourCC QueryHIDParsedReportDescriptorDeviceCommandType
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public static FourCC QueryHIDReportDescriptorDeviceCommandType
 	{
-		 get { } //Length: 58
+		 get { } //Length: 54
 	}
 
 	public static FourCC QueryHIDReportDescriptorSizeDeviceCommandType
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	private static HID() { }

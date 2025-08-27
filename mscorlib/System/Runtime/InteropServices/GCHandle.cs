@@ -7,13 +7,13 @@ public struct GCHandle
 
 	public bool IsAllocated
 	{
-		 get { } //Length: 13
+		 get { } //Length: 8
 	}
 
 	public object Target
 	{
-		 get { } //Length: 111
-		 set { } //Length: 38
+		 get { } //Length: 127
+		 set { } //Length: 80
 	}
 
 	private GCHandle(IntPtr h) { }
@@ -24,9 +24,11 @@ public struct GCHandle
 
 	public IntPtr AddrOfPinnedObject() { }
 
+	public static GCHandle Alloc(object value, GCHandleType type) { }
+
 	public static GCHandle Alloc(object value) { }
 
-	public static GCHandle Alloc(object value, GCHandleType type) { }
+	internal static bool CanDereferenceHandle(IntPtr handle) { }
 
 	private static bool CheckCurrentDomain(IntPtr handle) { }
 
@@ -46,6 +48,8 @@ public struct GCHandle
 
 	public virtual int GetHashCode() { }
 
+	internal static object GetRef(IntPtr handle) { }
+
 	private static object GetTarget(IntPtr handle) { }
 
 	private static IntPtr GetTargetHandle(object obj, IntPtr handle, GCHandleType type) { }
@@ -57,6 +61,8 @@ public struct GCHandle
 	public static GCHandle op_Explicit(IntPtr value) { }
 
 	public void set_Target(object value) { }
+
+	internal static void SetRef(IntPtr handle, object value) { }
 
 	public static IntPtr ToIntPtr(GCHandle value) { }
 

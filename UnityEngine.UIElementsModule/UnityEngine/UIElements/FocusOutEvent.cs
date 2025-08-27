@@ -24,5 +24,7 @@ public class FocusOutEvent : FocusEventBase<FocusOutEvent>
 
 	private void LocalInit() { }
 
+	protected private virtual void PostDispatch(IPanel panel) { }
+
 }
 

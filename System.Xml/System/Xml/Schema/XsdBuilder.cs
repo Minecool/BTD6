@@ -234,12 +234,12 @@ internal sealed class XsdBuilder : SchemaBuilder
 
 	private XmlSchemaObject ParentContainer
 	{
-		private get { } //Length: 139
+		private get { } //Length: 141
 	}
 
 	private Token ParentElement
 	{
-		private get { } //Length: 124
+		private get { } //Length: 123
 	}
 
 	private static XsdBuilder() { }

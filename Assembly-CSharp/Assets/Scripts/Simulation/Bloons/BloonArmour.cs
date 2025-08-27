@@ -11,7 +11,7 @@ public class BloonArmour
 	[JsonIgnore]
 	public float Proportion
 	{
-		 get { } //Length: 44
+		 get { } //Length: 29
 	}
 
 	public BloonArmour() { }

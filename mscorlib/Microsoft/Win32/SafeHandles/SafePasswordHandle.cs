@@ -5,7 +5,7 @@ internal sealed class SafePasswordHandle : SafeHandle
 
 	public virtual bool IsInvalid
 	{
-		 get { } //Length: 41
+		 get { } //Length: 32
 	}
 
 	public SafePasswordHandle(string password) { }

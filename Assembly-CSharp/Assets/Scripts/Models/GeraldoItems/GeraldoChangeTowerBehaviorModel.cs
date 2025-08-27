@@ -37,7 +37,7 @@ public class GeraldoChangeTowerBehaviorModel : GeraldoItemBehaviorModel
 
 	public UpgradeBlockerMutator Mutator
 	{
-		 get { } //Length: 317
+		 get { } //Length: 321
 	}
 
 	public GeraldoChangeTowerBehaviorModel(string name, string targetTowerBaseId, int path1TierMax, int path2TierMax, int path3TierMax, string resultingTowerName, PrefabReference effectAtTowerId, string upgradedTowerName, int upgradedTowerUnlockedAt, int resultingPath1TierMax, int resultingPath2TierMax, int resultingPath3TierMax, string upgradeBlockId) { }

@@ -1,11 +1,11 @@
 namespace UnityEngine;
 
-[NativeHeader("Runtime/Graphics/CopyTexture.h")]
-[NativeHeader("Runtime/Shaders/ComputeShader.h")]
-[NativeHeader("Runtime/Camera/LightProbeProxyVolume.h")]
 [NativeHeader("Runtime/Graphics/ColorGamut.h")]
+[NativeHeader("Runtime/Graphics/CopyTexture.h")]
 [NativeHeader("Runtime/Misc/PlayerSettings.h")]
+[NativeHeader("Runtime/Shaders/ComputeShader.h")]
 [NativeHeader("Runtime/Graphics/GraphicsScriptBindings.h")]
+[NativeHeader("Runtime/Camera/LightProbeProxyVolume.h")]
 public class Graphics
 {
 	internal static readonly int kMaxDrawMeshInstanceCount; //Field offset: 0x0
@@ -30,31 +30,46 @@ public class Graphics
 
 	private static Graphics() { }
 
-	public static void Blit(Texture source, RenderTexture dest, Material mat, int pass) { }
-
 	public static void Blit(Texture source, RenderTexture dest) { }
 
-	public static void Blit(Texture source, RenderTexture dest, Material mat) { }
-
 	public static void Blit(Texture source, RenderTexture dest, Vector2 scale, Vector2 offset) { }
+
+	public static void Blit(Texture source, RenderTexture dest, Material mat, int pass) { }
+
+	public static void Blit(Texture source, RenderTexture dest, Material mat) { }
 
 	[FreeFunction("GraphicsScripting::Blit")]
 	private static void Blit2(Texture source, RenderTexture dest) { }
 
+	private static void Blit2_Injected(IntPtr source, IntPtr dest) { }
+
 	[FreeFunction("GraphicsScripting::Blit")]
 	private static void Blit4(Texture source, RenderTexture dest, Vector2 scale, Vector2 offset) { }
 
-	private static void Blit4_Injected(Texture source, RenderTexture dest, ref Vector2 scale, ref Vector2 offset) { }
+	private static void Blit4_Injected(IntPtr source, IntPtr dest, in Vector2 scale, in Vector2 offset) { }
+
+	[StaticAccessor("GetGfxDevice()", StaticAccessorType::Dot (0))]
+	public static void ClearRandomWriteTargets() { }
 
 	public static void CopyTexture(Texture src, int srcElement, int srcMip, int srcX, int srcY, int srcWidth, int srcHeight, Texture dst, int dstElement, int dstMip, int dstX, int dstY) { }
 
 	public static void CopyTexture(Texture src, int srcElement, int srcMip, Texture dst, int dstElement, int dstMip) { }
 
-	[FreeFunction("CopyTexture")]
+	[FreeFunction("CopyTextureRegion")]
 	private static void CopyTexture_Region(Texture src, int srcElement, int srcMip, int srcX, int srcY, int srcWidth, int srcHeight, Texture dst, int dstElement, int dstMip, int dstX, int dstY) { }
+
+	private static void CopyTexture_Region_Injected(IntPtr src, int srcElement, int srcMip, int srcX, int srcY, int srcWidth, int srcHeight, IntPtr dst, int dstElement, int dstMip, int dstX, int dstY) { }
 
 	[FreeFunction("CopyTexture")]
 	private static void CopyTexture_Slice(Texture src, int srcElement, int srcMip, Texture dst, int dstElement, int dstMip) { }
+
+	private static void CopyTexture_Slice_Injected(IntPtr src, int srcElement, int srcMip, IntPtr dst, int dstElement, int dstMip) { }
+
+	[ExcludeFromDocs]
+	public static void DrawMesh(Mesh mesh, Vector3 position, Quaternion rotation, Material material, int layer, Camera camera) { }
+
+	[ExcludeFromDocs]
+	public static void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material, int layer) { }
 
 	[ExcludeFromDocs]
 	public static void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material, int layer, Camera camera, int submeshIndex, MaterialPropertyBlock properties) { }
@@ -62,15 +77,14 @@ public class Graphics
 	public static void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material, int layer, Camera camera, int submeshIndex, MaterialPropertyBlock properties, ShadowCastingMode castShadows, bool receiveShadows, Transform probeAnchor, LightProbeUsage lightProbeUsage, LightProbeProxyVolume lightProbeProxyVolume) { }
 
 	[ExcludeFromDocs]
-	public static void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material, int layer) { }
+	public static void DrawMeshInstanced(Mesh mesh, int submeshIndex, Material material, Matrix4x4[] matrices, int count, MaterialPropertyBlock properties, ShadowCastingMode castShadows, bool receiveShadows, int layer, Camera camera) { }
 
 	public static void DrawMeshInstanced(Mesh mesh, int submeshIndex, Material material, Matrix4x4[] matrices, int count, MaterialPropertyBlock properties, ShadowCastingMode castShadows, bool receiveShadows, int layer, Camera camera, LightProbeUsage lightProbeUsage, LightProbeProxyVolume lightProbeProxyVolume) { }
 
-	[ExcludeFromDocs]
-	public static void DrawMeshInstanced(Mesh mesh, int submeshIndex, Material material, Matrix4x4[] matrices, int count, MaterialPropertyBlock properties, ShadowCastingMode castShadows, bool receiveShadows, int layer, Camera camera) { }
-
 	[NativeMethod(Name = "GraphicsScripting::ExecuteCommandBuffer", IsFreeFunction = True, ThrowsException = True)]
 	public static void ExecuteCommandBuffer(CommandBuffer buffer) { }
+
+	private static void ExecuteCommandBuffer_Injected(IntPtr buffer) { }
 
 	public static GraphicsTier get_activeTier() { }
 
@@ -89,13 +103,17 @@ public class Graphics
 	[FreeFunction("GraphicsScripting::BlitMaterial")]
 	private static void Internal_BlitMaterial5(Texture source, RenderTexture dest, Material mat, int pass, bool setRT) { }
 
+	private static void Internal_BlitMaterial5_Injected(IntPtr source, IntPtr dest, IntPtr mat, int pass, bool setRT) { }
+
 	[FreeFunction("GraphicsScripting::DrawMesh")]
 	private static void Internal_DrawMesh(Mesh mesh, int submeshIndex, Matrix4x4 matrix, Material material, int layer, Camera camera, MaterialPropertyBlock properties, ShadowCastingMode castShadows, bool receiveShadows, Transform probeAnchor, LightProbeUsage lightProbeUsage, LightProbeProxyVolume lightProbeProxyVolume) { }
 
-	private static void Internal_DrawMesh_Injected(Mesh mesh, int submeshIndex, ref Matrix4x4 matrix, Material material, int layer, Camera camera, MaterialPropertyBlock properties, ShadowCastingMode castShadows, bool receiveShadows, Transform probeAnchor, LightProbeUsage lightProbeUsage, LightProbeProxyVolume lightProbeProxyVolume) { }
+	private static void Internal_DrawMesh_Injected(IntPtr mesh, int submeshIndex, in Matrix4x4 matrix, IntPtr material, int layer, IntPtr camera, IntPtr properties, ShadowCastingMode castShadows, bool receiveShadows, IntPtr probeAnchor, LightProbeUsage lightProbeUsage, IntPtr lightProbeProxyVolume) { }
 
 	[FreeFunction("GraphicsScripting::DrawMeshInstanced")]
 	private static void Internal_DrawMeshInstanced(Mesh mesh, int submeshIndex, Material material, Matrix4x4[] matrices, int count, MaterialPropertyBlock properties, ShadowCastingMode castShadows, bool receiveShadows, int layer, Camera camera, LightProbeUsage lightProbeUsage, LightProbeProxyVolume lightProbeProxyVolume) { }
+
+	private static void Internal_DrawMeshInstanced_Injected(IntPtr mesh, int submeshIndex, IntPtr material, ref ManagedSpanWrapper matrices, int count, IntPtr properties, ShadowCastingMode castShadows, bool receiveShadows, int layer, IntPtr camera, LightProbeUsage lightProbeUsage, IntPtr lightProbeProxyVolume) { }
 
 	[FreeFunction("GraphicsScripting::DrawTexture")]
 	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.IMGUIModule"}])]
@@ -110,21 +128,21 @@ public class Graphics
 	[NativeMethod(Name = "GraphicsScripting::SetRTSimple", IsFreeFunction = True, ThrowsException = True)]
 	private static void Internal_SetRTSimple(RenderBuffer color, RenderBuffer depth, int mip, CubemapFace face, int depthSlice) { }
 
-	private static void Internal_SetRTSimple_Injected(ref RenderBuffer color, ref RenderBuffer depth, int mip, CubemapFace face, int depthSlice) { }
+	private static void Internal_SetRTSimple_Injected(in RenderBuffer color, in RenderBuffer depth, int mip, CubemapFace face, int depthSlice) { }
 
 	public static void set_activeTier(GraphicsTier value) { }
 
 	[ExcludeFromDocs]
 	public static void SetRenderTarget(RenderTexture rt) { }
 
+	public static void SetRenderTarget(RenderTexture rt, int mipLevel, CubemapFace face, int depthSlice) { }
+
 	[ExcludeFromDocs]
 	public static void SetRenderTarget(RenderTexture rt, int mipLevel) { }
 
-	public static void SetRenderTarget(RenderTexture rt, int mipLevel, CubemapFace face, int depthSlice) { }
+	internal static void SetRenderTargetImpl(RenderBuffer colorBuffer, RenderBuffer depthBuffer, int mipLevel, CubemapFace face, int depthSlice) { }
 
 	internal static void SetRenderTargetImpl(RenderTexture rt, int mipLevel, CubemapFace face, int depthSlice) { }
-
-	internal static void SetRenderTargetImpl(RenderBuffer colorBuffer, RenderBuffer depthBuffer, int mipLevel, CubemapFace face, int depthSlice) { }
 
 }
 

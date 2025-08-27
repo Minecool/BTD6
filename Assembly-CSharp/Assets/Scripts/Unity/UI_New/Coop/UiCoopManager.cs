@@ -103,9 +103,9 @@ public class UiCoopManager : DynamicUiObject
 	public event Action RunOnCoopInitialised
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 431
+		 remove { } //Length: 415
 	}
 
 	public bool IsCoop

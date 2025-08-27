@@ -19,7 +19,7 @@ public abstract class BaseInputModule : UIBehaviour
 
 	public BaseInput input
 	{
-		 get { } //Length: 516
+		 get { } //Length: 510
 	}
 
 	public BaseInput inputOverride
@@ -28,23 +28,25 @@ public abstract class BaseInputModule : UIBehaviour
 		 set { } //Length: 5
 	}
 
-	internal bool sendPointerHoverToParent
+	protected private bool sendPointerHoverToParent
 	{
-		internal get { } //Length: 5
-		internal set { } //Length: 4
+		private get { } //Length: 5
+		private set { } //Length: 4
 	}
 
 	protected BaseInputModule() { }
 
 	public override void ActivateModule() { }
 
+	public override Vector2 ConvertPointerEventScrollDeltaToTicks(Vector2 scrollDelta) { }
+
 	public override int ConvertUIToolkitPointerId(PointerEventData sourcePointerData) { }
 
 	public override void DeactivateModule() { }
 
-	protected static MoveDirection DetermineMoveDirection(float x, float y) { }
-
 	protected static MoveDirection DetermineMoveDirection(float x, float y, float deadZone) { }
+
+	protected static MoveDirection DetermineMoveDirection(float x, float y) { }
 
 	protected static GameObject FindCommonRoot(GameObject g1, GameObject g2) { }
 
@@ -56,7 +58,7 @@ public abstract class BaseInputModule : UIBehaviour
 
 	public BaseInput get_inputOverride() { }
 
-	internal bool get_sendPointerHoverToParent() { }
+	protected private bool get_sendPointerHoverToParent() { }
 
 	protected override AxisEventData GetAxisEventData(float x, float y, float moveDeadZone) { }
 
@@ -76,7 +78,7 @@ public abstract class BaseInputModule : UIBehaviour
 
 	public void set_inputOverride(BaseInput value) { }
 
-	internal void set_sendPointerHoverToParent(bool value) { }
+	protected private void set_sendPointerHoverToParent(bool value) { }
 
 	public override bool ShouldActivateModule() { }
 

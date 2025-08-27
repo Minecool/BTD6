@@ -12,11 +12,11 @@ public sealed class GeometryUtility
 	[NativeName("ExtractPlanes")]
 	private static void Internal_ExtractPlanes(out Plane[] planes, Matrix4x4 worldToProjectionMatrix) { }
 
-	private static void Internal_ExtractPlanes_Injected(out Plane[] planes, ref Matrix4x4 worldToProjectionMatrix) { }
+	private static void Internal_ExtractPlanes_Injected(out BlittableArrayWrapper planes, in Matrix4x4 worldToProjectionMatrix) { }
 
 	public static bool TestPlanesAABB(Plane[] planes, Bounds bounds) { }
 
-	private static bool TestPlanesAABB_Injected(Plane[] planes, ref Bounds bounds) { }
+	private static bool TestPlanesAABB_Injected(ref ManagedSpanWrapper planes, in Bounds bounds) { }
 
 }
 

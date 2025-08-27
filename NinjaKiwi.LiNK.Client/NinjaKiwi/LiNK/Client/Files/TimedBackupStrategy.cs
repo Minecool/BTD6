@@ -1,6 +1,6 @@
 namespace NinjaKiwi.LiNK.Client.Files;
 
-internal class TimedBackupStrategy : FileSystemStorage
+internal sealed class TimedBackupStrategy : FileSystemStorage
 {
 	[CompilerGenerated]
 	private struct <CreateBackup>d__9 : IAsyncStateMachine

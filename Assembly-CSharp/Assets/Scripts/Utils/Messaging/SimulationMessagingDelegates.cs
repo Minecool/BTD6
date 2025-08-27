@@ -145,6 +145,19 @@ public static class SimulationMessagingDelegates
 
 	}
 
+	internal sealed class OnMatchReady : MulticastDelegate
+	{
+
+		public OnMatchReady(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(bool loadedSave, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(bool loadedSave) { }
+
+	}
+
 	internal sealed class OnPostPropDestroyed : MulticastDelegate
 	{
 

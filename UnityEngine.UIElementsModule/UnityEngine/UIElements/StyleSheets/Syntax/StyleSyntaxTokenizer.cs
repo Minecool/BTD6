@@ -7,7 +7,7 @@ internal class StyleSyntaxTokenizer
 
 	public StyleSyntaxToken current
 	{
-		 get { } //Length: 172
+		 get { } //Length: 164
 	}
 
 	public StyleSyntaxTokenizer() { }

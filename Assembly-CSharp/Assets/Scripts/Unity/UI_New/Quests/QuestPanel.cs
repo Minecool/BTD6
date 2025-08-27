@@ -42,7 +42,7 @@ public class QuestPanel : MonoBehaviour
 
 	public bool IsNew
 	{
-		 get { } //Length: 96
+		 get { } //Length: 99
 	}
 
 	public bool IsTaleQuest
@@ -60,10 +60,10 @@ public class QuestPanel : MonoBehaviour
 		 get { } //Length: 29
 	}
 
-	private QuestDetails QuestData
+	public private QuestDetails QuestData
 	{
 		[CompilerGenerated]
-		private get { } //Length: 8
+		 get { } //Length: 8
 		[CompilerGenerated]
 		private set { } //Length: 8
 	}
@@ -91,7 +91,7 @@ public class QuestPanel : MonoBehaviour
 	public QuestCategory get_QuestCategory() { }
 
 	[CompilerGenerated]
-	private QuestDetails get_QuestData() { }
+	public QuestDetails get_QuestData() { }
 
 	private QuestTrackerManager get_QuestTrackerManager() { }
 

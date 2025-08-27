@@ -37,7 +37,7 @@ internal class XmlName : IXmlSchemaInfo
 
 	public string Name
 	{
-		 get { } //Length: 373
+		 get { } //Length: 408
 	}
 
 	public string NamespaceURI

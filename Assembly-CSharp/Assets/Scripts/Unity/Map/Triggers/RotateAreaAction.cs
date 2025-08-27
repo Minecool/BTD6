@@ -12,7 +12,7 @@ public class RotateAreaAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 396
+		 get { } //Length: 384
 	}
 
 	public RotateAreaAction() { }

@@ -104,6 +104,10 @@ public abstract class JContainer : JToken, IList<JToken>, ICollection<JToken>, I
 	[NullableContext(2)]
 	internal override bool ContainsItem(JToken item) { }
 
+	internal bool ContentsEqual(JContainer container) { }
+
+	internal int ContentsHashCode() { }
+
 	internal override void CopyItemsTo(Array array, int arrayIndex) { }
 
 	internal static JToken CreateFromContent(object content) { }

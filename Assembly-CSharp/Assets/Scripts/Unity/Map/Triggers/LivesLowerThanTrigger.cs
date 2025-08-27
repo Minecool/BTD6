@@ -9,7 +9,7 @@ public class LivesLowerThanTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 223
+		 get { } //Length: 214
 	}
 
 	public LivesLowerThanTrigger() { }

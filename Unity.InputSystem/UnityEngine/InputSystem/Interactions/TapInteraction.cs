@@ -6,15 +6,16 @@ public class TapInteraction : IInputInteraction
 	public float duration; //Field offset: 0x10
 	public float pressPoint; //Field offset: 0x14
 	private double m_TapStartTime; //Field offset: 0x18
+	private bool canceledFromTimerExpired; //Field offset: 0x20
 
 	private float durationOrDefault
 	{
-		private get { } //Length: 108
+		private get { } //Length: 99
 	}
 
 	private float pressPointOrDefault
 	{
-		private get { } //Length: 83
+		private get { } //Length: 74
 	}
 
 	private float releasePointOrDefault

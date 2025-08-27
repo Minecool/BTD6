@@ -11,12 +11,12 @@ public class XmlAttributeAttribute : Attribute
 
 	public string AttributeName
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	public string DataType
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 		 set { } //Length: 5
 	}
 

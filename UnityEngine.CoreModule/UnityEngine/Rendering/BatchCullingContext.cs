@@ -14,12 +14,14 @@ public struct BatchCullingContext
 	public readonly BatchPackedCullingViewID viewID; //Field offset: 0x88
 	public readonly uint cullingLayerMask; //Field offset: 0x90
 	public readonly ulong sceneCullingMask; //Field offset: 0x98
+	public readonly ushort splitExclusionMask; //Field offset: 0xA0
 	[Obsolete("BatchCullingContext.isOrthographic is deprecated. Use BatchCullingContext.projectionType instead.")]
-	public readonly byte isOrthographic; //Field offset: 0xA0
+	public readonly byte isOrthographic; //Field offset: 0xA2
 	public readonly int receiverPlaneOffset; //Field offset: 0xA4
 	public readonly int receiverPlaneCount; //Field offset: 0xA8
+	internal readonly IntPtr occlusionBuffer; //Field offset: 0xB0
 
-	internal BatchCullingContext(NativeArray<Plane> inCullingPlanes, NativeArray<CullingSplit> inCullingSplits, LODParameters inLodParameters, Matrix4x4 inLocalToWorldMatrix, BatchCullingViewType inViewType, BatchCullingProjectionType inProjectionType, BatchCullingFlags inBatchCullingFlags, ulong inViewID, uint inCullingLayerMask, ulong inSceneCullingMask, int inReceiverPlaneOffset, int inReceiverPlaneCount) { }
+	internal BatchCullingContext(NativeArray<Plane> inCullingPlanes, NativeArray<CullingSplit> inCullingSplits, LODParameters inLodParameters, Matrix4x4 inLocalToWorldMatrix, BatchCullingViewType inViewType, BatchCullingProjectionType inProjectionType, BatchCullingFlags inBatchCullingFlags, ulong inViewID, uint inCullingLayerMask, ulong inSceneCullingMask, byte inExclusionSplitMask, int inReceiverPlaneOffset, int inReceiverPlaneCount, IntPtr inOcclusionBuffer) { }
 
 }
 

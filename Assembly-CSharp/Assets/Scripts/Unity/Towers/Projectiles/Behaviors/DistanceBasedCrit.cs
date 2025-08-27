@@ -20,7 +20,7 @@ public class DistanceBasedCrit : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 609
+		 get { } //Length: 610
 	}
 
 	public DistanceBasedCrit() { }

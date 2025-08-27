@@ -14,7 +14,7 @@ public class ConstructionCall : MethodCall, IConstructionCallMessage, IMessage, 
 
 	public override Type ActivationType
 	{
-		 get { } //Length: 185
+		 get { } //Length: 173
 	}
 
 	public override string ActivationTypeName

@@ -8,8 +8,8 @@ internal sealed class IntSizedArray : ICloneable
 
 	internal int Item
 	{
-		internal get { } //Length: 103
-		internal set { } //Length: 175
+		internal get { } //Length: 101
+		internal set { } //Length: 166
 	}
 
 	public IntSizedArray() { }

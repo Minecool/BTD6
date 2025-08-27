@@ -12,6 +12,8 @@ public static class BloonPropertyHelper
 
 	public static BloonProperties GetDamagesTypeConvertedToImmuneBloonProperties(string damageTypesStr, string ignoreImmunityForBloonTypesStr) { }
 
+	public static string GetDamageTypeFromImmunities(BloonProperties properties) { }
+
 	private static BloonProperties GetDestroyProjectileFlags(BloonProperties immuneBloonProperties) { }
 
 	public static BloonProperties GetImmunitiesFromDamageType(string damageType) { }

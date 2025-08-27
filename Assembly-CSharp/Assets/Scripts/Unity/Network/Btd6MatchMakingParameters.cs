@@ -35,7 +35,7 @@ public class Btd6MatchMakingParameters : MatchMakingParameters
 	public BucketName BucketName
 	{
 		 get { } //Length: 4
-		 set { } //Length: 1187
+		 set { } //Length: 1173
 	}
 
 	public string FullBucketString

@@ -3,7 +3,7 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu;
 public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler, IPointerDownHandler
 {
 	[CompilerGenerated]
-	private sealed class <Initialise>d__58 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <Initialise>d__61 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -22,7 +22,7 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 		}
 
 		[DebuggerHidden]
-		public <Initialise>d__58(int <>1__state) { }
+		public <Initialise>d__61(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -69,13 +69,13 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 	public NK_TextMeshProUGUI lockedText; //Field offset: 0x60
 	public Image icon; //Field offset: 0x68
 	public GameObject purchaseArrowGlow; //Field offset: 0x70
-	private TowerToSimulation tts; //Field offset: 0x78
+	protected TowerToSimulation tts; //Field offset: 0x78
 	public SpriteReference backgroundActive; //Field offset: 0x80
 	public SpriteReference backgroundInactive; //Field offset: 0x88
 	public SpriteReference backgroundParagon; //Field offset: 0x90
 	public SpriteReference backgroundBeastHandlerContributed; //Field offset: 0x98
-	private UpgradeModel upgrade; //Field offset: 0xA0
-	private Image background; //Field offset: 0xA8
+	protected UpgradeModel upgrade; //Field offset: 0xA0
+	protected Image background; //Field offset: 0xA8
 	public Image restrictedIcon; //Field offset: 0xB0
 	public Image lockedIcon; //Field offset: 0xB8
 	public Image upgradableIcon; //Field offset: 0xC0
@@ -102,37 +102,42 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 	public NK_TextMeshProUGUI costBeastMerge; //Field offset: 0x188
 	public GameObject mergeButtonContainer; //Field offset: 0x190
 	public Button mergeButton; //Field offset: 0x198
-	private float upgradeCost; //Field offset: 0x1A0
-	private UpgradeStatus upgradeStatus; //Field offset: 0x1A4
-	private string title; //Field offset: 0x1A8
-	private string desc; //Field offset: 0x1B0
+	protected float upgradeCost; //Field offset: 0x1A0
+	protected UpgradeStatus upgradeStatus; //Field offset: 0x1A4
+	protected string title; //Field offset: 0x1A8
+	protected string desc; //Field offset: 0x1B0
 	private float hoverPopupDelay; //Field offset: 0x1B8
 	private bool hovering; //Field offset: 0x1BC
 	private float hoverTimer; //Field offset: 0x1C0
 
 	public NK_TextMeshProUGUI Cost
 	{
-		 get { } //Length: 172
+		 get { } //Length: 165
 	}
 
 	public bool IsBeastHandler
 	{
-		 get { } //Length: 97
+		 get { } //Length: 95
 	}
 
 	public bool IsBeastHandlerContributionUpgradeAvailable
 	{
-		 get { } //Length: 386
+		 get { } //Length: 384
 	}
 
 	public bool IsParagon
 	{
-		 get { } //Length: 61
+		 get { } //Length: 56
+	}
+
+	public bool IsUpgradeUnlocked
+	{
+		 get { } //Length: 20
 	}
 
 	public NK_TextMeshProUGUI Label
 	{
-		 get { } //Length: 66
+		 get { } //Length: 61
 	}
 
 	public UpgradeButton() { }
@@ -141,7 +146,7 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 
 	public bool CheckDcLocked(int path, bool upgradeClicked) { }
 
-	public void CheckXP() { }
+	public override void CheckXP() { }
 
 	public bool DoesNotOwn() { }
 
@@ -153,6 +158,8 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 
 	public bool get_IsParagon() { }
 
+	public bool get_IsUpgradeUnlocked() { }
+
 	public NK_TextMeshProUGUI get_Label() { }
 
 	public ValueTuple<Boolean, String, String> GetShowTitleDesc() { }
@@ -161,14 +168,16 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 
 	public UpgradeModel GetUpgradeModel() { }
 
-	public UpgradeStatus GetUpgradeStatus(int path, bool upgradeClicked = false) { }
+	public override UpgradeStatus GetUpgradeStatus(int path, bool upgradeClicked = false) { }
 
-	private bool HasUnlockedUpgrade() { }
+	protected override bool HasUnlockedUpgrade() { }
 
-	[IteratorStateMachine(typeof(<Initialise>d__58))]
+	[IteratorStateMachine(typeof(<Initialise>d__61))]
 	public virtual IEnumerator Initialise() { }
 
 	public string IsUpgradeBlocked() { }
+
+	public bool IsUpgradePathPurchasable(int pathIndex) { }
 
 	public void LoadBackground(bool isBackgroundInactive = false) { }
 
@@ -178,13 +187,13 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 
 	public override void OnPointerExit(PointerEventData eventData) { }
 
-	private void SetImageActive(GameObject obj, bool active) { }
+	protected void SetImageActive(GameObject obj, bool active) { }
 
 	private void SetSpecialLocksActive(string customLockId) { }
 
 	private void SetSpecialLocksNotActive() { }
 
-	private void SetTextActive(GameObject obj, bool active) { }
+	protected void SetTextActive(GameObject obj, bool active) { }
 
 	public void SetTextColour() { }
 
@@ -198,7 +207,7 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 
 	public void UpdateCost() { }
 
-	private void UpdateCostVisuals() { }
+	protected override void UpdateCostVisuals() { }
 
 	private void UpdateMergeButton(TowerToSimulation tts) { }
 
@@ -208,7 +217,7 @@ public class UpgradeButton : DynamicUiObject, IPointerEnterHandler, IEventSystem
 
 	public void UpdateSpecialLockUI() { }
 
-	public void UpdateVisuals(int path, bool upgradeClicked) { }
+	public override void UpdateVisuals(int path, int tier, bool upgradeClicked) { }
 
 	public void WobbleUpgrade() { }
 

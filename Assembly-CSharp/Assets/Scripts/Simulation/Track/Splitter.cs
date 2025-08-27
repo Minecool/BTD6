@@ -9,12 +9,12 @@ public class Splitter
 
 	public override float MaxDistUntilLeak
 	{
-		 get { } //Length: 251
+		 get { } //Length: 237
 	}
 
 	public override float MaxDistUntilSpawn
 	{
-		 get { } //Length: 255
+		 get { } //Length: 248
 	}
 
 	public override Path[] Paths

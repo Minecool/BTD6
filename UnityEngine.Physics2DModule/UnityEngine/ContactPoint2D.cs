@@ -11,22 +11,26 @@ public struct ContactPoint2D
 	private Vector2 m_Normal; //Field offset: 0x8
 	[NativeName("relativeVelocity")]
 	private Vector2 m_RelativeVelocity; //Field offset: 0x10
+	[NativeName("friction")]
+	private float m_Friction; //Field offset: 0x18
+	[NativeName("bounciness")]
+	private float m_Bounciness; //Field offset: 0x1C
 	[NativeName("separation")]
-	private float m_Separation; //Field offset: 0x18
+	private float m_Separation; //Field offset: 0x20
 	[NativeName("normalImpulse")]
-	private float m_NormalImpulse; //Field offset: 0x1C
+	private float m_NormalImpulse; //Field offset: 0x24
 	[NativeName("tangentImpulse")]
-	private float m_TangentImpulse; //Field offset: 0x20
+	private float m_TangentImpulse; //Field offset: 0x28
 	[NativeName("collider")]
-	private int m_Collider; //Field offset: 0x24
+	private int m_Collider; //Field offset: 0x2C
 	[NativeName("otherCollider")]
-	private int m_OtherCollider; //Field offset: 0x28
+	private int m_OtherCollider; //Field offset: 0x30
 	[NativeName("rigidbody")]
-	private int m_Rigidbody; //Field offset: 0x2C
+	private int m_Rigidbody; //Field offset: 0x34
 	[NativeName("otherRigidbody")]
-	private int m_OtherRigidbody; //Field offset: 0x30
+	private int m_OtherRigidbody; //Field offset: 0x38
 	[NativeName("enabled")]
-	private int m_Enabled; //Field offset: 0x34
+	private int m_Enabled; //Field offset: 0x3C
 
 }
 

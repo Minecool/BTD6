@@ -15,6 +15,7 @@ public class HDROutputSettings
 
 	public bool automaticHDRTonemapping
 	{
+		 get { } //Length: 102
 		 set { } //Length: 118
 	}
 
@@ -24,6 +25,16 @@ public class HDROutputSettings
 	}
 
 	public ColorGamut displayColorGamut
+	{
+		 get { } //Length: 102
+	}
+
+	public GraphicsFormat graphicsFormat
+	{
+		 get { } //Length: 102
+	}
+
+	public bool HDRModeChangeRequested
 	{
 		 get { } //Length: 102
 	}
@@ -63,9 +74,15 @@ public class HDROutputSettings
 
 	public bool get_active() { }
 
+	public bool get_automaticHDRTonemapping() { }
+
 	public bool get_available() { }
 
 	public ColorGamut get_displayColorGamut() { }
+
+	public GraphicsFormat get_graphicsFormat() { }
+
+	public bool get_HDRModeChangeRequested() { }
 
 	public static HDROutputSettings get_main() { }
 
@@ -80,11 +97,20 @@ public class HDROutputSettings
 	[FreeFunction("HDROutputSettingsBindings::GetActive", HasExplicitThis = False, ThrowsException = True)]
 	private static bool GetActive(int displayIndex) { }
 
+	[FreeFunction("HDROutputSettingsBindings::GetAutomaticHDRTonemapping", HasExplicitThis = False, ThrowsException = True)]
+	private static bool GetAutomaticHDRTonemapping(int displayIndex) { }
+
 	[FreeFunction("HDROutputSettingsBindings::GetAvailable", HasExplicitThis = False, ThrowsException = True)]
 	private static bool GetAvailable(int displayIndex) { }
 
 	[FreeFunction("HDROutputSettingsBindings::GetDisplayColorGamut", HasExplicitThis = False, ThrowsException = True)]
 	private static ColorGamut GetDisplayColorGamut(int displayIndex) { }
+
+	[FreeFunction("HDROutputSettingsBindings::GetGraphicsFormat", HasExplicitThis = False, ThrowsException = True)]
+	private static GraphicsFormat GetGraphicsFormat(int displayIndex) { }
+
+	[FreeFunction("HDROutputSettingsBindings::GetHDRModeChangeRequested", HasExplicitThis = False, ThrowsException = True)]
+	private static bool GetHDRModeChangeRequested(int displayIndex) { }
 
 	[FreeFunction("HDROutputSettingsBindings::GetMaxFullFrameToneMapLuminance", HasExplicitThis = False, ThrowsException = True)]
 	private static int GetMaxFullFrameToneMapLuminance(int displayIndex) { }

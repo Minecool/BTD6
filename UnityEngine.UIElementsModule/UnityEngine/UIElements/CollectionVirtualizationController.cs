@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal abstract class CollectionVirtualizationController
 {
 	protected readonly ScrollView m_ScrollView; //Field offset: 0x10
@@ -36,9 +37,9 @@ internal abstract class CollectionVirtualizationController
 
 	public abstract int GetIndexFromPosition(Vector2 position) { }
 
-	public abstract void OnBlur(VisualElement willFocus) { }
+	public abstract void OnFocusIn(VisualElement leafTarget) { }
 
-	public abstract void OnFocus(VisualElement leafTarget) { }
+	public abstract void OnFocusOut(VisualElement willFocus) { }
 
 	public abstract void OnScroll(Vector2 offset) { }
 
@@ -51,6 +52,8 @@ internal abstract class CollectionVirtualizationController
 	protected abstract void set_firstVisibleIndex(int value) { }
 
 	internal abstract void StartDragItem(ReusableCollectionItem item) { }
+
+	public abstract void UnbindAll() { }
 
 	public abstract void UpdateBackground() { }
 

@@ -13,5 +13,6 @@ public enum RenderTextureCreationFlags
 	NoResolvedColorSurface = 256,
 	DynamicallyScalable = 1024,
 	BindMS = 2048,
+	DynamicallyScalableExplicit = 131072,
 }
 

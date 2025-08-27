@@ -6,6 +6,13 @@ namespace UnityEngine.XR;
 [UsedByNativeCode]
 public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescriptor>
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(XRDisplaySubsystem xrDisplaySubsystem) { }
+
+	}
+
 	[Flags]
 	internal enum TextureLayout
 	{
@@ -41,8 +48,6 @@ public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescript
 		[NativeMethod(Name = "XRMirrorViewBlitDescScriptApi::GetBlitParameter", IsFreeFunction = True, HasExplicitThis = True)]
 		public void GetBlitParameter(int blitParameterIndex, out XRBlitParams blitParameter) { }
 
-		private static void GetBlitParameter_Injected(ref XRMirrorViewBlitDesc _unity_self, int blitParameterIndex, out XRBlitParams blitParameter) { }
-
 	}
 
 	[NativeHeader("Modules/XR/Subsystems/Display/XRDisplaySubsystem.bindings.h")]
@@ -71,6 +76,7 @@ public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescript
 		public RenderTargetIdentifier motionVectorRenderTarget; //Field offset: 0x70
 		public RenderTextureDescriptor motionVectorRenderTargetDesc; //Field offset: 0x98
 		public bool shouldFillOutDepth; //Field offset: 0xCC
+		public bool spaceWarpRightHandedNDC; //Field offset: 0xCD
 		public int cullingPassIndex; //Field offset: 0xD0
 		public IntPtr foveatedRenderingInfo; //Field offset: 0xD8
 
@@ -78,13 +84,11 @@ public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescript
 		[NativeMethod(Name = "XRRenderPassScriptApi::GetRenderParameter", IsFreeFunction = True, HasExplicitThis = True, ThrowsException = True)]
 		public void GetRenderParameter(Camera camera, int renderParameterIndex, out XRRenderParameter renderParameter) { }
 
-		private static void GetRenderParameter_Injected(ref XRRenderPass _unity_self, Camera camera, int renderParameterIndex, out XRRenderParameter renderParameter) { }
+		private static void GetRenderParameter_Injected(ref XRRenderPass _unity_self, IntPtr camera, int renderParameterIndex, out XRRenderParameter renderParameter) { }
 
 		[NativeConditional("ENABLE_XR")]
 		[NativeMethod(Name = "XRRenderPassScriptApi::GetRenderParameterCount", IsFreeFunction = True, HasExplicitThis = True)]
 		public int GetRenderParameterCount() { }
-
-		private static int GetRenderParameterCount_Injected(ref XRRenderPass _unity_self) { }
 
 	}
 
@@ -95,37 +99,42 @@ public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescript
 
 	public bool disableLegacyRenderer
 	{
-		 set { } //Length: 66
+		 set { } //Length: 91
 	}
 
 	public HDROutputSettings hdrOutputSettings
 	{
-		 get { } //Length: 108
+		 get { } //Length: 107
 	}
 
 	public float scaleOfAllRenderTargets
 	{
-		 set { } //Length: 67
+		 set { } //Length: 97
+	}
+
+	public float scaleOfAllViewports
+	{
+		 get { } //Length: 81
 	}
 
 	public bool sRGB
 	{
-		 set { } //Length: 66
+		 set { } //Length: 91
 	}
 
 	public TextureLayout textureLayout
 	{
-		 set { } //Length: 64
+		 set { } //Length: 88
 	}
 
 	public float zFar
 	{
-		 set { } //Length: 67
+		 set { } //Length: 97
 	}
 
 	public float zNear
 	{
-		 set { } //Length: 67
+		 set { } //Length: 97
 	}
 
 	public XRDisplaySubsystem() { }
@@ -135,11 +144,17 @@ public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescript
 	[NativeMethod(Name = "AddGraphicsThreadMirrorViewBlit", IsThreadSafe = False)]
 	public bool AddGraphicsThreadMirrorViewBlit(CommandBuffer cmd, bool allowGraphicsStateInvalidate, int mode) { }
 
+	private static bool AddGraphicsThreadMirrorViewBlit_Injected(IntPtr _unity_self, IntPtr cmd, bool allowGraphicsStateInvalidate, int mode) { }
+
 	public void BeginRecordingIfLateLatched(Camera camera) { }
 
 	public void EndRecordingIfLateLatched(Camera camera) { }
 
 	public HDROutputSettings get_hdrOutputSettings() { }
+
+	public float get_scaleOfAllViewports() { }
+
+	private static float get_scaleOfAllViewports_Injected(IntPtr _unity_self) { }
 
 	public void GetCullingParameters(Camera camera, int cullingPassIndex, out ScriptableCullingParameters scriptableCullingParameters) { }
 
@@ -147,43 +162,77 @@ public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescript
 	[NativeMethod(Name = "QueryMirrorViewBlitDesc", IsThreadSafe = False)]
 	public bool GetMirrorViewBlitDesc(RenderTexture mirrorRt, out XRMirrorViewBlitDesc outDesc, int mode) { }
 
+	private static bool GetMirrorViewBlitDesc_Injected(IntPtr _unity_self, IntPtr mirrorRt, out XRMirrorViewBlitDesc outDesc, int mode) { }
+
 	[NativeConditional("ENABLE_XR")]
 	[NativeMethod(Name = "GetPreferredMirrorViewBlitMode", IsThreadSafe = False)]
 	public int GetPreferredMirrorBlitMode() { }
+
+	private static int GetPreferredMirrorBlitMode_Injected(IntPtr _unity_self) { }
 
 	public void GetRenderPass(int renderPassIndex, out XRRenderPass renderPass) { }
 
 	public int GetRenderPassCount() { }
 
+	private static int GetRenderPassCount_Injected(IntPtr _unity_self) { }
+
 	[NativeMethod("TryBeginRecordingIfLateLatched")]
 	private bool Internal_TryBeginRecordingIfLateLatched(Camera camera) { }
 
+	private static bool Internal_TryBeginRecordingIfLateLatched_Injected(IntPtr _unity_self, IntPtr camera) { }
+
 	[NativeMethod("TryEndRecordingIfLateLatched")]
 	private bool Internal_TryEndRecordingIfLateLatched(Camera camera) { }
+
+	private static bool Internal_TryEndRecordingIfLateLatched_Injected(IntPtr _unity_self, IntPtr camera) { }
 
 	[NativeHeader("Runtime/Graphics/ScriptableRenderLoop/ScriptableCulling.h")]
 	[NativeMethod("TryGetCullingParams")]
 	private bool Internal_TryGetCullingParams(Camera camera, int cullingPassIndex, out ScriptableCullingParameters scriptableCullingParameters) { }
 
+	private static bool Internal_TryGetCullingParams_Injected(IntPtr _unity_self, IntPtr camera, int cullingPassIndex, out ScriptableCullingParameters scriptableCullingParameters) { }
+
 	[NativeMethod("TryGetRenderPass")]
 	private bool Internal_TryGetRenderPass(int renderPassIndex, out XRRenderPass renderPass) { }
+
+	private static bool Internal_TryGetRenderPass_Injected(IntPtr _unity_self, int renderPassIndex, out XRRenderPass renderPass) { }
 
 	[RequiredByNativeCode]
 	private void InvokeDisplayFocusChanged(bool focus) { }
 
 	public void set_disableLegacyRenderer(bool value) { }
 
+	private static void set_disableLegacyRenderer_Injected(IntPtr _unity_self, bool value) { }
+
 	public void set_scaleOfAllRenderTargets(float value) { }
+
+	private static void set_scaleOfAllRenderTargets_Injected(IntPtr _unity_self, float value) { }
 
 	public void set_sRGB(bool value) { }
 
+	private static void set_sRGB_Injected(IntPtr _unity_self, bool value) { }
+
 	public void set_textureLayout(TextureLayout value) { }
+
+	private static void set_textureLayout_Injected(IntPtr _unity_self, TextureLayout value) { }
 
 	public void set_zFar(float value) { }
 
+	private static void set_zFar_Injected(IntPtr _unity_self, float value) { }
+
 	public void set_zNear(float value) { }
 
+	private static void set_zNear_Injected(IntPtr _unity_self, float value) { }
+
 	public void SetMSAALevel(int level) { }
+
+	private static void SetMSAALevel_Injected(IntPtr _unity_self, int level) { }
+
+	[NativeConditional("ENABLE_XR")]
+	[NativeMethod(Name = "SetPreferredMirrorViewBlitMode", IsThreadSafe = False)]
+	public void SetPreferredMirrorBlitMode(int blitMode) { }
+
+	private static void SetPreferredMirrorBlitMode_Injected(IntPtr _unity_self, int blitMode) { }
 
 }
 

@@ -7,7 +7,7 @@ internal sealed class DataColumnPropertyDescriptor : PropertyDescriptor
 
 	public virtual AttributeCollection Attributes
 	{
-		 get { } //Length: 450
+		 get { } //Length: 438
 	}
 
 	internal DataColumn Column
@@ -18,7 +18,7 @@ internal sealed class DataColumnPropertyDescriptor : PropertyDescriptor
 
 	public virtual Type ComponentType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 77
 	}
 
 	public virtual bool IsReadOnly

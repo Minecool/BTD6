@@ -17,21 +17,21 @@ public class InputEvent : EventBase<InputEvent>
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <previousData>k__BackingField; //Field offset: 0x88
+	private string <previousData>k__BackingField; //Field offset: 0x68
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <newData>k__BackingField; //Field offset: 0x90
+	private string <newData>k__BackingField; //Field offset: 0x70
 
 	protected string newData
 	{
 		[CompilerGenerated]
-		 set { } //Length: 8
+		 set { } //Length: 5
 	}
 
 	protected string previousData
 	{
 		[CompilerGenerated]
-		 set { } //Length: 8
+		 set { } //Length: 5
 	}
 
 	private static InputEvent() { }

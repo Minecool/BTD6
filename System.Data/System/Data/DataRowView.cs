@@ -27,7 +27,7 @@ public class DataRowView : ICustomTypeDescriptor
 
 	private DataRowVersion RowVersionDefault
 	{
-		private get { } //Length: 88
+		private get { } //Length: 90
 	}
 
 	private static DataRowView() { }

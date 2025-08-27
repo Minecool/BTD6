@@ -14,7 +14,7 @@ public sealed class OperatingSystem : ISerializable, ICloneable
 
 	public string VersionString
 	{
-		 get { } //Length: 488
+		 get { } //Length: 180
 	}
 
 	public OperatingSystem(PlatformID platform, Version version) { }

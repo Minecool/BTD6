@@ -3,13 +3,6 @@ namespace System;
 [IsReadOnly]
 public struct float : IComparable, IConvertible, IFormattable, IComparable<Single>, IEquatable<Single>, ISpanFormattable
 {
-	public const float MinValue = -3.4028235E+38; //Field offset: 0x0
-	public const float Epsilon = 1E-45; //Field offset: 0x0
-	public const float MaxValue = 3.4028235E+38; //Field offset: 0x0
-	public const float PositiveInfinity = ∞; //Field offset: 0x0
-	public const float NegativeInfinity = -∞; //Field offset: 0x0
-	public const float NaN = NaN; //Field offset: 0x0
-	internal const float NegativeZero = -0; //Field offset: 0x0
 	private readonly float m_value; //Field offset: 0x0
 
 	public override int CompareTo(object value) { }

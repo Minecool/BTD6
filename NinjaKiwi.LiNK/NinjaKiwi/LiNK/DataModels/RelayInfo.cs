@@ -3,7 +3,7 @@ namespace NinjaKiwi.LiNK.DataModels;
 [DataContract]
 public class RelayInfo
 {
-	public RelayDetails Details; //Field offset: 0x10
+	public RelayModel Details; //Field offset: 0x10
 	[DataMember(Name = "relay_server_ip")]
 	public string ip; //Field offset: 0x18
 	[DataMember(Name = "relay_server_port")]

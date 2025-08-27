@@ -6,7 +6,7 @@ internal class ConstantBufferSingleton : ConstantBuffer<CBType>
 
 	internal static ConstantBufferSingleton<CBType> instance
 	{
-		internal get { } //Length: 716
+		internal get { } //Length: 714
 		internal set { } //Length: 132
 	}
 

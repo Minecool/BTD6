@@ -34,7 +34,7 @@ internal static class PointerDeviceState
 		{
 			[CompilerGenerated]
 			[IsReadOnly]
-			internal get { } //Length: 5
+			internal get { } //Length: 291
 			[CompilerGenerated]
 			private set { } //Length: 5
 		}

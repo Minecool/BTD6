@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class StyleComplexSelector : ISerializationCallbackReceiver
 {
 	[CompilerGenerated]
@@ -40,7 +41,9 @@ internal class StyleComplexSelector : ISerializationCallbackReceiver
 	[SerializeField]
 	private StyleSelector[] m_Selectors; //Field offset: 0x38
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal int ruleIndex; //Field offset: 0x40
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal StyleComplexSelector nextInTable; //Field offset: 0x48
 	internal int orderInStyleSheet; //Field offset: 0x50
 
@@ -54,12 +57,14 @@ internal class StyleComplexSelector : ISerializationCallbackReceiver
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal set { } //Length: 5
 	}
 
 	public internal StyleSelector[] selectors
 	{
 		 get { } //Length: 7
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal set { } //Length: 33
 	}
 
@@ -90,8 +95,10 @@ internal class StyleComplexSelector : ISerializationCallbackReceiver
 	public override void OnBeforeSerialize() { }
 
 	[CompilerGenerated]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void set_rule(StyleRule value) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void set_selectors(StyleSelector[] value) { }
 
 	private static int StyleSelectorPartCompare(StyleSelectorPart x, StyleSelectorPart y) { }

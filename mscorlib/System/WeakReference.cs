@@ -13,8 +13,8 @@ public class WeakReference : ISerializable
 
 	public override object Target
 	{
-		 get { } //Length: 48
-		 set { } //Length: 12
+		 get { } //Length: 59
+		 set { } //Length: 83
 	}
 
 	public override bool TrackResurrection

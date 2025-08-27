@@ -13,7 +13,7 @@ internal class GooglePurchaseService : IGooglePurchaseService
 		public ProductDefinition product; //Field offset: 0x18
 		[Nullable(0)]
 		public Product oldProduct; //Field offset: 0x20
-		public Nullable<GooglePlayProrationMode> desiredProrationMode; //Field offset: 0x28
+		public Nullable<GooglePlayReplacementMode> desiredProrationMode; //Field offset: 0x28
 
 		public <>c__DisplayClass4_0() { }
 
@@ -30,11 +30,11 @@ internal class GooglePurchaseService : IGooglePurchaseService
 
 	private void HandleBillingFlowResult(IGoogleBillingResult billingResult, AndroidJavaObject sku) { }
 
-	private void LaunchGoogleBillingFlow(AndroidJavaObject productToPurchase, Product oldProduct, Nullable<GooglePlayProrationMode> desiredProrationMode) { }
+	private void LaunchGoogleBillingFlow(AndroidJavaObject productToPurchase, Product oldProduct, Nullable<GooglePlayReplacementMode> desiredProrationMode) { }
 
-	private void OnQueryProductDetailsResponse(List<AndroidJavaObject> productDetailsList, ProductDefinition productToBuy, Product oldProduct, Nullable<GooglePlayProrationMode> desiredProrationMode) { }
+	private void OnQueryProductDetailsResponse(List<AndroidJavaObject> productDetailsList, ProductDefinition productToBuy, Product oldProduct, Nullable<GooglePlayReplacementMode> desiredProrationMode) { }
 
-	public override void Purchase(ProductDefinition product, Product oldProduct, Nullable<GooglePlayProrationMode> desiredProrationMode) { }
+	public override void Purchase(ProductDefinition product, Product oldProduct, Nullable<GooglePlayReplacementMode> desiredProrationMode) { }
 
 	private void PurchaseFailedInvalidOldProduct(ProductDefinition productToBuy, Product oldProduct) { }
 

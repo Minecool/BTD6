@@ -58,8 +58,9 @@ public struct Matrix4x4 : IEquatable<Matrix4x4>, IFormattable
 		 get { } //Length: 173
 	}
 
-	public int Item
+	public float Item
 	{
+		 get { } //Length: 14
 		 set { } //Length: 15
 	}
 
@@ -67,6 +68,16 @@ public struct Matrix4x4 : IEquatable<Matrix4x4>, IFormattable
 	{
 		 get { } //Length: 280
 		 set { } //Length: 280
+	}
+
+	public Vector3 lossyScale
+	{
+		 get { } //Length: 105
+	}
+
+	public Quaternion rotation
+	{
+		 get { } //Length: 90
 	}
 
 	public Matrix4x4 transpose
@@ -107,6 +118,12 @@ public struct Matrix4x4 : IEquatable<Matrix4x4>, IFormattable
 
 	public float get_Item(int index) { }
 
+	public float get_Item(int row, int column) { }
+
+	public Vector3 get_lossyScale() { }
+
+	public Quaternion get_rotation() { }
+
 	public Matrix4x4 get_transpose() { }
 
 	public static Matrix4x4 get_zero() { }
@@ -115,22 +132,34 @@ public struct Matrix4x4 : IEquatable<Matrix4x4>, IFormattable
 
 	public virtual int GetHashCode() { }
 
+	[ThreadSafe]
+	private Vector3 GetLossyScale() { }
+
+	private static void GetLossyScale_Injected(ref Matrix4x4 _unity_self, out Vector3 ret) { }
+
+	public Vector3 GetPosition() { }
+
+	[ThreadSafe]
+	private Quaternion GetRotation() { }
+
+	private static void GetRotation_Injected(ref Matrix4x4 _unity_self, out Quaternion ret) { }
+
 	public Vector4 GetRow(int index) { }
 
 	[FreeFunction("MatrixScripting::Inverse", IsThreadSafe = True)]
 	public static Matrix4x4 Inverse(Matrix4x4 m) { }
 
-	private static void Inverse_Injected(ref Matrix4x4 m, out Matrix4x4 ret) { }
+	private static void Inverse_Injected(in Matrix4x4 m, out Matrix4x4 ret) { }
 
 	[FreeFunction("MatrixScripting::Inverse3DAffine", IsThreadSafe = True)]
 	public static bool Inverse3DAffine(Matrix4x4 input, ref Matrix4x4 result) { }
 
-	private static bool Inverse3DAffine_Injected(ref Matrix4x4 input, ref Matrix4x4 result) { }
+	private static bool Inverse3DAffine_Injected(in Matrix4x4 input, ref Matrix4x4 result) { }
 
 	[FreeFunction("MatrixScripting::LookAt", IsThreadSafe = True)]
 	public static Matrix4x4 LookAt(Vector3 from, Vector3 to, Vector3 up) { }
 
-	private static void LookAt_Injected(ref Vector3 from, ref Vector3 to, ref Vector3 up, out Matrix4x4 ret) { }
+	private static void LookAt_Injected(in Vector3 from, in Vector3 to, in Vector3 up, out Matrix4x4 ret) { }
 
 	public Vector3 MultiplyPoint(Vector3 point) { }
 
@@ -142,9 +171,9 @@ public struct Matrix4x4 : IEquatable<Matrix4x4>, IFormattable
 
 	public static bool op_Inequality(Matrix4x4 lhs, Matrix4x4 rhs) { }
 
-	public static Vector4 op_Multiply(Matrix4x4 lhs, Vector4 vector) { }
-
 	public static Matrix4x4 op_Multiply(Matrix4x4 lhs, Matrix4x4 rhs) { }
+
+	public static Vector4 op_Multiply(Matrix4x4 lhs, Vector4 vector) { }
 
 	[FreeFunction("MatrixScripting::Ortho", IsThreadSafe = True)]
 	public static Matrix4x4 Ortho(float left, float right, float bottom, float top, float zNear, float zFar) { }
@@ -160,27 +189,27 @@ public struct Matrix4x4 : IEquatable<Matrix4x4>, IFormattable
 
 	public static Matrix4x4 Scale(Vector3 vector) { }
 
-	public void set_Item(int row, int column, float value) { }
-
 	public void set_Item(int index, float value) { }
+
+	public void set_Item(int row, int column, float value) { }
 
 	public void SetColumn(int index, Vector4 column) { }
 
-	public override string ToString(string format, IFormatProvider formatProvider) { }
-
 	public virtual string ToString() { }
+
+	public override string ToString(string format, IFormatProvider formatProvider) { }
 
 	public static Matrix4x4 Translate(Vector3 vector) { }
 
 	[FreeFunction("MatrixScripting::Transpose", IsThreadSafe = True)]
 	public static Matrix4x4 Transpose(Matrix4x4 m) { }
 
-	private static void Transpose_Injected(ref Matrix4x4 m, out Matrix4x4 ret) { }
+	private static void Transpose_Injected(in Matrix4x4 m, out Matrix4x4 ret) { }
 
 	[FreeFunction("MatrixScripting::TRS", IsThreadSafe = True)]
 	public static Matrix4x4 TRS(Vector3 pos, Quaternion q, Vector3 s) { }
 
-	private static void TRS_Injected(ref Vector3 pos, ref Quaternion q, ref Vector3 s, out Matrix4x4 ret) { }
+	private static void TRS_Injected(in Vector3 pos, in Quaternion q, in Vector3 s, out Matrix4x4 ret) { }
 
 }
 

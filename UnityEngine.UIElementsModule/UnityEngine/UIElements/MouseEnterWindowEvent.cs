@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::EnterLeaveWindow (4))]
+[EventCategory(EventCategory::EnterLeaveWindow (5))]
 public class MouseEnterWindowEvent : MouseEventBase<MouseEnterWindowEvent>
 {
 	[CompilerGenerated]
@@ -20,6 +20,8 @@ public class MouseEnterWindowEvent : MouseEventBase<MouseEnterWindowEvent>
 	private static MouseEnterWindowEvent() { }
 
 	public MouseEnterWindowEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	protected virtual void Init() { }
 

@@ -1,8 +1,8 @@
 namespace UnityEngine;
 
 [NativeAsStruct]
-[NativeHeader("Modules/Animation/ScriptBindings/AnimatorControllerParameter.bindings.h")]
 [NativeHeader("Modules/Animation/AnimatorControllerParameter.h")]
+[NativeHeader("Modules/Animation/ScriptBindings/AnimatorControllerParameter.bindings.h")]
 [NativeType(CodegenOptions::Custom (1), "MonoAnimatorControllerParameter")]
 [UsedByNativeCode]
 public class AnimatorControllerParameter
@@ -25,7 +25,7 @@ public class AnimatorControllerParameter
 
 	public int nameHash
 	{
-		 get { } //Length: 52
+		 get { } //Length: 13
 	}
 
 	public AnimatorControllerParameter() { }

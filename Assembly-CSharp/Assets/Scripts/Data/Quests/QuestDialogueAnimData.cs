@@ -8,6 +8,7 @@ public class QuestDialogueAnimData
 	public DialogueEmotions rightAnimKey; //Field offset: 0x1C
 	public DialogueTalkingState talkingKey; //Field offset: 0x20
 	public string actionId; //Field offset: 0x28
+	public string dialogueLoc; //Field offset: 0x30
 
 	public QuestDialogueAnimData() { }
 

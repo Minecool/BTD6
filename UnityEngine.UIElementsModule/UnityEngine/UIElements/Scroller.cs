@@ -11,6 +11,7 @@ public class Scroller : VisualElement
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Scroller, UxmlTraits>
 	{
 
@@ -18,12 +19,13 @@ public class Scroller : VisualElement
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private UxmlFloatAttributeDescription m_LowValue; //Field offset: 0x70
-		private UxmlFloatAttributeDescription m_HighValue; //Field offset: 0x78
-		private UxmlEnumAttributeDescription<SliderDirection> m_Direction; //Field offset: 0x80
-		private UxmlFloatAttributeDescription m_Value; //Field offset: 0x88
+		private UxmlFloatAttributeDescription m_LowValue; //Field offset: 0x88
+		private UxmlFloatAttributeDescription m_HighValue; //Field offset: 0x90
+		private UxmlEnumAttributeDescription<SliderDirection> m_Direction; //Field offset: 0x98
+		private UxmlFloatAttributeDescription m_Value; //Field offset: 0xA0
 
 		public UxmlTraits() { }
 
@@ -31,78 +33,81 @@ public class Scroller : VisualElement
 
 	}
 
-	public static readonly string ussClassName; //Field offset: 0x0
-	public static readonly string horizontalVariantUssClassName; //Field offset: 0x8
-	public static readonly string verticalVariantUssClassName; //Field offset: 0x10
-	public static readonly string sliderUssClassName; //Field offset: 0x18
-	public static readonly string lowButtonUssClassName; //Field offset: 0x20
-	public static readonly string highButtonUssClassName; //Field offset: 0x28
+	internal static readonly BindingId valueProperty; //Field offset: 0x0
+	internal static readonly BindingId lowValueProperty; //Field offset: 0x98
+	internal static readonly BindingId highValueProperty; //Field offset: 0x130
+	internal static readonly BindingId directionProperty; //Field offset: 0x1C8
+	public static readonly string ussClassName; //Field offset: 0x260
+	public static readonly string horizontalVariantUssClassName; //Field offset: 0x268
+	public static readonly string verticalVariantUssClassName; //Field offset: 0x270
+	public static readonly string sliderUssClassName; //Field offset: 0x278
+	public static readonly string lowButtonUssClassName; //Field offset: 0x280
+	public static readonly string highButtonUssClassName; //Field offset: 0x288
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Single> valueChanged; //Field offset: 0x3C8
+	private Action<Single> valueChanged; //Field offset: 0x4A8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Slider <slider>k__BackingField; //Field offset: 0x3D0
+	private readonly Slider <slider>k__BackingField; //Field offset: 0x4B0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private RepeatButton <lowButton>k__BackingField; //Field offset: 0x3D8
+	private readonly RepeatButton <lowButton>k__BackingField; //Field offset: 0x4B8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private RepeatButton <highButton>k__BackingField; //Field offset: 0x3E0
+	private readonly RepeatButton <highButton>k__BackingField; //Field offset: 0x4C0
 
 	public event Action<Single> valueChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
+	[CreateProperty]
 	public SliderDirection direction
 	{
-		 set { } //Length: 451
+		 get { } //Length: 92
+		 set { } //Length: 579
 	}
 
-	public private RepeatButton highButton
+	public RepeatButton highButton
 	{
 		[CompilerGenerated]
 		 get { } //Length: 8
-		[CompilerGenerated]
-		private set { } //Length: 8
 	}
 
+	[CreateProperty]
 	public float highValue
 	{
 		 get { } //Length: 71
-		 set { } //Length: 87
+		 set { } //Length: 255
 	}
 
-	public private RepeatButton lowButton
+	public RepeatButton lowButton
 	{
 		[CompilerGenerated]
 		 get { } //Length: 8
-		[CompilerGenerated]
-		private set { } //Length: 8
 	}
 
+	[CreateProperty]
 	public float lowValue
 	{
 		 get { } //Length: 71
-		 set { } //Length: 87
+		 set { } //Length: 255
 	}
 
-	public private Slider slider
+	public Slider slider
 	{
 		[CompilerGenerated]
 		 get { } //Length: 8
-		[CompilerGenerated]
-		private set { } //Length: 8
 	}
 
+	[CreateProperty]
 	public float value
 	{
 		 get { } //Length: 45
-		 set { } //Length: 42
+		 set { } //Length: 242
 	}
 
 	private static Scroller() { }
@@ -115,6 +120,8 @@ public class Scroller : VisualElement
 	public void add_valueChanged(Action<Single> value) { }
 
 	public void Adjust(float factor) { }
+
+	public SliderDirection get_direction() { }
 
 	[CompilerGenerated]
 	public RepeatButton get_highButton() { }
@@ -146,18 +153,9 @@ public class Scroller : VisualElement
 
 	public void set_direction(SliderDirection value) { }
 
-	[CompilerGenerated]
-	private void set_highButton(RepeatButton value) { }
-
 	public void set_highValue(float value) { }
 
-	[CompilerGenerated]
-	private void set_lowButton(RepeatButton value) { }
-
 	public void set_lowValue(float value) { }
-
-	[CompilerGenerated]
-	private void set_slider(Slider value) { }
 
 	public void set_value(float value) { }
 

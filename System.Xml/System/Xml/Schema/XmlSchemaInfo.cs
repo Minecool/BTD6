@@ -18,7 +18,7 @@ public class XmlSchemaInfo : IXmlSchemaInfo
 
 	internal bool HasDefaultValue
 	{
-		internal get { } //Length: 52
+		internal get { } //Length: 48
 	}
 
 	public override bool IsDefault
@@ -35,7 +35,7 @@ public class XmlSchemaInfo : IXmlSchemaInfo
 
 	internal bool IsUnionType
 	{
-		internal get { } //Length: 63
+		internal get { } //Length: 61
 	}
 
 	public override XmlSchemaSimpleType MemberType
@@ -59,7 +59,7 @@ public class XmlSchemaInfo : IXmlSchemaInfo
 	public override XmlSchemaType SchemaType
 	{
 		 get { } //Length: 5
-		 set { } //Length: 37
+		 set { } //Length: 27
 	}
 
 	public override XmlSchemaValidity Validity
@@ -70,7 +70,7 @@ public class XmlSchemaInfo : IXmlSchemaInfo
 
 	internal XmlSchemaType XmlType
 	{
-		internal get { } //Length: 17
+		internal get { } //Length: 14
 	}
 
 	public XmlSchemaInfo() { }

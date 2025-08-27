@@ -9,7 +9,7 @@ public sealed class NamedPermissionSet : PermissionSet
 	public string Name
 	{
 		 get { } //Length: 5
-		 set { } //Length: 181
+		 set { } //Length: 153
 	}
 
 	internal NamedPermissionSet() { }

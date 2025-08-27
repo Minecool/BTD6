@@ -3,6 +3,23 @@ namespace Assets.Scripts.Unity.UI_New.Quests;
 public class QuestTrackerManager
 {
 	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static Action <>9__51_0; //Field offset: 0x8
+		public static Action <>9__51_1; //Field offset: 0x10
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal void <OnLoadIntoMainMenuQuestChecks>b__51_0() { }
+
+		internal void <OnLoadIntoMainMenuQuestChecks>b__51_1() { }
+
+	}
+
+	[CompilerGenerated]
 	private sealed class <>c__DisplayClass45_0
 	{
 		public TrophyStoreItem trophyItem; //Field offset: 0x10
@@ -32,13 +49,27 @@ public class QuestTrackerManager
 
 	}
 
+	[CompilerGenerated]
+	private struct <OnLoadIntoMainMenuQuestChecks>d__51 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		private TaskAwaiter<Boolean> <>u__1; //Field offset: 0x20
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
 	public static QuestTrackerManager instance; //Field offset: 0x0
 	public Action<String[]> DialogueTriggerSimAction; //Field offset: 0x10
 	public Action DialoguePopupClosedAction; //Field offset: 0x18
 
 	public bool AreAvailableQuestsLevelLocked
 	{
-		 get { } //Length: 221
+		 get { } //Length: 210
 	}
 
 	public bool HasQuestsAvailable
@@ -95,9 +126,9 @@ public class QuestTrackerManager
 
 	public bool HasAvailableHolidayEventSpecificAwardForQuest(QuestDetails questDetails, int partIndex, out bool hasClaimedHolidayRewards, out LootSet rewardMetaData) { }
 
-	public bool HasCompletedAllQuestParts(QuestDetails questDetails, int partIndex) { }
+	public bool HasCompletedAllQuestParts(QuestDetails questDetails, int partIndex = 0) { }
 
-	public bool HasCompletedAllQuestPartTasks(QuestDetails questDetails, int partIndex) { }
+	public bool HasCompletedAllQuestPartTasks(QuestDetails questDetails, int partIndex = 0) { }
 
 	public bool HasCompletedAnyQuest() { }
 
@@ -107,7 +138,7 @@ public class QuestTrackerManager
 
 	private bool HasMapSaveDataForThisQuest(QuestDetails questDetails) { }
 
-	public bool HasSaveDataForThisQuest(QuestDetails questDetails, TaskData taskData, int questPartIndex) { }
+	public bool HasSaveDataForThisQuest(QuestDetails questDetails, TaskData taskData, int partIndex = 0) { }
 
 	public bool HasSeenQuest(QuestDetails questDetails) { }
 
@@ -124,15 +155,20 @@ public class QuestTrackerManager
 
 	private void OnCompleteAnimatedDialogueCallback() { }
 
+	[AsyncStateMachine(typeof(<OnLoadIntoMainMenuQuestChecks>d__51))]
+	public Task OnLoadIntoMainMenuQuestChecks() { }
+
+	public void OnLoadIntoQuestBrowserChecks(string sceneName) { }
+
 	public void OpenQuestScene(QuestUiData questUiData) { }
 
 	public void SaveHasSeenQuest(QuestDetails questDetails) { }
 
 	private void SetCallbacks() { }
 
-	public void SetDisabledQuestDialogue(QuestDetails questDetails, int questPartIndex, bool value) { }
+	public void SetDisabledQuestDialogue(QuestDetails questDetails, int partIndex, bool value) { }
 
-	public void SetPreviouslySelectedPartIndex(QuestDetails questDetails, int index) { }
+	public void SetPreviouslySelectedPartIndex(QuestDetails questDetails, int partIndex = 0) { }
 
 	public LootSet SetQuestLootPanel(LootPanel lootPanel, QuestDetails questDetails, bool hasHolidayEventSpecificRewards, bool hasClaimedHolidayRewards, LootSet holidayBonusLootSet, int partIndex) { }
 

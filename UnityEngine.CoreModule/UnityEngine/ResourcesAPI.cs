@@ -33,11 +33,7 @@ public class ResourcesAPI
 
 	protected private override object Load(string path, Type systemTypeInstance) { }
 
-	protected private override Object[] LoadAll(string path, Type systemTypeInstance) { }
-
 	protected private override ResourceRequest LoadAsync(string path, Type systemTypeInstance) { }
-
-	protected private override void UnloadAsset(object assetToUnload) { }
 
 }
 

@@ -8,11 +8,13 @@ public struct StyleEnum : IStyleValue<T>, IEquatable<StyleEnum`1<T>>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override T value
 	{
 		 get { } //Length: 12
+		 set { } //Length: 10
 	}
 
 	public StyleEnum`1(T v) { }
@@ -38,6 +40,10 @@ public struct StyleEnum : IStyleValue<T>, IEquatable<StyleEnum`1<T>>
 	public static StyleEnum<T> op_Implicit(T v) { }
 
 	public static bool op_Inequality(StyleEnum<T> lhs, StyleEnum<T> rhs) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(T value) { }
 
 	public virtual string ToString() { }
 

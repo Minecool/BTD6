@@ -1,7 +1,7 @@
 namespace System.Runtime.CompilerServices;
 
 [IsReadOnly]
-public struct ValueTaskAwaiter : ICriticalNotifyCompletion
+public struct ValueTaskAwaiter : ICriticalNotifyCompletion, INotifyCompletion
 {
 	[CompilerGenerated]
 	private sealed class <>c
@@ -32,6 +32,8 @@ public struct ValueTaskAwaiter : ICriticalNotifyCompletion
 
 	[StackTraceHidden]
 	public void GetResult() { }
+
+	public override void OnCompleted(Action continuation) { }
 
 	public override void UnsafeOnCompleted(Action continuation) { }
 

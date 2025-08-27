@@ -1,5 +1,6 @@
 namespace UnityEngine;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 internal class GUILayoutEntry
 {
 	internal static Rect kDummyRect; //Field offset: 0x0

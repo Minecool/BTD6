@@ -20,7 +20,7 @@ public struct CustomAttributeNamedArgument
 
 	public MemberInfo MemberInfo
 	{
-		 get { } //Length: 308
+		 get { } //Length: 294
 	}
 
 	public string MemberName

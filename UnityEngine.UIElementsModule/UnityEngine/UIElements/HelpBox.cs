@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class HelpBox : VisualElement
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<HelpBox, UxmlTraits>
 	{
 
@@ -9,10 +10,11 @@ public class HelpBox : VisualElement
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private UxmlStringAttributeDescription m_Text; //Field offset: 0x70
-		private UxmlEnumAttributeDescription<HelpBoxMessageType> m_MessageType; //Field offset: 0x78
+		private UxmlStringAttributeDescription m_Text; //Field offset: 0x88
+		private UxmlEnumAttributeDescription<HelpBoxMessageType> m_MessageType; //Field offset: 0x90
 
 		public UxmlTraits() { }
 
@@ -20,25 +22,31 @@ public class HelpBox : VisualElement
 
 	}
 
-	public static readonly string ussClassName; //Field offset: 0x0
-	public static readonly string labelUssClassName; //Field offset: 0x8
-	public static readonly string iconUssClassName; //Field offset: 0x10
-	public static readonly string iconInfoUssClassName; //Field offset: 0x18
-	public static readonly string iconwarningUssClassName; //Field offset: 0x20
-	public static readonly string iconErrorUssClassName; //Field offset: 0x28
-	private HelpBoxMessageType m_HelpBoxMessageType; //Field offset: 0x3C8
-	private VisualElement m_Icon; //Field offset: 0x3D0
-	private string m_IconClass; //Field offset: 0x3D8
-	private Label m_Label; //Field offset: 0x3E0
+	internal static readonly BindingId textProperty; //Field offset: 0x0
+	internal static readonly BindingId messageTypeProperty; //Field offset: 0x98
+	public static readonly string ussClassName; //Field offset: 0x130
+	public static readonly string labelUssClassName; //Field offset: 0x138
+	public static readonly string iconUssClassName; //Field offset: 0x140
+	public static readonly string iconInfoUssClassName; //Field offset: 0x148
+	public static readonly string iconwarningUssClassName; //Field offset: 0x150
+	public static readonly string iconErrorUssClassName; //Field offset: 0x158
+	private HelpBoxMessageType m_HelpBoxMessageType; //Field offset: 0x4A8
+	private VisualElement m_Icon; //Field offset: 0x4B0
+	private string m_IconClass; //Field offset: 0x4B8
+	private Label m_Label; //Field offset: 0x4C0
 
+	[CreateProperty]
 	public HelpBoxMessageType messageType
 	{
-		 set { } //Length: 23
+		 get { } //Length: 9
+		 set { } //Length: 137
 	}
 
+	[CreateProperty]
 	public string text
 	{
-		 set { } //Length: 42
+		 get { } //Length: 45
+		 set { } //Length: 242
 	}
 
 	private static HelpBox() { }
@@ -46,6 +54,10 @@ public class HelpBox : VisualElement
 	public HelpBox() { }
 
 	public HelpBox(string text, HelpBoxMessageType messageType) { }
+
+	public HelpBoxMessageType get_messageType() { }
+
+	public string get_text() { }
 
 	private string GetIconClass(HelpBoxMessageType messageType) { }
 

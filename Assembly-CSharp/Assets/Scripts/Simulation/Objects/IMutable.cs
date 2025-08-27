@@ -3,7 +3,7 @@ namespace Assets.Scripts.Simulation.Objects;
 public interface IMutable : IRootBehavior, IRootObject
 {
 
-	public void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false) { }
+	public void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false, bool cantBeAbsorbed = false) { }
 
 	public void CopyMutatorsFrom(Mutable from) { }
 

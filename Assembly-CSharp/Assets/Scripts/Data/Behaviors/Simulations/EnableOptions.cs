@@ -15,7 +15,7 @@ public struct EnableOptions : IEquatable<EnableOptions>
 	public bool IsValid
 	{
 		[IsReadOnly]
-		 get { } //Length: 53
+		 get { } //Length: 56
 	}
 
 	public override bool Equals(EnableOptions other) { }

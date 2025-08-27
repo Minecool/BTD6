@@ -12,12 +12,12 @@ internal sealed class ExtendedPropertyDescriptor : PropertyDescriptor
 
 	public virtual string DisplayName
 	{
-		 get { } //Length: 687
+		 get { } //Length: 612
 	}
 
 	public virtual bool IsReadOnly
 	{
-		 get { } //Length: 243
+		 get { } //Length: 231
 	}
 
 	public virtual Type PropertyType

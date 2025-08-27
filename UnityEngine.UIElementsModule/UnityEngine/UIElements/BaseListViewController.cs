@@ -38,13 +38,13 @@ public abstract class BaseListViewController : CollectionViewController
 
 	protected BaseListView baseListView
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	protected BaseListViewController() { }
 
 	[CompilerGenerated]
-	internal static bool <AddItems>g__IsGenericList|15_0(Type t) { }
+	internal static bool <AddItems>g__IsGenericList|19_0(Type t) { }
 
 	[CompilerGenerated]
 	public void add_itemsAdded(Action<IEnumerable`1<Int32>> value) { }
@@ -94,9 +94,11 @@ public abstract class BaseListViewController : CollectionViewController
 
 	public override void RemoveItem(int index) { }
 
+	internal override void RemoveItems(int itemCount) { }
+
 	public override void RemoveItems(List<Int32> indices) { }
 
-	internal override void RemoveItems(int itemCount) { }
+	internal virtual void SetBindingContext(ReusableCollectionItem reusableItem, int index) { }
 
 	private void Swap(int lhs, int rhs) { }
 

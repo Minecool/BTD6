@@ -28,7 +28,7 @@ public class MethodCall : IMethodCallMessage, IMethodMessage, IMessage, ISeriali
 
 	private Type[] GenericArguments
 	{
-		private get { } //Length: 76
+		private get { } //Length: 67
 	}
 
 	public override LogicalCallContext LogicalCallContext
@@ -48,7 +48,7 @@ public class MethodCall : IMethodCallMessage, IMethodMessage, IMessage, ISeriali
 
 	public override object MethodSignature
 	{
-		 get { } //Length: 318
+		 get { } //Length: 329
 	}
 
 	public override IDictionary Properties

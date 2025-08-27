@@ -1,19 +1,14 @@
 namespace UnityEngine;
 
+[NativeHeader("Runtime/Misc/SystemInfoMemory.h")]
 [NativeHeader("Runtime/Shaders/GraphicsCapsScriptBindings.h")]
-[NativeHeader("Runtime/Input/GetInput.h")]
-[NativeHeader("Runtime/Camera/RenderLoops/MotionVectorRenderLoop.h")]
-[NativeHeader("Runtime/Graphics/GraphicsFormatUtility.bindings.h")]
-[NativeHeader("Runtime/Misc/SystemInfo.h")]
 [NativeHeader("Runtime/Graphics/Mesh/MeshScriptBindings.h")]
+[NativeHeader("Runtime/Misc/SystemInfo.h")]
+[NativeHeader("Runtime/Graphics/GraphicsFormatUtility.bindings.h")]
+[NativeHeader("Runtime/Camera/RenderLoops/MotionVectorRenderLoop.h")]
+[NativeHeader("Runtime/Input/GetInput.h")]
 public sealed class SystemInfo
 {
-
-	[NativeProperty]
-	public static float batteryLevel
-	{
-		 get { } //Length: 42
-	}
 
 	public static CopyTextureSupport copyTextureSupport
 	{
@@ -22,12 +17,12 @@ public sealed class SystemInfo
 
 	public static string deviceModel
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static string deviceName
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static DeviceType deviceType
@@ -37,7 +32,7 @@ public sealed class SystemInfo
 
 	public static string deviceUniqueIdentifier
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static FoveatedRenderingCaps foveatedRenderingCaps
@@ -45,14 +40,9 @@ public sealed class SystemInfo
 		 get { } //Length: 42
 	}
 
-	public static int graphicsDeviceID
-	{
-		 get { } //Length: 42
-	}
-
 	public static string graphicsDeviceName
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static GraphicsDeviceType graphicsDeviceType
@@ -62,7 +52,7 @@ public sealed class SystemInfo
 
 	public static string graphicsDeviceVendor
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static int graphicsDeviceVendorID
@@ -72,7 +62,7 @@ public sealed class SystemInfo
 
 	public static string graphicsDeviceVersion
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static int graphicsMemorySize
@@ -107,6 +97,7 @@ public sealed class SystemInfo
 
 	internal static int maxRenderTextureSize
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 		internal get { } //Length: 42
 	}
 
@@ -117,7 +108,7 @@ public sealed class SystemInfo
 
 	public static string operatingSystem
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static OperatingSystemFamily operatingSystemFamily
@@ -137,7 +128,7 @@ public sealed class SystemInfo
 
 	public static string processorType
 	{
-		 get { } //Length: 42
+		 get { } //Length: 9
 	}
 
 	public static int supportedRenderTargetCount
@@ -155,12 +146,22 @@ public sealed class SystemInfo
 		 get { } //Length: 42
 	}
 
+	public static bool supportsIndirectArgumentsBuffer
+	{
+		 get { } //Length: 42
+	}
+
 	public static bool supportsInstancing
 	{
 		 get { } //Length: 42
 	}
 
 	public static bool supportsMultisampleAutoResolve
+	{
+		 get { } //Length: 42
+	}
+
+	public static bool supportsMultisampledBackBuffer
 	{
 		 get { } //Length: 42
 	}
@@ -215,8 +216,6 @@ public sealed class SystemInfo
 		 get { } //Length: 42
 	}
 
-	public static float get_batteryLevel() { }
-
 	public static CopyTextureSupport get_copyTextureSupport() { }
 
 	public static string get_deviceModel() { }
@@ -228,8 +227,6 @@ public sealed class SystemInfo
 	public static string get_deviceUniqueIdentifier() { }
 
 	public static FoveatedRenderingCaps get_foveatedRenderingCaps() { }
-
-	public static int get_graphicsDeviceID() { }
 
 	public static string get_graphicsDeviceName() { }
 
@@ -253,6 +250,7 @@ public sealed class SystemInfo
 
 	public static long get_maxGraphicsBufferSize() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static int get_maxRenderTextureSize() { }
 
 	public static int get_maxTextureSize() { }
@@ -273,9 +271,13 @@ public sealed class SystemInfo
 
 	public static bool get_supportsGraphicsFence() { }
 
+	public static bool get_supportsIndirectArgumentsBuffer() { }
+
 	public static bool get_supportsInstancing() { }
 
 	public static bool get_supportsMultisampleAutoResolve() { }
+
+	public static bool get_supportsMultisampledBackBuffer() { }
 
 	public static int get_supportsMultisampledTextures() { }
 
@@ -297,11 +299,8 @@ public sealed class SystemInfo
 
 	public static bool get_usesReversedZBuffer() { }
 
-	[FreeFunction("systeminfo::GetBatteryLevel")]
-	private static float GetBatteryLevel() { }
-
 	[FreeFunction("ScriptingGraphicsCaps::GetCompatibleFormat")]
-	public static GraphicsFormat GetCompatibleFormat(GraphicsFormat format, FormatUsage usage) { }
+	public static GraphicsFormat GetCompatibleFormat(GraphicsFormat format, GraphicsFormatUsage usage) { }
 
 	[FreeFunction("ScriptingGraphicsCaps::GetCopyTextureSupport")]
 	private static CopyTextureSupport GetCopyTextureSupport() { }
@@ -309,8 +308,12 @@ public sealed class SystemInfo
 	[FreeFunction("systeminfo::GetDeviceModel")]
 	private static string GetDeviceModel() { }
 
+	private static void GetDeviceModel_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("systeminfo::GetDeviceName")]
 	private static string GetDeviceName() { }
+
+	private static void GetDeviceName_Injected(out ManagedSpanWrapper ret) { }
 
 	[FreeFunction("systeminfo::GetDeviceType")]
 	private static DeviceType GetDeviceType() { }
@@ -318,14 +321,15 @@ public sealed class SystemInfo
 	[FreeFunction("systeminfo::GetDeviceUniqueIdentifier")]
 	private static string GetDeviceUniqueIdentifier() { }
 
+	private static void GetDeviceUniqueIdentifier_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("ScriptingGraphicsCaps::GetFoveatedRenderingCaps")]
 	private static FoveatedRenderingCaps GetFoveatedRenderingCaps() { }
 
-	[FreeFunction("ScriptingGraphicsCaps::GetGraphicsDeviceID")]
-	private static int GetGraphicsDeviceID() { }
-
 	[FreeFunction("ScriptingGraphicsCaps::GetGraphicsDeviceName")]
 	private static string GetGraphicsDeviceName() { }
+
+	private static void GetGraphicsDeviceName_Injected(out ManagedSpanWrapper ret) { }
 
 	[FreeFunction("ScriptingGraphicsCaps::GetGraphicsDeviceType")]
 	private static GraphicsDeviceType GetGraphicsDeviceType() { }
@@ -333,11 +337,15 @@ public sealed class SystemInfo
 	[FreeFunction("ScriptingGraphicsCaps::GetGraphicsDeviceVendor")]
 	private static string GetGraphicsDeviceVendor() { }
 
+	private static void GetGraphicsDeviceVendor_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("ScriptingGraphicsCaps::GetGraphicsDeviceVendorID")]
 	private static int GetGraphicsDeviceVendorID() { }
 
 	[FreeFunction("ScriptingGraphicsCaps::GetGraphicsDeviceVersion")]
 	private static string GetGraphicsDeviceVersion() { }
+
+	private static void GetGraphicsDeviceVersion_Injected(out ManagedSpanWrapper ret) { }
 
 	[FreeFunction("ScriptingGraphicsCaps::GetGraphicsFormat")]
 	public static GraphicsFormat GetGraphicsFormat(DefaultFormat format) { }
@@ -363,6 +371,8 @@ public sealed class SystemInfo
 	[FreeFunction("systeminfo::GetOperatingSystem")]
 	private static string GetOperatingSystem() { }
 
+	private static void GetOperatingSystem_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("systeminfo::GetOperatingSystemFamily")]
 	private static OperatingSystemFamily GetOperatingSystemFamily() { }
 
@@ -378,10 +388,12 @@ public sealed class SystemInfo
 	[FreeFunction("systeminfo::GetProcessorType")]
 	private static string GetProcessorType() { }
 
+	private static void GetProcessorType_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("ScriptingGraphicsCaps::GetRenderTextureSupportedMSAASampleCount")]
 	public static int GetRenderTextureSupportedMSAASampleCount(RenderTextureDescriptor desc) { }
 
-	private static int GetRenderTextureSupportedMSAASampleCount_Injected(ref RenderTextureDescriptor desc) { }
+	private static int GetRenderTextureSupportedMSAASampleCount_Injected(in RenderTextureDescriptor desc) { }
 
 	[FreeFunction("ScriptingGraphicsCaps::HasHiddenSurfaceRemovalOnGPU")]
 	private static bool HasHiddenSurfaceRemovalOnGPU() { }
@@ -390,7 +402,7 @@ public sealed class SystemInfo
 	private static bool HasRenderTextureNative(RenderTextureFormat format) { }
 
 	[FreeFunction("ScriptingGraphicsCaps::IsFormatSupported")]
-	public static bool IsFormatSupported(GraphicsFormat format, FormatUsage usage) { }
+	public static bool IsFormatSupported(GraphicsFormat format, GraphicsFormatUsage usage) { }
 
 	private static bool IsValidEnumValue(Enum value) { }
 
@@ -406,11 +418,17 @@ public sealed class SystemInfo
 	[FreeFunction("ScriptingGraphicsCaps::SupportsGPUFence")]
 	private static bool SupportsGPUFence() { }
 
+	[FreeFunction("ScriptingGraphicsCaps::SupportsIndirectArgumentsBuffer")]
+	private static bool SupportsIndirectArgumentsBuffer() { }
+
 	[FreeFunction("ScriptingGraphicsCaps::SupportsInstancing")]
 	private static bool SupportsInstancing() { }
 
 	[FreeFunction("ScriptingGraphicsCaps::SupportsMultisampleAutoResolve")]
 	private static bool SupportsMultisampleAutoResolve() { }
+
+	[FreeFunction("ScriptingGraphicsCaps::SupportsMultisampledBackBuffer")]
+	private static bool SupportsMultisampledBackBuffer() { }
 
 	[FreeFunction("ScriptingGraphicsCaps::SupportsMultisampledTextures")]
 	private static int SupportsMultisampledTextures() { }

@@ -7,12 +7,12 @@ internal struct AccelerometerState : IInputStateTypeInfo
 
 	public override FourCC format
 	{
-		 get { } //Length: 55
+		 get { } //Length: 54
 	}
 
 	public static FourCC kFormat
 	{
-		 get { } //Length: 55
+		 get { } //Length: 54
 	}
 
 	public override FourCC get_format() { }

@@ -6,10 +6,9 @@ internal static class TextUtilities
 
 	public static int GetHashCodeCaseInSensitive(string s) { }
 
-	internal static char ToUpperFast(char c) { }
+	internal static int GetTextFontWeightIndex(TextFontWeight fontWeight) { }
 
-	[Extension]
-	internal static string UintToString(List<UInt32> unicodes) { }
+	internal static char ToUpperFast(char c) { }
 
 }
 

@@ -24,12 +24,12 @@ public abstract class LegendsFeatActive
 
 	public string Description
 	{
-		 get { } //Length: 358
+		 get { } //Length: 346
 	}
 
 	public string EnglishName
 	{
-		 get { } //Length: 336
+		 get { } //Length: 324
 	}
 
 	public int Goal
@@ -54,7 +54,7 @@ public abstract class LegendsFeatActive
 
 	public string Name
 	{
-		 get { } //Length: 308
+		 get { } //Length: 295
 	}
 
 	public string Subscript
@@ -64,7 +64,7 @@ public abstract class LegendsFeatActive
 
 	public bool Visible
 	{
-		 get { } //Length: 55
+		 get { } //Length: 51
 	}
 
 	public bool WasAchieved

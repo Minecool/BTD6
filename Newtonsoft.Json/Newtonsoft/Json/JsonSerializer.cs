@@ -47,9 +47,9 @@ public class JsonSerializer
 	public override event EventHandler<ErrorEventArgs> Error
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public override bool CheckAdditionalContent

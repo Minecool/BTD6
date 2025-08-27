@@ -93,6 +93,19 @@ public static class BridgeMessagingDelegates
 
 	}
 
+	internal sealed class OnAreasChangedRedrawMapEvent : MulticastDelegate
+	{
+
+		public OnAreasChangedRedrawMapEvent(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(List<Area> enabledAreas, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(List<Area> enabledAreas) { }
+
+	}
+
 	internal sealed class OnBloonDegrade : MulticastDelegate
 	{
 
@@ -236,6 +249,19 @@ public static class BridgeMessagingDelegates
 
 	}
 
+	internal sealed class OnCloseScene : MulticastDelegate
+	{
+
+		public OnCloseScene(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(string sceneName, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(string sceneName) { }
+
+	}
+
 	internal sealed class OnCoopPlacementAreaChanged : MulticastDelegate
 	{
 
@@ -259,6 +285,32 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke(string spellId, bool turnOn) { }
+
+	}
+
+	internal sealed class OnCreateHandDragObject : MulticastDelegate
+	{
+
+		public OnCreateHandDragObject(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(CreateHandDragObjectActionModel model, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(CreateHandDragObjectActionModel model) { }
+
+	}
+
+	internal sealed class OnCreatePlacementCircle : MulticastDelegate
+	{
+
+		public OnCreatePlacementCircle(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(CreatePlacementCircleActionModel model, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(CreatePlacementCircleActionModel model) { }
 
 	}
 
@@ -340,6 +392,19 @@ public static class BridgeMessagingDelegates
 
 	}
 
+	internal sealed class OnEventHookAnalyticEvent : MulticastDelegate
+	{
+
+		public OnEventHookAnalyticEvent(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(EventHookToSimulation eventHook, HookConditionModel condition, bool isStartHookCondition, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(EventHookToSimulation eventHook, HookConditionModel condition, bool isStartHookCondition) { }
+
+	}
+
 	internal sealed class OnFastTrackApplied : MulticastDelegate
 	{
 
@@ -350,6 +415,19 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke() { }
+
+	}
+
+	internal sealed class OnForceSelectSelectable : MulticastDelegate
+	{
+
+		public OnForceSelectSelectable(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(ISelectable selectedable, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(ISelectable selectedable) { }
 
 	}
 
@@ -522,6 +600,71 @@ public static class BridgeMessagingDelegates
 
 	}
 
+	internal sealed class OnManageHudStateEnd : MulticastDelegate
+	{
+
+		public OnManageHudStateEnd(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(EventHookToSimulation eventHook, HookCondition condition, object metaData, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(EventHookToSimulation eventHook, HookCondition condition, object metaData) { }
+
+	}
+
+	internal sealed class OnManageHudStateStart : MulticastDelegate
+	{
+
+		public OnManageHudStateStart(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(EventHookToSimulation eventHook, HookCondition condition, object metaData, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(EventHookToSimulation eventHook, HookCondition condition, object metaData) { }
+
+	}
+
+	internal sealed class OnManageMainHudPanel : MulticastDelegate
+	{
+
+		public OnManageMainHudPanel(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(ManageMainHudActionModel model, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(ManageMainHudActionModel model) { }
+
+	}
+
+	internal sealed class OnManageShopPanel : MulticastDelegate
+	{
+
+		public OnManageShopPanel(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(ManageShopPanelModel model, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(ManageShopPanelModel model) { }
+
+	}
+
+	internal sealed class OnManageTowerHudPanel : MulticastDelegate
+	{
+
+		public OnManageTowerHudPanel(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(ManageTowerUpgradesPanelActionModel model, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(ManageTowerUpgradesPanelActionModel model) { }
+
+	}
+
 	internal sealed class OnMapCreated : MulticastDelegate
 	{
 
@@ -558,6 +701,58 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke(PropModel mapPropModel, float locationX, float locationY) { }
+
+	}
+
+	internal sealed class OnOpenedScene : MulticastDelegate
+	{
+
+		public OnOpenedScene(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(string sceneName, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(string sceneName) { }
+
+	}
+
+	internal sealed class OnOpenScene : MulticastDelegate
+	{
+
+		public OnOpenScene(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(string sceneName, object metadata, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(string sceneName, object metadata) { }
+
+	}
+
+	internal sealed class OnPlacementCircleInteraction : MulticastDelegate
+	{
+
+		public OnPlacementCircleInteraction(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(Dictionary<String, Boolean> placementData, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(Dictionary<String, Boolean> placementData) { }
+
+	}
+
+	internal sealed class OnPlayMovieClip : MulticastDelegate
+	{
+
+		public OnPlayMovieClip(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(PlayMovieClipActionModel behaviorModel, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(PlayMovieClipActionModel behaviorModel) { }
 
 	}
 
@@ -701,6 +896,58 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke() { }
+
+	}
+
+	internal sealed class OnRemoveAllHandDragObject : MulticastDelegate
+	{
+
+		public OnRemoveAllHandDragObject(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke() { }
+
+	}
+
+	internal sealed class OnRemoveAllPlacementCircles : MulticastDelegate
+	{
+
+		public OnRemoveAllPlacementCircles(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke() { }
+
+	}
+
+	internal sealed class OnRemoveHandDragObject : MulticastDelegate
+	{
+
+		public OnRemoveHandDragObject(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(string placementId, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(string placementId) { }
+
+	}
+
+	internal sealed class OnRemovePlacementCircle : MulticastDelegate
+	{
+
+		public OnRemovePlacementCircle(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(string placementId, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(string placementId) { }
 
 	}
 
@@ -886,6 +1133,19 @@ public static class BridgeMessagingDelegates
 
 	}
 
+	internal sealed class OnSendAnalyticEvent : MulticastDelegate
+	{
+
+		public OnSendAnalyticEvent(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(string analyticId, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(string analyticId) { }
+
+	}
+
 	internal sealed class OnSetHelperMessage : MulticastDelegate
 	{
 
@@ -896,6 +1156,19 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke(string message, float timeUntilClear = 3) { }
+
+	}
+
+	internal sealed class OnShowGlowOnTowerButton : MulticastDelegate
+	{
+
+		public OnShowGlowOnTowerButton(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(ShowGlowOnTowerButtonActionModel model, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(ShowGlowOnTowerButtonActionModel model) { }
 
 	}
 
@@ -922,19 +1195,6 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke() { }
-
-	}
-
-	internal sealed class OnSimTriggerDialogue : MulticastDelegate
-	{
-
-		public OnSimTriggerDialogue(object object, IntPtr method) { }
-
-		public override IAsyncResult BeginInvoke(DialogueData dialogue, bool value, AsyncCallback callback, object object) { }
-
-		public override void EndInvoke(IAsyncResult result) { }
-
-		public override void Invoke(DialogueData dialogue, bool value) { }
 
 	}
 
@@ -1026,6 +1286,19 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke(bool enabled) { }
+
+	}
+
+	internal sealed class OnTogglePopupHints : MulticastDelegate
+	{
+
+		public OnTogglePopupHints(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(int hintIndex, ToggleModdifier showOrDismissHint, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(int hintIndex, ToggleModdifier showOrDismissHint) { }
 
 	}
 
@@ -1195,6 +1468,19 @@ public static class BridgeMessagingDelegates
 		public override void EndInvoke(IAsyncResult result) { }
 
 		public override void Invoke(TowerToSimulation bridgeTower) { }
+
+	}
+
+	internal sealed class OnTowerUpgradeUnlocked : MulticastDelegate
+	{
+
+		public OnTowerUpgradeUnlocked(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(TowerModel towerModel, UpgradeModel upgradeModel, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(TowerModel towerModel, UpgradeModel upgradeModel) { }
 
 	}
 

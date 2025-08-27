@@ -6,36 +6,52 @@ public class PopupScreen : MonoBehaviour
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static ReturnCallback <>9__83_0; //Field offset: 0x8
-		public static ReturnCallback <>9__87_1; //Field offset: 0x10
-		public static ReturnCallback <>9__113_1; //Field offset: 0x18
-		public static Action<GameObject> <>9__126_0; //Field offset: 0x20
-		public static Func<AsyncOperationHandle`1<GameObject>, Boolean> <>9__147_0; //Field offset: 0x28
-		public static Func<AsyncOperationHandle`1<GameObject>, Popup> <>9__147_1; //Field offset: 0x30
-		public static Action<AsyncOperationHandle`1<GameObject>> <>9__163_0; //Field offset: 0x38
+		public static ReturnCallback <>9__86_0; //Field offset: 0x8
+		public static ReturnCallback <>9__90_1; //Field offset: 0x10
+		public static ReturnCallback <>9__116_1; //Field offset: 0x18
+		public static Action<GameObject> <>9__129_0; //Field offset: 0x20
+		public static Func<AsyncOperationHandle`1<GameObject>, Boolean> <>9__153_0; //Field offset: 0x28
+		public static Func<AsyncOperationHandle`1<GameObject>, Popup> <>9__153_1; //Field offset: 0x30
+		public static Action<AsyncOperationHandle`1<GameObject>> <>9__169_0; //Field offset: 0x38
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <HideAllPopups>b__147_0(AsyncOperationHandle<GameObject> h) { }
+		internal bool <HideAllPopups>b__153_0(AsyncOperationHandle<GameObject> h) { }
 
-		internal Popup <HideAllPopups>b__147_1(AsyncOperationHandle<GameObject> h) { }
+		internal Popup <HideAllPopups>b__153_1(AsyncOperationHandle<GameObject> h) { }
 
-		internal void <InstantiateCoopInvitePopup>b__163_0(AsyncOperationHandle<GameObject> _) { }
+		internal void <InstantiateCoopInvitePopup>b__169_0(AsyncOperationHandle<GameObject> _) { }
 
-		internal void <ShowEpicAccount>b__87_1() { }
+		internal void <ShowEpicAccount>b__90_1() { }
 
-		internal void <ShowMapDifficultyUnlockPopup>b__113_1() { }
+		internal void <ShowMapDifficultyUnlockPopup>b__116_1() { }
 
-		internal void <ShowModderPopup>b__126_0(GameObject _) { }
+		internal void <ShowModderPopup>b__129_0(GameObject _) { }
 
-		internal void <ShowMonkeyMonkeyPopup>b__83_0() { }
+		internal void <ShowMonkeyMonkeyPopup>b__86_0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass104_0
+	private sealed class <>c__DisplayClass100_0
+	{
+		public Func<CancellationToken, Task> rejoinFunc; //Field offset: 0x10
+		public ReturnCallback quitAction; //Field offset: 0x18
+		public string lobbyId; //Field offset: 0x20
+		public string fromMenu; //Field offset: 0x28
+		public ReturnCallback afterRejoinAction; //Field offset: 0x30
+		public PopupScreen <>4__this; //Field offset: 0x38
+
+		public <>c__DisplayClass100_0() { }
+
+		internal void <ShowCoopDisconnectedPopup>b__0(GameObject pop) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass107_0
 	{
 		public string bg; //Field offset: 0x10
 		public IEnumerable<Task`1<Int32>> countdown; //Field offset: 0x18
@@ -43,14 +59,14 @@ public class PopupScreen : MonoBehaviour
 		public string playerName; //Field offset: 0x28
 		public PopupScreen <>4__this; //Field offset: 0x30
 
-		public <>c__DisplayClass104_0() { }
+		public <>c__DisplayClass107_0() { }
 
 		internal void <ShowCoopSyncingPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass108_0
+	private sealed class <>c__DisplayClass111_0
 	{
 		public Action<Int32> okCallback; //Field offset: 0x10
 		public int defaultValue; //Field offset: 0x18
@@ -59,7 +75,7 @@ public class PopupScreen : MonoBehaviour
 		public string description; //Field offset: 0x30
 		public Action<String> <>9__1; //Field offset: 0x38
 
-		public <>c__DisplayClass108_0() { }
+		public <>c__DisplayClass111_0() { }
 
 		internal void <ShowSetValuePopup>b__0(GameObject pop) { }
 
@@ -68,7 +84,7 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass109_0
+	private sealed class <>c__DisplayClass112_0
 	{
 		public Action<String> okCallback; //Field offset: 0x10
 		public string defaultValue; //Field offset: 0x18
@@ -76,66 +92,66 @@ public class PopupScreen : MonoBehaviour
 		public string title; //Field offset: 0x28
 		public string description; //Field offset: 0x30
 
-		public <>c__DisplayClass109_0() { }
+		public <>c__DisplayClass112_0() { }
 
 		internal void <ShowSetNamePopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass110_0
+	private sealed class <>c__DisplayClass113_0
 	{
 		public ReturnCallback returnCallback; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass110_0() { }
+		public <>c__DisplayClass113_0() { }
 
 		internal void <ShowApopalypseWarningPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass111_0
+	private sealed class <>c__DisplayClass114_0
 	{
 		public ReturnCallback returnCallback; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass111_0() { }
+		public <>c__DisplayClass114_0() { }
 
 		internal void <ShowThankYouPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass112_0
+	private sealed class <>c__DisplayClass115_0
 	{
 		public MapDifficulty difficulty; //Field offset: 0x10
 		public int required; //Field offset: 0x14
 		public int completed; //Field offset: 0x18
 		public PopupScreen <>4__this; //Field offset: 0x20
 
-		public <>c__DisplayClass112_0() { }
+		public <>c__DisplayClass115_0() { }
 
 		internal void <ShowMapDifficultyLockPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass113_0
+	private sealed class <>c__DisplayClass116_0
 	{
 		public MapDifficulty difficulty; //Field offset: 0x10
 		public int completed; //Field offset: 0x14
 		public int required; //Field offset: 0x18
 		public PopupScreen <>4__this; //Field offset: 0x20
 
-		public <>c__DisplayClass113_0() { }
+		public <>c__DisplayClass116_0() { }
 
 		internal void <ShowMapDifficultyUnlockPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass114_0
+	private sealed class <>c__DisplayClass117_0
 	{
 		public ReturnCallback okCallback; //Field offset: 0x10
 		public ReturnCallback cancelCallback; //Field offset: 0x18
@@ -145,52 +161,52 @@ public class PopupScreen : MonoBehaviour
 		public string body; //Field offset: 0x38
 		public string cancelString; //Field offset: 0x40
 
-		public <>c__DisplayClass114_0() { }
+		public <>c__DisplayClass117_0() { }
 
 		internal void <ShowTrophyStorePopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass115_0
+	private sealed class <>c__DisplayClass118_0
 	{
 		public StoreItem storeItem; //Field offset: 0x10
 		public ReturnCallback purchaseCompleteCallback; //Field offset: 0x18
 		public PopupScreen <>4__this; //Field offset: 0x20
 
-		public <>c__DisplayClass115_0() { }
+		public <>c__DisplayClass118_0() { }
 
 		internal void <ShowStorePopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass117_0
+	private sealed class <>c__DisplayClass120_0
 	{
 		public ReturnCallback purchaseCompleteCallback; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass117_0() { }
+		public <>c__DisplayClass120_0() { }
 
 		internal void <ShowRacePassPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass118_0
+	private sealed class <>c__DisplayClass121_0
 	{
 		public PopupScreen <>4__this; //Field offset: 0x0
 		public T serverEvent; //Field offset: 0x0
 		public bool isDebug; //Field offset: 0x0
 
-		public <>c__DisplayClass118_0`1() { }
+		public <>c__DisplayClass121_0`1() { }
 
 		internal void <ShowLeaderboardEventEndedPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass121_0
+	private sealed class <>c__DisplayClass124_0
 	{
 		public BossRushEvent bossRushEvent; //Field offset: 0x10
 		public int defeatedBossIndex; //Field offset: 0x18
@@ -198,18 +214,18 @@ public class PopupScreen : MonoBehaviour
 		public bool isDebug; //Field offset: 0x28
 		public PopupScreen <>4__this; //Field offset: 0x30
 
-		public <>c__DisplayClass121_0() { }
+		public <>c__DisplayClass124_0() { }
 
 		internal void <ShowBossRushEventEndedPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass123_0
+	private sealed class <>c__DisplayClass126_0
 	{
 		public TaskCompletionSource<Boolean> tcs; //Field offset: 0x10
 
-		public <>c__DisplayClass123_0() { }
+		public <>c__DisplayClass126_0() { }
 
 		internal void <ShowCancelOrTryAgainPopup>b__0() { }
 
@@ -218,15 +234,15 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass124_0
+	private sealed class <>c__DisplayClass127_0
 	{
 		private struct <<ShowArcadeDataConsentPopup>g___giveConsent|1>d : IAsyncStateMachine
 		{
 			public int <>1__state; //Field offset: 0x0
 			public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
-			public <>c__DisplayClass124_0 <>4__this; //Field offset: 0x28
+			public <>c__DisplayClass127_0 <>4__this; //Field offset: 0x28
 			public bool givesConsent; //Field offset: 0x30
-			private <>c__DisplayClass124_1 <>8__1; //Field offset: 0x38
+			private <>c__DisplayClass127_1 <>8__1; //Field offset: 0x38
 			private TaskAwaiter<GameObject> <>u__1; //Field offset: 0x40
 
 			private override void MoveNext() { }
@@ -242,7 +258,7 @@ public class PopupScreen : MonoBehaviour
 		public ReturnCallback <>9__2; //Field offset: 0x28
 		public ReturnCallback <>9__3; //Field offset: 0x30
 
-		public <>c__DisplayClass124_0() { }
+		public <>c__DisplayClass127_0() { }
 
 		internal void <ShowArcadeDataConsentPopup>b__0(GameObject pop) { }
 
@@ -256,27 +272,27 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass124_1
+	private sealed class <>c__DisplayClass127_1
 	{
 		public bool givesConsent; //Field offset: 0x10
-		public <>c__DisplayClass124_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass127_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass124_1() { }
+		public <>c__DisplayClass127_1() { }
 
 		internal void <ShowArcadeDataConsentPopup>b__4(Popup _) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass125_0
+	private sealed class <>c__DisplayClass128_0
 	{
 		private struct <<ShowDataConsentPopup>g___giveConsent|2>d : IAsyncStateMachine
 		{
 			public int <>1__state; //Field offset: 0x0
 			public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
-			public <>c__DisplayClass125_0 <>4__this; //Field offset: 0x28
+			public <>c__DisplayClass128_0 <>4__this; //Field offset: 0x28
 			public bool givesConsent; //Field offset: 0x30
-			private <>c__DisplayClass125_1 <>8__1; //Field offset: 0x38
+			private <>c__DisplayClass128_1 <>8__1; //Field offset: 0x38
 			private TaskAwaiter<GameObject> <>u__1; //Field offset: 0x40
 
 			private override void MoveNext() { }
@@ -289,7 +305,7 @@ public class PopupScreen : MonoBehaviour
 		public LocalizationManager locs; //Field offset: 0x10
 		public TaskCompletionSource<Boolean> tcs; //Field offset: 0x18
 
-		public <>c__DisplayClass125_0() { }
+		public <>c__DisplayClass128_0() { }
 
 		internal void <ShowDataConsentPopup>b__0() { }
 
@@ -301,66 +317,66 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass125_1
+	private sealed class <>c__DisplayClass128_1
 	{
 		public bool givesConsent; //Field offset: 0x10
-		public <>c__DisplayClass125_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass128_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass125_1() { }
+		public <>c__DisplayClass128_1() { }
 
 		internal void <ShowDataConsentPopup>b__3(Popup _) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass126_0
+	private sealed class <>c__DisplayClass129_0
 	{
 		public GameObject popupGameObj; //Field offset: 0x10
 
-		public <>c__DisplayClass126_0() { }
+		public <>c__DisplayClass129_0() { }
 
 		internal bool <ShowModderPopup>b__1(AsyncOperationHandle<GameObject> h) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass128_0
+	private sealed class <>c__DisplayClass131_0
 	{
 		public ReturnCallback onClaimClicked; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass128_0() { }
+		public <>c__DisplayClass131_0() { }
 
 		internal void <ShowPrimeDropPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass129_0
+	private sealed class <>c__DisplayClass132_0
 	{
 		public ReturnCallback onClaimClicked; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass129_0() { }
+		public <>c__DisplayClass132_0() { }
 
 		internal void <ShowPhatMojoGiftPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass130_0
+	private sealed class <>c__DisplayClass133_0
 	{
 		public Action onRestartClicked; //Field offset: 0x10
 		public TaskCompletionSource<Boolean> playerInputCompletion; //Field offset: 0x18
 
-		public <>c__DisplayClass130_0() { }
+		public <>c__DisplayClass133_0() { }
 
 		internal void <ShowInvalidSessionPopup>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass134_0
+	private sealed class <>c__DisplayClass137_0
 	{
 		public Action<Double> okCallback; //Field offset: 0x10
 		public Action cancelCallback; //Field offset: 0x18
@@ -376,7 +392,7 @@ public class PopupScreen : MonoBehaviour
 		public string okString; //Field offset: 0x58
 		public string cancelString; //Field offset: 0x60
 
-		public <>c__DisplayClass134_0() { }
+		public <>c__DisplayClass137_0() { }
 
 		internal void <CreateParagonConfirmationPopup>b__0(GameObject pop) { }
 
@@ -385,12 +401,53 @@ public class PopupScreen : MonoBehaviour
 	[CompilerGenerated]
 	private sealed class <>c__DisplayClass140_0
 	{
+		public SweepstakesWinnerMessage sweepstakesWinnerMessage; //Field offset: 0x10
+		public PopupScreen <>4__this; //Field offset: 0x18
+
+		public <>c__DisplayClass140_0() { }
+
+		internal void <ShowSweepstakesWinnerPopup>b__0(GameObject pop) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass141_0
+	{
+		public string title; //Field offset: 0x10
+		public string body; //Field offset: 0x18
+		public LootSet displayLoot; //Field offset: 0x20
+		public string banner; //Field offset: 0x28
+		public PopupScreen <>4__this; //Field offset: 0x30
+
+		public <>c__DisplayClass141_0() { }
+
+		internal void <ShowMailboxLetterPopup>b__0(GameObject pop) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass142_0
+	{
+		public string title; //Field offset: 0x10
+		public string body; //Field offset: 0x18
+		public string banner; //Field offset: 0x20
+		public PopupScreen <>4__this; //Field offset: 0x28
+
+		public <>c__DisplayClass142_0() { }
+
+		internal void <ShowMailboxNewsletterPopup>b__0(GameObject pop) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass146_0
+	{
 		public AssetType assetType; //Field offset: 0x10
 		public TaskCompletionSource<Entry<BTD6AssetFlags>> tcs; //Field offset: 0x18
 		public PopupScreen <>4__this; //Field offset: 0x20
 		public ReturnCallback <>9__2; //Field offset: 0x28
 
-		public <>c__DisplayClass140_0() { }
+		public <>c__DisplayClass146_0() { }
 
 		internal void <PickFromAssetLibrary>b__0(GameObject pop) { }
 
@@ -399,67 +456,67 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass140_1
+	private sealed class <>c__DisplayClass146_1
 	{
 		public AssetLibraryPopup popup; //Field offset: 0x10
-		public <>c__DisplayClass140_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass146_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass140_1() { }
+		public <>c__DisplayClass146_1() { }
 
 		internal void <PickFromAssetLibrary>b__1() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass150_0
+	private sealed class <>c__DisplayClass156_0
 	{
 		public Popup p; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass150_0() { }
+		public <>c__DisplayClass156_0() { }
 
 		internal bool <OnPopupEnd>b__0(AsyncOperationHandle<GameObject> h) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass150_1
+	private sealed class <>c__DisplayClass156_1
 	{
 		public BackGround background; //Field offset: 0x10
-		public <>c__DisplayClass150_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass156_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass150_1() { }
+		public <>c__DisplayClass156_1() { }
 
 		internal void <OnPopupEnd>b__1(AsyncOperationHandle<GameObject> h) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass161_0
+	private sealed class <>c__DisplayClass167_0
 	{
 		public Action<GameObject> OnLoaded; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass161_0() { }
+		public <>c__DisplayClass167_0() { }
 
 		internal void <InstantiateHintPanel>b__0(AsyncOperationHandle<GameObject> h) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass56_0
+	private sealed class <>c__DisplayClass59_0
 	{
 		public Action<GameObject> OnLoaded; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass56_0() { }
+		public <>c__DisplayClass59_0() { }
 
 		internal void <InstantiatePopup>b__0(AsyncOperationHandle<GameObject> h) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass57_0
+	private sealed class <>c__DisplayClass60_0
 	{
 		public ReturnCallback okCallback; //Field offset: 0x10
 		public ReturnCallback cancelCallback; //Field offset: 0x18
@@ -475,14 +532,14 @@ public class PopupScreen : MonoBehaviour
 		public string cancelString; //Field offset: 0x58
 		public int cash; //Field offset: 0x60
 
-		public <>c__DisplayClass57_0() { }
+		public <>c__DisplayClass60_0() { }
 
 		internal void <CreateCommonPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass58_0
+	private sealed class <>c__DisplayClass61_0
 	{
 		public Task asyncOkCallback; //Field offset: 0x10
 		public Task asyncCancelCallback; //Field offset: 0x18
@@ -497,14 +554,14 @@ public class PopupScreen : MonoBehaviour
 		public string cancelString; //Field offset: 0x58
 		public int cash; //Field offset: 0x60
 
-		public <>c__DisplayClass58_0() { }
+		public <>c__DisplayClass61_0() { }
 
 		internal void <CreateAwaitAsyncTasksPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass59_0
+	private sealed class <>c__DisplayClass62_0
 	{
 		public ReturnCallback cancelCallback; //Field offset: 0x10
 		public ReturnCallback okCallback; //Field offset: 0x18
@@ -512,26 +569,26 @@ public class PopupScreen : MonoBehaviour
 		public ReturnCallback onRewardScreenClosedCallback; //Field offset: 0x28
 		public RogueLootData rogueLootData; //Field offset: 0x30
 
-		public <>c__DisplayClass59_0() { }
+		public <>c__DisplayClass62_0() { }
 
 		internal void <CreateRogueLootPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass60_0
+	private sealed class <>c__DisplayClass63_0
 	{
 		public ReturnCallback okCallback; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass60_0() { }
+		public <>c__DisplayClass63_0() { }
 
 		internal void <CreateRogueArtifactPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass61_0
+	private sealed class <>c__DisplayClass64_0
 	{
 		public ReturnCallback okCallback; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
@@ -539,14 +596,14 @@ public class PopupScreen : MonoBehaviour
 		public bool closeAfterDelay; //Field offset: 0x28
 		public int stackCount; //Field offset: 0x2C
 
-		public <>c__DisplayClass61_0() { }
+		public <>c__DisplayClass64_0() { }
 
 		internal void <CreateRogueRewardPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass62_0
+	private sealed class <>c__DisplayClass65_0
 	{
 		public ReturnCallback okCallback; //Field offset: 0x10
 		public ReturnCallback cancelCallback; //Field offset: 0x18
@@ -562,14 +619,14 @@ public class PopupScreen : MonoBehaviour
 		public string cancelString; //Field offset: 0x58
 		public int cash; //Field offset: 0x60
 
-		public <>c__DisplayClass62_0() { }
+		public <>c__DisplayClass65_0() { }
 
 		internal void <CreateLogoutPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass63_0
+	private sealed class <>c__DisplayClass66_0
 	{
 		public ReturnCallback cancelCallback; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
@@ -578,14 +635,14 @@ public class PopupScreen : MonoBehaviour
 		public string playerName; //Field offset: 0x30
 		public bool canUseNexus; //Field offset: 0x38
 
-		public <>c__DisplayClass63_0() { }
+		public <>c__DisplayClass66_0() { }
 
 		internal void <CreateAccoladesStorePopup>b__0(GameObject popupGameObject) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass64_0
+	private sealed class <>c__DisplayClass67_0
 	{
 		public AsyncReturnCallback asyncReturnOkCallback; //Field offset: 0x10
 		public AsyncReturnCallback asyncReturnCancelCallback; //Field offset: 0x18
@@ -600,38 +657,38 @@ public class PopupScreen : MonoBehaviour
 		public string cancelString; //Field offset: 0x58
 		public int cash; //Field offset: 0x60
 
-		public <>c__DisplayClass64_0() { }
+		public <>c__DisplayClass67_0() { }
 
 		internal void <CreateAwaitAsyncTasksPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass67_0
+	private sealed class <>c__DisplayClass70_0
 	{
 		public PopupScreen <>4__this; //Field offset: 0x10
 		public BackGround background; //Field offset: 0x18
 
-		public <>c__DisplayClass67_0() { }
+		public <>c__DisplayClass70_0() { }
 
 		internal void <CreateBackground>b__0(AsyncOperationHandle<GameObject> h) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass75_0
+	private sealed class <>c__DisplayClass78_0
 	{
 		public GiftEvent giftEvent; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass75_0() { }
+		public <>c__DisplayClass78_0() { }
 
 		internal void <ShowGiftEventPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass84_0
+	private sealed class <>c__DisplayClass87_0
 	{
 		public ReturnCallback returnCallback; //Field offset: 0x10
 		public BackGround background; //Field offset: 0x18
@@ -643,14 +700,14 @@ public class PopupScreen : MonoBehaviour
 		public string okstring; //Field offset: 0x40
 		public int monkeyMoney; //Field offset: 0x48
 
-		public <>c__DisplayClass84_0() { }
+		public <>c__DisplayClass87_0() { }
 
 		internal void <ShowVictoryTutorialPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass85_0
+	private sealed class <>c__DisplayClass88_0
 	{
 		public ReturnCallback okCallback; //Field offset: 0x10
 		public ReturnCallback cancelCallback; //Field offset: 0x18
@@ -665,14 +722,14 @@ public class PopupScreen : MonoBehaviour
 		public string okString; //Field offset: 0x58
 		public string cancelString; //Field offset: 0x60
 
-		public <>c__DisplayClass85_0() { }
+		public <>c__DisplayClass88_0() { }
 
 		internal void <ShowEventPopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass86_0
+	private sealed class <>c__DisplayClass89_0
 	{
 		public ReturnCallback okCallback; //Field offset: 0x10
 		public ReturnCallback cancelCallback; //Field offset: 0x18
@@ -684,53 +741,37 @@ public class PopupScreen : MonoBehaviour
 		public string okString; //Field offset: 0x40
 		public string cancelString; //Field offset: 0x48
 
-		public <>c__DisplayClass86_0() { }
+		public <>c__DisplayClass89_0() { }
 
 		internal void <ShowWelcomePopup>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass87_0
+	private sealed class <>c__DisplayClass90_0
 	{
 		public Action createdAccountCallback; //Field offset: 0x10
 		public PopupScreen <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass87_0() { }
+		public <>c__DisplayClass90_0() { }
 
 		internal void <ShowEpicAccount>b__0(GameObject pop) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass96_0
+	private sealed class <>c__DisplayClass99_0
 	{
 		public ReturnCallback onOkClicked; //Field offset: 0x10
 
-		public <>c__DisplayClass96_0() { }
+		public <>c__DisplayClass99_0() { }
 
 		internal void <ShowLoginReminder>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass97_0
-	{
-		public Func<CancellationToken, Task> rejoinFunc; //Field offset: 0x10
-		public ReturnCallback quitAction; //Field offset: 0x18
-		public string lobbyId; //Field offset: 0x20
-		public string fromMenu; //Field offset: 0x28
-		public ReturnCallback afterRejoinAction; //Field offset: 0x30
-		public PopupScreen <>4__this; //Field offset: 0x38
-
-		public <>c__DisplayClass97_0() { }
-
-		internal void <ShowCoopDisconnectedPopup>b__0(GameObject pop) { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <AllActivePopups>d__106 : IEnumerable<Popup>, IEnumerable, IEnumerator<Popup>, IEnumerator, IDisposable
+	private sealed class <AllActivePopups>d__109 : IEnumerable<Popup>, IEnumerable, IEnumerator<Popup>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private Popup <>2__current; //Field offset: 0x18
@@ -751,7 +792,7 @@ public class PopupScreen : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <AllActivePopups>d__106(int <>1__state) { }
+		public <AllActivePopups>d__109(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -778,7 +819,7 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <AutoDismissHint>d__156 : IAsyncStateMachine
+	private struct <AutoDismissHint>d__162 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -796,7 +837,7 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <PickFromAssetLibrary>d__140 : IAsyncStateMachine
+	private struct <PickFromAssetLibrary>d__146 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Entry<BTD6AssetFlags>> <>t__builder; //Field offset: 0x8
@@ -812,13 +853,13 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <ShowInvalidSessionPopup>d__130 : IAsyncStateMachine
+	private struct <ShowInvalidSessionPopup>d__133 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public Action onRestartClicked; //Field offset: 0x20
 		public PopupScreen <>4__this; //Field offset: 0x28
-		private <>c__DisplayClass130_0 <>8__1; //Field offset: 0x30
+		private <>c__DisplayClass133_0 <>8__1; //Field offset: 0x30
 		private TaskAwaiter<GameObject> <>u__1; //Field offset: 0x38
 		private TaskAwaiter<Boolean> <>u__2; //Field offset: 0x40
 
@@ -830,12 +871,12 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <ShowModderPopup>d__126 : IAsyncStateMachine
+	private struct <ShowModderPopup>d__129 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<ModdingPopupChoice> <>t__builder; //Field offset: 0x8
 		public PopupScreen <>4__this; //Field offset: 0x20
-		private <>c__DisplayClass126_0 <>8__1; //Field offset: 0x28
+		private <>c__DisplayClass129_0 <>8__1; //Field offset: 0x28
 		private AsyncOperationHandle<GameObject> <popupHandle>5__2; //Field offset: 0x30
 		private TaskAwaiter<GameObject> <>u__1; //Field offset: 0x48
 		private TaskAwaiter<ModdingPopupChoice> <>u__2; //Field offset: 0x50
@@ -848,7 +889,7 @@ public class PopupScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <YieldWhileActive>d__71 : IAsyncStateMachine
+	private struct <YieldWhileActive>d__74 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -954,49 +995,52 @@ public class PopupScreen : MonoBehaviour
 	public PrefabReference rogueLootPopup; //Field offset: 0x138
 	public PrefabReference rogueArtifactPopup; //Field offset: 0x140
 	public PrefabReference rogueRewardPopup; //Field offset: 0x148
-	public SpriteReference[] popupImagesSR; //Field offset: 0x150
-	public PrefabReference hintPanelPrefab; //Field offset: 0x158
-	public Transform hintPanelLayer; //Field offset: 0x160
-	public Transform hintPanelLayer43; //Field offset: 0x168
-	public Transform invitePanelLayer; //Field offset: 0x170
-	public PrefabReference invitePanelPrefab; //Field offset: 0x178
-	private readonly List<AsyncOperationHandle`1<GameObject>> activePopupHandles; //Field offset: 0x180
+	public PrefabReference sweepstakesWinnerPopup; //Field offset: 0x150
+	public PrefabReference mailboxLetterPopup; //Field offset: 0x158
+	public PrefabReference mailboxNewsletterPopup; //Field offset: 0x160
+	public SpriteReference[] popupImagesSR; //Field offset: 0x168
+	public PrefabReference hintPanelPrefab; //Field offset: 0x170
+	public Transform hintPanelLayer; //Field offset: 0x178
+	public Transform hintPanelLayer43; //Field offset: 0x180
+	public Transform invitePanelLayer; //Field offset: 0x188
+	public PrefabReference invitePanelPrefab; //Field offset: 0x190
+	private readonly List<AsyncOperationHandle`1<GameObject>> activePopupHandles; //Field offset: 0x198
 	[SerializeField]
-	private RectTransform[] popupPositions_4_3; //Field offset: 0x188
+	private RectTransform[] popupPositions_4_3; //Field offset: 0x1A0
 	[SerializeField]
-	private RectTransform[] popupPositions_16_9; //Field offset: 0x190
-	private RectTransform[] popupPositions; //Field offset: 0x198
-	private bool waitFrame; //Field offset: 0x1A0
-	private AsyncOperationHandle<GameObject> backgroundHandle; //Field offset: 0x1A8
-	private int backgroundOwner; //Field offset: 0x1C0
-	public bool hasPendingDesyncPopup; //Field offset: 0x1C4
-	private readonly List<HintData> hints; //Field offset: 0x1C8
-	private GameObject activeHintPanel; //Field offset: 0x1D0
-	private AsyncOperationHandle<GameObject> activeHintPanelOpHandle; //Field offset: 0x1D8
-	private bool makingHintPanel; //Field offset: 0x1F0
-	private float origHintPanelY; //Field offset: 0x1F4
+	private RectTransform[] popupPositions_16_9; //Field offset: 0x1A8
+	private RectTransform[] popupPositions; //Field offset: 0x1B0
+	private bool waitFrame; //Field offset: 0x1B8
+	private AsyncOperationHandle<GameObject> backgroundHandle; //Field offset: 0x1C0
+	private int backgroundOwner; //Field offset: 0x1D8
+	public bool hasPendingDesyncPopup; //Field offset: 0x1DC
+	private readonly List<HintData> hints; //Field offset: 0x1E0
+	private GameObject activeHintPanel; //Field offset: 0x1E8
+	private AsyncOperationHandle<GameObject> activeHintPanelOpHandle; //Field offset: 0x1F0
+	private bool makingHintPanel; //Field offset: 0x208
+	private float origHintPanelY; //Field offset: 0x20C
 
 	public PopupScreen() { }
 
 	[CompilerGenerated]
-	private void <ShowCoopRejoiningPopup>b__105_0(GameObject pop) { }
+	private void <ShowCoopRejoiningPopup>b__108_0(GameObject pop) { }
 
 	[CompilerGenerated]
-	private void <ShowGiftCodeRedemptionPopup>b__135_0(GameObject pop) { }
+	private void <ShowGiftCodeRedemptionPopup>b__138_0(GameObject pop) { }
 
 	[CompilerGenerated]
-	private void <ShowMapEditorUnlockPopup>b__116_0(GameObject pop) { }
+	private void <ShowMapEditorUnlockPopup>b__119_0(GameObject pop) { }
 
 	[CompilerGenerated]
-	private void <ShowNexusSettingsPopup>b__92_0(GameObject pop) { }
+	private void <ShowNexusSettingsPopup>b__95_0(GameObject pop) { }
 
 	[CompilerGenerated]
-	private void <UpdateHints>b__159_0(GameObject hintPanel) { }
+	private void <UpdateHints>b__165_0(GameObject hintPanel) { }
 
-	[IteratorStateMachine(typeof(<AllActivePopups>d__106))]
+	[IteratorStateMachine(typeof(<AllActivePopups>d__109))]
 	private IEnumerable<Popup> AllActivePopups() { }
 
-	[AsyncStateMachine(typeof(<AutoDismissHint>d__156))]
+	[AsyncStateMachine(typeof(<AutoDismissHint>d__162))]
 	private Task AutoDismissHint(int hintId, int lifeTime, ReturnCallback autoDismissCallback = null) { }
 
 	public void Awake() { }
@@ -1063,7 +1107,7 @@ public class PopupScreen : MonoBehaviour
 
 	public Task<Entry<BTD6AssetFlags>> PickAudioClipFromAssetLibrary() { }
 
-	[AsyncStateMachine(typeof(<PickFromAssetLibrary>d__140))]
+	[AsyncStateMachine(typeof(<PickFromAssetLibrary>d__146))]
 	private Task<Entry<BTD6AssetFlags>> PickFromAssetLibrary(AssetType assetType) { }
 
 	public Task<Entry<BTD6AssetFlags>> PickPrefabFromAssetLibrary() { }
@@ -1124,7 +1168,7 @@ public class PopupScreen : MonoBehaviour
 
 	public void ShowInternetPopup(int code) { }
 
-	[AsyncStateMachine(typeof(<ShowInvalidSessionPopup>d__130))]
+	[AsyncStateMachine(typeof(<ShowInvalidSessionPopup>d__133))]
 	public Task ShowInvalidSessionPopup(Action onRestartClicked) { }
 
 	public void ShowLeaderboardEventEndedPopup(T serverEvent, bool isDebug = false) { }
@@ -1137,13 +1181,17 @@ public class PopupScreen : MonoBehaviour
 
 	public AsyncOperationHandle<GameObject> ShowLogoutPopup(Placement placement, string title, string body, ReturnCallback okCallback, string okString, ReturnCallback cancelCallback, string cancelString, TransitionAnim transition, BackGround background = 1, bool instantClose = false, bool closeIfTowersAreSuspended = false) { }
 
+	public void ShowMailboxLetterPopup(string title, string body, LootSet displayLoot = null, string banner = null) { }
+
+	public void ShowMailboxNewsletterPopup(string title, string body, string banner) { }
+
 	public void ShowMapDifficultyLockPopup(MapDifficulty difficulty, int completed, int required) { }
 
 	public void ShowMapDifficultyUnlockPopup(MapDifficulty difficulty, int completed, int required) { }
 
 	public AsyncOperationHandle<GameObject> ShowMapEditorUnlockPopup() { }
 
-	[AsyncStateMachine(typeof(<ShowModderPopup>d__126))]
+	[AsyncStateMachine(typeof(<ShowModderPopup>d__129))]
 	public Task<ModdingPopupChoice> ShowModderPopup() { }
 
 	public AsyncOperationHandle<GameObject> ShowMonkeyMonkeyPopup(ReturnCallback onOK = null, ReturnCallback onCancel = null) { }
@@ -1180,6 +1228,8 @@ public class PopupScreen : MonoBehaviour
 
 	public AsyncOperationHandle<GameObject> ShowStorePopup(StoreItem storeItem, ReturnCallback purchaseCompleteCallback) { }
 
+	public void ShowSweepstakesWinnerPopup(SweepstakesWinnerMessage sweepstakesWinnerMessage) { }
+
 	public void ShowThankYouPopup(ReturnCallback returnCallback) { }
 
 	public AsyncOperationHandle<GameObject> ShowThemedPaymentPopup(Placement placement, string title, string body, int cash, ReturnCallback okCallback, string okString, ReturnCallback cancelCallback, string cancelString, TransitionAnim transition, BackGround background = 1, bool instantClose = false) { }
@@ -1200,7 +1250,7 @@ public class PopupScreen : MonoBehaviour
 
 	public void UpdateHints() { }
 
-	[AsyncStateMachine(typeof(<YieldWhileActive>d__71))]
+	[AsyncStateMachine(typeof(<YieldWhileActive>d__74))]
 	public static Task YieldWhileActive() { }
 
 }

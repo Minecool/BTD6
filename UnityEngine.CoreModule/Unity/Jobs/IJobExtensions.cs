@@ -31,6 +31,9 @@ public static class IJobExtensions
 	private static IntPtr GetReflectionData() { }
 
 	[Extension]
+	public static void Run(T jobData) { }
+
+	[Extension]
 	public static JobHandle Schedule(T jobData, JobHandle dependsOn = null) { }
 
 }

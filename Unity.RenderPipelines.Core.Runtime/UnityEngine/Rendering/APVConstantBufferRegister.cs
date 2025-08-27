@@ -2,6 +2,6 @@ namespace UnityEngine.Rendering;
 
 public enum APVConstantBufferRegister
 {
-	GlobalRegister = 5,
+	GlobalRegister = 6,
 }
 

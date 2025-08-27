@@ -24,7 +24,7 @@ public class EmergencyUnlockModel : AbilityBehaviorModel
 
 	public EmergencyUnlockMutator Mutator
 	{
-		 get { } //Length: 211
+		 get { } //Length: 215
 	}
 
 	public EmergencyUnlockModel(string name, float swivelSpeedMultiplier, float duration, SoundModel activateSound, PrefabReference buffDisplayPath) { }

@@ -13,5 +13,7 @@ public enum ShaderPathID
 	SpeedTree7 = 8,
 	SpeedTree7Billboard = 9,
 	SpeedTree8 = 10,
+	SpeedTree9 = 11,
+	ComplexLit = 12,
 }
 

@@ -2,7 +2,7 @@ namespace Assets.Scripts.Simulation.Behaviors.Events.Triggers;
 
 public class OnTowerAttackTrigger : EntityTrigger
 {
-	public OnTowerAttackTriggerModel onTowerAttackTriggerModel; //Field offset: 0x70
+	public OnTowerAttackTriggerModel behaviorModel; //Field offset: 0x70
 
 	public OnTowerAttackTrigger() { }
 
@@ -10,7 +10,7 @@ public class OnTowerAttackTrigger : EntityTrigger
 
 	protected virtual void OnDestroy() { }
 
-	private void OnTowerAttack(Tower tower) { }
+	private void OnTriggerHit(Tower tower) { }
 
 	public virtual void UpdatedModel(Model modelToUse) { }
 

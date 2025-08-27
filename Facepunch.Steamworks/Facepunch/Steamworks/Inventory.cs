@@ -347,7 +347,7 @@ public class Inventory : IDisposable
 
 		public Definition Definition
 		{
-			 get { } //Length: 148
+			 get { } //Length: 128
 		}
 
 		internal Dictionary<String, String> Properties
@@ -463,7 +463,7 @@ public class Inventory : IDisposable
 
 		internal bool IsSuccess
 		{
-			internal get { } //Length: 79
+			internal get { } //Length: 75
 		}
 
 		public internal Item[] Items

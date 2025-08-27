@@ -1,7 +1,7 @@
 namespace UnityEngine;
 
-[NativeHeader("Modules/Animation/HumanDescription.h")]
 [NativeHeader("Modules/Animation/ScriptBindings/AvatarBuilder.bindings.h")]
+[NativeHeader("Modules/Animation/HumanDescription.h")]
 [NativeType(CodegenOptions::Custom (1), "MonoHumanLimit")]
 public struct HumanLimit
 {

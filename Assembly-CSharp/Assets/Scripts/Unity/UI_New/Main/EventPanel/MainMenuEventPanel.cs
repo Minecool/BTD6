@@ -61,8 +61,8 @@ public class MainMenuEventPanel : MonoBehaviour
 			public int <>1__state; //Field offset: 0x0
 			public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
 			public <>c__DisplayClass26_0 <>4__this; //Field offset: 0x20
-			private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x28
-			private TaskAwaiter<SweepstakesStatusResponse> <>u__2; //Field offset: 0x30
+			private SweepstakesStats <sweepstakesStats>5__2; //Field offset: 0x28
+			private TaskAwaiter<SweepstakesStatusResponse> <>u__1; //Field offset: 0x30
 
 			private override void MoveNext() { }
 
@@ -71,8 +71,8 @@ public class MainMenuEventPanel : MonoBehaviour
 
 		}
 
-		public MainMenuEventPanel <>4__this; //Field offset: 0x10
-		public SweepstakesEvent sweepStakesEvent; //Field offset: 0x18
+		public SweepstakesEvent sweepstakesEvent; //Field offset: 0x10
+		public MainMenuEventPanel <>4__this; //Field offset: 0x18
 
 		public <>c__DisplayClass26_0() { }
 

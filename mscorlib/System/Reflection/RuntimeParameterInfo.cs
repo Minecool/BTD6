@@ -9,12 +9,12 @@ internal class RuntimeParameterInfo : ParameterInfo
 
 	public virtual object DefaultValue
 	{
-		 get { } //Length: 810
+		 get { } //Length: 798
 	}
 
 	public virtual bool HasDefaultValue
 	{
-		 get { } //Length: 285
+		 get { } //Length: 261
 	}
 
 	internal RuntimeParameterInfo(string name, Type type, int position, int attrs, object defaultValue, MemberInfo member, MarshalAsAttribute marshalAs) { }

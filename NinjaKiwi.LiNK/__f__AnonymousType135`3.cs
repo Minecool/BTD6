@@ -4,38 +4,38 @@
 internal sealed class <>f__AnonymousType135
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <method>j__TPar <method>i__Field; //Field offset: 0x0
+	private readonly <displayName>j__TPar <displayName>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <keys>j__TPar <keys>i__Field; //Field offset: 0x0
+	private readonly <userid>j__TPar <userid>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <includeOnlineStatus>j__TPar <includeOnlineStatus>i__Field; //Field offset: 0x0
+	private readonly <token>j__TPar <token>i__Field; //Field offset: 0x0
 
-	public <includeOnlineStatus>j__TPar includeOnlineStatus
+	public <displayName>j__TPar displayName
 	{
 		 get { } //Length: 5
 	}
 
-	public <keys>j__TPar keys
+	public <token>j__TPar token
 	{
 		 get { } //Length: 5
 	}
 
-	public <method>j__TPar method
+	public <userid>j__TPar userid
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType135`3(<method>j__TPar method, <keys>j__TPar keys, <includeOnlineStatus>j__TPar includeOnlineStatus) { }
+	public <>f__AnonymousType135`3(<displayName>j__TPar displayName, <userid>j__TPar userid, <token>j__TPar token) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <includeOnlineStatus>j__TPar get_includeOnlineStatus() { }
+	public <displayName>j__TPar get_displayName() { }
 
-	public <keys>j__TPar get_keys() { }
+	public <token>j__TPar get_token() { }
 
-	public <method>j__TPar get_method() { }
+	public <userid>j__TPar get_userid() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

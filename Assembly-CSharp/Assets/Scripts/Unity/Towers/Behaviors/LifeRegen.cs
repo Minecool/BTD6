@@ -14,7 +14,7 @@ public class LifeRegen : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1128
+		 get { } //Length: 1185
 	}
 
 	public LifeRegen() { }

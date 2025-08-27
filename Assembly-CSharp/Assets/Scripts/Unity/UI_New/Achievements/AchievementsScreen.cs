@@ -6,64 +6,64 @@ public class AchievementsScreen : GameMenu
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<ActiveAchievement, Boolean> <>9__12_1; //Field offset: 0x8
-		public static Action<String> <>9__12_2; //Field offset: 0x10
-		public static Func<ActiveAchievement, Boolean> <>9__20_0; //Field offset: 0x18
-		public static Func<ActiveAchievement, Boolean> <>9__20_1; //Field offset: 0x20
-		public static Func<ActiveAchievement, Single> <>9__20_2; //Field offset: 0x28
+		public static Func<ActiveAchievement, Boolean> <>9__13_1; //Field offset: 0x8
+		public static Action<String> <>9__13_2; //Field offset: 0x10
+		public static Func<ActiveAchievement, Boolean> <>9__21_0; //Field offset: 0x18
+		public static Func<ActiveAchievement, Boolean> <>9__21_1; //Field offset: 0x20
+		public static Func<ActiveAchievement, Single> <>9__21_2; //Field offset: 0x28
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <GetSortedAchievements>b__20_0(ActiveAchievement x) { }
+		internal bool <GetSortedAchievements>b__21_0(ActiveAchievement x) { }
 
-		internal bool <GetSortedAchievements>b__20_1(ActiveAchievement x) { }
+		internal bool <GetSortedAchievements>b__21_1(ActiveAchievement x) { }
 
-		internal float <GetSortedAchievements>b__20_2(ActiveAchievement x) { }
+		internal float <GetSortedAchievements>b__21_2(ActiveAchievement x) { }
 
-		internal bool <Open>b__12_1(ActiveAchievement a) { }
+		internal bool <Open>b__13_1(ActiveAchievement a) { }
 
-		internal void <Open>b__12_2(string x) { }
+		internal void <Open>b__13_2(string x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass19_0
+	private sealed class <>c__DisplayClass20_0
 	{
 		public IEnumerable<ActiveAchievement> achievements; //Field offset: 0x10
 
-		public <>c__DisplayClass19_0() { }
+		public <>c__DisplayClass20_0() { }
 
 		internal bool <LoadAchievementPanelsAsync>b__0(AchievementPanel ap) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass19_1
+	private sealed class <>c__DisplayClass20_1
 	{
 		public ActiveAchievement achievement; //Field offset: 0x10
 
-		public <>c__DisplayClass19_1() { }
+		public <>c__DisplayClass20_1() { }
 
 		internal bool <LoadAchievementPanelsAsync>b__1(AchievementPanel x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass21_0
+	private sealed class <>c__DisplayClass22_0
 	{
 		public string searchString; //Field offset: 0x10
 		public bool canShowHidden; //Field offset: 0x18
 
-		public <>c__DisplayClass21_0() { }
+		public <>c__DisplayClass22_0() { }
 
 		internal bool <FilterAchievements>b__0(ActiveAchievement a) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <DisplayAchievementsAsync>d__18 : IAsyncStateMachine
+	private struct <DisplayAchievementsAsync>d__19 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -79,7 +79,7 @@ public class AchievementsScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <GooglePlayClicked>d__25 : IAsyncStateMachine
+	private struct <GameCenterClicked>d__27 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -94,13 +94,28 @@ public class AchievementsScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <LoadAchievementPanelsAsync>d__19 : IAsyncStateMachine
+	private struct <GooglePlayClicked>d__26 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
+		public AchievementsScreen <>4__this; //Field offset: 0x28
+		private TaskAwaiter <>u__1; //Field offset: 0x30
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <LoadAchievementPanelsAsync>d__20 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public IEnumerable<ActiveAchievement> achievements; //Field offset: 0x20
 		public AchievementsScreen <>4__this; //Field offset: 0x28
-		private <>c__DisplayClass19_1 <>8__1; //Field offset: 0x30
+		private <>c__DisplayClass20_1 <>8__1; //Field offset: 0x30
 		private int <displayCount>5__2; //Field offset: 0x38
 		private int <count>5__3; //Field offset: 0x3C
 		private IEnumerator<ActiveAchievement> <>7__wrap3; //Field offset: 0x40
@@ -114,7 +129,7 @@ public class AchievementsScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <Open>d__12 : IAsyncStateMachine
+	private struct <Open>d__13 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -133,15 +148,16 @@ public class AchievementsScreen : GameMenu
 	public TMP_InputField searchField; //Field offset: 0x58
 	public TMP_Text searchPlaceholder; //Field offset: 0x60
 	public Button btnGooglePlay; //Field offset: 0x68
-	public Button btnGamepadSearch; //Field offset: 0x70
-	public GamepadInputField gamepadSearchInputField; //Field offset: 0x78
-	public NK_TextMeshProUGUI achievementCountTxt; //Field offset: 0x80
-	public GameObject nothingFoundObj; //Field offset: 0x88
-	private ContentSizeFitter contentSizeFitter; //Field offset: 0x90
-	private readonly List<AchievementPanel> achievementPanels; //Field offset: 0x98
-	private CancellationTokenSource loadingToken; //Field offset: 0xA0
-	private Task achievementLoadingTask; //Field offset: 0xA8
-	private bool isClosed; //Field offset: 0xB0
+	public Button btnGameCenter; //Field offset: 0x70
+	public Button btnGamepadSearch; //Field offset: 0x78
+	public GamepadInputField gamepadSearchInputField; //Field offset: 0x80
+	public NK_TextMeshProUGUI achievementCountTxt; //Field offset: 0x88
+	public GameObject nothingFoundObj; //Field offset: 0x90
+	private ContentSizeFitter contentSizeFitter; //Field offset: 0x98
+	private readonly List<AchievementPanel> achievementPanels; //Field offset: 0xA0
+	private CancellationTokenSource loadingToken; //Field offset: 0xA8
+	private Task achievementLoadingTask; //Field offset: 0xB0
+	private bool isClosed; //Field offset: 0xB8
 
 	private List<ActiveAchievement> AllAchievements
 	{
@@ -151,14 +167,17 @@ public class AchievementsScreen : GameMenu
 	public AchievementsScreen() { }
 
 	[CompilerGenerated]
-	private void <Open>b__12_0() { }
+	private void <Open>b__13_0() { }
 
 	protected virtual void Awake() { }
 
-	[AsyncStateMachine(typeof(<DisplayAchievementsAsync>d__18))]
+	[AsyncStateMachine(typeof(<DisplayAchievementsAsync>d__19))]
 	private void DisplayAchievementsAsync(IEnumerable<ActiveAchievement> achievements) { }
 
 	private void FilterAchievements(string searchString) { }
+
+	[AsyncStateMachine(typeof(<GameCenterClicked>d__27))]
+	public void GameCenterClicked() { }
 
 	private void GamepadSelectFirst() { }
 
@@ -166,13 +185,13 @@ public class AchievementsScreen : GameMenu
 
 	private IEnumerable<ActiveAchievement> GetSortedAchievements(IEnumerable<ActiveAchievement> achievements) { }
 
-	[AsyncStateMachine(typeof(<GooglePlayClicked>d__25))]
+	[AsyncStateMachine(typeof(<GooglePlayClicked>d__26))]
 	public void GooglePlayClicked() { }
 
-	[AsyncStateMachine(typeof(<LoadAchievementPanelsAsync>d__19))]
+	[AsyncStateMachine(typeof(<LoadAchievementPanelsAsync>d__20))]
 	private Task LoadAchievementPanelsAsync(IEnumerable<ActiveAchievement> achievements) { }
 
-	[AsyncStateMachine(typeof(<Open>d__12))]
+	[AsyncStateMachine(typeof(<Open>d__13))]
 	public virtual void Open(object data) { }
 
 	public virtual void ReClose() { }

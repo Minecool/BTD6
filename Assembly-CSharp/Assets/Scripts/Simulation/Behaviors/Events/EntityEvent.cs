@@ -3,9 +3,9 @@ namespace Assets.Scripts.Simulation.Behaviors.Events;
 public class EntityEvent : RootBehavior
 {
 	public EntityEventModel entityEventModel; //Field offset: 0x58
-	private readonly List<EntityTrigger> triggers; //Field offset: 0x60
-	private readonly List<EntityAction> actions; //Field offset: 0x68
-	private int timesActivated; //Field offset: 0x70
+	protected readonly List<EntityTrigger> triggers; //Field offset: 0x60
+	protected readonly List<EntityAction> actions; //Field offset: 0x68
+	protected int timesActivated; //Field offset: 0x70
 
 	public List<EntityAction> Actions
 	{
@@ -19,7 +19,7 @@ public class EntityEvent : RootBehavior
 
 	public EntityEvent() { }
 
-	public void ExecuteActions() { }
+	public override void ExecuteActions() { }
 
 	public List<EntityAction> get_Actions() { }
 
@@ -29,15 +29,15 @@ public class EntityEvent : RootBehavior
 
 	protected virtual void OnDestroy() { }
 
-	public void OnTriggerHit(EntityTrigger entityTrigger) { }
+	public override void OnTriggerHit(EntityTrigger entityTrigger) { }
 
-	public bool ReachedActivationLimit() { }
+	public override bool ReachedActivationLimit() { }
 
-	public void UpdateActions() { }
+	public override void UpdateActions() { }
 
 	public virtual void UpdatedModel(Model modelToUse) { }
 
-	public void UpdateTriggers() { }
+	public override void UpdateTriggers() { }
 
 }
 

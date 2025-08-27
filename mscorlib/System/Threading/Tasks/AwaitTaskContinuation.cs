@@ -8,7 +8,7 @@ internal class AwaitTaskContinuation : TaskContinuation, IThreadPoolWorkItem
 
 	internal static bool IsValidLocationForInlining
 	{
-		internal get { } //Length: 313
+		internal get { } //Length: 300
 	}
 
 	internal AwaitTaskContinuation(Action action, bool flowExecutionContext) { }

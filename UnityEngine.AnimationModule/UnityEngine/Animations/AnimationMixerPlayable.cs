@@ -21,7 +21,7 @@ public struct AnimationMixerPlayable : IPlayable, IEquatable<AnimationMixerPlaya
 	[NativeThrows]
 	private static bool CreateHandleInternal(PlayableGraph graph, ref PlayableHandle handle) { }
 
-	private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref PlayableHandle handle) { }
+	private static bool CreateHandleInternal_Injected(in PlayableGraph graph, ref PlayableHandle handle) { }
 
 	public override bool Equals(AnimationMixerPlayable other) { }
 

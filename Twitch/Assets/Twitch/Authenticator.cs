@@ -99,8 +99,9 @@ internal class Authenticator
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public Authenticator <>4__this; //Field offset: 0x20
 		private UnityWebRequest <webRequest>5__2; //Field offset: 0x28
-		private DateTime <startTime>5__3; //Field offset: 0x30
-		private YieldAwaiter <>u__1; //Field offset: 0x38
+		private UnityWebRequestAsyncOperation <request>5__3; //Field offset: 0x30
+		private DateTime <startTime>5__4; //Field offset: 0x38
+		private YieldAwaiter <>u__1; //Field offset: 0x40
 
 		private override void MoveNext() { }
 

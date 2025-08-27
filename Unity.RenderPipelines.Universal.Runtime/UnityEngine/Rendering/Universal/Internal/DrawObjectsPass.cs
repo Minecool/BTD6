@@ -6,48 +6,43 @@ public class DrawObjectsPass : ScriptableRenderPass
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static DrawFunction <>9__16_0; //Field offset: 0x8
-		public static RenderFunc<PassData> <>9__18_0; //Field offset: 0x10
+		public static BaseRenderFunc<PassData, RasterGraphContext> <>9__17_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <ExecutePass>b__16_0(ScriptableRenderContext ctx, ref RenderingData data, ref DrawingSettings ds, ref FilteringSettings fs, ref RenderStateBlock rsb) { }
-
-		internal void <Render>b__18_0(PassData data, RenderGraphContext context) { }
+		internal void <Render>b__17_0(PassData data, RasterGraphContext context) { }
 
 	}
 
-	private class PassData
+	public class PassData
 	{
-		internal TextureHandle m_Albedo; //Field offset: 0x10
-		internal TextureHandle m_Depth; //Field offset: 0x18
-		internal RenderingData m_RenderingData; //Field offset: 0x20
-		internal bool m_IsOpaque; //Field offset: 0x2D8
-		internal RenderStateBlock m_RenderStateBlock; //Field offset: 0x2DC
-		internal FilteringSettings m_FilteringSettings; //Field offset: 0x348
-		internal List<ShaderTagId> m_ShaderTagIdList; //Field offset: 0x360
-		internal ProfilingSampler m_ProfilingSampler; //Field offset: 0x368
-		internal bool m_ShouldTransparentsReceiveShadows; //Field offset: 0x370
-		internal bool m_IsActiveTargetBackBuffer; //Field offset: 0x371
-		internal DrawObjectsPass pass; //Field offset: 0x378
+		internal TextureHandle albedoHdl; //Field offset: 0x10
+		internal TextureHandle depthHdl; //Field offset: 0x20
+		internal UniversalCameraData cameraData; //Field offset: 0x30
+		internal bool isOpaque; //Field offset: 0x38
+		internal bool shouldTransparentsReceiveShadows; //Field offset: 0x39
+		internal uint batchLayerMask; //Field offset: 0x3C
+		internal bool isActiveTargetBackBuffer; //Field offset: 0x40
+		internal RendererListHandle rendererListHdl; //Field offset: 0x44
+		internal RendererListHandle objectsWithErrorRendererListHdl; //Field offset: 0x50
+		internal DebugRendererLists debugRendererLists; //Field offset: 0x60
+		internal RendererList rendererList; //Field offset: 0x68
+		internal RendererList objectsWithErrorRendererList; //Field offset: 0x80
 
 		public PassData() { }
 
 	}
 
 	private static readonly int s_DrawObjectPassDataPropID; //Field offset: 0x0
-	private FilteringSettings m_FilteringSettings; //Field offset: 0xE0
-	private RenderStateBlock m_RenderStateBlock; //Field offset: 0xF8
-	private List<ShaderTagId> m_ShaderTagIdList; //Field offset: 0x168
-	private string m_ProfilerTag; //Field offset: 0x170
-	private ProfilingSampler m_ProfilingSampler; //Field offset: 0x178
-	private bool m_IsOpaque; //Field offset: 0x180
-	public bool m_IsActiveTargetBackBuffer; //Field offset: 0x181
-	public bool m_ShouldTransparentsReceiveShadows; //Field offset: 0x182
-	private PassData m_PassData; //Field offset: 0x188
-	private bool m_UseDepthPriming; //Field offset: 0x190
+	private FilteringSettings m_FilteringSettings; //Field offset: 0xB8
+	private RenderStateBlock m_RenderStateBlock; //Field offset: 0xD8
+	private List<ShaderTagId> m_ShaderTagIdList; //Field offset: 0x148
+	private bool m_IsOpaque; //Field offset: 0x150
+	public bool m_IsActiveTargetBackBuffer; //Field offset: 0x151
+	public bool m_ShouldTransparentsReceiveShadows; //Field offset: 0x152
+	private PassData m_PassData; //Field offset: 0x158
 
 	private static DrawObjectsPass() { }
 
@@ -57,15 +52,18 @@ public class DrawObjectsPass : ScriptableRenderPass
 
 	internal DrawObjectsPass(URPProfileId profileId, bool opaque, RenderPassEvent evt, RenderQueueRange renderQueueRange, LayerMask layerMask, StencilState stencilState, int stencilReference) { }
 
-	private static void CameraSetup(CommandBuffer cmd, PassData data, ref RenderingData renderingData) { }
-
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public virtual void Execute(ScriptableRenderContext context, ref RenderingData renderingData) { }
 
-	private static void ExecutePass(ScriptableRenderContext context, PassData data, ref RenderingData renderingData, bool yFlip) { }
+	internal static void ExecutePass(RasterCommandBuffer cmd, PassData data, RendererList rendererList, RendererList objectsWithErrorRendererList, bool yFlip) { }
 
-	protected override void OnExecute(CommandBuffer cmd) { }
+	internal void Init(bool opaque, RenderPassEvent evt, RenderQueueRange renderQueueRange, LayerMask layerMask, StencilState stencilState, int stencilReference, ShaderTagId[] shaderTagIds = null) { }
 
-	internal void Render(RenderGraph renderGraph, TextureHandle colorTarget, TextureHandle depthTarget, TextureHandle mainShadowsTexture, TextureHandle additionalShadowsTexture, ref RenderingData renderingData) { }
+	internal void InitPassData(UniversalCameraData cameraData, ref PassData passData, uint batchLayerMask, bool isActiveTargetBackBuffer = false) { }
+
+	internal void InitRendererLists(UniversalRenderingData renderingData, UniversalCameraData cameraData, UniversalLightData lightData, ref PassData passData, ScriptableRenderContext context, RenderGraph renderGraph, bool useRenderGraph) { }
+
+	internal void Render(RenderGraph renderGraph, ContextContainer frameData, TextureHandle colorTarget, TextureHandle depthTarget, TextureHandle mainShadowsTexture, TextureHandle additionalShadowsTexture, uint batchLayerMask = 4294967295) { }
 
 }
 

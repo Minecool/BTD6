@@ -11,7 +11,7 @@ public class VolumeControl : MonoBehaviour
 
 	protected bool IsMuted
 	{
-		 get { } //Length: 458
+		 get { } //Length: 762
 	}
 
 	public VolumeControl() { }

@@ -51,7 +51,7 @@ internal class ZlibBaseStream : Stream
 
 	internal int Crc32
 	{
-		internal get { } //Length: 20
+		internal get { } //Length: 16
 	}
 
 	public virtual long Length

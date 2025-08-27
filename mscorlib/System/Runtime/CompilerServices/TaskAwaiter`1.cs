@@ -1,7 +1,7 @@
 namespace System.Runtime.CompilerServices;
 
 [IsReadOnly]
-public struct TaskAwaiter : ICriticalNotifyCompletion
+public struct TaskAwaiter : ICriticalNotifyCompletion, INotifyCompletion
 {
 	private readonly Task<TResult> m_task; //Field offset: 0x0
 
@@ -16,6 +16,8 @@ public struct TaskAwaiter : ICriticalNotifyCompletion
 
 	[StackTraceHidden]
 	public TResult GetResult() { }
+
+	public override void OnCompleted(Action continuation) { }
 
 	public override void UnsafeOnCompleted(Action continuation) { }
 

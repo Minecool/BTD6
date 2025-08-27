@@ -36,13 +36,6 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	public String(char c, int count) { }
 
-	public String(Char[] value) { }
-
-	public String(Char[] value, int startIndex, int length) { }
-
-	[CLSCompliant(False)]
-	public String(Char* value) { }
-
 	[CLSCompliant(False)]
 	public String(SByte* value, int startIndex, int length) { }
 
@@ -50,9 +43,16 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 	public String(Char* value, int startIndex, int length) { }
 
 	[CLSCompliant(False)]
-	public String(SByte* value, int startIndex, int length, Encoding enc) { }
+	public String(Char* value) { }
+
+	public String(Char[] value, int startIndex, int length) { }
+
+	public String(Char[] value) { }
 
 	public String(ReadOnlySpan<Char> value) { }
+
+	[CLSCompliant(False)]
+	public String(SByte* value, int startIndex, int length, Encoding enc) { }
 
 	private static bool ArrayContains(char searchChar, Char[] anyOf) { }
 
@@ -70,19 +70,19 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	public override object Clone() { }
 
+	public static int Compare(string strA, int indexA, string strB, int indexB, int length, StringComparison comparisonType) { }
+
+	public static int Compare(string strA, int indexA, string strB, int indexB, int length, bool ignoreCase) { }
+
 	public static int Compare(string strA, string strB) { }
 
 	public static int Compare(string strA, string strB, bool ignoreCase) { }
 
 	public static int Compare(string strA, string strB, StringComparison comparisonType) { }
 
-	public static int Compare(string strA, int indexA, string strB, int indexB, int length, StringComparison comparisonType) { }
-
-	public static int Compare(string strA, string strB, bool ignoreCase, CultureInfo culture) { }
-
 	public static int Compare(string strA, string strB, CultureInfo culture, CompareOptions options) { }
 
-	public static int Compare(string strA, int indexA, string strB, int indexB, int length, bool ignoreCase) { }
+	public static int Compare(string strA, string strB, bool ignoreCase, CultureInfo culture) { }
 
 	public static int Compare(string strA, int indexA, string strB, int indexB, int length) { }
 
@@ -100,21 +100,23 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	public override int CompareTo(object value) { }
 
+	public static string Concat(object arg0, object arg1) { }
+
 	public static string Concat(string str0, string str1) { }
-
-	public static string Concat(String[] values) { }
-
-	public static string Concat(string str0, string str1, string str2, string str3) { }
-
-	public static string Concat(string str0, string str1, string str2) { }
-
-	public static string Concat(IEnumerable<String> values) { }
 
 	public static string Concat(object arg0, object arg1, object arg2) { }
 
-	public static string Concat(object arg0, object arg1) { }
-
 	public static string Concat(Object[] args) { }
+
+	public static string Concat(IEnumerable<String> values) { }
+
+	public static string Concat(string str0, string str1, string str2) { }
+
+	public static string Concat(string str0, string str1, string str2, string str3) { }
+
+	public static string Concat(String[] values) { }
+
+	public bool Contains(char value, StringComparison comparisonType) { }
 
 	public bool Contains(char value) { }
 
@@ -130,21 +132,21 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	internal static string CreateFromChar(char c) { }
 
-	private string CreateString(SByte* value, int startIndex, int length) { }
+	private string CreateString(Char* value, int startIndex, int length) { }
 
 	private string CreateString(Char* value) { }
 
-	private string CreateString(Char* value, int startIndex, int length) { }
-
-	private string CreateString(ReadOnlySpan<Char> value) { }
-
-	private string CreateString(SByte* value, int startIndex, int length, Encoding enc) { }
-
-	private string CreateString(Char[] val) { }
+	private string CreateString(char c, int count) { }
 
 	private string CreateString(Char[] val, int startIndex, int length) { }
 
-	private string CreateString(char c, int count) { }
+	private string CreateString(Char[] val) { }
+
+	private string CreateString(SByte* value, int startIndex, int length, Encoding enc) { }
+
+	private string CreateString(ReadOnlySpan<Char> value) { }
+
+	private string CreateString(SByte* value, int startIndex, int length) { }
 
 	private static string CreateStringForSByteConstructor(Byte* pb, int numBytes) { }
 
@@ -152,41 +154,45 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	private string CreateTrimmedString(int start, int end) { }
 
-	private static string Ctor(Char* ptr) { }
-
-	private static string Ctor(SByte* value, int startIndex, int length) { }
+	private static string Ctor(ReadOnlySpan<Char> value) { }
 
 	private static string Ctor(Char[] value, int startIndex, int length) { }
 
-	private static string Ctor(Char[] value) { }
-
-	private static string Ctor(ReadOnlySpan<Char> value) { }
-
-	private static string Ctor(char c, int count) { }
+	private static string Ctor(Char* ptr) { }
 
 	private static string Ctor(Char* ptr, int startIndex, int length) { }
 
+	private static string Ctor(Char[] value) { }
+
 	private static string Ctor(SByte* value, int startIndex, int length, Encoding enc) { }
 
-	public bool EndsWith(string value, StringComparison comparisonType) { }
+	private static string Ctor(SByte* value, int startIndex, int length) { }
+
+	private static string Ctor(char c, int count) { }
 
 	public bool EndsWith(string value) { }
 
-	public static bool Equals(string a, string b, StringComparison comparisonType) { }
+	public bool EndsWith(string value, StringComparison comparisonType) { }
 
-	public static bool Equals(string a, string b) { }
+	public bool EndsWith(char value) { }
 
-	public bool Equals(string value, StringComparison comparisonType) { }
+	public virtual bool Equals(object obj) { }
 
 	public override bool Equals(string value) { }
 
-	public virtual bool Equals(object obj) { }
+	public bool Equals(string value, StringComparison comparisonType) { }
+
+	public static bool Equals(string a, string b) { }
+
+	public static bool Equals(string a, string b, StringComparison comparisonType) { }
 
 	private static bool EqualsHelper(string strA, string strB) { }
 
 	internal static string FastAllocateString(int length) { }
 
 	private static void FillStringChecked(string dest, int destPos, string src) { }
+
+	public static string Format(string format, object arg0) { }
 
 	public static string Format(IFormatProvider provider, string format, Object[] args) { }
 
@@ -201,8 +207,6 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 	public static string Format(string format, object arg0, object arg1, object arg2) { }
 
 	public static string Format(string format, object arg0, object arg1) { }
-
-	public static string Format(string format, object arg0) { }
 
 	private static string FormatHelper(IFormatProvider provider, string format, ParamsArray args) { }
 
@@ -219,25 +223,27 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	public override TypeCode GetTypeCode() { }
 
-	public int IndexOf(char value, int startIndex, int count) { }
-
-	public int IndexOf(char value, int startIndex) { }
-
-	public int IndexOf(string value, int startIndex) { }
+	public int IndexOf(string value, int startIndex, int count, StringComparison comparisonType) { }
 
 	public int IndexOf(string value, StringComparison comparisonType) { }
 
-	public int IndexOf(string value, int startIndex, StringComparison comparisonType) { }
-
 	public int IndexOf(string value) { }
 
-	public int IndexOf(string value, int startIndex, int count, StringComparison comparisonType) { }
+	public int IndexOf(string value, int startIndex) { }
+
+	public int IndexOf(char value, int startIndex, int count) { }
 
 	public int IndexOf(char value) { }
 
-	public int IndexOfAny(Char[] anyOf, int startIndex, int count) { }
+	public int IndexOf(string value, int startIndex, StringComparison comparisonType) { }
+
+	public int IndexOf(char value, int startIndex) { }
+
+	public int IndexOf(char value, StringComparison comparisonType) { }
 
 	private int IndexOfAny(char value1, char value2, char value3, int startIndex, int count) { }
+
+	public int IndexOfAny(Char[] anyOf, int startIndex, int count) { }
 
 	private int IndexOfAny(char value1, char value2, int startIndex, int count) { }
 
@@ -268,39 +274,39 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	public static bool IsNullOrWhiteSpace(string value) { }
 
-	public static string Join(string separator, String[] value, int startIndex, int count) { }
-
 	public static string Join(string separator, IEnumerable<String> values) { }
-
-	public static string Join(string separator, IEnumerable<T> values) { }
-
-	public static string Join(char separator, String[] value, int startIndex, int count) { }
-
-	public static string Join(string separator, String[] value) { }
 
 	public static string Join(char separator, String[] value) { }
 
 	public static string Join(char separator, IEnumerable<T> values) { }
 
+	public static string Join(char separator, String[] value, int startIndex, int count) { }
+
+	public static string Join(string separator, String[] value) { }
+
 	public static string Join(string separator, Object[] values) { }
 
-	private static string JoinCore(Char* separator, int separatorLength, String[] value, int startIndex, int count) { }
+	public static string Join(string separator, IEnumerable<T> values) { }
+
+	public static string Join(string separator, String[] value, int startIndex, int count) { }
 
 	private static string JoinCore(Char* separator, int separatorLength, IEnumerable<T> values) { }
 
 	private static string JoinCore(Char* separator, int separatorLength, Object[] values) { }
 
-	public int LastIndexOf(string value, StringComparison comparisonType) { }
+	private static string JoinCore(Char* separator, int separatorLength, String[] value, int startIndex, int count) { }
 
 	public int LastIndexOf(string value, int startIndex, int count, StringComparison comparisonType) { }
 
 	public int LastIndexOf(string value) { }
 
+	public int LastIndexOf(string value, StringComparison comparisonType) { }
+
+	public int LastIndexOf(char value, int startIndex) { }
+
 	public int LastIndexOf(char value) { }
 
 	public int LastIndexOf(char value, int startIndex, int count) { }
-
-	public int LastIndexOf(char value, int startIndex) { }
 
 	public int LastIndexOfAny(Char[] anyOf, int startIndex) { }
 
@@ -316,9 +322,9 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	private void MakeSeparatorList(String[] separators, ref ValueListBuilder<Int32>& sepListBuilder, ref ValueListBuilder<Int32>& lengthListBuilder) { }
 
-	private void MakeSeparatorList(string separator, ref ValueListBuilder<Int32>& sepListBuilder) { }
-
 	private void MakeSeparatorList(ReadOnlySpan<Char> separators, ref ValueListBuilder<Int32>& sepListBuilder) { }
+
+	private void MakeSeparatorList(string separator, ref ValueListBuilder<Int32>& sepListBuilder) { }
 
 	private static void memcpy(Byte* dest, Byte* src, int size) { }
 
@@ -348,33 +354,31 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	public string Remove(int startIndex, int count) { }
 
-	public string Replace(char oldChar, char newChar) { }
-
 	public string Replace(string oldValue, string newValue) { }
+
+	public string Replace(char oldChar, char newChar) { }
 
 	private string ReplaceHelper(int oldValueLength, string newValue, ReadOnlySpan<Int32> indices) { }
 
 	private static void SetCharBit(UInt32* charMap, byte value) { }
 
+	public String[] Split(Char[] separator, StringSplitOptions options) { }
+
+	public String[] Split(Char[] separator, int count) { }
+
+	public String[] Split(Char[] separator) { }
+
+	public String[] Split(char separator, StringSplitOptions options = 0) { }
+
 	public String[] Split(String[] separator, StringSplitOptions options) { }
 
 	public String[] Split(string separator, StringSplitOptions options = 0) { }
 
-	public String[] Split(char separator, StringSplitOptions options = 0) { }
-
-	public String[] Split(Char[] separator) { }
-
-	public String[] Split(Char[] separator, int count) { }
-
-	public String[] Split(Char[] separator, StringSplitOptions options) { }
-
-	public String[] Split(Char[] separator, int count, StringSplitOptions options) { }
-
 	private String[] SplitInternal(string separator, String[] separators, int count, StringSplitOptions options) { }
 
-	private String[] SplitInternal(ReadOnlySpan<Char> separators, int count, StringSplitOptions options) { }
-
 	private String[] SplitInternal(string separator, int count, StringSplitOptions options) { }
+
+	private String[] SplitInternal(ReadOnlySpan<Char> separators, int count, StringSplitOptions options) { }
 
 	private String[] SplitKeepEmptyEntries(ReadOnlySpan<Int32> sepList, ReadOnlySpan<Int32> lengthList, int defaultLength, int count) { }
 
@@ -438,17 +442,17 @@ public sealed class string : IComparable, IEnumerable, IEnumerable<Char>, ICompa
 
 	public virtual string ToString() { }
 
-	public string ToUpper() { }
-
 	public string ToUpper(CultureInfo culture) { }
+
+	public string ToUpper() { }
 
 	public string ToUpperInvariant() { }
 
 	public string Trim(Char[] trimChars) { }
 
-	public string Trim(char trimChar) { }
-
 	public string Trim() { }
+
+	public string Trim(char trimChar) { }
 
 	public string TrimEnd(Char[] trimChars) { }
 

@@ -32,7 +32,7 @@ public class CommonToken : IToken
 
 	public override string Text
 	{
-		 get { } //Length: 111
+		 get { } //Length: 101
 		 set { } //Length: 5
 	}
 

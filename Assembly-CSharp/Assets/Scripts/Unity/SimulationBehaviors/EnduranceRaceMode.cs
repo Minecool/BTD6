@@ -10,7 +10,7 @@ public class EnduranceRaceMode : SimulationBehavior, IUISummaryScreenBehavior, I
 		 get { } //Length: 99
 	}
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 86
 	}
@@ -29,7 +29,7 @@ public class EnduranceRaceMode : SimulationBehavior, IUISummaryScreenBehavior, I
 
 	public double get_CovertTimeToChallengeTarget() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public override SubGameType get_SelectedScoreUI() { }
 

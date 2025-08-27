@@ -37,17 +37,17 @@ public struct ValueTask : IEquatable<ValueTask`1<TResult>>
 
 	public bool IsCompleted
 	{
-		 get { } //Length: 252
+		 get { } //Length: 248
 	}
 
 	public bool IsCompletedSuccessfully
 	{
-		 get { } //Length: 253
+		 get { } //Length: 249
 	}
 
 	public TResult Result
 	{
-		 get { } //Length: 272
+		 get { } //Length: 268
 	}
 
 	public ValueTask`1(TResult result) { }

@@ -31,13 +31,13 @@ public class DroneIdle : TowerBehavior
 	public int IgnoreTargetingFrames
 	{
 		 get { } //Length: 4
-		 set { } //Length: 144
+		 set { } //Length: 163
 	}
 
 	public int InactiveFrames
 	{
 		 get { } //Length: 4
-		 set { } //Length: 253
+		 set { } //Length: 249
 	}
 
 	public Attack MainAttack

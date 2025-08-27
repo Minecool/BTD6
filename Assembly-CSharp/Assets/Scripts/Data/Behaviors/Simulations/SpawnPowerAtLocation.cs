@@ -9,7 +9,7 @@ public class SpawnPowerAtLocation : SimulationBehavior
 
 	public virtual SimulationBehaviorModel Def
 	{
-		 get { } //Length: 190
+		 get { } //Length: 193
 	}
 
 	public SpawnPowerAtLocation() { }

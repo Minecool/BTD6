@@ -29,7 +29,7 @@ internal sealed class LabelInfo
 
 	private bool HasMultipleDefinitions
 	{
-		private get { } //Length: 130
+		private get { } //Length: 126
 	}
 
 	internal LabelInfo(LabelTarget node) { }

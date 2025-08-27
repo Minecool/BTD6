@@ -12,12 +12,12 @@ public class MatchCollection : IList<Match>, ICollection<Match>, IEnumerable<Mat
 
 		public override Match Current
 		{
-			 get { } //Length: 124
+			 get { } //Length: 119
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 124
+			private get { } //Length: 119
 		}
 
 		internal Enumerator(MatchCollection collection) { }

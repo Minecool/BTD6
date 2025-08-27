@@ -7,7 +7,7 @@ public class XmlAttribute : XmlNode
 
 	public virtual string BaseURI
 	{
-		 get { } //Length: 147
+		 get { } //Length: 116
 	}
 
 	public virtual string InnerText
@@ -63,7 +63,7 @@ public class XmlAttribute : XmlNode
 
 	public override XmlElement OwnerElement
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public virtual XmlNode ParentNode
@@ -95,7 +95,7 @@ public class XmlAttribute : XmlNode
 
 	internal virtual string XmlLang
 	{
-		internal get { } //Length: 147
+		internal get { } //Length: 116
 	}
 
 	internal XmlName XmlName

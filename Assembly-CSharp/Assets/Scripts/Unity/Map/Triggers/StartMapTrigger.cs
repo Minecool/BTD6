@@ -6,7 +6,7 @@ public class StartMapTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 149
+		 get { } //Length: 141
 	}
 
 	public StartMapTrigger() { }

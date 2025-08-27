@@ -35,8 +35,9 @@ public class GameEventPanel : MonoBehaviour
 		public CancellationToken cancellationToken; //Field offset: 0x38
 		private bool <hasCache>5__2; //Field offset: 0x40
 		private UnityWebRequest <webRequest>5__3; //Field offset: 0x48
-		private DateTime <startTime>5__4; //Field offset: 0x50
-		private YieldAwaiter <>u__1; //Field offset: 0x58
+		private UnityWebRequestAsyncOperation <request>5__4; //Field offset: 0x50
+		private DateTime <startTime>5__5; //Field offset: 0x58
+		private YieldAwaiter <>u__1; //Field offset: 0x60
 
 		private override void MoveNext() { }
 

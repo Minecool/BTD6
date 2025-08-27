@@ -14,7 +14,7 @@ public class DamageModifierSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 356
+		 get { } //Length: 352
 	}
 
 	public DamageModifierSupport() { }

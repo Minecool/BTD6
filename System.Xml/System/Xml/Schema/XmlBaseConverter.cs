@@ -52,7 +52,7 @@ internal abstract class XmlBaseConverter : XmlValueConverter
 
 	protected string XmlTypeName
 	{
-		 get { } //Length: 514
+		 get { } //Length: 511
 	}
 
 	private static XmlBaseConverter() { }

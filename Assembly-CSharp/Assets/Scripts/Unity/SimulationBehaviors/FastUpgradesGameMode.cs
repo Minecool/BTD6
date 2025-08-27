@@ -5,7 +5,7 @@ public class FastUpgradesGameMode : SimulationBehavior
 	public int maxTier; //Field offset: 0x18
 	public FastUpgradesType fastUpgradesModeType; //Field offset: 0x1C
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 102
 	}
@@ -17,7 +17,7 @@ public class FastUpgradesGameMode : SimulationBehavior
 
 	public FastUpgradesGameMode() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

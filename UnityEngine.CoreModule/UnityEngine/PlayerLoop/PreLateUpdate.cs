@@ -5,6 +5,12 @@ namespace UnityEngine.PlayerLoop;
 public struct PreLateUpdate
 {
 	[RequiredByNativeCode]
+	internal struct AccessibilityUpdate
+	{
+
+	}
+
+	[RequiredByNativeCode]
 	internal struct AIUpdatePostScript
 	{
 

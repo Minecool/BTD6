@@ -28,7 +28,7 @@ public class UnstableConconctionSplash : EmitOnPop
 
 	public virtual BloonBehaviorModel Def
 	{
-		 get { } //Length: 768
+		 get { } //Length: 815
 	}
 
 	public UnstableConconctionSplash() { }

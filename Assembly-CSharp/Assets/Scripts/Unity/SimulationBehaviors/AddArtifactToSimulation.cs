@@ -99,9 +99,9 @@ public class AddArtifactToSimulation : SimulationBehavior, IArtifactIncluder
 	public String[] artifactIds; //Field offset: 0x18
 	public EnableOptions enableOptions; //Field offset: 0x20
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
-		 get { } //Length: 337
+		 get { } //Length: 338
 	}
 
 	public virtual string Type
@@ -111,7 +111,7 @@ public class AddArtifactToSimulation : SimulationBehavior, IArtifactIncluder
 
 	public AddArtifactToSimulation() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

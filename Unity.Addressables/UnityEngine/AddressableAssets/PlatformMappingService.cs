@@ -12,9 +12,6 @@ public class PlatformMappingService
 
 	internal static string GetAddressablesPlatformPathInternal(RuntimePlatform platform) { }
 
-	[Obsolete("This API doesn't adapt to the addition of new platforms.  Use GetPlatformPathSubFolder instead.")]
-	public static AddressablesPlatform GetPlatform() { }
-
 	public static string GetPlatformPathSubFolder() { }
 
 }

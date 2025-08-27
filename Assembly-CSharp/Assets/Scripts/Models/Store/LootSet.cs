@@ -45,11 +45,11 @@ public class LootSet : List<BaseLoot>
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass72_0
+	private sealed class <>c__DisplayClass73_0
 	{
 		public BaseLoot lootType; //Field offset: 0x10
 
-		public <>c__DisplayClass72_0() { }
+		public <>c__DisplayClass73_0() { }
 
 		internal bool <Equals>b__0(BaseLoot x) { }
 
@@ -121,6 +121,8 @@ public class LootSet : List<BaseLoot>
 	public void AddPower(string power, int quantity) { }
 
 	public void AddPowersPacks(int quantity) { }
+
+	public void AddPowersProUnlockLoot(string proPowerId, bool isFullUnlock) { }
 
 	public void AddPropPack(string propPackName) { }
 

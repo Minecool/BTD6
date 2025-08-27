@@ -54,7 +54,7 @@ public class BloonModel : Model
 
 	public bool IsRock
 	{
-		 get { } //Length: 275
+		 get { } //Length: 174
 	}
 
 	public float Speed

@@ -10,13 +10,13 @@ public class SpriteShapeController : MonoBehaviour
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Comparison<AngleRange> <>9__137_0; //Field offset: 0x8
+		public static Comparison<AngleRange> <>9__158_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal int <UpdateSpriteData>b__137_0(AngleRange a, AngleRange b) { }
+		internal int <UpdateSpriteData>b__158_0(AngleRange a, AngleRange b) { }
 
 	}
 
@@ -33,54 +33,66 @@ public class SpriteShapeController : MonoBehaviour
 	private Sprite[] m_CornerSpriteArray; //Field offset: 0x58
 	private AngleRangeInfo[] m_AngleRangeInfoArray; //Field offset: 0x60
 	private NativeArray<float2> m_ColliderData; //Field offset: 0x68
-	private NativeArray<Vector4> m_TangentData; //Field offset: 0x78
-	private NativeArray<SpriteShapeGeneratorStats> m_Statistics; //Field offset: 0x88
-	private bool m_DynamicOcclusionLocal; //Field offset: 0x98
-	private bool m_DynamicOcclusionOverriden; //Field offset: 0x99
-	private bool m_ForceColliderShapeUpdate; //Field offset: 0x9A
-	private int m_ActiveSplineHash; //Field offset: 0x9C
-	private int m_ActiveSpriteShapeHash; //Field offset: 0xA0
-	private int m_MaxArrayCount; //Field offset: 0xA4
-	private JobHandle m_JobHandle; //Field offset: 0xA8
-	private SpriteShapeParameters m_ActiveShapeParameters; //Field offset: 0xB8
+	private NativeArray<float2> m_ShadowData; //Field offset: 0x78
+	private NativeArray<Vector4> m_TangentData; //Field offset: 0x88
+	private NativeArray<SpriteShapeGeneratorStats> m_Statistics; //Field offset: 0x98
+	private bool m_DynamicOcclusionLocal; //Field offset: 0xA8
+	private bool m_DynamicOcclusionOverriden; //Field offset: 0xA9
+	private bool m_TessellationNeedsFallback; //Field offset: 0xAA
+	private int m_ActiveSplineHash; //Field offset: 0xAC
+	private int m_ActiveSpriteShapeHash; //Field offset: 0xB0
+	private int m_MaxArrayCount; //Field offset: 0xB4
+	private JobHandle m_JobHandle; //Field offset: 0xB8
+	private SpriteShapeParameters m_ActiveShapeParameters; //Field offset: 0xC8
 	[SerializeField]
-	private Spline m_Spline; //Field offset: 0x120
+	private Spline m_Spline; //Field offset: 0x130
 	[SerializeField]
-	private SpriteShape m_SpriteShape; //Field offset: 0x128
+	private SpriteShape m_SpriteShape; //Field offset: 0x138
 	[SerializeField]
-	private float m_FillPixelPerUnit; //Field offset: 0x130
+	private float m_FillPixelPerUnit; //Field offset: 0x140
 	[SerializeField]
-	private float m_StretchTiling; //Field offset: 0x134
+	private float m_StretchTiling; //Field offset: 0x144
 	[SerializeField]
-	private int m_SplineDetail; //Field offset: 0x138
+	private int m_SplineDetail; //Field offset: 0x148
 	[SerializeField]
-	private bool m_AdaptiveUV; //Field offset: 0x13C
+	private bool m_AdaptiveUV; //Field offset: 0x14C
 	[SerializeField]
-	private bool m_StretchUV; //Field offset: 0x13D
+	private bool m_StretchUV; //Field offset: 0x14D
 	[SerializeField]
-	private bool m_WorldSpaceUV; //Field offset: 0x13E
+	private bool m_WorldSpaceUV; //Field offset: 0x14E
 	[SerializeField]
-	private float m_CornerAngleThreshold; //Field offset: 0x140
+	private float m_CornerAngleThreshold; //Field offset: 0x150
 	[SerializeField]
-	private int m_ColliderDetail; //Field offset: 0x144
+	private int m_ColliderDetail; //Field offset: 0x154
 	[Range(-0.5, 0.5)]
 	[SerializeField]
-	private float m_ColliderOffset; //Field offset: 0x148
+	private float m_ColliderOffset; //Field offset: 0x158
 	[SerializeField]
-	private bool m_UpdateCollider; //Field offset: 0x14C
+	private bool m_UpdateCollider; //Field offset: 0x15C
 	[SerializeField]
-	private bool m_EnableTangents; //Field offset: 0x14D
+	private bool m_EnableTangents; //Field offset: 0x15D
 	[HideInInspector]
 	[SerializeField]
-	private bool m_GeometryCached; //Field offset: 0x14E
+	private bool m_GeometryCached; //Field offset: 0x15E
 	[SerializeField]
-	private bool m_UTess2D; //Field offset: 0x14F
+	private bool m_UTess2D; //Field offset: 0x15F
 	[SerializeField]
-	private SpriteShapeGeometryCreator m_Creator; //Field offset: 0x150
+	private bool m_UpdateShadow; //Field offset: 0x160
 	[SerializeField]
-	private List<SpriteShapeGeometryModifier> m_Modifiers; //Field offset: 0x158
+	private int m_ShadowDetail; //Field offset: 0x164
+	[Range(-0.5, 0.5)]
 	[SerializeField]
-	private List<Vector2> m_ColliderSegment; //Field offset: 0x160
+	private float m_ShadowOffset; //Field offset: 0x168
+	[SerializeField]
+	private float m_BoundsScale; //Field offset: 0x16C
+	[SerializeField]
+	private SpriteShapeGeometryCreator m_Creator; //Field offset: 0x170
+	[SerializeField]
+	private List<SpriteShapeGeometryModifier> m_Modifiers; //Field offset: 0x178
+	[SerializeField]
+	private List<Vector2> m_ColliderSegment; //Field offset: 0x180
+	[SerializeField]
+	private List<Vector2> m_ShadowSegment; //Field offset: 0x188
 
 	public AngleRangeInfo[] angleRangeInfoArray
 	{
@@ -91,6 +103,12 @@ public class SpriteShapeController : MonoBehaviour
 	{
 		 get { } //Length: 8
 		 set { } //Length: 7
+	}
+
+	public float boundsScale
+	{
+		 get { } //Length: 9
+		 set { } //Length: 33
 	}
 
 	public int colliderDetail
@@ -118,7 +136,7 @@ public class SpriteShapeController : MonoBehaviour
 
 	public EdgeCollider2D edgeCollider
 	{
-		 get { } //Length: 254
+		 get { } //Length: 242
 	}
 
 	internal Sprite[] edgeSpriteArray
@@ -136,11 +154,6 @@ public class SpriteShapeController : MonoBehaviour
 	{
 		 get { } //Length: 9
 		 set { } //Length: 9
-	}
-
-	internal bool forceColliderShapeUpdate
-	{
-		internal get { } //Length: 8
 	}
 
 	internal bool geometryCached
@@ -177,7 +190,29 @@ public class SpriteShapeController : MonoBehaviour
 
 	public PolygonCollider2D polygonCollider
 	{
-		 get { } //Length: 254
+		 get { } //Length: 242
+	}
+
+	internal NativeArray<float2> shadowData
+	{
+		internal get { } //Length: 11
+	}
+
+	internal int shadowDetail
+	{
+		internal get { } //Length: 7
+		internal set { } //Length: 7
+	}
+
+	internal float shadowOffset
+	{
+		internal get { } //Length: 9
+		internal set { } //Length: 9
+	}
+
+	internal List<Vector2> shadowSegment
+	{
+		internal get { } //Length: 8
 	}
 
 	public Spline spline
@@ -209,13 +244,13 @@ public class SpriteShapeController : MonoBehaviour
 
 	public SpriteShapeGeometryCreator spriteShapeCreator
 	{
-		 get { } //Length: 308
+		 get { } //Length: 307
 		 set { } //Length: 100
 	}
 
 	internal SpriteShapeGeometryCache spriteShapeGeometryCache
 	{
-		internal get { } //Length: 327
+		internal get { } //Length: 311
 	}
 
 	public int spriteShapeHashCode
@@ -235,13 +270,19 @@ public class SpriteShapeController : MonoBehaviour
 
 	internal NativeArray<SpriteShapeGeneratorStats> stats
 	{
-		internal get { } //Length: 146
+		internal get { } //Length: 144
 	}
 
 	public float stretchTiling
 	{
 		 get { } //Length: 9
 		 set { } //Length: 9
+	}
+
+	internal bool updateShadow
+	{
+		internal get { } //Length: 8
+		internal set { } //Length: 7
 	}
 
 	public bool worldSpaceUVs
@@ -260,15 +301,19 @@ public class SpriteShapeController : MonoBehaviour
 
 	internal void BakeMeshForced() { }
 
+	internal void BakeShadow() { }
+
 	internal int CalculateMaxArrayCount(NativeArray<ShapeControlPoint> shapePoints) { }
 
 	private void DisposeInternal() { }
 
-	internal void ForceColliderShapeUpdate(bool forceUpdate) { }
+	internal void ForceShadowShapeUpdate(bool forceUpdate) { }
 
 	public AngleRangeInfo[] get_angleRangeInfoArray() { }
 
 	public bool get_autoUpdateCollider() { }
+
+	public float get_boundsScale() { }
 
 	public int get_colliderDetail() { }
 
@@ -286,8 +331,6 @@ public class SpriteShapeController : MonoBehaviour
 
 	public float get_fillPixelsPerUnit() { }
 
-	internal bool get_forceColliderShapeUpdate() { }
-
 	internal bool get_geometryCached() { }
 
 	public bool get_hasCollider() { }
@@ -301,6 +344,14 @@ public class SpriteShapeController : MonoBehaviour
 	public bool get_optimizeGeometry() { }
 
 	public PolygonCollider2D get_polygonCollider() { }
+
+	internal NativeArray<float2> get_shadowData() { }
+
+	internal int get_shadowDetail() { }
+
+	internal float get_shadowOffset() { }
+
+	internal List<Vector2> get_shadowSegment() { }
 
 	public Spline get_spline() { }
 
@@ -326,11 +377,13 @@ public class SpriteShapeController : MonoBehaviour
 
 	public float get_stretchTiling() { }
 
+	internal bool get_updateShadow() { }
+
 	public bool get_worldSpaceUVs() { }
 
-	internal NativeArray<float2> GetColliderShapeData() { }
-
 	private int GetCustomScriptHashCode() { }
+
+	internal NativeArray<float2> GetShadowShapeData() { }
 
 	internal NativeArray<ShapeControlPoint> GetShapeControlPoints() { }
 
@@ -348,6 +401,8 @@ public class SpriteShapeController : MonoBehaviour
 
 	private void OnApplicationQuit() { }
 
+	private void OnBecameInvisible() { }
+
 	private void OnDestroy() { }
 
 	private void OnDisable() { }
@@ -364,6 +419,8 @@ public class SpriteShapeController : MonoBehaviour
 
 	public void set_autoUpdateCollider(bool value) { }
 
+	public void set_boundsScale(float value) { }
+
 	public void set_colliderDetail(int value) { }
 
 	public void set_colliderOffset(float value) { }
@@ -378,6 +435,10 @@ public class SpriteShapeController : MonoBehaviour
 
 	internal void set_maxArrayCount(int value) { }
 
+	internal void set_shadowDetail(int value) { }
+
+	internal void set_shadowOffset(float value) { }
+
 	public void set_splineDetail(int value) { }
 
 	public void set_spriteShape(SpriteShape value) { }
@@ -385,6 +446,8 @@ public class SpriteShapeController : MonoBehaviour
 	public void set_spriteShapeCreator(SpriteShapeGeometryCreator value) { }
 
 	public void set_stretchTiling(float value) { }
+
+	internal void set_updateShadow(bool value) { }
 
 	public void set_worldSpaceUVs(bool value) { }
 

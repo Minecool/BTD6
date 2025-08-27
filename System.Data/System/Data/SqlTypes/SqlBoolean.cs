@@ -12,7 +12,7 @@ public struct SqlBoolean : INullable, IComparable, IXmlSerializable
 
 	public byte ByteValue
 	{
-		 get { } //Length: 131
+		 get { } //Length: 132
 	}
 
 	public bool IsFalse

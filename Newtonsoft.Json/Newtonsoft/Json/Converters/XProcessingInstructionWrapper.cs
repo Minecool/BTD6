@@ -7,19 +7,19 @@ internal class XProcessingInstructionWrapper : XObjectWrapper
 
 	public virtual string LocalName
 	{
-		 get { } //Length: 117
+		 get { } //Length: 109
 	}
 
 	[Nullable(1)]
 	private XProcessingInstruction ProcessingInstruction
 	{
 		[NullableContext(1)]
-		private get { } //Length: 107
+		private get { } //Length: 103
 	}
 
 	public virtual string Value
 	{
-		 get { } //Length: 117
+		 get { } //Length: 109
 	}
 
 	[NullableContext(1)]

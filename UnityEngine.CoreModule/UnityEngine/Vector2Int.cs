@@ -28,7 +28,7 @@ public struct Vector2Int : IEquatable<Vector2Int>, IFormattable
 	public int x
 	{
 		 get { } //Length: 5
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int y
@@ -66,11 +66,17 @@ public struct Vector2Int : IEquatable<Vector2Int>, IFormattable
 
 	public static Vector2Int Max(Vector2Int lhs, Vector2Int rhs) { }
 
+	public static Vector2Int op_Addition(Vector2Int a, Vector2Int b) { }
+
+	public static Vector2Int op_Division(Vector2Int a, int b) { }
+
 	public static bool op_Equality(Vector2Int lhs, Vector2Int rhs) { }
 
 	public static Vector2 op_Implicit(Vector2Int v) { }
 
 	public static bool op_Inequality(Vector2Int lhs, Vector2Int rhs) { }
+
+	public static Vector2Int op_Multiply(int a, Vector2Int b) { }
 
 	public void set_x(int value) { }
 

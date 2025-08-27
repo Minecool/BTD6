@@ -126,12 +126,12 @@ public abstract class XmlReader : IDisposable
 
 	public override Type ValueType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 50
 	}
 
 	public override string XmlLang
 	{
-		 get { } //Length: 54
+		 get { } //Length: 18
 	}
 
 	public override XmlSpace XmlSpace

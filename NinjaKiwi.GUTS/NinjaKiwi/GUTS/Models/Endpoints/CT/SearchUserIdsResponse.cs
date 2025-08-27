@@ -8,7 +8,7 @@ public class SearchUserIdsResponse : EndpointResponseBase, IUserServerIdsRespons
 	[JsonIgnore]
 	public override bool Success
 	{
-		 get { } //Length: 75
+		 get { } //Length: 74
 	}
 
 	public override UserServerIds UserServerIds

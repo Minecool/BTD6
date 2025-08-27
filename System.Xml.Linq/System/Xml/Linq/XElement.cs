@@ -77,7 +77,7 @@ public class XElement : XContainer, IXmlSerializable
 
 	public string Value
 	{
-		 get { } //Length: 269
+		 get { } //Length: 235
 	}
 
 	public XElement(XName name) { }

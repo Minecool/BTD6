@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements.Experimental;
 
-[EventCategory(EventCategory::EnterLeave (3))]
+[EventCategory(EventCategory::EnterLeave (4))]
 public class PointerOutLinkTagEvent : PointerEventBase<PointerOutLinkTagEvent>
 {
 	[CompilerGenerated]

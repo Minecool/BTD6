@@ -8,6 +8,9 @@ public static class RuntimeHelpers
 		 get { } //Length: 5
 	}
 
+	[ReliabilityContract(Consistency::WillNotCorruptState (3), Cer::Success (2))]
+	public static void EnsureSufficientExecutionStack() { }
+
 	public static int get_OffsetToStringData() { }
 
 	public static int GetHashCode(object o) { }

@@ -180,7 +180,7 @@ public class RelationshipManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 268
+		private get { } //Length: 256
 	}
 
 	internal RelationshipManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

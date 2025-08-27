@@ -9,7 +9,7 @@ public class FootprintZone : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 222
+		 get { } //Length: 256
 	}
 
 	public FootprintZone() { }

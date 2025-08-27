@@ -16,7 +16,7 @@ public class Peer
 	[JsonIgnore]
 	public bool IsIngame
 	{
-		 get { } //Length: 45
+		 get { } //Length: 48
 	}
 
 	public Peer(CoopPlayerInfo coopPlayerInfo) { }

@@ -10,7 +10,7 @@ public class PeerTargetedMessage : Message
 
 	public PeerTargetedMessage(int peerID, Message message) { }
 
-	protected virtual Byte[] CreateBytes() { }
+	private static Byte[] CreateBytes(int peerID, Message message) { }
 
 }
 

@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class SerializedVirtualizationData
 {
 	public Vector2 scrollOffset; //Field offset: 0x10

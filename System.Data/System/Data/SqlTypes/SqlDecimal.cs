@@ -66,22 +66,22 @@ public struct SqlDecimal : INullable, IComparable, IXmlSerializable
 
 	public Int32[] Data
 	{
-		 get { } //Length: 314
+		 get { } //Length: 301
 	}
 
 	public override bool IsNull
 	{
-		 get { } //Length: 96
+		 get { } //Length: 93
 	}
 
 	public bool IsPositive
 	{
-		 get { } //Length: 269
+		 get { } //Length: 257
 	}
 
 	public byte Scale
 	{
-		 get { } //Length: 224
+		 get { } //Length: 211
 	}
 
 	public decimal Value

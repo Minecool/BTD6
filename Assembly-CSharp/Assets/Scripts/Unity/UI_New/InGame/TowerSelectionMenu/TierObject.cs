@@ -8,11 +8,11 @@ public class TierObject : MonoBehaviour
 
 	public TierObject() { }
 
-	public void Inactive() { }
+	public override void Inactive() { }
 
-	public void TurnOff() { }
+	public override void TurnOff() { }
 
-	public void TurnOn() { }
+	public override void TurnOn() { }
 
 }
 

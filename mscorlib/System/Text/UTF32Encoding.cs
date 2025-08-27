@@ -30,7 +30,7 @@ public sealed class UTF32Encoding : Encoding
 
 	public virtual ReadOnlySpan<Byte> Preamble
 	{
-		 get { } //Length: 352
+		 get { } //Length: 340
 	}
 
 	private static UTF32Encoding() { }

@@ -3,11 +3,21 @@ namespace UnityEngine.UIElements;
 [HelpURL("UIE-USS")]
 public class StyleSheet : ScriptableObject
 {
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	public struct ImportStruct
 	{
 		public StyleSheet styleSheet; //Field offset: 0x0
 		public String[] mediaQueries; //Field offset: 0x8
 
+	}
+
+	public enum OrderedSelectorType
+	{
+		None = -1,
+		Name = 0,
+		Type = 1,
+		Class = 2,
+		Length = 3,
 	}
 
 	private static string kCustomPropertyMarker; //Field offset: 0x0
@@ -20,16 +30,22 @@ public class StyleSheet : ScriptableObject
 	[SerializeField]
 	private StyleComplexSelector[] m_ComplexSelectors; //Field offset: 0x28
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Single[] floats; //Field offset: 0x30
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Dimension[] dimensions; //Field offset: 0x38
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Color[] colors; //Field offset: 0x40
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal String[] strings; //Field offset: 0x48
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Object[] assets; //Field offset: 0x50
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal ImportStruct[] imports; //Field offset: 0x58
 	[SerializeField]
 	private List<StyleSheet> m_FlattenedImportedStyleSheets; //Field offset: 0x60
@@ -37,11 +53,13 @@ public class StyleSheet : ScriptableObject
 	private int m_ContentHash; //Field offset: 0x68
 	[SerializeField]
 	internal ScalableImage[] scalableImages; //Field offset: 0x70
-	internal Dictionary<String, StyleComplexSelector> orderedNameSelectors; //Field offset: 0x78
-	internal Dictionary<String, StyleComplexSelector> orderedTypeSelectors; //Field offset: 0x80
-	internal Dictionary<String, StyleComplexSelector> orderedClassSelectors; //Field offset: 0x88
-	private bool m_IsDefaultStyleSheet; //Field offset: 0x90
+	internal Dictionary<String, StyleComplexSelector>[] tables; //Field offset: 0x78
+	internal int nonEmptyTablesMask; //Field offset: 0x80
+	internal StyleComplexSelector firstRootSelector; //Field offset: 0x88
+	internal StyleComplexSelector firstWildCardSelector; //Field offset: 0x90
+	private bool m_IsDefaultStyleSheet; //Field offset: 0x98
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal StyleComplexSelector[] complexSelectors
 	{
 		internal get { } //Length: 7
@@ -56,6 +74,7 @@ public class StyleSheet : ScriptableObject
 
 	internal List<StyleSheet> flattenedRecursiveImports
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 7
 	}
 
@@ -71,12 +90,14 @@ public class StyleSheet : ScriptableObject
 		internal set { } //Length: 4
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal bool isDefaultStyleSheet
 	{
 		internal get { } //Length: 10
 		internal set { } //Length: 271
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal StyleRule[] rules
 	{
 		internal get { } //Length: 159
@@ -99,6 +120,7 @@ public class StyleSheet : ScriptableObject
 
 	public int get_contentHash() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal List<StyleSheet> get_flattenedRecursiveImports() { }
 
 	public bool get_importedWithErrors() { }
@@ -111,30 +133,43 @@ public class StyleSheet : ScriptableObject
 
 	internal override void OnEnable() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal object ReadAssetReference(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Color ReadColor(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Dimension ReadDimension(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal string ReadEnum(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal float ReadFloat(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal StyleValueFunction ReadFunction(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal string ReadFunctionName(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal StyleValueKeyword ReadKeyword(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal string ReadMissingAssetReferenceUrl(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal string ReadResourcePath(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal ScalableImage ReadScalableImage(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal string ReadString(StyleValueHandle handle) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal string ReadVariable(StyleValueHandle handle) { }
 
 	internal void set_complexSelectors(StyleComplexSelector[] value) { }

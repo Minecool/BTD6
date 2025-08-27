@@ -18,7 +18,7 @@ public struct ManipulatorActivationFilter : IEquatable<ManipulatorActivationFilt
 		[IsReadOnly]
 		 get { } //Length: 3
 		[CompilerGenerated]
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int clickCount
@@ -55,11 +55,7 @@ public struct ManipulatorActivationFilter : IEquatable<ManipulatorActivationFilt
 
 	public virtual int GetHashCode() { }
 
-	private bool HasModifiers(IMouseEvent e) { }
-
 	private bool HasModifiers(IPointerEvent e) { }
-
-	public bool Matches(IMouseEvent e) { }
 
 	public bool Matches(IPointerEvent e) { }
 

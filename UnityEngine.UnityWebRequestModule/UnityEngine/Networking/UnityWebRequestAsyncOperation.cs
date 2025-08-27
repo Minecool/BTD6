@@ -1,10 +1,17 @@
 namespace UnityEngine.Networking;
 
-[NativeHeader("Modules/UnityWebRequest/Public/UnityWebRequestAsyncOperation.h")]
 [NativeHeader("UnityWebRequestScriptingClasses.h")]
+[NativeHeader("Modules/UnityWebRequest/Public/UnityWebRequestAsyncOperation.h")]
 [UsedByNativeCode]
 public class UnityWebRequestAsyncOperation : AsyncOperation
 {
+	public static class BindingsMarshaller
+	{
+
+		public static UnityWebRequestAsyncOperation ConvertToManaged(IntPtr ptr) { }
+
+	}
+
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private UnityWebRequest <webRequest>k__BackingField; //Field offset: 0x20
@@ -17,7 +24,7 @@ public class UnityWebRequestAsyncOperation : AsyncOperation
 		internal set { } //Length: 5
 	}
 
-	public UnityWebRequestAsyncOperation() { }
+	private UnityWebRequestAsyncOperation(IntPtr ptr) { }
 
 	[CompilerGenerated]
 	public UnityWebRequest get_webRequest() { }

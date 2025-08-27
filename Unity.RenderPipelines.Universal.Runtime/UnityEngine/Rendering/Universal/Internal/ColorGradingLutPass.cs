@@ -6,23 +6,24 @@ public class ColorGradingLutPass : ScriptableRenderPass
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static RenderFunc<PassData> <>9__13_0; //Field offset: 0x8
+		public static BaseRenderFunc<PassData, RasterGraphContext> <>9__14_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <Render>b__13_0(PassData data, RenderGraphContext context) { }
+		internal void <Render>b__14_0(PassData data, RasterGraphContext context) { }
 
 	}
 
 	private class PassData
 	{
-		internal RenderingData renderingData; //Field offset: 0x10
-		internal Material lutBuilderLdr; //Field offset: 0x2C8
-		internal Material lutBuilderHdr; //Field offset: 0x2D0
-		internal bool allowColorGradingACESHDR; //Field offset: 0x2D8
-		internal TextureHandle internalLut; //Field offset: 0x2DC
+		internal UniversalCameraData cameraData; //Field offset: 0x10
+		internal UniversalPostProcessingData postProcessingData; //Field offset: 0x18
+		internal Material lutBuilderLdr; //Field offset: 0x20
+		internal Material lutBuilderHdr; //Field offset: 0x28
+		internal bool allowColorGradingACESHDR; //Field offset: 0x30
+		internal TextureHandle internalLut; //Field offset: 0x34
 
 		public PassData() { }
 
@@ -59,13 +60,13 @@ public class ColorGradingLutPass : ScriptableRenderPass
 
 	}
 
-	private readonly Material m_LutBuilderLdr; //Field offset: 0xE0
-	private readonly Material m_LutBuilderHdr; //Field offset: 0xE8
-	internal readonly GraphicsFormat m_HdrLutFormat; //Field offset: 0xF0
-	internal readonly GraphicsFormat m_LdrLutFormat; //Field offset: 0xF4
-	private PassData m_PassData; //Field offset: 0xF8
-	private RTHandle m_InternalLut; //Field offset: 0x100
-	private bool m_AllowColorGradingACESHDR; //Field offset: 0x108
+	private readonly Material m_LutBuilderLdr; //Field offset: 0xB8
+	private readonly Material m_LutBuilderHdr; //Field offset: 0xC0
+	internal readonly GraphicsFormat m_HdrLutFormat; //Field offset: 0xC8
+	internal readonly GraphicsFormat m_LdrLutFormat; //Field offset: 0xCC
+	private PassData m_PassData; //Field offset: 0xD0
+	private RTHandle m_InternalLut; //Field offset: 0xD8
+	private bool m_AllowColorGradingACESHDR; //Field offset: 0xE0
 
 	public ColorGradingLutPass(RenderPassEvent evt, PostProcessData data) { }
 
@@ -76,11 +77,14 @@ public class ColorGradingLutPass : ScriptableRenderPass
 
 	public void ConfigureDescriptor(in PostProcessingData postProcessingData, out RenderTextureDescriptor descriptor, out FilterMode filterMode) { }
 
+	public void ConfigureDescriptor(in UniversalPostProcessingData postProcessingData, out RenderTextureDescriptor descriptor, out FilterMode filterMode) { }
+
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public virtual void Execute(ScriptableRenderContext context, ref RenderingData renderingData) { }
 
-	private static void ExecutePass(ScriptableRenderContext context, PassData passData, ref RenderingData renderingData, RTHandle internalLutTarget) { }
+	private static void ExecutePass(RasterCommandBuffer cmd, PassData passData, RTHandle internalLutTarget) { }
 
-	internal void Render(RenderGraph renderGraph, out TextureHandle internalColorLut, ref RenderingData renderingData) { }
+	internal void Render(RenderGraph renderGraph, ContextContainer frameData, out TextureHandle internalColorLut) { }
 
 	public void Setup(in RTHandle internalLut) { }
 

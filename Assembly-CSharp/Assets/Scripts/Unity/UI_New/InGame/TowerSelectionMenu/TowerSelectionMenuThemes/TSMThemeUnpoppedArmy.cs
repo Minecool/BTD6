@@ -2,9 +2,9 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeUnpoppedArmy : TSMThemeCamo
 {
-	public TSMButton targetTypeButton; //Field offset: 0xD0
-	public NK_TextMeshProUGUI necroCount; //Field offset: 0xD8
-	protected readonly TSMInfoModel info; //Field offset: 0xE0
+	public TSMButton targetTypeButton; //Field offset: 0xE8
+	public NK_TextMeshProUGUI necroCount; //Field offset: 0xF0
+	protected readonly TSMInfoModel info; //Field offset: 0xF8
 
 	public TSMThemeUnpoppedArmy() { }
 

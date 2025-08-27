@@ -38,9 +38,9 @@ public class XmlSchemaElement : XmlSchemaParticle
 		 get { } //Length: 7
 	}
 
+	[XmlElement("key", typeof(XmlSchemaKey))]
 	[XmlElement("keyref", typeof(XmlSchemaKeyref))]
 	[XmlElement("unique", typeof(XmlSchemaUnique))]
-	[XmlElement("key", typeof(XmlSchemaKey))]
 	public XmlSchemaObjectCollection Constraints
 	{
 		 get { } //Length: 111
@@ -104,7 +104,7 @@ public class XmlSchemaElement : XmlSchemaParticle
 
 	internal bool HasConstraints
 	{
-		internal get { } //Length: 45
+		internal get { } //Length: 40
 	}
 
 	[XmlIgnore]

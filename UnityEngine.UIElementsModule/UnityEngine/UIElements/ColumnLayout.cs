@@ -54,9 +54,9 @@ internal class ColumnLayout
 	public event Action layoutRequested
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public Columns columns
@@ -66,7 +66,7 @@ internal class ColumnLayout
 
 	public float columnsWidth
 	{
-		 get { } //Length: 496
+		 get { } //Length: 494
 	}
 
 	public bool hasRelativeWidthColumns

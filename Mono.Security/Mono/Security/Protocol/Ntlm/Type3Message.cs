@@ -14,7 +14,7 @@ public class Type3Message : MessageBase
 
 	public string Domain
 	{
-		 set { } //Length: 105
+		 set { } //Length: 116
 	}
 
 	public string Password

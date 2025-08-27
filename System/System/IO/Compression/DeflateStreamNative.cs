@@ -7,7 +7,7 @@ internal class DeflateStreamNative
 
 		public virtual bool IsInvalid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		private SafeDeflateStreamHandle() { }

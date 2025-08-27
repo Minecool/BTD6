@@ -393,7 +393,7 @@ public static class LiNKFriends
 	[AsyncStateMachine(typeof(<Task_GetLiNKFriendData>d__44))]
 	private static Task<List`1<LiNKFriendData>> Task_GetLiNKFriendData(bool forceRefresh, bool showErrors, bool throwExceptions) { }
 
-	public static void ThrowFriendPopupMessage(Exception ex, string alternateErrorLoc = "") { }
+	public static void ThrowFriendPopupMessage(Exception ex, string titleLocKeyOverride = null, string bodyLocKeyOverride = null) { }
 
 	[AsyncStateMachine(typeof(<ToggleTeamRequestsAllowed>d__50))]
 	public static Task<Boolean> ToggleTeamRequestsAllowed(bool toggleOn) { }

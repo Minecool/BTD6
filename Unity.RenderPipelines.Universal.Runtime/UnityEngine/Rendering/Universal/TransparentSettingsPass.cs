@@ -2,17 +2,14 @@ namespace UnityEngine.Rendering.Universal;
 
 internal class TransparentSettingsPass : ScriptableRenderPass
 {
-	private const string m_ProfilerTag = "Transparent Settings Pass"; //Field offset: 0x0
-	private static readonly ProfilingSampler m_ProfilingSampler; //Field offset: 0x0
-	private bool m_shouldReceiveShadows; //Field offset: 0xE0
-
-	private static TransparentSettingsPass() { }
+	private bool m_shouldReceiveShadows; //Field offset: 0xB8
 
 	public TransparentSettingsPass(RenderPassEvent evt, bool shadowReceiveSupported) { }
 
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public virtual void Execute(ScriptableRenderContext context, ref RenderingData renderingData) { }
 
-	public static void ExecutePass(CommandBuffer cmd, bool shouldReceiveShadows) { }
+	public static void ExecutePass(RasterCommandBuffer rasterCommandBuffer) { }
 
 	public bool Setup() { }
 

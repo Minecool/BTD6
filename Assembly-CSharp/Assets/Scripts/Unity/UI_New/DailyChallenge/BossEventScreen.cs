@@ -235,7 +235,7 @@ public class BossEventScreen : GameMenu
 
 	private bool IsEndingSoon
 	{
-		private get { } //Length: 87
+		private get { } //Length: 84
 	}
 
 	private bool IsRankedSelected

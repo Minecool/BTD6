@@ -96,12 +96,12 @@ internal class XsdValidatingReader : XmlReader, IXmlSchemaInfo, IXmlLineInfo, IX
 
 	public override int LineNumber
 	{
-		 get { } //Length: 84
+		 get { } //Length: 79
 	}
 
 	public override int LinePosition
 	{
-		 get { } //Length: 84
+		 get { } //Length: 79
 	}
 
 	public virtual string LocalName
@@ -126,7 +126,7 @@ internal class XsdValidatingReader : XmlReader, IXmlSchemaInfo, IXmlLineInfo, IX
 
 	public virtual XmlNodeType NodeType
 	{
-		 get { } //Length: 158
+		 get { } //Length: 152
 	}
 
 	public virtual string Prefix
@@ -151,12 +151,12 @@ internal class XsdValidatingReader : XmlReader, IXmlSchemaInfo, IXmlLineInfo, IX
 
 	public virtual XmlReaderSettings Settings
 	{
-		 get { } //Length: 213
+		 get { } //Length: 212
 	}
 
 	private override bool System.Xml.Schema.IXmlSchemaInfo.IsDefault
 	{
-		private get { } //Length: 137
+		private get { } //Length: 148
 	}
 
 	private override bool System.Xml.Schema.IXmlSchemaInfo.IsNil
@@ -166,12 +166,12 @@ internal class XsdValidatingReader : XmlReader, IXmlSchemaInfo, IXmlLineInfo, IX
 
 	private override XmlSchemaSimpleType System.Xml.Schema.IXmlSchemaInfo.MemberType
 	{
-		private get { } //Length: 414
+		private get { } //Length: 402
 	}
 
 	private override XmlSchemaAttribute System.Xml.Schema.IXmlSchemaInfo.SchemaAttribute
 	{
-		private get { } //Length: 76
+		private get { } //Length: 74
 	}
 
 	private override XmlSchemaElement System.Xml.Schema.IXmlSchemaInfo.SchemaElement
@@ -181,12 +181,12 @@ internal class XsdValidatingReader : XmlReader, IXmlSchemaInfo, IXmlLineInfo, IX
 
 	private override XmlSchemaType System.Xml.Schema.IXmlSchemaInfo.SchemaType
 	{
-		private get { } //Length: 95
+		private get { } //Length: 93
 	}
 
 	private override XmlSchemaValidity System.Xml.Schema.IXmlSchemaInfo.Validity
 	{
-		private get { } //Length: 183
+		private get { } //Length: 168
 	}
 
 	public virtual string Value
@@ -196,7 +196,7 @@ internal class XsdValidatingReader : XmlReader, IXmlSchemaInfo, IXmlLineInfo, IX
 
 	public virtual Type ValueType
 	{
-		 get { } //Length: 208
+		 get { } //Length: 201
 	}
 
 	public virtual string XmlLang

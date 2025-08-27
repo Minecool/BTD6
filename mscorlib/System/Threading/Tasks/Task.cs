@@ -129,22 +129,6 @@ public class Task : IThreadPoolWorkItem, IAsyncResult, IDisposable
 	[ThreadStatic]
 	private static StackGuard t_stackGuard; //Field offset: 0x80000008
 	internal static int s_taskIdCounter; //Field offset: 0x0
-	private const int CANCELLATION_REQUESTED = 1; //Field offset: 0x0
-	private const int TASK_STATE_COMPLETED_MASK = 23068672; //Field offset: 0x0
-	internal const int TASK_STATE_WAIT_COMPLETION_NOTIFICATION = 268435456; //Field offset: 0x0
-	internal const int TASK_STATE_THREAD_WAS_ABORTED = 134217728; //Field offset: 0x0
-	internal const int TASK_STATE_WAITINGFORACTIVATION = 33554432; //Field offset: 0x0
-	internal const int TASK_STATE_RAN_TO_COMPLETION = 16777216; //Field offset: 0x0
-	internal const int TASK_STATE_WAITING_ON_CHILDREN = 8388608; //Field offset: 0x0
-	internal const int TASK_STATE_CANCELED = 4194304; //Field offset: 0x0
-	internal const int TASK_STATE_FAULTED = 2097152; //Field offset: 0x0
-	internal const int TASK_STATE_COMPLETION_RESERVED = 67108864; //Field offset: 0x0
-	internal const int TASK_STATE_EXCEPTIONOBSERVEDBYPARENT = 524288; //Field offset: 0x0
-	internal const int TASK_STATE_DISPOSED = 262144; //Field offset: 0x0
-	internal const int TASK_STATE_DELEGATE_INVOKED = 131072; //Field offset: 0x0
-	internal const int TASK_STATE_STARTED = 65536; //Field offset: 0x0
-	private const int OptionsMask = 65535; //Field offset: 0x0
-	internal const int TASK_STATE_CANCELLATIONACKNOWLEDGED = 1048576; //Field offset: 0x0
 	private static readonly object s_taskCompletionSentinel; //Field offset: 0x8
 	internal static bool s_asyncDebuggingEnabled; //Field offset: 0x10
 	private static readonly Action<Object> s_taskCancelCallback; //Field offset: 0x18
@@ -179,7 +163,7 @@ public class Task : IThreadPoolWorkItem, IAsyncResult, IDisposable
 
 	internal ExecutionContext CapturedContext
 	{
-		internal get { } //Length: 116
+		internal get { } //Length: 108
 		internal set { } //Length: 126
 	}
 
@@ -302,7 +286,7 @@ public class Task : IThreadPoolWorkItem, IAsyncResult, IDisposable
 
 	private override WaitHandle System.IAsyncResult.AsyncWaitHandle
 	{
-		private get { } //Length: 412
+		private get { } //Length: 411
 	}
 
 	private override bool System.IAsyncResult.CompletedSynchronously

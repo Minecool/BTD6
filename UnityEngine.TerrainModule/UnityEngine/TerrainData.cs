@@ -30,35 +30,34 @@ public sealed class TerrainData : object
 	public Vector3 size
 	{
 		[NativeName("GetHeightmap().GetSize")]
-		 get { } //Length: 77
+		 get { } //Length: 177
 	}
 
 	internal Terrain[] users
 	{
-		internal get { } //Length: 51
+		internal get { } //Length: 151
 	}
 
 	private static TerrainData() { }
 
-	public TerrainData() { }
-
 	[NativeName("GetHeightmap().GetSize")]
 	public Vector3 get_size() { }
 
-	private void get_size_Injected(out Vector3 ret) { }
+	private static void get_size_Injected(IntPtr _unity_self, out Vector3 ret) { }
 
 	internal Terrain[] get_users() { }
+
+	private static Terrain[] get_users_Injected(IntPtr _unity_self) { }
 
 	[NativeName("GetSplatDatabase().GetAlphamapResolution")]
 	[RequiredByNativeCode]
 	internal float GetAlphamapResolutionInternal() { }
 
+	private static float GetAlphamapResolutionInternal_Injected(IntPtr _unity_self) { }
+
 	[StaticAccessor("TerrainDataScriptingInterface", StaticAccessorType::DoubleColon (2))]
 	[ThreadSafe]
 	private static int GetBoundaryValue(BoundaryValueType type) { }
-
-	[FreeFunction("TerrainDataScriptingInterface::Create")]
-	private static void Internal_Create(TerrainData terrainData) { }
 
 }
 

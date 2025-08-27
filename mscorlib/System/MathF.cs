@@ -7,8 +7,6 @@ public static class MathF
 
 	private static MathF() { }
 
-	public static float Abs(float x) { }
-
 	public static float Atan2(float y, float x) { }
 
 	public static float Cos(float x) { }

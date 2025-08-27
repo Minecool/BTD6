@@ -11,7 +11,7 @@ public class CritMultiplier : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 392
+		 get { } //Length: 394
 	}
 
 	public CritMultiplier() { }

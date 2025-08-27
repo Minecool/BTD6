@@ -30,7 +30,5 @@ public class ImfLoan : AbilityBehavior
 
 	public virtual void UpdatedModel(Model modelToUse) { }
 
-	private void UpdateStudentLoansAchievement() { }
-
 }
 

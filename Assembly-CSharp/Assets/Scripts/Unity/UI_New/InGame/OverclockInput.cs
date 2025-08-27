@@ -3,12 +3,12 @@ namespace Assets.Scripts.Unity.UI_New.InGame;
 public class OverclockInput : CustomInput
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass5_0
+	private sealed class <>c__DisplayClass6_0
 	{
 		public TowerToSimulation bridgeTower; //Field offset: 0x10
 		public OverclockInput <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass5_0() { }
+		public <>c__DisplayClass6_0() { }
 
 		internal void <EnterInputMode>b__0(UnityDisplayNode img) { }
 
@@ -26,9 +26,13 @@ public class OverclockInput : CustomInput
 
 	public virtual void ExitInputMode() { }
 
+	public virtual string GetCantActivateMessage() { }
+
 	public virtual string GetHelperMessage() { }
 
 	public virtual void Init(AbilityToSimulation ability) { }
+
+	public virtual void Init(TowerToSimulation tower, TargetType targetType = null, ObjectId towerBehaviorObjectId = null, string buttonId = null) { }
 
 	public virtual void Update(Vector3 cursorPosUnityWorld, Vector2 cursorPosWorld, bool isCursorActive) { }
 

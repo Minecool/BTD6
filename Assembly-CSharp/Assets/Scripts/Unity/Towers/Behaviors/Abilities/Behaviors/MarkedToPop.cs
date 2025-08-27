@@ -14,7 +14,7 @@ public class MarkedToPop : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 412
+		 get { } //Length: 404
 	}
 
 	public MarkedToPop() { }

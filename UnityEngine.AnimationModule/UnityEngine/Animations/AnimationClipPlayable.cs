@@ -17,7 +17,7 @@ public struct AnimationClipPlayable : IPlayable, IEquatable<AnimationClipPlayabl
 	[NativeThrows]
 	private static bool CreateHandleInternal(PlayableGraph graph, AnimationClip clip, ref PlayableHandle handle) { }
 
-	private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, AnimationClip clip, ref PlayableHandle handle) { }
+	private static bool CreateHandleInternal_Injected(in PlayableGraph graph, IntPtr clip, ref PlayableHandle handle) { }
 
 	public override bool Equals(AnimationClipPlayable other) { }
 

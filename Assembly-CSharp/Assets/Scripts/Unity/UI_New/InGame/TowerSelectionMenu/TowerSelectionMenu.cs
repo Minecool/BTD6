@@ -3,26 +3,26 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu;
 public class TowerSelectionMenu : DynamicUiObject
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass126_0
+	private sealed class <>c__DisplayClass130_0
 	{
 		public TowerSelectionMenu <>4__this; //Field offset: 0x10
 		public PrefabReference secondaryMenuPrefab; //Field offset: 0x18
 
-		public <>c__DisplayClass126_0() { }
+		public <>c__DisplayClass130_0() { }
 
 		internal void <LoadSecondarySelectionMenu>b__0(AsyncOperationHandle<GameObject> handle) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass68_0
+	private sealed class <>c__DisplayClass70_0
 	{
 		public TowerSelectionMenu <>4__this; //Field offset: 0x10
 		public UpgradeModel upgrade; //Field offset: 0x18
 		public int index; //Field offset: 0x20
 		public float upgradeCost; //Field offset: 0x24
 
-		public <>c__DisplayClass68_0() { }
+		public <>c__DisplayClass70_0() { }
 
 		internal void <UpgradeTower>b__0() { }
 
@@ -35,7 +35,7 @@ public class TowerSelectionMenu : DynamicUiObject
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass69_0
+	private sealed class <>c__DisplayClass71_0
 	{
 		public float upgradeCost; //Field offset: 0x10
 		public double nonUpgradeCashInvestment; //Field offset: 0x18
@@ -43,27 +43,27 @@ public class TowerSelectionMenu : DynamicUiObject
 		public int path; //Field offset: 0x28
 		public UpgradeModel upgrade; //Field offset: 0x30
 
-		public <>c__DisplayClass69_0() { }
+		public <>c__DisplayClass71_0() { }
 
 		internal void <UpgradeTower>b__0(bool isUpgraded) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass82_0
+	private sealed class <>c__DisplayClass86_0
 	{
 		public TowerSelectionMenu <>4__this; //Field offset: 0x10
 		public TowerToSimulation selectedTowerLocal; //Field offset: 0x18
 		public int levelUpCost; //Field offset: 0x20
 
-		public <>c__DisplayClass82_0() { }
+		public <>c__DisplayClass86_0() { }
 
 		internal void <UnlockNextHeroLevel>b__0(bool success) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <Initialise>d__58 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <Initialise>d__60 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -82,7 +82,7 @@ public class TowerSelectionMenu : DynamicUiObject
 		}
 
 		[DebuggerHidden]
-		public <Initialise>d__58(int <>1__state) { }
+		public <Initialise>d__60(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -111,52 +111,54 @@ public class TowerSelectionMenu : DynamicUiObject
 	public GameObject heroDetails; //Field offset: 0x30
 	public GameObject towerDetails; //Field offset: 0x38
 	public GameObject paragonDetails; //Field offset: 0x40
-	public Animator animator; //Field offset: 0x48
-	public UpgradeInfoPopup[] upgradeInfoPopups; //Field offset: 0x50
-	public GameObject sellButton; //Field offset: 0x58
-	private Button sellButtonButton; //Field offset: 0x60
-	public RightMenu rightMenu; //Field offset: 0x68
-	public NK_TextMeshProUGUI CurrentHeroLevelTitle; //Field offset: 0x70
-	public NK_TextMeshProUGUI CurrentHeroLevelDescription; //Field offset: 0x78
-	public NK_TextMeshProUGUI CurrentHeroLevel; //Field offset: 0x80
-	public NK_TextMeshProUGUI NextHeroLevelTitle; //Field offset: 0x88
-	public NK_TextMeshProUGUI NextHeroLevelDescription; //Field offset: 0x90
-	public NK_TextMeshProUGUI UnlockNextHeroCost; //Field offset: 0x98
-	public Button unlockNextHeroLevelBtn; //Field offset: 0xA0
-	public Image HeroXpBar; //Field offset: 0xA8
-	public UpgradeObject[] upgradeButtons; //Field offset: 0xB0
-	public AbilityButton[] abilityButtons; //Field offset: 0xB8
-	public GameObject emptyAbilityIconObject; //Field offset: 0xC0
-	public NK_TextMeshProUGUI paragonTitle; //Field offset: 0xC8
-	public NK_TextMeshProUGUI paragonDescription; //Field offset: 0xD0
-	public NK_TextMeshProUGUI paragonDegree; //Field offset: 0xD8
-	public Image paragonIcon; //Field offset: 0xE0
-	public RectTransform scalar; //Field offset: 0xE8
-	public float bottomScaleAmount; //Field offset: 0xF0
-	public GameObject[] removeOnSubTower; //Field offset: 0xF8
-	private TowerToSimulation selectedTower; //Field offset: 0x100
-	public List<ObjectId> unsellableTowers; //Field offset: 0x108
-	public AudioClip returnSound; //Field offset: 0x110
-	public TowerSelectionMenuThemeManager themeManager; //Field offset: 0x118
-	public Button heroBoosterButton; //Field offset: 0x120
-	public NK_TextMeshProUGUI heroBoosterButtonText; //Field offset: 0x128
-	public Button duplicateButton; //Field offset: 0x130
-	public Button duplicateCircleButton; //Field offset: 0x138
-	public Button placeCrosspathsButton; //Field offset: 0x140
-	public Button paragonButton; //Field offset: 0x148
-	public Button forceParagonButton; //Field offset: 0x150
-	public GameObject secondarySelectionMenuContainer; //Field offset: 0x158
-	public Button secondarySelectionMenuButton; //Field offset: 0x160
-	public Animator secondarySelectionMenuCloseButtonAnimator; //Field offset: 0x168
+	public GameObject powerProDetails; //Field offset: 0x48
+	public Animator animator; //Field offset: 0x50
+	public UpgradeInfoPopup[] upgradeInfoPopups; //Field offset: 0x58
+	public GameObject sellButton; //Field offset: 0x60
+	private Button sellButtonButton; //Field offset: 0x68
+	public RightMenu rightMenu; //Field offset: 0x70
+	public NK_TextMeshProUGUI CurrentHeroLevelTitle; //Field offset: 0x78
+	public NK_TextMeshProUGUI CurrentHeroLevelDescription; //Field offset: 0x80
+	public NK_TextMeshProUGUI CurrentHeroLevel; //Field offset: 0x88
+	public NK_TextMeshProUGUI NextHeroLevelTitle; //Field offset: 0x90
+	public NK_TextMeshProUGUI NextHeroLevelDescription; //Field offset: 0x98
+	public NK_TextMeshProUGUI UnlockNextHeroCost; //Field offset: 0xA0
+	public Button unlockNextHeroLevelBtn; //Field offset: 0xA8
+	public Image HeroXpBar; //Field offset: 0xB0
+	public UpgradeObject[] upgradeButtons; //Field offset: 0xB8
+	public AbilityButton[] abilityButtons; //Field offset: 0xC0
+	public GameObject emptyAbilityIconObject; //Field offset: 0xC8
+	public UpgradeObject[] powersProUpgradeButtons; //Field offset: 0xD0
+	public NK_TextMeshProUGUI paragonTitle; //Field offset: 0xD8
+	public NK_TextMeshProUGUI paragonDescription; //Field offset: 0xE0
+	public NK_TextMeshProUGUI paragonDegree; //Field offset: 0xE8
+	public Image paragonIcon; //Field offset: 0xF0
+	public RectTransform scalar; //Field offset: 0xF8
+	public float bottomScaleAmount; //Field offset: 0x100
+	public GameObject[] removeOnSubTower; //Field offset: 0x108
+	private TowerToSimulation selectedTower; //Field offset: 0x110
+	public List<ObjectId> unsellableTowers; //Field offset: 0x118
+	public AudioClip returnSound; //Field offset: 0x120
+	public TowerSelectionMenuThemeManager themeManager; //Field offset: 0x128
+	public Button heroBoosterButton; //Field offset: 0x130
+	public NK_TextMeshProUGUI heroBoosterButtonText; //Field offset: 0x138
+	public Button duplicateButton; //Field offset: 0x140
+	public Button duplicateCircleButton; //Field offset: 0x148
+	public Button placeCrosspathsButton; //Field offset: 0x150
+	public Button paragonButton; //Field offset: 0x158
+	public Button forceParagonButton; //Field offset: 0x160
+	public GameObject secondarySelectionMenuContainer; //Field offset: 0x168
+	public Button secondarySelectionMenuButton; //Field offset: 0x170
+	public Animator secondarySelectionMenuCloseButtonAnimator; //Field offset: 0x178
 	[CompilerGenerated]
-	private SecondarySelectionMenuUi <CurrentSecondaryMenu>k__BackingField; //Field offset: 0x170
-	private AsyncOperationHandle<GameObject> loadSecondarySelectionMenuHandle; //Field offset: 0x178
-	private Dictionary<PrefabReference, SecondarySelectionMenuUi> secondaryMenues; //Field offset: 0x190
-	private bool triggerUiUpdate; //Field offset: 0x198
-	public bool wasSecondarySelectionMenuShowing; //Field offset: 0x199
-	public bool isUpgradePopupShowing; //Field offset: 0x19A
-	private bool showing; //Field offset: 0x19B
-	private int fromLevel; //Field offset: 0x19C
+	private SecondarySelectionMenuUi <CurrentSecondaryMenu>k__BackingField; //Field offset: 0x180
+	private AsyncOperationHandle<GameObject> loadSecondarySelectionMenuHandle; //Field offset: 0x188
+	private Dictionary<PrefabReference, SecondarySelectionMenuUi> secondaryMenues; //Field offset: 0x1A0
+	private bool triggerUiUpdate; //Field offset: 0x1A8
+	public bool wasSecondarySelectionMenuShowing; //Field offset: 0x1A9
+	public bool isUpgradePopupShowing; //Field offset: 0x1AA
+	private bool showing; //Field offset: 0x1AB
+	private int fromLevel; //Field offset: 0x1AC
 
 	private UnityToSimulation Bridge
 	{
@@ -181,6 +183,8 @@ public class TowerSelectionMenu : DynamicUiObject
 
 	public string ConvertTouchTextToMouse(string text) { }
 
+	private UpgradeObject[] CurrentUpgradeObjects() { }
+
 	public void DebugDuplicateCircle() { }
 
 	public void DebugDuplicateTower() { }
@@ -190,6 +194,8 @@ public class TowerSelectionMenu : DynamicUiObject
 	public void DebugPlaceCrosspaths() { }
 
 	public void DeselectTower() { }
+
+	public void DisableUpgradeGlow() { }
 
 	public void EndMatch(InputManager im) { }
 
@@ -208,7 +214,7 @@ public class TowerSelectionMenu : DynamicUiObject
 
 	public void HideUpgradeInfoPopup(int row) { }
 
-	[IteratorStateMachine(typeof(<Initialise>d__58))]
+	[IteratorStateMachine(typeof(<Initialise>d__60))]
 	public virtual IEnumerator Initialise() { }
 
 	private void InitUpgradeButtons() { }
@@ -276,6 +282,8 @@ public class TowerSelectionMenu : DynamicUiObject
 	[CompilerGenerated]
 	private void set_CurrentSecondaryMenu(SecondarySelectionMenuUi value) { }
 
+	public void SetUpgradePathGlow(int pathIndex, bool enabled) { }
+
 	public void Show() { }
 
 	public void ShowSecondarySelectionMenu() { }
@@ -320,9 +328,9 @@ public class TowerSelectionMenu : DynamicUiObject
 
 	private void UpdateXpBar(TowerToSimulation tower) { }
 
-	public void UpgradeTower(int index, bool isParagon = false) { }
-
 	private void UpgradeTower(UpgradeModel upgrade, int path, float upgradeCost, double nonUpgradeCashInvestment = 0) { }
+
+	public void UpgradeTower(int index, bool isParagon = false) { }
 
 	private void UseHeroBooster() { }
 

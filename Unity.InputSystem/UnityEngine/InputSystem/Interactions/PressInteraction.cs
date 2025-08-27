@@ -11,7 +11,7 @@ public class PressInteraction : IInputInteraction
 
 	private float pressPointOrDefault
 	{
-		private get { } //Length: 83
+		private get { } //Length: 74
 	}
 
 	private float releasePointOrDefault

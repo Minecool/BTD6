@@ -22,7 +22,7 @@ public class DataRow
 
 	public bool HasErrors
 	{
-		 get { } //Length: 61
+		 get { } //Length: 57
 	}
 
 	internal bool HasPropertyChanged
@@ -37,8 +37,8 @@ public class DataRow
 
 	public object Item
 	{
-		 get { } //Length: 257
-		 set { } //Length: 1148
+		 get { } //Length: 253
+		 set { } //Length: 973
 	}
 
 	public object Item
@@ -48,7 +48,7 @@ public class DataRow
 
 	public Object[] ItemArray
 	{
-		 set { } //Length: 1190
+		 set { } //Length: 1006
 	}
 
 	internal DataColumn LastChangedColumn
@@ -65,8 +65,8 @@ public class DataRow
 
 	public string RowError
 	{
-		 get { } //Length: 81
-		 set { } //Length: 499
+		 get { } //Length: 32
+		 set { } //Length: 403
 	}
 
 	internal long rowID

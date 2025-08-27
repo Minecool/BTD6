@@ -14,7 +14,7 @@ public class VolumeParameter : VolumeParameter, IEquatable<VolumeParameter`1<T>>
 
 	public VolumeParameter`1() { }
 
-	protected VolumeParameter`1(T value, bool overrideState) { }
+	protected VolumeParameter`1(T value, bool overrideState = false) { }
 
 	public virtual object Clone() { }
 

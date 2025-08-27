@@ -12,7 +12,7 @@ public class Authentication
 	[JsonIgnore]
 	public bool CanCreatePoll
 	{
-		 get { } //Length: 17
+		 get { } //Length: 18
 	}
 
 	[JsonIgnore]
@@ -30,7 +30,7 @@ public class Authentication
 	[JsonIgnore]
 	public bool IsValid
 	{
-		 get { } //Length: 172
+		 get { } //Length: 170
 	}
 
 	[JsonConstructor]

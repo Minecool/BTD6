@@ -9,7 +9,7 @@ public class MapGizmo : MonoBehaviour
 
 	public MapGizmoModel Def
 	{
-		 get { } //Length: 478
+		 get { } //Length: 466
 	}
 
 	public MapGizmo() { }

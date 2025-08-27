@@ -31,7 +31,7 @@ public class NecromancerTargetTrackWithinRange : TargetTrack
 
 	public PathSegment SelectedPathSegment
 	{
-		 get { } //Length: 114
+		 get { } //Length: 111
 	}
 
 	public NecromancerTargetTrackWithinRange() { }

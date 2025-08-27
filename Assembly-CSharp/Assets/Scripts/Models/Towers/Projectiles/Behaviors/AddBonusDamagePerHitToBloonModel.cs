@@ -28,7 +28,7 @@ public class AddBonusDamagePerHitToBloonModel : ProjectileBehaviorModel
 
 	public Mutator mutator
 	{
-		 get { } //Length: 298
+		 get { } //Length: 300
 	}
 
 	public AddBonusDamagePerHitToBloonModel(string name, string mutationId, float lifespan, float perHitDamageAddition, int layers, bool isUnique, bool lastAppliesFirst, bool cascadeMutators, string overlayType) { }

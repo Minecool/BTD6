@@ -9,7 +9,7 @@ public class Aggression : CorvusContinuousSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 677
+		 get { } //Length: 691
 	}
 
 	public Aggression() { }

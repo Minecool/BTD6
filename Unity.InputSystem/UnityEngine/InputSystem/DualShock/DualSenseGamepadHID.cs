@@ -27,7 +27,7 @@ public class DualSenseGamepadHID : DualShockGamepad, IEventMerger, IEventPreProc
 
 		public static FourCC Format
 		{
-			 get { } //Length: 58
+			 get { } //Length: 53
 		}
 
 		public static FourCC get_Format() { }

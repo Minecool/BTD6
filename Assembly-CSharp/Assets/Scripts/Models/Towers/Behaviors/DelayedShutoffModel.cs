@@ -23,7 +23,7 @@ public class DelayedShutoffModel : TowerBehaviorModel
 
 	public ShutoffMutator Mutator
 	{
-		 get { } //Length: 207
+		 get { } //Length: 211
 	}
 
 	public DelayedShutoffModel(string name, float delay, float shutoffTime, EffectModel effectModel) { }

@@ -37,7 +37,7 @@ public abstract class UxmlAttributeDescription
 
 	public IEnumerable<String> obsoleteNames
 	{
-		 set { } //Length: 74
+		 set { } //Length: 106
 	}
 
 	public UxmlTypeRestriction restriction
@@ -46,10 +46,10 @@ public abstract class UxmlAttributeDescription
 		 set { } //Length: 5
 	}
 
-	protected string type
+	protected private string type
 	{
 		[CompilerGenerated]
-		 set { } //Length: 5
+		private set { } //Length: 5
 	}
 
 	protected string typeNamespace
@@ -80,7 +80,7 @@ public abstract class UxmlAttributeDescription
 	public void set_restriction(UxmlTypeRestriction value) { }
 
 	[CompilerGenerated]
-	protected void set_type(string value) { }
+	protected private void set_type(string value) { }
 
 	[CompilerGenerated]
 	protected void set_typeNamespace(string value) { }
@@ -88,9 +88,18 @@ public abstract class UxmlAttributeDescription
 	[CompilerGenerated]
 	public void set_use(Use value) { }
 
+	internal bool TryFindValueInAttributeOverrides(string elementName, CreationContext cc, List<AttributeOverride> attributeOverrides, out string value) { }
+
+	internal bool TryGetAttributeOverrideValueFromBagAsString(IUxmlAttributes bag, CreationContext cc, out string value, out VisualTreeAsset sourceAsset) { }
+
 	protected bool TryGetValueFromBag(IUxmlAttributes bag, CreationContext cc, Func<String, T, T> converterFunc, T defaultValue, ref T value) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal bool TryGetValueFromBagAsString(IUxmlAttributes bag, CreationContext cc, out string value) { }
+
+	internal bool TryGetValueFromBagAsString(IUxmlAttributes bag, CreationContext cc, out string value, out VisualTreeAsset sourceAsset) { }
+
+	internal bool ValidateName() { }
 
 }
 

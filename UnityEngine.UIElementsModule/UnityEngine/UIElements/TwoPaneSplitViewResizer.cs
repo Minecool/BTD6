@@ -1,11 +1,13 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class TwoPaneSplitViewResizer : PointerManipulator
 {
-	private Vector3 m_Start; //Field offset: 0x38
-	protected bool m_Active; //Field offset: 0x44
-	private TwoPaneSplitView m_SplitView; //Field offset: 0x48
-	private int m_Direction; //Field offset: 0x50
+	private Vector3 m_Start; //Field offset: 0x28
+	protected bool m_Active; //Field offset: 0x34
+	private TwoPaneSplitView m_SplitView; //Field offset: 0x38
+	private int m_Direction; //Field offset: 0x40
+	private float m_Delta; //Field offset: 0x44
 
 	private VisualElement fixedPane
 	{

@@ -26,6 +26,10 @@ public abstract class PropertyBag : IPropertyBag<TContainer>, IPropertyBag, IPro
 	[CompilerGenerated]
 	protected override InstantiationKind get_InstantiationKind() { }
 
+	public abstract PropertyCollection<TContainer> GetProperties() { }
+
+	public abstract PropertyCollection<TContainer> GetProperties(ref TContainer container) { }
+
 	protected override TContainer Instantiate() { }
 
 	private override InstantiationKind Unity.Properties.IConstructor.get_InstantiationKind() { }
@@ -33,6 +37,14 @@ public abstract class PropertyBag : IPropertyBag<TContainer>, IPropertyBag, IPro
 	private override TContainer Unity.Properties.IConstructor<TContainer>.Instantiate() { }
 
 	private override void Unity.Properties.Internal.IPropertyBagRegister.Register() { }
+
+	private override void Unity.Properties.IPropertyBag.Accept(IPropertyBagVisitor visitor, ref object container) { }
+
+	private override void Unity.Properties.IPropertyBag<TContainer>.Accept(IPropertyBagVisitor visitor, ref TContainer container) { }
+
+	private override PropertyCollection<TContainer> Unity.Properties.IPropertyBag<TContainer>.GetProperties() { }
+
+	private override PropertyCollection<TContainer> Unity.Properties.IPropertyBag<TContainer>.GetProperties(ref TContainer container) { }
 
 }
 

@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::ChangePanel (11))]
+[EventCategory(EventCategory::ChangePanel (12))]
 public abstract class PanelChangedEventBase : EventBase<T>
 {
 	[CompilerGenerated]
@@ -13,17 +13,17 @@ public abstract class PanelChangedEventBase : EventBase<T>
 	public private IPanel destinationPanel
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 8
+		private set { } //Length: 5
 	}
 
 	public private IPanel originPanel
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 8
+		private set { } //Length: 5
 	}
 
 	protected PanelChangedEventBase`1() { }

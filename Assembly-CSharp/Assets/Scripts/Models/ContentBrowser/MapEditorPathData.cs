@@ -24,7 +24,7 @@ public class MapEditorPathData : MapEditorSplineData, ICloneable<MapEditorPathDa
 
 	public bool IsValid
 	{
-		 get { } //Length: 478
+		 get { } //Length: 475
 	}
 
 	public MapEditorPathData() { }

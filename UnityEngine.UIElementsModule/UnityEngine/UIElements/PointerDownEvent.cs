@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[EventCategory(EventCategory::PointerDown (3))]
 public sealed class PointerDownEvent : PointerEventBase<PointerDownEvent>
 {
 	[CompilerGenerated]
@@ -25,6 +26,8 @@ public sealed class PointerDownEvent : PointerEventBase<PointerDownEvent>
 	private void LocalInit() { }
 
 	protected private virtual void PostDispatch(IPanel panel) { }
+
+	protected private virtual void PreDispatch(IPanel panel) { }
 
 }
 

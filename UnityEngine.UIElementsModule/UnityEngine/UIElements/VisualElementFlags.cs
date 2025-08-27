@@ -8,7 +8,7 @@ internal enum VisualElementFlags
 	WorldClipDirty = 4,
 	BoundingBoxDirty = 8,
 	WorldBoundingBoxDirty = 16,
-	EventCallbackParentCategoriesDirty = 32,
+	EventInterestParentCategoriesDirty = 32,
 	LayoutManual = 64,
 	CompositeRoot = 128,
 	RequireMeasureFunction = 256,
@@ -17,6 +17,12 @@ internal enum VisualElementFlags
 	NeedsAttachToPanelEvent = 2048,
 	HierarchyDisplayed = 4096,
 	StyleInitialized = 8192,
-	Init = 4159,
+	DisableRendering = 16384,
+	Needs3DBounds = 32768,
+	LocalBounds3DDirty = 65536,
+	DetachedDataSource = 131072,
+	ReceivesHierarchyGeometryChangedEvents = 262144,
+	BoundingBoxDirtiedSinceLastLayoutPass = 524288,
+	Init = 196671,
 }
 

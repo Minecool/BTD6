@@ -53,7 +53,7 @@ public struct Vector3 : IEquatable<Vector3>, IFormattable
 
 	public float magnitude
 	{
-		 get { } //Length: 225
+		 get { } //Length: 167
 	}
 
 	public Vector3 normalized
@@ -169,7 +169,7 @@ public struct Vector3 : IEquatable<Vector3>, IFormattable
 	[FreeFunction(IsThreadSafe = True)]
 	public static Vector3 RotateTowards(Vector3 current, Vector3 target, float maxRadiansDelta, float maxMagnitudeDelta) { }
 
-	private static void RotateTowards_Injected(ref Vector3 current, ref Vector3 target, float maxRadiansDelta, float maxMagnitudeDelta, out Vector3 ret) { }
+	private static void RotateTowards_Injected(in Vector3 current, in Vector3 target, float maxRadiansDelta, float maxMagnitudeDelta, out Vector3 ret) { }
 
 	public static Vector3 Scale(Vector3 a, Vector3 b) { }
 

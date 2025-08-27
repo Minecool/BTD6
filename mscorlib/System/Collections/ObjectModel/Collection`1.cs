@@ -15,7 +15,7 @@ public class Collection : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable,
 	public override T Item
 	{
 		 get { } //Length: 84
-		 set { } //Length: 235
+		 set { } //Length: 233
 	}
 
 	protected IList<T> Items
@@ -51,7 +51,7 @@ public class Collection : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable,
 	private override object System.Collections.IList.Item
 	{
 		private get { } //Length: 84
-		private set { } //Length: 441
+		private set { } //Length: 431
 	}
 
 	public Collection`1() { }

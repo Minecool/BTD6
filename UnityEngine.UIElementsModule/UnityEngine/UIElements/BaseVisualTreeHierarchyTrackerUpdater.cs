@@ -9,9 +9,9 @@ internal abstract class BaseVisualTreeHierarchyTrackerUpdater : BaseVisualTreeUp
 		TrackingRemove = 2,
 	}
 
-	private State m_State; //Field offset: 0x20
-	private VisualElement m_CurrentChangeElement; //Field offset: 0x28
-	private VisualElement m_CurrentChangeParent; //Field offset: 0x30
+	private State m_State; //Field offset: 0x28
+	private VisualElement m_CurrentChangeElement; //Field offset: 0x30
+	private VisualElement m_CurrentChangeParent; //Field offset: 0x38
 
 	protected BaseVisualTreeHierarchyTrackerUpdater() { }
 

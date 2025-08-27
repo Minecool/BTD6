@@ -19,7 +19,7 @@ public class SetInvulnerableActionModel : BloonBehaviorActionModel
 
 	public InvulnerableMutator Mutator
 	{
-		 get { } //Length: 207
+		 get { } //Length: 211
 	}
 
 	public SetInvulnerableActionModel() { }

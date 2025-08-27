@@ -6,7 +6,7 @@ public class AssertionException : Exception
 
 	public virtual string Message
 	{
-		 get { } //Length: 88
+		 get { } //Length: 83
 	}
 
 	public AssertionException(string message, string userMessage) { }

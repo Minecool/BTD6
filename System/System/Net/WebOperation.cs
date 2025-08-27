@@ -60,12 +60,12 @@ internal class WebOperation
 
 	public bool Aborted
 	{
-		 get { } //Length: 79
+		 get { } //Length: 77
 	}
 
 	public bool Closed
 	{
-		 get { } //Length: 85
+		 get { } //Length: 83
 	}
 
 	public private WebConnection Connection

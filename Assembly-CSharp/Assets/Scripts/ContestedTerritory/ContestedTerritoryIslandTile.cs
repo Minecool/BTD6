@@ -56,7 +56,7 @@ public class ContestedTerritoryIslandTile : CtTile
 
 	public BossType BossType
 	{
-		 get { } //Length: 123
+		 get { } //Length: 121
 	}
 
 	public DateTime CapturedAt
@@ -106,7 +106,7 @@ public class ContestedTerritoryIslandTile : CtTile
 
 	public bool IsCaptured
 	{
-		 get { } //Length: 36
+		 get { } //Length: 39
 	}
 
 	public bool IsShielded
@@ -139,7 +139,7 @@ public class ContestedTerritoryIslandTile : CtTile
 
 	private static NodeStatus UncapturedNodeStatus
 	{
-		private get { } //Length: 192
+		private get { } //Length: 180
 	}
 
 	public ContestedTerritoryIslandTile() { }

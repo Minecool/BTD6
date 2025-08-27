@@ -6,7 +6,7 @@ public sealed class X509ExtensionEnumerator : IEnumerator
 
 	public X509Extension Current
 	{
-		 get { } //Length: 149
+		 get { } //Length: 151
 	}
 
 	private override object System.Collections.IEnumerator.Current

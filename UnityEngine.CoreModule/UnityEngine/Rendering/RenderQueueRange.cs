@@ -14,6 +14,11 @@ public struct RenderQueueRange : IEquatable<RenderQueueRange>
 		 get { } //Length: 22
 	}
 
+	public int lowerBound
+	{
+		 get { } //Length: 5
+	}
+
 	public static RenderQueueRange opaque
 	{
 		 get { } //Length: 22
@@ -24,6 +29,11 @@ public struct RenderQueueRange : IEquatable<RenderQueueRange>
 		 get { } //Length: 22
 	}
 
+	public int upperBound
+	{
+		 get { } //Length: 6
+	}
+
 	private static RenderQueueRange() { }
 
 	public override bool Equals(RenderQueueRange other) { }
@@ -32,9 +42,13 @@ public struct RenderQueueRange : IEquatable<RenderQueueRange>
 
 	public static RenderQueueRange get_all() { }
 
+	public int get_lowerBound() { }
+
 	public static RenderQueueRange get_opaque() { }
 
 	public static RenderQueueRange get_transparent() { }
+
+	public int get_upperBound() { }
 
 	public virtual int GetHashCode() { }
 

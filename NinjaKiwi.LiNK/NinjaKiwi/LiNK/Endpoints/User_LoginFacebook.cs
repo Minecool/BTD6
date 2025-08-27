@@ -1,11 +1,11 @@
 namespace NinjaKiwi.LiNK.Endpoints;
 
-public class User_LoginFacebook : Endpoint<LoginResponseModel>
+public class User_LoginFacebook : Endpoint<LiNKAccountModel>
 {
 
 	internal User_LoginFacebook(HttpRequestFactory requestFactory, Authority authority, ApiOptions options) { }
 
-	public Task<LoginResponseModel> Call(string accessToken) { }
+	public Task<LiNKAccountModel> Call(string accessToken) { }
 
 }
 

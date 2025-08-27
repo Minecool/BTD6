@@ -3,15 +3,12 @@ namespace Assets.Scripts.Unity.UI_New;
 public class CodeRedemptionPanel : Popup
 {
 	[CompilerGenerated]
-	private struct <ClaimCodeAndGift>d__14 : IAsyncStateMachine
+	private struct <AutoSelectAsync>d__11 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
-		public AsyncTaskMethodBuilder<ClaimResult> <>t__builder; //Field offset: 0x8
-		public string giftCode; //Field offset: 0x20
-		private PubSubMessageModel <pubsubMessage>5__2; //Field offset: 0x28
-		private int <giftClaimAttempt>5__3; //Field offset: 0x30
-		private TaskAwaiter<PubSubMessageModel> <>u__1; //Field offset: 0x38
-		private TaskAwaiter <>u__2; //Field offset: 0x40
+		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
+		public CodeRedemptionPanel <>4__this; //Field offset: 0x28
+		private YieldAwaiter <>u__1; //Field offset: 0x30
 
 		private override void MoveNext() { }
 
@@ -21,7 +18,22 @@ public class CodeRedemptionPanel : Popup
 	}
 
 	[CompilerGenerated]
-	private struct <ClaimCodeAsync>d__13 : IAsyncStateMachine
+	private struct <ClaimCodeAndGift>d__15 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder<ClaimResult> <>t__builder; //Field offset: 0x8
+		public string giftCode; //Field offset: 0x20
+		private TaskAwaiter<PubSubMessageModel> <>u__1; //Field offset: 0x28
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <ClaimCodeAsync>d__14 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -83,7 +95,7 @@ public class CodeRedemptionPanel : Popup
 	private bool IsClaimInProgress
 	{
 		private get { } //Length: 8
-		private set { } //Length: 134
+		private set { } //Length: 149
 	}
 
 	private static CodeRedemptionPanel() { }
@@ -93,12 +105,15 @@ public class CodeRedemptionPanel : Popup
 	[CompilerGenerated]
 	private void <Awake>b__10_0() { }
 
+	[AsyncStateMachine(typeof(<AutoSelectAsync>d__11))]
+	private void AutoSelectAsync() { }
+
 	private void Awake() { }
 
-	[AsyncStateMachine(typeof(<ClaimCodeAndGift>d__14))]
+	[AsyncStateMachine(typeof(<ClaimCodeAndGift>d__15))]
 	private static Task<ClaimResult> ClaimCodeAndGift(string giftCode) { }
 
-	[AsyncStateMachine(typeof(<ClaimCodeAsync>d__13))]
+	[AsyncStateMachine(typeof(<ClaimCodeAsync>d__14))]
 	private void ClaimCodeAsync() { }
 
 	private bool get_IsClaimInProgress() { }

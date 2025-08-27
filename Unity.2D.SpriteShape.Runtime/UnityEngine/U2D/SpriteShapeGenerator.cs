@@ -7,16 +7,16 @@ internal struct SpriteShapeGenerator : IJob
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<Int32, UInt16> <>9__147_0; //Field offset: 0x8
-		public static Func<ContourVertex, Vector2> <>9__147_1; //Field offset: 0x10
+		public static Func<Int32, UInt16> <>9__155_0; //Field offset: 0x8
+		public static Func<ContourVertex, Vector2> <>9__155_1; //Field offset: 0x10
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal ushort <TessellateContourMainThread>b__147_0(int i) { }
+		internal ushort <TessellateContourMainThread>b__155_0(int i) { }
 
-		internal Vector2 <TessellateContourMainThread>b__147_1(ContourVertex v) { }
+		internal Vector2 <TessellateContourMainThread>b__155_1(ContourVertex v) { }
 
 	}
 
@@ -98,30 +98,24 @@ internal struct SpriteShapeGenerator : IJob
 
 	}
 
-	public static class UTessellator_0000016D$BurstDirectCall
+	public static class UTessellator_0000017A$BurstDirectCall
 	{
 		private static IntPtr Pointer; //Field offset: 0x0
-		private static IntPtr DeferredCompilation; //Field offset: 0x8
-
-		private static UTessellator_0000016D$BurstDirectCall() { }
-
-		public static void Constructor() { }
 
 		private static IntPtr GetFunctionPointer() { }
 
 		[BurstDiscard]
 		private static void GetFunctionPointerDiscard(ref IntPtr unnamed_param_0) { }
 
-		public static void Initialize() { }
-
 		public static void Invoke(ref SpriteShapeSegment geom, int maxCount, float2* tessPoints, int tessPointCount, UInt16* indices, ref int iCount, Byte* vertices, int stride, ref int vCount, Allocator label) { }
 
 	}
 
-	internal sealed class UTessellator_0000016D$PostfixBurstDelegate : MulticastDelegate
+	[UnmanagedFunctionPointer(CallingConvention::Cdecl (2))]
+	public sealed class UTessellator_0000017A$PostfixBurstDelegate : MulticastDelegate
 	{
 
-		public UTessellator_0000016D$PostfixBurstDelegate(object unnamed_param_0, IntPtr unnamed_param_1) { }
+		public UTessellator_0000017A$PostfixBurstDelegate(object unnamed_param_0, IntPtr unnamed_param_1) { }
 
 		public override void Invoke(ref SpriteShapeSegment geom, int maxCount, float2* tessPoints, int tessPointCount, UInt16* indices, ref int iCount, Byte* vertices, int stride, ref int vCount, Allocator label) { }
 
@@ -173,40 +167,44 @@ internal struct SpriteShapeGenerator : IJob
 	public NativeArray<SpriteShapeSegment> m_GeomArray; //Field offset: 0x190
 	private int m_ColliderPointCount; //Field offset: 0x1A0
 	public NativeArray<float2> m_ColliderPoints; //Field offset: 0x1A8
-	public NativeArray<Bounds> m_Bounds; //Field offset: 0x1B8
-	public NativeArray<SpriteShapeGeneratorStats> m_Stats; //Field offset: 0x1C8
-	private int m_IndexDataCount; //Field offset: 0x1D8
-	private int m_VertexDataCount; //Field offset: 0x1DC
-	private int m_ColliderDataCount; //Field offset: 0x1E0
-	private int m_ActiveIndexCount; //Field offset: 0x1E4
-	private int m_ActiveVertexCount; //Field offset: 0x1E8
-	private float2 m_FirstLT; //Field offset: 0x1EC
-	private float2 m_FirstLB; //Field offset: 0x1F4
-	private float4x4 m_Transform; //Field offset: 0x1FC
-	private int kModeLinear; //Field offset: 0x23C
-	private int kModeContinous; //Field offset: 0x240
-	private int kModeBroken; //Field offset: 0x244
-	private int kModeUTess; //Field offset: 0x248
-	private int kCornerTypeOuterTopLeft; //Field offset: 0x24C
-	private int kCornerTypeOuterTopRight; //Field offset: 0x250
-	private int kCornerTypeOuterBottomLeft; //Field offset: 0x254
-	private int kCornerTypeOuterBottomRight; //Field offset: 0x258
-	private int kCornerTypeInnerTopLeft; //Field offset: 0x25C
-	private int kCornerTypeInnerTopRight; //Field offset: 0x260
-	private int kCornerTypeInnerBottomLeft; //Field offset: 0x264
-	private int kCornerTypeInnerBottomRight; //Field offset: 0x268
-	private int kControlPointCount; //Field offset: 0x26C
-	private int kMaxArrayCount; //Field offset: 0x270
-	private float kEpsilon; //Field offset: 0x274
-	private float kEpsilonOrder; //Field offset: 0x278
-	private float kEpsilonRelaxed; //Field offset: 0x27C
-	private float kExtendSegment; //Field offset: 0x280
-	private float kRenderQuality; //Field offset: 0x284
-	private float kOptimizeRender; //Field offset: 0x288
-	private float kColliderQuality; //Field offset: 0x28C
-	private float kOptimizeCollider; //Field offset: 0x290
-	private float kLowestQualityTolerance; //Field offset: 0x294
-	private float kHighestQualityTolerance; //Field offset: 0x298
+	private int m_ShadowPointCount; //Field offset: 0x1B8
+	public NativeArray<float2> m_ShadowPoints; //Field offset: 0x1C0
+	public NativeArray<Bounds> m_Bounds; //Field offset: 0x1D0
+	public NativeArray<SpriteShapeGeneratorStats> m_Stats; //Field offset: 0x1E0
+	private int m_IndexDataCount; //Field offset: 0x1F0
+	private int m_VertexDataCount; //Field offset: 0x1F4
+	private int m_ColliderDataCount; //Field offset: 0x1F8
+	private int m_ShadowDataCount; //Field offset: 0x1FC
+	private int m_ActiveIndexCount; //Field offset: 0x200
+	private int m_ActiveVertexCount; //Field offset: 0x204
+	private float2 m_FirstLT; //Field offset: 0x208
+	private float2 m_FirstLB; //Field offset: 0x210
+	private float4x4 m_Transform; //Field offset: 0x218
+	private int kModeLinear; //Field offset: 0x258
+	private int kModeContinous; //Field offset: 0x25C
+	private int kModeBroken; //Field offset: 0x260
+	private int kModeUTess; //Field offset: 0x264
+	private int kCornerTypeOuterTopLeft; //Field offset: 0x268
+	private int kCornerTypeOuterTopRight; //Field offset: 0x26C
+	private int kCornerTypeOuterBottomLeft; //Field offset: 0x270
+	private int kCornerTypeOuterBottomRight; //Field offset: 0x274
+	private int kCornerTypeInnerTopLeft; //Field offset: 0x278
+	private int kCornerTypeInnerTopRight; //Field offset: 0x27C
+	private int kCornerTypeInnerBottomLeft; //Field offset: 0x280
+	private int kCornerTypeInnerBottomRight; //Field offset: 0x284
+	private int kControlPointCount; //Field offset: 0x288
+	private int kMaxArrayCount; //Field offset: 0x28C
+	private float kEpsilon; //Field offset: 0x290
+	private float kEpsilonOrder; //Field offset: 0x294
+	private float kEpsilonRelaxed; //Field offset: 0x298
+	private float kExtendSegment; //Field offset: 0x29C
+	private float kRenderQuality; //Field offset: 0x2A0
+	private float kOptimizeRender; //Field offset: 0x2A4
+	private float kColliderQuality; //Field offset: 0x2A8
+	private float kOptimizeCollider; //Field offset: 0x2AC
+	private float kShadowQuality; //Field offset: 0x2B0
+	private float kLowestQualityTolerance; //Field offset: 0x2B4
+	private float kHighestQualityTolerance; //Field offset: 0x2B8
 
 	private float borderPivot
 	{
@@ -233,6 +231,11 @@ internal struct SpriteShapeGenerator : IJob
 		private get { } //Length: 8
 	}
 
+	private bool hasShadow
+	{
+		private get { } //Length: 8
+	}
+
 	private bool hasSpriteBorder
 	{
 		private get { } //Length: 8
@@ -251,6 +254,11 @@ internal struct SpriteShapeGenerator : IJob
 	private int segmentCount
 	{
 		private get { } //Length: 7
+	}
+
+	private float shadowPivot
+	{
+		private get { } //Length: 6
 	}
 
 	private int splineDetail
@@ -280,7 +288,7 @@ internal struct SpriteShapeGenerator : IJob
 
 	private bool AttachCorner(int cp, int ct, JobSpriteInfo ispr, ref NativeArray<JobControlPoint>& newPoints, ref int activePoint) { }
 
-	private void AttachCornerToCollider(JobSegmentInfo isi, float pivot, ref NativeArray<float2>& colliderPoints, ref int colliderPointCount) { }
+	private void AttachCornerToCollider(JobSegmentInfo isi, float pivot, ref NativeArray<float2>& points, ref int pointCount) { }
 
 	private static float2 BezierPoint(float2 st, float2 sp, float2 ep, float2 et, float t) { }
 
@@ -326,6 +334,8 @@ internal struct SpriteShapeGenerator : IJob
 
 	private bool get_hasCollider() { }
 
+	private bool get_hasShadow() { }
+
 	private bool get_hasSpriteBorder() { }
 
 	private bool get_isAdaptive() { }
@@ -333,6 +343,8 @@ internal struct SpriteShapeGenerator : IJob
 	private bool get_isCarpet() { }
 
 	private int get_segmentCount() { }
+
+	private float get_shadowPivot() { }
 
 	private int get_splineDetail() { }
 
@@ -380,6 +392,8 @@ internal struct SpriteShapeGenerator : IJob
 
 	private void OptimizePoints(float tolerance, bool tess, ref NativeArray<float2>& pointSet, ref int pointCount) { }
 
+	private void OptimizeShadow() { }
+
 	internal void Prepare(SpriteShapeController controller, SpriteShapeParameters shapeParams, int maxArrayCount, NativeArray<ShapeControlPoint> shapePoints, NativeArray<SplinePointMetaData> metaData, AngleRangeInfo[] angleRanges, Sprite[] segmentSprites, Sprite[] cornerSprites, bool UseUTess) { }
 
 	private void PrepareAngleRanges(AngleRangeInfo[] angleRanges) { }
@@ -388,7 +402,7 @@ internal struct SpriteShapeGenerator : IJob
 
 	private void PrepareControlPoints(NativeArray<ShapeControlPoint> shapePoints, NativeArray<SplinePointMetaData> metaData) { }
 
-	private void PrepareInput(SpriteShapeParameters shapeParams, int maxArrayCount, NativeArray<ShapeControlPoint> shapePoints, bool optimizeGeometry, bool updateCollider, bool optimizeCollider, float colliderOffset, float colliderDetail) { }
+	private void PrepareInput(SpriteShapeParameters shapeParams, int maxArrayCount, NativeArray<ShapeControlPoint> shapePoints, bool optimizeGeometry, bool updateCollider, bool optimizeCollider, float colliderOffset, float colliderDetail, bool updateShadow, float shadowOffset, float shadowDetail) { }
 
 	private void PrepareSprites(Sprite[] edgeSprites, Sprite[] cornerSprites) { }
 
@@ -400,9 +414,9 @@ internal struct SpriteShapeGenerator : IJob
 
 	private bool SkipSegment(JobSegmentInfo isi) { }
 
-	private static float SlopeAngle(float2 dirNormalized) { }
-
 	private static float SlopeAngle(float2 start, float2 end) { }
+
+	private static float SlopeAngle(float2 dirNormalized) { }
 
 	private void StretchCorners(JobSegmentInfo segment, ref Array<JobShapeVertex>& vertices, int vertexCount, bool validHead, bool validTail, float4 stretcher) { }
 
@@ -418,17 +432,18 @@ internal struct SpriteShapeGenerator : IJob
 
 	private void TransferSprites(ref NativeArray<JobSpriteInfo>& spriteInfos, Sprite[] sprites, int maxCount) { }
 
-	private void TrimOverlaps(int cpCount) { }
+	private static void TrimOverlaps(int cpCount, bool _isCarpet, int _splineDetail, float _kEpsilon, float _kEpsilonRelaxed, ref NativeArray<float2>& _colliderPoints, ref int colliderPointCount) { }
 
-	private float2 UpdateCollider(JobSegmentInfo isi, JobSpriteInfo ispr, ref Array<JobShapeVertex>& vertices, int count, ref NativeArray<float2>& colliderPoints, ref int colliderPointCount) { }
+	private float2 UpdateExtraGeometry(JobSegmentInfo isi, JobSpriteInfo ispr, ref Array<JobShapeVertex>& vertices, int count, ref NativeArray<float2>& points, ref int pointCount, float _pivot) { }
 
 	private void UpdateSegments() { }
 
 	[BurstCompile]
+	[MonoPInvokeCallback(typeof(UTessellator_0000017A$PostfixBurstDelegate))]
 	private static void UTessellator(ref SpriteShapeSegment geom, int maxCount, float2* tessPoints, int tessPointCount, UInt16* indices, ref int iCount, Byte* vertices, int stride, ref int vCount, Allocator label) { }
 
 	[BurstCompile]
-	public static void UTessellator$BurstManaged(ref SpriteShapeSegment geom, int maxCount, float2* tessPoints, int tessPointCount, UInt16* indices, ref int iCount, Byte* vertices, int stride, ref int vCount, Allocator label) { }
+	internal static void UTessellator$BurstManaged(ref SpriteShapeSegment geom, int maxCount, float2* tessPoints, int tessPointCount, UInt16* indices, ref int iCount, Byte* vertices, int stride, ref int vCount, Allocator label) { }
 
 	private bool WithinRange(JobAngleRange angleRange, float inputAngle) { }
 

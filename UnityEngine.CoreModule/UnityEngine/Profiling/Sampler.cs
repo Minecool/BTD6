@@ -9,12 +9,14 @@ public class Sampler
 
 	public bool isValid
 	{
-		 get { } //Length: 16
+		 get { } //Length: 11
 	}
 
 	private static Sampler() { }
 
 	internal Sampler() { }
+
+	internal Sampler(IntPtr ptr) { }
 
 	public bool get_isValid() { }
 

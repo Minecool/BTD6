@@ -7,7 +7,7 @@ public class PreBloonSpawnTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 166
+		 get { } //Length: 158
 	}
 
 	public PreBloonSpawnTrigger() { }

@@ -31,28 +31,28 @@ public sealed class Cookie
 
 	private string _Domain
 	{
-		private get { } //Length: 188
+		private get { } //Length: 191
 	}
 
 	private string _Path
 	{
-		private get { } //Length: 127
+		private get { } //Length: 112
 	}
 
 	private string _Port
 	{
-		private get { } //Length: 183
+		private get { } //Length: 175
 	}
 
 	private string _Version
 	{
-		private get { } //Length: 247
+		private get { } //Length: 249
 	}
 
 	public string Comment
 	{
 		 get { } //Length: 5
-		 set { } //Length: 96
+		 set { } //Length: 32
 	}
 
 	public Uri CommentUri
@@ -68,7 +68,7 @@ public sealed class Cookie
 	public string Domain
 	{
 		 get { } //Length: 5
-		 set { } //Length: 119
+		 set { } //Length: 76
 	}
 
 	internal string DomainKey
@@ -78,7 +78,7 @@ public sealed class Cookie
 
 	public bool Expired
 	{
-		 get { } //Length: 179
+		 get { } //Length: 182
 	}
 
 	public DateTime Expires
@@ -94,13 +94,13 @@ public sealed class Cookie
 	public string Name
 	{
 		 get { } //Length: 5
-		 set { } //Length: 517
+		 set { } //Length: 505
 	}
 
 	public string Path
 	{
 		 get { } //Length: 5
-		 set { } //Length: 95
+		 set { } //Length: 49
 	}
 
 	internal bool Plain
@@ -111,7 +111,7 @@ public sealed class Cookie
 	public string Port
 	{
 		 get { } //Length: 5
-		 set { } //Length: 1168
+		 set { } //Length: 1174
 	}
 
 	internal Int32[] PortList
@@ -128,7 +128,7 @@ public sealed class Cookie
 	public string Value
 	{
 		 get { } //Length: 8
-		 set { } //Length: 94
+		 set { } //Length: 48
 	}
 
 	internal CookieVariant Variant

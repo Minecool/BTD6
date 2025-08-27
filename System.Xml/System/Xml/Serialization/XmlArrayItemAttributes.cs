@@ -6,7 +6,7 @@ public class XmlArrayItemAttributes : CollectionBase
 
 	public XmlArrayItemAttribute Item
 	{
-		 get { } //Length: 169
+		 get { } //Length: 176
 	}
 
 	public XmlArrayItemAttributes() { }

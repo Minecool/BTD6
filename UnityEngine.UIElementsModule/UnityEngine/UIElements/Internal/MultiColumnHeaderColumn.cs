@@ -19,19 +19,19 @@ internal class MultiColumnHeaderColumn : VisualElement
 	private static readonly string s_BindingCallbackVEPropertyName; //Field offset: 0x70
 	private static readonly string s_UnbindingCallbackVEPropertyName; //Field offset: 0x78
 	private static readonly string s_DestroyCallbackVEPropertyName; //Field offset: 0x80
-	private VisualElement m_ContentContainer; //Field offset: 0x3C8
-	private VisualElement m_Content; //Field offset: 0x3D0
-	private MultiColumnHeaderColumnSortIndicator m_SortIndicatorContainer; //Field offset: 0x3D8
-	private IVisualElementScheduledItem m_ScheduledHeaderTemplateUpdate; //Field offset: 0x3E0
+	private VisualElement m_ContentContainer; //Field offset: 0x4A8
+	private VisualElement m_Content; //Field offset: 0x4B0
+	private MultiColumnHeaderColumnSortIndicator m_SortIndicatorContainer; //Field offset: 0x4B8
+	private IVisualElementScheduledItem m_ScheduledHeaderTemplateUpdate; //Field offset: 0x4C0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Clickable <clickable>k__BackingField; //Field offset: 0x3E8
+	private Clickable <clickable>k__BackingField; //Field offset: 0x4C8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private ColumnMover <mover>k__BackingField; //Field offset: 0x3F0
+	private ColumnMover <mover>k__BackingField; //Field offset: 0x4D0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Column <column>k__BackingField; //Field offset: 0x3F8
+	private Column <column>k__BackingField; //Field offset: 0x4D8
 
 	public private Clickable clickable
 	{
@@ -52,13 +52,13 @@ internal class MultiColumnHeaderColumn : VisualElement
 	public VisualElement content
 	{
 		 get { } //Length: 8
-		 set { } //Length: 635
+		 set { } //Length: 618
 	}
 
 	private bool isContentBound
 	{
-		private get { } //Length: 217
-		private set { } //Length: 178
+		private get { } //Length: 200
+		private set { } //Length: 166
 	}
 
 	public private ColumnMover mover

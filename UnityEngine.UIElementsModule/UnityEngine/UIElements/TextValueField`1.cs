@@ -24,7 +24,7 @@ public abstract class TextValueField : TextInputBaseField<TValueType>, IValueFie
 
 		private TextValueField<TValueType> textValueFieldParent
 		{
-			private get { } //Length: 146
+			private get { } //Length: 141
 		}
 
 		protected TextValueInput() { }
@@ -53,25 +53,23 @@ public abstract class TextValueField : TextInputBaseField<TValueType>, IValueFie
 
 	}
 
+	internal static readonly BindingId formatStringProperty; //Field offset: 0x0
 	private BaseFieldMouseDragger m_Dragger; //Field offset: 0x0
-	internal bool m_UpdateTextFromValue; //Field offset: 0x0
 	private bool m_ForceUpdateDisplay; //Field offset: 0x0
 
+	[CreateProperty]
 	public string formatString
 	{
-		 get { } //Length: 136
+		 get { } //Length: 132
+		 set { } //Length: 560
 	}
 
 	private TextValueInput<TValueType> textValueInput
 	{
-		private get { } //Length: 137
+		private get { } //Length: 133
 	}
 
-	public virtual TValueType value
-	{
-		 get { } //Length: 41
-		 set { } //Length: 41
-	}
+	private static TextValueField`1() { }
 
 	protected TextValueField`1(string label, int maxLength, TextValueInput<TValueType> textValueInput) { }
 
@@ -83,14 +81,12 @@ public abstract class TextValueField : TextInputBaseField<TValueType>, IValueFie
 
 	private void EnableLabelDragger(bool enable) { }
 
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(BlurEvent), typeof(FocusEvent)}])]
-	protected virtual void ExecuteDefaultAction(EventBase evt) { }
-
 	public string get_formatString() { }
 
 	private TextValueInput<TValueType> get_textValueInput() { }
 
-	public virtual TValueType get_value() { }
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(BlurEvent), typeof(FocusEvent)}])]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
 
 	private void OnIsReadOnlyChanged(bool newValue) { }
 
@@ -98,7 +94,7 @@ public abstract class TextValueField : TextInputBaseField<TValueType>, IValueFie
 
 	internal virtual void RegisterEditingCallbacks() { }
 
-	public virtual void set_value(TValueType value) { }
+	public void set_formatString(string value) { }
 
 	public virtual void SetValueWithoutNotify(TValueType newValue) { }
 

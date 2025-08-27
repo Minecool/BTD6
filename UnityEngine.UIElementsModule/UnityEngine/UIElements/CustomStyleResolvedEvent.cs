@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::Style (7))]
+[EventCategory(EventCategory::Style (8))]
 public class CustomStyleResolvedEvent : EventBase<CustomStyleResolvedEvent>
 {
 	[CompilerGenerated]
@@ -19,7 +19,7 @@ public class CustomStyleResolvedEvent : EventBase<CustomStyleResolvedEvent>
 
 	public ICustomStyle customStyle
 	{
-		 get { } //Length: 138
+		 get { } //Length: 32
 	}
 
 	private static CustomStyleResolvedEvent() { }

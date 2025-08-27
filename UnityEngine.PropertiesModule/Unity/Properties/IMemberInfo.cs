@@ -26,5 +26,9 @@ internal interface IMemberInfo
 
 	public IEnumerable<Attribute> GetCustomAttributes() { }
 
+	public object GetValue(object obj) { }
+
+	public void SetValue(object obj, object value) { }
+
 }
 

@@ -10,7 +10,7 @@ public class CreateEffectFollowProjectile : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 483
+		 get { } //Length: 470
 	}
 
 	public CreateEffectFollowProjectile() { }

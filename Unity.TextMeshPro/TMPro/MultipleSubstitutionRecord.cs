@@ -9,14 +9,14 @@ public struct MultipleSubstitutionRecord
 
 	public UInt32[] substituteGlyphIDs
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 		 set { } //Length: 5
 	}
 
 	public uint targetGlyphID
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public UInt32[] get_substituteGlyphIDs() { }

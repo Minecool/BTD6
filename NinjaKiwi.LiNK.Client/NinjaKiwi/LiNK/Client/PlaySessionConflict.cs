@@ -2,8 +2,8 @@ namespace NinjaKiwi.LiNK.Client;
 
 public class PlaySessionConflict
 {
-	private readonly TaskCompletionSource<Boolean> playHereTaskCompletionSource; //Field offset: 0x10
-	private readonly Task resolveTask; //Field offset: 0x18
+	private readonly Task resolveTask; //Field offset: 0x10
+	private readonly TaskCompletionSource<Boolean> playHereTaskCompletionSource; //Field offset: 0x18
 
 	internal Task CanProceed
 	{

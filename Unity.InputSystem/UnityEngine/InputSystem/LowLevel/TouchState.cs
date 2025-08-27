@@ -20,8 +20,8 @@ public struct TouchState : IInputStateTypeInfo
 	public byte tapCount; //Field offset: 0x21
 	[InputControl(name = "displayIndex", displayName = "Display Index", layout = "Integer")]
 	public byte displayIndex; //Field offset: 0x22
-	[InputControl(name = "tap", displayName = "Tap", layout = "Button", bit = 4)]
 	[InputControl(name = "indirectTouch", displayName = "Indirect Touch?", layout = "Button", bit = 0, synthetic = True)]
+	[InputControl(name = "tap", displayName = "Tap", layout = "Button", bit = 4)]
 	public byte flags; //Field offset: 0x23
 	internal uint updateStepCount; //Field offset: 0x24
 	[InputControl(displayName = "Start Time", layout = "Double", synthetic = True)]
@@ -37,12 +37,12 @@ public struct TouchState : IInputStateTypeInfo
 
 	public override FourCC format
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public static FourCC Format
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public bool isIndirectTouch
@@ -53,12 +53,12 @@ public struct TouchState : IInputStateTypeInfo
 
 	public bool isInProgress
 	{
-		 get { } //Length: 23
+		 get { } //Length: 21
 	}
 
 	public bool isNoneEndedOrCanceled
 	{
-		 get { } //Length: 23
+		 get { } //Length: 21
 	}
 
 	internal bool isOrphanedPrimaryTouch

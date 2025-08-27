@@ -8,7 +8,7 @@ public struct X509ChainStatus
 	public X509ChainStatusFlags Status
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public string StatusInformation

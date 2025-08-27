@@ -1,9 +1,10 @@
 namespace UnityEngine.Rendering.Universal;
 
-[VolumeComponentMenuForRenderPipeline("Post-processing/Bloom", new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(UniversalRenderPipeline)}])]
+[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+[VolumeComponentMenu("Post-processing/Bloom")]
 public sealed class Bloom : VolumeComponent, IPostProcessComponent
 {
-	[Obsolete("This is obsolete, please use maxIterations instead.", False)]
+	[Obsolete("This is obsolete, please use maxIterations instead.", True)]
 	[Tooltip("The number of final iterations to skip in the effect processing sequence.")]
 	public ClampedIntParameter skipIterations; //Field offset: 0x38
 	[Header("Bloom")]
@@ -35,6 +36,7 @@ public sealed class Bloom : VolumeComponent, IPostProcessComponent
 
 	public override bool IsActive() { }
 
+	[Obsolete("Unused #from(2023.1)", False)]
 	public override bool IsTileCompatible() { }
 
 }

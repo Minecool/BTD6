@@ -24,12 +24,12 @@ public struct BitArray32 : IBitArray
 
 	public override string humanizedData
 	{
-		 get { } //Length: 315
+		 get { } //Length: 312
 	}
 
 	private string humanizedVersion
 	{
-		private get { } //Length: 81
+		private get { } //Length: 80
 	}
 
 	public override bool Item

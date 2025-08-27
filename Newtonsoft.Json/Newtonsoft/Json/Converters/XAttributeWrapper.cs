@@ -9,27 +9,27 @@ internal class XAttributeWrapper : XObjectWrapper
 	private XAttribute Attribute
 	{
 		[NullableContext(1)]
-		private get { } //Length: 107
+		private get { } //Length: 103
 	}
 
 	public virtual string LocalName
 	{
-		 get { } //Length: 122
+		 get { } //Length: 118
 	}
 
 	public virtual string NamespaceUri
 	{
-		 get { } //Length: 124
+		 get { } //Length: 120
 	}
 
 	public virtual IXmlNode ParentNode
 	{
-		 get { } //Length: 162
+		 get { } //Length: 160
 	}
 
 	public virtual string Value
 	{
-		 get { } //Length: 117
+		 get { } //Length: 109
 	}
 
 	[NullableContext(1)]

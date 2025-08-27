@@ -2,6 +2,14 @@ namespace UnityEngine.UIElements;
 
 internal class DynamicHeightVirtualizationController : VerticalVirtualizationController<T>
 {
+	[CompilerGenerated]
+	private struct <>c__DisplayClass66_0
+	{
+		public int draggedIndex; //Field offset: 0x0
+		public DynamicHeightVirtualizationController<T> <>4__this; //Field offset: 0x0
+
+	}
+
 	[IsReadOnly]
 	private struct ContentHeightCacheInfo
 	{
@@ -28,25 +36,26 @@ internal class DynamicHeightVirtualizationController : VerticalVirtualizationCon
 	}
 
 	private int m_HighestCachedIndex; //Field offset: 0x0
-	private IVisualElementScheduledItem m_ScrollScheduledItem; //Field offset: 0x0
+	private Predicate<Int32> m_IndexOutOfBoundsPredicate; //Field offset: 0x0
+	private IVisualElementScheduledItem m_ScrollResetScheduledItem; //Field offset: 0x0
 	private IVisualElementScheduledItem m_ScheduledItem; //Field offset: 0x0
 	private Action<ReusableCollectionItem> m_GeometryChangedCallback; //Field offset: 0x0
 	private Action m_ScrollResetCallback; //Field offset: 0x0
-	private Action m_ScrollCallback; //Field offset: 0x0
 	private Action m_FillCallback; //Field offset: 0x0
 	private float m_MinimumItemHeight; //Field offset: 0x0
 	private float m_AccumulatedHeight; //Field offset: 0x0
+	private bool m_FillExecuted; //Field offset: 0x0
 	private Vector2 m_DelayedScrollOffset; //Field offset: 0x0
-	private ScrollDirection<T> m_ScrollDirection; //Field offset: 0x0
 	private VirtualizationChange<T> m_LastChange; //Field offset: 0x0
 	private bool m_StickToBottom; //Field offset: 0x0
 	private int m_ForcedLastVisibleItem; //Field offset: 0x0
 	private int m_ForcedFirstVisibleItem; //Field offset: 0x0
+	private Nullable<Int32> m_ScrolledToItemIndex; //Field offset: 0x0
 	private readonly HashSet<Int32> m_WaitingCache; //Field offset: 0x0
 	private readonly Dictionary<Int32, ContentHeightCacheInfo<T>> m_ContentHeightCache; //Field offset: 0x0
 	private readonly Dictionary<Int32, Single> m_ItemHeightCache; //Field offset: 0x0
-	private IVisualElementScheduledItem m_ScrollResetScheduledItem; //Field offset: 0x0
-	private Predicate<Int32> m_IndexOutOfBoundsPredicate; //Field offset: 0x0
+	private ScrollDirection<T> m_ScrollDirection; //Field offset: 0x0
+	private long m_TimeSinceFillScheduledMs; //Field offset: 0x0
 
 	protected virtual bool alwaysRebindOnRefresh
 	{
@@ -68,26 +77,29 @@ internal class DynamicHeightVirtualizationController : VerticalVirtualizationCon
 	private float contentHeight
 	{
 		private get { } //Length: 49
-		private set { } //Length: 385
+		private set { } //Length: 391
 	}
 
 	private float contentPadding
 	{
 		private get { } //Length: 49
-		private set { } //Length: 385
+		private set { } //Length: 1758
 	}
 
 	private float defaultExpectedHeight
 	{
-		private get { } //Length: 159
+		private get { } //Length: 76
 	}
 
 	private float viewportMaxOffset
 	{
-		private get { } //Length: 108
+		private get { } //Length: 86
 	}
 
 	public DynamicHeightVirtualizationController`1(BaseVerticalCollectionView collectionView) { }
+
+	[CompilerGenerated]
+	private float <GetContentHeightForIndex>g__GetContentHeightFromCachedHeight|66_0(int index, in ContentHeightCacheInfo<T> heightInfo, ref <>c__DisplayClass66_0<T> unnamed_param_2) { }
 
 	private void ApplyScrollViewUpdate(bool dimensionsOnly = false) { }
 
@@ -135,11 +147,15 @@ internal class DynamicHeightVirtualizationController : VerticalVirtualizationCon
 
 	private bool NeedsFill() { }
 
+	private void OnDetachFromPanelEvent(DetachFromPanelEvent evt) { }
+
+	private void OnGeometryChangedEvent(GeometryChangedEvent _) { }
+
 	private void OnRecycledItemGeometryChanged(ReusableCollectionItem item) { }
 
 	public virtual void OnScroll(Vector2 scrollOffset) { }
 
-	private void OnScrollUpdate() { }
+	protected virtual void OnScrollUpdate() { }
 
 	public virtual void Refresh(bool rebuild) { }
 
@@ -152,8 +168,6 @@ internal class DynamicHeightVirtualizationController : VerticalVirtualizationCon
 	public virtual void Resize(Vector2 size) { }
 
 	private void ScheduleFill() { }
-
-	private void ScheduleScroll() { }
 
 	private void ScheduleScrollDirectionReset() { }
 

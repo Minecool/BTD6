@@ -24,7 +24,7 @@ public struct ListBuffer
 
 	public T Item
 	{
-		 get { } //Length: 402
+		 get { } //Length: 376
 	}
 
 	public ListBuffer`1(T* bufferPtr, Int32* countPtr, int capacity) { }

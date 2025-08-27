@@ -6,7 +6,7 @@ public sealed class X509Certificate2Enumerator : IEnumerator
 
 	public X509Certificate2 Current
 	{
-		 get { } //Length: 149
+		 get { } //Length: 151
 	}
 
 	private override object System.Collections.IEnumerator.Current

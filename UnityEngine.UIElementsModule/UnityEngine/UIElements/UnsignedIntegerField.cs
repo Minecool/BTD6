@@ -12,7 +12,7 @@ public class UnsignedIntegerField : TextValueField<UInt32>
 
 		private UnsignedIntegerField parentUnsignedIntegerField
 		{
-			private get { } //Length: 113
+			private get { } //Length: 117
 		}
 
 		internal UnsignedIntegerInput() { }
@@ -29,6 +29,7 @@ public class UnsignedIntegerField : TextValueField<UInt32>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<UnsignedIntegerField, UxmlTraits>
 	{
 
@@ -36,6 +37,7 @@ public class UnsignedIntegerField : TextValueField<UInt32>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : TextValueFieldTraits<UInt32, UxmlUnsignedIntAttributeDescription>
 	{
 
@@ -49,7 +51,7 @@ public class UnsignedIntegerField : TextValueField<UInt32>
 
 	private UnsignedIntegerInput integerInput
 	{
-		private get { } //Length: 122
+		private get { } //Length: 118
 	}
 
 	private static UnsignedIntegerField() { }

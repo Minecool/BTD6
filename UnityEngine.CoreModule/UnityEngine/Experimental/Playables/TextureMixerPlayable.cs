@@ -1,7 +1,7 @@
 namespace UnityEngine.Experimental.Playables;
 
-[NativeHeader("Runtime/Director/Core/HPlayable.h")]
 [NativeHeader("Runtime/Graphics/Director/TextureMixerPlayable.h")]
+[NativeHeader("Runtime/Director/Core/HPlayable.h")]
 [NativeHeader("Runtime/Export/Director/TextureMixerPlayable.bindings.h")]
 [RequiredByNativeCode]
 [StaticAccessor("TextureMixerPlayableBindings", StaticAccessorType::DoubleColon (2))]

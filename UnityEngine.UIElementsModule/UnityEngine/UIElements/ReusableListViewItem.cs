@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 internal class ReusableListViewItem : ReusableCollectionItem
 {
+	private static readonly string k_SortingDisablesReorderingTooltip; //Field offset: 0x0
 	private VisualElement m_Container; //Field offset: 0x48
 	private VisualElement m_DragHandle; //Field offset: 0x50
 	private VisualElement m_ItemContainer; //Field offset: 0x58
@@ -10,6 +11,8 @@ internal class ReusableListViewItem : ReusableCollectionItem
 	{
 		 get { } //Length: 14
 	}
+
+	private static ReusableListViewItem() { }
 
 	public ReusableListViewItem() { }
 
@@ -22,6 +25,8 @@ internal class ReusableListViewItem : ReusableCollectionItem
 	public virtual void PreAttachElement() { }
 
 	public virtual void SetDragGhost(bool dragGhost) { }
+
+	public void SetDragHandleEnabled(bool enabled) { }
 
 	public void UpdateDragHandle(bool needsDragHandle) { }
 

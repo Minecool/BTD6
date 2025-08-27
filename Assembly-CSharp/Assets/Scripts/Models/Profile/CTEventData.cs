@@ -16,7 +16,7 @@ public class CTEventData
 	[JsonIgnore]
 	public bool HasPendingRewards
 	{
-		 get { } //Length: 111
+		 get { } //Length: 112
 	}
 
 	public CTEventData() { }

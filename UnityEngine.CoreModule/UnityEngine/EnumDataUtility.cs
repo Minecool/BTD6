@@ -1,5 +1,6 @@
 namespace UnityEngine;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 internal static class EnumDataUtility
 {
 	[CompilerGenerated]
@@ -69,7 +70,7 @@ internal static class EnumDataUtility
 
 	public static EnumData GetCachedEnumData(Type enumType, CachedType cachedType = 1, Func<String, String> nicifyName = null) { }
 
-	internal static void HandleInspectorOrderAttribute(Type enumType, ref EnumData enumData) { }
+	public static void HandleInspectorOrderAttribute(Type enumType, ref EnumData enumData) { }
 
 }
 

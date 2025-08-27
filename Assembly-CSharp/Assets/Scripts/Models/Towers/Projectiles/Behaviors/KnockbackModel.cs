@@ -32,7 +32,7 @@ public class KnockbackModel : ProjectileBehaviorModel
 
 	public KnockbackMutator mutator
 	{
-		 get { } //Length: 325
+		 get { } //Length: 329
 	}
 
 	public KnockbackModel(string name, float moabMultiplier, float heavyMultiplier, float lightMultiplier, float lifespan, string mutationId, KnockbackMutator mutator = null) { }

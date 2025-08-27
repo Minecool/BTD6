@@ -22,7 +22,7 @@ internal class Datatype_float : Datatype_anySimpleType
 
 	public virtual XmlTypeCode TypeCode
 	{
-		 get { } //Length: 103
+		 get { } //Length: 31
 	}
 
 	internal virtual RestrictionFlags ValidRestrictionFlags

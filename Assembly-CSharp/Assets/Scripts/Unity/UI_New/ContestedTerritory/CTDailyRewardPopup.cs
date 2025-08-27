@@ -79,9 +79,9 @@ public class CTDailyRewardPopup : MonoBehaviour
 	public event EventHandler OnClosed
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	private CtEvent CtEvent

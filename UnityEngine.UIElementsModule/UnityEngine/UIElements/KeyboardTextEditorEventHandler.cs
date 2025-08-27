@@ -7,7 +7,7 @@ internal class KeyboardTextEditorEventHandler : TextEditorEventHandler
 
 	public KeyboardTextEditorEventHandler(TextElement textElement, TextEditingUtilities editingUtilities) { }
 
-	public virtual void ExecuteDefaultActionAtTarget(EventBase evt) { }
+	public virtual void HandleEventBubbleUp(EventBase evt) { }
 
 	private void OnBlur(BlurEvent _) { }
 
@@ -15,13 +15,15 @@ internal class KeyboardTextEditorEventHandler : TextEditorEventHandler
 
 	private void OnFocus(FocusEvent _) { }
 
+	private void OnIMEInput(IMEEvent _) { }
+
 	private void OnKeyDown(KeyDownEvent evt) { }
 
 	private void OnNavigationEvent(NavigationEventBase<TEvent> evt) { }
 
 	private void OnValidateCommandEvent(ValidateCommandEvent evt) { }
 
-	private void UpdateLabel() { }
+	private void UpdateLabel(bool generatePreview) { }
 
 }
 

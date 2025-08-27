@@ -196,6 +196,11 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 			 get { } //Length: 29
 		}
 
+		public InputAction BananaFarmerPro
+		{
+			 get { } //Length: 29
+		}
+
 		public InputAction BeastHandler
 		{
 			 get { } //Length: 29
@@ -546,6 +551,11 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 			 get { } //Length: 29
 		}
 
+		public InputAction SuperMonkeyBeacon
+		{
+			 get { } //Length: 29
+		}
+
 		public InputAction SuperMonkeyStorm
 		{
 			 get { } //Length: 29
@@ -716,6 +726,8 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 
 		public InputAction get_BananaFarmer() { }
 
+		public InputAction get_BananaFarmerPro() { }
+
 		public InputAction get_BeastHandler() { }
 
 		public InputAction get_BombShooter() { }
@@ -856,6 +868,8 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 
 		public InputAction get_SuperMonkey() { }
 
+		public InputAction get_SuperMonkeyBeacon() { }
+
 		public InputAction get_SuperMonkeyStorm() { }
 
 		public InputAction get_TackShooter() { }
@@ -979,6 +993,8 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 		public void OnBananaFarm(CallbackContext context) { }
 
 		public void OnBananaFarmer(CallbackContext context) { }
+
+		public void OnBananaFarmerPro(CallbackContext context) { }
 
 		public void OnBeastHandler(CallbackContext context) { }
 
@@ -1117,6 +1133,8 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 		public void OnSpikeFactory(CallbackContext context) { }
 
 		public void OnSuperMonkey(CallbackContext context) { }
+
+		public void OnSuperMonkeyBeacon(CallbackContext context) { }
 
 		public void OnSuperMonkeyStorm(CallbackContext context) { }
 
@@ -1475,40 +1493,42 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 	private readonly InputAction m_Gameplay_SelectedTowerActivatedAbility2; //Field offset: 0x380
 	private readonly InputAction m_Gameplay_SelectedTowerActivatedAbility3; //Field offset: 0x388
 	private readonly InputAction m_Gameplay_CenteredPathPosition; //Field offset: 0x390
-	private readonly InputActionMap m_Player; //Field offset: 0x398
-	private List<IPlayerActions> m_PlayerActionsCallbackInterfaces; //Field offset: 0x3A0
-	private readonly InputAction m_Player_Move; //Field offset: 0x3A8
-	private readonly InputAction m_Player_Look; //Field offset: 0x3B0
-	private readonly InputAction m_Player_Fire; //Field offset: 0x3B8
-	private readonly InputActionMap m_UI; //Field offset: 0x3C0
-	private List<IUIActions> m_UIActionsCallbackInterfaces; //Field offset: 0x3C8
-	private readonly InputAction m_UI_Navigate; //Field offset: 0x3D0
-	private readonly InputAction m_UI_Submit; //Field offset: 0x3D8
-	private readonly InputAction m_UI_Cancel; //Field offset: 0x3E0
-	private readonly InputAction m_UI_Point; //Field offset: 0x3E8
-	private readonly InputAction m_UI_Click; //Field offset: 0x3F0
-	private readonly InputAction m_UI_ScrollWheel; //Field offset: 0x3F8
-	private readonly InputAction m_UI_MiddleClick; //Field offset: 0x400
-	private readonly InputAction m_UI_RightClick; //Field offset: 0x408
-	private readonly InputAction m_UI_TrackedDevicePosition; //Field offset: 0x410
-	private readonly InputAction m_UI_TrackedDeviceOrientation; //Field offset: 0x418
-	private readonly InputActionMap m_Gamepad; //Field offset: 0x420
-	private List<IGamepadActions> m_GamepadActionsCallbackInterfaces; //Field offset: 0x428
-	private readonly InputAction m_Gamepad_GamepadKey_NorthButton; //Field offset: 0x430
-	private readonly InputAction m_Gamepad_GamepadKey_SouthButton; //Field offset: 0x438
-	private readonly InputAction m_Gamepad_GamepadKey_EastButton; //Field offset: 0x440
-	private readonly InputAction m_Gamepad_GamepadKey_WestButton; //Field offset: 0x448
-	private readonly InputAction m_Gamepad_GamepadKey_LeftShoulder; //Field offset: 0x450
-	private readonly InputAction m_Gamepad_GamepadKey_RightShoulder; //Field offset: 0x458
-	private readonly InputAction m_Gamepad_GamepadKey_LeftTrigger; //Field offset: 0x460
-	private readonly InputAction m_Gamepad_GamepadKey_RightTrigger; //Field offset: 0x468
-	private readonly InputAction m_Gamepad_GamepadKey_LeftStickButton; //Field offset: 0x470
-	private readonly InputAction m_Gamepad_GamepadKey_RightStickButton; //Field offset: 0x478
-	private readonly InputAction m_Gamepad_GamepadKey_Start; //Field offset: 0x480
-	private readonly InputAction m_Gamepad_GamepadKey_Select; //Field offset: 0x488
-	private int m_DefaultSchemeIndex; //Field offset: 0x490
-	private int m_MouseSchemeIndex; //Field offset: 0x494
-	private int m_GamepadSchemeIndex; //Field offset: 0x498
+	private readonly InputAction m_Gameplay_BananaFarmerPro; //Field offset: 0x398
+	private readonly InputAction m_Gameplay_SuperMonkeyBeacon; //Field offset: 0x3A0
+	private readonly InputActionMap m_Player; //Field offset: 0x3A8
+	private List<IPlayerActions> m_PlayerActionsCallbackInterfaces; //Field offset: 0x3B0
+	private readonly InputAction m_Player_Move; //Field offset: 0x3B8
+	private readonly InputAction m_Player_Look; //Field offset: 0x3C0
+	private readonly InputAction m_Player_Fire; //Field offset: 0x3C8
+	private readonly InputActionMap m_UI; //Field offset: 0x3D0
+	private List<IUIActions> m_UIActionsCallbackInterfaces; //Field offset: 0x3D8
+	private readonly InputAction m_UI_Navigate; //Field offset: 0x3E0
+	private readonly InputAction m_UI_Submit; //Field offset: 0x3E8
+	private readonly InputAction m_UI_Cancel; //Field offset: 0x3F0
+	private readonly InputAction m_UI_Point; //Field offset: 0x3F8
+	private readonly InputAction m_UI_Click; //Field offset: 0x400
+	private readonly InputAction m_UI_ScrollWheel; //Field offset: 0x408
+	private readonly InputAction m_UI_MiddleClick; //Field offset: 0x410
+	private readonly InputAction m_UI_RightClick; //Field offset: 0x418
+	private readonly InputAction m_UI_TrackedDevicePosition; //Field offset: 0x420
+	private readonly InputAction m_UI_TrackedDeviceOrientation; //Field offset: 0x428
+	private readonly InputActionMap m_Gamepad; //Field offset: 0x430
+	private List<IGamepadActions> m_GamepadActionsCallbackInterfaces; //Field offset: 0x438
+	private readonly InputAction m_Gamepad_GamepadKey_NorthButton; //Field offset: 0x440
+	private readonly InputAction m_Gamepad_GamepadKey_SouthButton; //Field offset: 0x448
+	private readonly InputAction m_Gamepad_GamepadKey_EastButton; //Field offset: 0x450
+	private readonly InputAction m_Gamepad_GamepadKey_WestButton; //Field offset: 0x458
+	private readonly InputAction m_Gamepad_GamepadKey_LeftShoulder; //Field offset: 0x460
+	private readonly InputAction m_Gamepad_GamepadKey_RightShoulder; //Field offset: 0x468
+	private readonly InputAction m_Gamepad_GamepadKey_LeftTrigger; //Field offset: 0x470
+	private readonly InputAction m_Gamepad_GamepadKey_RightTrigger; //Field offset: 0x478
+	private readonly InputAction m_Gamepad_GamepadKey_LeftStickButton; //Field offset: 0x480
+	private readonly InputAction m_Gamepad_GamepadKey_RightStickButton; //Field offset: 0x488
+	private readonly InputAction m_Gamepad_GamepadKey_Start; //Field offset: 0x490
+	private readonly InputAction m_Gamepad_GamepadKey_Select; //Field offset: 0x498
+	private int m_DefaultSchemeIndex; //Field offset: 0x4A0
+	private int m_MouseSchemeIndex; //Field offset: 0x4A4
+	private int m_GamepadSchemeIndex; //Field offset: 0x4A8
 
 	public InputActionAsset asset
 	{
@@ -1534,7 +1554,7 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 
 	public InputControlScheme DefaultScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public override Nullable<ReadOnlyArray`1<InputDevice>> devices
@@ -1550,7 +1570,7 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 
 	public InputControlScheme GamepadScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public GameplayActions Gameplay
@@ -1560,7 +1580,7 @@ public class Btd6ActionMap : IInputActionCollection2, IInputActionCollection, IE
 
 	public InputControlScheme MouseScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public PlayerActions Player

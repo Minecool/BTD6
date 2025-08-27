@@ -6,17 +6,17 @@ public sealed class XmlAttributeCollection : XmlNamedNodeMap, ICollection, IEnum
 
 	public XmlAttribute ItemOf
 	{
-		 get { } //Length: 235
+		 get { } //Length: 231
 	}
 
 	public XmlAttribute ItemOf
 	{
-		 get { } //Length: 289
+		 get { } //Length: 290
 	}
 
 	public XmlAttribute ItemOf
 	{
-		 get { } //Length: 335
+		 get { } //Length: 358
 	}
 
 	private override int System.Collections.ICollection.Count

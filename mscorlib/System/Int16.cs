@@ -3,8 +3,6 @@ namespace System;
 [IsReadOnly]
 public struct short : IComparable, IConvertible, IFormattable, IComparable<Int16>, IEquatable<Int16>, ISpanFormattable
 {
-	public const short MaxValue = 32767; //Field offset: 0x0
-	public const short MinValue = -32768; //Field offset: 0x0
 	private readonly short m_value; //Field offset: 0x0
 
 	public override int CompareTo(object value) { }
@@ -56,9 +54,9 @@ public struct short : IComparable, IConvertible, IFormattable, IComparable<Int16
 
 	private override ulong System.IConvertible.ToUInt64(IFormatProvider provider) { }
 
-	public virtual string ToString() { }
-
 	public override string ToString(string format, IFormatProvider provider) { }
+
+	public virtual string ToString() { }
 
 	public override string ToString(IFormatProvider provider) { }
 
@@ -67,6 +65,8 @@ public struct short : IComparable, IConvertible, IFormattable, IComparable<Int16
 	private static bool TryParse(ReadOnlySpan<Char> s, NumberStyles style, NumberFormatInfo info, out short result) { }
 
 	public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out short result) { }
+
+	public static bool TryParse(string s, out short result) { }
 
 }
 

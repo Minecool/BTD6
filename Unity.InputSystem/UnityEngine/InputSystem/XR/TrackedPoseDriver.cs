@@ -1,6 +1,7 @@
 namespace UnityEngine.InputSystem.XR;
 
 [AddComponentMenu("XR/Tracked Pose Driver (Input System)")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/TrackedInputDevices.html#tracked-pose-driver")]
 public class TrackedPoseDriver : MonoBehaviour, ISerializationCallbackReceiver
 {
 	[Flags]
@@ -135,11 +136,15 @@ public class TrackedPoseDriver : MonoBehaviour, ISerializationCallbackReceiver
 
 	public UpdateType get_updateType() { }
 
+	private static bool HasResolvedControl(InputAction action) { }
+
 	private bool HasStereoCamera(out Camera cameraComponent) { }
 
 	protected override void OnBeforeRender() { }
 
 	protected override void OnDestroy() { }
+
+	private void OnDeviceChanged(InputDevice inputDevice, InputDeviceChange inputDeviceChange) { }
 
 	protected void OnDisable() { }
 
@@ -163,7 +168,9 @@ public class TrackedPoseDriver : MonoBehaviour, ISerializationCallbackReceiver
 
 	private void ReadTrackingState() { }
 
-	private void RenameAndEnable(InputAction action, string name) { }
+	private void ReadTrackingStateWithoutTrackingAction() { }
+
+	private static void RenameAndEnable(InputAction action, string name) { }
 
 	protected void Reset() { }
 

@@ -20,7 +20,7 @@ internal class MonoBtlsPkcs12 : MonoBtlsObject
 
 	internal BoringPkcs12Handle Handle
 	{
-		internal get { } //Length: 117
+		internal get { } //Length: 113
 	}
 
 	public bool HasPrivateKey

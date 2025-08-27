@@ -1,7 +1,7 @@
 namespace UnityEngine.Animations;
 
-[NativeHeader("Modules/Animation/Director/AnimationPosePlayable.h")]
 [NativeHeader("Runtime/Director/Core/HPlayable.h")]
+[NativeHeader("Modules/Animation/Director/AnimationPosePlayable.h")]
 [NativeHeader("Modules/Animation/ScriptBindings/AnimationPosePlayable.bindings.h")]
 [RequiredByNativeCode]
 [StaticAccessor("AnimationPosePlayableBindings", StaticAccessorType::DoubleColon (2))]

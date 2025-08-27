@@ -59,7 +59,7 @@ internal sealed class Index
 
 	private bool DoListChanged
 	{
-		private get { } //Length: 105
+		private get { } //Length: 108
 	}
 
 	public bool HasDuplicates
@@ -94,7 +94,7 @@ internal sealed class Index
 
 	public IFilter RowFilter
 	{
-		 get { } //Length: 129
+		 get { } //Length: 127
 	}
 
 	internal DataTable Table

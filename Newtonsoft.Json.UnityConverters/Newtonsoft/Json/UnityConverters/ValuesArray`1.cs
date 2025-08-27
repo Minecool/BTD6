@@ -7,7 +7,7 @@ public struct ValuesArray : IReadOnlyList<TInner>, IEnumerable<TInner>, IEnumera
 
 	public override TInner Item
 	{
-		 get { } //Length: 262
+		 get { } //Length: 259
 		 set { } //Length: 248
 	}
 

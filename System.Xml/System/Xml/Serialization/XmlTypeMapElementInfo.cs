@@ -22,12 +22,12 @@ internal class XmlTypeMapElementInfo
 
 	public string DataTypeName
 	{
-		 get { } //Length: 47
+		 get { } //Length: 45
 	}
 
 	public string DataTypeNamespace
 	{
-		 get { } //Length: 121
+		 get { } //Length: 91
 	}
 
 	public string ElementName
@@ -57,13 +57,13 @@ internal class XmlTypeMapElementInfo
 	public bool IsTextElement
 	{
 		 get { } //Length: 61
-		 set { } //Length: 176
+		 set { } //Length: 164
 	}
 
 	public bool IsUnnamedAnyElement
 	{
-		 get { } //Length: 71
-		 set { } //Length: 174
+		 get { } //Length: 29
+		 set { } //Length: 137
 	}
 
 	public XmlTypeMapping MappedType
@@ -79,7 +79,7 @@ internal class XmlTypeMapElementInfo
 
 	public bool MultiReferenceType
 	{
-		 get { } //Length: 19
+		 get { } //Length: 15
 	}
 
 	public string Namespace

@@ -1,7 +1,7 @@
 namespace NinjaKiwi.Common;
 
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public static class ListPool
 {
 	internal struct PooledList : IDisposable
@@ -10,7 +10,7 @@ public static class ListPool
 
 		public int Count
 		{
-			 get { } //Length: 56
+			 get { } //Length: 49
 		}
 
 		public List<T> List

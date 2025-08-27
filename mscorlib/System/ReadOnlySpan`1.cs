@@ -28,7 +28,7 @@ public struct ReadOnlySpan
 	{
 		[Intrinsic]
 		[NonVersionable]
-		 get { } //Length: 45
+		 get { } //Length: 49
 	}
 
 	public int Length
@@ -67,6 +67,8 @@ public struct ReadOnlySpan
 	public virtual int GetHashCode() { }
 
 	public T GetPinnableReference() { }
+
+	public static bool op_Equality(ReadOnlySpan<T> left, ReadOnlySpan<T> right) { }
 
 	public static ReadOnlySpan<T> op_Implicit(T[] array) { }
 

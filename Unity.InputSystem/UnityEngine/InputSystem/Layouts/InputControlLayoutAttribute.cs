@@ -75,7 +75,7 @@ public sealed class InputControlLayoutAttribute : Attribute
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public string stateFormat

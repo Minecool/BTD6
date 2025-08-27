@@ -30,7 +30,7 @@ public abstract class TriangulationContext
 
 	public DTSweepDebugContext DTDebugContext
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public override bool IsDebugEnabled

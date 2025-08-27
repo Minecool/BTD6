@@ -30,7 +30,7 @@ public class Hashtable : IDictionary, ICollection, IEnumerable, ISerializable, I
 
 		public override object Current
 		{
-			 get { } //Length: 199
+			 get { } //Length: 200
 		}
 
 		public override DictionaryEntry Entry
@@ -122,12 +122,12 @@ public class Hashtable : IDictionary, ICollection, IEnumerable, ISerializable, I
 		public virtual object Item
 		{
 			 get { } //Length: 42
-			 set { } //Length: 244
+			 set { } //Length: 231
 		}
 
 		public virtual ICollection Keys
 		{
-			 get { } //Length: 234
+			 get { } //Length: 224
 		}
 
 		public virtual object SyncRoot
@@ -137,7 +137,7 @@ public class Hashtable : IDictionary, ICollection, IEnumerable, ISerializable, I
 
 		public virtual ICollection Values
 		{
-			 get { } //Length: 234
+			 get { } //Length: 224
 		}
 
 		internal SyncHashtable(Hashtable table) { }
@@ -217,17 +217,7 @@ public class Hashtable : IDictionary, ICollection, IEnumerable, ISerializable, I
 
 	}
 
-	internal const int HashPrime = 101; //Field offset: 0x0
-	private const string KeyComparerName = "KeyComparer"; //Field offset: 0x0
-	private const string ValuesName = "Values"; //Field offset: 0x0
-	private const string KeysName = "Keys"; //Field offset: 0x0
-	private const string HashSizeName = "HashSize"; //Field offset: 0x0
 	private static ConditionalWeakTable<Object, SerializationInfo> s_serializationInfoTable; //Field offset: 0x0
-	private const string ComparerName = "Comparer"; //Field offset: 0x0
-	private const string VersionName = "Version"; //Field offset: 0x0
-	private const string LoadFactorName = "LoadFactor"; //Field offset: 0x0
-	private const int InitialSize = 3; //Field offset: 0x0
-	private const string HashCodeProviderName = "HashCodeProvider"; //Field offset: 0x0
 	private bucket[] _buckets; //Field offset: 0x10
 	private int _count; //Field offset: 0x18
 	private int _occupancy; //Field offset: 0x1C
@@ -257,7 +247,7 @@ public class Hashtable : IDictionary, ICollection, IEnumerable, ISerializable, I
 
 	public override object Item
 	{
-		 get { } //Length: 567
+		 get { } //Length: 558
 		 set { } //Length: 26
 	}
 

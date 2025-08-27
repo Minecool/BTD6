@@ -65,13 +65,13 @@ internal static class EnumerableExtensions
 		private override T System.Collections.Generic.IEnumerator<T>.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 175
+			private get { } //Length: 147
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 176
+			private get { } //Length: 156
 		}
 
 		[DebuggerHidden]

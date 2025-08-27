@@ -53,17 +53,17 @@ public struct DateTime : IComparable, IFormattable, IConvertible, IComparable<Da
 
 	public DateTime Date
 	{
-		 get { } //Length: 120
+		 get { } //Length: 117
 	}
 
 	public int Day
 	{
-		 get { } //Length: 79
+		 get { } //Length: 78
 	}
 
 	public DayOfWeek DayOfWeek
 	{
-		 get { } //Length: 134
+		 get { } //Length: 135
 	}
 
 	public int Hour
@@ -98,7 +98,7 @@ public struct DateTime : IComparable, IFormattable, IConvertible, IComparable<Da
 
 	public int Month
 	{
-		 get { } //Length: 79
+		 get { } //Length: 78
 	}
 
 	public static DateTime Now

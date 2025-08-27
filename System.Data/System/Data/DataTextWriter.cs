@@ -6,7 +6,7 @@ internal sealed class DataTextWriter : XmlWriter
 
 	internal Stream BaseStream
 	{
-		internal get { } //Length: 129
+		internal get { } //Length: 106
 	}
 
 	public virtual WriteState WriteState

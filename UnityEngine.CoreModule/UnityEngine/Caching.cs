@@ -43,7 +43,7 @@ public sealed class Caching
 
 	public static Cache AddCache(string cachePath) { }
 
-	private static void AddCache_Injected(string cachePath, bool isReadonly, out Cache ret) { }
+	private static void AddCache_Injected(ref ManagedSpanWrapper cachePath, bool isReadonly, out Cache ret) { }
 
 	public static bool ClearAllCachedVersions(string assetBundleName) { }
 
@@ -52,11 +52,11 @@ public sealed class Caching
 	[NativeName("ClearCachedVersion")]
 	internal static bool ClearCachedVersionInternal(string assetBundleName, Hash128 hash) { }
 
-	private static bool ClearCachedVersionInternal_Injected(string assetBundleName, ref Hash128 hash) { }
+	private static bool ClearCachedVersionInternal_Injected(ref ManagedSpanWrapper assetBundleName, in Hash128 hash) { }
 
 	internal static bool ClearCachedVersions(string assetBundleName, Hash128 hash, bool keepInputVersion) { }
 
-	private static bool ClearCachedVersions_Injected(string assetBundleName, ref Hash128 hash, bool keepInputVersion) { }
+	private static bool ClearCachedVersions_Injected(ref ManagedSpanWrapper assetBundleName, in Hash128 hash, bool keepInputVersion) { }
 
 	public static bool ClearOtherCachedVersions(string assetBundleName, Hash128 hash) { }
 
@@ -89,18 +89,20 @@ public sealed class Caching
 	[StaticAccessor("CachingManagerWrapper", StaticAccessorType::DoubleColon (2))]
 	public static Cache GetCacheByPath(string cachePath) { }
 
-	private static void GetCacheByPath_Injected(string cachePath, out Cache ret) { }
+	private static void GetCacheByPath_Injected(ref ManagedSpanWrapper cachePath, out Cache ret) { }
 
 	public static void GetCachedVersions(string assetBundleName, List<Hash128> outCachedVersions) { }
 
 	internal static Hash128[] GetCachedVersions(string assetBundleName) { }
+
+	private static void GetCachedVersions_Injected(ref ManagedSpanWrapper assetBundleName, out BlittableArrayWrapper ret) { }
 
 	public static bool IsVersionCached(CachedAssetBundle cachedBundle) { }
 
 	[NativeName("IsCached")]
 	internal static bool IsVersionCached(string url, string assetBundleName, Hash128 hash) { }
 
-	private static bool IsVersionCached_Injected(string url, string assetBundleName, ref Hash128 hash) { }
+	private static bool IsVersionCached_Injected(ref ManagedSpanWrapper url, ref ManagedSpanWrapper assetBundleName, in Hash128 hash) { }
 
 	public static void set_compressionEnabled(bool value) { }
 
@@ -108,7 +110,7 @@ public sealed class Caching
 	[NativeThrows]
 	public static void set_currentCacheForWriting(Cache value) { }
 
-	private static void set_currentCacheForWriting_Injected(ref Cache value) { }
+	private static void set_currentCacheForWriting_Injected(in Cache value) { }
 
 }
 

@@ -13,12 +13,12 @@ public struct EnableIMECompositionCommand : IInputDeviceCommandInfo
 
 	public static FourCC Type
 	{
-		 get { } //Length: 58
+		 get { } //Length: 54
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 58
+		 get { } //Length: 54
 	}
 
 	public static EnableIMECompositionCommand Create(bool enabled) { }

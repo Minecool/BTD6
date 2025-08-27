@@ -52,22 +52,22 @@ public class ConcurrentDictionary : IDictionary<TKey, TValue>, ICollection<KeyVa
 
 		public override object Current
 		{
-			 get { } //Length: 334
+			 get { } //Length: 111
 		}
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 267
+			 get { } //Length: 473
 		}
 
 		public override object Key
 		{
-			 get { } //Length: 121
+			 get { } //Length: 222
 		}
 
 		public override object Value
 		{
-			 get { } //Length: 92
+			 get { } //Length: 184
 		}
 
 		internal DictionaryEnumerator(ConcurrentDictionary<TKey, TValue> dictionary) { }
@@ -169,7 +169,7 @@ public class ConcurrentDictionary : IDictionary<TKey, TValue>, ICollection<KeyVa
 
 	private override object System.Collections.IDictionary.Item
 	{
-		private get { } //Length: 281
+		private get { } //Length: 289
 		private set { } //Length: 819
 	}
 

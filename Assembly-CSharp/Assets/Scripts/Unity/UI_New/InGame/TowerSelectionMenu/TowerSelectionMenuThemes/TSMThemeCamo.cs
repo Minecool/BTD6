@@ -2,8 +2,8 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeCamo : TSMThemeDefault
 {
-	public Button prioCamoButton; //Field offset: 0xC0
-	public GameObject toggleTickbox; //Field offset: 0xC8
+	public Button prioCamoButton; //Field offset: 0xD8
+	public GameObject toggleTickbox; //Field offset: 0xE0
 
 	public TSMThemeCamo() { }
 

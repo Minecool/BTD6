@@ -11,25 +11,27 @@ public class WheelEvent : MouseEventBase<WheelEvent>
 
 		public <>c() { }
 
-		internal WheelEvent <.cctor>b__0_0() { }
+		internal WheelEvent <.cctor>b__1_0() { }
 
 	}
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Vector3 <delta>k__BackingField; //Field offset: 0xC0
+	private Vector3 <delta>k__BackingField; //Field offset: 0xA0
 
 	public private Vector3 delta
 	{
 		[CompilerGenerated]
 		 get { } //Length: 25
 		[CompilerGenerated]
-		private set { } //Length: 1843
+		private set { } //Length: 2510
 	}
 
 	private static WheelEvent() { }
 
 	public WheelEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	[CompilerGenerated]
 	public Vector3 get_delta() { }

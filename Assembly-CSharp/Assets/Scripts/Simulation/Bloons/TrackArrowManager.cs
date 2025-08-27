@@ -23,11 +23,11 @@ public class TrackArrowManager : RootBehavior
 
 	private void EmitArrow(Path path, bool endArrow) { }
 
-	public void Init() { }
-
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 
 	protected virtual void OnDestroy() { }
+
+	public void OnMatchReadyOrRestart(bool loadedSave) { }
 
 	private void OnRoundEnd(int round) { }
 

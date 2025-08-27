@@ -58,6 +58,11 @@ public abstract class RenderPipelineAsset : ScriptableObject
 		 get { } //Length: 3
 	}
 
+	public override Shader defaultSpeedTree9Shader
+	{
+		 get { } //Length: 3
+	}
+
 	public override Material defaultTerrainMaterial
 	{
 		 get { } //Length: 3
@@ -78,11 +83,23 @@ public abstract class RenderPipelineAsset : ScriptableObject
 		 get { } //Length: 3
 	}
 
+	public override Type pipelineType
+	{
+		 get { } //Length: 86
+	}
+
+	internal string pipelineTypeFullName
+	{
+		internal get { } //Length: 78
+	}
+
+	[Obsolete("This property is obsolete. Use RenderingLayerMask API and Tags & Layers project settings instead. #from(23.3)", False)]
 	public override String[] prefixedRenderingLayerMaskNames
 	{
 		 get { } //Length: 3
 	}
 
+	[Obsolete("This property is obsolete. Use RenderingLayerMask API and Tags & Layers project settings instead. #from(23.3)", False)]
 	public override String[] renderingLayerMaskNames
 	{
 		 get { } //Length: 3
@@ -90,7 +107,13 @@ public abstract class RenderPipelineAsset : ScriptableObject
 
 	public override string renderPipelineShaderTag
 	{
-		 get { } //Length: 113
+		 get { } //Length: 101
+	}
+
+	[Obsolete("This property is obsolete. Use pipelineType instead. #from(23.2)", False)]
+	protected private override Type renderPipelineType
+	{
+		private get { } //Length: 86
 	}
 
 	public override Shader terrainDetailGrassBillboardShader
@@ -111,6 +134,8 @@ public abstract class RenderPipelineAsset : ScriptableObject
 	protected RenderPipelineAsset() { }
 
 	protected abstract RenderPipeline CreatePipeline() { }
+
+	protected override void EnsureGlobalSettings() { }
 
 	public override Shader get_autodeskInteractiveMaskedShader() { }
 
@@ -134,6 +159,8 @@ public abstract class RenderPipelineAsset : ScriptableObject
 
 	public override Shader get_defaultSpeedTree8Shader() { }
 
+	public override Shader get_defaultSpeedTree9Shader() { }
+
 	public override Material get_defaultTerrainMaterial() { }
 
 	public override Material get_defaultUIETC1SupportedMaterial() { }
@@ -142,11 +169,17 @@ public abstract class RenderPipelineAsset : ScriptableObject
 
 	public override Material get_defaultUIOverdrawMaterial() { }
 
+	public override Type get_pipelineType() { }
+
+	internal string get_pipelineTypeFullName() { }
+
 	public override String[] get_prefixedRenderingLayerMaskNames() { }
 
 	public override String[] get_renderingLayerMaskNames() { }
 
 	public override string get_renderPipelineShaderTag() { }
+
+	protected private override Type get_renderPipelineType() { }
 
 	public override Shader get_terrainDetailGrassBillboardShader() { }
 

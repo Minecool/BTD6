@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets.Syntax;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class Expression
 {
 	public ExpressionType type; //Field offset: 0x10

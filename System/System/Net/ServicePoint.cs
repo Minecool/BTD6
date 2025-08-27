@@ -49,7 +49,7 @@ public class ServicePoint
 
 	internal IPHostEntry HostEntry
 	{
-		internal get { } //Length: 1077
+		internal get { } //Length: 1052
 	}
 
 	internal SPKey Key
@@ -92,7 +92,7 @@ public class ServicePoint
 	internal bool UsesProxy
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 4
+		internal set { } //Length: 86
 	}
 
 	internal ServicePoint(SPKey key, Uri uri, int connectionLimit, int maxIdleTime) { }

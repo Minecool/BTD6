@@ -22,7 +22,7 @@ public class XmlException : SystemException
 
 	public virtual string Message
 	{
-		 get { } //Length: 25
+		 get { } //Length: 20
 	}
 
 	internal string ResString

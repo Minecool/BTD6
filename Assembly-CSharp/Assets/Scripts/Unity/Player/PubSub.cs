@@ -3,7 +3,21 @@ namespace Assets.Scripts.Unity.Player;
 public class PubSub
 {
 	[CompilerGenerated]
-	private struct <CheckForMessagesAndGifts>d__8 : IAsyncStateMachine
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static Func<PubSubMessageModel, DateTime> <>9__10_0; //Field offset: 0x8
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal DateTime <CheckForMessagesAndGifts>b__10_0(PubSubMessageModel x) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <CheckForMessagesAndGifts>d__10 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -12,8 +26,6 @@ public class PubSub
 		private List<PubSubMessageModel> <pubsubMessages>5__3; //Field offset: 0x30
 		private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x38
 		private TaskAwaiter<PubSubMessageModel[]> <>u__2; //Field offset: 0x40
-		private Enumerator<PubSubMessageModel> <>7__wrap3; //Field offset: 0x48
-		private TaskAwaiter <>u__3; //Field offset: 0x60
 
 		private override void MoveNext() { }
 
@@ -23,7 +35,7 @@ public class PubSub
 	}
 
 	[CompilerGenerated]
-	private struct <GetInboxMessages>d__9 : IAsyncStateMachine
+	private struct <GetInboxMessages>d__11 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<PubSubMessageModel[]> <>t__builder; //Field offset: 0x8
@@ -38,7 +50,7 @@ public class PubSub
 	}
 
 	[CompilerGenerated]
-	private struct <GetPubSubMessages>d__10 : IAsyncStateMachine
+	private struct <GetPubSubMessages>d__12 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<PubSubMessageModel[]> <>t__builder; //Field offset: 0x8
@@ -54,7 +66,7 @@ public class PubSub
 	}
 
 	[CompilerGenerated]
-	private struct <TryCheckForMessagesAndGifts>d__7 : IAsyncStateMachine
+	private struct <TryCheckForMessagesAndGifts>d__9 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -66,6 +78,14 @@ public class PubSub
 		[DebuggerHidden]
 		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
 
+	}
+
+	internal enum MessageType
+	{
+		Unknown = 0,
+		Gift = 2,
+		Mail = 3,
+		Sweepstakes = 6676,
 	}
 
 	internal sealed class NewMessageReceived : MulticastDelegate
@@ -81,8 +101,9 @@ public class PubSub
 
 	}
 
+	private Task messageAndGiftCheckTask; //Field offset: 0x10
 	[CompilerGenerated]
-	private readonly Btd6Player <Player>k__BackingField; //Field offset: 0x10
+	private readonly Btd6Player <Player>k__BackingField; //Field offset: 0x18
 
 	private bool IsDestroyed
 	{
@@ -97,7 +118,7 @@ public class PubSub
 
 	public PubSub(Btd6Player player) { }
 
-	[AsyncStateMachine(typeof(<CheckForMessagesAndGifts>d__8))]
+	[AsyncStateMachine(typeof(<CheckForMessagesAndGifts>d__10))]
 	private Task CheckForMessagesAndGifts() { }
 
 	private bool get_IsDestroyed() { }
@@ -105,15 +126,17 @@ public class PubSub
 	[CompilerGenerated]
 	private Btd6Player get_Player() { }
 
-	[AsyncStateMachine(typeof(<GetInboxMessages>d__9))]
+	[AsyncStateMachine(typeof(<GetInboxMessages>d__11))]
 	private Task<PubSubMessageModel[]> GetInboxMessages() { }
 
-	[AsyncStateMachine(typeof(<GetPubSubMessages>d__10))]
+	[AsyncStateMachine(typeof(<GetPubSubMessages>d__12))]
 	private Task<PubSubMessageModel[]> GetPubSubMessages(string channelId) { }
+
+	public void ProcessGiftMessage(PubSubMessageModel pubsubMessage) { }
 
 	private void ProcessSweepstakesMessage(OnlineProfileModel onlineData, PubSubMessageModel message) { }
 
-	[AsyncStateMachine(typeof(<TryCheckForMessagesAndGifts>d__7))]
+	[AsyncStateMachine(typeof(<TryCheckForMessagesAndGifts>d__9))]
 	public Task TryCheckForMessagesAndGifts() { }
 
 }

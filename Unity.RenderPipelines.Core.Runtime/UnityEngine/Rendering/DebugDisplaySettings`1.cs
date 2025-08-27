@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering;
 
-public abstract class DebugDisplaySettings : IDebugDisplaySettings, IDebugDisplaySettingsQuery
+public abstract class DebugDisplaySettings : IDebugDisplaySettings
 {
 	[CompilerGenerated]
 	private sealed class <>c
@@ -11,7 +11,18 @@ public abstract class DebugDisplaySettings : IDebugDisplaySettings, IDebugDispla
 
 		public <>c() { }
 
-		internal T <.cctor>b__15_0() { }
+		internal T <.cctor>b__17_0() { }
+
+	}
+
+	private class IDebugDisplaySettingsDataComparer : IEqualityComparer<IDebugDisplaySettingsData>
+	{
+
+		public IDebugDisplaySettingsDataComparer() { }
+
+		public override bool Equals(IDebugDisplaySettingsData x, IDebugDisplaySettingsData y) { }
+
+		public override int GetHashCode(IDebugDisplaySettingsData obj) { }
 
 	}
 
@@ -57,6 +68,8 @@ public abstract class DebugDisplaySettings : IDebugDisplaySettings, IDebugDispla
 	public override void Reset() { }
 
 	public override bool TryGetScreenClearColor(ref Color color) { }
+
+	private override IDebugDisplaySettingsData UnityEngine.Rendering.IDebugDisplaySettings.Add(IDebugDisplaySettingsData newData) { }
 
 }
 

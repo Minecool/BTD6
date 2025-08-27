@@ -14,7 +14,7 @@ public struct SqlBinary : INullable, IComparable, IXmlSerializable
 
 	public Byte[] Value
 	{
-		 get { } //Length: 200
+		 get { } //Length: 199
 	}
 
 	private static SqlBinary() { }

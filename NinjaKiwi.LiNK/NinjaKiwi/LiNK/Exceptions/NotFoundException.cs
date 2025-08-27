@@ -6,7 +6,7 @@ public class NotFoundException : InternetException
 
 	public virtual string Message
 	{
-		 get { } //Length: 119
+		 get { } //Length: 107
 	}
 
 	public NotFoundException(string url, int statusCode) { }

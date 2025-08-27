@@ -8,7 +8,7 @@ public class AnimationClipData
 
 	public float length
 	{
-		 get { } //Length: 142
+		 get { } //Length: 147
 	}
 
 	public AnimationClipData() { }

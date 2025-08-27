@@ -51,6 +51,12 @@ public class ReflectedMemberProperty : Property<TContainer, TValue>
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x0
 
+	public virtual bool IsReadOnly
+	{
+		[CompilerGenerated]
+		 get { } //Length: 5
+	}
+
 	public virtual string Name
 	{
 		[CompilerGenerated]
@@ -60,7 +66,14 @@ public class ReflectedMemberProperty : Property<TContainer, TValue>
 	internal ReflectedMemberProperty`2(IMemberInfo info, string name) { }
 
 	[CompilerGenerated]
+	public virtual bool get_IsReadOnly() { }
+
+	[CompilerGenerated]
 	public virtual string get_Name() { }
+
+	public virtual TValue GetValue(ref TContainer container) { }
+
+	public virtual void SetValue(ref TContainer container, TValue value) { }
 
 }
 

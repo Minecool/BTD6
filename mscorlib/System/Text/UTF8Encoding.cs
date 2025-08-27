@@ -57,7 +57,7 @@ public class UTF8Encoding : Encoding
 
 	public virtual ReadOnlySpan<Byte> Preamble
 	{
-		 get { } //Length: 1079
+		 get { } //Length: 1047
 	}
 
 	private static UTF8Encoding() { }

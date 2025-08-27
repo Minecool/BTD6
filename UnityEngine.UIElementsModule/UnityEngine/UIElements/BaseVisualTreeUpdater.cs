@@ -2,10 +2,11 @@ namespace UnityEngine.UIElements;
 
 internal abstract class BaseVisualTreeUpdater : IVisualTreeUpdater, IDisposable
 {
+	private long frameCount; //Field offset: 0x10
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<BaseVisualElementPanel> panelChanged; //Field offset: 0x10
-	private BaseVisualElementPanel m_Panel; //Field offset: 0x18
+	private Action<BaseVisualElementPanel> panelChanged; //Field offset: 0x18
+	private BaseVisualElementPanel m_Panel; //Field offset: 0x20
 
 	public event Action<BaseVisualElementPanel> panelChanged
 	{
@@ -17,13 +18,19 @@ internal abstract class BaseVisualTreeUpdater : IVisualTreeUpdater, IDisposable
 
 	public override BaseVisualElementPanel panel
 	{
-		 get { } //Length: 7
-		 set { } //Length: 28
+		 get { } //Length: 159
+		 set { } //Length: 26
 	}
 
 	public abstract ProfilerMarker profilerMarker
 	{
 		 get { } //Length: 0
+	}
+
+	private override long UnityEngine.UIElements.IVisualTreeUpdater.FrameCount
+	{
+		private get { } //Length: 7
+		private set { } //Length: 5
 	}
 
 	public VisualElement visualTree
@@ -52,6 +59,10 @@ internal abstract class BaseVisualTreeUpdater : IVisualTreeUpdater, IDisposable
 	public void remove_panelChanged(Action<BaseVisualElementPanel> value) { }
 
 	public override void set_panel(BaseVisualElementPanel value) { }
+
+	private override long UnityEngine.UIElements.IVisualTreeUpdater.get_FrameCount() { }
+
+	private override void UnityEngine.UIElements.IVisualTreeUpdater.set_FrameCount(long value) { }
 
 	public abstract void Update() { }
 

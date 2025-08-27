@@ -13,7 +13,7 @@ public abstract class XmlNode : ICloneable, IEnumerable
 
 	public override string BaseURI
 	{
-		 get { } //Length: 272
+		 get { } //Length: 253
 	}
 
 	public override XmlNodeList ChildNodes
@@ -23,7 +23,7 @@ public abstract class XmlNode : ICloneable, IEnumerable
 
 	internal XmlDocument Document
 	{
-		internal get { } //Length: 155
+		internal get { } //Length: 148
 	}
 
 	public override XmlNode FirstChild
@@ -38,7 +38,7 @@ public abstract class XmlNode : ICloneable, IEnumerable
 
 	public override string InnerText
 	{
-		 get { } //Length: 296
+		 get { } //Length: 284
 		 set { } //Length: 256
 	}
 
@@ -54,7 +54,7 @@ public abstract class XmlNode : ICloneable, IEnumerable
 
 	public override bool IsReadOnly
 	{
-		 get { } //Length: 219
+		 get { } //Length: 213
 	}
 
 	internal override bool IsText
@@ -85,7 +85,7 @@ public abstract class XmlNode : ICloneable, IEnumerable
 
 	public override string NamespaceURI
 	{
-		 get { } //Length: 54
+		 get { } //Length: 18
 	}
 
 	public override XmlNode NextSibling
@@ -100,17 +100,17 @@ public abstract class XmlNode : ICloneable, IEnumerable
 
 	public override XmlDocument OwnerDocument
 	{
-		 get { } //Length: 190
+		 get { } //Length: 186
 	}
 
 	public override XmlNode ParentNode
 	{
-		 get { } //Length: 240
+		 get { } //Length: 206
 	}
 
 	public override string Prefix
 	{
-		 get { } //Length: 54
+		 get { } //Length: 18
 		 set { } //Length: 3
 	}
 
@@ -132,12 +132,12 @@ public abstract class XmlNode : ICloneable, IEnumerable
 
 	internal override string XmlLang
 	{
-		internal get { } //Length: 277
+		internal get { } //Length: 223
 	}
 
 	internal override XmlSpace XmlSpace
 	{
-		internal get { } //Length: 396
+		internal get { } //Length: 377
 	}
 
 	internal XmlNode() { }

@@ -7,6 +7,7 @@ public class TextStyleSheet : ScriptableObject
 	[SerializeField]
 	private List<TextStyle> m_StyleList; //Field offset: 0x18
 	private Dictionary<Int32, TextStyle> m_StyleLookupDictionary; //Field offset: 0x20
+	private object styleLookupLock; //Field offset: 0x28
 
 	internal List<TextStyle> styles
 	{

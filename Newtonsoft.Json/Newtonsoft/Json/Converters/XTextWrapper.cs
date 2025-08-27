@@ -7,19 +7,19 @@ internal class XTextWrapper : XObjectWrapper
 
 	public virtual IXmlNode ParentNode
 	{
-		 get { } //Length: 162
+		 get { } //Length: 160
 	}
 
 	[Nullable(1)]
 	private XText Text
 	{
 		[NullableContext(1)]
-		private get { } //Length: 107
+		private get { } //Length: 103
 	}
 
 	public virtual string Value
 	{
-		 get { } //Length: 117
+		 get { } //Length: 109
 	}
 
 	[NullableContext(1)]

@@ -10,7 +10,7 @@ public struct SpriteShapeSegment
 
 	public int geomIndex
 	{
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int indexCount

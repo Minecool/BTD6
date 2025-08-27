@@ -35,7 +35,7 @@ public sealed class LoopExpression : Expression
 
 	public virtual Type Type
 	{
-		 get { } //Length: 123
+		 get { } //Length: 74
 	}
 
 	internal LoopExpression(Expression body, LabelTarget break, LabelTarget continue) { }

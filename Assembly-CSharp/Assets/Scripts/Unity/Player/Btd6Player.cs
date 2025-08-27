@@ -3,7 +3,7 @@ namespace Assets.Scripts.Unity.Player;
 public class Btd6Player : Player<ProfileModel>
 {
 	[CompilerGenerated]
-	private struct <_GetOnlineData>d__59 : IAsyncStateMachine
+	private struct <_GetOnlineData>d__57 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<OnlineProfileModel> <>t__builder; //Field offset: 0x8
@@ -19,7 +19,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <_SyncTeamTrophyBalance>d__89 : IAsyncStateMachine
+	private struct <_SyncTeamTrophyBalance>d__87 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -37,72 +37,72 @@ public class Btd6Player : Player<ProfileModel>
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Predicate<TowerModel> <>9__68_0; //Field offset: 0x8
-		public static Predicate<TowerModel> <>9__68_1; //Field offset: 0x10
-		public static Predicate<TowerModel> <>9__68_2; //Field offset: 0x18
-		public static Func<KeyValuePair`2<String, Int64>, Boolean> <>9__78_0; //Field offset: 0x20
-		public static Func<KeyValuePair`2<String, Int64>, String> <>9__78_1; //Field offset: 0x28
-		public static Func<Int32, UnclaimedTrophies, Int32> <>9__81_0; //Field offset: 0x30
-		public static Func<BossEventData, Boolean> <>9__241_1; //Field offset: 0x38
-		public static Func<BossEventData, String> <>9__241_2; //Field offset: 0x40
-		public static Func<CTEventData, Boolean> <>9__266_0; //Field offset: 0x48
-		public static Func<CTEventData, String> <>9__266_1; //Field offset: 0x50
-		public static Func<BossRushSaveData, Boolean> <>9__278_0; //Field offset: 0x58
-		public static Func<BossRushSaveData, String> <>9__278_1; //Field offset: 0x60
-		public static Func<ContentTypeSaveData, Boolean> <>9__315_0; //Field offset: 0x68
+		public static Predicate<TowerModel> <>9__66_0; //Field offset: 0x8
+		public static Predicate<TowerModel> <>9__66_1; //Field offset: 0x10
+		public static Predicate<TowerModel> <>9__66_2; //Field offset: 0x18
+		public static Func<KeyValuePair`2<String, Int64>, Boolean> <>9__76_0; //Field offset: 0x20
+		public static Func<KeyValuePair`2<String, Int64>, String> <>9__76_1; //Field offset: 0x28
+		public static Func<Int32, UnclaimedTrophies, Int32> <>9__79_0; //Field offset: 0x30
+		public static Func<BossEventData, Boolean> <>9__239_1; //Field offset: 0x38
+		public static Func<BossEventData, String> <>9__239_2; //Field offset: 0x40
+		public static Func<CTEventData, Boolean> <>9__264_0; //Field offset: 0x48
+		public static Func<CTEventData, String> <>9__264_1; //Field offset: 0x50
+		public static Func<BossRushSaveData, Boolean> <>9__276_0; //Field offset: 0x58
+		public static Func<BossRushSaveData, String> <>9__276_1; //Field offset: 0x60
+		public static Func<ContentTypeSaveData, Boolean> <>9__313_0; //Field offset: 0x68
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal int <CalculateUnclaimedTrophiesBalance>b__81_0(int amount, UnclaimedTrophies unclaimed) { }
+		internal int <CalculateUnclaimedTrophiesBalance>b__79_0(int amount, UnclaimedTrophies unclaimed) { }
 
-		internal bool <CanCheckForReceivedAccolades>b__315_0(ContentTypeSaveData x) { }
+		internal bool <CanCheckForReceivedAccolades>b__313_0(ContentTypeSaveData x) { }
 
-		internal bool <CheckRetrospectiveRewards>b__68_0(TowerModel x) { }
+		internal bool <CheckRetrospectiveRewards>b__66_0(TowerModel x) { }
 
-		internal bool <CheckRetrospectiveRewards>b__68_1(TowerModel x) { }
+		internal bool <CheckRetrospectiveRewards>b__66_1(TowerModel x) { }
 
-		internal bool <CheckRetrospectiveRewards>b__68_2(TowerModel x) { }
+		internal bool <CheckRetrospectiveRewards>b__66_2(TowerModel x) { }
 
-		internal bool <GetBossRushWithPendingRewards>b__278_0(BossRushSaveData x) { }
+		internal bool <GetBossRushWithPendingRewards>b__276_0(BossRushSaveData x) { }
 
-		internal string <GetBossRushWithPendingRewards>b__278_1(BossRushSaveData x) { }
+		internal string <GetBossRushWithPendingRewards>b__276_1(BossRushSaveData x) { }
 
-		internal bool <GetBossWithPendingRewards>b__241_1(BossEventData x) { }
+		internal bool <GetBossWithPendingRewards>b__239_1(BossEventData x) { }
 
-		internal string <GetBossWithPendingRewards>b__241_2(BossEventData x) { }
+		internal string <GetBossWithPendingRewards>b__239_2(BossEventData x) { }
 
-		internal bool <GetCTWithPendingRewards>b__266_0(CTEventData x) { }
+		internal bool <GetCTWithPendingRewards>b__264_0(CTEventData x) { }
 
-		internal string <GetCTWithPendingRewards>b__266_1(CTEventData x) { }
+		internal string <GetCTWithPendingRewards>b__264_1(CTEventData x) { }
 
-		internal bool <SyncTrophyBalanceNotSynchronised>b__78_0(KeyValuePair<String, Int64> x) { }
+		internal bool <SyncTrophyBalanceNotSynchronised>b__76_0(KeyValuePair<String, Int64> x) { }
 
-		internal string <SyncTrophyBalanceNotSynchronised>b__78_1(KeyValuePair<String, Int64> x) { }
+		internal string <SyncTrophyBalanceNotSynchronised>b__76_1(KeyValuePair<String, Int64> x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass132_0
+	private sealed class <>c__DisplayClass130_0
 	{
 		public string heroBaseId; //Field offset: 0x10
 		public Btd6Player <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass132_0() { }
+		public <>c__DisplayClass130_0() { }
 
 		internal bool <HasAnyUnseenSkins>b__0(SkinData skin) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass241_0
+	private sealed class <>c__DisplayClass239_0
 	{
 		public Btd6Player <>4__this; //Field offset: 0x10
 		public IEnumerable<String> bossIdsWithPendingRewards; //Field offset: 0x18
 		public BossEvent bossEventPendingRewards; //Field offset: 0x20
 
-		public <>c__DisplayClass241_0() { }
+		public <>c__DisplayClass239_0() { }
 
 		internal bool <GetBossWithPendingRewards>b__0(string x) { }
 
@@ -113,101 +113,101 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass241_1
+	private sealed class <>c__DisplayClass239_1
 	{
 		public string x; //Field offset: 0x10
 
-		public <>c__DisplayClass241_1() { }
+		public <>c__DisplayClass239_1() { }
 
 		internal bool <GetBossWithPendingRewards>b__4(BossEventData y) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass264_0
+	private sealed class <>c__DisplayClass262_0
 	{
 		public string eventId; //Field offset: 0x10
 
-		public <>c__DisplayClass264_0() { }
+		public <>c__DisplayClass262_0() { }
 
 		internal bool <TryGetCTEventData>b__0(CTEventData x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass266_0
+	private sealed class <>c__DisplayClass264_0
 	{
 		public IEnumerable<String> ctIdsWithPendingRewards; //Field offset: 0x10
 
-		public <>c__DisplayClass266_0() { }
+		public <>c__DisplayClass264_0() { }
 
 		internal bool <GetCTWithPendingRewards>b__2(CtEvent x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass272_0
+	private sealed class <>c__DisplayClass270_0
 	{
 		public BossRushEvent activeBossRushEvent; //Field offset: 0x10
 
-		public <>c__DisplayClass272_0() { }
+		public <>c__DisplayClass270_0() { }
 
 		internal bool <HasNewBossRushEvent>b__0(BossRushSaveData x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass276_0
+	private sealed class <>c__DisplayClass274_0
 	{
 		public string eventId; //Field offset: 0x10
 
-		public <>c__DisplayClass276_0() { }
+		public <>c__DisplayClass274_0() { }
 
 		internal bool <TryGetBossRushEventData>b__0(BossRushSaveData x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass278_0
+	private sealed class <>c__DisplayClass276_0
 	{
 		public IEnumerable<String> idsWithPendingRewards; //Field offset: 0x10
 
-		public <>c__DisplayClass278_0() { }
+		public <>c__DisplayClass276_0() { }
 
 		internal bool <GetBossRushWithPendingRewards>b__2(BossRushEvent x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass298_0
+	private sealed class <>c__DisplayClass296_0
 	{
 		public string questId; //Field offset: 0x10
 
-		public <>c__DisplayClass298_0() { }
+		public <>c__DisplayClass296_0() { }
 
 		internal bool <GetQuestSaveData>b__0(QuestSaveData x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass299_0
+	private sealed class <>c__DisplayClass297_0
 	{
 		public QuestSaveData questSaveData; //Field offset: 0x10
 
-		public <>c__DisplayClass299_0() { }
+		public <>c__DisplayClass297_0() { }
 
 		internal bool <SetQuestSaveData>b__0(QuestSaveData x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass312_0
+	private sealed class <>c__DisplayClass310_0
 	{
 		public Btd6Player <>4__this; //Field offset: 0x10
 		public String[] questIdsWithPendingRewards; //Field offset: 0x18
 		public QuestEvent questEventPendingRewards; //Field offset: 0x20
 
-		public <>c__DisplayClass312_0() { }
+		public <>c__DisplayClass310_0() { }
 
 		internal bool <GetQuestWithPendingRewards>b__0(string x) { }
 
@@ -218,23 +218,23 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass312_1
+	private sealed class <>c__DisplayClass310_1
 	{
 		public string x; //Field offset: 0x10
 
-		public <>c__DisplayClass312_1() { }
+		public <>c__DisplayClass310_1() { }
 
 		internal bool <GetQuestWithPendingRewards>b__2(QuestEventData y) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass316_0
+	private sealed class <>c__DisplayClass314_0
 	{
 		public IReadOnlyCollection<String> featuredMapIds; //Field offset: 0x10
 		public ContentTypeSaveData playerMapSaveData; //Field offset: 0x18
 
-		public <>c__DisplayClass316_0() { }
+		public <>c__DisplayClass314_0() { }
 
 		internal bool <HasSeenFeaturedMaps>b__0(string x) { }
 
@@ -243,19 +243,19 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass78_0
+	private sealed class <>c__DisplayClass76_0
 	{
 		public Btd6Player <>4__this; //Field offset: 0x10
 		public List<String> remotePurchasedItemIds; //Field offset: 0x18
 
-		public <>c__DisplayClass78_0() { }
+		public <>c__DisplayClass76_0() { }
 
 		internal bool <SyncTrophyBalanceNotSynchronised>g__hasPurchasedItem|2(TrophyStoreItem trophyStoreItem) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <CanCheckForReceivedAccolades>d__315 : IAsyncStateMachine
+	private struct <CanCheckForReceivedAccolades>d__313 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -270,7 +270,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <CanPlaySweepstakes>d__322 : IAsyncStateMachine
+	private struct <CanPlaySweepstakes>d__320 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -285,13 +285,14 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <CanShowEndedEvent>d__323 : IAsyncStateMachine
+	private struct <CanShowEndedEvent>d__321 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
 		public SweepstakesEvent sweepstakesEvent; //Field offset: 0x20
 		public Btd6Player <>4__this; //Field offset: 0x28
-		private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x30
+		public bool requiresParticipation; //Field offset: 0x30
+		private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x38
 
 		private override void MoveNext() { }
 
@@ -301,7 +302,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <CanUseCtTicket>d__270 : IAsyncStateMachine
+	private struct <CanUseCtTicket>d__268 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -317,7 +318,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <CheckHakrStatus>d__215 : IAsyncStateMachine
+	private struct <CheckHakrStatus>d__213 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -333,7 +334,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <CheckMultiHakrStatus>d__216 : IAsyncStateMachine
+	private struct <CheckMultiHakrStatus>d__214 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -349,7 +350,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <CPU>d__71 : IAsyncStateMachine
+	private struct <CPU>d__69 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -365,7 +366,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private sealed class <EnabledTrophyStoreItems>d__221 : IEnumerable<String>, IEnumerable, IEnumerator<String>, IEnumerator, IDisposable
+	private sealed class <EnabledTrophyStoreItems>d__219 : IEnumerable<String>, IEnumerable, IEnumerator<String>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private string <>2__current; //Field offset: 0x18
@@ -386,7 +387,7 @@ public class Btd6Player : Player<ProfileModel>
 		}
 
 		[DebuggerHidden]
-		public <EnabledTrophyStoreItems>d__221(int <>1__state) { }
+		public <EnabledTrophyStoreItems>d__219(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -413,7 +414,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <GainTrophies>d__79 : IAsyncStateMachine
+	private struct <GainTrophies>d__77 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -431,12 +432,12 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <GetBossWithPendingRewards>d__241 : IAsyncStateMachine
+	private struct <GetBossWithPendingRewards>d__239 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<BossEvent> <>t__builder; //Field offset: 0x8
 		public Btd6Player <>4__this; //Field offset: 0x20
-		private <>c__DisplayClass241_0 <>8__1; //Field offset: 0x28
+		private <>c__DisplayClass239_0 <>8__1; //Field offset: 0x28
 		private IEnumerable<BossEvent> <endedEvents>5__2; //Field offset: 0x30
 		private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x38
 		private TaskAwaiter<BossDataModel> <>u__2; //Field offset: 0x40
@@ -449,7 +450,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <GetLinkFlagStatus>d__212 : IAsyncStateMachine
+	private struct <GetLinkFlagStatus>d__210 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -465,7 +466,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <GetOnlineData>d__57 : IAsyncStateMachine
+	private struct <GetOnlineData>d__55 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<OnlineProfileModel> <>t__builder; //Field offset: 0x8
@@ -482,12 +483,12 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <GetQuestWithPendingRewards>d__312 : IAsyncStateMachine
+	private struct <GetQuestWithPendingRewards>d__310 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<QuestEvent> <>t__builder; //Field offset: 0x8
 		public Btd6Player <>4__this; //Field offset: 0x20
-		private <>c__DisplayClass312_0 <>8__1; //Field offset: 0x28
+		private <>c__DisplayClass310_0 <>8__1; //Field offset: 0x28
 		private IEnumerable<QuestEvent> <endedEvents>5__2; //Field offset: 0x30
 		private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x38
 		private TaskAwaiter<QuestDataModel> <>u__2; //Field offset: 0x40
@@ -500,7 +501,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <InitializeOnlineProfile>d__62 : IAsyncStateMachine
+	private struct <InitializeOnlineProfile>d__60 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -515,7 +516,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <LoadOnlineData>d__61 : IAsyncStateMachine
+	private struct <LoadOnlineData>d__59 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -530,7 +531,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <MigrateNoLinkId>d__66 : IAsyncStateMachine
+	private struct <MigrateNoLinkId>d__64 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -547,7 +548,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <MigrateWalletFromNoLinkToLiNKID>d__74 : IAsyncStateMachine
+	private struct <MigrateWalletFromNoLinkToLiNKID>d__72 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -562,7 +563,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <OneTimeStartUpChecks>d__65 : IAsyncStateMachine
+	private struct <OneTimeStartUpChecks>d__63 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -580,7 +581,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <RemoveTrophyStoreItemAsync>d__223 : IAsyncStateMachine
+	private struct <RemoveTrophyStoreItemAsync>d__221 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -601,7 +602,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <SetCurrentQuestRewards>d__288 : IAsyncStateMachine
+	private struct <SetCurrentQuestRewards>d__286 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -621,7 +622,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <SpendTrophies>d__80 : IAsyncStateMachine
+	private struct <SpendTrophies>d__78 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -640,7 +641,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <SPU>d__72 : IAsyncStateMachine
+	private struct <SPU>d__70 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -656,7 +657,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <SyncNow>d__51 : IAsyncStateMachine
+	private struct <SyncNow>d__49 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -671,7 +672,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <SyncTeamTrophyBalance>d__88 : IAsyncStateMachine
+	private struct <SyncTeamTrophyBalance>d__86 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -689,7 +690,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <SyncTrophyBalance>d__77 : IAsyncStateMachine
+	private struct <SyncTrophyBalance>d__75 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -705,13 +706,13 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <SyncTrophyBalanceNotSynchronised>d__78 : IAsyncStateMachine
+	private struct <SyncTrophyBalanceNotSynchronised>d__76 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public Btd6Player <>4__this; //Field offset: 0x20
 		public bool forceRefresh; //Field offset: 0x28
-		private <>c__DisplayClass78_0 <>8__1; //Field offset: 0x30
+		private <>c__DisplayClass76_0 <>8__1; //Field offset: 0x30
 		private Nullable<Int64> <remoteBalance>5__2; //Field offset: 0x38
 		private UnclaimedTrophies <unclaimed>5__3; //Field offset: 0x48
 		private TaskAwaiter<BankPurchaseModel> <>u__1; //Field offset: 0x50
@@ -725,7 +726,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <TryGetLinkFlagStatus>d__213 : IAsyncStateMachine
+	private struct <TryGetLinkFlagStatus>d__211 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -740,7 +741,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <ViewAndSetCurrentBossRushEvent>d__275 : IAsyncStateMachine
+	private struct <ViewAndSetCurrentBossRushEvent>d__273 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"hasInternetIssues", "isNewEvent"}])]
@@ -757,7 +758,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <ViewAndSetCurrentCTEvent>d__263 : IAsyncStateMachine
+	private struct <ViewAndSetCurrentCTEvent>d__261 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"hasInternetIssues", "isNewEvent"}])]
@@ -774,7 +775,7 @@ public class Btd6Player : Player<ProfileModel>
 	}
 
 	[CompilerGenerated]
-	private struct <ViewAndSetCurrentQuestEvent>d__285 : IAsyncStateMachine
+	private struct <ViewAndSetCurrentQuestEvent>d__283 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -789,16 +790,17 @@ public class Btd6Player : Player<ProfileModel>
 
 	}
 
-	private const string TROPHY_WALLET = "trophyStore"; //Field offset: 0x0
+	private const string GNLHKR_CURRENCY = "0x0A"; //Field offset: 0x0
 	private const string TROPHY_ITEM = "Trophies"; //Field offset: 0x0
 	private const string TROPHY_CURRENCY = "trophies"; //Field offset: 0x0
-	private const string GNLHKR_CURRENCY = "0x0A"; //Field offset: 0x0
+	private const string TROPHY_WALLET = "trophyStore"; //Field offset: 0x0
 	private const string PU_CURRENCY = "0xPU"; //Field offset: 0x0
 	public const string ACCDATA_WALLET = "NK_ACCDATA"; //Field offset: 0x0
 	public bool debugUnlockAllUpgrades; //Field offset: 0x98
 	public bool debugUnlockAllTowers; //Field offset: 0x99
-	public bool debugSeenAllRounds; //Field offset: 0x9A
-	public bool debugSimulateSaveFail; //Field offset: 0x9B
+	public bool debugUnlockAllPowersPro; //Field offset: 0x9A
+	public bool debugSeenAllRounds; //Field offset: 0x9B
+	public bool debugSimulateSaveFail; //Field offset: 0x9C
 	[CompilerGenerated]
 	private DateTime <LastSyncTime>k__BackingField; //Field offset: 0xA0
 	private Task trophySyncTask; //Field offset: 0xA8
@@ -813,55 +815,47 @@ public class Btd6Player : Player<ProfileModel>
 	private bool <IsPendingSync>k__BackingField; //Field offset: 0xD1
 	[CompilerGenerated]
 	private readonly PubSub <PubSub>k__BackingField; //Field offset: 0xD8
+	private OnlineProfileModel onlineProfileModel; //Field offset: 0xE0
+	public Action OnOnlineProfileRefreshed; //Field offset: 0xE8
+	private Task<OnlineProfileModel> onlineDataTask; //Field offset: 0xF0
+	private bool hasForceRefreshedOnce; //Field offset: 0xF8
 	[CompilerGenerated]
-	private readonly Gifting <Gifting>k__BackingField; //Field offset: 0xE0
-	private OnlineProfileModel onlineProfileModel; //Field offset: 0xE8
-	public Action OnOnlineProfileRefreshed; //Field offset: 0xF0
-	private Task<OnlineProfileModel> onlineDataTask; //Field offset: 0xF8
-	private bool hasForceRefreshedOnce; //Field offset: 0x100
+	private int <TeamTrophyBalance>k__BackingField; //Field offset: 0xFC
+	private Nullable<TimeSpan> lastTeamTrophyRefresh; //Field offset: 0x100
+	public Action OnRacePassBalanceChanged; //Field offset: 0x110
 	[CompilerGenerated]
-	private int <TeamTrophyBalance>k__BackingField; //Field offset: 0x104
-	private Nullable<TimeSpan> lastTeamTrophyRefresh; //Field offset: 0x108
-	public Action OnRacePassBalanceChanged; //Field offset: 0x118
+	private Task <RacePassSyncTask>k__BackingField; //Field offset: 0x118
 	[CompilerGenerated]
-	private Task <RacePassSyncTask>k__BackingField; //Field offset: 0x120
+	private int <RacePassCount>k__BackingField; //Field offset: 0x120
 	[CompilerGenerated]
-	private int <RacePassCount>k__BackingField; //Field offset: 0x128
+	private Action instaTowersQuanityChanged; //Field offset: 0x128
 	[CompilerGenerated]
-	private Action instaTowersQuanityChanged; //Field offset: 0x130
-	[CompilerGenerated]
-	private bool <IsFlagged>k__BackingField; //Field offset: 0x138
-	private OdysseySaveData odysseySaveData; //Field offset: 0x140
-	private Dictionary<Int32, LootSet> currentBossTierRewards; //Field offset: 0x148
-	private Dictionary<Int32, LootSet> currentSubQuestRewards; //Field offset: 0x150
-	private Nullable<Boolean> _canPlaySweepstakes; //Field offset: 0x158
-	private MobileWebviewLiNKAccountController webviewLiNKAccountController; //Field offset: 0x160
+	private bool <IsFlagged>k__BackingField; //Field offset: 0x130
+	private OdysseySaveData odysseySaveData; //Field offset: 0x138
+	private Dictionary<Int32, LootSet> currentBossTierRewards; //Field offset: 0x140
+	private Dictionary<Int32, LootSet> currentSubQuestRewards; //Field offset: 0x148
+	private Nullable<Boolean> _canPlaySweepstakes; //Field offset: 0x150
+	private MobileWebviewLiNKAccountController webviewLiNKAccountController; //Field offset: 0x158
 
 	public event Action instaTowersQuanityChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event EventHandler OnSaveCompleted
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public bool CanEarnMoneyFromAccolades
 	{
 		 get { } //Length: 144
-	}
-
-	public Gifting Gifting
-	{
-		[CompilerGenerated]
-		 get { } //Length: 8
 	}
 
 	public bool HasLinkAccount
@@ -951,16 +945,16 @@ public class Btd6Player : Player<ProfileModel>
 		 set { } //Length: 7
 	}
 
-	[AsyncStateMachine(typeof(<_GetOnlineData>d__59))]
+	[AsyncStateMachine(typeof(<_GetOnlineData>d__57))]
 	private Task<OnlineProfileModel> _GetOnlineData(Nullable<TimeSpan> timeoutOverride) { }
 
-	[AsyncStateMachine(typeof(<_SyncTeamTrophyBalance>d__89))]
+	[AsyncStateMachine(typeof(<_SyncTeamTrophyBalance>d__87))]
 	private Task _SyncTeamTrophyBalance() { }
 
 	public Btd6Player() { }
 
 	[CompilerGenerated]
-	private void <.ctor>b__21_0() { }
+	private void <.ctor>b__22_0() { }
 
 	public void AcquireKnowledge(string knowledgeId) { }
 
@@ -1008,18 +1002,18 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool CanAcquireUpgrade(string towerID, float xpCost) { }
 
-	[AsyncStateMachine(typeof(<CanCheckForReceivedAccolades>d__315))]
+	[AsyncStateMachine(typeof(<CanCheckForReceivedAccolades>d__313))]
 	public Task<Boolean> CanCheckForReceivedAccolades() { }
 
-	[AsyncStateMachine(typeof(<CanPlaySweepstakes>d__322))]
+	[AsyncStateMachine(typeof(<CanPlaySweepstakes>d__320))]
 	public Task<Boolean> CanPlaySweepstakes() { }
 
-	[AsyncStateMachine(typeof(<CanShowEndedEvent>d__323))]
-	public Task<Boolean> CanShowEndedEvent(SweepstakesEvent sweepstakesEvent) { }
+	[AsyncStateMachine(typeof(<CanShowEndedEvent>d__321))]
+	public Task<Boolean> CanShowEndedEvent(SweepstakesEvent sweepstakesEvent, bool requiresParticipation) { }
 
 	public bool CanUnlockMap(string map) { }
 
-	[AsyncStateMachine(typeof(<CanUseCtTicket>d__270))]
+	[AsyncStateMachine(typeof(<CanUseCtTicket>d__268))]
 	public Task<Boolean> CanUseCtTicket(CtEvent ctEvent) { }
 
 	public bool CheckAndCorrectLevelBasedOnPlayerXp() { }
@@ -1030,10 +1024,10 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool CheckForNewParagonPipEvent(string checkSpecificTowerId = "", string checkSpecificTowerSet = "") { }
 
-	[AsyncStateMachine(typeof(<CheckHakrStatus>d__215))]
+	[AsyncStateMachine(typeof(<CheckHakrStatus>d__213))]
 	public Task<Boolean> CheckHakrStatus(string otherPlayerLinkId) { }
 
-	[AsyncStateMachine(typeof(<CheckMultiHakrStatus>d__216))]
+	[AsyncStateMachine(typeof(<CheckMultiHakrStatus>d__214))]
 	public Task<Boolean> CheckMultiHakrStatus(IEnumerable<String> playerLinkIds) { }
 
 	public bool CheckRetrospectiveRewards() { }
@@ -1072,21 +1066,21 @@ public class Btd6Player : Player<ProfileModel>
 
 	public void ConsumePower(string powerId, int qty = 1) { }
 
-	[AsyncStateMachine(typeof(<CPU>d__71))]
+	[AsyncStateMachine(typeof(<CPU>d__69))]
 	public Task<Boolean> CPU() { }
 
 	public void DefeatedBossTier(bool eliteMode, int tier, LootSet lootSet) { }
 
 	public void DrainXP(Xp xpToDrain) { }
 
-	[IteratorStateMachine(typeof(<EnabledTrophyStoreItems>d__221))]
+	[IteratorStateMachine(typeof(<EnabledTrophyStoreItems>d__219))]
 	public IEnumerable<String> EnabledTrophyStoreItems() { }
 
 	public void GainMonkeyMoney(int amount, string gainedFrom) { }
 
 	public void GainPlayerXP(float amount) { }
 
-	[AsyncStateMachine(typeof(<GainTrophies>d__79))]
+	[AsyncStateMachine(typeof(<GainTrophies>d__77))]
 	public Task GainTrophies(int amount, string gainedFrom, string transactionId = null) { }
 
 	private void GenerateNewGoldenBloonMap(MapDifficulty mapDifficulty) { }
@@ -1098,9 +1092,6 @@ public class Btd6Player : Player<ProfileModel>
 	public PublicProfileModel GeneratePublicProfile() { }
 
 	public bool get_CanEarnMoneyFromAccolades() { }
-
-	[CompilerGenerated]
-	public Gifting get_Gifting() { }
 
 	public bool get_HasLinkAccount() { }
 
@@ -1154,7 +1145,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public BossRushEvent GetBossRushWithPendingRewards() { }
 
-	[AsyncStateMachine(typeof(<GetBossWithPendingRewards>d__241))]
+	[AsyncStateMachine(typeof(<GetBossWithPendingRewards>d__239))]
 	public Task<BossEvent> GetBossWithPendingRewards() { }
 
 	public Dictionary<Int32, KonFuze> GetCtLeaderboardBadges(bool isGlobal) { }
@@ -1173,9 +1164,9 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool GetIfWonCTTile(int tileID) { }
 
-	private InstaTowerModel GetInstaTower(string baseTowerID, Int32[] tiers) { }
-
 	public InstaTowerModel GetInstaTower(TowerModel towerModel) { }
+
+	private InstaTowerModel GetInstaTower(string baseTowerID, Int32[] tiers) { }
 
 	public int GetInstaTowerGroupQuanity(string baseTowerID) { }
 
@@ -1183,7 +1174,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public int GetLastSelectedTaskIndex(string questId, int questPartIndex) { }
 
-	[AsyncStateMachine(typeof(<GetLinkFlagStatus>d__212))]
+	[AsyncStateMachine(typeof(<GetLinkFlagStatus>d__210))]
 	public Task<Boolean> GetLinkFlagStatus() { }
 
 	public float GetMonkeyMoney() { }
@@ -1194,7 +1185,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public int GetNumOfLegendsBadges() { }
 
-	[AsyncStateMachine(typeof(<GetOnlineData>d__57))]
+	[AsyncStateMachine(typeof(<GetOnlineData>d__55))]
 	public Task<OnlineProfileModel> GetOnlineData(Nullable<TimeSpan> timeoutOverride = null, bool throwInternetException = false) { }
 
 	public int GetOwnedHeroesAndSkins(List<HeroDetailsModel> selectedHeroes, bool includeHidden) { }
@@ -1209,7 +1200,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public QuestSaveData GetQuestSaveData(string questId) { }
 
-	[AsyncStateMachine(typeof(<GetQuestWithPendingRewards>d__312))]
+	[AsyncStateMachine(typeof(<GetQuestWithPendingRewards>d__310))]
 	public Task<QuestEvent> GetQuestWithPendingRewards() { }
 
 	public string GetSelectedHeroSkin() { }
@@ -1318,7 +1309,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool HasUpgrade(string upgradeId) { }
 
-	[AsyncStateMachine(typeof(<InitializeOnlineProfile>d__62))]
+	[AsyncStateMachine(typeof(<InitializeOnlineProfile>d__60))]
 	private void InitializeOnlineProfile(LiNKAccount _) { }
 
 	public bool IsInstaTowerGroupAvailable(string baseTowerID) { }
@@ -1329,7 +1320,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public ValueTuple<Boolean, Boolean> IsParagonUpgradeAvailable(string towerId, string checkSpecificTowerSet) { }
 
-	public bool IsPowerAvailable(string powerId) { }
+	public bool IsPowerAvailable(PowerModel powerModel) { }
 
 	public bool IsPU() { }
 
@@ -1337,15 +1328,15 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool LastSaveFailedCheckAndReset() { }
 
-	[AsyncStateMachine(typeof(<LoadOnlineData>d__61))]
+	[AsyncStateMachine(typeof(<LoadOnlineData>d__59))]
 	public Task LoadOnlineData() { }
 
 	public void MigrateIDsAfterLogin(LiNKAccount newLiNKAccount) { }
 
-	[AsyncStateMachine(typeof(<MigrateNoLinkId>d__66))]
+	[AsyncStateMachine(typeof(<MigrateNoLinkId>d__64))]
 	public Task<Boolean> MigrateNoLinkId(string oldId, string newId) { }
 
-	[AsyncStateMachine(typeof(<MigrateWalletFromNoLinkToLiNKID>d__74))]
+	[AsyncStateMachine(typeof(<MigrateWalletFromNoLinkToLiNKID>d__72))]
 	private void MigrateWalletFromNoLinkToLiNKID() { }
 
 	public bool MonkeyTeamsActiveAndUnlocked() { }
@@ -1354,7 +1345,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool NeedsToShowVeteranRankInfo() { }
 
-	[AsyncStateMachine(typeof(<OneTimeStartUpChecks>d__65))]
+	[AsyncStateMachine(typeof(<OneTimeStartUpChecks>d__63))]
 	public Task OneTimeStartUpChecks() { }
 
 	public void OpenedOdyssey(OdysseySaveData odysseySaveData) { }
@@ -1381,7 +1372,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public void RemoveSeenEvent(string eventId) { }
 
-	[AsyncStateMachine(typeof(<RemoveTrophyStoreItemAsync>d__223))]
+	[AsyncStateMachine(typeof(<RemoveTrophyStoreItemAsync>d__221))]
 	public void RemoveTrophyStoreItemAsync(string trophyStoreItemId) { }
 
 	public void RemoveUnlockedTower(string towerId) { }
@@ -1469,7 +1460,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	private void SetCurrentBossTierRewards(BossEvent bossEvent, BossDataModel bossData) { }
 
-	[AsyncStateMachine(typeof(<SetCurrentQuestRewards>d__288))]
+	[AsyncStateMachine(typeof(<SetCurrentQuestRewards>d__286))]
 	private Task SetCurrentQuestRewards(QuestEvent questEvent) { }
 
 	public void SetLegendBadges(string legendKey, bool isCompleted, int amount) { }
@@ -1486,28 +1477,28 @@ public class Btd6Player : Player<ProfileModel>
 
 	public void SpendMonkeyMoney(int amount, string spentOn) { }
 
-	[AsyncStateMachine(typeof(<SpendTrophies>d__80))]
+	[AsyncStateMachine(typeof(<SpendTrophies>d__78))]
 	public Task SpendTrophies(int amount, string itemId, string itemName) { }
 
-	[AsyncStateMachine(typeof(<SPU>d__72))]
+	[AsyncStateMachine(typeof(<SPU>d__70))]
 	public void SPU(PUS puStatus) { }
 
 	public void SubmittedBossScore(string eventId, int bossTier, int gameId) { }
 
 	public void Sync() { }
 
-	[AsyncStateMachine(typeof(<SyncNow>d__51))]
+	[AsyncStateMachine(typeof(<SyncNow>d__49))]
 	public Task SyncNow() { }
 
 	private Task SyncOnlineProfile() { }
 
-	[AsyncStateMachine(typeof(<SyncTeamTrophyBalance>d__88))]
+	[AsyncStateMachine(typeof(<SyncTeamTrophyBalance>d__86))]
 	public Task SyncTeamTrophyBalance(bool forceRefresh) { }
 
-	[AsyncStateMachine(typeof(<SyncTrophyBalance>d__77))]
+	[AsyncStateMachine(typeof(<SyncTrophyBalance>d__75))]
 	public Task SyncTrophyBalance() { }
 
-	[AsyncStateMachine(typeof(<SyncTrophyBalanceNotSynchronised>d__78))]
+	[AsyncStateMachine(typeof(<SyncTrophyBalanceNotSynchronised>d__76))]
 	private Task SyncTrophyBalanceNotSynchronised(bool forceRefresh) { }
 
 	public bool TryGetBossChallengeRecord(BossType bossType, string mapID, bool isElite, int playerCount, out BossScoreComponents recordSave) { }
@@ -1518,7 +1509,7 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool TryGetCTEventData(string eventId, out CTEventData eventData) { }
 
-	[AsyncStateMachine(typeof(<TryGetLinkFlagStatus>d__213))]
+	[AsyncStateMachine(typeof(<TryGetLinkFlagStatus>d__211))]
 	public Task<Boolean> TryGetLinkFlagStatus() { }
 
 	public bool TryGetQuestEventData(string eventId, out QuestEventData eventData) { }
@@ -1545,13 +1536,13 @@ public class Btd6Player : Player<ProfileModel>
 
 	public bool ViewAndSetCurrentBossEvent(BossEvent bossEvent, BossDataModel bossData) { }
 
-	[AsyncStateMachine(typeof(<ViewAndSetCurrentBossRushEvent>d__275))]
+	[AsyncStateMachine(typeof(<ViewAndSetCurrentBossRushEvent>d__273))]
 	public Task<ValueTuple`2<Boolean, Boolean>> ViewAndSetCurrentBossRushEvent(BossRushEvent bossRushEvent) { }
 
-	[AsyncStateMachine(typeof(<ViewAndSetCurrentCTEvent>d__263))]
+	[AsyncStateMachine(typeof(<ViewAndSetCurrentCTEvent>d__261))]
 	public Task<ValueTuple`2<Boolean, Boolean>> ViewAndSetCurrentCTEvent(CtEvent ctEvent) { }
 
-	[AsyncStateMachine(typeof(<ViewAndSetCurrentQuestEvent>d__285))]
+	[AsyncStateMachine(typeof(<ViewAndSetCurrentQuestEvent>d__283))]
 	public Task<Boolean> ViewAndSetCurrentQuestEvent(QuestEvent questEvent) { }
 
 	public void WinCTTile(int tileID, int teamTrophiesEarnt) { }

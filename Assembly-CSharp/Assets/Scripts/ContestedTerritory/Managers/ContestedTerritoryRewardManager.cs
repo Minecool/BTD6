@@ -63,7 +63,7 @@ public static class ContestedTerritoryRewardManager
 		public string Relic
 		{
 			[CompilerGenerated]
-			 get { } //Length: 5
+			 get { } //Length: 291
 		}
 
 		public int TeamTrophies

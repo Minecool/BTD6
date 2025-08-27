@@ -4,25 +4,25 @@ namespace UnityEngine.UIElements;
 public class VisualTreeAsset : ScriptableObject
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass61_0
+	private sealed class <>c__DisplayClass76_0
 	{
 		public VisualElementAsset childVea; //Field offset: 0x10
 
-		public <>c__DisplayClass61_0() { }
+		public <>c__DisplayClass76_0() { }
 
 		internal bool <CloneSetupRecursively>b__0(SlotUsageEntry u) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <>c__DisplayClass65_0
+	private struct <>c__DisplayClass82_0
 	{
 		public VisualElementAsset asset; //Field offset: 0x0
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <get_stylesheets>d__23 : IEnumerable<StyleSheet>, IEnumerable, IEnumerator<StyleSheet>, IEnumerator, IDisposable
+	private sealed class <get_stylesheets>d__31 : IEnumerable<StyleSheet>, IEnumerable, IEnumerator<StyleSheet>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private StyleSheet <>2__current; //Field offset: 0x18
@@ -50,7 +50,7 @@ public class VisualTreeAsset : ScriptableObject
 		}
 
 		[DebuggerHidden]
-		public <get_stylesheets>d__23(int <>1__state) { }
+		public <get_stylesheets>d__31(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -81,7 +81,7 @@ public class VisualTreeAsset : ScriptableObject
 	}
 
 	[CompilerGenerated]
-	private sealed class <get_templateDependencies>d__19 : IEnumerable<VisualTreeAsset>, IEnumerable, IEnumerator<VisualTreeAsset>, IEnumerator, IDisposable
+	private sealed class <get_templateDependencies>d__27 : IEnumerable<VisualTreeAsset>, IEnumerable, IEnumerator<VisualTreeAsset>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private VisualTreeAsset <>2__current; //Field offset: 0x18
@@ -105,7 +105,7 @@ public class VisualTreeAsset : ScriptableObject
 		}
 
 		[DebuggerHidden]
-		public <get_templateDependencies>d__19(int <>1__state) { }
+		public <get_templateDependencies>d__27(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -134,19 +134,35 @@ public class VisualTreeAsset : ScriptableObject
 	private struct AssetEntry
 	{
 		[SerializeField]
-		public string path; //Field offset: 0x0
+		private string m_Path; //Field offset: 0x0
 		[SerializeField]
-		public string typeFullName; //Field offset: 0x8
+		private string m_TypeFullName; //Field offset: 0x8
 		[SerializeField]
-		public object asset; //Field offset: 0x10
+		private LazyLoadReference<Object> m_AssetReference; //Field offset: 0x10
+		[SerializeField]
+		private int m_InstanceID; //Field offset: 0x14
 		private Type m_CachedType; //Field offset: 0x18
+
+		public object asset
+		{
+			 get { } //Length: 99
+		}
+
+		public string path
+		{
+			 get { } //Length: 4
+		}
 
 		public Type type
 		{
-			 get { } //Length: 136
+			 get { } //Length: 124
 		}
 
 		public AssetEntry(string path, Type type, object asset) { }
+
+		public object get_asset() { }
+
+		public string get_path() { }
 
 		public Type get_type() { }
 
@@ -161,6 +177,7 @@ public class VisualTreeAsset : ScriptableObject
 
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	public struct SlotUsageEntry
 	{
 		[SerializeField]
@@ -170,8 +187,10 @@ public class VisualTreeAsset : ScriptableObject
 
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	public struct UsingEntry
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal static readonly IComparer<UsingEntry> comparer; //Field offset: 0x0
 		[SerializeField]
 		public string alias; //Field offset: 0x0
@@ -195,6 +214,7 @@ public class VisualTreeAsset : ScriptableObject
 
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	public struct UxmlObjectEntry
 	{
 		[SerializeField]
@@ -204,22 +224,32 @@ public class VisualTreeAsset : ScriptableObject
 
 		public UxmlObjectEntry(int parentId, List<UxmlObjectAsset> uxmlObjectAssets) { }
 
+		public UxmlObjectAsset GetField(string fieldName) { }
+
+		public virtual string ToString() { }
+
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal static string LinkedVEAInTemplatePropertyName; //Field offset: 0x0
-	private static readonly Dictionary<String, VisualElement> s_TemporarySlotInsertionPoints; //Field offset: 0x8
+	internal static string NoRegisteredFactoryErrorMessage; //Field offset: 0x8
+	private static readonly Dictionary<String, VisualElement> s_TemporarySlotInsertionPoints; //Field offset: 0x10
+	private static readonly List<Int32> s_VeaIdsPath; //Field offset: 0x18
 	[SerializeField]
 	private bool m_ImportedWithErrors; //Field offset: 0x18
 	[SerializeField]
-	private bool m_ImportedWithWarnings; //Field offset: 0x19
+	private bool m_HasUpdatedUrls; //Field offset: 0x19
+	[SerializeField]
+	private bool m_ImportedWithWarnings; //Field offset: 0x1A
 	[SerializeField]
 	private List<UsingEntry> m_Usings; //Field offset: 0x20
 	[SerializeField]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal StyleSheet inlineSheet; //Field offset: 0x28
 	[SerializeField]
-	private List<VisualElementAsset> m_VisualElementAssets; //Field offset: 0x30
+	internal List<VisualElementAsset> m_VisualElementAssets; //Field offset: 0x30
 	[SerializeField]
-	private List<TemplateAsset> m_TemplateAssets; //Field offset: 0x38
+	internal List<TemplateAsset> m_TemplateAssets; //Field offset: 0x38
 	[SerializeField]
 	private List<UxmlObjectEntry> m_UxmlObjectEntries; //Field offset: 0x40
 	[SerializeField]
@@ -235,6 +265,7 @@ public class VisualTreeAsset : ScriptableObject
 
 	internal int contentContainerId
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 6
 		internal set { } //Length: 4
 	}
@@ -257,44 +288,58 @@ public class VisualTreeAsset : ScriptableObject
 		internal set { } //Length: 4
 	}
 
-	internal List<SlotDefinition> slots
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal bool importerWithUpdatedUrls
 	{
 		internal get { } //Length: 7
-		internal set { } //Length: 5
+		internal set { } //Length: 4
+	}
+
+	internal List<SlotDefinition> slots
+	{
+		internal get { } //Length: 5
 	}
 
 	public IEnumerable<StyleSheet> stylesheets
 	{
-		[IteratorStateMachine(typeof(<get_stylesheets>d__23))]
-		 get { } //Length: 101
+		[IteratorStateMachine(typeof(<get_stylesheets>d__31))]
+		 get { } //Length: 99
 	}
 
 	internal List<TemplateAsset> templateAssets
 	{
-		internal get { } //Length: 7
-		internal set { } //Length: 5
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+		internal get { } //Length: 5
 	}
 
 	public IEnumerable<VisualTreeAsset> templateDependencies
 	{
-		[IteratorStateMachine(typeof(<get_templateDependencies>d__19))]
-		 get { } //Length: 832
+		[IteratorStateMachine(typeof(<get_templateDependencies>d__27))]
+		 get { } //Length: 1055
+	}
+
+	internal List<UsingEntry> usings
+	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+		internal get { } //Length: 5
 	}
 
 	internal List<UxmlObjectEntry> uxmlObjectEntries
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 5
 	}
 
 	internal List<Int32> uxmlObjectIds
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 5
 	}
 
 	internal List<VisualElementAsset> visualElementAssets
 	{
-		internal get { } //Length: 7
-		internal set { } //Length: 5
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+		internal get { } //Length: 5
 	}
 
 	private static VisualTreeAsset() { }
@@ -302,8 +347,12 @@ public class VisualTreeAsset : ScriptableObject
 	public VisualTreeAsset() { }
 
 	[CompilerGenerated]
-	internal static VisualElement <Create>g__CreateError|65_0(ref <>c__DisplayClass65_0 unnamed_param_0) { }
+	internal static VisualElement <Create>g__CreateError|82_0(ref <>c__DisplayClass82_0 unnamed_param_0) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal UxmlObjectAsset AddUxmlObject(UxmlAsset parent, string fieldUxmlName, string fullTypeName, UxmlNamespaceDefinition xmlNamespace = null) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal bool AssetEntryExists(string path, Type type) { }
 
 	private static void AssignClassListFromAssetToElement(VisualElementAsset asset, VisualElement element) { }
@@ -312,20 +361,25 @@ public class VisualTreeAsset : ScriptableObject
 
 	private VisualElement CloneSetupRecursively(VisualElementAsset root, Dictionary<Int32, List`1<VisualElementAsset>> idToChildren, CreationContext context) { }
 
-	internal void CloneTree(VisualElement target, Dictionary<String, VisualElement> slotInsertionPoints, List<AttributeOverride> attributeOverrides) { }
+	public TemplateContainer CloneTree() { }
+
+	public TemplateContainer CloneTree(string bindingPath) { }
+
+	internal void CloneTree(VisualElement target, CreationContext cc) { }
 
 	public void CloneTree(VisualElement target, out int firstElementIndex, out int elementAddedCount) { }
 
 	public void CloneTree(VisualElement target) { }
 
-	public TemplateContainer CloneTree(string bindingPath) { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal void CollectUxmlObjectAssets(UxmlAsset parent, string fieldName, List<UxmlObjectAsset> foundEntries) { }
 
-	public TemplateContainer CloneTree() { }
+	internal static int CompareForOrder(VisualElementAsset a, VisualElementAsset b) { }
 
-	private static int CompareForOrder(VisualElementAsset a, VisualElementAsset b) { }
-
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal static VisualElement Create(VisualElementAsset asset, CreationContext ctx) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal int get_contentContainerId() { }
 
 	public int get_contentHash() { }
@@ -334,29 +388,48 @@ public class VisualTreeAsset : ScriptableObject
 
 	public bool get_importedWithWarnings() { }
 
+	internal bool get_importerWithUpdatedUrls() { }
+
 	internal List<SlotDefinition> get_slots() { }
 
-	[IteratorStateMachine(typeof(<get_stylesheets>d__23))]
+	[IteratorStateMachine(typeof(<get_stylesheets>d__31))]
 	public IEnumerable<StyleSheet> get_stylesheets() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal List<TemplateAsset> get_templateAssets() { }
 
-	[IteratorStateMachine(typeof(<get_templateDependencies>d__19))]
+	[IteratorStateMachine(typeof(<get_templateDependencies>d__27))]
 	public IEnumerable<VisualTreeAsset> get_templateDependencies() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal List<UsingEntry> get_usings() { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal List<UxmlObjectEntry> get_uxmlObjectEntries() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal List<Int32> get_uxmlObjectIds() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal List<VisualElementAsset> get_visualElementAssets() { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal object GetAsset(string path, Type type) { }
 
 	internal T GetAsset(string path) { }
 
+	internal Type GetAssetType(string path) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal int GetNextChildSerialNumber() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal int GetNextUxmlAssetId(int parentId) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal UxmlObjectEntry GetUxmlObjectEntry(int id) { }
 
-	private IBaseUxmlObjectFactory GetUxmlObjectFactory(UxmlObjectAsset uxmlObjectAsset) { }
+	internal IBaseUxmlObjectFactory GetUxmlObjectFactory(UxmlObjectAsset uxmlObjectAsset) { }
 
 	internal List<T> GetUxmlObjects(IUxmlAttributes asset, CreationContext cc) { }
 
@@ -364,10 +437,22 @@ public class VisualTreeAsset : ScriptableObject
 
 	public TemplateContainer Instantiate(string bindingPath) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void RegisterAssetEntry(string path, Type type, object asset) { }
 
 	internal void RegisterUxmlObject(UxmlObjectAsset uxmlObjectAsset) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal void RemoveElementAndDependencies(VisualElementAsset asset) { }
+
+	private void RemoveUsingEntry(UsingEntry entry) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal void RemoveUxmlObject(int id, bool onlyIfIsField = false) { }
+
+	private void RemoveUxmlObjectEntryDependencies(int parentId) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal VisualTreeAsset ResolveTemplate(string templateName) { }
 
 	internal void set_contentContainerId(int value) { }
@@ -378,13 +463,18 @@ public class VisualTreeAsset : ScriptableObject
 
 	internal void set_importedWithWarnings(bool value) { }
 
-	internal void set_slots(List<SlotDefinition> value) { }
+	internal void set_importerWithUpdatedUrls(bool value) { }
 
-	internal void set_templateAssets(List<TemplateAsset> value) { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal void SetUxmlObjectAssets(UxmlAsset parent, string fieldName, List<UxmlObjectAsset> entries) { }
 
-	internal void set_visualElementAssets(List<VisualElementAsset> value) { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal void TransferAssetEntries(VisualTreeAsset otherVta) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal bool TryGetSlotInsertionPoint(int insertionPointId, out string slotName) { }
+
+	internal bool TryGetUsingEntry(string templateName, out UsingEntry entry) { }
 
 }
 

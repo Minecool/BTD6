@@ -1,7 +1,9 @@
 namespace UnityEngine.Rendering.Universal;
 
+[Obsolete("Moved to GraphicsSettings. #from(23.3)", False)]
 public class UniversalRenderPipelineEditorResources : ScriptableObject
 {
+	[Obsolete("UniversalRenderPipelineEditorResources.MaterialResources is obsolete GraphicsSettings.TryGetRenderPipelineSettings<UniversalRenderPipelineEditorMaterials>(). #from(23.3)", False)]
 	[ReloadGroup]
 	internal sealed class MaterialResources
 	{
@@ -18,6 +20,7 @@ public class UniversalRenderPipelineEditorResources : ScriptableObject
 
 	}
 
+	[Obsolete("UniversalRenderPipelineEditorResources.ShaderResources is obsolete GraphicsSettings.TryGetRenderPipelineSettings<UniversalRenderPipelineEditorShaders>(). #from(23.3)", False)]
 	[ReloadGroup]
 	internal sealed class ShaderResources
 	{
@@ -42,7 +45,9 @@ public class UniversalRenderPipelineEditorResources : ScriptableObject
 
 	}
 
+	[Obsolete("UniversalRenderPipelineEditorResources.ShaderResources is obsolete GraphicsSettings.TryGetRenderPipelineSettings<UniversalRenderPipelineEditorShaders>(). #from(23.3)", False)]
 	public ShaderResources shaders; //Field offset: 0x18
+	[Obsolete("UniversalRenderPipelineEditorResources.MaterialResources is obsolete GraphicsSettings.TryGetRenderPipelineSettings<UniversalRenderPipelineEditorMaterials>(). #from(23.3)", False)]
 	public MaterialResources materials; //Field offset: 0x20
 
 	public UniversalRenderPipelineEditorResources() { }

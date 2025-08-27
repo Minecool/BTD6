@@ -30,7 +30,7 @@ public class XmlParserContext
 
 	internal bool HasDtdInfo
 	{
-		internal get { } //Length: 145
+		internal get { } //Length: 117
 	}
 
 	public string InternalSubset

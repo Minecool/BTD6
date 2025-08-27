@@ -296,8 +296,8 @@ public class HttpWebRequest : WebRequest, ISerializable
 
 	public string Host
 	{
-		 get { } //Length: 264
-		 set { } //Length: 627
+		 get { } //Length: 256
+		 set { } //Length: 621
 	}
 
 	internal bool InternalAllowBuffering
@@ -372,7 +372,7 @@ public class HttpWebRequest : WebRequest, ISerializable
 
 	public RemoteCertificateValidationCallback ServerCertificateValidationCallback
 	{
-		 get { } //Length: 25
+		 get { } //Length: 18
 		 set { } //Length: 128
 	}
 

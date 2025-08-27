@@ -5,7 +5,7 @@ public class PushBack : ProjectileBehavior
 
 	private PushBackModel pushBackModel
 	{
-		private get { } //Length: 130
+		private get { } //Length: 126
 	}
 
 	public PushBack() { }

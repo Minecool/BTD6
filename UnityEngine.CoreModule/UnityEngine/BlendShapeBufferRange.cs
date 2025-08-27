@@ -14,7 +14,7 @@ public struct BlendShapeBufferRange
 
 	internal uint startIndex
 	{
-		internal set { } //Length: 3
+		internal set { } //Length: 8900
 	}
 
 	internal void set_endIndex(uint value) { }

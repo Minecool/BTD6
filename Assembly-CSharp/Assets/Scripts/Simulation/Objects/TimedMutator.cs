@@ -9,6 +9,7 @@ public class TimedMutator
 	public bool includeSubTowers; //Field offset: 0x1E
 	public int roundsRemaining; //Field offset: 0x20
 	public bool isParagonMutator; //Field offset: 0x24
+	public bool cantBeAbsorbed; //Field offset: 0x25
 	private readonly int totalDuration; //Field offset: 0x28
 
 	public int TotalDuration
@@ -16,7 +17,7 @@ public class TimedMutator
 		 get { } //Length: 4
 	}
 
-	public TimedMutator(BehaviorMutator mutator, int removeAt, bool onlyTimeoutWhenActive, bool useRoundTime, bool includeSubTowers, int roundsRemaining, bool isParagonMutator) { }
+	public TimedMutator(BehaviorMutator mutator, int removeAt, bool onlyTimeoutWhenActive, bool useRoundTime, bool includeSubTowers, int roundsRemaining, bool isParagonMutator, bool cantBeAbsorbed) { }
 
 	public int get_TotalDuration() { }
 

@@ -81,7 +81,7 @@ public static class ContestedTerritoryGameManager
 
 	public static Nullable<Int32> GameInProgressTileId
 	{
-		 get { } //Length: 183
+		 get { } //Length: 181
 	}
 
 	public static int GameInProgressTileScore

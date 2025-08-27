@@ -22,7 +22,7 @@ public abstract class TraceListener : MarshalByRefObject, IDisposable
 
 	public int IndentSize
 	{
-		 set { } //Length: 187
+		 set { } //Length: 179
 	}
 
 	public override bool IsThreadSafe

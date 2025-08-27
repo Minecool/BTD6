@@ -92,7 +92,7 @@ public static class BankCache
 		{
 			[CompilerGenerated]
 			[IsReadOnly]
-			 get { } //Length: 5
+			 get { } //Length: 291
 		}
 
 		public string OwnerId

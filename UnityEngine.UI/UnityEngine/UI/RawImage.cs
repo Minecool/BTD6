@@ -24,7 +24,7 @@ public class RawImage : MaskableGraphic
 	public Rect uvRect
 	{
 		 get { } //Length: 14
-		 set { } //Length: 102
+		 set { } //Length: 104
 	}
 
 	protected RawImage() { }

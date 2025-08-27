@@ -20,7 +20,7 @@ public class Bank : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1144
+		 get { } //Length: 1205
 	}
 
 	public Bank() { }

@@ -18,12 +18,12 @@ public sealed class InputEventTrace : IDisposable, IEnumerable<InputEventPtr>, I
 		public int deviceId
 		{
 			 get { } //Length: 3
-			 set { } //Length: 3
+			 set { } //Length: 8900
 		}
 
 		public string layout
 		{
-			 get { } //Length: 5
+			 get { } //Length: 291
 			 set { } //Length: 5
 		}
 
@@ -296,12 +296,12 @@ public sealed class InputEventTrace : IDisposable, IEnumerable<InputEventPtr>, I
 
 	public static FourCC FrameMarkerEvent
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	private static FourCC kFileFormat
 	{
-		private get { } //Length: 58
+		private get { } //Length: 53
 	}
 
 	private Byte* m_EventBuffer

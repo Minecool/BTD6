@@ -60,7 +60,7 @@ public class InvalidRequestException : InternetException
 
 	public virtual string Message
 	{
-		 get { } //Length: 513
+		 get { } //Length: 490
 	}
 
 	protected private InvalidRequestException() { }

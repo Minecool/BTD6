@@ -1,8 +1,8 @@
 namespace NinjaKiwi.Common;
 
 [DefaultMember("Item")]
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public class ListLite : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable
 {
 	internal struct Enumerator : IEnumerator<T>, IEnumerator, IDisposable
@@ -43,7 +43,7 @@ public class ListLite : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable
 	public int Capacity
 	{
 		 get { } //Length: 8
-		 set { } //Length: 182
+		 set { } //Length: 180
 	}
 
 	public override int Count

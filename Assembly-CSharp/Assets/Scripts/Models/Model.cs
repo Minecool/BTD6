@@ -147,12 +147,12 @@ public abstract class Model
 
 	public Type ImplementationType
 	{
-		 get { } //Length: 435
+		 get { } //Length: 414
 	}
 
 	public string name
 	{
-		 get { } //Length: 73
+		 get { } //Length: 34
 		 set { } //Length: 51
 	}
 

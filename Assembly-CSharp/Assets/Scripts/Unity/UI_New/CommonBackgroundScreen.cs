@@ -225,9 +225,7 @@ public class CommonBackgroundScreen : MonoBehaviour
 
 	private void Awake() { }
 
-	private void CreateRenderTarget(int w, int h) { }
-
-	private static void DestroyRenderTarget(ref RenderTexture rtt) { }
+	private bool CreateRenderTarget(int w, int h) { }
 
 	public static void EnableClearObject(bool enable) { }
 
@@ -252,6 +250,8 @@ public class CommonBackgroundScreen : MonoBehaviour
 	private void OnDisable() { }
 
 	private void OnEnable() { }
+
+	private void ScreenResized(int w, int h) { }
 
 	private static void SetAlpha(Graphic img, float a) { }
 

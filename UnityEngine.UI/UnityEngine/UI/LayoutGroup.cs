@@ -72,7 +72,7 @@ public abstract class LayoutGroup : UIBehaviour, ILayoutElement, ILayoutGroup, I
 
 	private bool isRootLayoutGroup
 	{
-		private get { } //Length: 294
+		private get { } //Length: 282
 	}
 
 	public override int layoutPriority

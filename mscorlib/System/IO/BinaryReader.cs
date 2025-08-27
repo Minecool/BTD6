@@ -3,7 +3,6 @@ namespace System.IO;
 [ComVisible(True)]
 public class BinaryReader : IDisposable
 {
-	private const int MaxCharBytesSize = 128; //Field offset: 0x0
 	private Stream m_stream; //Field offset: 0x10
 	private Byte[] m_buffer; //Field offset: 0x18
 	private Decoder m_decoder; //Field offset: 0x20

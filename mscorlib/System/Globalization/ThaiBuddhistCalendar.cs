@@ -31,7 +31,7 @@ public class ThaiBuddhistCalendar : Calendar
 	public virtual int TwoDigitYearMax
 	{
 		 get { } //Length: 67
-		 set { } //Length: 323
+		 set { } //Length: 307
 	}
 
 	private static ThaiBuddhistCalendar() { }

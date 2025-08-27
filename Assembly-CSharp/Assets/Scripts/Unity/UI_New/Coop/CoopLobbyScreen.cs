@@ -645,9 +645,9 @@ public class CoopLobbyScreen : GameMenu
 	private event Action CancelEvent
 	{
 		[CompilerGenerated]
-		private add { } //Length: 162
+		private add { } //Length: 158
 		[CompilerGenerated]
-		private remove { } //Length: 162
+		private remove { } //Length: 158
 	}
 
 	private bool AllPlayersHaveLinkAccount
@@ -699,7 +699,7 @@ public class CoopLobbyScreen : GameMenu
 
 	private bool IsModdedRankedBoss
 	{
-		private get { } //Length: 64
+		private get { } //Length: 67
 	}
 
 	private bool IsRankedBoss

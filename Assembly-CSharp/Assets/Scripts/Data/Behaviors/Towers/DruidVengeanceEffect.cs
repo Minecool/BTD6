@@ -17,7 +17,7 @@ public class DruidVengeanceEffect : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 556
+		 get { } //Length: 552
 	}
 
 	public DruidVengeanceEffect() { }

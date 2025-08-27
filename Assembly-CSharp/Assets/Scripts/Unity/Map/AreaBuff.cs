@@ -10,7 +10,7 @@ public abstract class AreaBuff : MonoBehaviour
 
 	public override BuffIndicatorModel BuffIndicatorModel
 	{
-		 get { } //Length: 181
+		 get { } //Length: 171
 	}
 
 	public abstract AreaBuffModel Def

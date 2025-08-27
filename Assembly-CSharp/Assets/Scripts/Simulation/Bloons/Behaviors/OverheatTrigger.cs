@@ -29,7 +29,7 @@ public class OverheatTrigger : BloonBehaviorTrigger
 
 	private void DestroyZone() { }
 
-	public virtual float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile) { }
+	public virtual float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile, out bool preventFurtherModification) { }
 
 	public virtual void GetSaveMetaData(Dictionary<String, String> metaData) { }
 

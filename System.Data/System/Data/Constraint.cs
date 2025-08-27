@@ -20,7 +20,7 @@ public abstract class Constraint
 	public override string ConstraintName
 	{
 		 get { } //Length: 5
-		 set { } //Length: 545
+		 set { } //Length: 533
 	}
 
 	[Browsable(False)]

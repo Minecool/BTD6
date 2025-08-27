@@ -23,7 +23,7 @@ public struct Cache : IEquatable<Cache>
 
 	public string path
 	{
-		 get { } //Length: 49
+		 get { } //Length: 11
 	}
 
 	public bool valid
@@ -33,6 +33,8 @@ public struct Cache : IEquatable<Cache>
 
 	[NativeThrows]
 	internal static string Cache_GetPath(int handle) { }
+
+	private static void Cache_GetPath_Injected(int handle, out ManagedSpanWrapper ret) { }
 
 	internal static bool Cache_IsValid(int handle) { }
 

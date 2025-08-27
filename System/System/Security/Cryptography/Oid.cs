@@ -8,7 +8,7 @@ public sealed class Oid
 
 	public string FriendlyName
 	{
-		 get { } //Length: 129
+		 get { } //Length: 148
 	}
 
 	public string Value

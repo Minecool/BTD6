@@ -44,6 +44,8 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 
 			internal bool <.ctor>b__1() { }
 
+			internal bool <.ctor>b__2() { }
+
 		}
 
 
@@ -55,17 +57,21 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 	{
 		public const string AlbedoSettingsContainerName = "Albedo Settings"; //Field offset: 0x0
 		public const string MetallicSettingsContainerName = "Metallic Settings"; //Field offset: 0x0
+		public const string RenderingLayerMasksSettingsContainerName = "Rendering Layer Masks Settings"; //Field offset: 0x0
 		public static readonly NameAndTooltip MaterialOverride; //Field offset: 0x0
 		public static readonly NameAndTooltip VertexAttribute; //Field offset: 0x10
 		public static readonly NameAndTooltip MaterialValidationMode; //Field offset: 0x20
-		public static readonly NameAndTooltip ValidationPreset; //Field offset: 0x30
-		public static readonly NameAndTooltip AlbedoCustomColor; //Field offset: 0x40
-		public static readonly NameAndTooltip AlbedoMinLuminance; //Field offset: 0x50
-		public static readonly NameAndTooltip AlbedoMaxLuminance; //Field offset: 0x60
-		public static readonly NameAndTooltip AlbedoHueTolerance; //Field offset: 0x70
-		public static readonly NameAndTooltip AlbedoSaturationTolerance; //Field offset: 0x80
-		public static readonly NameAndTooltip MetallicMinValue; //Field offset: 0x90
-		public static readonly NameAndTooltip MetallicMaxValue; //Field offset: 0xA0
+		public static readonly NameAndTooltip RenderingLayersSelectedLight; //Field offset: 0x30
+		public static readonly NameAndTooltip SelectedLightShadowLayerMask; //Field offset: 0x40
+		public static readonly NameAndTooltip FilterRenderingLayerMask; //Field offset: 0x50
+		public static readonly NameAndTooltip ValidationPreset; //Field offset: 0x60
+		public static readonly NameAndTooltip AlbedoCustomColor; //Field offset: 0x70
+		public static readonly NameAndTooltip AlbedoMinLuminance; //Field offset: 0x80
+		public static readonly NameAndTooltip AlbedoMaxLuminance; //Field offset: 0x90
+		public static readonly NameAndTooltip AlbedoHueTolerance; //Field offset: 0xA0
+		public static readonly NameAndTooltip AlbedoSaturationTolerance; //Field offset: 0xB0
+		public static readonly NameAndTooltip MetallicMinValue; //Field offset: 0xC0
+		public static readonly NameAndTooltip MetallicMaxValue; //Field offset: 0xD0
 
 		private static Strings() { }
 
@@ -78,13 +84,13 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 		{
 			public static readonly <>c <>9; //Field offset: 0x0
 			public static Action<Field`1<Int32>, Int32> <>9__2_4; //Field offset: 0x8
-			public static Action<Field`1<Int32>, Int32> <>9__3_4; //Field offset: 0x10
+			public static Action<Field`1<Int32>, Int32> <>9__6_4; //Field offset: 0x10
 
 			private static <>c() { }
 
 			public <>c() { }
 
-			internal void <CreateAlbedoPreset>b__3_4(Field<Int32> _, int _) { }
+			internal void <CreateAlbedoPreset>b__6_4(Field<Int32> _, int _) { }
 
 			internal void <CreateMaterialValidationMode>b__2_4(Field<Int32> _, int _) { }
 
@@ -131,6 +137,49 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 
 			public <>c__DisplayClass10_0() { }
 
+			internal float <CreateAlbedoHueTolerance>b__0() { }
+
+			internal void <CreateAlbedoHueTolerance>b__1(float value) { }
+
+			internal bool <CreateAlbedoHueTolerance>b__2() { }
+
+		}
+
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass11_0
+		{
+			public SettingsPanel panel; //Field offset: 0x10
+
+			public <>c__DisplayClass11_0() { }
+
+			internal float <CreateAlbedoSaturationTolerance>b__0() { }
+
+			internal void <CreateAlbedoSaturationTolerance>b__1(float value) { }
+
+			internal bool <CreateAlbedoSaturationTolerance>b__2() { }
+
+		}
+
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass12_0
+		{
+			public SettingsPanel panel; //Field offset: 0x10
+
+			public <>c__DisplayClass12_0() { }
+
+			internal float <CreateMetallicMinValue>b__0() { }
+
+			internal void <CreateMetallicMinValue>b__1(float value) { }
+
+		}
+
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass13_0
+		{
+			public SettingsPanel panel; //Field offset: 0x10
+
+			public <>c__DisplayClass13_0() { }
+
 			internal float <CreateMetallicMaxValue>b__0() { }
 
 			internal void <CreateMetallicMaxValue>b__1(float value) { }
@@ -161,6 +210,53 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 
 			public <>c__DisplayClass3_0() { }
 
+			internal bool <CreateRenderingLayersSelectedLight>b__0() { }
+
+			internal void <CreateRenderingLayersSelectedLight>b__1(bool value) { }
+
+		}
+
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass4_0
+		{
+			public SettingsPanel panel; //Field offset: 0x10
+
+			public <>c__DisplayClass4_0() { }
+
+			internal bool <CreateSelectedLightShadowLayerMask>b__0() { }
+
+			internal void <CreateSelectedLightShadowLayerMask>b__1(bool value) { }
+
+			internal bool <CreateSelectedLightShadowLayerMask>b__2() { }
+
+		}
+
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass5_0
+		{
+			public SettingsPanel panel; //Field offset: 0x10
+
+			public <>c__DisplayClass5_0() { }
+
+			internal RenderingLayerMask <CreateFilterRenderingLayerMasks>b__0() { }
+
+			internal void <CreateFilterRenderingLayerMasks>b__1(RenderingLayerMask value) { }
+
+			internal Vector4 <CreateFilterRenderingLayerMasks>b__2(int index) { }
+
+			internal void <CreateFilterRenderingLayerMasks>b__3(Vector4 value, int index) { }
+
+			internal bool <CreateFilterRenderingLayerMasks>b__4() { }
+
+		}
+
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass6_0
+		{
+			public SettingsPanel panel; //Field offset: 0x10
+
+			public <>c__DisplayClass6_0() { }
+
 			internal int <CreateAlbedoPreset>b__0() { }
 
 			internal void <CreateAlbedoPreset>b__1(int value) { }
@@ -172,11 +268,11 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 		}
 
 		[CompilerGenerated]
-		private sealed class <>c__DisplayClass4_0
+		private sealed class <>c__DisplayClass7_0
 		{
 			public SettingsPanel panel; //Field offset: 0x10
 
-			public <>c__DisplayClass4_0() { }
+			public <>c__DisplayClass7_0() { }
 
 			internal Color <CreateAlbedoCustomColor>b__0() { }
 
@@ -187,58 +283,15 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 		}
 
 		[CompilerGenerated]
-		private sealed class <>c__DisplayClass5_0
-		{
-			public SettingsPanel panel; //Field offset: 0x10
-
-			public <>c__DisplayClass5_0() { }
-
-			internal float <CreateAlbedoMinLuminance>b__0() { }
-
-			internal void <CreateAlbedoMinLuminance>b__1(float value) { }
-
-		}
-
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass6_0
-		{
-			public SettingsPanel panel; //Field offset: 0x10
-
-			public <>c__DisplayClass6_0() { }
-
-			internal float <CreateAlbedoMaxLuminance>b__0() { }
-
-			internal void <CreateAlbedoMaxLuminance>b__1(float value) { }
-
-		}
-
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass7_0
-		{
-			public SettingsPanel panel; //Field offset: 0x10
-
-			public <>c__DisplayClass7_0() { }
-
-			internal float <CreateAlbedoHueTolerance>b__0() { }
-
-			internal void <CreateAlbedoHueTolerance>b__1(float value) { }
-
-			internal bool <CreateAlbedoHueTolerance>b__2() { }
-
-		}
-
-		[CompilerGenerated]
 		private sealed class <>c__DisplayClass8_0
 		{
 			public SettingsPanel panel; //Field offset: 0x10
 
 			public <>c__DisplayClass8_0() { }
 
-			internal float <CreateAlbedoSaturationTolerance>b__0() { }
+			internal float <CreateAlbedoMinLuminance>b__0() { }
 
-			internal void <CreateAlbedoSaturationTolerance>b__1(float value) { }
-
-			internal bool <CreateAlbedoSaturationTolerance>b__2() { }
+			internal void <CreateAlbedoMinLuminance>b__1(float value) { }
 
 		}
 
@@ -249,9 +302,9 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 
 			public <>c__DisplayClass9_0() { }
 
-			internal float <CreateMetallicMinValue>b__0() { }
+			internal float <CreateAlbedoMaxLuminance>b__0() { }
 
-			internal void <CreateMetallicMinValue>b__1(float value) { }
+			internal void <CreateAlbedoMaxLuminance>b__1(float value) { }
 
 		}
 
@@ -268,6 +321,8 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 
 		internal static Widget CreateAlbedoSaturationTolerance(SettingsPanel panel) { }
 
+		internal static RenderingLayerField CreateFilterRenderingLayerMasks(SettingsPanel panel) { }
+
 		internal static Widget CreateMaterialOverride(SettingsPanel panel) { }
 
 		internal static Widget CreateMaterialValidationMode(SettingsPanel panel) { }
@@ -275,6 +330,10 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 		internal static Widget CreateMetallicMaxValue(SettingsPanel panel) { }
 
 		internal static Widget CreateMetallicMinValue(SettingsPanel panel) { }
+
+		internal static Widget CreateRenderingLayersSelectedLight(SettingsPanel panel) { }
+
+		internal static Widget CreateSelectedLightShadowLayerMask(SettingsPanel panel) { }
 
 		internal static Widget CreateVertexAttribute(SettingsPanel panel) { }
 
@@ -295,11 +354,18 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 	[CompilerGenerated]
 	private float <metallicMaxValue>k__BackingField; //Field offset: 0x40
 	[CompilerGenerated]
-	private DebugMaterialValidationMode <materialValidationMode>k__BackingField; //Field offset: 0x44
+	private bool <renderingLayersSelectedLight>k__BackingField; //Field offset: 0x44
 	[CompilerGenerated]
-	private DebugMaterialMode <materialDebugMode>k__BackingField; //Field offset: 0x48
+	private bool <selectedLightShadowLayerMask>k__BackingField; //Field offset: 0x45
 	[CompilerGenerated]
-	private DebugVertexAttributeMode <vertexAttributeDebugMode>k__BackingField; //Field offset: 0x4C
+	private uint <renderingLayerMask>k__BackingField; //Field offset: 0x48
+	public Vector4[] debugRenderingLayersColors; //Field offset: 0x50
+	[CompilerGenerated]
+	private DebugMaterialValidationMode <materialValidationMode>k__BackingField; //Field offset: 0x58
+	[CompilerGenerated]
+	private DebugMaterialMode <materialDebugMode>k__BackingField; //Field offset: 0x5C
+	[CompilerGenerated]
+	private DebugVertexAttributeMode <vertexAttributeDebugMode>k__BackingField; //Field offset: 0x60
 
 	public Color albedoCompareColor
 	{
@@ -390,6 +456,30 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 		 set { } //Length: 6
 	}
 
+	public uint renderingLayerMask
+	{
+		[CompilerGenerated]
+		 get { } //Length: 4
+		[CompilerGenerated]
+		 set { } //Length: 4
+	}
+
+	public bool renderingLayersSelectedLight
+	{
+		[CompilerGenerated]
+		 get { } //Length: 5
+		[CompilerGenerated]
+		 set { } //Length: 4
+	}
+
+	public bool selectedLightShadowLayerMask
+	{
+		[CompilerGenerated]
+		 get { } //Length: 5
+		[CompilerGenerated]
+		 set { } //Length: 4
+	}
+
 	public DebugVertexAttributeMode vertexAttributeDebugMode
 	{
 		[CompilerGenerated]
@@ -434,7 +524,18 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 	public float get_metallicMinValue() { }
 
 	[CompilerGenerated]
+	public uint get_renderingLayerMask() { }
+
+	[CompilerGenerated]
+	public bool get_renderingLayersSelectedLight() { }
+
+	[CompilerGenerated]
+	public bool get_selectedLightShadowLayerMask() { }
+
+	[CompilerGenerated]
 	public DebugVertexAttributeMode get_vertexAttributeDebugMode() { }
+
+	public uint GetDebugLightLayersMask() { }
 
 	[CompilerGenerated]
 	public void set_albedoCompareColor(Color value) { }
@@ -464,9 +565,16 @@ public class DebugDisplaySettingsMaterial : IDebugDisplaySettingsData, IDebugDis
 	public void set_metallicMinValue(float value) { }
 
 	[CompilerGenerated]
-	public void set_vertexAttributeDebugMode(DebugVertexAttributeMode value) { }
+	public void set_renderingLayerMask(uint value) { }
 
-	public override bool TryGetScreenClearColor(ref Color color) { }
+	[CompilerGenerated]
+	public void set_renderingLayersSelectedLight(bool value) { }
+
+	[CompilerGenerated]
+	public void set_selectedLightShadowLayerMask(bool value) { }
+
+	[CompilerGenerated]
+	public void set_vertexAttributeDebugMode(DebugVertexAttributeMode value) { }
 
 	private override IDebugDisplaySettingsPanelDisposable UnityEngine.Rendering.IDebugDisplaySettingsData.CreatePanel() { }
 

@@ -8,12 +8,16 @@ public struct StyleTransformOrigin : IStyleValue<TransformOrigin>, IEquatable<St
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override TransformOrigin value
 	{
-		 get { } //Length: 275
+		 get { } //Length: 215
+		 set { } //Length: 20
 	}
+
+	public StyleTransformOrigin(TransformOrigin v) { }
 
 	public StyleTransformOrigin(StyleKeyword keyword) { }
 
@@ -32,6 +36,12 @@ public struct StyleTransformOrigin : IStyleValue<TransformOrigin>, IEquatable<St
 	public static bool op_Equality(StyleTransformOrigin lhs, StyleTransformOrigin rhs) { }
 
 	public static StyleTransformOrigin op_Implicit(StyleKeyword keyword) { }
+
+	public static StyleTransformOrigin op_Implicit(TransformOrigin v) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(TransformOrigin value) { }
 
 	public virtual string ToString() { }
 

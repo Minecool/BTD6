@@ -74,7 +74,7 @@ public abstract class AnimationController : MonoBehaviour
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 4
+		private set { } //Length: 86
 	}
 
 	private static AnimationController() { }

@@ -18,7 +18,7 @@ public class ObjectReference : GenericObjectReference
 	public override object Object
 	{
 		 get { } //Length: 5
-		 set { } //Length: 321
+		 set { } //Length: 154
 	}
 
 	public ObjectReference<T> Parent
@@ -35,12 +35,12 @@ public class ObjectReference : GenericObjectReference
 	public override GenericObjectReference ParentObject
 	{
 		 get { } //Length: 5
-		 set { } //Length: 138
+		 set { } //Length: 135
 	}
 
 	public T Val
 	{
-		 get { } //Length: 175
+		 get { } //Length: 173
 	}
 
 	public ObjectReference`1() { }

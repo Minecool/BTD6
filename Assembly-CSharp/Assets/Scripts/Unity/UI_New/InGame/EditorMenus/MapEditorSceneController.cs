@@ -524,7 +524,7 @@ public class MapEditorSceneController : MonoBehaviour
 
 	public void Bake(bool useRedrawLayerMask = false) { }
 
-	public void CleanUpData() { }
+	public void CleanUp() { }
 
 	private void ClosePropSelectionTriggered() { }
 
@@ -537,6 +537,8 @@ public class MapEditorSceneController : MonoBehaviour
 
 	[AsyncStateMachine(typeof(<CreateStamp>d__56))]
 	private Task<StampDisplay> CreateStamp(MapEditorStampData stampData) { }
+
+	public void DestroyStamps() { }
 
 	public void DestroyTerrain() { }
 

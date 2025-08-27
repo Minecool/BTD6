@@ -1,6 +1,7 @@
 namespace UnityEngine.UIElements;
 
 [Flags]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal enum PseudoStates
 {
 	Active = 1,

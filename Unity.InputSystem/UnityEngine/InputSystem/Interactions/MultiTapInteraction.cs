@@ -23,7 +23,7 @@ public class MultiTapInteraction : IInputInteraction<Single>, IInputInteraction
 
 	private float pressPointOrDefault
 	{
-		private get { } //Length: 83
+		private get { } //Length: 74
 	}
 
 	private float releasePointOrDefault
@@ -33,12 +33,12 @@ public class MultiTapInteraction : IInputInteraction<Single>, IInputInteraction
 
 	internal float tapDelayOrDefault
 	{
-		internal get { } //Length: 108
+		internal get { } //Length: 99
 	}
 
 	private float tapTimeOrDefault
 	{
-		private get { } //Length: 108
+		private get { } //Length: 99
 	}
 
 	public MultiTapInteraction() { }

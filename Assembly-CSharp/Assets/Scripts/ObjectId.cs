@@ -23,7 +23,7 @@ public struct ObjectId : IEquatable<ObjectId>, IComparable<ObjectId>
 
 	public int Id
 	{
-		 get { } //Length: 19
+		 get { } //Length: 14
 	}
 
 	public static ObjectId Invalid
@@ -43,7 +43,7 @@ public struct ObjectId : IEquatable<ObjectId>, IComparable<ObjectId>
 
 	public int Version
 	{
-		 get { } //Length: 15
+		 get { } //Length: 12
 	}
 
 	public ObjectId Add(uint add) { }

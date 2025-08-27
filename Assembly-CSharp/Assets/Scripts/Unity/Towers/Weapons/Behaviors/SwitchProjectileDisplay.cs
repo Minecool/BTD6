@@ -8,7 +8,7 @@ public class SwitchProjectileDisplay : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 346
+		 get { } //Length: 128
 	}
 
 	public SwitchProjectileDisplay() { }

@@ -1,8 +1,8 @@
 namespace UnityEngine.Playables;
 
 [NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
-[NativeHeader("Runtime/Export/Director/PlayableOutputHandle.bindings.h")]
 [NativeHeader("Runtime/Director/Core/HPlayable.h")]
+[NativeHeader("Runtime/Export/Director/PlayableOutputHandle.bindings.h")]
 [UsedByNativeCode]
 public struct PlayableOutputHandle : IEquatable<PlayableOutputHandle>
 {
@@ -30,12 +30,8 @@ public struct PlayableOutputHandle : IEquatable<PlayableOutputHandle>
 	[FreeFunction("PlayableOutputHandleBindings::GetPlayableOutputType", HasExplicitThis = True, ThrowsException = True)]
 	internal Type GetPlayableOutputType() { }
 
-	private static Type GetPlayableOutputType_Injected(ref PlayableOutputHandle _unity_self) { }
-
 	[FreeFunction("PlayableOutputHandleBindings::GetSourceOutputPort", HasExplicitThis = True, ThrowsException = True)]
 	internal int GetSourceOutputPort() { }
-
-	private static int GetSourceOutputPort_Injected(ref PlayableOutputHandle _unity_self) { }
 
 	[VisibleToOtherModules]
 	internal bool IsPlayableOutputOfType() { }
@@ -43,14 +39,12 @@ public struct PlayableOutputHandle : IEquatable<PlayableOutputHandle>
 	[VisibleToOtherModules]
 	internal bool IsValid() { }
 
-	private static bool IsValid_Injected(ref PlayableOutputHandle _unity_self) { }
-
 	public static bool op_Equality(PlayableOutputHandle lhs, PlayableOutputHandle rhs) { }
 
 	[FreeFunction("PlayableOutputHandleBindings::SetSourcePlayable", HasExplicitThis = True, ThrowsException = True)]
 	internal void SetSourcePlayable(PlayableHandle target, int port) { }
 
-	private static void SetSourcePlayable_Injected(ref PlayableOutputHandle _unity_self, ref PlayableHandle target, int port) { }
+	private static void SetSourcePlayable_Injected(ref PlayableOutputHandle _unity_self, in PlayableHandle target, int port) { }
 
 }
 

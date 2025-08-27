@@ -20,7 +20,7 @@ public class TechBotLink : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 598
+		 get { } //Length: 596
 	}
 
 	public virtual Display Display

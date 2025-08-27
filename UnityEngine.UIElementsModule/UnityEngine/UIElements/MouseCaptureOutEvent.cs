@@ -20,5 +20,7 @@ public class MouseCaptureOutEvent : MouseCaptureEventBase<MouseCaptureOutEvent>
 
 	public MouseCaptureOutEvent() { }
 
+	protected private virtual void PreDispatch(IPanel panel) { }
+
 }
 

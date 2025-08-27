@@ -3,8 +3,6 @@ namespace System;
 [IsReadOnly]
 public struct long : IComparable, IConvertible, IFormattable, IComparable<Int64>, IEquatable<Int64>, ISpanFormattable
 {
-	public const long MaxValue = 9223372036854775807; //Field offset: 0x0
-	public const long MinValue = -9223372036854775808; //Field offset: 0x0
 	private readonly long m_value; //Field offset: 0x0
 
 	public override int CompareTo(object value) { }

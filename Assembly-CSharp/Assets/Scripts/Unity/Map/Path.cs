@@ -11,7 +11,7 @@ public class Path : MonoBehaviour
 
 	public PathModel Def
 	{
-		 get { } //Length: 1566
+		 get { } //Length: 1545
 	}
 
 	public Path() { }

@@ -76,7 +76,7 @@ public class GyrfalconPattern : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 2240
+		 get { } //Length: 2200
 	}
 
 	public GyrfalconPattern() { }

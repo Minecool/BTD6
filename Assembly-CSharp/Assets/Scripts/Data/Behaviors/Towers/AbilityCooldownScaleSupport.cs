@@ -11,7 +11,7 @@ public class AbilityCooldownScaleSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 254
+		 get { } //Length: 288
 	}
 
 	public AbilityCooldownScaleSupport() { }

@@ -21,12 +21,12 @@ public class MediaTypeHeaderValue : ICloneable
 
 	public string CharSet
 	{
-		 get { } //Length: 277
+		 get { } //Length: 275
 	}
 
 	public string MediaType
 	{
-		 set { } //Length: 385
+		 set { } //Length: 377
 	}
 
 	public ICollection<NameValueHeaderValue> Parameters

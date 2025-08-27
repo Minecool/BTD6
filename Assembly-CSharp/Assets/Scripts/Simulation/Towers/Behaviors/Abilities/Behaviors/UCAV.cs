@@ -6,6 +6,7 @@ public class UCAV : AbilityBehavior
 	private int activatedAt; //Field offset: 0x70
 	private bool isActive; //Field offset: 0x74
 	private Tower ucavTower; //Field offset: 0x78
+	private SubTowerFilter subTowerFilter; //Field offset: 0x80
 
 	public UCAV() { }
 

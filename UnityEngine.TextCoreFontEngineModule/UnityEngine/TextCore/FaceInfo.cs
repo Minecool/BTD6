@@ -14,7 +14,7 @@ public struct FaceInfo
 	private string m_StyleName; //Field offset: 0x10
 	[NativeName("pointSize")]
 	[SerializeField]
-	private int m_PointSize; //Field offset: 0x18
+	private float m_PointSize; //Field offset: 0x18
 	[NativeName("scale")]
 	[SerializeField]
 	private float m_Scale; //Field offset: 0x1C
@@ -88,6 +88,7 @@ public struct FaceInfo
 		 get { } //Length: 8
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.TextCoreTextEngineModule"}])]
 	internal int faceIndex
 	{
 		internal get { } //Length: 5
@@ -109,9 +110,9 @@ public struct FaceInfo
 		 set { } //Length: 6
 	}
 
-	public int pointSize
+	public float pointSize
 	{
-		 get { } //Length: 6
+		 get { } //Length: 8
 	}
 
 	public float scale
@@ -166,6 +167,7 @@ public struct FaceInfo
 		 get { } //Length: 8
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.TextCoreTextEngineModule"}])]
 	internal int unitsPerEM
 	{
 		internal get { } //Length: 6
@@ -188,7 +190,7 @@ public struct FaceInfo
 
 	public float get_meanLine() { }
 
-	public int get_pointSize() { }
+	public float get_pointSize() { }
 
 	public float get_scale() { }
 

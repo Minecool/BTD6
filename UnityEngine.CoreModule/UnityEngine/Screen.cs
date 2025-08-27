@@ -1,8 +1,8 @@
 namespace UnityEngine;
 
-[NativeHeader("Runtime/Graphics/ScreenManager.h")]
-[NativeHeader("Runtime/Graphics/WindowLayout.h")]
 [NativeHeader("Runtime/Graphics/GraphicsScriptBindings.h")]
+[NativeHeader("Runtime/Graphics/WindowLayout.h")]
+[NativeHeader("Runtime/Graphics/ScreenManager.h")]
 [StaticAccessor("GetScreenManager()", StaticAccessorType::Dot (0))]
 public sealed class Screen
 {
@@ -36,6 +36,11 @@ public sealed class Screen
 		 get { } //Length: 42
 	}
 
+	public static int msaaSamples
+	{
+		 get { } //Length: 42
+	}
+
 	public static ScreenOrientation orientation
 	{
 		 get { } //Length: 42
@@ -44,7 +49,7 @@ public sealed class Screen
 	public static Resolution[] resolutions
 	{
 		[FreeFunction("ScreenScripting::GetResolutions")]
-		 get { } //Length: 42
+		 get { } //Length: 210
 	}
 
 	public static Rect safeArea
@@ -81,10 +86,14 @@ public sealed class Screen
 	[NativeMethod(Name = "GetHeight", IsThreadSafe = True)]
 	public static int get_height() { }
 
+	public static int get_msaaSamples() { }
+
 	public static ScreenOrientation get_orientation() { }
 
 	[FreeFunction("ScreenScripting::GetResolutions")]
 	public static Resolution[] get_resolutions() { }
+
+	private static void get_resolutions_Injected(out BlittableArrayWrapper ret) { }
 
 	public static Rect get_safeArea() { }
 
@@ -95,14 +104,20 @@ public sealed class Screen
 	[NativeMethod(Name = "GetWidth", IsThreadSafe = True)]
 	public static int get_width() { }
 
+	[NativeName("GetRequestedMSAASamples")]
+	private static int GetMSAASamples() { }
+
 	private static ScreenOrientation GetScreenOrientation() { }
 
 	public static void set_sleepTimeout(int value) { }
 
+	[NativeName("SetRequestedMSAASamples")]
+	public static void SetMSAASamples(int numSamples) { }
+
 	[NativeName("RequestResolution")]
 	public static void SetResolution(int width, int height, FullScreenMode fullscreenMode, RefreshRate preferredRefreshRate) { }
 
-	private static void SetResolution_Injected(int width, int height, FullScreenMode fullscreenMode, ref RefreshRate preferredRefreshRate) { }
+	private static void SetResolution_Injected(int width, int height, FullScreenMode fullscreenMode, in RefreshRate preferredRefreshRate) { }
 
 }
 

@@ -18,7 +18,7 @@ internal sealed class SchemaEntity : IDtdEntityInfo
 
 	internal string BaseURI
 	{
-		internal get { } //Length: 77
+		internal get { } //Length: 27
 		internal set { } //Length: 5
 	}
 
@@ -30,7 +30,7 @@ internal sealed class SchemaEntity : IDtdEntityInfo
 
 	internal string DeclaredURI
 	{
-		internal get { } //Length: 77
+		internal get { } //Length: 27
 		internal set { } //Length: 5
 	}
 
@@ -77,12 +77,12 @@ internal sealed class SchemaEntity : IDtdEntityInfo
 
 	private override string System.Xml.IDtdEntityInfo.BaseUriString
 	{
-		private get { } //Length: 77
+		private get { } //Length: 27
 	}
 
 	private override string System.Xml.IDtdEntityInfo.DeclaredUriString
 	{
-		private get { } //Length: 77
+		private get { } //Length: 27
 	}
 
 	private override bool System.Xml.IDtdEntityInfo.IsDeclaredInExternal
@@ -102,7 +102,7 @@ internal sealed class SchemaEntity : IDtdEntityInfo
 
 	private override bool System.Xml.IDtdEntityInfo.IsUnparsedEntity
 	{
-		private get { } //Length: 32
+		private get { } //Length: 35
 	}
 
 	private override int System.Xml.IDtdEntityInfo.LineNumber

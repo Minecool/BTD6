@@ -1,6 +1,6 @@
 namespace Unity.Profiling.Memory;
 
-[NativeHeader("Modules/Profiler/Runtime/MemorySnapshotManager.h")]
+[NativeHeader("Runtime/Profiler/Runtime/MemorySnapshotManager.h")]
 public static class MemoryProfiler
 {
 	[CompilerGenerated]

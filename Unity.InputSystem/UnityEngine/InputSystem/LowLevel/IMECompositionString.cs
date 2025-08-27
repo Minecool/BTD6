@@ -24,7 +24,7 @@ public struct IMECompositionString : IEnumerable<Char>, IEnumerable
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 72
+			private get { } //Length: 38
 		}
 
 		public Enumerator(IMECompositionString compositionString) { }

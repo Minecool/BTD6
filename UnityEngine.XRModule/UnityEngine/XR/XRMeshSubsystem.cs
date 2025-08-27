@@ -1,8 +1,8 @@
 namespace UnityEngine.XR;
 
 [NativeConditional("ENABLE_XR")]
-[NativeHeader("Modules/XR/XRPrefix.h")]
 [NativeHeader("Modules/XR/Subsystems/Meshing/XRMeshingSubsystem.h")]
+[NativeHeader("Modules/XR/XRPrefix.h")]
 [UsedByNativeCode]
 public class XRMeshSubsystem : IntegratedSubsystem<XRMeshSubsystemDescriptor>
 {

@@ -6,7 +6,7 @@ public struct FontAssetCreationEditorSettings
 	public string sourceFontFileGUID; //Field offset: 0x0
 	public int faceIndex; //Field offset: 0x8
 	public int pointSizeSamplingMode; //Field offset: 0xC
-	public int pointSize; //Field offset: 0x10
+	public float pointSize; //Field offset: 0x10
 	public int padding; //Field offset: 0x14
 	public int paddingMode; //Field offset: 0x18
 	public int packingMode; //Field offset: 0x1C

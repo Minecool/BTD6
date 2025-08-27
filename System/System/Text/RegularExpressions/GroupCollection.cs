@@ -12,12 +12,12 @@ public class GroupCollection : IList<Group>, ICollection<Group>, IEnumerable<Gro
 
 		public override Group Current
 		{
-			 get { } //Length: 151
+			 get { } //Length: 142
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 151
+			private get { } //Length: 142
 		}
 
 		internal Enumerator(GroupCollection collection) { }
@@ -60,7 +60,7 @@ public class GroupCollection : IList<Group>, ICollection<Group>, IEnumerable<Gro
 
 	public Group Item
 	{
-		 get { } //Length: 422
+		 get { } //Length: 411
 	}
 
 	public override object SyncRoot

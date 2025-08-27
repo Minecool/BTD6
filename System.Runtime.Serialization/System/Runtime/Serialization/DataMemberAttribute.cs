@@ -18,6 +18,7 @@ public sealed class DataMemberAttribute : Attribute
 	public bool IsRequired
 	{
 		 get { } //Length: 5
+		 set { } //Length: 4
 	}
 
 	public string Name
@@ -42,6 +43,8 @@ public sealed class DataMemberAttribute : Attribute
 	public int get_Order() { }
 
 	public void set_EmitDefaultValue(bool value) { }
+
+	public void set_IsRequired(bool value) { }
 
 	public void set_Name(string value) { }
 

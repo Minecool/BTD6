@@ -7,7 +7,7 @@ public sealed class X509ExtensionCollection : CollectionBase, IEnumerable
 
 	public X509Extension Item
 	{
-		 get { } //Length: 508
+		 get { } //Length: 502
 	}
 
 	public X509ExtensionCollection() { }

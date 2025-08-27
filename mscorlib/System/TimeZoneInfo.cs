@@ -263,7 +263,7 @@ public sealed class TimeZoneInfo : IEquatable<TimeZoneInfo>, ISerializable, IDes
 
 	public string DisplayName
 	{
-		 get { } //Length: 69
+		 get { } //Length: 27
 	}
 
 	private static bool HaveRegistry

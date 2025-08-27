@@ -12,12 +12,12 @@ internal class ChainOperation : AsyncOperationBase<TObject>
 
 	protected virtual string DebugName
 	{
-		 get { } //Length: 420
+		 get { } //Length: 408
 	}
 
 	protected virtual float Progress
 	{
-		 get { } //Length: 397
+		 get { } //Length: 400
 	}
 
 	public ChainOperation`2() { }

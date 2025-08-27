@@ -14,7 +14,7 @@ public class AssetLabelReference : IKeyEvaluator
 
 	public override object RuntimeKey
 	{
-		 get { } //Length: 75
+		 get { } //Length: 33
 	}
 
 	public AssetLabelReference() { }

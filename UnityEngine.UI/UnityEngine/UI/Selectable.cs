@@ -44,8 +44,8 @@ public class Selectable : UIBehaviour, IMoveHandler, IEventSystemHandler, IPoint
 	[SerializeField]
 	[Tooltip("Can the Selectable be interacted with?")]
 	private bool m_Interactable; //Field offset: 0xD8
-	[FormerlySerializedAs("m_HighlightGraphic")]
 	[FormerlySerializedAs("highlightGraphic")]
+	[FormerlySerializedAs("m_HighlightGraphic")]
 	[SerializeField]
 	private Graphic m_TargetGraphic; //Field offset: 0xE0
 	private bool m_GroupsAllowInteraction; //Field offset: 0xE8
@@ -106,7 +106,7 @@ public class Selectable : UIBehaviour, IMoveHandler, IEventSystemHandler, IPoint
 
 	public Image image
 	{
-		 get { } //Length: 133
+		 get { } //Length: 129
 		 set { } //Length: 8
 	}
 

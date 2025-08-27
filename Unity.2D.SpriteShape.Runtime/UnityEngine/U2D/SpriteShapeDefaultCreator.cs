@@ -6,7 +6,7 @@ internal class SpriteShapeDefaultCreator : SpriteShapeGeometryCreator
 
 	internal static SpriteShapeDefaultCreator defaultInstance
 	{
-		internal get { } //Length: 205
+		internal get { } //Length: 204
 	}
 
 	public SpriteShapeDefaultCreator() { }

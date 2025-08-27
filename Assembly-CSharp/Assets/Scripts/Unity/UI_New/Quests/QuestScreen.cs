@@ -6,52 +6,52 @@ public class QuestScreen : GameMenu
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Action<AsyncOperationHandle`1<GameObject>> <>9__96_0; //Field offset: 0x8
-		public static Func<LegendsType, String> <>9__102_0; //Field offset: 0x10
+		public static Action<AsyncOperationHandle`1<GameObject>> <>9__97_0; //Field offset: 0x8
+		public static Func<LegendsType, String> <>9__103_0; //Field offset: 0x10
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <LoadUI>b__96_0(AsyncOperationHandle<GameObject> h) { }
+		internal void <LoadUI>b__97_0(AsyncOperationHandle<GameObject> h) { }
 
-		internal string <SetStoreButton>b__102_0(LegendsType legendsType) { }
+		internal string <SetStoreButton>b__103_0(LegendsType legendsType) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass111_0
+	private sealed class <>c__DisplayClass112_0
 	{
 		public QuestScreen <>4__this; //Field offset: 0x10
 		public bool continueSave; //Field offset: 0x18
 
-		public <>c__DisplayClass111_0() { }
+		public <>c__DisplayClass112_0() { }
 
 		internal void <OnClickPlay>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass116_0
+	private sealed class <>c__DisplayClass117_0
 	{
 		public QuestScreen <>4__this; //Field offset: 0x10
 		public DialogueData dialogueData; //Field offset: 0x18
 		public int taskIndex; //Field offset: 0x20
 
-		public <>c__DisplayClass116_0() { }
+		public <>c__DisplayClass117_0() { }
 
 		internal void <CheckForQuestDialogue>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass96_0
+	private sealed class <>c__DisplayClass97_0
 	{
 		public QuestScreen <>4__this; //Field offset: 0x10
 		public int count; //Field offset: 0x18
 		public Action<AsyncOperationHandle`1<GameObject>> <>9__2; //Field offset: 0x20
 
-		public <>c__DisplayClass96_0() { }
+		public <>c__DisplayClass97_0() { }
 
 		internal void <LoadUI>b__1(AsyncOperationHandle<GameObject> h) { }
 
@@ -60,20 +60,20 @@ public class QuestScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass97_0
+	private sealed class <>c__DisplayClass98_0
 	{
 		public QuestScreen <>4__this; //Field offset: 0x10
 		public TaskData task; //Field offset: 0x18
 		public int index; //Field offset: 0x20
 
-		public <>c__DisplayClass97_0() { }
+		public <>c__DisplayClass98_0() { }
 
 		internal void <CreateTaskPanel>b__0(AsyncOperationHandle<GameObject> h) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <CheckForQuestDialogue>d__116 : IAsyncStateMachine
+	private struct <CheckForQuestDialogue>d__117 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -88,7 +88,7 @@ public class QuestScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <LoadPreviousEventRewards>d__107 : IAsyncStateMachine
+	private struct <LoadPreviousEventRewards>d__108 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -104,7 +104,7 @@ public class QuestScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <LoadUI>d__96 : IAsyncStateMachine
+	private struct <LoadUI>d__97 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -121,7 +121,7 @@ public class QuestScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <OnClickClaim>d__126 : IAsyncStateMachine
+	private struct <OnClickClaim>d__127 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -142,7 +142,7 @@ public class QuestScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <Open>d__94 : IAsyncStateMachine
+	private struct <Open>d__95 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -161,7 +161,7 @@ public class QuestScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <ReOpen>d__95 : IAsyncStateMachine
+	private struct <ReOpen>d__96 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -255,8 +255,9 @@ public class QuestScreen : GameMenu
 	protected QuestUiData questUiData; //Field offset: 0x1B8
 	protected int selectedTaskIndex; //Field offset: 0x1C0
 	protected int CurrentPartIndex; //Field offset: 0x1C4
-	private Nullable<Boolean> hasClaimedRewards; //Field offset: 0x1C8
-	private Nullable<Boolean> hasCompletedAllTasks; //Field offset: 0x1CA
+	protected bool gameStarting; //Field offset: 0x1C8
+	private Nullable<Boolean> hasClaimedRewards; //Field offset: 0x1C9
+	private Nullable<Boolean> hasCompletedAllTasks; //Field offset: 0x1CB
 	protected AsyncOperationHandle<GameObject> worldSceneAssetHandle; //Field offset: 0x1D0
 	protected Animator worldAnimator; //Field offset: 0x1E8
 	protected int introTransitionState; //Field offset: 0x1F0
@@ -340,37 +341,37 @@ public class QuestScreen : GameMenu
 
 	protected bool ShowMapSaveOverrideMessage
 	{
-		 get { } //Length: 60
+		 get { } //Length: 63
 	}
 
 	public QuestScreen() { }
 
 	[CompilerGenerated]
-	private void <OnClickReplay>b__123_0() { }
+	private void <OnClickReplay>b__124_0() { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_0() { }
+	private void <OnEnable>b__93_0() { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_1() { }
+	private void <OnEnable>b__93_1() { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_2() { }
+	private void <OnEnable>b__93_2() { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_3() { }
+	private void <OnEnable>b__93_3() { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_4() { }
+	private void <OnEnable>b__93_4() { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_5() { }
+	private void <OnEnable>b__93_5() { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_6(bool value) { }
+	private void <OnEnable>b__93_6(bool value) { }
 
 	[CompilerGenerated]
-	private void <OnEnable>b__92_7() { }
+	private void <OnEnable>b__93_7() { }
 
 	protected void AnimatedDialogueCompleted(DialogueData dialogueData, int index) { }
 
@@ -378,7 +379,7 @@ public class QuestScreen : GameMenu
 
 	public override void ButtonsInteractable(bool interactable) { }
 
-	[AsyncStateMachine(typeof(<CheckForQuestDialogue>d__116))]
+	[AsyncStateMachine(typeof(<CheckForQuestDialogue>d__117))]
 	protected void CheckForQuestDialogue() { }
 
 	public virtual void Close() { }
@@ -430,13 +431,13 @@ public class QuestScreen : GameMenu
 
 	protected override void LoadButtonsAndPanels() { }
 
-	[AsyncStateMachine(typeof(<LoadPreviousEventRewards>d__107))]
+	[AsyncStateMachine(typeof(<LoadPreviousEventRewards>d__108))]
 	protected override Task LoadPreviousEventRewards() { }
 
-	[AsyncStateMachine(typeof(<LoadUI>d__96))]
+	[AsyncStateMachine(typeof(<LoadUI>d__97))]
 	protected override void LoadUI() { }
 
-	[AsyncStateMachine(typeof(<OnClickClaim>d__126))]
+	[AsyncStateMachine(typeof(<OnClickClaim>d__127))]
 	protected override void OnClickClaim() { }
 
 	protected override void OnClickPlay(bool continueSave, TaskData taskDataOverride = null) { }
@@ -467,14 +468,14 @@ public class QuestScreen : GameMenu
 
 	protected void OnToggleDisableDialog(bool value) { }
 
-	[AsyncStateMachine(typeof(<Open>d__94))]
+	[AsyncStateMachine(typeof(<Open>d__95))]
 	public virtual void Open(object data) { }
 
 	public virtual bool OverrideClose() { }
 
 	public virtual void ReClose() { }
 
-	[AsyncStateMachine(typeof(<ReOpen>d__95))]
+	[AsyncStateMachine(typeof(<ReOpen>d__96))]
 	public virtual void ReOpen(object data) { }
 
 	[CompilerGenerated]

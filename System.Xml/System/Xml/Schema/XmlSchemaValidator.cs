@@ -51,8 +51,8 @@ public sealed class XmlSchemaValidator
 
 	public event ValidationEventHandler ValidationEventHandler
 	{
-		 add { } //Length: 157
-		 remove { } //Length: 157
+		 add { } //Length: 153
+		 remove { } //Length: 153
 	}
 
 	internal XmlSchemaContentType CurrentContentType
@@ -82,7 +82,7 @@ public sealed class XmlSchemaValidator
 
 	internal bool ProcessSchemaHints
 	{
-		internal get { } //Length: 17
+		internal get { } //Length: 16
 	}
 
 	internal bool ReportValidationWarnings
@@ -102,7 +102,7 @@ public sealed class XmlSchemaValidator
 
 	private bool StrictlyAssessed
 	{
-		private get { } //Length: 62
+		private get { } //Length: 58
 	}
 
 	public object ValidationEventSender

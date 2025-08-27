@@ -6,12 +6,12 @@ public class XmlAnyElementAttributes : CollectionBase
 
 	public XmlAnyElementAttribute Item
 	{
-		 get { } //Length: 290
+		 get { } //Length: 288
 	}
 
 	internal int Order
 	{
-		internal get { } //Length: 410
+		internal get { } //Length: 476
 	}
 
 	public XmlAnyElementAttributes() { }

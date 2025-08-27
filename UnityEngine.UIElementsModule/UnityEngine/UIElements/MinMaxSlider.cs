@@ -4,12 +4,13 @@ public class MinMaxSlider : BaseField<Vector2>
 {
 	private enum DragState
 	{
-		NoThumb = 0,
-		MinThumb = 1,
+		MinThumb = 0,
+		MaxThumb = 1,
 		MiddleThumb = 2,
-		MaxThumb = 3,
+		NoThumb = 3,
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<MinMaxSlider, UxmlTraits>
 	{
 
@@ -17,12 +18,13 @@ public class MinMaxSlider : BaseField<Vector2>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits<Vector2>
 	{
-		private UxmlFloatAttributeDescription m_MinValue; //Field offset: 0x80
-		private UxmlFloatAttributeDescription m_MaxValue; //Field offset: 0x88
-		private UxmlFloatAttributeDescription m_LowLimit; //Field offset: 0x90
-		private UxmlFloatAttributeDescription m_HighLimit; //Field offset: 0x98
+		private UxmlFloatAttributeDescription m_MinValue; //Field offset: 0x98
+		private UxmlFloatAttributeDescription m_MaxValue; //Field offset: 0xA0
+		private UxmlFloatAttributeDescription m_LowLimit; //Field offset: 0xA8
+		private UxmlFloatAttributeDescription m_HighLimit; //Field offset: 0xB0
 
 		public UxmlTraits() { }
 
@@ -30,32 +32,36 @@ public class MinMaxSlider : BaseField<Vector2>
 
 	}
 
-	public static readonly string ussClassName; //Field offset: 0x0
-	public static readonly string labelUssClassName; //Field offset: 0x8
-	public static readonly string inputUssClassName; //Field offset: 0x10
-	public static readonly string trackerUssClassName; //Field offset: 0x18
-	public static readonly string draggerUssClassName; //Field offset: 0x20
-	public static readonly string minThumbUssClassName; //Field offset: 0x28
-	public static readonly string maxThumbUssClassName; //Field offset: 0x30
+	internal static readonly BindingId minValueProperty; //Field offset: 0x0
+	internal static readonly BindingId maxValueProperty; //Field offset: 0x98
+	internal static readonly BindingId rangeProperty; //Field offset: 0x130
+	internal static readonly BindingId lowLimitProperty; //Field offset: 0x1C8
+	internal static readonly BindingId highLimitProperty; //Field offset: 0x260
+	public static readonly string ussClassName; //Field offset: 0x2F8
+	public static readonly string labelUssClassName; //Field offset: 0x300
+	public static readonly string inputUssClassName; //Field offset: 0x308
+	public static readonly string trackerUssClassName; //Field offset: 0x310
+	public static readonly string draggerUssClassName; //Field offset: 0x318
+	public static readonly string minThumbUssClassName; //Field offset: 0x320
+	public static readonly string maxThumbUssClassName; //Field offset: 0x328
+	public static readonly string movableUssClassName; //Field offset: 0x330
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private VisualElement <dragElement>k__BackingField; //Field offset: 0x440
+	private VisualElement <dragElement>k__BackingField; //Field offset: 0x538
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private VisualElement <dragMinThumb>k__BackingField; //Field offset: 0x448
+	private VisualElement <dragMinThumb>k__BackingField; //Field offset: 0x540
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private VisualElement <dragMaxThumb>k__BackingField; //Field offset: 0x450
+	private VisualElement <dragMaxThumb>k__BackingField; //Field offset: 0x548
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private ClampedDragger<Single> <clampedDragger>k__BackingField; //Field offset: 0x458
-	private Vector2 m_DragElementStartPos; //Field offset: 0x460
-	private Vector2 m_ValueStartPos; //Field offset: 0x468
-	private Rect m_DragMinThumbRect; //Field offset: 0x470
-	private Rect m_DragMaxThumbRect; //Field offset: 0x480
-	private DragState m_DragState; //Field offset: 0x490
-	private float m_MinLimit; //Field offset: 0x494
-	private float m_MaxLimit; //Field offset: 0x498
+	private ClampedDragger<Single> <clampedDragger>k__BackingField; //Field offset: 0x550
+	private Vector2 m_DragElementStartPos; //Field offset: 0x558
+	private Vector2 m_ValueStartPos; //Field offset: 0x560
+	private DragState m_DragState; //Field offset: 0x568
+	private float m_MinLimit; //Field offset: 0x56C
+	private float m_MaxLimit; //Field offset: 0x570
 
 	internal ClampedDragger<Single> clampedDragger
 	{
@@ -89,28 +95,38 @@ public class MinMaxSlider : BaseField<Vector2>
 		private set { } //Length: 8
 	}
 
+	[CreateProperty]
 	public float highLimit
 	{
 		 get { } //Length: 11
-		 set { } //Length: 251
+		 set { } //Length: 327
 	}
 
+	[CreateProperty]
 	public float lowLimit
 	{
 		 get { } //Length: 11
-		 set { } //Length: 247
+		 set { } //Length: 323
 	}
 
+	[CreateProperty]
 	public float maxValue
 	{
 		 get { } //Length: 36
-		 set { } //Length: 130
+		 set { } //Length: 271
 	}
 
+	[CreateProperty]
 	public float minValue
 	{
 		 get { } //Length: 36
-		 set { } //Length: 130
+		 set { } //Length: 267
+	}
+
+	[CreateProperty(ReadOnly = True)]
+	public float range
+	{
+		 get { } //Length: 114
 	}
 
 	public virtual Vector2 value
@@ -121,18 +137,17 @@ public class MinMaxSlider : BaseField<Vector2>
 
 	private static MinMaxSlider() { }
 
-	public MinMaxSlider(string label, float minValue = 0, float maxValue = 10, float minLimit = -3.4028235E+38, float maxLimit = 3.4028235E+38) { }
-
 	public MinMaxSlider() { }
+
+	public MinMaxSlider(string label, float minValue = 0, float maxValue = 10, float minLimit = -3.4028235E+38, float maxLimit = 3.4028235E+38) { }
 
 	private Vector2 ClampValues(Vector2 valueToClamp) { }
 
 	private void ComputeValueFromDraggingThumb(float dragElementStartPos, float dragElementEndPos) { }
 
-	private float ComputeValueFromPosition(float positionToConvert) { }
+	private void ComputeValueFromKey(bool leftDirection, bool isShift, DragState moveState) { }
 
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(GeometryChangedEvent)}])]
-	protected virtual void ExecuteDefaultAction(EventBase evt) { }
+	private float ComputeValueFromPosition(float positionToConvert) { }
 
 	[CompilerGenerated]
 	internal ClampedDragger<Single> get_clampedDragger() { }
@@ -154,7 +169,22 @@ public class MinMaxSlider : BaseField<Vector2>
 
 	public float get_minValue() { }
 
+	public float get_range() { }
+
 	public virtual Vector2 get_value() { }
+
+	private DragState GetNavigationState() { }
+
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(GeometryChangedEvent)}])]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
+
+	private void OnBlur(BlurEvent evt) { }
+
+	private void OnFocusIn(FocusInEvent evt) { }
+
+	private void OnNavigationMove(NavigationMoveEvent evt) { }
+
+	private void OnNavigationSubmit(NavigationSubmitEvent evt) { }
 
 	internal virtual void RegisterEditingCallbacks() { }
 
@@ -180,6 +210,8 @@ public class MinMaxSlider : BaseField<Vector2>
 
 	public virtual void set_value(Vector2 value) { }
 
+	private void SetNavigationState(DragState newState) { }
+
 	private void SetSliderValueFromClick() { }
 
 	private void SetSliderValueFromDrag() { }
@@ -195,8 +227,6 @@ public class MinMaxSlider : BaseField<Vector2>
 	private void UpdateDragElementPosition() { }
 
 	private void UpdateDragElementPosition(GeometryChangedEvent evt) { }
-
-	private void UpdateDragThumbsRect() { }
 
 	protected virtual void UpdateMixedValueContent() { }
 

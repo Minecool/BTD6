@@ -1,11 +1,11 @@
 namespace NinjaKiwi.LiNK.Endpoints;
 
-public class User_LoginMyNK : Endpoint<LoginResponseModel>
+public class User_LoginMyNK : Endpoint<LiNKAccountModel>
 {
 
 	internal User_LoginMyNK(HttpRequestFactory requestFactory, Authority authority, ApiOptions options) { }
 
-	public Task<LoginResponseModel> Call(string userID, string token) { }
+	public Task<LiNKAccountModel> Call(string userID, string token) { }
 
 }
 

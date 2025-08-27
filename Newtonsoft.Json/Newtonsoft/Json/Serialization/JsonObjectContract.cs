@@ -65,12 +65,12 @@ public class JsonObjectContract : JsonContainerContract
 
 	public Type ExtensionDataValueType
 	{
-		 set { } //Length: 214
+		 set { } //Length: 202
 	}
 
 	internal bool HasRequiredOrDefaultValueProperties
 	{
-		internal get { } //Length: 719
+		internal get { } //Length: 718
 	}
 
 	public Nullable<NullValueHandling> ItemNullValueHandling

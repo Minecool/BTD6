@@ -10,7 +10,7 @@ public class AfterRoundTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 239
+		 get { } //Length: 230
 	}
 
 	public AfterRoundTrigger() { }

@@ -20,7 +20,7 @@ public class NKMultiGameInterface
 	}
 
 	[CompilerGenerated]
-	private struct <GetFreshLatency>d__43 : IAsyncStateMachine
+	private struct <GetFreshLatency>d__44 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<TimeSpan> <>t__builder; //Field offset: 0x8
@@ -36,7 +36,7 @@ public class NKMultiGameInterface
 	}
 
 	[CompilerGenerated]
-	private struct <IsConnectionOk>d__44 : IAsyncStateMachine
+	private struct <IsConnectionOk>d__45 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -69,7 +69,7 @@ public class NKMultiGameInterface
 	}
 
 	[CompilerGenerated]
-	private struct <MeasureLatency>d__42 : IAsyncStateMachine
+	private struct <MeasureLatency>d__43 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -88,7 +88,7 @@ public class NKMultiGameInterface
 	}
 
 	[CompilerGenerated]
-	private struct <SendPing>d__48 : IAsyncStateMachine
+	private struct <SendPing>d__49 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -221,23 +221,25 @@ public class NKMultiGameInterface
 	[CompilerGenerated]
 	public bool get_IsConnected() { }
 
-	[AsyncStateMachine(typeof(<GetFreshLatency>d__43))]
+	[AsyncStateMachine(typeof(<GetFreshLatency>d__44))]
 	[Obsolete]
 	public Task<TimeSpan> GetFreshLatency() { }
 
-	[AsyncStateMachine(typeof(<IsConnectionOk>d__44))]
+	[AsyncStateMachine(typeof(<IsConnectionOk>d__45))]
 	[Obsolete]
 	public Task<Boolean> IsConnectionOk(int thresholdMs) { }
 
 	[AsyncStateMachine(typeof(<Join>d__36))]
 	private Task Join(CancellationToken canceller) { }
 
-	[AsyncStateMachine(typeof(<MeasureLatency>d__42))]
+	[AsyncStateMachine(typeof(<MeasureLatency>d__43))]
 	private void MeasureLatency(uint measurementCount, bool isDelayed) { }
 
 	private Task<TimeSpan> PingRelay() { }
 
 	private void ReceiveJoinResponse(JoinSessionResponseMessage response) { }
+
+	private void ReceiveNKMultiMessage(NKMultiMessage msg) { }
 
 	private void ReceivePingReply(LatencyTestMessage pingReply) { }
 
@@ -255,7 +257,7 @@ public class NKMultiGameInterface
 
 	public void Send(Writable content) { }
 
-	[AsyncStateMachine(typeof(<SendPing>d__48))]
+	[AsyncStateMachine(typeof(<SendPing>d__49))]
 	private void SendPing(Ping ping) { }
 
 	public void SendToPeer(int peerID, Message msg) { }

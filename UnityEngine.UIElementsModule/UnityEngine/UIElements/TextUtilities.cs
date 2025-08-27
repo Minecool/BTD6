@@ -1,19 +1,29 @@
 namespace UnityEngine.UIElements;
 
+[Extension]
 internal static class TextUtilities
 {
 
-	internal static float ConvertPixelUnitsToTextCoreRelativeUnits(VisualElement ve, FontAsset fontAsset) { }
-
 	internal static FontAsset GetFontAsset(VisualElement ve) { }
 
-	internal static TextCoreSettings GetTextCoreSettingsForElement(VisualElement ve) { }
+	internal static TextCoreSettings GetTextCoreSettingsForElement(VisualElement ve, bool ignoreColors) { }
 
-	internal static PanelTextSettings GetTextSettingsFrom(VisualElement ve) { }
+	internal static TextSettings GetTextSettingsFrom(VisualElement ve) { }
+
+	internal static bool IsAdvancedTextEnabledForElement(VisualElement ve) { }
 
 	internal static bool IsFontAssigned(VisualElement ve) { }
 
-	internal static Vector2 MeasureVisualElementTextSize(TextElement te, string textToMeasure, float width, MeasureMode widthMode, float height, MeasureMode heightMode) { }
+	internal static Vector2 MeasureVisualElementTextSize(TextElement te, in RenderedText textToMeasure, float width, MeasureMode widthMode, float height, MeasureMode heightMode) { }
+
+	[Extension]
+	public static WhiteSpace toTextCore(WhiteSpace whiteSpace, bool isInputField) { }
+
+	[Extension]
+	public static TextOverflow toTextCore(TextOverflow textOverflow, OverflowInternal overflow) { }
+
+	[Extension]
+	public static TextWrappingMode toTextWrappingMode(WhiteSpace whiteSpace) { }
 
 }
 

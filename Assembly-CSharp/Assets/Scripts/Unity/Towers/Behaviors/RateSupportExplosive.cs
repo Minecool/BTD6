@@ -15,7 +15,7 @@ public class RateSupportExplosive : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 823
+		 get { } //Length: 775
 	}
 
 	public RateSupportExplosive() { }

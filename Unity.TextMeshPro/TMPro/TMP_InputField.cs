@@ -1,7 +1,7 @@
 namespace TMPro;
 
 [AddComponentMenu("UI/TextMeshPro - Input Field", 11)]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.2")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/TextMeshPro/index.html")]
 public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, ISubmitHandler, ICancelHandler, ICanvasElement, ILayoutElement, IScrollHandler
 {
 	[CompilerGenerated]
@@ -347,19 +347,19 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public int caretPosition
 	{
 		 get { } //Length: 59
-		 set { } //Length: 159
+		 set { } //Length: 151
 	}
 
 	protected int caretPositionInternal
 	{
 		 get { } //Length: 59
-		 set { } //Length: 21
+		 set { } //Length: 19
 	}
 
 	protected int caretSelectPositionInternal
 	{
 		 get { } //Length: 59
-		 set { } //Length: 21
+		 set { } //Length: 19
 	}
 
 	public int caretWidth
@@ -371,13 +371,13 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public int characterLimit
 	{
 		 get { } //Length: 7
-		 set { } //Length: 171
+		 set { } //Length: 166
 	}
 
 	public CharacterValidation characterValidation
 	{
 		 get { } //Length: 7
-		 set { } //Length: 104
+		 set { } //Length: 103
 	}
 
 	private static string clipboard
@@ -399,7 +399,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public ContentType contentType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 528
+		 set { } //Length: 400
 	}
 
 	public bool customCaretColor
@@ -421,7 +421,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public TMP_FontAsset fontAsset
 	{
 		 get { } //Length: 8
-		 set { } //Length: 311
+		 set { } //Length: 307
 	}
 
 	private bool hasSelection
@@ -437,13 +437,13 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public InputType inputType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 104
+		 set { } //Length: 103
 	}
 
 	public TMP_InputValidator inputValidator
 	{
 		 get { } //Length: 8
-		 set { } //Length: 106
+		 set { } //Length: 105
 	}
 
 	public bool isFocused
@@ -466,7 +466,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public TouchScreenKeyboardType keyboardType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 104
+		 set { } //Length: 103
 	}
 
 	public override int layoutPriority
@@ -483,7 +483,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public LineType lineType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 216
+		 set { } //Length: 215
 	}
 
 	protected Mesh mesh
@@ -503,7 +503,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 
 	public bool multiLine
 	{
-		 get { } //Length: 23
+		 get { } //Length: 21
 	}
 
 	public SelectionEvent onDeselect
@@ -575,7 +575,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public float pointSize
 	{
 		 get { } //Length: 9
-		 set { } //Length: 359
+		 set { } //Length: 355
 	}
 
 	public override float preferredHeight
@@ -621,7 +621,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public int selectionAnchorPosition
 	{
 		 get { } //Length: 59
-		 set { } //Length: 89
+		 set { } //Length: 85
 	}
 
 	public Color selectionColor
@@ -633,19 +633,19 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public int selectionFocusPosition
 	{
 		 get { } //Length: 59
-		 set { } //Length: 89
+		 set { } //Length: 85
 	}
 
 	public int selectionStringAnchorPosition
 	{
 		 get { } //Length: 59
-		 set { } //Length: 130
+		 set { } //Length: 129
 	}
 
 	public int selectionStringFocusPosition
 	{
 		 get { } //Length: 59
-		 set { } //Length: 130
+		 set { } //Length: 129
 	}
 
 	public override bool shouldActivateOnSelect
@@ -663,25 +663,25 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public bool shouldHideSoftKeyboard
 	{
 		 get { } //Length: 140
-		 set { } //Length: 299
+		 set { } //Length: 315
 	}
 
 	public int stringPosition
 	{
 		 get { } //Length: 59
-		 set { } //Length: 217
+		 set { } //Length: 215
 	}
 
 	protected int stringPositionInternal
 	{
 		 get { } //Length: 59
-		 set { } //Length: 70
+		 set { } //Length: 65
 	}
 
 	protected int stringSelectPositionInternal
 	{
 		 get { } //Length: 59
-		 set { } //Length: 70
+		 set { } //Length: 65
 	}
 
 	public string text
@@ -710,7 +710,7 @@ public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHa
 	public Scrollbar verticalScrollbar
 	{
 		 get { } //Length: 8
-		 set { } //Length: 413
+		 set { } //Length: 425
 	}
 
 	public bool wasCanceled

@@ -15,7 +15,7 @@ public class BundledAssetProvider : ResourceProviderBase
 		public InternalOp() { }
 
 		[CompilerGenerated]
-		private void <Start>b__7_0(AsyncOperation operation) { }
+		private void <Start>b__8_0(AsyncOperation operation) { }
 
 		private void ActionComplete(AsyncOperation obj) { }
 
@@ -30,6 +30,8 @@ public class BundledAssetProvider : ResourceProviderBase
 		private void GetAssetSubObjectResult(Object[] allAssets) { }
 
 		private void GetListResult(Object[] allAssets) { }
+
+		internal static bool IsDownloadOnly(IList<Object> results) { }
 
 		internal static T LoadBundleFromDependecies(IList<Object> results) { }
 

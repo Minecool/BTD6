@@ -10,5 +10,7 @@ public class EventInterestAttribute : Attribute
 
 	public EventInterestAttribute(EventInterestOptions interests) { }
 
+	internal EventInterestAttribute(EventInterestOptionsInternal interests) { }
+
 }
 

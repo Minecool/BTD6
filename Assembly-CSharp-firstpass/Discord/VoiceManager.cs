@@ -232,7 +232,7 @@ public class VoiceManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 292
+		private get { } //Length: 280
 	}
 
 	internal VoiceManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

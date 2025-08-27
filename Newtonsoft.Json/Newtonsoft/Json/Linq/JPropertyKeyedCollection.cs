@@ -22,6 +22,8 @@ internal class JPropertyKeyedCollection : Collection<JToken>
 
 	protected virtual void ClearItems() { }
 
+	public bool Compare(JPropertyKeyedCollection other) { }
+
 	public bool Contains(string key) { }
 
 	private void EnsureDictionary() { }

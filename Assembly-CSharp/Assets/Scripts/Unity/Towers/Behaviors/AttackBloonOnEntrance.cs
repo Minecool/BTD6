@@ -17,7 +17,7 @@ public class AttackBloonOnEntrance : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 647
+		 get { } //Length: 646
 	}
 
 	public AttackBloonOnEntrance() { }

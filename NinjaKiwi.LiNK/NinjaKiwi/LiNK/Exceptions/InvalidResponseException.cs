@@ -6,12 +6,19 @@ public class InvalidResponseException : InternetException
 
 	public virtual string Message
 	{
-		 get { } //Length: 71
+		 get { } //Length: 141
+	}
+
+	public virtual string StackTrace
+	{
+		 get { } //Length: 45
 	}
 
 	public InvalidResponseException(string url, Exception exception) { }
 
 	public virtual string get_Message() { }
+
+	public virtual string get_StackTrace() { }
 
 }
 

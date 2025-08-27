@@ -29,7 +29,7 @@ public class AbsorbTowerBuffsActionModel : BloonBehaviorActionModel
 
 	public TowerFreezeMutator Mutator
 	{
-		 get { } //Length: 231
+		 get { } //Length: 235
 	}
 
 	public AbsorbTowerBuffsActionModel() { }

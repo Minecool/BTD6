@@ -21,6 +21,8 @@ public static class ProfilerUnsafeUtility
 	[ThreadSafe]
 	internal static IntPtr CreateMarker__Unmanaged(Byte* name, int nameLen, ushort categoryId, MarkerFlags flags, int metadataCount) { }
 
+	private static IntPtr CreateMarker_Injected(ref ManagedSpanWrapper name, ushort categoryId, MarkerFlags flags, int metadataCount) { }
+
 	[ThreadSafe]
 	public static void EndSample(IntPtr markerPtr) { }
 

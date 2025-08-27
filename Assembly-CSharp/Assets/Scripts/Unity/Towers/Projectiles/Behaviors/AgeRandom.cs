@@ -14,7 +14,7 @@ public class AgeRandom : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 390
+		 get { } //Length: 387
 	}
 
 	public AgeRandom() { }

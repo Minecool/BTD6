@@ -8,7 +8,7 @@ internal class CharEntityEncoderFallbackBuffer : EncoderFallbackBuffer
 
 	public virtual int Remaining
 	{
-		 get { } //Length: 42
+		 get { } //Length: 43
 	}
 
 	internal CharEntityEncoderFallbackBuffer(CharEntityEncoderFallback parent) { }

@@ -31,7 +31,5 @@ public interface IPanel : IDisposable
 
 	public VisualElement get_visualTree() { }
 
-	public VisualElement Pick(Vector2 point) { }
-
 }
 

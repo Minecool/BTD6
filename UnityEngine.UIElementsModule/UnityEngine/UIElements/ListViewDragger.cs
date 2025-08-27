@@ -24,16 +24,23 @@ internal class ListViewDragger : DragEventsProcessor
 	private VisualElement m_DragHoverSiblingMarker; //Field offset: 0x60
 	private float m_LeftIndentation; //Field offset: 0x68
 	private float m_SiblingBottom; //Field offset: 0x6C
+	private bool m_Enabled; //Field offset: 0x70
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private ICollectionDragAndDropController <dragAndDropController>k__BackingField; //Field offset: 0x70
+	private ICollectionDragAndDropController <dragAndDropController>k__BackingField; //Field offset: 0x78
 
 	public ICollectionDragAndDropController dragAndDropController
 	{
 		[CompilerGenerated]
-		 get { } //Length: 5
+		 get { } //Length: 70
 		[CompilerGenerated]
 		 set { } //Length: 5
+	}
+
+	internal bool enabled
+	{
+		internal get { } //Length: 5
+		internal set { } //Length: 771
 	}
 
 	protected ScrollView targetScrollView
@@ -43,13 +50,13 @@ internal class ListViewDragger : DragEventsProcessor
 
 	protected BaseVerticalCollectionView targetView
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public ListViewDragger(BaseVerticalCollectionView listView) { }
 
 	[CompilerGenerated]
-	private void <ApplyDragAndDropUI>g__GeometryChangedCallback|27_0(GeometryChangedEvent e) { }
+	private void <ApplyDragAndDropUI>g__GeometryChangedCallback|31_0(GeometryChangedEvent e) { }
 
 	private void ApplyDragAndDropUI(DragPosition dragPosition) { }
 
@@ -59,6 +66,8 @@ internal class ListViewDragger : DragEventsProcessor
 
 	[CompilerGenerated]
 	public ICollectionDragAndDropController get_dragAndDropController() { }
+
+	internal bool get_enabled() { }
 
 	protected ScrollView get_targetScrollView() { }
 
@@ -80,6 +89,8 @@ internal class ListViewDragger : DragEventsProcessor
 
 	private void HandleTreePosition(Vector2 pointerPosition, ref DragPosition dragPosition) { }
 
+	private bool IsDraggingDisabled() { }
+
 	protected DragAndDropArgs MakeDragAndDropArgs(DragPosition dragPosition) { }
 
 	protected private virtual void OnDrop(Vector3 pointerPosition) { }
@@ -90,6 +101,8 @@ internal class ListViewDragger : DragEventsProcessor
 
 	[CompilerGenerated]
 	public void set_dragAndDropController(ICollectionDragAndDropController value) { }
+
+	internal void set_enabled(bool value) { }
 
 	protected private virtual StartDragArgs StartDrag(Vector3 pointerPosition) { }
 

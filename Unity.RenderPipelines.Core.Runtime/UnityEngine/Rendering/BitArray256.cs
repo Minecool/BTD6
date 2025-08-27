@@ -30,7 +30,7 @@ public struct BitArray256 : IBitArray
 
 	public override string humanizedData
 	{
-		 get { } //Length: 771
+		 get { } //Length: 759
 	}
 
 	public override bool Item

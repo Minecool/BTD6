@@ -10,7 +10,7 @@ public class RateSupportBombExpert : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 245
+		 get { } //Length: 280
 	}
 
 	public RateSupportBombExpert() { }

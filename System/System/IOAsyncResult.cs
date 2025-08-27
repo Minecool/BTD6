@@ -20,7 +20,7 @@ internal abstract class IOAsyncResult : IAsyncResult
 
 	public override WaitHandle AsyncWaitHandle
 	{
-		 get { } //Length: 257
+		 get { } //Length: 223
 	}
 
 	public override bool CompletedSynchronously
@@ -32,7 +32,7 @@ internal abstract class IOAsyncResult : IAsyncResult
 	public override bool IsCompleted
 	{
 		 get { } //Length: 5
-		 set { } //Length: 170
+		 set { } //Length: 158
 	}
 
 	protected IOAsyncResult() { }

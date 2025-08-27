@@ -1,7 +1,7 @@
 namespace Assets.Scripts.Simulation.Bloons;
 
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public class Bloon : Collidable<IBloonBehavior>
 {
 	internal struct ChargedMutator
@@ -89,49 +89,49 @@ public class Bloon : Collidable<IBloonBehavior>
 	public event Action<Bloon> OnArmourAdded
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action<Bloon> OnArmourBroken
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action<Bloon, DamageResult> OnBloonDegrade
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action<Bloon> OnBloonLeaked
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action<Bloon> OnBloonLoadedFromSave
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	private event DisplayLoaded OnDisplayLoaded
 	{
 		[CompilerGenerated]
-		private add { } //Length: 162
+		private add { } //Length: 158
 		[CompilerGenerated]
-		private remove { } //Length: 162
+		private remove { } //Length: 158
 	}
 
 	public virtual RootObjectLockList<IBloonBehavior> Behaviors
@@ -146,12 +146,12 @@ public class Bloon : Collidable<IBloonBehavior>
 
 	public int CurrentArmourAmount
 	{
-		 get { } //Length: 120
+		 get { } //Length: 112
 	}
 
 	public float CurrentArmourProportion
 	{
-		 get { } //Length: 157
+		 get { } //Length: 138
 	}
 
 	public float DistanceTraveled
@@ -161,12 +161,12 @@ public class Bloon : Collidable<IBloonBehavior>
 
 	public bool HasArmour
 	{
-		 get { } //Length: 75
+		 get { } //Length: 68
 	}
 
 	public Vector2 Heading
 	{
-		 get { } //Length: 152
+		 get { } //Length: 151
 	}
 
 	public int Health
@@ -230,7 +230,7 @@ public class Bloon : Collidable<IBloonBehavior>
 
 	public virtual CollisionGroupData[] AdditionalCollisions() { }
 
-	public virtual void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false) { }
+	public virtual void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false, bool cantBeAbsorbed = false) { }
 
 	public void AddMutatorForNumLayers(BehaviorMutator mutator, int time = -1, int layerCount = -1, bool updateDuration = true, bool applyMutation = true, bool cascadeMutators = false, int roundsRemaining = -1) { }
 

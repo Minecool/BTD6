@@ -22,7 +22,7 @@ internal class LocalAppContext
 
 	private static bool DisableCaching
 	{
-		private get { } //Length: 324
+		private get { } //Length: 308
 	}
 
 	private static bool get_DisableCaching() { }

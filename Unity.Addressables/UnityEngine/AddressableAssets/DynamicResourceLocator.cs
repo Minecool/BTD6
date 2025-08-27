@@ -5,14 +5,14 @@ internal class DynamicResourceLocator : IResourceLocator
 	private AddressablesImpl m_Addressables; //Field offset: 0x10
 	private string m_AtlasSpriteProviderId; //Field offset: 0x18
 
-	public IEnumerable<IResourceLocation> AllLocations
+	public override IEnumerable<IResourceLocation> AllLocations
 	{
 		 get { } //Length: 50
 	}
 
 	private string AtlasSpriteProviderId
 	{
-		private get { } //Length: 592
+		private get { } //Length: 583
 	}
 
 	public override IEnumerable<Object> Keys
@@ -29,7 +29,7 @@ internal class DynamicResourceLocator : IResourceLocator
 
 	internal void CreateDynamicLocations(Type type, IList<IResourceLocation> locations, string locName, string subKey, IResourceLocation mainLoc) { }
 
-	public IEnumerable<IResourceLocation> get_AllLocations() { }
+	public override IEnumerable<IResourceLocation> get_AllLocations() { }
 
 	private string get_AtlasSpriteProviderId() { }
 

@@ -22,7 +22,7 @@ internal class ContentValidator
 
 	public bool IsOpen
 	{
-		 get { } //Length: 20
+		 get { } //Length: 14
 		 set { } //Length: 4
 	}
 

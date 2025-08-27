@@ -1,6 +1,6 @@
 namespace NinjaKiwi.LiNK.Client.Files;
 
-internal class UnEncryptedFileReader : FileReader
+internal sealed class UnEncryptedFileReader : FileReader
 {
 
 	public UnEncryptedFileReader(Stream inputStream) { }

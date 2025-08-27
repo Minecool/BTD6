@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering.Universal;
 
-[Obsolete("Deprecated in favor of RTHandle")]
+[Obsolete("Deprecated in favor of RTHandle", True)]
 public struct RenderTargetHandle
 {
 	public static readonly RenderTargetHandle CameraTarget; //Field offset: 0x0
@@ -15,7 +15,7 @@ public struct RenderTargetHandle
 		[IsReadOnly]
 		 get { } //Length: 3
 		[CompilerGenerated]
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	private RenderTargetIdentifier rtid

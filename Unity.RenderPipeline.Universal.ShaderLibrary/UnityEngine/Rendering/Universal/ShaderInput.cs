@@ -2,7 +2,7 @@ namespace UnityEngine.Rendering.Universal;
 
 public static class ShaderInput
 {
-	[GenerateHLSL(PackingRules::Exact (0), False, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\ShaderLibrary\\ShaderTypes.cs")]
+	[GenerateHLSL(PackingRules::Exact (0), False, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.universal@056626336c36\\ShaderLibrary\\ShaderTypes.cs")]
 	internal struct LightData
 	{
 		public Vector4 position; //Field offset: 0x0

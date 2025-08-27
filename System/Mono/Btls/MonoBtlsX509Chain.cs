@@ -19,7 +19,7 @@ internal class MonoBtlsX509Chain : MonoBtlsObject
 
 	internal BoringX509ChainHandle Handle
 	{
-		internal get { } //Length: 113
+		internal get { } //Length: 117
 	}
 
 	public MonoBtlsX509Chain() { }

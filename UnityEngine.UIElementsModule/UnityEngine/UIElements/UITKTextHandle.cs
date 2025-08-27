@@ -2,52 +2,101 @@ namespace UnityEngine.UIElements;
 
 internal class UITKTextHandle : TextHandle
 {
-	internal static readonly float k_MinPadding; //Field offset: 0x0
+	private static TextLib s_TextLib; //Field offset: 0x0
+	internal static readonly float k_MinPadding; //Field offset: 0x8
+	internal ATGTextEventHandler m_ATGTextEventHandler; //Field offset: 0xB0
+	private List<ValueTuple`3<Int32, TagType, String>> m_Links; //Field offset: 0xB8
+	internal Color atgHyperlinkColor; //Field offset: 0xC0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Vector2 <MeasuredSizes>k__BackingField; //Field offset: 0x38
+	private Vector2 <MeasuredSizes>k__BackingField; //Field offset: 0xD0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Vector2 <RoundedSizes>k__BackingField; //Field offset: 0x40
-	private TextElement m_TextElement; //Field offset: 0x48
-	internal bool isOverridingCursor; //Field offset: 0x50
-	internal int currentLinkIDHash; //Field offset: 0x54
-	internal bool hasLinkTag; //Field offset: 0x58
-	internal bool hasATag; //Field offset: 0x59
+	private Vector2 <RoundedSizes>k__BackingField; //Field offset: 0xD8
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Vector2 <ATGMeasuredSizes>k__BackingField; //Field offset: 0xE0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Vector2 <ATGRoundedSizes>k__BackingField; //Field offset: 0xE8
+	internal TextEventHandler m_TextEventHandler; //Field offset: 0xF0
+	protected TextElement m_TextElement; //Field offset: 0xF8
+	private bool wasAdvancedTextEnabledForElement; //Field offset: 0x100
+
+	public Vector2 ATGMeasuredSizes
+	{
+		[CompilerGenerated]
+		 get { } //Length: 25
+		[CompilerGenerated]
+		 set { } //Length: 8
+	}
+
+	public Vector2 ATGRoundedSizes
+	{
+		[CompilerGenerated]
+		 get { } //Length: 25
+		[CompilerGenerated]
+		 set { } //Length: 8
+	}
+
+	public virtual bool IsPlaceholder
+	{
+		 get { } //Length: 62
+	}
+
+	private List<ValueTuple`3<Int32, TagType, String>> Links
+	{
+		private get { } //Length: 117
+	}
 
 	public Vector2 MeasuredSizes
 	{
 		[CompilerGenerated]
-		 get { } //Length: 19
+		 get { } //Length: 25
 		[CompilerGenerated]
-		 set { } //Length: 5
+		 set { } //Length: 8
 	}
 
 	public Vector2 RoundedSizes
 	{
 		[CompilerGenerated]
-		 get { } //Length: 19
+		 get { } //Length: 25
 		[CompilerGenerated]
-		 set { } //Length: 5
+		 set { } //Length: 8
+	}
+
+	protected private TextLib textLib
+	{
+		private get { } //Length: 94
 	}
 
 	private static UITKTextHandle() { }
 
 	public UITKTextHandle(TextElement te) { }
 
-	private void ATagOnPointerMove(PointerMoveEvent pme) { }
+	public virtual void AddTextInfoToPermanentCache() { }
 
-	private void ATagOnPointerOut(PointerOutEvent _) { }
+	internal ValueTuple<TagType, String> ATGFindIntersectingLink(Vector2 point) { }
 
-	private void ATagOnPointerOver(PointerOverEvent _) { }
+	public void ComputeNativeTextSize(in RenderedText textToMeasure, float width, float height) { }
 
-	private void ATagOnPointerUp(PointerUpEvent pue) { }
+	public void ComputeSettingsAndUpdate() { }
 
-	public float ComputeTextHeight(string textToMeasure, float width, float height) { }
+	public Vector2 ComputeTextSize(in RenderedText textToMeasure, float width, float height) { }
 
-	public float ComputeTextWidth(string textToMeasure, bool wordWrap, float width, float height) { }
+	internal bool ConvertUssToNativeTextGenerationSettings() { }
 
-	internal void ConvertUssToTextGenerationSettings(TextGenerationSettings tgs) { }
+	internal override bool ConvertUssToTextGenerationSettings() { }
+
+	[CompilerGenerated]
+	public Vector2 get_ATGMeasuredSizes() { }
+
+	[CompilerGenerated]
+	public Vector2 get_ATGRoundedSizes() { }
+
+	public virtual bool get_IsPlaceholder() { }
+
+	private List<ValueTuple`3<Int32, TagType, String>> get_Links() { }
 
 	[CompilerGenerated]
 	public Vector2 get_MeasuredSizes() { }
@@ -55,21 +104,39 @@ internal class UITKTextHandle : TextHandle
 	[CompilerGenerated]
 	public Vector2 get_RoundedSizes() { }
 
-	internal float GetTextEffectPadding(FontAsset fontAsset) { }
+	protected private TextLib get_textLib() { }
+
+	private TextAsset GetICUAsset() { }
+
+	internal static TextAsset GetICUAssetStaticFalback() { }
 
 	private TextOverflowMode GetTextOverflowMode() { }
 
-	private void HandleATag() { }
+	internal float GetVertexPadding(FontAsset fontAsset) { }
 
-	private void HandleLinkTag() { }
+	public void HandleATag() { }
 
-	internal void LinkTagOnPointerDown(PointerDownEvent pde) { }
+	public void HandleLinkAndATagCallbacks() { }
 
-	internal void LinkTagOnPointerMove(PointerMoveEvent pme) { }
+	public void HandleLinkTag() { }
 
-	private void LinkTagOnPointerOut(PointerOutEvent poe) { }
+	private ValueTuple<Boolean, Boolean> hasLinkAndHyperlink() { }
 
-	internal void LinkTagOnPointerUp(PointerUpEvent pue) { }
+	protected private void InitTextLib() { }
+
+	internal virtual bool IsAdvancedTextEnabledForElement() { }
+
+	public bool IsElided() { }
+
+	public void ProcessMeshInfos(NativeTextInfo textInfo) { }
+
+	internal void ReleaseResourcesIfPossible() { }
+
+	[CompilerGenerated]
+	public void set_ATGMeasuredSizes(Vector2 value) { }
+
+	[CompilerGenerated]
+	public void set_ATGRoundedSizes(Vector2 value) { }
 
 	[CompilerGenerated]
 	public void set_MeasuredSizes(Vector2 value) { }
@@ -79,7 +146,11 @@ internal class UITKTextHandle : TextHandle
 
 	internal bool TextLibraryCanElide() { }
 
-	public TextInfo Update() { }
+	internal void UpdateATGTextEventHandler() { }
+
+	public void UpdateMesh() { }
+
+	public ValueTuple<NativeTextInfo, Boolean> UpdateNative(bool generateNativeSettings = true) { }
 
 }
 

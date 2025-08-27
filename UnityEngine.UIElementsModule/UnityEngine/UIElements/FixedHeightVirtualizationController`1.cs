@@ -2,6 +2,8 @@ namespace UnityEngine.UIElements;
 
 internal class FixedHeightVirtualizationController : VerticalVirtualizationController<T>
 {
+	private Nullable<Int32> m_ScrolledToItemIndex; //Field offset: 0x0
+	private bool m_ForcedScroll; //Field offset: 0x0
 
 	private float resolvedItemHeight
 	{
@@ -22,7 +24,11 @@ internal class FixedHeightVirtualizationController : VerticalVirtualizationContr
 
 	internal virtual T GetOrMakeItemAtIndex(int activeItemIndex = -1, int scrollViewIndex = -1) { }
 
+	private void OnGeometryChangedEvent(GeometryChangedEvent evt) { }
+
 	public virtual void OnScroll(Vector2 scrollOffset) { }
+
+	protected virtual void OnScrollUpdate() { }
 
 	public virtual void Resize(Vector2 size) { }
 

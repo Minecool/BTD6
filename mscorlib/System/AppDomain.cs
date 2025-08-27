@@ -38,14 +38,6 @@ public sealed class AppDomain : MarshalByRefObject
 	private object _applicationIdentity; //Field offset: 0x90
 	private List<String> compatibility_switch; //Field offset: 0x98
 
-	public override event ResolveEventHandler AssemblyResolve
-	{
-		[CompilerGenerated]
-		 add { } //Length: 158
-		[CompilerGenerated]
-		 remove { } //Length: 158
-	}
-
 	public override event EventHandler DomainUnload
 	{
 		[CompilerGenerated]
@@ -80,9 +72,6 @@ public sealed class AppDomain : MarshalByRefObject
 	}
 
 	private AppDomain() { }
-
-	[CompilerGenerated]
-	public override void add_AssemblyResolve(ResolveEventHandler value) { }
 
 	[CompilerGenerated]
 	public override void add_DomainUnload(EventHandler value) { }
@@ -154,9 +143,6 @@ public sealed class AppDomain : MarshalByRefObject
 	internal Assembly LoadAssembly(string assemblyRef, Evidence securityEvidence, bool refOnly, ref StackCrawlMark stackMark) { }
 
 	internal void ProcessMessageInDomain(Byte[] arrRequest, CADMethodCallMessage cadMsg, out Byte[] arrResponse, out CADMethodReturnMessage cadMrm) { }
-
-	[CompilerGenerated]
-	public override void remove_AssemblyResolve(ResolveEventHandler value) { }
 
 	[CompilerGenerated]
 	public override void remove_DomainUnload(EventHandler value) { }

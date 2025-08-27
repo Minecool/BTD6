@@ -11,7 +11,7 @@ public class TinyTornadoesModModel : MutatorModModel
 
 	private ProjectileModel projectileModelHeartOfOak
 	{
-		private get { } //Length: 477
+		private get { } //Length: 474
 	}
 
 	public TinyTornadoesModModel(string name, ProjectileModel projectileModel, EmissionModel emissionModel, EmissionRotationOffProjectileDirectionModel emissionBehaviorModel) { }

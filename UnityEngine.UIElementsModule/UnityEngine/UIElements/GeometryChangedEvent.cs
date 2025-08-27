@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::Geometry (6))]
+[EventCategory(EventCategory::Geometry (7))]
 public class GeometryChangedEvent : EventBase<GeometryChangedEvent>
 {
 	[CompilerGenerated]
@@ -18,14 +18,15 @@ public class GeometryChangedEvent : EventBase<GeometryChangedEvent>
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Rect <oldRect>k__BackingField; //Field offset: 0x88
+	private Rect <oldRect>k__BackingField; //Field offset: 0x68
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Rect <newRect>k__BackingField; //Field offset: 0x98
+	private Rect <newRect>k__BackingField; //Field offset: 0x78
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private int <layoutPass>k__BackingField; //Field offset: 0xA8
+	private int <layoutPass>k__BackingField; //Field offset: 0x88
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal int layoutPass
 	{
 		[CompilerGenerated]
@@ -37,17 +38,17 @@ public class GeometryChangedEvent : EventBase<GeometryChangedEvent>
 	public private Rect newRect
 	{
 		[CompilerGenerated]
-		 get { } //Length: 14
+		 get { } //Length: 11
 		[CompilerGenerated]
-		private set { } //Length: 11
+		private set { } //Length: 8
 	}
 
 	public private Rect oldRect
 	{
 		[CompilerGenerated]
-		 get { } //Length: 14
+		 get { } //Length: 11
 		[CompilerGenerated]
-		private set { } //Length: 11
+		private set { } //Length: 8
 	}
 
 	private static GeometryChangedEvent() { }

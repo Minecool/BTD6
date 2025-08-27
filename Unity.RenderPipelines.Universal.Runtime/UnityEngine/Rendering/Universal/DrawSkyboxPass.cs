@@ -6,36 +6,41 @@ public class DrawSkyboxPass : ScriptableRenderPass
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static RenderFunc<PassData> <>9__5_0; //Field offset: 0x8
+		public static BaseRenderFunc<PassData, RasterGraphContext> <>9__7_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <Render>b__5_0(PassData data, RenderGraphContext context) { }
+		internal void <Render>b__7_0(PassData data, RasterGraphContext context) { }
 
 	}
 
 	private class PassData
 	{
-		internal TextureHandle color; //Field offset: 0x10
-		internal TextureHandle depth; //Field offset: 0x18
-		internal RenderingData renderingData; //Field offset: 0x20
-		internal DrawSkyboxPass pass; //Field offset: 0x2D8
+		internal XRPass xr; //Field offset: 0x10
+		internal RendererListHandle skyRendererListHandle; //Field offset: 0x18
+		internal Material material; //Field offset: 0x28
 
 		public PassData() { }
 
 	}
 
-	public bool m_IsActiveTargetBackBuffer; //Field offset: 0xE0
 
 	public DrawSkyboxPass(RenderPassEvent evt) { }
 
-	private RendererList CreateSkyboxRendererList(ScriptableRenderContext context, CameraData cameraData) { }
+	private RendererList CreateSkyboxRendererList(ScriptableRenderContext context, UniversalCameraData cameraData) { }
 
+	private RendererListHandle CreateSkyBoxRendererList(RenderGraph renderGraph, UniversalCameraData cameraData) { }
+
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public virtual void Execute(ScriptableRenderContext context, ref RenderingData renderingData) { }
 
-	internal void Render(RenderGraph renderGraph, TextureHandle colorTarget, TextureHandle depthTarget, ref RenderingData renderingData) { }
+	private static void ExecutePass(RasterCommandBuffer cmd, XRPass xr, RendererList rendererList) { }
+
+	private void InitPassData(ref PassData passData, in XRPass xr, in RendererListHandle handle) { }
+
+	internal void Render(RenderGraph renderGraph, ContextContainer frameData, ScriptableRenderContext context, TextureHandle colorTarget, TextureHandle depthTarget, Material skyboxMaterial) { }
 
 }
 

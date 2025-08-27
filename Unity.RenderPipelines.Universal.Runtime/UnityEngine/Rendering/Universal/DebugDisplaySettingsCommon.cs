@@ -29,39 +29,8 @@ internal class DebugDisplaySettingsCommon : IDebugDisplaySettingsData, IDebugDis
 
 	}
 
-	public static class WidgetFactory
-	{
-		[CompilerGenerated]
-		private sealed class <>c
-		{
-			public static readonly <>c <>9; //Field offset: 0x0
-			public static Func<Boolean> <>9__0_0; //Field offset: 0x8
-
-			private static <>c() { }
-
-			public <>c() { }
-
-			internal bool <CreateMissingDebugShadersWarning>b__0_0() { }
-
-		}
-
-
-		internal static Widget CreateMissingDebugShadersWarning() { }
-
-	}
-
 
 	public override bool AreAnySettingsActive
-	{
-		 get { } //Length: 3
-	}
-
-	public override bool IsLightingActive
-	{
-		 get { } //Length: 3
-	}
-
-	public override bool IsPostProcessingAllowed
 	{
 		 get { } //Length: 3
 	}
@@ -71,12 +40,6 @@ internal class DebugDisplaySettingsCommon : IDebugDisplaySettingsData, IDebugDis
 	public override IDebugDisplaySettingsPanelDisposable CreatePanel() { }
 
 	public override bool get_AreAnySettingsActive() { }
-
-	public override bool get_IsLightingActive() { }
-
-	public override bool get_IsPostProcessingAllowed() { }
-
-	public override bool TryGetScreenClearColor(ref Color _) { }
 
 }
 

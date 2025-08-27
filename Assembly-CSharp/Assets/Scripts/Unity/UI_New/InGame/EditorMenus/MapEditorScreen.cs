@@ -206,12 +206,12 @@ public class MapEditorScreen : EditorPlayBase
 
 	private string SelectedDifficulty
 	{
-		private get { } //Length: 56
+		private get { } //Length: 51
 	}
 
 	private string SelectedMode
 	{
-		private get { } //Length: 56
+		private get { } //Length: 51
 	}
 
 	protected virtual IContentBrowserData SharableContentData

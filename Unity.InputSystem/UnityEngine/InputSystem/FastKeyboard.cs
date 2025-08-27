@@ -76,7 +76,31 @@ internal class FastKeyboard : Keyboard
 
 	private KeyControl Initialize_ctrlKeyboardf12(InternedString kKeyLayout, InputControl parent) { }
 
+	private KeyControl Initialize_ctrlKeyboardf13(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf14(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf15(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf16(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf17(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf18(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf19(InternedString kKeyLayout, InputControl parent) { }
+
 	private KeyControl Initialize_ctrlKeyboardf2(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf20(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf21(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf22(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf23(InternedString kKeyLayout, InputControl parent) { }
+
+	private KeyControl Initialize_ctrlKeyboardf24(InternedString kKeyLayout, InputControl parent) { }
 
 	private KeyControl Initialize_ctrlKeyboardf3(InternedString kKeyLayout, InputControl parent) { }
 

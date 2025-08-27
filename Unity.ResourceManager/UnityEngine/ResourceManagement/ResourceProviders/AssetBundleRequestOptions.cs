@@ -77,7 +77,7 @@ public class AssetBundleRequestOptions : ILocationSizeData
 
 	public int RedirectLimit
 	{
-		 get { } //Length: 18
+		 get { } //Length: 14
 		 set { } //Length: 4
 	}
 

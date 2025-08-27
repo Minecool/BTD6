@@ -1,8 +1,8 @@
 namespace UnityEngine.Rendering;
 
-[NativeHeader("Runtime/Shaders/ComputeShader.h")]
-[NativeHeader("Runtime/Graphics/AsyncGPUReadbackManaged.h")]
 [NativeHeader("Runtime/Graphics/Texture.h")]
+[NativeHeader("Runtime/Graphics/AsyncGPUReadbackManaged.h")]
+[NativeHeader("Runtime/Shaders/ComputeShader.h")]
 [UsedByNativeCode]
 public struct AsyncGPUReadbackRequest
 {
@@ -41,31 +41,20 @@ public struct AsyncGPUReadbackRequest
 
 	private IntPtr GetDataRaw(int layer) { }
 
-	private static IntPtr GetDataRaw_Injected(ref AsyncGPUReadbackRequest _unity_self, int layer) { }
-
 	private int GetLayerCount() { }
-
-	private static int GetLayerCount_Injected(ref AsyncGPUReadbackRequest _unity_self) { }
 
 	private int GetLayerDataSize() { }
 
-	private static int GetLayerDataSize_Injected(ref AsyncGPUReadbackRequest _unity_self) { }
-
 	private bool HasError() { }
 
-	private static bool HasError_Injected(ref AsyncGPUReadbackRequest _unity_self) { }
+	[RequiredByNativeCode]
+	private static void InvokeCallback(Action<AsyncGPUReadbackRequest> callback, AsyncGPUReadbackRequest obj) { }
 
 	private bool IsDone() { }
 
-	private static bool IsDone_Injected(ref AsyncGPUReadbackRequest _unity_self) { }
-
 	internal void SetScriptingCallback(Action<AsyncGPUReadbackRequest> callback) { }
 
-	private static void SetScriptingCallback_Injected(ref AsyncGPUReadbackRequest _unity_self, Action<AsyncGPUReadbackRequest> callback) { }
-
 	public void WaitForCompletion() { }
-
-	private static void WaitForCompletion_Injected(ref AsyncGPUReadbackRequest _unity_self) { }
 
 }
 

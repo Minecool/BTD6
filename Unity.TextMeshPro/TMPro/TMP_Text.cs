@@ -69,7 +69,7 @@ public abstract class TMP_Text : MaskableGraphic
 		public uint Item
 		{
 			 get { } //Length: 42
-			 set { } //Length: 136
+			 set { } //Length: 91
 		}
 
 		public UInt32[] Text
@@ -440,9 +440,9 @@ public abstract class TMP_Text : MaskableGraphic
 	public override event Action<TMP_TextInfo> OnPreRenderText
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public static event Func<Int32, String, TMP_SpriteAsset> OnSpriteAssetRequest
@@ -542,7 +542,7 @@ public abstract class TMP_Text : MaskableGraphic
 	[Obsolete("The enabledWordWrapping property is now obsolete. Please use the textWrappingMode property instead.")]
 	public bool enableWordWrapping
 	{
-		 get { } //Length: 23
+		 get { } //Length: 19
 		 set { } //Length: 80
 	}
 
@@ -853,7 +853,7 @@ public abstract class TMP_Text : MaskableGraphic
 
 	public float pixelsPerUnit
 	{
-		 get { } //Length: 511
+		 get { } //Length: 460
 	}
 
 	public override float preferredHeight
@@ -873,7 +873,7 @@ public abstract class TMP_Text : MaskableGraphic
 
 	public override float renderedHeight
 	{
-		 get { } //Length: 38
+		 get { } //Length: 41
 	}
 
 	public override float renderedWidth
@@ -913,7 +913,7 @@ public abstract class TMP_Text : MaskableGraphic
 	public override string text
 	{
 		 get { } //Length: 226
-		 set { } //Length: 155
+		 set { } //Length: 142
 	}
 
 	public Bounds textBounds
@@ -934,7 +934,7 @@ public abstract class TMP_Text : MaskableGraphic
 
 	public TMP_Style textStyle
 	{
-		 get { } //Length: 83
+		 get { } //Length: 81
 		 set { } //Length: 83
 	}
 

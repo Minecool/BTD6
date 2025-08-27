@@ -38,7 +38,7 @@ public class AddBehaviorToBloon : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 1356
+		 get { } //Length: 1339
 	}
 
 	public AddBehaviorToBloon() { }

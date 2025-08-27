@@ -40,7 +40,7 @@ public class InputStateHistory : InputStateHistory, IReadOnlyList<Record<TValue>
 
 		public InputControl<TValue> control
 		{
-			 get { } //Length: 580
+			 get { } //Length: 562
 		}
 
 		internal RecordHeader* header
@@ -55,7 +55,7 @@ public class InputStateHistory : InputStateHistory, IReadOnlyList<Record<TValue>
 
 		public Record<TValue> next
 		{
-			 get { } //Length: 269
+			 get { } //Length: 265
 		}
 
 		public InputStateHistory<TValue> owner
@@ -65,7 +65,7 @@ public class InputStateHistory : InputStateHistory, IReadOnlyList<Record<TValue>
 
 		public Record<TValue> previous
 		{
-			 get { } //Length: 261
+			 get { } //Length: 260
 		}
 
 		internal int recordIndex
@@ -132,8 +132,8 @@ public class InputStateHistory : InputStateHistory, IReadOnlyList<Record<TValue>
 
 	public override Record<TValue> Item
 	{
-		 get { } //Length: 313
-		 set { } //Length: 385
+		 get { } //Length: 297
+		 set { } //Length: 369
 	}
 
 	public InputStateHistory`1(Nullable<Int32> maxStateSizeInBytes = null) { }

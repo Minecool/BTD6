@@ -11,9 +11,11 @@ public class IMGUIContainer : VisualElement, IDisposable
 		public bool enabled; //Field offset: 0x70
 		public bool changed; //Field offset: 0x71
 		public int displayIndex; //Field offset: 0x74
+		public float pixelsPerPoint; //Field offset: 0x78
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<IMGUIContainer, UxmlTraits>
 	{
 
@@ -21,6 +23,7 @@ public class IMGUIContainer : VisualElement, IDisposable
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
 
@@ -28,42 +31,42 @@ public class IMGUIContainer : VisualElement, IDisposable
 
 	}
 
-	public static readonly string ussClassName; //Field offset: 0x0
-	internal static readonly string ussFoldoutChildDepthClassName; //Field offset: 0x8
-	internal static readonly List<String> ussFoldoutChildDepthClassNames; //Field offset: 0x10
-	private static readonly ProfilerMarker k_OnGUIMarker; //Field offset: 0x18
-	private static readonly ProfilerMarker k_ImmediateCallbackMarker; //Field offset: 0x20
-	private static Event s_DefaultMeasureEvent; //Field offset: 0x28
-	private static Event s_MeasureEvent; //Field offset: 0x30
-	private static Event s_CurrentEvent; //Field offset: 0x38
-	private Action m_OnGUIHandler; //Field offset: 0x3C8
-	private ObjectGUIState m_ObjectGUIState; //Field offset: 0x3D0
-	internal bool useOwnerObjectGUIState; //Field offset: 0x3D8
+	internal static readonly BindingId cullingEnabledProperty; //Field offset: 0x0
+	internal static readonly BindingId contextTypeProperty; //Field offset: 0x98
+	public static readonly string ussClassName; //Field offset: 0x130
+	internal static readonly string ussFoldoutChildDepthClassName; //Field offset: 0x138
+	internal static readonly List<String> ussFoldoutChildDepthClassNames; //Field offset: 0x140
+	private static readonly ProfilerMarker k_OnGUIMarker; //Field offset: 0x148
+	private static readonly ProfilerMarker k_ImmediateCallbackMarker; //Field offset: 0x150
+	private static Event s_DefaultMeasureEvent; //Field offset: 0x158
+	private static Event s_MeasureEvent; //Field offset: 0x160
+	private static Event s_CurrentEvent; //Field offset: 0x168
+	private Action m_OnGUIHandler; //Field offset: 0x4A8
+	private ObjectGUIState m_ObjectGUIState; //Field offset: 0x4B0
+	internal bool useOwnerObjectGUIState; //Field offset: 0x4B8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Rect <lastWorldClip>k__BackingField; //Field offset: 0x3DC
-	private bool m_CullingEnabled; //Field offset: 0x3EC
-	private bool m_IsFocusDelegated; //Field offset: 0x3ED
-	private bool m_RefreshCachedLayout; //Field offset: 0x3EE
-	private LayoutCache m_Cache; //Field offset: 0x3F0
-	private Rect m_CachedClippingRect; //Field offset: 0x3F8
-	private Matrix4x4 m_CachedTransform; //Field offset: 0x408
+	private Rect <lastWorldClip>k__BackingField; //Field offset: 0x4BC
+	private bool m_CullingEnabled; //Field offset: 0x4CC
+	private bool m_IsFocusDelegated; //Field offset: 0x4CD
+	private bool m_RefreshCachedLayout; //Field offset: 0x4CE
+	private LayoutCache m_Cache; //Field offset: 0x4D0
+	private Rect m_CachedClippingRect; //Field offset: 0x4D8
+	private Matrix4x4 m_CachedTransform; //Field offset: 0x4E8
+	private ContextType m_ContextType; //Field offset: 0x528
+	private bool lostFocus; //Field offset: 0x52C
+	private bool receivedFocus; //Field offset: 0x52D
+	private FocusChangeDirection focusChangeDirection; //Field offset: 0x530
+	private bool hasFocusableControls; //Field offset: 0x538
+	private int newKeyboardFocusControlID; //Field offset: 0x53C
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private ContextType <contextType>k__BackingField; //Field offset: 0x448
-	private bool lostFocus; //Field offset: 0x44C
-	private bool receivedFocus; //Field offset: 0x44D
-	private FocusChangeDirection focusChangeDirection; //Field offset: 0x450
-	private bool hasFocusableControls; //Field offset: 0x458
-	private int newKeyboardFocusControlID; //Field offset: 0x45C
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <focusOnlyIfHasFocusableControls>k__BackingField; //Field offset: 0x460
-	private GUIGlobals m_GUIGlobals; //Field offset: 0x464
+	private bool <focusOnlyIfHasFocusableControls>k__BackingField; //Field offset: 0x540
+	private GUIGlobals m_GUIGlobals; //Field offset: 0x544
 
 	private LayoutCache cache
 	{
-		private get { } //Length: 117
+		private get { } //Length: 116
 	}
 
 	public virtual bool canGrabFocus
@@ -71,17 +74,18 @@ public class IMGUIContainer : VisualElement, IDisposable
 		 get { } //Length: 41
 	}
 
+	[CreateProperty]
 	public ContextType contextType
 	{
-		[CompilerGenerated]
 		 get { } //Length: 7
-		[CompilerGenerated]
-		 set { } //Length: 7
+		 set { } //Length: 124
 	}
 
+	[CreateProperty]
 	public bool cullingEnabled
 	{
 		 get { } //Length: 10
+		 set { } //Length: 136
 	}
 
 	internal bool focusOnlyIfHasFocusableControls
@@ -92,7 +96,7 @@ public class IMGUIContainer : VisualElement, IDisposable
 
 	internal ObjectGUIState guiState
 	{
-		internal get { } //Length: 167
+		internal get { } //Length: 187
 	}
 
 	internal Rect lastWorldClip
@@ -116,7 +120,7 @@ public class IMGUIContainer : VisualElement, IDisposable
 	public Action onGUIHandler
 	{
 		 get { } //Length: 10
-		 set { } //Length: 85
+		 set { } //Length: 84
 	}
 
 	private static IMGUIContainer() { }
@@ -126,7 +130,7 @@ public class IMGUIContainer : VisualElement, IDisposable
 	public IMGUIContainer() { }
 
 	[CompilerGenerated]
-	private void <DoOnGUI>b__56_0() { }
+	private void <DoOnGUI>b__59_0() { }
 
 	public override void Dispose() { }
 
@@ -138,14 +142,10 @@ public class IMGUIContainer : VisualElement, IDisposable
 
 	private void DoOnGUI(Event evt, Matrix4x4 parentTransform, Rect clippingRect, bool isComputingLayout, Rect layoutSize, Action onGUIHandler, bool canAffectFocus = true) { }
 
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(BlurEvent), typeof(FocusEvent), typeof(DetachFromPanelEvent), typeof(AttachToPanelEvent)}])]
-	protected virtual void ExecuteDefaultAction(EventBase evt) { }
-
 	private LayoutCache get_cache() { }
 
 	public virtual bool get_canGrabFocus() { }
 
-	[CompilerGenerated]
 	public ContextType get_contextType() { }
 
 	public bool get_cullingEnabled() { }
@@ -168,7 +168,15 @@ public class IMGUIContainer : VisualElement, IDisposable
 
 	private static void GetCurrentTransformAndClip(IMGUIContainer container, Event evt, out Matrix4x4 transform, out Rect clipRect) { }
 
-	private bool HandleIMGUIEvent(Event e, bool canAffectFocus) { }
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(NavigationMoveEvent), typeof(NavigationSubmitEvent), typeof(NavigationCancelEvent), typeof(BlurEvent), typeof(FocusEvent), typeof(DetachFromPanelEvent), typeof(AttachToPanelEvent)}])]
+	[EventInterest(EventInterestOptionsInternal::TriggeredByOS (426094))]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
+
+	[EventInterest(EventInterestOptionsInternal::TriggeredByOS (426094))]
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(NavigationMoveEvent), typeof(NavigationSubmitEvent), typeof(NavigationCancelEvent), typeof(BlurEvent), typeof(FocusEvent), typeof(DetachFromPanelEvent), typeof(AttachToPanelEvent)}])]
+	internal virtual void HandleEventBubbleUpDisabled(EventBase evt) { }
+
+	internal bool HandleIMGUIEvent(Event e, bool canAffectFocus) { }
 
 	private bool HandleIMGUIEvent(Event e, Matrix4x4 worldTransform, Rect clippingRect, Action onGUIHandler, bool canAffectFocus) { }
 
@@ -186,8 +194,6 @@ public class IMGUIContainer : VisualElement, IDisposable
 
 	private void OnGenerateVisualContent(MeshGenerationContext mgc) { }
 
-	internal void ProcessEvent(EventBase evt) { }
-
 	private void RestoreGlobals() { }
 
 	private void SaveGlobals() { }
@@ -196,8 +202,9 @@ public class IMGUIContainer : VisualElement, IDisposable
 
 	private bool SendEventToIMGUIRaw(EventBase evt, bool canAffectFocus, bool verifyBounds) { }
 
-	[CompilerGenerated]
 	public void set_contextType(ContextType value) { }
+
+	public void set_cullingEnabled(bool value) { }
 
 	[CompilerGenerated]
 	internal void set_lastWorldClip(Rect value) { }

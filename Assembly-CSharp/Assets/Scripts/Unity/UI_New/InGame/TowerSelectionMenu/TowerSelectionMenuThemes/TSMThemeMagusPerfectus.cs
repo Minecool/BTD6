@@ -2,17 +2,17 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeMagusPerfectus : TSMThemeUnpoppedArmy
 {
-	public TSMButton drainingBeamToggleButton; //Field offset: 0xE8
-	public NK_TextMeshProUGUI toggleGraveyardStateText; //Field offset: 0xF0
-	public Image drainingBeamCooldownFade; //Field offset: 0xF8
-	public int drainingBeamCooldownFrames; //Field offset: 0x100
-	private int drainingBeamCooldownFrom; //Field offset: 0x104
-	public GameObject drainingBeamSetOn; //Field offset: 0x108
-	public GameObject drainingBeamSetOff; //Field offset: 0x110
-	public GameObject graveyardUseObject; //Field offset: 0x118
-	public GameObject graveyardDrainObject; //Field offset: 0x120
-	public Image graveyardUseFill; //Field offset: 0x128
-	public Image graveyardDrainFill; //Field offset: 0x130
+	public TSMButton drainingBeamToggleButton; //Field offset: 0x100
+	public NK_TextMeshProUGUI toggleGraveyardStateText; //Field offset: 0x108
+	public Image drainingBeamCooldownFade; //Field offset: 0x110
+	public int drainingBeamCooldownFrames; //Field offset: 0x118
+	private int drainingBeamCooldownFrom; //Field offset: 0x11C
+	public GameObject drainingBeamSetOn; //Field offset: 0x120
+	public GameObject drainingBeamSetOff; //Field offset: 0x128
+	public GameObject graveyardUseObject; //Field offset: 0x130
+	public GameObject graveyardDrainObject; //Field offset: 0x138
+	public Image graveyardUseFill; //Field offset: 0x140
+	public Image graveyardDrainFill; //Field offset: 0x148
 
 	public TSMThemeMagusPerfectus() { }
 

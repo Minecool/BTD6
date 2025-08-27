@@ -1,6 +1,7 @@
 namespace Unity.Collections;
 
 [UsedByNativeCode]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.AIModule"}])]
 internal enum LeakCategory
 {
 	Invalid = 0,

@@ -26,7 +26,7 @@ public class WingmonkeyPattern : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 543
+		 get { } //Length: 458
 	}
 
 	public WingmonkeyPattern() { }

@@ -8,11 +8,13 @@ public struct StyleBackgroundSize : IStyleValue<BackgroundSize>, IEquatable<Styl
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override BackgroundSize value
 	{
 		 get { } //Length: 37
+		 set { } //Length: 20
 	}
 
 	public StyleBackgroundSize(StyleKeyword keyword) { }
@@ -32,6 +34,10 @@ public struct StyleBackgroundSize : IStyleValue<BackgroundSize>, IEquatable<Styl
 	public static bool op_Equality(StyleBackgroundSize lhs, StyleBackgroundSize rhs) { }
 
 	public static StyleBackgroundSize op_Implicit(StyleKeyword keyword) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(BackgroundSize value) { }
 
 	public virtual string ToString() { }
 

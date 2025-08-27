@@ -10,12 +10,12 @@ public interface IDebugDisplaySettingsQuery
 
 	public bool IsLightingActive
 	{
-		 get { } //Length: 0
+		 get { } //Length: 3
 	}
 
 	public bool IsPostProcessingAllowed
 	{
-		 get { } //Length: 0
+		 get { } //Length: 3
 	}
 
 	public bool get_AreAnySettingsActive() { }

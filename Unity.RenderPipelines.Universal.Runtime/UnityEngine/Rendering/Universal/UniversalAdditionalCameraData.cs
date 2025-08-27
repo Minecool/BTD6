@@ -2,7 +2,6 @@ namespace UnityEngine.Rendering.Universal;
 
 [DisallowMultipleComponent]
 [ExecuteAlways]
-[ImageEffectAllowedInSceneView]
 [RequireComponent(typeof(Camera))]
 public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallbackReceiver, IAdditionalData
 {
@@ -10,13 +9,13 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Predicate<Camera> <>9__52_0; //Field offset: 0x8
+		public static Predicate<Camera> <>9__53_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <UpdateCameraStack>b__52_0(Camera cam) { }
+		internal bool <UpdateCameraStack>b__53_0(Camera cam) { }
 
 	}
 
@@ -78,7 +77,7 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 	[SerializeField]
 	private float m_Version; //Field offset: 0x8C
 	private MotionVectorsPersistentData m_MotionVectorsPersistentData; //Field offset: 0x90
-	private TaaPersistentData m_TaaPersistentData; //Field offset: 0x98
+	internal UniversalCameraHistory m_History; //Field offset: 0x98
 	[SerializeField]
 	internal Settings m_TaaSettings; //Field offset: 0xA0
 	private VolumeStack m_VolumeStack; //Field offset: 0xC0
@@ -109,7 +108,7 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 
 	internal Camera camera
 	{
-		internal get { } //Length: 155
+		internal get { } //Length: 165
 	}
 
 	public List<Camera> cameraStack
@@ -124,13 +123,23 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 
 	internal static UniversalAdditionalCameraData defaultAdditionalCameraData
 	{
-		internal get { } //Length: 449
+		internal get { } //Length: 166
 	}
 
 	public bool dithering
 	{
 		 get { } //Length: 5
 		 set { } //Length: 4
+	}
+
+	public ICameraHistoryReadAccess history
+	{
+		 get { } //Length: 8
+	}
+
+	internal UniversalCameraHistory historyManager
+	{
+		internal get { } //Length: 8
 	}
 
 	internal MotionVectorsPersistentData motionVectorsPersistentData
@@ -164,7 +173,7 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 
 	public bool requiresColorTexture
 	{
-		 get { } //Length: 104
+		 get { } //Length: 105
 		 set { } //Length: 25
 	}
 
@@ -176,7 +185,7 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 
 	public bool requiresDepthTexture
 	{
-		 get { } //Length: 104
+		 get { } //Length: 105
 		 set { } //Length: 25
 	}
 
@@ -205,18 +214,13 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 
 	public ScriptableRenderer scriptableRenderer
 	{
-		 get { } //Length: 650
+		 get { } //Length: 660
 	}
 
 	public bool stopNaN
 	{
 		 get { } //Length: 5
 		 set { } //Length: 4
-	}
-
-	internal TaaPersistentData taaPersistentData
-	{
-		internal get { } //Length: 8
 	}
 
 	public Settings taaSettings
@@ -250,7 +254,7 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 	public VolumeStack volumeStack
 	{
 		 get { } //Length: 8
-		 set { } //Length: 329
+		 set { } //Length: 340
 	}
 
 	public Transform volumeTrigger
@@ -278,6 +282,10 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 	internal static UniversalAdditionalCameraData get_defaultAdditionalCameraData() { }
 
 	public bool get_dithering() { }
+
+	public ICameraHistoryReadAccess get_history() { }
+
+	internal UniversalCameraHistory get_historyManager() { }
 
 	internal MotionVectorsPersistentData get_motionVectorsPersistentData() { }
 
@@ -307,8 +315,6 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 
 	public bool get_stopNaN() { }
 
-	internal TaaPersistentData get_taaPersistentData() { }
-
 	public Settings get_taaSettings() { }
 
 	public bool get_useScreenCoordOverride() { }
@@ -325,6 +331,8 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 
 	internal void GetOrCreateVolumeStack() { }
 
+	private ScriptableRenderer GetRawRenderer() { }
+
 	public override void OnAfterDeserialize() { }
 
 	public override void OnBeforeSerialize() { }
@@ -332,6 +340,8 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 	public void OnDestroy() { }
 
 	public void OnDrawGizmos() { }
+
+	public void OnValidate() { }
 
 	public void set_allowHDROutput(bool value) { }
 
@@ -376,6 +386,8 @@ public class UniversalAdditionalCameraData : MonoBehaviour, ISerializationCallba
 	public void set_volumeTrigger(Transform value) { }
 
 	public void SetRenderer(int index) { }
+
+	private void Start() { }
 
 	internal void UpdateCameraStack() { }
 

@@ -16,7 +16,7 @@ public class TravelAlongPath : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 227
+		 get { } //Length: 212
 	}
 
 	public TravelAlongPath() { }

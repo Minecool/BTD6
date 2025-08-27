@@ -9,7 +9,7 @@ public struct ApplicationMemoryUsageChange
 	private ApplicationMemoryUsage memoryUsage
 	{
 		[CompilerGenerated]
-		private set { } //Length: 3
+		private set { } //Length: 8900
 	}
 
 	public ApplicationMemoryUsageChange(ApplicationMemoryUsage usage) { }

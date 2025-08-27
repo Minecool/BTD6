@@ -14,7 +14,7 @@ public class CreateProjectileOnBlockerCollide : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 878
+		 get { } //Length: 877
 	}
 
 	public CreateProjectileOnBlockerCollide() { }

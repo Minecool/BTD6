@@ -11,7 +11,7 @@ internal class XmlAutoDetectWriter : XmlRawWriter
 
 	internal virtual IXmlNamespaceResolver NamespaceResolver
 	{
-		internal set { } //Length: 54
+		internal set { } //Length: 76
 	}
 
 	internal virtual bool SupportsNamespaceDeclarationInChunks

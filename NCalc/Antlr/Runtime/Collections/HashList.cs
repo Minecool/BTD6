@@ -27,12 +27,12 @@ public sealed class HashList : IDictionary, IEnumerable
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 122
+			 get { } //Length: 120
 		}
 
 		public override object Key
 		{
-			 get { } //Length: 102
+			 get { } //Length: 100
 		}
 
 		public override object Value

@@ -20,6 +20,9 @@ public class TSMThemeDefault : BaseTSMTheme
 	public TSMButton namedMonkeyButton; //Field offset: 0xA8
 	public Image[] coopPlayerIcons; //Field offset: 0xB0
 	private SpriteReference currentTowerMonkeyImage; //Field offset: 0xB8
+	public GameObject xpBarObject; //Field offset: 0xC0
+	public Image xpBarImage; //Field offset: 0xC8
+	public NK_TextMeshProUGUI xpText; //Field offset: 0xD0
 
 	public TSMThemeDefault() { }
 
@@ -28,6 +31,8 @@ public class TSMThemeDefault : BaseTSMTheme
 	private string ConvertTouchTextToMouse(string text) { }
 
 	public virtual TSMInfoModel OnButtonPress(TowerToSimulation tower, TSMButton button) { }
+
+	public virtual void OnSpecialUiEvent(TowerToSimulation selectedTower, string eventId) { }
 
 	public virtual void OnTargetTypeChanged(TowerToSimulation tower) { }
 
@@ -38,6 +43,8 @@ public class TSMThemeDefault : BaseTSMTheme
 	public virtual void UpdateFromSimInfo(TowerToSimulation tower, Dictionary<String, TSMInfoModel> objects) { }
 
 	public virtual void UpdateName(string nameOverride, bool canEdit) { }
+
+	protected void UpdatePowerProInfo(TowerToSimulation tower) { }
 
 	public void UpdateTargetType(TowerToSimulation tower) { }
 

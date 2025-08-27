@@ -23,7 +23,7 @@ internal class ObjectPool
 	public int maxSize
 	{
 		 get { } //Length: 6
-		 set { } //Length: 216
+		 set { } //Length: 208
 	}
 
 	public ObjectPool`1(Func<T> CreateFunc, int maxSize = 100) { }

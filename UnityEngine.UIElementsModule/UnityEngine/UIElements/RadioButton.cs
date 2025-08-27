@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class RadioButton : BaseBoolField, IGroupBoxOption
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<RadioButton, UxmlTraits>
 	{
 
@@ -9,9 +10,10 @@ public class RadioButton : BaseBoolField, IGroupBoxOption
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : BaseFieldTraits<Boolean, UxmlBoolAttributeDescription>
 	{
-		private UxmlStringAttributeDescription m_Text; //Field offset: 0x88
+		private UxmlStringAttributeDescription m_Text; //Field offset: 0xA0
 
 		public UxmlTraits() { }
 
@@ -25,7 +27,7 @@ public class RadioButton : BaseBoolField, IGroupBoxOption
 	public static readonly string checkmarkBackgroundUssClassName; //Field offset: 0x18
 	public static readonly string checkmarkUssClassName; //Field offset: 0x20
 	public static readonly string textUssClassName; //Field offset: 0x28
-	private VisualElement m_CheckmarkBackground; //Field offset: 0x460
+	private VisualElement m_CheckmarkBackground; //Field offset: 0x560
 
 	public virtual bool value
 	{

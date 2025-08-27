@@ -1,5 +1,6 @@
 namespace UnityEngine;
 
+[Obsolete("Use SubsystemDescriptorWithProvider instead.", False)]
 public abstract class SubsystemDescriptor : ISubsystemDescriptor
 {
 	[CompilerGenerated]

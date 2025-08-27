@@ -1,6 +1,7 @@
 namespace UnityEngine.Rendering.Universal;
 
-[VolumeComponentMenuForRenderPipeline("Post-processing/Color Curves", new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(UniversalRenderPipeline)}])]
+[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+[VolumeComponentMenu("Post-processing/Color Curves")]
 public sealed class ColorCurves : VolumeComponent, IPostProcessComponent
 {
 	[Tooltip("Affects the luminance across the whole image.")]
@@ -24,6 +25,7 @@ public sealed class ColorCurves : VolumeComponent, IPostProcessComponent
 
 	public override bool IsActive() { }
 
+	[Obsolete("Unused #from(2023.1)", False)]
 	public override bool IsTileCompatible() { }
 
 }

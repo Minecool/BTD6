@@ -14,7 +14,7 @@ public class UnmanagedMemoryStream : Stream
 
 	public virtual bool CanRead
 	{
-		 get { } //Length: 17
+		 get { } //Length: 16
 	}
 
 	public virtual bool CanSeek

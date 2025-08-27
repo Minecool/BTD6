@@ -1,10 +1,10 @@
 namespace UnityEngine.Animations;
 
-[NativeHeader("Modules/Animation/Director/AnimationPlayableOutput.h")]
 [NativeHeader("Modules/Animation/ScriptBindings/AnimationPlayableOutput.bindings.h")]
+[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
 [NativeHeader("Modules/Animation/Animator.h")]
 [NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
-[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
+[NativeHeader("Modules/Animation/Director/AnimationPlayableOutput.h")]
 [RequiredByNativeCode]
 [StaticAccessor("AnimationPlayableOutputBindings", StaticAccessorType::DoubleColon (2))]
 public struct AnimationPlayableOutput : IPlayableOutput
@@ -26,6 +26,8 @@ public struct AnimationPlayableOutput : IPlayableOutput
 
 	[NativeThrows]
 	private static void InternalSetTarget(ref PlayableOutputHandle handle, Animator target) { }
+
+	private static void InternalSetTarget_Injected(ref PlayableOutputHandle handle, IntPtr target) { }
 
 	public void SetTarget(Animator value) { }
 

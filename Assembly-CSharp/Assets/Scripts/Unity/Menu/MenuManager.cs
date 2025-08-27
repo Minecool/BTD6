@@ -7,94 +7,94 @@ public class MenuManager : MonoBehaviour
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
 		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"menuName", "menuData"}])]
-		public static Func<ValueTuple`2<String, Object>, Boolean> <>9__47_0; //Field offset: 0x8
+		public static Func<ValueTuple`2<String, Object>, Boolean> <>9__54_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <LoadMainMenu>b__47_0(ValueTuple<String, Object> x) { }
+		internal bool <LoadMainMenu>b__54_0(ValueTuple<String, Object> x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass48_0
+	private sealed class <>c__DisplayClass55_0
 	{
 		public string menuName; //Field offset: 0x10
 
-		public <>c__DisplayClass48_0() { }
+		public <>c__DisplayClass55_0() { }
 
 		internal bool <HasWorldOverride>b__0(string x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass56_0
+	private sealed class <>c__DisplayClass63_0
 	{
 		public string menuName; //Field offset: 0x10
 
-		public <>c__DisplayClass56_0() { }
+		public <>c__DisplayClass63_0() { }
 
 		internal bool <QueueMenu>b__0(ValueTuple<String, Object> i) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass60_0
+	private sealed class <>c__DisplayClass67_0
 	{
 		public MenuManager <>4__this; //Field offset: 0x10
 		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"menuName", "menu", "menuStatus"}])]
 		public ValueTuple<String, GameMenu, MenuStatus> previousMenu; //Field offset: 0x18
 
-		public <>c__DisplayClass60_0() { }
+		public <>c__DisplayClass67_0() { }
 
 		internal void <OpenMenuInternal>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass61_0
+	private sealed class <>c__DisplayClass68_0
 	{
 		public GameMenu menu; //Field offset: 0x10
 
-		public <>c__DisplayClass61_0() { }
+		public <>c__DisplayClass68_0() { }
 
 		internal bool <Open>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass65_0
+	private sealed class <>c__DisplayClass72_0
 	{
 		public MenuManager <>4__this; //Field offset: 0x10
 		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"menuName", "menu", "menuStatus"}])]
 		public ValueTuple<String, GameMenu, MenuStatus> closingMenu; //Field offset: 0x18
 
-		public <>c__DisplayClass65_0() { }
+		public <>c__DisplayClass72_0() { }
 
 		internal void <CloseCurrentMenuInternal>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass66_0
+	private sealed class <>c__DisplayClass73_0
 	{
 		public GameMenu menu; //Field offset: 0x10
 
-		public <>c__DisplayClass66_0() { }
+		public <>c__DisplayClass73_0() { }
 
 		internal bool <ReOpen>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass68_0
+	private sealed class <>c__DisplayClass75_0
 	{
 		private sealed class <<ForceCloseMenu>g__froceCloseMenuAndSubmenus|1>d : IEnumerator<Object>, IEnumerator, IDisposable
 		{
 			private int <>1__state; //Field offset: 0x10
 			private object <>2__current; //Field offset: 0x18
-			public <>c__DisplayClass68_0 <>4__this; //Field offset: 0x20
+			public <>c__DisplayClass75_0 <>4__this; //Field offset: 0x20
 
 			private override object System.Collections.Generic.IEnumerator<System.Object>.Current
 			{
@@ -130,7 +130,7 @@ public class MenuManager : MonoBehaviour
 		public string menuName; //Field offset: 0x10
 		public MenuManager <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass68_0() { }
+		public <>c__DisplayClass75_0() { }
 
 		internal bool <ForceCloseMenu>b__0(ValueTuple<String, Object> o) { }
 
@@ -142,46 +142,13 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass81_0
-	{
-		public string menuName; //Field offset: 0x10
-
-		public <>c__DisplayClass81_0() { }
-
-		internal bool <IsMenuOnStack>b__0(ValueTuple<String, Object> m) { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <>c__DisplayClass82_0
-	{
-		public string menuName; //Field offset: 0x10
-
-		public <>c__DisplayClass82_0() { }
-
-		internal bool <IsMenuOnQueue>b__0(ValueTuple<String, Object> m) { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <>c__DisplayClass83_0
-	{
-		public string menuName; //Field offset: 0x10
-
-		public <>c__DisplayClass83_0() { }
-
-		internal bool <RemoveMenuFromStack>b__0(ValueTuple<String, Object> o) { }
-
-	}
-
-	[CompilerGenerated]
 	private sealed class <>c__DisplayClass88_0
 	{
 		public string menuName; //Field offset: 0x10
 
 		public <>c__DisplayClass88_0() { }
 
-		internal bool <GetMenuData>b__0(ValueTuple<String, Object> m) { }
+		internal bool <IsMenuOnStack>b__0(ValueTuple<String, Object> m) { }
 
 	}
 
@@ -192,12 +159,45 @@ public class MenuManager : MonoBehaviour
 
 		public <>c__DisplayClass89_0() { }
 
+		internal bool <IsMenuOnQueue>b__0(ValueTuple<String, Object> m) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass90_0
+	{
+		public string menuName; //Field offset: 0x10
+
+		public <>c__DisplayClass90_0() { }
+
+		internal bool <RemoveMenuFromStack>b__0(ValueTuple<String, Object> o) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass95_0
+	{
+		public string menuName; //Field offset: 0x10
+
+		public <>c__DisplayClass95_0() { }
+
+		internal bool <GetMenuData>b__0(ValueTuple<String, Object> m) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass96_0
+	{
+		public string menuName; //Field offset: 0x10
+
+		public <>c__DisplayClass96_0() { }
+
 		internal bool <SetMenuData>b__0(ValueTuple<String, Object> m) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <CloseCurrentMenuIfPossible>d__64 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <CloseCurrentMenuIfPossible>d__71 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -217,7 +217,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <CloseCurrentMenuIfPossible>d__64(int <>1__state) { }
+		public <CloseCurrentMenuIfPossible>d__71(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -236,13 +236,13 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <CloseCurrentMenuInternal>d__65 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <CloseCurrentMenuInternal>d__72 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
 		public MenuManager <>4__this; //Field offset: 0x20
 		public string menuToClose; //Field offset: 0x28
-		private <>c__DisplayClass65_0 <>8__1; //Field offset: 0x30
+		private <>c__DisplayClass72_0 <>8__1; //Field offset: 0x30
 		private string <menuName>5__2; //Field offset: 0x38
 		private object <menuData>5__3; //Field offset: 0x40
 		private bool <alreadyLoaded>5__4; //Field offset: 0x48
@@ -260,7 +260,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <CloseCurrentMenuInternal>d__65(int <>1__state) { }
+		public <CloseCurrentMenuInternal>d__72(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -279,7 +279,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <CloseLoadingScreen>d__55 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <CloseLoadingScreen>d__62 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -299,7 +299,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <CloseLoadingScreen>d__55(int <>1__state) { }
+		public <CloseLoadingScreen>d__62(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -318,7 +318,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <EnsureCorrectWorldScene>d__50 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <EnsureCorrectWorldScene>d__57 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -339,7 +339,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <EnsureCorrectWorldScene>d__50(int <>1__state) { }
+		public <EnsureCorrectWorldScene>d__57(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -358,7 +358,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <LoadInGame>d__45 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <LoadInGame>d__52 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -377,7 +377,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <LoadInGame>d__45(int <>1__state) { }
+		public <LoadInGame>d__52(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -396,7 +396,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <LoadMainMenu>d__47 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <LoadMainMenu>d__54 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -420,7 +420,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <LoadMainMenu>d__47(int <>1__state) { }
+		public <LoadMainMenu>d__54(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -439,7 +439,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <LoadSceneAsync>d__42 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <LoadSceneAsync>d__49 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -459,7 +459,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <LoadSceneAsync>d__42(int <>1__state) { }
+		public <LoadSceneAsync>d__49(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -478,7 +478,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <LoadWorldScene>d__53 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <LoadWorldScene>d__60 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -498,7 +498,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <LoadWorldScene>d__53(int <>1__state) { }
+		public <LoadWorldScene>d__60(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -517,7 +517,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <Open>d__61 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <Open>d__68 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -538,7 +538,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <Open>d__61(int <>1__state) { }
+		public <Open>d__68(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -557,7 +557,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <OpenLoadingScreen>d__54 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <OpenLoadingScreen>d__61 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -577,7 +577,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <OpenLoadingScreen>d__54(int <>1__state) { }
+		public <OpenLoadingScreen>d__61(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -596,14 +596,14 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <OpenMenuInternal>d__60 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <OpenMenuInternal>d__67 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
 		public MenuManager <>4__this; //Field offset: 0x20
 		public string menuName; //Field offset: 0x28
 		public object menuData; //Field offset: 0x30
-		private <>c__DisplayClass60_0 <>8__1; //Field offset: 0x38
+		private <>c__DisplayClass67_0 <>8__1; //Field offset: 0x38
 
 		private override object System.Collections.Generic.IEnumerator<System.Object>.Current
 		{
@@ -618,7 +618,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <OpenMenuInternal>d__60(int <>1__state) { }
+		public <OpenMenuInternal>d__67(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -637,7 +637,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <ReOpen>d__66 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <ReOpen>d__73 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -658,7 +658,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <ReOpen>d__66(int <>1__state) { }
+		public <ReOpen>d__73(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -677,7 +677,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <RunIfNoMenuIsOpening>d__57 : IAsyncStateMachine
+	private struct <RunIfNoMenuIsOpening>d__64 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -693,7 +693,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <UnloadAllDontUnloads>d__69 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <UnloadAllDontUnloads>d__76 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -714,7 +714,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <UnloadAllDontUnloads>d__69(int <>1__state) { }
+		public <UnloadAllDontUnloads>d__76(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -733,7 +733,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <UnloadInGame>d__46 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <UnloadInGame>d__53 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -752,7 +752,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <UnloadInGame>d__46(int <>1__state) { }
+		public <UnloadInGame>d__53(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -771,7 +771,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <UnloadMainMenu>d__44 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <UnloadMainMenu>d__51 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -791,7 +791,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <UnloadMainMenu>d__44(int <>1__state) { }
+		public <UnloadMainMenu>d__51(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -810,7 +810,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <UnloadSceneAsync>d__43 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <UnloadSceneAsync>d__50 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -831,7 +831,7 @@ public class MenuManager : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <UnloadSceneAsync>d__43(int <>1__state) { }
+		public <UnloadSceneAsync>d__50(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -862,6 +862,19 @@ public class MenuManager : MonoBehaviour
 	{
 
 		public OnMenuEvent(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke() { }
+
+	}
+
+	internal sealed class OnPreMainMenuOpening : MulticastDelegate
+	{
+
+		public OnPreMainMenuOpening(object object, IntPtr method) { }
 
 		public override IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
@@ -913,16 +926,23 @@ public class MenuManager : MonoBehaviour
 	private readonly Dictionary<String, OnMenuEvent> onMenusClosed; //Field offset: 0xB8
 	private readonly Dictionary<String, AsyncOperationHandle`1<SceneInstance>> sceneInstanceDict; //Field offset: 0xC0
 	private Task openingMenuTask; //Field offset: 0xC8
-	private bool canUseLoadingScreenDebug; //Field offset: 0xD0
-	private AnimatedSceneLoader<LoadingScreen> loadingScreen; //Field offset: 0xD8
-	private bool hasSeenMaintenanceMode; //Field offset: 0xE0
+	private UnityEvent temporaryBackEvent; //Field offset: 0xD0
+	private bool tempBackEventBound; //Field offset: 0xD8
+	private bool canUseLoadingScreenDebug; //Field offset: 0xD9
+	private AnimatedSceneLoader<LoadingScreen> loadingScreen; //Field offset: 0xE0
+	private bool hasSeenMaintenanceMode; //Field offset: 0xE8
 
 	public event TransitioningDelegate OnTransitioningChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
+	}
+
+	public string CurrentScene
+	{
+		 get { } //Length: 129
 	}
 
 	public private string CurrentWorldScene
@@ -960,7 +980,7 @@ public class MenuManager : MonoBehaviour
 	public MenuManager() { }
 
 	[CompilerGenerated]
-	private bool <GoToMainMenu>b__97_0(ValueTuple<String, Object> x) { }
+	private bool <GoToMainMenu>b__104_0(ValueTuple<String, Object> x) { }
 
 	[CompilerGenerated]
 	public void add_OnTransitioningChanged(TransitioningDelegate value) { }
@@ -979,23 +999,25 @@ public class MenuManager : MonoBehaviour
 
 	public void CloseCurrentMenu() { }
 
-	[IteratorStateMachine(typeof(<CloseCurrentMenuIfPossible>d__64))]
+	[IteratorStateMachine(typeof(<CloseCurrentMenuIfPossible>d__71))]
 	private IEnumerator CloseCurrentMenuIfPossible(string menuToClose) { }
 
-	[IteratorStateMachine(typeof(<CloseCurrentMenuInternal>d__65))]
+	[IteratorStateMachine(typeof(<CloseCurrentMenuInternal>d__72))]
 	private IEnumerator CloseCurrentMenuInternal(string menuToClose) { }
 
-	[IteratorStateMachine(typeof(<CloseLoadingScreen>d__55))]
+	[IteratorStateMachine(typeof(<CloseLoadingScreen>d__62))]
 	public IEnumerator CloseLoadingScreen() { }
 
 	public void DontUnloadWhileOnStack(string menuName, bool remove = false) { }
 
-	[IteratorStateMachine(typeof(<EnsureCorrectWorldScene>d__50))]
+	[IteratorStateMachine(typeof(<EnsureCorrectWorldScene>d__57))]
 	private IEnumerator EnsureCorrectWorldScene(List<ValueTuple`2<String, Object>> menuStack) { }
 
 	public void FadeOutMusic() { }
 
 	public void ForceCloseMenu(string menuName, bool closeSubMenus = false) { }
+
+	public string get_CurrentScene() { }
 
 	[CompilerGenerated]
 	public string get_CurrentWorldScene() { }
@@ -1047,29 +1069,29 @@ public class MenuManager : MonoBehaviour
 
 	private bool IsOnlyMainMenuOpen() { }
 
-	[IteratorStateMachine(typeof(<LoadInGame>d__45))]
+	[IteratorStateMachine(typeof(<LoadInGame>d__52))]
 	public IEnumerator LoadInGame() { }
 
-	[IteratorStateMachine(typeof(<LoadMainMenu>d__47))]
+	[IteratorStateMachine(typeof(<LoadMainMenu>d__54))]
 	public IEnumerator LoadMainMenu(bool loadPrevMenuStackHistory) { }
 
-	[IteratorStateMachine(typeof(<LoadSceneAsync>d__42))]
+	[IteratorStateMachine(typeof(<LoadSceneAsync>d__49))]
 	private IEnumerator LoadSceneAsync(string sceneName) { }
 
-	[IteratorStateMachine(typeof(<LoadWorldScene>d__53))]
+	[IteratorStateMachine(typeof(<LoadWorldScene>d__60))]
 	private IEnumerator LoadWorldScene(string newWorldScene) { }
 
 	public void Lock(bool lockState) { }
 
-	[IteratorStateMachine(typeof(<Open>d__61))]
+	[IteratorStateMachine(typeof(<Open>d__68))]
 	private IEnumerator Open(string menuName, object menuData) { }
 
-	[IteratorStateMachine(typeof(<OpenLoadingScreen>d__54))]
+	[IteratorStateMachine(typeof(<OpenLoadingScreen>d__61))]
 	public IEnumerator OpenLoadingScreen(bool isLegendsMode = false) { }
 
 	public void OpenMenu(string menuName, object menuData = null) { }
 
-	[IteratorStateMachine(typeof(<OpenMenuInternal>d__60))]
+	[IteratorStateMachine(typeof(<OpenMenuInternal>d__67))]
 	private IEnumerator OpenMenuInternal(string menuName, object menuData = null) { }
 
 	public void OpenPauseMenu() { }
@@ -1099,10 +1121,12 @@ public class MenuManager : MonoBehaviour
 
 	public void RemoveOnMenuOpenedEvent(string menuName, OnMenuEvent callback) { }
 
-	[IteratorStateMachine(typeof(<ReOpen>d__66))]
+	public void RemoveTemporaryBackBind() { }
+
+	[IteratorStateMachine(typeof(<ReOpen>d__73))]
 	private IEnumerator ReOpen(string menuName, object menuData) { }
 
-	[AsyncStateMachine(typeof(<RunIfNoMenuIsOpening>d__57))]
+	[AsyncStateMachine(typeof(<RunIfNoMenuIsOpening>d__64))]
 	public void RunIfNoMenuIsOpening(Func<Task> openMenuTask) { }
 
 	[CompilerGenerated]
@@ -1119,18 +1143,20 @@ public class MenuManager : MonoBehaviour
 
 	public void ShowQuit() { }
 
-	[IteratorStateMachine(typeof(<UnloadAllDontUnloads>d__69))]
+	public void TemporaryBackBind(UnityAction call) { }
+
+	[IteratorStateMachine(typeof(<UnloadAllDontUnloads>d__76))]
 	private IEnumerator UnloadAllDontUnloads(String[] ignores) { }
 
-	[IteratorStateMachine(typeof(<UnloadInGame>d__46))]
+	[IteratorStateMachine(typeof(<UnloadInGame>d__53))]
 	public IEnumerator UnloadInGame() { }
 
 	public void UnloadLegendsMenu() { }
 
-	[IteratorStateMachine(typeof(<UnloadMainMenu>d__44))]
+	[IteratorStateMachine(typeof(<UnloadMainMenu>d__51))]
 	public IEnumerator UnloadMainMenu() { }
 
-	[IteratorStateMachine(typeof(<UnloadSceneAsync>d__43))]
+	[IteratorStateMachine(typeof(<UnloadSceneAsync>d__50))]
 	private IEnumerator UnloadSceneAsync(string sceneName, bool suppressError = false) { }
 
 	public void Update() { }

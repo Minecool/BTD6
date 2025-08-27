@@ -11,6 +11,9 @@ internal static class StyleValueExtensions
 	internal static string DebugString(IStyleValue<T> styleValue) { }
 
 	[Extension]
+	internal static LayoutValue ToLayoutValue(Length length) { }
+
+	[Extension]
 	internal static Length ToLength(StyleKeyword keyword) { }
 
 	[Extension]
@@ -24,9 +27,6 @@ internal static class StyleValueExtensions
 
 	[Extension]
 	internal static Translate ToTranslate(StyleKeyword keyword) { }
-
-	[Extension]
-	internal static YogaValue ToYogaValue(Length length) { }
 
 }
 

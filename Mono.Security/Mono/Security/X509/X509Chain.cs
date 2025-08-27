@@ -10,7 +10,7 @@ public class X509Chain
 
 	public X509CertificateCollection TrustAnchors
 	{
-		 get { } //Length: 134
+		 get { } //Length: 126
 	}
 
 	public X509Chain() { }

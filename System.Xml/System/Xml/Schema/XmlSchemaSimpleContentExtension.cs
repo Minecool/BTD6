@@ -13,8 +13,8 @@ public class XmlSchemaSimpleContentExtension : XmlSchemaContent
 		 set { } //Length: 5
 	}
 
-	[XmlElement("attribute", typeof(XmlSchemaAttribute))]
 	[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+	[XmlElement("attribute", typeof(XmlSchemaAttribute))]
 	public XmlSchemaObjectCollection Attributes
 	{
 		 get { } //Length: 5

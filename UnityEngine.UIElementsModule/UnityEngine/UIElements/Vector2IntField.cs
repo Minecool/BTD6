@@ -26,6 +26,7 @@ public class Vector2IntField : BaseCompositeField<Vector2Int, IntegerField, Int3
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Vector2IntField, UxmlTraits>
 	{
 
@@ -33,10 +34,11 @@ public class Vector2IntField : BaseCompositeField<Vector2Int, IntegerField, Int3
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits<Vector2Int>
 	{
-		private UxmlIntAttributeDescription m_XValue; //Field offset: 0x80
-		private UxmlIntAttributeDescription m_YValue; //Field offset: 0x88
+		private UxmlIntAttributeDescription m_XValue; //Field offset: 0x98
+		private UxmlIntAttributeDescription m_YValue; //Field offset: 0xA0
 
 		public UxmlTraits() { }
 

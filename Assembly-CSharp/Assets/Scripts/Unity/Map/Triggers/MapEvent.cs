@@ -15,7 +15,7 @@ public class MapEvent : MonoBehaviour
 
 	public MapEventModel Def
 	{
-		 get { } //Length: 551
+		 get { } //Length: 539
 	}
 
 	public MapEvent() { }

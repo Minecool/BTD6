@@ -8,7 +8,7 @@ public class InteractableClickTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 232
+		 get { } //Length: 220
 	}
 
 	public InteractableClickTrigger() { }

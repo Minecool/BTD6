@@ -2,7 +2,7 @@ namespace UnityEngine.UIElements;
 
 internal class DynamicAtlas : AtlasBase
 {
-	private class TextureInfo : LinkedPoolItem<TextureInfo>
+	public class TextureInfo : LinkedPoolItem<TextureInfo>
 	{
 		public static readonly LinkedPool<TextureInfo> pool; //Field offset: 0x0
 		public DynamicAtlasPage page; //Field offset: 0x18

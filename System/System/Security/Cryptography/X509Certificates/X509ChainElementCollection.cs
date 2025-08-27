@@ -17,7 +17,7 @@ public sealed class X509ChainElementCollection : ICollection, IEnumerable
 
 	public X509ChainElement Item
 	{
-		 get { } //Length: 152
+		 get { } //Length: 159
 	}
 
 	public override object SyncRoot

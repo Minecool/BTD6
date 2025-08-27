@@ -4,7 +4,7 @@ namespace System.Runtime.CompilerServices;
 public struct ConfiguredValueTaskAwaitable
 {
 	[IsReadOnly]
-	internal struct ConfiguredValueTaskAwaiter : ICriticalNotifyCompletion
+	internal struct ConfiguredValueTaskAwaiter : ICriticalNotifyCompletion, INotifyCompletion
 	{
 		private readonly ValueTask _value; //Field offset: 0x0
 
@@ -19,6 +19,8 @@ public struct ConfiguredValueTaskAwaitable
 
 		[StackTraceHidden]
 		public void GetResult() { }
+
+		public override void OnCompleted(Action continuation) { }
 
 		public override void UnsafeOnCompleted(Action continuation) { }
 

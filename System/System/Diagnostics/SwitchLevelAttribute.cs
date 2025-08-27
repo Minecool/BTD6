@@ -7,7 +7,7 @@ public sealed class SwitchLevelAttribute : Attribute
 
 	public Type SwitchLevelType
 	{
-		 set { } //Length: 169
+		 set { } //Length: 141
 	}
 
 	public SwitchLevelAttribute(Type switchLevelType) { }

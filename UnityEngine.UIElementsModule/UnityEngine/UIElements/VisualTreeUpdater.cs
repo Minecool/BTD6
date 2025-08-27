@@ -41,6 +41,8 @@ internal sealed class VisualTreeUpdater : IDisposable
 
 	private void SetDefaultUpdaters() { }
 
+	public void SetUpdater(IVisualTreeUpdater updater, VisualTreeUpdatePhase phase) { }
+
 	public void SetUpdater(VisualTreeUpdatePhase phase) { }
 
 	public void UpdateVisualTreePhase(VisualTreeUpdatePhase phase) { }

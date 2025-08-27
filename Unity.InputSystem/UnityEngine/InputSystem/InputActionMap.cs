@@ -138,8 +138,9 @@ public sealed class InputActionMap : ICloneable, ISerializationCallbackReceiver,
 
 	}
 
-	internal static int s_DeferBindingResolution; //Field offset: 0x0
-	internal static bool s_NeedToResolveBindings; //Field offset: 0x4
+	private static readonly ProfilerMarker k_ResolveBindingsProfilerMarker; //Field offset: 0x0
+	internal static int s_DeferBindingResolution; //Field offset: 0x8
+	internal static bool s_NeedToResolveBindings; //Field offset: 0xC
 	[SerializeField]
 	internal string m_Name; //Field offset: 0x10
 	[SerializeField]
@@ -183,7 +184,7 @@ public sealed class InputActionMap : ICloneable, ISerializationCallbackReceiver,
 	public override Nullable<InputBinding> bindingMask
 	{
 		 get { } //Length: 63
-		 set { } //Length: 429
+		 set { } //Length: 435
 	}
 
 	private bool bindingResolutionNeedsFullReResolve
@@ -216,7 +217,7 @@ public sealed class InputActionMap : ICloneable, ISerializationCallbackReceiver,
 
 	public override Nullable<ReadOnlyArray`1<InputDevice>> devices
 	{
-		 get { } //Length: 205
+		 get { } //Length: 177
 		 set { } //Length: 76
 	}
 
@@ -227,7 +228,7 @@ public sealed class InputActionMap : ICloneable, ISerializationCallbackReceiver,
 
 	public Guid id
 	{
-		 get { } //Length: 110
+		 get { } //Length: 102
 	}
 
 	internal Guid idDontGenerate
@@ -247,7 +248,7 @@ public sealed class InputActionMap : ICloneable, ISerializationCallbackReceiver,
 
 	private bool needToResolveBindings
 	{
-		private get { } //Length: 11
+		private get { } //Length: 10
 		private set { } //Length: 31
 	}
 
@@ -255,6 +256,8 @@ public sealed class InputActionMap : ICloneable, ISerializationCallbackReceiver,
 	{
 		private get { } //Length: 128
 	}
+
+	private static InputActionMap() { }
 
 	public InputActionMap(string name) { }
 
@@ -276,9 +279,9 @@ public sealed class InputActionMap : ICloneable, ISerializationCallbackReceiver,
 
 	public override void Enable() { }
 
-	public override InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) { }
-
 	public InputAction FindAction(Guid id) { }
+
+	public override InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) { }
 
 	internal int FindActionIndex(string nameOrId) { }
 

@@ -11,7 +11,7 @@ public sealed class SerializationInfoEnumerator : IEnumerator
 
 	public SerializationEntry Current
 	{
-		 get { } //Length: 211
+		 get { } //Length: 203
 	}
 
 	public string Name

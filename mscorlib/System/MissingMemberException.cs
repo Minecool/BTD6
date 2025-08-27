@@ -8,7 +8,7 @@ public class MissingMemberException : MemberAccessException
 
 	public virtual string Message
 	{
-		 get { } //Length: 294
+		 get { } //Length: 246
 	}
 
 	public MissingMemberException() { }

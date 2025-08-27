@@ -19,7 +19,7 @@ public class LinkedList : ICollection<T>, IEnumerable<T>, IEnumerable, ICollecti
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 212
+			private get { } //Length: 210
 		}
 
 		internal Enumerator(LinkedList<T> list) { }
@@ -63,7 +63,7 @@ public class LinkedList : ICollection<T>, IEnumerable<T>, IEnumerable, ICollecti
 
 	public LinkedListNode<T> Last
 	{
-		 get { } //Length: 19
+		 get { } //Length: 135
 	}
 
 	private override bool System.Collections.Generic.ICollection<T>.IsReadOnly

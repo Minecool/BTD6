@@ -13,24 +13,14 @@ public class UnicodeLineBreakingRules
 	private HashSet<UInt32> m_LeadingCharactersLookup; //Field offset: 0x30
 	private HashSet<UInt32> m_FollowingCharactersLookup; //Field offset: 0x38
 
-	public TextAsset followingCharacters
-	{
-		 get { } //Length: 5
-	}
-
 	internal HashSet<UInt32> followingCharactersLookup
 	{
-		internal get { } //Length: 52
-	}
-
-	public TextAsset leadingCharacters
-	{
-		 get { } //Length: 5
+		internal get { } //Length: 43
 	}
 
 	internal HashSet<UInt32> leadingCharactersLookup
 	{
-		internal get { } //Length: 52
+		internal get { } //Length: 356
 	}
 
 	public bool useModernHangulLineBreakingRules
@@ -40,11 +30,7 @@ public class UnicodeLineBreakingRules
 
 	public UnicodeLineBreakingRules() { }
 
-	public TextAsset get_followingCharacters() { }
-
 	internal HashSet<UInt32> get_followingCharactersLookup() { }
-
-	public TextAsset get_leadingCharacters() { }
 
 	internal HashSet<UInt32> get_leadingCharactersLookup() { }
 
@@ -52,9 +38,8 @@ public class UnicodeLineBreakingRules
 
 	private static HashSet<UInt32> GetCharacters(TextAsset file) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal void LoadLineBreakingRules() { }
-
-	internal void LoadLineBreakingRules(TextAsset leadingRules, TextAsset followingRules) { }
 
 }
 

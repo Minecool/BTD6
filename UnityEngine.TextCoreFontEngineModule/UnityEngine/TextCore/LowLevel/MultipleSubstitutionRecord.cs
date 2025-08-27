@@ -1,6 +1,7 @@
 namespace UnityEngine.TextCore.LowLevel;
 
 [UsedByNativeCode]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.TextCoreTextEngineModule"}])]
 internal struct MultipleSubstitutionRecord
 {
 	[NativeName("targetGlyphID")]

@@ -8,7 +8,7 @@ public class FilterBloonIfDamageType : Filter
 
 	public virtual FilterModel Def
 	{
-		 get { } //Length: 303
+		 get { } //Length: 299
 	}
 
 	public FilterBloonIfDamageType() { }

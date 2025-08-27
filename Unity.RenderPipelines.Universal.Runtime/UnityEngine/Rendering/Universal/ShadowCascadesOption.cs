@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering.Universal;
 
-[Obsolete("This is obsolete, please use shadowCascadeCount instead.", False)]
+[Obsolete("This is obsolete, please use shadowCascadeCount instead.", True)]
 public enum ShadowCascadesOption
 {
 	NoCascades = 0,

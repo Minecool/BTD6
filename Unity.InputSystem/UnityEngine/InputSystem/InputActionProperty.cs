@@ -21,7 +21,7 @@ public struct InputActionProperty : IEquatable<InputActionProperty>, IEquatable<
 
 	internal InputAction serializedAction
 	{
-		internal get { } //Length: 5
+		internal get { } //Length: 291
 	}
 
 	internal InputActionReference serializedReference

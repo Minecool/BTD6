@@ -19,7 +19,7 @@ public abstract class WaitHandle : MarshalByRefObject, IDisposable
 	[Obsolete("Use the SafeWaitHandle property instead.")]
 	public override IntPtr Handle
 	{
-		 set { } //Length: 236
+		 set { } //Length: 223
 	}
 
 	public SafeWaitHandle SafeWaitHandle

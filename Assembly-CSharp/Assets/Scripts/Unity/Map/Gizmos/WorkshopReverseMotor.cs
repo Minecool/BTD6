@@ -12,7 +12,7 @@ public class WorkshopReverseMotor : MapGizmoBehavior
 
 	public virtual MapGizmoBehaviorModel Def
 	{
-		 get { } //Length: 751
+		 get { } //Length: 463
 	}
 
 	public WorkshopReverseMotor() { }

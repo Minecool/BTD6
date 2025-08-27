@@ -16,5 +16,7 @@ public struct BatchMeshID : IEquatable<BatchMeshID>
 
 	public virtual int GetHashCode() { }
 
+	public static bool op_Equality(BatchMeshID a, BatchMeshID b) { }
+
 }
 

@@ -1,7 +1,7 @@
 namespace UnityEngine.UIElements;
 
 [EventCategory(EventCategory::Pointer (1))]
-public abstract class PointerCaptureEventBase : EventBase<T>, IPointerCaptureEventInternal
+public abstract class PointerCaptureEventBase : EventBase<T>
 {
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
@@ -13,15 +13,15 @@ public abstract class PointerCaptureEventBase : EventBase<T>, IPointerCaptureEve
 	public private override int pointerId
 	{
 		[CompilerGenerated]
-		 get { } //Length: 7
+		 get { } //Length: 4
 		[CompilerGenerated]
-		private set { } //Length: 7
+		private set { } //Length: 4
 	}
 
 	private IEventHandler relatedTarget
 	{
 		[CompilerGenerated]
-		private set { } //Length: 8
+		private set { } //Length: 5
 	}
 
 	protected PointerCaptureEventBase`1() { }

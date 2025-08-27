@@ -15,7 +15,7 @@ public class ReadOnlyCollection : IList<T>, ICollection<T>, IEnumerable<T>, IEnu
 
 	public override T Item
 	{
-		 get { } //Length: 205
+		 get { } //Length: 206
 	}
 
 	private override bool System.Collections.Generic.ICollection<T>.IsReadOnly
@@ -25,8 +25,8 @@ public class ReadOnlyCollection : IList<T>, ICollection<T>, IEnumerable<T>, IEnu
 
 	private override T System.Collections.Generic.IList<T>.Item
 	{
-		private get { } //Length: 205
-		private set { } //Length: 12
+		private get { } //Length: 206
+		private set { } //Length: 10
 	}
 
 	private override bool System.Collections.ICollection.IsSynchronized
@@ -36,7 +36,7 @@ public class ReadOnlyCollection : IList<T>, ICollection<T>, IEnumerable<T>, IEnu
 
 	private override object System.Collections.ICollection.SyncRoot
 	{
-		private get { } //Length: 192
+		private get { } //Length: 175
 	}
 
 	private override bool System.Collections.IList.IsFixedSize
@@ -51,8 +51,8 @@ public class ReadOnlyCollection : IList<T>, ICollection<T>, IEnumerable<T>, IEnu
 
 	private override object System.Collections.IList.Item
 	{
-		private get { } //Length: 229
-		private set { } //Length: 12
+		private get { } //Length: 230
+		private set { } //Length: 10
 	}
 
 	public ReadOnlyCollection`1(IList<T> list) { }

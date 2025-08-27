@@ -12,7 +12,7 @@ public struct InputControlList : IList<TControl>, ICollection<TControl>, IEnumer
 
 		public override TControl Current
 		{
-			 get { } //Length: 140
+			 get { } //Length: 139
 		}
 
 		private override object System.Collections.IEnumerator.Current
@@ -42,7 +42,7 @@ public struct InputControlList : IList<TControl>, ICollection<TControl>, IEnumer
 	public int Capacity
 	{
 		 get { } //Length: 61
-		 set { } //Length: 241
+		 set { } //Length: 238
 	}
 
 	public override int Count
@@ -57,8 +57,8 @@ public struct InputControlList : IList<TControl>, ICollection<TControl>, IEnumer
 
 	public override TControl Item
 	{
-		 get { } //Length: 256
-		 set { } //Length: 270
+		 get { } //Length: 240
+		 set { } //Length: 254
 	}
 
 	public InputControlList`1(Allocator allocator, int initialCapacity = 0) { }

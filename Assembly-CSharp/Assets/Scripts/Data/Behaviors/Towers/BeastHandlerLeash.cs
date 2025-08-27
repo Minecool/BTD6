@@ -25,7 +25,7 @@ public class BeastHandlerLeash : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1226
+		 get { } //Length: 1186
 	}
 
 	public BeastHandlerLeash() { }

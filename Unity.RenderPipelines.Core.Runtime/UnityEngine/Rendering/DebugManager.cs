@@ -277,7 +277,7 @@ public sealed class DebugManager
 
 	internal void SetScrollTarget(DebugUIHandlerWidget widget) { }
 
-	[Obsolete("Use DebugManager.instance.displayEditorUI.open property instead. #from(23.1)")]
+	[Obsolete("Use DebugManager.instance.displayEditorUI property instead. #from(23.1)")]
 	public void ToggleEditorUI(bool open) { }
 
 	internal void TogglePersistent(Widget widget, Nullable<Int32> forceTupleIndex = null) { }

@@ -3,6 +3,7 @@ namespace Assets.Scripts.Simulation.Freeplay;
 public class ProgressiveDifficultyManager : RootBehavior
 {
 	public const int fromRound = 81; //Field offset: 0x0
+	public const int fromRoundRogue = 31; //Field offset: 0x0
 	public static readonly KeyValuePair<Int32, Single>[] roundBasedHealthIncrease; //Field offset: 0x0
 	public const float healthIncreaseMax = 99999; //Field offset: 0x0
 	public const float superCeramicAdditionalCash = 86; //Field offset: 0x0
@@ -44,7 +45,7 @@ public class ProgressiveDifficultyManager : RootBehavior
 
 	public void Revert() { }
 
-	private void UpdateDifficulty(int roundArrayIndex, Simulation sim) { }
+	private void UpdateDifficulty(int roundArrayIndex, Simulation sim, int fromRound) { }
 
 }
 

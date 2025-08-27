@@ -26,6 +26,8 @@ public static class IJobForExtensions
 	}
 
 
+	public static void EarlyJobInit() { }
+
 	private static IntPtr GetReflectionData() { }
 
 	[Extension]

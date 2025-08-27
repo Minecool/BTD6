@@ -30,7 +30,7 @@ internal class RuntimeFieldInfo : RtFieldInfo, ISerializable
 
 	public virtual Type FieldType
 	{
-		 get { } //Length: 110
+		 get { } //Length: 82
 	}
 
 	public virtual int MetadataToken
@@ -40,7 +40,7 @@ internal class RuntimeFieldInfo : RtFieldInfo, ISerializable
 
 	public virtual Module Module
 	{
-		 get { } //Length: 137
+		 get { } //Length: 136
 	}
 
 	public virtual string Name
@@ -55,7 +55,7 @@ internal class RuntimeFieldInfo : RtFieldInfo, ISerializable
 
 	private RuntimeType ReflectedTypeInternal
 	{
-		private get { } //Length: 125
+		private get { } //Length: 129
 	}
 
 	public RuntimeFieldInfo() { }

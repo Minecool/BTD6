@@ -29,7 +29,7 @@ public class XmlSchemaAnyAttribute : XmlSchemaAnnotated
 	[XmlIgnore]
 	internal XmlSchemaContentProcessing ProcessContentsCorrect
 	{
-		internal get { } //Length: 15
+		internal get { } //Length: 14
 	}
 
 	public XmlSchemaAnyAttribute() { }

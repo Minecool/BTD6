@@ -64,7 +64,7 @@ internal class ProfilerFrameData
 	public T2 Item
 	{
 		 get { } //Length: 235
-		 set { } //Length: 464
+		 set { } //Length: 463
 	}
 
 	public T2[] Values

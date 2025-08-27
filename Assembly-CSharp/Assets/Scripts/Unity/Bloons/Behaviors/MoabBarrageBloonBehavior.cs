@@ -39,7 +39,7 @@ public class MoabBarrageBloonBehavior : BloonBehavior
 
 	public virtual BloonBehaviorModel Def
 	{
-		 get { } //Length: 1371
+		 get { } //Length: 1372
 	}
 
 	public MoabBarrageBloonBehavior() { }

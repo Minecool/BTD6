@@ -10,11 +10,19 @@ public static class VFXManager
 
 	private static VFXManager() { }
 
-	private static void Internal_ProcessCameraCommand(Camera cam, CommandBuffer cmd, VFXCameraXRSettings camXRSettings, IntPtr cullResults) { }
+	private static void Internal_ProcessCameraCommand(Camera cam, CommandBuffer cmd, VFXCameraXRSettings camXRSettings, IntPtr cullResults, IntPtr customPassCullResults) { }
 
-	private static void Internal_ProcessCameraCommand_Injected(Camera cam, CommandBuffer cmd, ref VFXCameraXRSettings camXRSettings, IntPtr cullResults) { }
+	private static void Internal_ProcessCameraCommand_Injected(IntPtr cam, IntPtr cmd, in VFXCameraXRSettings camXRSettings, IntPtr cullResults, IntPtr customPassCullResults) { }
+
+	public static VFXCameraBufferTypes IsCameraBufferNeeded(Camera cam) { }
+
+	private static VFXCameraBufferTypes IsCameraBufferNeeded_Injected(IntPtr cam) { }
 
 	public static void ProcessCameraCommand(Camera cam, CommandBuffer cmd, VFXCameraXRSettings camXRSettings, CullingResults results) { }
+
+	public static void SetCameraBuffer(Camera cam, VFXCameraBufferTypes type, Texture buffer, int x, int y, int width, int height) { }
+
+	private static void SetCameraBuffer_Injected(IntPtr cam, VFXCameraBufferTypes type, IntPtr buffer, int x, int y, int width, int height) { }
 
 }
 

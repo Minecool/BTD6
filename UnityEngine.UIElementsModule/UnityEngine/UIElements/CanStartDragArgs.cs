@@ -1,7 +1,7 @@
 namespace UnityEngine.UIElements;
 
 [IsReadOnly]
-internal struct CanStartDragArgs
+public struct CanStartDragArgs
 {
 	public readonly VisualElement draggedElement; //Field offset: 0x0
 	public readonly int id; //Field offset: 0x8

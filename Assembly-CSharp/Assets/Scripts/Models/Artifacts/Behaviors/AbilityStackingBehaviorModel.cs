@@ -23,7 +23,7 @@ public class AbilityStackingBehaviorModel : ItemArtifactBehaviorModel
 
 	public AbilityStackingMutator Mutator
 	{
-		 get { } //Length: 242
+		 get { } //Length: 244
 	}
 
 	public AbilityStackingBehaviorModel(string name, int stackCount, String[] towerTypes, bool inverseTowerTypes, TowerSet[] towerSets, bool inverseSets) { }

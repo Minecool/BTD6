@@ -15,7 +15,7 @@ public struct SqlGuid : INullable, IComparable, IXmlSerializable
 
 	public Guid Value
 	{
-		 get { } //Length: 161
+		 get { } //Length: 160
 	}
 
 	private static SqlGuid() { }

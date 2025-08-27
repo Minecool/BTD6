@@ -28,7 +28,7 @@ public class ActivateRateSupportZone : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 703
+		 get { } //Length: 705
 	}
 
 	public ActivateRateSupportZone() { }

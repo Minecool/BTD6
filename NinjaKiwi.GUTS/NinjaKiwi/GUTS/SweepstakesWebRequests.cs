@@ -4,7 +4,7 @@ namespace NinjaKiwi.GUTS;
 public static class SweepstakesWebRequests
 {
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_CanParticipate>d__10 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_CanParticipate>d__11 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesParticipationResponse> <>t__builder; //Field offset: 0x0
@@ -19,7 +19,7 @@ public static class SweepstakesWebRequests
 	}
 
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_Claim>d__6 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_Claim>d__7 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesTicketClaimResponse> <>t__builder; //Field offset: 0x0
@@ -37,7 +37,7 @@ public static class SweepstakesWebRequests
 	}
 
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_ClaimMulti>d__7 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_ClaimMulti>d__8 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesTicketClaimResponse> <>t__builder; //Field offset: 0x0
@@ -54,7 +54,7 @@ public static class SweepstakesWebRequests
 	}
 
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_DEBUG_Reset>d__12 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_DEBUG_Reset>d__13 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesStatusResponse> <>t__builder; //Field offset: 0x0
@@ -69,7 +69,23 @@ public static class SweepstakesWebRequests
 	}
 
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_DEBUG_Unlock>d__13 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_DEBUG_Unlock>d__14 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder<SweepstakesStatusResponse> <>t__builder; //Field offset: 0x0
+		public Player<T> player; //Field offset: 0x0
+		public string eventId; //Field offset: 0x0
+		private TaskAwaiter<SweepstakesStatusResponse> <>u__1; //Field offset: 0x0
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <SWEEPSTAKES_GetCachedStatus>d__6 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesStatusResponse> <>t__builder; //Field offset: 0x0
@@ -102,7 +118,7 @@ public static class SweepstakesWebRequests
 	}
 
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_GetWinners>d__11 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_GetWinners>d__12 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesWinnersResponse> <>t__builder; //Field offset: 0x0
@@ -118,7 +134,7 @@ public static class SweepstakesWebRequests
 	}
 
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_SeeShareCode>d__9 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_SeeShareCode>d__10 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesTicketClaimResponse> <>t__builder; //Field offset: 0x0
@@ -135,7 +151,7 @@ public static class SweepstakesWebRequests
 	}
 
 	[CompilerGenerated]
-	private struct <SWEEPSTAKES_ShareCode>d__8 : IAsyncStateMachine
+	private struct <SWEEPSTAKES_ShareCode>d__9 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<SweepstakesShareCodeResponse> <>t__builder; //Field offset: 0x0
@@ -170,39 +186,43 @@ public static class SweepstakesWebRequests
 
 	private static bool get_CanUseCache() { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_CanParticipate>d__10`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_CanParticipate>d__11`1))]
 	[Extension]
 	public static Task<SweepstakesParticipationResponse> SWEEPSTAKES_CanParticipate(Player<T> player) { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_Claim>d__6`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_Claim>d__7`1))]
 	[Extension]
 	public static Task<SweepstakesTicketClaimResponse> SWEEPSTAKES_Claim(Player<T> player, string eventId, int taskIndex, int taskStepIndex) { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_ClaimMulti>d__7`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_ClaimMulti>d__8`1))]
 	[Extension]
 	public static Task<SweepstakesTicketClaimResponse> SWEEPSTAKES_ClaimMulti(Player<T> player, string eventId, Dictionary<Int32, List`1<Int32>> tasksStepsIndexes) { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_DEBUG_Reset>d__12`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_DEBUG_Reset>d__13`1))]
 	[Extension]
 	public static Task<SweepstakesStatusResponse> SWEEPSTAKES_DEBUG_Reset(Player<T> player) { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_DEBUG_Unlock>d__13`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_DEBUG_Unlock>d__14`1))]
 	[Extension]
 	public static Task<SweepstakesStatusResponse> SWEEPSTAKES_DEBUG_Unlock(Player<T> player, string eventId) { }
+
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_GetCachedStatus>d__6`1))]
+	[Extension]
+	public static Task<SweepstakesStatusResponse> SWEEPSTAKES_GetCachedStatus(Player<T> player, string eventId) { }
 
 	[AsyncStateMachine(typeof(<SWEEPSTAKES_GetStatus>d__5`1))]
 	[Extension]
 	public static Task<SweepstakesStatusResponse> SWEEPSTAKES_GetStatus(Player<T> player, string eventId, bool canForceRefresh = false) { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_GetWinners>d__11`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_GetWinners>d__12`1))]
 	[Extension]
 	public static Task<SweepstakesWinnersResponse> SWEEPSTAKES_GetWinners(Player<T> player, string eventId) { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_SeeShareCode>d__9`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_SeeShareCode>d__10`1))]
 	[Extension]
 	public static Task<SweepstakesTicketClaimResponse> SWEEPSTAKES_SeeShareCode(Player<T> player, string eventId, string shareCode) { }
 
-	[AsyncStateMachine(typeof(<SWEEPSTAKES_ShareCode>d__8`1))]
+	[AsyncStateMachine(typeof(<SWEEPSTAKES_ShareCode>d__9`1))]
 	[Extension]
 	public static Task<SweepstakesShareCodeResponse> SWEEPSTAKES_ShareCode(Player<T> player, string eventId) { }
 

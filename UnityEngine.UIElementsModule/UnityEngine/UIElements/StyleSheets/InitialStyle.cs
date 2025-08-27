@@ -319,6 +319,11 @@ internal static class InitialStyle
 		 get { } //Length: 116
 	}
 
+	public static EditorTextRenderingMode unityEditorTextRenderingMode
+	{
+		 get { } //Length: 99
+	}
+
 	public static Font unityFont
 	{
 		 get { } //Length: 100
@@ -369,7 +374,17 @@ internal static class InitialStyle
 		 get { } //Length: 103
 	}
 
+	public static SliceType unitySliceType
+	{
+		 get { } //Length: 103
+	}
+
 	public static TextAnchor unityTextAlign
+	{
+		 get { } //Length: 99
+	}
+
+	public static TextGeneratorType unityTextGenerator
 	{
 		 get { } //Length: 99
 	}
@@ -391,7 +406,7 @@ internal static class InitialStyle
 
 	public static Visibility visibility
 	{
-		 get { } //Length: 99
+		 get { } //Length: 102
 	}
 
 	public static WhiteSpace whiteSpace
@@ -541,6 +556,8 @@ internal static class InitialStyle
 
 	public static Color get_unityBackgroundImageTintColor() { }
 
+	public static EditorTextRenderingMode get_unityEditorTextRenderingMode() { }
+
 	public static Font get_unityFont() { }
 
 	public static FontDefinition get_unityFontDefinition() { }
@@ -561,7 +578,11 @@ internal static class InitialStyle
 
 	public static int get_unitySliceTop() { }
 
+	public static SliceType get_unitySliceType() { }
+
 	public static TextAnchor get_unityTextAlign() { }
+
+	public static TextGeneratorType get_unityTextGenerator() { }
 
 	public static Color get_unityTextOutlineColor() { }
 

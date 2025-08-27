@@ -75,12 +75,12 @@ public class InputDevice : InputControl
 
 	internal bool canDeviceRunInBackground
 	{
-		internal get { } //Length: 187
+		internal get { } //Length: 171
 	}
 
 	public bool canRunInBackground
 	{
-		 get { } //Length: 187
+		 get { } //Length: 171
 	}
 
 	public InputDeviceDescription description
@@ -113,7 +113,7 @@ public class InputDevice : InputControl
 
 	public bool enabled
 	{
-		 get { } //Length: 203
+		 get { } //Length: 180
 	}
 
 	internal bool hasControlsWithDefaultState
@@ -173,7 +173,7 @@ public class InputDevice : InputControl
 
 	public virtual Type valueType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 77
 	}
 
 	public bool wasUpdatedThisFrame

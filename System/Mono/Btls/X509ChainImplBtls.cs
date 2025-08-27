@@ -13,7 +13,7 @@ internal class X509ChainImplBtls : X509ChainImpl
 
 	public virtual X509ChainElementCollection ChainElements
 	{
-		 get { } //Length: 623
+		 get { } //Length: 638
 	}
 
 	public virtual X509ChainPolicy ChainPolicy
@@ -23,7 +23,7 @@ internal class X509ChainImplBtls : X509ChainImpl
 
 	public virtual bool IsValid
 	{
-		 get { } //Length: 21
+		 get { } //Length: 19
 	}
 
 	internal MonoBtlsX509StoreCtx StoreCtx

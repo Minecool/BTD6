@@ -22,7 +22,7 @@ public class Submerge : TowerBehaviorBuff
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 916
+		 get { } //Length: 914
 	}
 
 	public Submerge() { }

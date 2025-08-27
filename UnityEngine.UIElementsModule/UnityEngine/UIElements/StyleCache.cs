@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal static class StyleCache
 {
 	private static Dictionary<Int64, ComputedStyle> s_ComputedStyleCache; //Field offset: 0x0

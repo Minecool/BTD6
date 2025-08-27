@@ -17,11 +17,11 @@ public class ContextualMenuPopulateEvent : MouseEventBase<ContextualMenuPopulate
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private DropdownMenu <menu>k__BackingField; //Field offset: 0xC0
+	private DropdownMenu <menu>k__BackingField; //Field offset: 0xA0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private EventBase <triggerEvent>k__BackingField; //Field offset: 0xC8
-	private ContextualMenuManager m_ContextualMenuManager; //Field offset: 0xD0
+	private EventBase <triggerEvent>k__BackingField; //Field offset: 0xA8
+	private ContextualMenuManager m_ContextualMenuManager; //Field offset: 0xB0
 
 	public private DropdownMenu menu
 	{

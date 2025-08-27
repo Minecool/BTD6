@@ -35,7 +35,7 @@ public class MonkeyTempleModel : TowerBehaviorModel
 
 	public TCBOOMutator TcbooMutator
 	{
-		 get { } //Length: 225
+		 get { } //Length: 229
 	}
 
 	public MonkeyTempleModel(string name, int towerGroupCount, EffectModel effectModel, EffectModel towerEffectModel, EffectModel heroEffectModel, SoundModel darkTransformSound, SoundModel darkAltTransformSound, int animation, int upgradeAnimation, float weaponDelay, string templeId, EffectModel transformationEffect, EffectModel theAntiBloonSacrificeEffect, EffectModel legendOfTheNightSacrificeEffect, int transformationAnimation, float transformationWeaponDelay, float heroOverlapYAdjustment) { }

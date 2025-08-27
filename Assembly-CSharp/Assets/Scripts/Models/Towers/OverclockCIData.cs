@@ -7,6 +7,7 @@ public class OverclockCIData
 	public string helperMsg; //Field offset: 0x20
 	public string helperMsgBanned; //Field offset: 0x28
 	public bool isParagonMode; //Field offset: 0x30
+	public string helperMsgCantActivate; //Field offset: 0x38
 
 	public OverclockCIData() { }
 

@@ -11,13 +11,13 @@ public class TriangulationConstraint : Edge
 
 	public TriangulationPoint P
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 		 set { } //Length: 76
 	}
 
 	public TriangulationPoint Q
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 		 set { } //Length: 76
 	}
 

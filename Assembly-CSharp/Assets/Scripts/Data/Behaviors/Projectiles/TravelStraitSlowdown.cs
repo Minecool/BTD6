@@ -11,7 +11,7 @@ public class TravelStraitSlowdown : TravelStrait
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 251
+		 get { } //Length: 239
 	}
 
 	public TravelStraitSlowdown() { }

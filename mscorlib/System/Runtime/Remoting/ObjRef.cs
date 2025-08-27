@@ -31,7 +31,7 @@ public class ObjRef : IObjectReference, ISerializable
 
 	internal Type ServerType
 	{
-		internal get { } //Length: 212
+		internal get { } //Length: 200
 	}
 
 	public override IRemotingTypeInfo TypeInfo

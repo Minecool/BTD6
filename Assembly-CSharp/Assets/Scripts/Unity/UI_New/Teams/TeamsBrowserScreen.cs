@@ -387,7 +387,7 @@ public class TeamsBrowserScreen : GameMenu
 
 	private bool CanCreateOrJoinATeam
 	{
-		private get { } //Length: 106
+		private get { } //Length: 109
 	}
 
 	private bool HasOutgoingApplicationToShow
@@ -397,7 +397,7 @@ public class TeamsBrowserScreen : GameMenu
 
 	private int MaxPages
 	{
-		private get { } //Length: 240
+		private get { } //Length: 238
 	}
 
 	public static int MaxTeamSize

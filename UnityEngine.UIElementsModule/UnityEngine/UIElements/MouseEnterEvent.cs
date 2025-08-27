@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::EnterLeave (3))]
+[EventCategory(EventCategory::EnterLeave (4))]
 public class MouseEnterEvent : MouseEventBase<MouseEnterEvent>
 {
 	[CompilerGenerated]
@@ -20,6 +20,8 @@ public class MouseEnterEvent : MouseEventBase<MouseEnterEvent>
 	private static MouseEnterEvent() { }
 
 	public MouseEnterEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	protected virtual void Init() { }
 

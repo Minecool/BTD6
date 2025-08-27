@@ -31,7 +31,7 @@ public class JTokenReader : JsonReader, IJsonLineInfo
 
 	public virtual string Path
 	{
-		 get { } //Length: 229
+		 get { } //Length: 233
 	}
 
 	public JTokenReader(JToken token) { }

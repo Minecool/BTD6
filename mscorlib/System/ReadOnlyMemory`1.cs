@@ -16,7 +16,7 @@ public struct ReadOnlyMemory : IEquatable<ReadOnlyMemory`1<T>>
 
 	public ReadOnlySpan<T> Span
 	{
-		 get { } //Length: 1085
+		 get { } //Length: 956
 	}
 
 	public ReadOnlyMemory`1(T[] array) { }

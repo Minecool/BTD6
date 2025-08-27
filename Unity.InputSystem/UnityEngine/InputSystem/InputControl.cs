@@ -68,7 +68,7 @@ public abstract class InputControl
 
 	public string displayName
 	{
-		 get { } //Length: 102
+		 get { } //Length: 86
 		 set { } //Length: 5
 	}
 
@@ -80,7 +80,7 @@ public abstract class InputControl
 
 	internal bool hasDefaultState
 	{
-		internal get { } //Length: 25
+		internal get { } //Length: 28
 	}
 
 	internal bool isButton
@@ -144,7 +144,7 @@ public abstract class InputControl
 
 	public string path
 	{
-		 get { } //Length: 262
+		 get { } //Length: 250
 	}
 
 	protected private Void* previousFrameStatePtr
@@ -154,7 +154,7 @@ public abstract class InputControl
 
 	public string shortDisplayName
 	{
-		 get { } //Length: 83
+		 get { } //Length: 60
 		 set { } //Length: 5
 	}
 

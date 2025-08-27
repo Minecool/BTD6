@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class BindableElement : VisualElement, IBindable
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<BindableElement, UxmlTraits>
 	{
 
@@ -9,9 +10,10 @@ public class BindableElement : VisualElement, IBindable
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private UxmlStringAttributeDescription m_PropertyPath; //Field offset: 0x70
+		private UxmlStringAttributeDescription m_PropertyPath; //Field offset: 0x88
 
 		public UxmlTraits() { }
 
@@ -19,12 +21,13 @@ public class BindableElement : VisualElement, IBindable
 
 	}
 
+	internal const string k_BindingPathTooltip = "Default method to define a path to a serialized property. Most often used for Editor extensions and inspectors."; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private IBinding <binding>k__BackingField; //Field offset: 0x3C8
+	private IBinding <binding>k__BackingField; //Field offset: 0x4A8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <bindingPath>k__BackingField; //Field offset: 0x3D0
+	private string <bindingPath>k__BackingField; //Field offset: 0x4B0
 
 	public override IBinding binding
 	{

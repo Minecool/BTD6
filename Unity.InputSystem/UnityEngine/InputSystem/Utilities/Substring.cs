@@ -19,7 +19,7 @@ internal struct Substring : IComparable<Substring>, IEquatable<Substring>
 
 	public char Item
 	{
-		 get { } //Length: 126
+		 get { } //Length: 130
 	}
 
 	public int length

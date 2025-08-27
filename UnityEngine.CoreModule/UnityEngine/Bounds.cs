@@ -27,20 +27,20 @@ public struct Bounds : IEquatable<Bounds>, IFormattable
 
 	public Vector3 max
 	{
-		 get { } //Length: 63
-		 set { } //Length: 154
+		 get { } //Length: 90
+		 set { } //Length: 187
 	}
 
 	public Vector3 min
 	{
-		 get { } //Length: 63
-		 set { } //Length: 140
+		 get { } //Length: 90
+		 set { } //Length: 195
 	}
 
 	public Vector3 size
 	{
-		 get { } //Length: 59
-		 set { } //Length: 56
+		 get { } //Length: 78
+		 set { } //Length: 75
 	}
 
 	public Bounds(Vector3 center, Vector3 size) { }
@@ -64,6 +64,8 @@ public struct Bounds : IEquatable<Bounds>, IFormattable
 	public Vector3 get_size() { }
 
 	public virtual int GetHashCode() { }
+
+	public bool Intersects(Bounds bounds) { }
 
 	public static bool op_Equality(Bounds lhs, Bounds rhs) { }
 

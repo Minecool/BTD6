@@ -1,17 +1,19 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::Command (14))]
-public abstract class CommandEventBase : EventBase<T>, ICommandEvent
+[EventCategory(EventCategory::Command (15))]
+public abstract class CommandEventBase : EventBase<T>
 {
 	private string m_CommandName; //Field offset: 0x0
 
 	public override string commandName
 	{
-		 get { } //Length: 79
-		 set { } //Length: 8
+		 get { } //Length: 73
+		 set { } //Length: 5
 	}
 
 	protected CommandEventBase`1() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	public override string get_commandName() { }
 

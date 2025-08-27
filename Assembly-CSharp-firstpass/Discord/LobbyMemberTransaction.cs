@@ -42,7 +42,7 @@ public struct LobbyMemberTransaction
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 259
+		private get { } //Length: 247
 	}
 
 	public void DeleteMetadata(string key) { }

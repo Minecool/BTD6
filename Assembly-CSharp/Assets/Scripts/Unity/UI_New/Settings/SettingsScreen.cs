@@ -6,24 +6,18 @@ public class SettingsScreen : GameMenu
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static UnityAction <>9__50_0; //Field offset: 0x8
-		public static Func<UpdatePopupEvent, Boolean> <>9__50_1; //Field offset: 0x10
-		public static Func<UpdatePopupEvent, Boolean> <>9__50_2; //Field offset: 0x18
+		public static UnityAction <>9__47_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <Open>b__50_0() { }
-
-		internal bool <Open>b__50_1(UpdatePopupEvent x) { }
-
-		internal bool <Open>b__50_2(UpdatePopupEvent x) { }
+		internal void <Open>b__47_0() { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <BackUpData>d__55 : IAsyncStateMachine
+	private struct <BackUpData>d__52 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -38,22 +32,7 @@ public class SettingsScreen : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <ClaimGiftClickedAsync>d__73 : IAsyncStateMachine
-	{
-		public int <>1__state; //Field offset: 0x0
-		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
-		public SettingsScreen <>4__this; //Field offset: 0x28
-		private TaskAwaiter<Boolean> <>u__1; //Field offset: 0x30
-
-		private override void MoveNext() { }
-
-		[DebuggerHidden]
-		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
-
-	}
-
-	[CompilerGenerated]
-	private struct <OnReviewDataConsent>d__71 : IAsyncStateMachine
+	private struct <OnReviewDataConsent>d__68 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -88,31 +67,28 @@ public class SettingsScreen : GameMenu
 	public Button nexusBtn; //Field offset: 0xD0
 	public Button twitchBtn; //Field offset: 0xD8
 	public Button logoutBtn; //Field offset: 0xE0
-	public GameObject giftCodeRedemptionContainer; //Field offset: 0xE8
-	public Button giftCodeRedemptionBtn; //Field offset: 0xF0
-	public Image jukeBoxTickImg; //Field offset: 0xF8
-	public GameObject extraSettingsBtnNotify; //Field offset: 0x100
-	public GameObject doubleCashPopup; //Field offset: 0x108
-	private float doubleCashHideTime; //Field offset: 0x110
-	public Button toggleDebug; //Field offset: 0x118
-	public GameObject debugPanel; //Field offset: 0x120
-	public Button giftDC; //Field offset: 0x128
-	public Button giftBB; //Field offset: 0x130
-	public Button giftSB; //Field offset: 0x138
-	public Button giftBT; //Field offset: 0x140
-	public Button giftST; //Field offset: 0x148
-	public ScreenSizeDropDown screenSizeDropDown; //Field offset: 0x150
-	public GameObject updateNotes; //Field offset: 0x158
-	public GameObject dataConsentContainer; //Field offset: 0x160
-	public Button dataConsentReviewBtn; //Field offset: 0x168
-	public NK_TextMeshProUGUI dataConsentText; //Field offset: 0x170
-	public GameObject dataConsentTick; //Field offset: 0x178
-	public Slider voiceSlider; //Field offset: 0x180
+	public Image jukeBoxTickImg; //Field offset: 0xE8
+	public GameObject extraSettingsBtnNotify; //Field offset: 0xF0
+	public GameObject doubleCashPopup; //Field offset: 0xF8
+	private float doubleCashHideTime; //Field offset: 0x100
+	public Button toggleDebug; //Field offset: 0x108
+	public GameObject debugPanel; //Field offset: 0x110
+	public Button giftDC; //Field offset: 0x118
+	public Button giftBB; //Field offset: 0x120
+	public Button giftSB; //Field offset: 0x128
+	public Button giftBT; //Field offset: 0x130
+	public Button giftST; //Field offset: 0x138
+	public ScreenSizeDropDown screenSizeDropDown; //Field offset: 0x140
+	public GameObject updateNotes; //Field offset: 0x148
+	public GameObject dataConsentContainer; //Field offset: 0x150
+	public Button dataConsentReviewBtn; //Field offset: 0x158
+	public NK_TextMeshProUGUI dataConsentText; //Field offset: 0x160
+	public GameObject dataConsentTick; //Field offset: 0x168
+	public Slider voiceSlider; //Field offset: 0x170
 	[SerializeField]
-	private Button rogueResetBtn; //Field offset: 0x188
-	private bool autoHide; //Field offset: 0x190
-	private float hideTime; //Field offset: 0x194
-	private UpdatePopupEvent updatePopupEvent; //Field offset: 0x198
+	private Button rogueResetBtn; //Field offset: 0x178
+	private bool autoHide; //Field offset: 0x180
+	private float hideTime; //Field offset: 0x184
 
 	private LegendsDataModel LegendsData
 	{
@@ -127,22 +103,19 @@ public class SettingsScreen : GameMenu
 	public SettingsScreen() { }
 
 	[CompilerGenerated]
-	private void <GamepadInit>b__53_0(InputSystemMode x) { }
+	private void <GamepadInit>b__50_0(InputSystemMode x) { }
 
 	[CompilerGenerated]
-	private GameObject <Open>b__50_3() { }
+	private GameObject <Open>b__47_1() { }
 
 	private void AccessibilityClicked() { }
 
 	protected virtual void Awake() { }
 
-	[AsyncStateMachine(typeof(<BackUpData>d__55))]
+	[AsyncStateMachine(typeof(<BackUpData>d__52))]
 	private void BackUpData() { }
 
 	private void CheckExtraSettingBtn() { }
-
-	[AsyncStateMachine(typeof(<ClaimGiftClickedAsync>d__73))]
-	private void ClaimGiftClickedAsync() { }
 
 	private void ExtraSettingsClicked() { }
 
@@ -164,7 +137,7 @@ public class SettingsScreen : GameMenu
 
 	public void OnDestroy() { }
 
-	[AsyncStateMachine(typeof(<OnReviewDataConsent>d__71))]
+	[AsyncStateMachine(typeof(<OnReviewDataConsent>d__68))]
 	private void OnReviewDataConsent() { }
 
 	public virtual void Open(object menuData) { }

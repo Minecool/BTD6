@@ -114,7 +114,7 @@ internal class InputUserSettings
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public float vibrationStrength

@@ -64,7 +64,7 @@ public class CancellableWait
 
 	public Task Task
 	{
-		 get { } //Length: 102
+		 get { } //Length: 100
 	}
 
 	public CancellableWait(TimeSpan waitTime, bool autoStart) { }

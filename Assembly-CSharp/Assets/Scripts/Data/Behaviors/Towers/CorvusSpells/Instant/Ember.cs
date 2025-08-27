@@ -7,7 +7,7 @@ public class Ember : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 721
+		 get { } //Length: 732
 	}
 
 	public Ember() { }

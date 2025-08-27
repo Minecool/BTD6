@@ -7,8 +7,6 @@ public class OutOfMemoryException : SystemException
 
 	public OutOfMemoryException(string message) { }
 
-	public OutOfMemoryException(string message, Exception innerException) { }
-
 	protected OutOfMemoryException(SerializationInfo info, StreamingContext context) { }
 
 }

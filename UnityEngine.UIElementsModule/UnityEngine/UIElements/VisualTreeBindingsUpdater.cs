@@ -12,15 +12,15 @@ internal class VisualTreeBindingsUpdater : BaseVisualTreeHierarchyTrackerUpdater
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private static bool <disableBindingsThrottling>k__BackingField; //Field offset: 0x30
-	private readonly HashSet<VisualElement> m_ElementsWithBindings; //Field offset: 0x38
-	private readonly HashSet<VisualElement> m_ElementsToAdd; //Field offset: 0x40
-	private readonly HashSet<VisualElement> m_ElementsToRemove; //Field offset: 0x48
-	private long m_LastUpdateTime; //Field offset: 0x50
-	private HashSet<VisualElement> m_ElementsToBind; //Field offset: 0x58
+	private readonly HashSet<VisualElement> m_ElementsWithBindings; //Field offset: 0x40
+	private readonly HashSet<VisualElement> m_ElementsToAdd; //Field offset: 0x48
+	private readonly HashSet<VisualElement> m_ElementsToRemove; //Field offset: 0x50
+	private long m_LastUpdateTime; //Field offset: 0x58
+	private HashSet<VisualElement> m_ElementsToBind; //Field offset: 0x60
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Dictionary<Object, Object> <temporaryObjectCache>k__BackingField; //Field offset: 0x60
-	private List<IBinding> updatedBindings; //Field offset: 0x68
+	private Dictionary<Object, Object> <temporaryObjectCache>k__BackingField; //Field offset: 0x68
+	private List<IBinding> updatedBindings; //Field offset: 0x70
 
 	public static bool disableBindingsThrottling
 	{
@@ -45,6 +45,8 @@ internal class VisualTreeBindingsUpdater : BaseVisualTreeHierarchyTrackerUpdater
 
 	private static long CurrentTime() { }
 
+	protected virtual void Dispose(bool disposing) { }
+
 	[CompilerGenerated]
 	public static bool get_disableBindingsThrottling() { }
 
@@ -62,6 +64,8 @@ internal class VisualTreeBindingsUpdater : BaseVisualTreeHierarchyTrackerUpdater
 	public virtual void OnVersionChanged(VisualElement ve, VersionChangeType versionChangeType) { }
 
 	public void PerformTrackingOperations() { }
+
+	public static bool ShouldProcessBindings(long startTime) { }
 
 	private void StartTracking(VisualElement ve) { }
 

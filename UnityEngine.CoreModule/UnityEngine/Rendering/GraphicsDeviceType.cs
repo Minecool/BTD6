@@ -27,5 +27,7 @@ public enum GraphicsDeviceType
 	GameCoreXboxSeries = 25,
 	PlayStation5 = 26,
 	PlayStation5NGGC = 27,
+	WebGPU = 28,
+	Switch2 = 29,
 }
 

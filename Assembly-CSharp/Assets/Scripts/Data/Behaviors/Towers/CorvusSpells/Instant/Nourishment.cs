@@ -8,7 +8,7 @@ public class Nourishment : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 643
+		 get { } //Length: 662
 	}
 
 	public Nourishment() { }

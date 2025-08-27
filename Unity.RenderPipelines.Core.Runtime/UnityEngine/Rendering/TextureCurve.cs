@@ -40,12 +40,9 @@ public class TextureCurve : IDisposable
 
 	public int AddKey(float time, float value) { }
 
-	[Obsolete("Please use Release() instead.")]
 	public override void Dispose() { }
 
 	public float Evaluate(float time) { }
-
-	protected virtual void Finalize() { }
 
 	public Keyframe get_Item(int index) { }
 

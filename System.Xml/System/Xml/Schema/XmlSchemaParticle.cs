@@ -38,33 +38,33 @@ public abstract class XmlSchemaParticle : XmlSchemaAnnotated
 	public decimal MaxOccurs
 	{
 		 get { } //Length: 11
-		 set { } //Length: 418
+		 set { } //Length: 410
 	}
 
 	[XmlAttribute("maxOccurs")]
 	public string MaxOccursString
 	{
 		 get { } //Length: 276
-		 set { } //Length: 565
+		 set { } //Length: 557
 	}
 
 	[XmlIgnore]
 	public decimal MinOccurs
 	{
 		 get { } //Length: 11
-		 set { } //Length: 325
+		 set { } //Length: 317
 	}
 
 	[XmlAttribute("minOccurs")]
 	public string MinOccursString
 	{
 		 get { } //Length: 110
-		 set { } //Length: 367
+		 set { } //Length: 359
 	}
 
 	internal override string NameString
 	{
-		internal get { } //Length: 54
+		internal get { } //Length: 18
 	}
 
 	private static XmlSchemaParticle() { }

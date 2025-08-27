@@ -10,7 +10,7 @@ public abstract class InputBindingComposite : InputBindingComposite
 
 	public virtual Type valueType
 	{
-		 get { } //Length: 87
+		 get { } //Length: 56
 	}
 
 	protected InputBindingComposite`1() { }

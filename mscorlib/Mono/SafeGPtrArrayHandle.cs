@@ -7,7 +7,7 @@ internal struct SafeGPtrArrayHandle : IDisposable
 
 	internal IntPtr Item
 	{
-		internal get { } //Length: 8
+		internal get { } //Length: 107
 	}
 
 	internal int Length

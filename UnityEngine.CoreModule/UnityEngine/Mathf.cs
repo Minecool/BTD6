@@ -1,19 +1,18 @@
 namespace UnityEngine;
 
 [Il2CppEagerStaticClassConstruction]
+[NativeHeader("Runtime/Math/PerlinNoise.h")]
 [NativeHeader("Runtime/Math/FloatConversion.h")]
 [NativeHeader("Runtime/Math/ColorSpaceConversion.h")]
-[NativeHeader("Runtime/Utilities/BitUtility.h")]
-[NativeHeader("Runtime/Math/PerlinNoise.h")]
 public struct Mathf
 {
 	public static readonly float Epsilon; //Field offset: 0x0
 
 	private static Mathf() { }
 
-	public static float Abs(float f) { }
-
 	public static int Abs(int value) { }
+
+	public static float Abs(float f) { }
 
 	public static float Acos(float f) { }
 
@@ -35,10 +34,13 @@ public struct Mathf
 
 	public static float Clamp01(float value) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static float ClampToFloat(double value) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule", "UnityEditor.UIBuilderModule"}])]
 	internal static int ClampToInt(long value) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static uint ClampToUInt(long value) { }
 
 	[FreeFunction(IsThreadSafe = True)]
@@ -68,7 +70,6 @@ public struct Mathf
 
 	public static float InverseLerp(float a, float b, float value) { }
 
-	[FreeFunction(IsThreadSafe = True)]
 	public static bool IsPowerOfTwo(int value) { }
 
 	public static float Lerp(float a, float b, float t) { }
@@ -86,21 +87,20 @@ public struct Mathf
 
 	public static float Log10(float f) { }
 
-	public static float Max(float a, float b) { }
-
 	public static int Max(int a, int b) { }
 
 	public static float Max(Single[] values) { }
 
-	public static float Min(float a, float b) { }
+	public static float Max(float a, float b) { }
 
 	public static int Min(int a, int b) { }
+
+	public static float Min(float a, float b) { }
 
 	public static float MoveTowards(float current, float target, float maxDelta) { }
 
 	public static float MoveTowardsAngle(float current, float target, float maxDelta) { }
 
-	[FreeFunction(IsThreadSafe = True)]
 	public static int NextPowerOfTwo(int value) { }
 
 	public static float Pow(float f, float p) { }
@@ -109,6 +109,7 @@ public struct Mathf
 
 	public static float Round(float f) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static double RoundBasedOnMinimumDifference(double valueToRound, double minDifference) { }
 
 	public static int RoundToInt(float f) { }

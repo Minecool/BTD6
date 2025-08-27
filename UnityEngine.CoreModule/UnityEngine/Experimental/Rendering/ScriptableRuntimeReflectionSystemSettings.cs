@@ -15,7 +15,7 @@ public static class ScriptableRuntimeReflectionSystemSettings
 	private static IScriptableRuntimeReflectionSystem Internal_ScriptableRuntimeReflectionSystemSettings_system
 	{
 		[RequiredByNativeCode]
-		private set { } //Length: 388
+		private set { } //Length: 390
 	}
 
 	private static ScriptableRuntimeReflectionSystemSettings() { }

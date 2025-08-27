@@ -2,6 +2,14 @@ namespace Unity.Burst;
 
 public static class BurstRuntime
 {
+	private struct HashCode64
+	{
+		public static readonly long Value; //Field offset: 0x0
+
+		private static HashCode64`1() { }
+
+	}
+
 	public class PreserveAttribute : Attribute
 	{
 
@@ -9,6 +17,10 @@ public static class BurstRuntime
 
 	}
 
+
+	public static long GetHashCode64() { }
+
+	internal static long HashStringWithFNV1A64(string text) { }
 
 	[Preserve]
 	internal static void Log(Byte* message, int logType, Byte* fileName, int lineNumber) { }

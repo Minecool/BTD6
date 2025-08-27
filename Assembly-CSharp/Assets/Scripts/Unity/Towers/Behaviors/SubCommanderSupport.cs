@@ -17,7 +17,7 @@ public class SubCommanderSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 817
+		 get { } //Length: 805
 	}
 
 	public SubCommanderSupport() { }

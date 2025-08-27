@@ -10,5 +10,7 @@ public struct BatchPackedCullingViewID : IEquatable<BatchPackedCullingViewID>
 
 	public virtual int GetHashCode() { }
 
+	public int GetInstanceID() { }
+
 }
 

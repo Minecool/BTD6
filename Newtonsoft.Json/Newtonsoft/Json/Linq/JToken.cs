@@ -92,7 +92,7 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 
 	public string Path
 	{
-		 get { } //Length: 708
+		 get { } //Length: 738
 	}
 
 	[Nullable(2)]
@@ -106,7 +106,7 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 
 	public JToken Root
 	{
-		 get { } //Length: 33
+		 get { } //Length: 38
 	}
 
 	public abstract JTokenType Type
@@ -131,6 +131,11 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 	public JsonReader CreateReader() { }
 
 	public JToken DeepClone() { }
+
+	[NullableContext(2)]
+	public static bool DeepEquals(JToken t1, JToken t2) { }
+
+	internal abstract bool DeepEquals(JToken node) { }
 
 	private static JValue EnsureValue(JToken value) { }
 
@@ -164,6 +169,8 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 
 	public abstract JTokenType get_Type() { }
 
+	internal abstract int GetDeepHashCode() { }
+
 	protected override DynamicMetaObject GetMetaObject(Expression parameter) { }
 
 	private static string GetType(JToken token) { }
@@ -174,8 +181,7 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 
 	private override bool Newtonsoft.Json.IJsonLineInfo.HasLineInfo() { }
 
-	[CLSCompliant(False)]
-	public static uint op_Explicit(JToken value) { }
+	public static double op_Explicit(JToken value) { }
 
 	[NullableContext(2)]
 	public static Nullable<Int64> op_Explicit(JToken value) { }
@@ -193,20 +199,19 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 	[NullableContext(2)]
 	public static Nullable<UInt64> op_Explicit(JToken value) { }
 
-	public static double op_Explicit(JToken value) { }
+	public static float op_Explicit(JToken value) { }
 
-	[NullableContext(2)]
-	public static Nullable<Guid> op_Explicit(JToken value) { }
-
-	[NullableContext(2)]
-	public static string op_Explicit(JToken value) { }
+	public static TimeSpan op_Explicit(JToken value) { }
 
 	[CLSCompliant(False)]
 	public static ulong op_Explicit(JToken value) { }
 
 	public static Guid op_Explicit(JToken value) { }
 
-	public static TimeSpan op_Explicit(JToken value) { }
+	[NullableContext(2)]
+	public static Nullable<Guid> op_Explicit(JToken value) { }
+
+	public static DateTime op_Explicit(JToken value) { }
 
 	[NullableContext(2)]
 	public static Nullable<TimeSpan> op_Explicit(JToken value) { }
@@ -214,13 +219,15 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 	[NullableContext(2)]
 	public static Uri op_Explicit(JToken value) { }
 
-	public static float op_Explicit(JToken value) { }
+	[NullableContext(2)]
+	public static string op_Explicit(JToken value) { }
+
+	[CLSCompliant(False)]
+	public static uint op_Explicit(JToken value) { }
 
 	[CLSCompliant(False)]
 	[NullableContext(2)]
 	public static Nullable<SByte> op_Explicit(JToken value) { }
-
-	public static DateTime op_Explicit(JToken value) { }
 
 	[CLSCompliant(False)]
 	[NullableContext(2)]
@@ -229,10 +236,7 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 	[NullableContext(2)]
 	public static Nullable<Byte> op_Explicit(JToken value) { }
 
-	public static DateTimeOffset op_Explicit(JToken value) { }
-
-	[NullableContext(2)]
-	public static Nullable<Boolean> op_Explicit(JToken value) { }
+	public static bool op_Explicit(JToken value) { }
 
 	public static long op_Explicit(JToken value) { }
 
@@ -240,7 +244,7 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 	public static Nullable<DateTime> op_Explicit(JToken value) { }
 
 	[NullableContext(2)]
-	public static Nullable<DateTimeOffset> op_Explicit(JToken value) { }
+	public static Nullable<Boolean> op_Explicit(JToken value) { }
 
 	[NullableContext(2)]
 	public static Nullable<Decimal> op_Explicit(JToken value) { }
@@ -248,42 +252,45 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 	[NullableContext(2)]
 	public static Nullable<Double> op_Explicit(JToken value) { }
 
-	public static bool op_Explicit(JToken value) { }
-
-	public static int op_Explicit(JToken value) { }
-
-	public static short op_Explicit(JToken value) { }
-
-	[CLSCompliant(False)]
-	public static ushort op_Explicit(JToken value) { }
-
-	[CLSCompliant(False)]
-	public static char op_Explicit(JToken value) { }
-
-	public static byte op_Explicit(JToken value) { }
-
-	[CLSCompliant(False)]
-	public static sbyte op_Explicit(JToken value) { }
+	[NullableContext(2)]
+	public static Nullable<Char> op_Explicit(JToken value) { }
 
 	[NullableContext(2)]
-	public static Nullable<Int32> op_Explicit(JToken value) { }
+	public static Nullable<DateTimeOffset> op_Explicit(JToken value) { }
+
+	public static int op_Explicit(JToken value) { }
 
 	[NullableContext(2)]
 	public static Nullable<Int16> op_Explicit(JToken value) { }
 
 	[NullableContext(2)]
-	public static Nullable<Char> op_Explicit(JToken value) { }
+	public static Nullable<Int32> op_Explicit(JToken value) { }
 
-	public static JToken op_Implicit(string value) { }
+	[CLSCompliant(False)]
+	public static sbyte op_Explicit(JToken value) { }
+
+	public static DateTimeOffset op_Explicit(JToken value) { }
+
+	[CLSCompliant(False)]
+	public static char op_Explicit(JToken value) { }
+
+	[CLSCompliant(False)]
+	public static ushort op_Explicit(JToken value) { }
+
+	public static short op_Explicit(JToken value) { }
+
+	public static byte op_Explicit(JToken value) { }
+
+	public static JToken op_Implicit(int value) { }
 
 	public static JToken op_Implicit(float value) { }
+
+	public static JToken op_Implicit(string value) { }
 
 	[CLSCompliant(False)]
 	public static JToken op_Implicit(uint value) { }
 
 	public static JToken op_Implicit(bool value) { }
-
-	public static JToken op_Implicit(int value) { }
 
 	public static JToken ReadFrom(JsonReader reader, JsonLoadSettings settings) { }
 
@@ -319,13 +326,13 @@ public abstract class JToken : IEnumerable<JToken>, IEnumerable, IJsonLineInfo, 
 
 	private static Nullable<BigInteger> ToBigIntegerNullable(JToken value) { }
 
+	[NullableContext(2)]
+	public object ToObject(Type objectType, JsonSerializer jsonSerializer) { }
+
 	public object ToObject(Type objectType) { }
 
 	[NullableContext(2)]
 	public T ToObject() { }
-
-	[NullableContext(2)]
-	public object ToObject(Type objectType, JsonSerializer jsonSerializer) { }
 
 	public string ToString(Formatting formatting, JsonConverter[] converters) { }
 

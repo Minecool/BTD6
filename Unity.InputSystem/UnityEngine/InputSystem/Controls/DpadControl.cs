@@ -74,9 +74,9 @@ public class DpadControl : Vector2Control
 		 set { } //Length: 8
 	}
 
-	[InputControl(bit = 0, displayName = "Up")]
 	[InputControl(name = "x", layout = "DpadAxis", useStateFrom = "right", synthetic = True)]
 	[InputControl(name = "y", layout = "DpadAxis", useStateFrom = "up", synthetic = True)]
+	[InputControl(bit = 0, displayName = "Up")]
 	public ButtonControl up
 	{
 		[CompilerGenerated]

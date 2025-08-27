@@ -6,13 +6,13 @@ internal class InputManager
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<InputDevice, String> <>9__185_0; //Field offset: 0x8
+		public static Func<InputDevice, String> <>9__184_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal string <MakeDeviceNameUnique>b__185_0(InputDevice x) { }
+		internal string <MakeDeviceNameUnique>b__184_0(InputDevice x) { }
 
 	}
 
@@ -203,7 +203,6 @@ internal class InputManager
 	private InputEventStream m_InputEventStream; //Field offset: 0x418
 	private InputDeviceExecuteCommandDelegate m_DeviceFindExecuteCommandDelegate; //Field offset: 0x490
 	private int m_DeviceFindExecuteCommandDeviceId; //Field offset: 0x498
-	private bool m_HaveSentStartupAnalytics; //Field offset: 0x49C
 	internal IInputRuntime m_Runtime; //Field offset: 0x4A0
 	internal InputMetrics m_Metrics; //Field offset: 0x4A8
 	internal InputSettings m_Settings; //Field offset: 0x4E0
@@ -288,7 +287,7 @@ internal class InputManager
 
 	public InputUpdateType defaultUpdateType
 	{
-		 get { } //Length: 29
+		 get { } //Length: 24
 	}
 
 	public ReadOnlyArray<InputDevice> devices
@@ -323,7 +322,7 @@ internal class InputManager
 
 	public InputMetrics metrics
 	{
-		 get { } //Length: 422
+		 get { } //Length: 431
 	}
 
 	internal bool optimizedControlsFeatureEnabled
@@ -341,7 +340,7 @@ internal class InputManager
 	public float pollingFrequency
 	{
 		 get { } //Length: 6
-		 set { } //Length: 206
+		 set { } //Length: 201
 	}
 
 	public TypeTable processors
@@ -358,7 +357,7 @@ internal class InputManager
 	public ScrollDeltaBehavior scrollDeltaBehavior
 	{
 		 get { } //Length: 7
-		 set { } //Length: 15
+		 set { } //Length: 226
 	}
 
 	public InputSettings settings
@@ -376,9 +375,6 @@ internal class InputManager
 	private static InputManager() { }
 
 	public InputManager() { }
-
-	[CompilerGenerated]
-	private void <InstallRuntime>b__131_0() { }
 
 	[CompilerGenerated]
 	private long <TryFindMatchingControlLayout>b__94_0(ref InputDeviceCommand commandRef) { }
@@ -407,19 +403,19 @@ internal class InputManager
 
 	internal void AddAvailableDevicesThatAreNowRecognized() { }
 
-	public InputDevice AddDevice(InputDeviceDescription description, InternedString layout, string deviceName = null, int deviceId = 0, DeviceFlags deviceFlags = 0) { }
+	public InputDevice AddDevice(Type type, string name = null) { }
 
 	public void AddDevice(InputDevice device) { }
-
-	public InputDevice AddDevice(InputDeviceDescription description) { }
-
-	public InputDevice AddDevice(InputDeviceDescription description, bool throwIfNoLayoutFound, string deviceName = null, int deviceId = 0, DeviceFlags deviceFlags = 0) { }
 
 	private InputDevice AddDevice(InternedString layout, int deviceId, string deviceName = null, InputDeviceDescription deviceDescription = null, DeviceFlags deviceFlags = 0, InternedString variants = null) { }
 
 	public InputDevice AddDevice(string layout, string name = null, InternedString variants = null) { }
 
-	public InputDevice AddDevice(Type type, string name = null) { }
+	public InputDevice AddDevice(InputDeviceDescription description, bool throwIfNoLayoutFound, string deviceName = null, int deviceId = 0, DeviceFlags deviceFlags = 0) { }
+
+	public InputDevice AddDevice(InputDeviceDescription description, InternedString layout, string deviceName = null, int deviceId = 0, DeviceFlags deviceFlags = 0) { }
+
+	public InputDevice AddDevice(InputDeviceDescription description) { }
 
 	public void AddDeviceUsage(InputDevice device, InternedString usage) { }
 
@@ -547,11 +543,11 @@ internal class InputManager
 
 	private void ProcessStateChangeMonitorTimeouts() { }
 
-	private void QueueEvent(InputEvent* eventPtr) { }
-
 	public void QueueEvent(InputEventPtr ptr) { }
 
 	public void QueueEvent(ref TEvent inputEvent) { }
+
+	private void QueueEvent(InputEvent* eventPtr) { }
 
 	private void ReallocateStateBuffers() { }
 
@@ -561,19 +557,19 @@ internal class InputManager
 
 	private void RecreateDevicesUsingLayoutWithInferiorMatch(InputDeviceMatcher deviceMatcher) { }
 
-	public void RegisterControlLayout(string json, string name = null, bool isOverride = false) { }
-
 	public void RegisterControlLayout(string name, Type type) { }
+
+	public void RegisterControlLayout(string json, string name = null, bool isOverride = false) { }
 
 	public void RegisterControlLayoutBuilder(Func<InputControlLayout> method, string name, string baseLayout = null) { }
 
-	public void RegisterControlLayoutMatcher(string layoutName, InputDeviceMatcher matcher) { }
-
 	public void RegisterControlLayoutMatcher(Type type, InputDeviceMatcher matcher) { }
 
-	private void RegisterCustomTypes(Type[] types) { }
+	public void RegisterControlLayoutMatcher(string layoutName, InputDeviceMatcher matcher) { }
 
 	private void RegisterCustomTypes() { }
+
+	private void RegisterCustomTypes(Type[] types) { }
 
 	public void RegisterPrecompiledLayout(string metadata) { }
 
@@ -645,15 +641,15 @@ internal class InputManager
 
 	public InternedString TryFindMatchingControlLayout(ref InputDeviceDescription deviceDescription, int deviceId = 0) { }
 
-	public InputDevice TryGetDevice(string nameOrLayout) { }
-
 	public InputDevice TryGetDevice(Type layoutType) { }
+
+	public InputDevice TryGetDevice(string nameOrLayout) { }
 
 	public InputDevice TryGetDeviceById(int id) { }
 
-	public InputControlLayout TryLoadControlLayout(Type type) { }
-
 	public InputControlLayout TryLoadControlLayout(InternedString name) { }
+
+	public InputControlLayout TryLoadControlLayout(Type type) { }
 
 	private InputDevice TryMatchDisconnectedDevice(string deviceDescriptor) { }
 

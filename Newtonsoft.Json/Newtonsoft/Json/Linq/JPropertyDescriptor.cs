@@ -7,7 +7,7 @@ public class JPropertyDescriptor : PropertyDescriptor
 
 	public virtual Type ComponentType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 77
 	}
 
 	public virtual bool IsReadOnly
@@ -22,7 +22,7 @@ public class JPropertyDescriptor : PropertyDescriptor
 
 	public virtual Type PropertyType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 50
 	}
 
 	public JPropertyDescriptor(string name) { }

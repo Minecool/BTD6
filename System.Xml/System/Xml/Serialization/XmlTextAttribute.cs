@@ -8,7 +8,7 @@ public class XmlTextAttribute : Attribute
 
 	public string DataType
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	public Type Type

@@ -8,6 +8,8 @@ public class DiscountZone : TowerBehaviorBuff
 
 	private BuffQuery CheckUpgradePathForBuffViability(BuffQuery result, string upgrade) { }
 
+	public virtual float GetBuffRange() { }
+
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 
 	public virtual BuffQuery TestPlacementTowerBuff(TowerModel placementModel, Vector3 placementPosition, int owner) { }

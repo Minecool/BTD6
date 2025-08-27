@@ -41,67 +41,67 @@ public sealed class RectTransform : Transform
 
 	public Vector2 anchoredPosition
 	{
-		 get { } //Length: 68
-		 set { } //Length: 61
+		 get { } //Length: 137
+		 set { } //Length: 128
 	}
 
 	public Vector3 anchoredPosition3D
 	{
-		 get { } //Length: 139
-		 set { } //Length: 146
+		 get { } //Length: 295
+		 set { } //Length: 375
 	}
 
 	public Vector2 anchorMax
 	{
-		 get { } //Length: 68
-		 set { } //Length: 61
+		 get { } //Length: 137
+		 set { } //Length: 128
 	}
 
 	public Vector2 anchorMin
 	{
-		 get { } //Length: 68
-		 set { } //Length: 61
+		 get { } //Length: 137
+		 set { } //Length: 128
 	}
 
 	public internal object drivenByObject
 	{
-		 get { } //Length: 51
-		internal set { } //Length: 66
+		 get { } //Length: 144
+		internal set { } //Length: 177
 	}
 
 	internal DrivenTransformProperties drivenProperties
 	{
-		internal get { } //Length: 51
-		internal set { } //Length: 64
+		internal get { } //Length: 118
+		internal set { } //Length: 131
 	}
 
 	public Vector2 offsetMax
 	{
-		 get { } //Length: 283
-		 set { } //Length: 567
+		 get { } //Length: 465
+		 set { } //Length: 987
 	}
 
 	public Vector2 offsetMin
 	{
-		 get { } //Length: 211
-		 set { } //Length: 618
+		 get { } //Length: 385
+		 set { } //Length: 1010
 	}
 
 	public Vector2 pivot
 	{
-		 get { } //Length: 68
-		 set { } //Length: 61
+		 get { } //Length: 137
+		 set { } //Length: 128
 	}
 
 	public Rect rect
 	{
-		 get { } //Length: 75
+		 get { } //Length: 142
 	}
 
 	public Vector2 sizeDelta
 	{
-		 get { } //Length: 68
-		 set { } //Length: 61
+		 get { } //Length: 137
+		 set { } //Length: 128
 	}
 
 	public RectTransform() { }
@@ -112,23 +112,29 @@ public sealed class RectTransform : Transform
 	[NativeMethod("UpdateIfTransformDispatchIsDirty")]
 	public void ForceUpdateRectTransforms() { }
 
+	private static void ForceUpdateRectTransforms_Injected(IntPtr _unity_self) { }
+
 	public Vector2 get_anchoredPosition() { }
 
-	private void get_anchoredPosition_Injected(out Vector2 ret) { }
+	private static void get_anchoredPosition_Injected(IntPtr _unity_self, out Vector2 ret) { }
 
 	public Vector3 get_anchoredPosition3D() { }
 
 	public Vector2 get_anchorMax() { }
 
-	private void get_anchorMax_Injected(out Vector2 ret) { }
+	private static void get_anchorMax_Injected(IntPtr _unity_self, out Vector2 ret) { }
 
 	public Vector2 get_anchorMin() { }
 
-	private void get_anchorMin_Injected(out Vector2 ret) { }
+	private static void get_anchorMin_Injected(IntPtr _unity_self, out Vector2 ret) { }
 
 	public object get_drivenByObject() { }
 
+	private static IntPtr get_drivenByObject_Injected(IntPtr _unity_self) { }
+
 	internal DrivenTransformProperties get_drivenProperties() { }
+
+	private static DrivenTransformProperties get_drivenProperties_Injected(IntPtr _unity_self) { }
 
 	public Vector2 get_offsetMax() { }
 
@@ -136,15 +142,15 @@ public sealed class RectTransform : Transform
 
 	public Vector2 get_pivot() { }
 
-	private void get_pivot_Injected(out Vector2 ret) { }
+	private static void get_pivot_Injected(IntPtr _unity_self, out Vector2 ret) { }
 
 	public Rect get_rect() { }
 
-	private void get_rect_Injected(out Rect ret) { }
+	private static void get_rect_Injected(IntPtr _unity_self, out Rect ret) { }
 
 	public Vector2 get_sizeDelta() { }
 
-	private void get_sizeDelta_Injected(out Vector2 ret) { }
+	private static void get_sizeDelta_Injected(IntPtr _unity_self, out Vector2 ret) { }
 
 	public void GetLocalCorners(Vector3[] fourCornersArray) { }
 
@@ -162,21 +168,25 @@ public sealed class RectTransform : Transform
 
 	public void set_anchoredPosition(Vector2 value) { }
 
-	private void set_anchoredPosition_Injected(ref Vector2 value) { }
+	private static void set_anchoredPosition_Injected(IntPtr _unity_self, in Vector2 value) { }
 
 	public void set_anchoredPosition3D(Vector3 value) { }
 
 	public void set_anchorMax(Vector2 value) { }
 
-	private void set_anchorMax_Injected(ref Vector2 value) { }
+	private static void set_anchorMax_Injected(IntPtr _unity_self, in Vector2 value) { }
 
 	public void set_anchorMin(Vector2 value) { }
 
-	private void set_anchorMin_Injected(ref Vector2 value) { }
+	private static void set_anchorMin_Injected(IntPtr _unity_self, in Vector2 value) { }
 
 	internal void set_drivenByObject(object value) { }
 
+	private static void set_drivenByObject_Injected(IntPtr _unity_self, IntPtr value) { }
+
 	internal void set_drivenProperties(DrivenTransformProperties value) { }
+
+	private static void set_drivenProperties_Injected(IntPtr _unity_self, DrivenTransformProperties value) { }
 
 	public void set_offsetMax(Vector2 value) { }
 
@@ -184,11 +194,11 @@ public sealed class RectTransform : Transform
 
 	public void set_pivot(Vector2 value) { }
 
-	private void set_pivot_Injected(ref Vector2 value) { }
+	private static void set_pivot_Injected(IntPtr _unity_self, in Vector2 value) { }
 
 	public void set_sizeDelta(Vector2 value) { }
 
-	private void set_sizeDelta_Injected(ref Vector2 value) { }
+	private static void set_sizeDelta_Injected(IntPtr _unity_self, in Vector2 value) { }
 
 	public void SetInsetAndSizeFromParentEdge(Edge edge, float inset, float size) { }
 

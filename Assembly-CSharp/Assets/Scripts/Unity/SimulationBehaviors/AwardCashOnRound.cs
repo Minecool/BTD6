@@ -5,7 +5,7 @@ public class AwardCashOnRound : SimulationBehavior
 	public int round; //Field offset: 0x18
 	public int cashAmount; //Field offset: 0x1C
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 102
 	}
@@ -19,7 +19,7 @@ public class AwardCashOnRound : SimulationBehavior
 
 	public AwardCashOnRound(int round, int cashAmount) { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

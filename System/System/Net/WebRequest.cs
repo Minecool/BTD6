@@ -49,7 +49,7 @@ public abstract class WebRequest : MarshalByRefObject, ISerializable
 
 	public override RequestCachePolicy CachePolicy
 	{
-		 set { } //Length: 189
+		 set { } //Length: 187
 	}
 
 	internal RequestCacheProtocol CacheProtocol
@@ -77,7 +77,7 @@ public abstract class WebRequest : MarshalByRefObject, ISerializable
 
 	public static RequestCachePolicy DefaultCachePolicy
 	{
-		 get { } //Length: 114
+		 get { } //Length: 102
 	}
 
 	public override WebHeaderCollection Headers
@@ -87,7 +87,7 @@ public abstract class WebRequest : MarshalByRefObject, ISerializable
 
 	internal static IWebProxy InternalDefaultWebProxy
 	{
-		internal get { } //Length: 459
+		internal get { } //Length: 449
 	}
 
 	private static object InternalSyncObject
@@ -108,7 +108,7 @@ public abstract class WebRequest : MarshalByRefObject, ISerializable
 
 	internal static ArrayList PrefixList
 	{
-		internal get { } //Length: 405
+		internal get { } //Length: 395
 	}
 
 	public override IWebProxy Proxy

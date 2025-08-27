@@ -13,7 +13,7 @@ public class X509Certificate2 : X509Certificate
 
 	public X509ExtensionCollection Extensions
 	{
-		 get { } //Length: 810
+		 get { } //Length: 808
 	}
 
 	public bool HasPrivateKey
@@ -23,7 +23,7 @@ public class X509Certificate2 : X509Certificate
 
 	internal X509Certificate2Impl Impl
 	{
-		internal get { } //Length: 127
+		internal get { } //Length: 123
 	}
 
 	public X500DistinguishedName IssuerName
@@ -63,7 +63,7 @@ public class X509Certificate2 : X509Certificate
 
 	public Oid SignatureAlgorithm
 	{
-		 get { } //Length: 118
+		 get { } //Length: 116
 	}
 
 	public X500DistinguishedName SubjectName

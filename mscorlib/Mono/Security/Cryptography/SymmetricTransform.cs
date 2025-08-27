@@ -27,7 +27,7 @@ internal abstract class SymmetricTransform : ICryptoTransform, IDisposable
 
 	private bool KeepLastBlock
 	{
-		private get { } //Length: 23
+		private get { } //Length: 24
 	}
 
 	public override int OutputBlockSize

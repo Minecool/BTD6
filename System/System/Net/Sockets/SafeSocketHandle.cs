@@ -13,6 +13,8 @@ internal sealed class SafeSocketHandle : SafeHandleMinusOneIsInvalid
 
 	public SafeSocketHandle(IntPtr preexistingHandle, bool ownsHandle) { }
 
+	internal SafeSocketHandle() { }
+
 	public void RegisterForBlockingSyscall() { }
 
 	protected virtual bool ReleaseHandle() { }

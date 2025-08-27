@@ -1,12 +1,15 @@
 namespace UnityEngine.Rendering.Universal;
 
-[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.11\\ShaderLibrary\\Debug\\DebugViewEnums.cs")]
+[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.universal@056626336c36\\ShaderLibrary\\Debug\\DebugViewEnums.cs")]
 public enum DebugFullScreenMode
 {
 	None = 0,
 	Depth = 1,
-	AdditionalLightsShadowMap = 2,
-	MainLightShadowMap = 3,
-	ReflectionProbeAtlas = 4,
+	MotionVector = 2,
+	AdditionalLightsShadowMap = 3,
+	MainLightShadowMap = 4,
+	AdditionalLightsCookieAtlas = 5,
+	ReflectionProbeAtlas = 6,
+	STP = 7,
 }
 

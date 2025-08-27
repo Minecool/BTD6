@@ -1,7 +1,7 @@
 namespace UnityEngine.UIElements;
 
 [IsReadOnly]
-internal struct HandleDragAndDropArgs
+public struct HandleDragAndDropArgs
 {
 	private readonly DragAndDropArgs m_DragAndDropArgs; //Field offset: 0x0
 	[CompilerGenerated]

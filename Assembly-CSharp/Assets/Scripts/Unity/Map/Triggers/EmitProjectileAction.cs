@@ -15,7 +15,7 @@ public class EmitProjectileAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 688
+		 get { } //Length: 679
 	}
 
 	public EmitProjectileAction() { }

@@ -25,7 +25,7 @@ public class SpeedUpTowersModel : ProjectileBehaviorModel
 
 	public SpeedUpMutator Mutator
 	{
-		 get { } //Length: 307
+		 get { } //Length: 311
 	}
 
 	public SpeedUpTowersModel(string name, float increase, float lifespan, bool isUnique, bool useClosest, string mutatorId, int priority) { }

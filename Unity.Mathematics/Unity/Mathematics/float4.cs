@@ -24,13 +24,13 @@ public struct float4 : IEquatable<float4>, IFormattable
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public float4 wwww
 	{
-		 get { } //Length: 18
+		 get { } //Length: 16
 	}
 
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public float4 wwwx
 	{
-		 get { } //Length: 20
+		 get { } //Length: 28
 	}
 
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
@@ -54,7 +54,7 @@ public struct float4 : IEquatable<float4>, IFormattable
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public float4 xyzx
 	{
-		 get { } //Length: 25
+		 get { } //Length: 29
 	}
 
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
@@ -66,13 +66,13 @@ public struct float4 : IEquatable<float4>, IFormattable
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public float4 yzxy
 	{
-		 get { } //Length: 26
+		 get { } //Length: 29
 	}
 
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public float4 yzxz
 	{
-		 get { } //Length: 26
+		 get { } //Length: 29
 	}
 
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
@@ -90,13 +90,13 @@ public struct float4 : IEquatable<float4>, IFormattable
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public float4 zxyy
 	{
-		 get { } //Length: 23
+		 get { } //Length: 29
 	}
 
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public float4 zxyz
 	{
-		 get { } //Length: 26
+		 get { } //Length: 29
 	}
 
 	public float4(float x, float y, float z, float w) { }
@@ -152,6 +152,8 @@ public struct float4 : IEquatable<float4>, IFormattable
 	public static float4 op_Implicit(Vector4 v) { }
 
 	public static Vector4 op_Implicit(float4 v) { }
+
+	public static bool4 op_LessThan(float4 lhs, float4 rhs) { }
 
 	public static float4 op_Multiply(float4 lhs, float rhs) { }
 

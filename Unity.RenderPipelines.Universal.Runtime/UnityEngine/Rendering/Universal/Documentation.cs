@@ -6,5 +6,7 @@ internal class Documentation : DocumentationInfo
 
 	public Documentation() { }
 
+	public static string GetPageLink(string pageName) { }
+
 }
 

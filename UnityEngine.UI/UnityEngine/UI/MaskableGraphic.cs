@@ -46,7 +46,7 @@ public abstract class MaskableGraphic : Graphic, IClippable, IMaskable, IMateria
 
 	private Rect rootCanvasRect
 	{
-		private get { } //Length: 746
+		private get { } //Length: 687
 	}
 
 	protected MaskableGraphic() { }

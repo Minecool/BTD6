@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::ChangeValue (8))]
+[EventCategory(EventCategory::ChangeValue (9))]
 public class ChangeEvent : EventBase<ChangeEvent`1<T>>
 {
 	[CompilerGenerated]
@@ -26,17 +26,17 @@ public class ChangeEvent : EventBase<ChangeEvent`1<T>>
 	public T newValue
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 7
+		 set { } //Length: 4
 	}
 
 	public T previousValue
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 7
+		 set { } //Length: 4
 	}
 
 	private static ChangeEvent`1() { }

@@ -102,7 +102,7 @@ public class AddArtifactToSimulation : SimulationBehavior, IArtifactIncluder
 
 	public virtual SimulationBehaviorModel Def
 	{
-		 get { } //Length: 361
+		 get { } //Length: 364
 	}
 
 	public AddArtifactToSimulation() { }

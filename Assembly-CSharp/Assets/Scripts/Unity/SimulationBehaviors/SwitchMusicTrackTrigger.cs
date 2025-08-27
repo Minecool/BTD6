@@ -4,7 +4,7 @@ public class SwitchMusicTrackTrigger : SimulationTriggerBehavior
 {
 	public string musicId; //Field offset: 0x20
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 105
 	}
@@ -16,7 +16,7 @@ public class SwitchMusicTrackTrigger : SimulationTriggerBehavior
 
 	public SwitchMusicTrackTrigger() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

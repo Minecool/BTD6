@@ -1,8 +1,11 @@
 namespace UnityEngine.UIElements;
 
 [MovedFrom(True, "UnityEditor.UIElements", "UnityEditor.UIElementsModule", null)]
+[Obsolete("TextValueFieldTraits<TValueType, TValueUxmlAttributeType> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 public class TextValueFieldTraits : BaseFieldTraits<TValueType, TValueUxmlAttributeType>
 {
+	private UxmlStringAttributeDescription m_PlaceholderText; //Field offset: 0x0
+	private UxmlBoolAttributeDescription m_HidePlaceholderOnFocus; //Field offset: 0x0
 	private UxmlBoolAttributeDescription m_IsReadOnly; //Field offset: 0x0
 	private UxmlBoolAttributeDescription m_IsDelayed; //Field offset: 0x0
 

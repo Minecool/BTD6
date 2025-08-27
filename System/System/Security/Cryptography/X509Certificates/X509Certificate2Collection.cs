@@ -7,7 +7,7 @@ public class X509Certificate2Collection : X509CertificateCollection
 
 	public X509Certificate2 Item
 	{
-		 get { } //Length: 350
+		 get { } //Length: 357
 	}
 
 	private static X509Certificate2Collection() { }

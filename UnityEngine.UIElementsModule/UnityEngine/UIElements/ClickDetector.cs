@@ -36,12 +36,12 @@ internal class ClickDetector
 
 	internal void Cleanup(List<VisualElement> elements) { }
 
-	private static bool ContainsPointer(VisualElement element, Vector2 position) { }
+	private static bool ContainsPointer(VisualElement element, IPointerEvent pe) { }
 
 	[CompilerGenerated]
 	internal static int get_s_DoubleClickTime() { }
 
-	public void ProcessEvent(EventBase evt) { }
+	public void ProcessEvent(PointerEventBase<TEvent> evt) { }
 
 	private void SendClickEvent(EventBase evt) { }
 

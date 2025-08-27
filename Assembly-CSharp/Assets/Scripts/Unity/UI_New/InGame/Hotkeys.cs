@@ -74,7 +74,7 @@ public class Hotkeys : MonoBehaviour
 	public bool SuppressHotkeys
 	{
 		 get { } //Length: 11
-		 set { } //Length: 17
+		 set { } //Length: 19
 	}
 
 	public Hotkeys() { }

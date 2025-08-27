@@ -15,7 +15,7 @@ public class ButtonControl : AxisControl
 
 	public bool isPressed
 	{
-		 get { } //Length: 94
+		 get { } //Length: 161
 	}
 
 	internal bool needsToCheckFramePress
@@ -28,17 +28,17 @@ public class ButtonControl : AxisControl
 
 	public float pressPointOrDefault
 	{
-		 get { } //Length: 86
+		 get { } //Length: 77
 	}
 
 	public bool wasPressedThisFrame
 	{
-		 get { } //Length: 251
+		 get { } //Length: 386
 	}
 
 	public bool wasReleasedThisFrame
 	{
-		 get { } //Length: 242
+		 get { } //Length: 375
 	}
 
 	public ButtonControl() { }

@@ -11,7 +11,7 @@ public class TwitchPollPanelOption : MonoBehaviour
 	public PollItemStatus Status
 	{
 		 get { } //Length: 4
-		 set { } //Length: 153
+		 set { } //Length: 33
 	}
 
 	public private string Title
@@ -23,7 +23,7 @@ public class TwitchPollPanelOption : MonoBehaviour
 	public uint Votes
 	{
 		 get { } //Length: 4
-		 set { } //Length: 136
+		 set { } //Length: 124
 	}
 
 	public TwitchPollPanelOption() { }

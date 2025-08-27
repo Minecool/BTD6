@@ -8,7 +8,7 @@ public class ChangeEmitProjectileAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 227
+		 get { } //Length: 219
 	}
 
 	public ChangeEmitProjectileAction() { }

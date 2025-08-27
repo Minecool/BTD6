@@ -32,7 +32,7 @@ internal struct ColorTween : ITweenValue
 	public override bool ignoreTimeScale
 	{
 		 get { } //Length: 5
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public Color startColor

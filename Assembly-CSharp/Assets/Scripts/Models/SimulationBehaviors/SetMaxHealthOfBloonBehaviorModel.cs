@@ -20,7 +20,7 @@ public class SetMaxHealthOfBloonBehaviorModel : SimulationBehaviorModel
 
 	public SetMaxHealthForBloon Mutator
 	{
-		 get { } //Length: 246
+		 get { } //Length: 250
 	}
 
 	public SetMaxHealthOfBloonBehaviorModel(string name, string bloonId, float healthMultiplier, int round) { }

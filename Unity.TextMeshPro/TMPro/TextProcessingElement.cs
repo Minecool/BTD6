@@ -17,7 +17,7 @@ internal struct TextProcessingElement
 	public TextProcessingElementType ElementType
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int Length

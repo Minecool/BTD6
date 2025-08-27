@@ -27,7 +27,7 @@ public class ChallengeResponse : IDisposable
 
 	public string Password
 	{
-		 set { } //Length: 992
+		 set { } //Length: 990
 	}
 
 	private static ChallengeResponse() { }

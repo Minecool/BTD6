@@ -8,11 +8,13 @@ public struct StyleTranslate : IStyleValue<Translate>, IEquatable<StyleTranslate
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override Translate value
 	{
 		 get { } //Length: 171
+		 set { } //Length: 24
 	}
 
 	public StyleTranslate(Translate v) { }
@@ -36,6 +38,10 @@ public struct StyleTranslate : IStyleValue<Translate>, IEquatable<StyleTranslate
 	public static StyleTranslate op_Implicit(StyleKeyword keyword) { }
 
 	public static StyleTranslate op_Implicit(Translate v) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(Translate value) { }
 
 	public virtual string ToString() { }
 

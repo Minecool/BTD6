@@ -1,7 +1,7 @@
 namespace UnityEngine;
 
-[NativeHeader("Runtime/Misc/PlayerSettings.h")]
 [NativeHeader("Runtime/Graphics/QualitySettings.h")]
+[NativeHeader("Runtime/Misc/PlayerSettings.h")]
 [StaticAccessor("GetQualitySettings()", StaticAccessorType::Dot (0))]
 public sealed class QualitySettings : object
 {
@@ -39,6 +39,17 @@ public sealed class QualitySettings : object
 		 set { } //Length: 51
 	}
 
+	[NativeProperty("LODBias")]
+	public static float lodBias
+	{
+		 get { } //Length: 42
+	}
+
+	public static int maximumLODLevel
+	{
+		 get { } //Length: 42
+	}
+
 	public static int pixelLightCount
 	{
 		 get { } //Length: 42
@@ -62,6 +73,10 @@ public sealed class QualitySettings : object
 	[NativeName("GetColorSpace")]
 	[StaticAccessor("GetPlayerSettings()", StaticAccessorType::Dot (0))]
 	public static ColorSpace get_desiredColorSpace() { }
+
+	public static float get_lodBias() { }
+
+	public static int get_maximumLODLevel() { }
 
 	public static int get_pixelLightCount() { }
 

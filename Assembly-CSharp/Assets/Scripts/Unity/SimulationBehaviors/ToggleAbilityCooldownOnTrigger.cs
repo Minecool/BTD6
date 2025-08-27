@@ -6,7 +6,7 @@ public class ToggleAbilityCooldownOnTrigger : SimulationBehavior
 	public bool unpauseAtRoundEnd; //Field offset: 0x20
 	public String[] abilityIds; //Field offset: 0x28
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 129
 	}
@@ -18,7 +18,7 @@ public class ToggleAbilityCooldownOnTrigger : SimulationBehavior
 
 	public ToggleAbilityCooldownOnTrigger() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

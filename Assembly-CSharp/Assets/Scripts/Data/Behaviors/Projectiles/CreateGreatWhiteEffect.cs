@@ -28,7 +28,7 @@ public class CreateGreatWhiteEffect : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 815
+		 get { } //Length: 817
 	}
 
 	public CreateGreatWhiteEffect() { }

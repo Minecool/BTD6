@@ -3,7 +3,7 @@ namespace Assets.Scripts.Unity.UI_New;
 public class CommonForegroundScreen : MonoBehaviour
 {
 	[CompilerGenerated]
-	private struct <CheckMenuDataForDialogueDataTriggered>d__55 : IAsyncStateMachine
+	private struct <CheckMenuDataForDialogueDataTriggered>d__60 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -19,7 +19,7 @@ public class CommonForegroundScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <ShowHideObjectCoroutine>d__52 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <ShowHideObjectCoroutine>d__50 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -45,7 +45,7 @@ public class CommonForegroundScreen : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <ShowHideObjectCoroutine>d__52(int <>1__state) { }
+		public <ShowHideObjectCoroutine>d__50(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -64,16 +64,32 @@ public class CommonForegroundScreen : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <TryRunAnimatedDialogueSequence>d__57 : IAsyncStateMachine
+	private struct <TryRunAnimatedDialogueSequence>d__59 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
-		public CommonForegroundScreen <>4__this; //Field offset: 0x20
-		public DialogueData data; //Field offset: 0x28
+		public DialogueData data; //Field offset: 0x20
+		public CommonForegroundScreen <>4__this; //Field offset: 0x28
 		public Action cancelledCallback; //Field offset: 0x30
 		public Action completedCallback; //Field offset: 0x38
 		public Action<String>[] actions; //Field offset: 0x40
-		private TaskAwaiter<GameObject> <>u__1; //Field offset: 0x48
+		private YieldAwaiter <>u__1; //Field offset: 0x48
+		private TaskAwaiter<GameObject> <>u__2; //Field offset: 0x50
+		private TaskAwaiter <>u__3; //Field offset: 0x58
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <YieldWhilePopupActive>d__54 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		private YieldAwaiter <>u__1; //Field offset: 0x20
 
 		private override void MoveNext() { }
 
@@ -97,6 +113,7 @@ public class CommonForegroundScreen : MonoBehaviour
 
 	private const double s = 1.70158; //Field offset: 0x0
 	public static CommonForegroundScreen instance; //Field offset: 0x0
+	private static TaskCompletionSource<Boolean> talkingHeadsTask; //Field offset: 0x8
 	public Animator animator; //Field offset: 0x20
 	public GameObject heading; //Field offset: 0x28
 	public GameObject monkeyMoney; //Field offset: 0x30
@@ -115,13 +132,13 @@ public class CommonForegroundScreen : MonoBehaviour
 	[CompilerGenerated]
 	private List<String> <LimitedHeroSelection>k__BackingField; //Field offset: 0x90
 	public GameObject questDialogueContainer; //Field offset: 0x98
-	public Action OnClickedInteractiveAnimatedSequence; //Field offset: 0xA0
-	public bool dialogSystemOpened; //Field offset: 0xA8
-	private QuestDialogueSystem questDialogueSystem; //Field offset: 0xB0
+	private QuestDialogueSystem questDialogueSystem; //Field offset: 0xA0
+	public bool IsDialogueDisable; //Field offset: 0xA8
+	public HashSet<String> SceneBlockingDialogueScenes; //Field offset: 0xB0
 
 	private bool CanShowHeroButton
 	{
-		private get { } //Length: 75
+		private get { } //Length: 70
 	}
 
 	public bool IsBuyMonkeyMoneyButtonEnabled
@@ -130,9 +147,14 @@ public class CommonForegroundScreen : MonoBehaviour
 		 set { } //Length: 130
 	}
 
-	public bool IsQuestDialogueBlocking
+	public bool IsCurrentSceneBlockingDialogue
 	{
-		 get { } //Length: 8
+		 get { } //Length: 203
+	}
+
+	public bool IsTalkingHeadsActive
+	{
+		 get { } //Length: 59
 	}
 
 	public private List<String> LimitedHeroSelection
@@ -146,7 +168,7 @@ public class CommonForegroundScreen : MonoBehaviour
 	public CommonForegroundScreen() { }
 
 	[CompilerGenerated]
-	private void <TryRunAnimatedDialogueSequence>b__57_0(AsyncOperationHandle<GameObject> h) { }
+	private void <TryRunAnimatedDialogueSequence>b__59_0(AsyncOperationHandle<GameObject> h) { }
 
 	private void Awake() { }
 
@@ -154,10 +176,8 @@ public class CommonForegroundScreen : MonoBehaviour
 
 	public void ChangeHeroButtonClicked() { }
 
-	[AsyncStateMachine(typeof(<CheckMenuDataForDialogueDataTriggered>d__55))]
+	[AsyncStateMachine(typeof(<CheckMenuDataForDialogueDataTriggered>d__60))]
 	private void CheckMenuDataForDialogueDataTriggered(object data) { }
-
-	public void ClickedDialogue() { }
 
 	private static double easeInBack(double t) { }
 
@@ -167,7 +187,9 @@ public class CommonForegroundScreen : MonoBehaviour
 
 	public bool get_IsBuyMonkeyMoneyButtonEnabled() { }
 
-	public bool get_IsQuestDialogueBlocking() { }
+	public bool get_IsCurrentSceneBlockingDialogue() { }
+
+	public bool get_IsTalkingHeadsActive() { }
 
 	[CompilerGenerated]
 	public List<String> get_LimitedHeroSelection() { }
@@ -181,8 +203,6 @@ public class CommonForegroundScreen : MonoBehaviour
 	public void MoreMonkeyMoneyClicked() { }
 
 	private void OnDestroy() { }
-
-	private void OnDestroyQuestDialogueCallback() { }
 
 	public static void ResetAllowedHeroes() { }
 
@@ -211,17 +231,20 @@ public class CommonForegroundScreen : MonoBehaviour
 
 	public static void ShowHideMonkeyMoney(bool show, bool force = false) { }
 
-	[IteratorStateMachine(typeof(<ShowHideObjectCoroutine>d__52))]
+	[IteratorStateMachine(typeof(<ShowHideObjectCoroutine>d__50))]
 	private static IEnumerator ShowHideObjectCoroutine(GameObject go, bool show, bool force = false) { }
 
 	public static void ShowLobbyMessage(bool show) { }
 
-	[AsyncStateMachine(typeof(<TryRunAnimatedDialogueSequence>d__57))]
+	[AsyncStateMachine(typeof(<TryRunAnimatedDialogueSequence>d__59))]
 	public Task<Boolean> TryRunAnimatedDialogueSequence(DialogueData data, Action completedCallback = null, Action cancelledCallback = null, Action<String>[] actions = null) { }
 
 	public void Update() { }
 
 	public static void UpdateHeroSelection(List<String> limitedHeroSelection) { }
+
+	[AsyncStateMachine(typeof(<YieldWhilePopupActive>d__54))]
+	public static Task YieldWhilePopupActive() { }
 
 }
 

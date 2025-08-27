@@ -37,7 +37,7 @@ public class Prop : AssetChangeItem
 
 	public PropAssetChangeModel Def
 	{
-		 get { } //Length: 637
+		 get { } //Length: 626
 	}
 
 	public Prop() { }

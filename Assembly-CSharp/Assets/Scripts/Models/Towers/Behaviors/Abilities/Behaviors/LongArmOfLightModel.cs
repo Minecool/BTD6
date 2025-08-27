@@ -32,7 +32,7 @@ public class LongArmOfLightModel : AbilityBehaviorModel
 
 	public LongArmOfLightMutator mutator
 	{
-		 get { } //Length: 209
+		 get { } //Length: 213
 	}
 
 	public LongArmOfLightModel(string name, float lifespan, float multiplier, AssetPathModel projectileDisplay, float projectileRadiusMultiplier, BloonProperties immuneBloonProperties, int damageIncrease, string mutatorId) { }

@@ -14,5 +14,8 @@ internal enum CommandType
 	BlitToPreviousRT = 9,
 	PushDefaultMaterial = 10,
 	PopDefaultMaterial = 11,
+	BeginDisable = 12,
+	EndDisable = 13,
+	CutRenderChain = 14,
 }
 

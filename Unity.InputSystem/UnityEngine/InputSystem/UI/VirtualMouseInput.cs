@@ -1,7 +1,7 @@
 namespace UnityEngine.InputSystem.UI;
 
 [AddComponentMenu("Input/Virtual Mouse")]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/UISupport.html#virtual-mouse-cursor-control")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/UISupport.html#virtual-mouse-cursor-control")]
 public class VirtualMouseInput : MonoBehaviour
 {
 	internal enum CursorMode
@@ -60,7 +60,7 @@ public class VirtualMouseInput : MonoBehaviour
 	public InputActionProperty backButtonAction
 	{
 		 get { } //Length: 27
-		 set { } //Length: 268
+		 set { } //Length: 259
 	}
 
 	public Graphic cursorGraphic
@@ -72,7 +72,7 @@ public class VirtualMouseInput : MonoBehaviour
 	public CursorMode cursorMode
 	{
 		 get { } //Length: 4
-		 set { } //Length: 244
+		 set { } //Length: 240
 	}
 
 	public float cursorSpeed
@@ -90,25 +90,25 @@ public class VirtualMouseInput : MonoBehaviour
 	public InputActionProperty forwardButtonAction
 	{
 		 get { } //Length: 27
-		 set { } //Length: 268
+		 set { } //Length: 259
 	}
 
 	public InputActionProperty leftButtonAction
 	{
 		 get { } //Length: 21
-		 set { } //Length: 253
+		 set { } //Length: 244
 	}
 
 	public InputActionProperty middleButtonAction
 	{
 		 get { } //Length: 24
-		 set { } //Length: 259
+		 set { } //Length: 250
 	}
 
 	public InputActionProperty rightButtonAction
 	{
 		 get { } //Length: 27
-		 set { } //Length: 268
+		 set { } //Length: 259
 	}
 
 	public float scrollSpeed

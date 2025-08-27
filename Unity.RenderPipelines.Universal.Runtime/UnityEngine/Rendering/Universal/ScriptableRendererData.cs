@@ -2,11 +2,14 @@ namespace UnityEngine.Rendering.Universal;
 
 public abstract class ScriptableRendererData : ScriptableObject
 {
+	[Obsolete("Moved to UniversalRenderPipelineDebugShaders on GraphicsSettings. #from(2023.3)", False)]
 	[ReloadGroup]
 	internal sealed class DebugShaderResources
 	{
+		[Obsolete("Moved to UniversalRenderPipelineDebugShaders on GraphicsSettings. #from(2023.3)", False)]
 		[Reload("Shaders/Debug/DebugReplacement.shader", Package::Root (1))]
 		public Shader debugReplacementPS; //Field offset: 0x10
+		[Obsolete("Moved to UniversalRenderPipelineDebugShaders on GraphicsSettings. #from(2023.3)", False)]
 		[Reload("Shaders/Debug/HDRDebugView.shader", Package::Root (1))]
 		public Shader hdrDebugViewPS; //Field offset: 0x18
 
@@ -14,15 +17,43 @@ public abstract class ScriptableRendererData : ScriptableObject
 
 	}
 
+	[Obsolete("Probe volume debug resource are now in the ProbeVolumeDebugResources class.")]
+	[ReloadGroup]
+	internal sealed class ProbeVolumeResources
+	{
+		[Obsolete("This shader is now in the ProbeVolumeDebugResources class.")]
+		public Shader probeVolumeDebugShader; //Field offset: 0x10
+		[Obsolete("This shader is now in the ProbeVolumeDebugResources class.")]
+		public Shader probeVolumeFragmentationDebugShader; //Field offset: 0x18
+		[Obsolete("This shader is now in the ProbeVolumeDebugResources class.")]
+		public Shader probeVolumeOffsetDebugShader; //Field offset: 0x20
+		[Obsolete("This shader is now in the ProbeVolumeDebugResources class.")]
+		public Shader probeVolumeSamplingDebugShader; //Field offset: 0x28
+		[Obsolete("This shader is now in the ProbeVolumeDebugResources class.")]
+		public Mesh probeSamplingDebugMesh; //Field offset: 0x30
+		[Obsolete("This shader is now in the ProbeVolumeDebugResources class.")]
+		public Texture2D probeSamplingDebugTexture; //Field offset: 0x38
+		[Obsolete("This shader is now in the ProbeVolumeRuntimeResources class.")]
+		public ComputeShader probeVolumeBlendStatesCS; //Field offset: 0x40
+
+		public ProbeVolumeResources() { }
+
+	}
+
+	[Obsolete("Moved to UniversalRenderPipelineDebugShaders on GraphicsSettings. #from(2023.3)", False)]
+	public DebugShaderResources debugShaders; //Field offset: 0x18
+	[Obsolete("Probe volume debug resource are now in the ProbeVolumeDebugResources class.")]
+	public ProbeVolumeResources probeVolumeResources; //Field offset: 0x20
 	[CompilerGenerated]
-	private bool <isInvalidated>k__BackingField; //Field offset: 0x18
-	public DebugShaderResources debugShaders; //Field offset: 0x20
+	private bool <isInvalidated>k__BackingField; //Field offset: 0x28
 	[SerializeField]
-	internal List<ScriptableRendererFeature> m_RendererFeatures; //Field offset: 0x28
+	internal List<ScriptableRendererFeature> m_RendererFeatures; //Field offset: 0x30
 	[SerializeField]
-	internal List<Int64> m_RendererFeatureMap; //Field offset: 0x30
+	internal List<Int64> m_RendererFeatureMap; //Field offset: 0x38
 	[SerializeField]
-	private bool m_UseNativeRenderPass; //Field offset: 0x38
+	private bool m_UseNativeRenderPass; //Field offset: 0x40
+	private bool m_StripShadowsOffVariants; //Field offset: 0x41
+	private bool m_StripAdditionalLightOffVariants; //Field offset: 0x42
 
 	internal bool isInvalidated
 	{
@@ -35,6 +66,18 @@ public abstract class ScriptableRendererData : ScriptableObject
 	public List<ScriptableRendererFeature> rendererFeatures
 	{
 		 get { } //Length: 5
+	}
+
+	internal override bool stripAdditionalLightOffVariants
+	{
+		internal get { } //Length: 5
+		internal set { } //Length: 4
+	}
+
+	internal override bool stripShadowsOffVariants
+	{
+		internal get { } //Length: 5
+		internal set { } //Length: 4
 	}
 
 	public bool useNativeRenderPass
@@ -52,6 +95,10 @@ public abstract class ScriptableRendererData : ScriptableObject
 
 	public List<ScriptableRendererFeature> get_rendererFeatures() { }
 
+	internal override bool get_stripAdditionalLightOffVariants() { }
+
+	internal override bool get_stripShadowsOffVariants() { }
+
 	public bool get_useNativeRenderPass() { }
 
 	internal ScriptableRenderer InternalCreateRenderer() { }
@@ -63,11 +110,15 @@ public abstract class ScriptableRendererData : ScriptableObject
 	[CompilerGenerated]
 	internal void set_isInvalidated(bool value) { }
 
+	internal override void set_stripAdditionalLightOffVariants(bool value) { }
+
+	internal override void set_stripShadowsOffVariants(bool value) { }
+
 	public void set_useNativeRenderPass(bool value) { }
 
 	public void SetDirty() { }
 
-	internal bool TryGetRendererFeature(out T rendererFeature) { }
+	public bool TryGetRendererFeature(out T rendererFeature) { }
 
 }
 

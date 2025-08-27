@@ -10,5 +10,7 @@ public static class EpicUtils
 
 	public static AuthenticationProviderToken get_AuthToken() { }
 
+	public static void OnFirstRun() { }
+
 }
 

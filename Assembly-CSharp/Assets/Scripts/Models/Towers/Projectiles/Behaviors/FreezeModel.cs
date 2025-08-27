@@ -42,7 +42,7 @@ public class FreezeModel : ProjectileBehaviorWithOverlayModel
 
 	public Mutator mutator
 	{
-		 get { } //Length: 349
+		 get { } //Length: 234
 	}
 
 	public FreezeModel(string name, float speed, float lifespan, string mutationId, int layers, string overlayType, bool cascadeMutators, GrowBlockModel growBlockModel, DamageModel damageModel, float percentChanceToFreeze, bool enablePercentChanceToFreeze, bool canFreezeMoabs, bool applyAfterDamage) { }

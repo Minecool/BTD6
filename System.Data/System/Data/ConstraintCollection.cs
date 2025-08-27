@@ -13,12 +13,12 @@ public sealed class ConstraintCollection : InternalDataCollectionBase
 
 	public Constraint Item
 	{
-		 get { } //Length: 280
+		 get { } //Length: 291
 	}
 
 	public Constraint Item
 	{
-		 get { } //Length: 249
+		 get { } //Length: 269
 	}
 
 	protected virtual ArrayList List

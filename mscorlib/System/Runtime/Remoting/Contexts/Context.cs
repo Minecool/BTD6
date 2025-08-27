@@ -27,7 +27,7 @@ public class Context
 
 	public override IContextProperty[] ContextProperties
 	{
-		 get { } //Length: 96
+		 get { } //Length: 94
 	}
 
 	public static Context DefaultContext
@@ -37,12 +37,12 @@ public class Context
 
 	internal bool HasDynamicSinks
 	{
-		internal get { } //Length: 65
+		internal get { } //Length: 61
 	}
 
 	internal bool HasExitSinks
 	{
-		internal get { } //Length: 196
+		internal get { } //Length: 190
 	}
 
 	internal static bool HasGlobalDynamicSinks
@@ -57,12 +57,12 @@ public class Context
 
 	private LocalDataStore MyLocalStore
 	{
-		private get { } //Length: 362
+		private get { } //Length: 352
 	}
 
 	internal bool NeedsContextSink
 	{
-		internal get { } //Length: 229
+		internal get { } //Length: 225
 	}
 
 	private static Context() { }

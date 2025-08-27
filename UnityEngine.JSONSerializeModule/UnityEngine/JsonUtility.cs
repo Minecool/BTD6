@@ -12,6 +12,8 @@ public static class JsonUtility
 	[ThreadSafe]
 	private static object FromJsonInternal(string json, object objectToOverwrite, Type type) { }
 
+	private static object FromJsonInternal_Injected(ref ManagedSpanWrapper json, object objectToOverwrite, Type type) { }
+
 	public static void FromJsonOverwrite(string json, object objectToOverwrite) { }
 
 	public static string ToJson(object obj) { }
@@ -21,6 +23,8 @@ public static class JsonUtility
 	[FreeFunction("ToJsonInternal", True)]
 	[ThreadSafe]
 	private static string ToJsonInternal(object obj, bool prettyPrint) { }
+
+	private static void ToJsonInternal_Injected(object obj, bool prettyPrint, out ManagedSpanWrapper ret) { }
 
 }
 

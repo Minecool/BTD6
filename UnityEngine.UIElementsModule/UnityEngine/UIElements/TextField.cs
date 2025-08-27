@@ -5,19 +5,22 @@ public class TextField : TextInputBaseField<String>
 	private class TextInput : TextInputBase<String>
 	{
 
-		public virtual bool isPasswordField
-		{
-			 set { } //Length: 92
-		}
-
 		public bool multiline
 		{
-			 set { } //Length: 482
+			 get { } //Length: 96
+			 set { } //Length: 574
+		}
+
+		private TextField parentTextField
+		{
+			private get { } //Length: 117
 		}
 
 		public TextInput() { }
 
-		public virtual void set_isPasswordField(bool value) { }
+		public bool get_multiline() { }
+
+		private TextField get_parentTextField() { }
 
 		public void set_multiline(bool value) { }
 
@@ -25,6 +28,7 @@ public class TextField : TextInputBaseField<String>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<TextField, UxmlTraits>
 	{
 
@@ -32,10 +36,11 @@ public class TextField : TextInputBaseField<String>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits<String>
 	{
 		private static readonly UxmlStringAttributeDescription k_Value; //Field offset: 0x0
-		private UxmlBoolAttributeDescription m_Multiline; //Field offset: 0xC8
+		private UxmlBoolAttributeDescription m_Multiline; //Field offset: 0x120
 
 		private static UxmlTraits() { }
 
@@ -45,18 +50,21 @@ public class TextField : TextInputBaseField<String>
 
 	}
 
-	public static readonly string ussClassName; //Field offset: 0x0
-	public static readonly string labelUssClassName; //Field offset: 0x8
-	public static readonly string inputUssClassName; //Field offset: 0x10
+	internal static readonly BindingId multilineProperty; //Field offset: 0x0
+	public static readonly string ussClassName; //Field offset: 0x98
+	public static readonly string labelUssClassName; //Field offset: 0xA0
+	public static readonly string inputUssClassName; //Field offset: 0xA8
 
+	[CreateProperty]
 	public bool multiline
 	{
-		 set { } //Length: 45
+		 get { } //Length: 108
+		 set { } //Length: 373
 	}
 
 	private TextInput textInput
 	{
-		private get { } //Length: 122
+		private get { } //Length: 118
 	}
 
 	public virtual string value
@@ -73,12 +81,14 @@ public class TextField : TextInputBaseField<String>
 
 	public TextField(string label, int maxLength, bool multiline, bool isPasswordField, char maskChar) { }
 
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(BlurEvent)}])]
-	protected virtual void ExecuteDefaultAction(EventBase evt) { }
+	public bool get_multiline() { }
 
 	private TextInput get_textInput() { }
 
 	public virtual string get_value() { }
+
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(FocusOutEvent)}])]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
 
 	internal virtual void OnViewDataReady() { }
 

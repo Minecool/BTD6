@@ -2,9 +2,25 @@ namespace UnityEngine.TextCore.Text;
 
 [ExcludeFromObjectFactory]
 [ExcludeFromPreset]
+[NativeHeader("Modules/TextCoreTextEngine/Native/TextSettings.h")]
 public class TextSettings : ScriptableObject
 {
-	private struct FontReferenceMap
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass96_0
+	{
+		public List<IntPtr> globalFontAssetFallbacks; //Field offset: 0x10
+
+		public <>c__DisplayClass96_0() { }
+
+		internal void <GetGlobalFallbacks>b__0(FontAsset fallback) { }
+
+		internal void <GetGlobalFallbacks>b__1(FontAsset fallback) { }
+
+		internal void <GetGlobalFallbacks>b__2(TextAsset fallback) { }
+
+	}
+
+	public struct FontReferenceMap
 	{
 		public Font font; //Field offset: 0x0
 		public FontAsset fontAsset; //Field offset: 0x8
@@ -13,6 +29,10 @@ public class TextSettings : ScriptableObject
 
 	}
 
+	private static List<FontAsset> s_FallbackOSFontAssetInternal; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private static SpriteAsset <s_GlobalSpriteAsset>k__BackingField; //Field offset: 0x8
 	[SerializeField]
 	protected string m_Version; //Field offset: 0x18
 	[FormerlySerializedAs("m_defaultFontAsset")]
@@ -32,33 +52,37 @@ public class TextSettings : ScriptableObject
 	protected int m_MissingCharacterUnicode; //Field offset: 0x3C
 	[SerializeField]
 	protected bool m_ClearDynamicDataOnBuild; //Field offset: 0x40
+	[SerializeField]
+	private bool m_EnableEmojiSupport; //Field offset: 0x41
+	[SerializeField]
+	private List<TextAsset> m_EmojiFallbackTextAssets; //Field offset: 0x48
 	[FormerlySerializedAs("m_defaultSpriteAsset")]
 	[SerializeField]
-	protected SpriteAsset m_DefaultSpriteAsset; //Field offset: 0x48
+	protected SpriteAsset m_DefaultSpriteAsset; //Field offset: 0x50
 	[FormerlySerializedAs("m_defaultSpriteAssetPath")]
 	[SerializeField]
-	protected string m_DefaultSpriteAssetPath; //Field offset: 0x50
+	protected string m_DefaultSpriteAssetPath; //Field offset: 0x58
 	[SerializeField]
-	protected List<SpriteAsset> m_FallbackSpriteAssets; //Field offset: 0x58
+	protected List<SpriteAsset> m_FallbackSpriteAssets; //Field offset: 0x60
 	[SerializeField]
-	protected uint m_MissingSpriteCharacterUnicode; //Field offset: 0x60
+	protected uint m_MissingSpriteCharacterUnicode; //Field offset: 0x68
 	[FormerlySerializedAs("m_defaultStyleSheet")]
 	[SerializeField]
-	protected TextStyleSheet m_DefaultStyleSheet; //Field offset: 0x68
+	protected TextStyleSheet m_DefaultStyleSheet; //Field offset: 0x70
 	[SerializeField]
-	protected string m_StyleSheetsResourcePath; //Field offset: 0x70
+	protected string m_StyleSheetsResourcePath; //Field offset: 0x78
 	[FormerlySerializedAs("m_defaultColorGradientPresetsPath")]
 	[SerializeField]
-	protected string m_DefaultColorGradientPresetsPath; //Field offset: 0x78
+	protected string m_DefaultColorGradientPresetsPath; //Field offset: 0x80
 	[SerializeField]
-	protected UnicodeLineBreakingRules m_UnicodeLineBreakingRules; //Field offset: 0x80
-	[SerializeField]
-	private bool m_UseModernHangulLineBreakingRules; //Field offset: 0x88
+	protected UnicodeLineBreakingRules m_UnicodeLineBreakingRules; //Field offset: 0x88
 	[FormerlySerializedAs("m_warningsDisabled")]
 	[SerializeField]
-	protected bool m_DisplayWarnings; //Field offset: 0x89
-	internal Dictionary<Int32, FontAsset> m_FontLookup; //Field offset: 0x90
-	private List<FontReferenceMap> m_FontReferences; //Field offset: 0x98
+	protected bool m_DisplayWarnings; //Field offset: 0x90
+	internal Dictionary<Int32, FontAsset> m_FontLookup; //Field offset: 0x98
+	internal List<FontReferenceMap> m_FontReferences; //Field offset: 0xA0
+	private IntPtr m_NativeTextSettings; //Field offset: 0xA8
+	private bool m_IsNativeTextSettingsDirty; //Field offset: 0xB0
 
 	public bool clearDynamicDataOnBuild
 	{
@@ -68,8 +92,8 @@ public class TextSettings : ScriptableObject
 
 	public string defaultColorGradientPresetsPath
 	{
-		 get { } //Length: 70
-		 set { } //Length: 5
+		 get { } //Length: 8
+		 set { } //Length: 8
 	}
 
 	public FontAsset defaultFontAsset
@@ -108,12 +132,31 @@ public class TextSettings : ScriptableObject
 		 set { } //Length: 7
 	}
 
+	public List<TextAsset> emojiFallbackTextAssets
+	{
+		 get { } //Length: 5
+		 set { } //Length: 12
+	}
+
+	public bool enableEmojiSupport
+	{
+		 get { } //Length: 7
+		 set { } //Length: 4
+	}
+
 	public List<FontAsset> fallbackFontAssets
 	{
 		 get { } //Length: 5
-		 set { } //Length: 5
+		 set { } //Length: 12
 	}
 
+	internal List<FontAsset> fallbackOSFontAssets
+	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+		internal get { } //Length: 167
+	}
+
+	[Obsolete("The Fallback Sprite Assets list is now obsolete. Use the emojiFallbackTextAssets instead.", True)]
 	public List<SpriteAsset> fallbackSpriteAssets
 	{
 		 get { } //Length: 5
@@ -144,16 +187,24 @@ public class TextSettings : ScriptableObject
 		 set { } //Length: 4
 	}
 
-	public string styleSheetsResourcePath
+	internal IntPtr nativeTextSettings
 	{
-		 get { } //Length: 5
-		 set { } //Length: 5
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+		internal get { } //Length: 29
 	}
 
-	public bool useModernHangulLineBreakingRules
+	internal static SpriteAsset s_GlobalSpriteAsset
 	{
-		 get { } //Length: 10
-		 set { } //Length: 7
+		[CompilerGenerated]
+		internal get { } //Length: 55
+		[CompilerGenerated]
+		private set { } //Length: 61
+	}
+
+	public string styleSheetsResourcePath
+	{
+		 get { } //Length: 70
+		 set { } //Length: 5
 	}
 
 	public internal string version
@@ -163,6 +214,14 @@ public class TextSettings : ScriptableObject
 	}
 
 	public TextSettings() { }
+
+	[NativeMethod(Name = "TextSettings::Create")]
+	private static IntPtr CreateNativeObject(IntPtr[] fallbacks) { }
+
+	private static IntPtr CreateNativeObject_Injected(ref ManagedSpanWrapper fallbacks) { }
+
+	[NativeMethod(Name = "TextSettings::Destroy")]
+	private static void DestroyNativeObject(IntPtr m_NativeTextSettings) { }
 
 	public bool get_clearDynamicDataOnBuild() { }
 
@@ -180,7 +239,14 @@ public class TextSettings : ScriptableObject
 
 	public bool get_displayWarnings() { }
 
+	public List<TextAsset> get_emojiFallbackTextAssets() { }
+
+	public bool get_enableEmojiSupport() { }
+
 	public List<FontAsset> get_fallbackFontAssets() { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal List<FontAsset> get_fallbackOSFontAssets() { }
 
 	public List<SpriteAsset> get_fallbackSpriteAssets() { }
 
@@ -192,15 +258,30 @@ public class TextSettings : ScriptableObject
 
 	public uint get_missingSpriteCharacterUnicode() { }
 
-	public string get_styleSheetsResourcePath() { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal IntPtr get_nativeTextSettings() { }
 
-	public bool get_useModernHangulLineBreakingRules() { }
+	[CompilerGenerated]
+	internal static SpriteAsset get_s_GlobalSpriteAsset() { }
+
+	public string get_styleSheetsResourcePath() { }
 
 	public string get_version() { }
 
-	protected FontAsset GetCachedFontAssetInternal(Font font) { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.IMGUIModule", "UnityEngine.UIElementsModule"}])]
+	internal FontAsset GetCachedFontAsset(Font font) { }
+
+	internal override List<FontAsset> GetFallbackFontAssets(int textPixelSize = -1) { }
+
+	private IntPtr[] GetGlobalFallbacks() { }
+
+	private List<FontAsset> GetOSFontAssetList() { }
+
+	internal override List<FontAsset> GetStaticFallbackOSFontAsset() { }
 
 	protected void InitializeFontReferenceLookup() { }
+
+	private void OnDestroy() { }
 
 	private void OnEnable() { }
 
@@ -220,6 +301,10 @@ public class TextSettings : ScriptableObject
 
 	public void set_displayWarnings(bool value) { }
 
+	public void set_emojiFallbackTextAssets(List<TextAsset> value) { }
+
+	public void set_enableEmojiSupport(bool value) { }
+
 	public void set_fallbackFontAssets(List<FontAsset> value) { }
 
 	public void set_fallbackSpriteAssets(List<SpriteAsset> value) { }
@@ -232,11 +317,21 @@ public class TextSettings : ScriptableObject
 
 	public void set_missingSpriteCharacterUnicode(uint value) { }
 
+	[CompilerGenerated]
+	private static void set_s_GlobalSpriteAsset(SpriteAsset value) { }
+
 	public void set_styleSheetsResourcePath(string value) { }
 
-	public void set_useModernHangulLineBreakingRules(bool value) { }
-
 	internal void set_version(string value) { }
+
+	internal override void SetStaticFallbackOSFontAsset(List<FontAsset> fontAssets) { }
+
+	private static void UpdateFallbacks(IntPtr ptr, IntPtr[] fallbacks) { }
+
+	private static void UpdateFallbacks_Injected(IntPtr ptr, ref ManagedSpanWrapper fallbacks) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal void UpdateNativeTextSettings() { }
 
 }
 

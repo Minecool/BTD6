@@ -9,7 +9,5 @@ internal sealed class NullableAttribute : Attribute
 
 	public NullableAttribute(byte unnamed_param_0) { }
 
-	public NullableAttribute(Byte[] unnamed_param_0) { }
-
 }
 

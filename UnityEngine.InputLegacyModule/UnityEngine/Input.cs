@@ -3,6 +3,9 @@ namespace UnityEngine;
 [NativeHeader("Runtime/Input/InputBindings.h")]
 public class Input
 {
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private static bool <simulateTouchEnabled>k__BackingField; //Field offset: 0x0
 
 	public static Vector3 acceleration
 	{
@@ -24,13 +27,13 @@ public class Input
 
 	public static Vector2 compositionCursorPos
 	{
-		 get { } //Length: 59
+		 get { } //Length: 61
 		 set { } //Length: 52
 	}
 
 	public static string compositionString
 	{
-		 get { } //Length: 42
+		 get { } //Length: 164
 	}
 
 	public static DeviceOrientation deviceOrientation
@@ -53,20 +56,25 @@ public class Input
 
 	public static bool mousePresent
 	{
-		[FreeFunction("GetMousePresent")]
-		 get { } //Length: 42
+		 get { } //Length: 109
 	}
 
 	[NativeThrows]
 	public static Vector2 mouseScrollDelta
 	{
-		 get { } //Length: 59
+		 get { } //Length: 61
 	}
 
 	public static bool multiTouchEnabled
 	{
 		[FreeFunction("SetMultiTouchEnabled")]
 		 set { } //Length: 51
+	}
+
+	internal static bool simulateTouchEnabled
+	{
+		[CompilerGenerated]
+		internal get { } //Length: 54
 	}
 
 	public static int touchCount
@@ -77,13 +85,12 @@ public class Input
 
 	public static Touch[] touches
 	{
-		 get { } //Length: 288
+		 get { } //Length: 287
 	}
 
 	public static bool touchSupported
 	{
-		[FreeFunction("IsTouchSupported")]
-		 get { } //Length: 42
+		 get { } //Length: 112
 	}
 
 	internal static bool CheckDisabled() { }
@@ -106,6 +113,8 @@ public class Input
 
 	public static string get_compositionString() { }
 
+	private static void get_compositionString_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("GetDeviceOrientation")]
 	public static DeviceOrientation get_deviceOrientation() { }
 
@@ -115,19 +124,20 @@ public class Input
 
 	private static void get_mousePosition_Injected(out Vector3 ret) { }
 
-	[FreeFunction("GetMousePresent")]
 	public static bool get_mousePresent() { }
 
 	public static Vector2 get_mouseScrollDelta() { }
 
 	private static void get_mouseScrollDelta_Injected(out Vector2 ret) { }
 
+	[CompilerGenerated]
+	internal static bool get_simulateTouchEnabled() { }
+
 	[FreeFunction("GetTouchCount")]
 	public static int get_touchCount() { }
 
 	public static Touch[] get_touches() { }
 
-	[FreeFunction("IsTouchSupported")]
 	public static bool get_touchSupported() { }
 
 	public static float GetAxis(string axisName) { }
@@ -165,14 +175,20 @@ public class Input
 	[NativeThrows]
 	public static bool GetMouseButtonUp(int button) { }
 
+	[FreeFunction("GetMousePresent")]
+	private static bool GetMousePresentInternal() { }
+
 	[NativeThrows]
 	public static Touch GetTouch(int index) { }
 
 	private static void GetTouch_Injected(int index, out Touch ret) { }
 
+	[FreeFunction("IsTouchSupported")]
+	private static bool GetTouchSupportedInternal() { }
+
 	public static void set_compositionCursorPos(Vector2 value) { }
 
-	private static void set_compositionCursorPos_Injected(ref Vector2 value) { }
+	private static void set_compositionCursorPos_Injected(in Vector2 value) { }
 
 	public static void set_imeCompositionMode(IMECompositionMode value) { }
 

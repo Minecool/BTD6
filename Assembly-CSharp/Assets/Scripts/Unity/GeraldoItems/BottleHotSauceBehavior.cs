@@ -3,15 +3,15 @@ namespace Assets.Scripts.Unity.GeraldoItems;
 public class BottleHotSauceBehavior : GeraldoItemBehavior
 {
 	[SerializeField]
-	private PrefabReference buffDisplay; //Field offset: 0x10
+	private PrefabReference buffDisplay; //Field offset: 0x18
 	[SerializeField]
-	private string buffLocsName; //Field offset: 0x18
+	private string buffLocsName; //Field offset: 0x20
 	[SerializeField]
-	private string buffIconName; //Field offset: 0x20
+	private string buffIconName; //Field offset: 0x28
 	[SerializeField]
-	private PrefabReference effectAtTower; //Field offset: 0x28
+	private PrefabReference effectAtTower; //Field offset: 0x30
 	[SerializeField]
-	private int v2At; //Field offset: 0x30
+	private int v2At; //Field offset: 0x38
 
 	public virtual GeraldoItemBehaviorModel Def
 	{

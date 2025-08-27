@@ -1,6 +1,6 @@
 namespace NinjaKiwi.LiNK.Client.Files;
 
-internal class EncryptedFileWriter : FileWriter
+internal sealed class EncryptedFileWriter : FileWriter
 {
 	private readonly Func<StringAndVersion> getPassword; //Field offset: 0x18
 

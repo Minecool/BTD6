@@ -7,7 +7,7 @@ internal sealed class SignatureConstructedGenericType : SignatureType
 
 	public virtual bool ContainsGenericParameters
 	{
-		 get { } //Length: 139
+		 get { } //Length: 140
 	}
 
 	internal virtual SignatureType ElementType

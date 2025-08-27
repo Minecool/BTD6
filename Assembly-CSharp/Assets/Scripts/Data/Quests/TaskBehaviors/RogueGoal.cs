@@ -8,7 +8,7 @@ public class RogueGoal : QuestGoal
 
 	public int Goal
 	{
-		 get { } //Length: 15
+		 get { } //Length: 14
 	}
 
 	private bool IsUniqueTileWinValid

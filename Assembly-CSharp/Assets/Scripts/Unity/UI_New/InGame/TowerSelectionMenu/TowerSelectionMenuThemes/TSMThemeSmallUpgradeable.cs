@@ -2,9 +2,9 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeSmallUpgradeable : TSMThemeDefault
 {
-	public NK_TextMeshProUGUI nextLevelText; //Field offset: 0xC0
-	public NK_TextMeshProUGUI currentLevelText; //Field offset: 0xC8
-	public TSMButton upgradeButton; //Field offset: 0xD0
+	public NK_TextMeshProUGUI nextLevelText; //Field offset: 0xD8
+	public NK_TextMeshProUGUI currentLevelText; //Field offset: 0xE0
+	public TSMButton upgradeButton; //Field offset: 0xE8
 
 	public TSMThemeSmallUpgradeable() { }
 

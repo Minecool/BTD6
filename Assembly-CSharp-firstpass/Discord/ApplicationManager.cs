@@ -173,7 +173,7 @@ public class ApplicationManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 278
+		private get { } //Length: 266
 	}
 
 	internal ApplicationManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

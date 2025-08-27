@@ -22,7 +22,7 @@ public class GroundZeroBombBuffModel : AbilityBehaviorModel
 
 	public GroundZeroBuffMutator mutator
 	{
-		 get { } //Length: 269
+		 get { } //Length: 273
 	}
 
 	public GroundZeroBombBuffModel(string name, int damageIncrease, float lifespan, GroundZeroBuffMutator mutator = null) { }

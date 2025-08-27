@@ -27,7 +27,7 @@ public struct CancellationToken
 
 	public bool IsCancellationRequested
 	{
-		 get { } //Length: 49
+		 get { } //Length: 46
 	}
 
 	public static CancellationToken None
@@ -59,11 +59,13 @@ public struct CancellationToken
 
 	public static bool op_Inequality(CancellationToken left, CancellationToken right) { }
 
+	public CancellationTokenRegistration Register(Action<Object> callback, object state, bool useSynchronizationContext, bool useExecutionContext) { }
+
 	public CancellationTokenRegistration Register(Action<Object> callback, object state) { }
 
 	public CancellationTokenRegistration Register(Action callback) { }
 
-	public CancellationTokenRegistration Register(Action<Object> callback, object state, bool useSynchronizationContext, bool useExecutionContext) { }
+	public CancellationTokenRegistration Register(Action<Object> callback, object state, bool useSynchronizationContext) { }
 
 	public void ThrowIfCancellationRequested() { }
 

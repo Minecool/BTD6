@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal struct Dimension : IEquatable<Dimension>
 {
 	internal enum Unit

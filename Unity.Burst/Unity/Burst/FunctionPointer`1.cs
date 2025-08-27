@@ -11,9 +11,16 @@ public struct FunctionPointer
 		 get { } //Length: 118
 	}
 
+	public IntPtr Value
+	{
+		 get { } //Length: 4
+	}
+
 	public FunctionPointer`1(IntPtr ptr) { }
 
 	public T get_Invoke() { }
+
+	public IntPtr get_Value() { }
 
 }
 

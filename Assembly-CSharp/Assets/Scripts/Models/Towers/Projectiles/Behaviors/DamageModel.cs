@@ -15,7 +15,7 @@ public class DamageModel : ProjectileBehaviorModel
 
 	public float CappedDamage
 	{
-		 get { } //Length: 130
+		 get { } //Length: 134
 	}
 
 	public DamageModel(string name, float damage, float maxDamage, bool distributeToChildren, bool overrideDistributeBlocker, bool createPopEffect, BloonProperties immuneBloonProperties, BloonProperties immuneBloonPropertiesOriginal, bool ignoreImmunityDestroy, bool ignoreDamageMultipliers) { }

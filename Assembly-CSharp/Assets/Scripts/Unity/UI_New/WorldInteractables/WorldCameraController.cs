@@ -25,7 +25,7 @@ public class WorldCameraController
 
 	public Vector3 CameraPosition
 	{
-		 get { } //Length: 210
+		 get { } //Length: 217
 	}
 
 	public WorldCameraController(WorldConfig config, Camera camera) { }

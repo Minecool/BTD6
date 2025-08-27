@@ -49,7 +49,7 @@ public abstract class CorvusSpell : TowerBehavior
 
 	public override SpiritTower SpiritTower
 	{
-		 get { } //Length: 486
+		 get { } //Length: 483
 	}
 
 	public CorvusSpell() { }

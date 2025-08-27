@@ -15,12 +15,12 @@ internal class ResponseDescription
 
 	internal bool PermanentFailure
 	{
-		internal get { } //Length: 23
+		internal get { } //Length: 22
 	}
 
 	internal bool PositiveCompletion
 	{
-		internal get { } //Length: 23
+		internal get { } //Length: 22
 	}
 
 	internal bool PositiveIntermediate
@@ -30,7 +30,7 @@ internal class ResponseDescription
 
 	internal bool TransientFailure
 	{
-		internal get { } //Length: 23
+		internal get { } //Length: 22
 	}
 
 	public ResponseDescription() { }

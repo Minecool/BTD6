@@ -1,5 +1,6 @@
 namespace UnityEngine;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 internal struct EventInterests
 {
 	[CompilerGenerated]

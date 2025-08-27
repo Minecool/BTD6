@@ -8,7 +8,7 @@ public class OnBloonInRangeOfHeroDialogueTrigger : SimulationBehavior
 	public string bloonType; //Field offset: 0x20
 	public DialogueDataModel dialogue; //Field offset: 0x28
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 128
 	}
@@ -22,7 +22,7 @@ public class OnBloonInRangeOfHeroDialogueTrigger : SimulationBehavior
 
 	public OnBloonInRangeOfHeroDialogueTrigger(string hero, string bloonType, DialogueDataModel dialogue) { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

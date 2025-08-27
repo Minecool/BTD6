@@ -72,7 +72,7 @@ public struct LobbySearchQuery
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 267
+		private get { } //Length: 255
 	}
 
 	public void Distance(LobbySearchDistance distance) { }

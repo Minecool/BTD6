@@ -171,17 +171,17 @@ public class BTD6Gamepad : MonoBehaviour
 	public event InputModeChangedHandler InputModeChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event GameObjectChangedHandler OnSelectedGameObjectChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public static int ActiveGamepadCount

@@ -6,7 +6,7 @@ public abstract class XmlCharacterData : XmlLinkedNode
 
 	public override string Data
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 		 set { } //Length: 192
 	}
 

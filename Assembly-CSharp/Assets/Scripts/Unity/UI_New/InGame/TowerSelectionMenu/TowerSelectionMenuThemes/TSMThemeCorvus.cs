@@ -2,8 +2,8 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeCorvus : TSMThemeWithActionButton
 {
-	public NK_TextMeshProUGUI manaText; //Field offset: 0xE0
-	public Animator gainManaAnimator; //Field offset: 0xE8
+	public NK_TextMeshProUGUI manaText; //Field offset: 0xF8
+	public Animator gainManaAnimator; //Field offset: 0x100
 
 	public TSMThemeCorvus() { }
 
@@ -13,7 +13,7 @@ public class TSMThemeCorvus : TSMThemeWithActionButton
 
 	public virtual TSMInfoModel OnButtonPress(TowerToSimulation tower, TSMButton button) { }
 
-	public virtual void OnSpecialUiEvent(string eventId) { }
+	public virtual void OnSpecialUiEvent(TowerToSimulation selectedTower, string eventId) { }
 
 	public virtual void Selected(TowerToSimulation tower, bool openedFromRight) { }
 

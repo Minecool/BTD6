@@ -4,6 +4,29 @@ namespace UnityEngine.InputSystem;
 public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInputActionCollection, IEnumerable<InputAction>, IEnumerable
 {
 	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static Func<NamedValue, String> <>9__53_0; //Field offset: 0x8
+		public static Func<NamedValue, String> <>9__53_1; //Field offset: 0x10
+		public static Func<FieldInfo, Boolean> <>9__53_2; //Field offset: 0x18
+		public static Func<KeyValuePair`2<String, String>, String> <>9__53_3; //Field offset: 0x20
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal string <MigrateJson>b__53_0(NamedValue p) { }
+
+		internal string <MigrateJson>b__53_1(NamedValue p) { }
+
+		internal bool <MigrateJson>b__53_2(FieldInfo f) { }
+
+		internal string <MigrateJson>b__53_3(KeyValuePair<String, String> kv) { }
+
+	}
+
+	[CompilerGenerated]
 	private sealed class <get_bindings>d__9 : IEnumerable<InputBinding>, IEnumerable, IEnumerator<InputBinding>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
@@ -54,7 +77,7 @@ public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInpu
 	}
 
 	[CompilerGenerated]
-	private sealed class <GetEnumerator>d__32 : IEnumerator<InputAction>, IEnumerator, IDisposable
+	private sealed class <GetEnumerator>d__33 : IEnumerator<InputAction>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private InputAction <>2__current; //Field offset: 0x18
@@ -77,7 +100,7 @@ public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInpu
 		}
 
 		[DebuggerHidden]
-		public <GetEnumerator>d__32(int <>1__state) { }
+		public <GetEnumerator>d__33(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -95,11 +118,20 @@ public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInpu
 
 	}
 
+	private static class JsonVersion
+	{
+		public const int Version0 = 0; //Field offset: 0x0
+		public const int Version1 = 1; //Field offset: 0x0
+		public const int Current = 1; //Field offset: 0x0
+
+	}
+
 	public struct ReadFileJson
 	{
-		public string name; //Field offset: 0x0
-		public ReadMapJson[] maps; //Field offset: 0x8
-		public SchemeJson[] controlSchemes; //Field offset: 0x10
+		public int version; //Field offset: 0x0
+		public string name; //Field offset: 0x8
+		public ReadMapJson[] maps; //Field offset: 0x10
+		public SchemeJson[] controlSchemes; //Field offset: 0x18
 
 		public void ToAsset(InputActionAsset asset) { }
 
@@ -107,9 +139,10 @@ public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInpu
 
 	public struct WriteFileJson
 	{
-		public string name; //Field offset: 0x0
-		public WriteMapJson[] maps; //Field offset: 0x8
-		public SchemeJson[] controlSchemes; //Field offset: 0x10
+		public int version; //Field offset: 0x0
+		public string name; //Field offset: 0x8
+		public WriteMapJson[] maps; //Field offset: 0x10
+		public SchemeJson[] controlSchemes; //Field offset: 0x18
 
 	}
 
@@ -142,7 +175,7 @@ public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInpu
 	public override Nullable<InputBinding> bindingMask
 	{
 		 get { } //Length: 54
-		 set { } //Length: 450
+		 set { } //Length: 456
 	}
 
 	public override IEnumerable<InputBinding> bindings
@@ -211,7 +244,7 @@ public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInpu
 
 	public InputAction get_Item(string actionNameOrId) { }
 
-	[IteratorStateMachine(typeof(<GetEnumerator>d__32))]
+	[IteratorStateMachine(typeof(<GetEnumerator>d__33))]
 	public override IEnumerator<InputAction> GetEnumerator() { }
 
 	internal bool IsEmpty() { }
@@ -221,6 +254,8 @@ public class InputActionAsset : ScriptableObject, IInputActionCollection2, IInpu
 	public void LoadFromJson(string json) { }
 
 	internal void MarkAsDirty() { }
+
+	internal void MigrateJson(ref ReadFileJson parsedJson) { }
 
 	private void OnDestroy() { }
 

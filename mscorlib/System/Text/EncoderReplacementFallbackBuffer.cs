@@ -8,7 +8,7 @@ public sealed class EncoderReplacementFallbackBuffer : EncoderFallbackBuffer
 
 	public virtual int Remaining
 	{
-		 get { } //Length: 13
+		 get { } //Length: 11
 	}
 
 	public EncoderReplacementFallbackBuffer(EncoderReplacementFallback fallback) { }

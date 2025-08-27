@@ -9,6 +9,7 @@ public class ArriveAtTarget : ProjectileBehavior
 	private float perc; //Field offset: 0x8C
 	private float timeToTake; //Field offset: 0x90
 	public bool arrivedAtTarget; //Field offset: 0x94
+	private bool isInitialTargetValid; //Field offset: 0x95
 	private Vector3 startPos; //Field offset: 0x98
 
 	public ArriveAtTarget() { }

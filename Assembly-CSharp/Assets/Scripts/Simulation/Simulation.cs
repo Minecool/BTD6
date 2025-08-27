@@ -11,10 +11,10 @@ public class Simulation
 		public static Func<Tower, Single> <>9__118_2; //Field offset: 0x18
 		public static Func<TowerDetailsModel, Int32> <>9__179_0; //Field offset: 0x20
 		public static Predicate<RootObject> <>9__192_0; //Field offset: 0x28
-		public static Func<KeyValuePair`2<String, Single>, String> <>9__288_0; //Field offset: 0x30
-		public static Func<String, String[]> <>9__289_0; //Field offset: 0x38
-		public static Func<String[], String> <>9__289_1; //Field offset: 0x40
-		public static Func<String[], Single> <>9__289_2; //Field offset: 0x48
+		public static Func<KeyValuePair`2<String, Single>, String> <>9__287_0; //Field offset: 0x30
+		public static Func<String, String[]> <>9__288_0; //Field offset: 0x38
+		public static Func<String[], String> <>9__288_1; //Field offset: 0x40
+		public static Func<String[], Single> <>9__288_2; //Field offset: 0x48
 
 		private static <>c() { }
 
@@ -22,7 +22,7 @@ public class Simulation
 
 		internal bool <FlushProcessList>b__192_0(RootObject o) { }
 
-		internal string <GetSaveMetaData>b__288_0(KeyValuePair<String, Single> kvp) { }
+		internal string <GetSaveMetaData>b__287_0(KeyValuePair<String, Single> kvp) { }
 
 		internal int <RedistributeTowers>b__118_0(int x) { }
 
@@ -30,11 +30,11 @@ public class Simulation
 
 		internal int <RemovePlayer>b__117_0(int x) { }
 
-		internal String[] <SetSaveMetaData>b__289_0(string part) { }
+		internal String[] <SetSaveMetaData>b__288_0(string part) { }
 
-		internal string <SetSaveMetaData>b__289_1(String[] split) { }
+		internal string <SetSaveMetaData>b__288_1(String[] split) { }
 
-		internal float <SetSaveMetaData>b__289_2(String[] split) { }
+		internal float <SetSaveMetaData>b__288_2(String[] split) { }
 
 		internal int <StockStandardTowerInventory>b__179_0(TowerDetailsModel t) { }
 
@@ -262,7 +262,7 @@ public class Simulation
 	public float Health
 	{
 		 get { } //Length: 32
-		 set { } //Length: 890
+		 set { } //Length: 984
 	}
 
 	public IReadOnlyCollection<InputManager> inputManagers
@@ -277,7 +277,7 @@ public class Simulation
 
 	public bool IsDestroyed
 	{
-		 get { } //Length: 19
+		 get { } //Length: 17
 	}
 
 	public bool IsEndlessRoundsMode
@@ -376,6 +376,8 @@ public class Simulation
 	public double AddCash(double c, CashType from, int cashIndex, CashSource source, Tower tower = null, bool cashDoubleable = false) { }
 
 	public void AddGameCompletionTimePenalty(TimeSpan time) { }
+
+	public void AddLoan(float amount, float collectionRate, ImfLoanCollectionModel loanModel, int owner, ObjectId towerId) { }
 
 	public void AddSharedAbilityCooldown(string id, float cooldownRemaining) { }
 
@@ -557,8 +559,6 @@ public class Simulation
 
 	public void Initialise(GameModel model, bool isHeadless) { }
 
-	public void InitialiseGuideArrows() { }
-
 	public void InitialiseMap(MapModel newMap) { }
 
 	public bool InputManagerExists(int index) { }
@@ -698,6 +698,8 @@ public class Simulation
 	public void UnregisterInterestInInput() { }
 
 	public void UpdateStagedCash() { }
+
+	private void UpdateStudentLoansAchievement(int owner) { }
 
 	public Dictionary<String, TSMInfoModel> UpdateTsmThemeInfo(PropBase prop) { }
 

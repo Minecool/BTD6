@@ -21,10 +21,10 @@ internal struct TouchscreenState : IInputStateTypeInfo
 	public const int MaxTouches = 10; //Field offset: 0x0
 	internal const int kTouchDataOffset = 56; //Field offset: 0x0
 	[FixedBuffer(typeof(byte, 56)]
-	[InputControl(name = "delta", useStateFrom = "primaryTouch/delta", layout = "Delta")]
 	[InputControl(name = "primaryTouch", displayName = "Primary Touch", layout = "Touch", synthetic = True)]
 	[InputControl(name = "primaryTouch/tap", usage = "PrimaryAction")]
 	[InputControl(name = "position", useStateFrom = "primaryTouch/position")]
+	[InputControl(name = "delta", useStateFrom = "primaryTouch/delta", layout = "Delta")]
 	[InputControl(name = "pressure", useStateFrom = "primaryTouch/pressure")]
 	[InputControl(name = "radius", useStateFrom = "primaryTouch/radius")]
 	[InputControl(name = "press", useStateFrom = "primaryTouch/phase", layout = "TouchPress", synthetic = True, usages = new IL2CPP_TYPE_STRING[] {}])]
@@ -36,12 +36,12 @@ internal struct TouchscreenState : IInputStateTypeInfo
 
 	public override FourCC format
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public static FourCC Format
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public TouchState* primaryTouch

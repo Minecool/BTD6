@@ -31,7 +31,7 @@ internal abstract class SchemaDeclBase
 
 	internal string DefaultValueRaw
 	{
-		internal get { } //Length: 77
+		internal get { } //Length: 27
 		internal set { } //Length: 5
 	}
 
@@ -67,7 +67,7 @@ internal abstract class SchemaDeclBase
 
 	internal string Prefix
 	{
-		internal get { } //Length: 77
+		internal get { } //Length: 27
 		internal set { } //Length: 5
 	}
 

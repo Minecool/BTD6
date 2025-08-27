@@ -2,39 +2,58 @@ namespace UnityEngine.UIElements;
 
 public abstract class CallbackEventHandler : IEventHandler
 {
+	internal const string HandleEventBubbleUpName = "HandleEventBubbleUp"; //Field offset: 0x0
+	internal const string HandleEventTrickleDownName = "HandleEventTrickleDown"; //Field offset: 0x0
 	internal const string ExecuteDefaultActionName = "ExecuteDefaultAction"; //Field offset: 0x0
 	internal const string ExecuteDefaultActionAtTargetName = "ExecuteDefaultActionAtTarget"; //Field offset: 0x0
 	internal bool isIMGUIContainer; //Field offset: 0x10
-	private EventCallbackRegistry m_CallbackRegistry; //Field offset: 0x18
+	internal EventCallbackRegistry m_CallbackRegistry; //Field offset: 0x18
 
 	protected CallbackEventHandler() { }
 
-	private void AddEventCategories() { }
+	private void AddEventCategories(TrickleDown useTrickleDown) { }
 
 	[EventInterest(EventInterestOptions::Inherit (0))]
+	[Obsolete("Use HandleEventBubbleUp. Before proceeding, make sure you understand the latest changes to UIToolkit event propagation rules by visiting Unity's manual page https://docs.unity3d.com/Manual/UIE-Events-Dispatching.html")]
 	protected override void ExecuteDefaultAction(EventBase evt) { }
 
 	[EventInterest(EventInterestOptions::Inherit (0))]
+	[Obsolete("Use HandleEventBubbleUp. Before proceeding, make sure you understand the latest changes to UIToolkit event propagation rules by visiting Unity's manual page https://docs.unity3d.com/Manual/UIE-Events-Dispatching.html")]
 	protected override void ExecuteDefaultActionAtTarget(EventBase evt) { }
 
+	internal void ExecuteDefaultActionAtTargetInternal(EventBase evt) { }
+
 	[EventInterest(EventInterestOptions::Inherit (0))]
+	[Obsolete("Use HandleEventBubbleUpDisabled.")]
 	internal override void ExecuteDefaultActionDisabled(EventBase evt) { }
 
 	[EventInterest(EventInterestOptions::Inherit (0))]
+	[Obsolete("Use HandleEventBubbleUpDisabled.")]
 	internal override void ExecuteDefaultActionDisabledAtTarget(EventBase evt) { }
 
-	[Obsolete("The virtual method CallbackEventHandler.HandleEvent is deprecated and will be removed in a future release. Please override ExecuteDefaultAction instead.")]
-	public override void HandleEvent(EventBase evt) { }
+	internal void ExecuteDefaultActionDisabledAtTargetInternal(EventBase evt) { }
 
-	internal void HandleEventAtCurrentTargetAndPhase(EventBase evt) { }
+	internal void ExecuteDefaultActionDisabledInternal(EventBase evt) { }
 
-	internal void HandleEventAtTargetAndDefaultPhase(EventBase evt) { }
+	internal void ExecuteDefaultActionInternal(EventBase evt) { }
 
-	internal void HandleEventAtTargetPhase(EventBase evt) { }
+	[EventInterest(EventInterestOptions::Inherit (0))]
+	protected override void HandleEventBubbleUp(EventBase evt) { }
 
-	public override bool HasBubbleUpHandlers() { }
+	[EventInterest(EventInterestOptions::Inherit (0))]
+	internal override void HandleEventBubbleUpDisabled(EventBase evt) { }
 
-	public override bool HasTrickleDownHandlers() { }
+	internal void HandleEventBubbleUpInternal(EventBase evt) { }
+
+	[EventInterest(EventInterestOptions::Inherit (0))]
+	protected override void HandleEventTrickleDown(EventBase evt) { }
+
+	[EventInterest(EventInterestOptions::Inherit (0))]
+	internal override void HandleEventTrickleDownDisabled(EventBase evt) { }
+
+	internal void HandleEventTrickleDownInternal(EventBase evt) { }
+
+	protected void NotifyPropertyChanged(in BindingId property) { }
 
 	internal void RegisterCallback(EventCallback<TEventType> callback, InvokePolicy invokePolicy, TrickleDown useTrickleDown = 0) { }
 
@@ -46,7 +65,7 @@ public abstract class CallbackEventHandler : IEventHandler
 
 	public abstract void SendEvent(EventBase e) { }
 
-	private override void UnityEngine.UIElements.IEventHandler.HandleEvent(EventBase evt) { }
+	public void UnregisterCallback(EventCallback<TEventType, TUserArgsType> callback, TrickleDown useTrickleDown = 0) { }
 
 	public void UnregisterCallback(EventCallback<TEventType> callback, TrickleDown useTrickleDown = 0) { }
 

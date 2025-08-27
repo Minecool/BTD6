@@ -72,27 +72,27 @@ public class ObynGlobalSupportModel : TowerBehaviorModel
 
 	public AbilityCooldownMutatorClass AbilityCooldownMutator
 	{
-		 get { } //Length: 243
+		 get { } //Length: 247
 	}
 
 	public DamageTypeMutatorClass DamageTypeMutator
 	{
-		 get { } //Length: 235
+		 get { } //Length: 239
 	}
 
 	public ProjectileRadiusMutatorClass ProjectileRadiusMutator
 	{
-		 get { } //Length: 243
+		 get { } //Length: 247
 	}
 
 	public RangeMutatorClass RangeMutator
 	{
-		 get { } //Length: 237
+		 get { } //Length: 241
 	}
 
 	public TornadoRateMutatorClass TornadoRateMutator
 	{
-		 get { } //Length: 243
+		 get { } //Length: 247
 	}
 
 	public ObynGlobalSupportModel(string name, float dotjRangeMultiplier, float dotsProjectileRadius, float dotsMoabDamage, float tornadoAttackCooldownReduction, float mmAbilityCooldownMultiplier, string mutatorIdRange, string mutatorIdProjectileRadius, string mutatorIdMoabDamage, string mutatorIdCooldownMultiplier, string mutatorIdTornadoRateMultiplier) { }

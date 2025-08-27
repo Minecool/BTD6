@@ -21,8 +21,8 @@ public class XmlSchemaRedefine : XmlSchemaExternal
 
 	[XmlElement("annotation", typeof(XmlSchemaAnnotation))]
 	[XmlElement("complexType", typeof(XmlSchemaComplexType))]
-	[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
 	[XmlElement("group", typeof(XmlSchemaGroup))]
+	[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
 	[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroup))]
 	public XmlSchemaObjectCollection Items
 	{

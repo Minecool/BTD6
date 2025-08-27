@@ -46,9 +46,9 @@ public class DynamicResolutionHandler
 	[CompilerGenerated]
 	private Vector2Int <finalViewport>k__BackingField; //Field offset: 0x48
 	private DynamicResolutionType type; //Field offset: 0x50
-	private GlobalDynamicResolutionSettings m_CachedSettings; //Field offset: 0x54
-	private WeakReference m_OwnerCameraWeakRef; //Field offset: 0x90
-	private UpsamplerScheduleType m_UpsamplerSchedule; //Field offset: 0x98
+	private GlobalDynamicResolutionSettings m_CachedSettings; //Field offset: 0x58
+	private WeakReference m_OwnerCameraWeakRef; //Field offset: 0xC8
+	private UpsamplerScheduleType m_UpsamplerSchedule; //Field offset: 0xD0
 
 	public private DynamicResUpscaleFilter filter
 	{
@@ -64,6 +64,11 @@ public class DynamicResolutionHandler
 		 get { } //Length: 5
 		[CompilerGenerated]
 		 set { } //Length: 5
+	}
+
+	public bool forcingResolution
+	{
+		 get { } //Length: 5
 	}
 
 	public static DynamicResolutionHandler instance
@@ -87,9 +92,9 @@ public class DynamicResolutionHandler
 
 	private DynamicResolutionHandler() { }
 
-	internal Vector2Int ApplyScalesOnSize(Vector2Int size, Vector2 scales) { }
-
 	public Vector2Int ApplyScalesOnSize(Vector2Int size) { }
+
+	internal Vector2Int ApplyScalesOnSize(Vector2Int size, Vector2 scales) { }
 
 	public float CalculateMipBias(Vector2Int inputResolution, Vector2Int outputResolution, bool forceApply = false) { }
 
@@ -108,6 +113,8 @@ public class DynamicResolutionHandler
 
 	[CompilerGenerated]
 	public Vector2Int get_finalViewport() { }
+
+	public bool get_forcingResolution() { }
 
 	public static DynamicResolutionHandler get_instance() { }
 

@@ -49,7 +49,7 @@ public class TargetSupplier : AttackBehavior
 
 	protected TargetSupplier DefaultSupplier
 	{
-		 get { } //Length: 1033
+		 get { } //Length: 1028
 	}
 
 	public TargetSupplier() { }

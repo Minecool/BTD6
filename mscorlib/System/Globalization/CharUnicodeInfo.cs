@@ -47,6 +47,8 @@ public static class CharUnicodeInfo
 
 	internal static UnicodeCategory InternalGetUnicodeCategory(string str, int index, out int charLength) { }
 
+	internal static bool IsCombiningCategory(UnicodeCategory uc) { }
+
 	internal static bool IsWhiteSpace(string s, int index) { }
 
 	internal static bool IsWhiteSpace(char c) { }

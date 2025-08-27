@@ -1,6 +1,7 @@
 namespace UnityEngine.Rendering.Universal;
 
-[VolumeComponentMenuForRenderPipeline("Post-processing/Color Lookup", new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(UniversalRenderPipeline)}])]
+[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+[VolumeComponentMenu("Post-processing/Color Lookup")]
 public sealed class ColorLookup : VolumeComponent, IPostProcessComponent
 {
 	[Tooltip("A 2D Lookup Texture (LUT) to use for color grading.")]
@@ -12,6 +13,7 @@ public sealed class ColorLookup : VolumeComponent, IPostProcessComponent
 
 	public override bool IsActive() { }
 
+	[Obsolete("Unused #from(2023.1)", False)]
 	public override bool IsTileCompatible() { }
 
 	public bool ValidateLUT() { }

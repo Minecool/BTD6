@@ -5,6 +5,19 @@ namespace UnityEngine;
 [StaticAccessor("AndroidJNIBindingsHelpers", StaticAccessorType::DoubleColon (2))]
 public static class AndroidJNI
 {
+	private struct JStringBinding : IDisposable
+	{
+		private IntPtr javaString; //Field offset: 0x0
+		private IntPtr chars; //Field offset: 0x8
+		private int length; //Field offset: 0x10
+		private bool ownsRef; //Field offset: 0x14
+
+		public override void Dispose() { }
+
+		public virtual string ToString() { }
+
+	}
+
 
 	public static bool CallBooleanMethod(IntPtr obj, IntPtr methodID, Span<jvalue> args) { }
 
@@ -100,20 +113,33 @@ public static class AndroidJNI
 
 	public static string CallStaticStringMethod(IntPtr clazz, IntPtr methodID, jvalue[] args) { }
 
-	[ThreadSafe]
 	public static string CallStaticStringMethodUnsafe(IntPtr clazz, IntPtr methodID, jvalue* args) { }
+
+	[ThreadSafe]
+	private static JStringBinding CallStaticStringMethodUnsafeInternal(IntPtr clazz, IntPtr methodID, jvalue* args) { }
+
+	private static void CallStaticStringMethodUnsafeInternal_Injected(IntPtr clazz, IntPtr methodID, jvalue* args, out JStringBinding ret) { }
 
 	public static string CallStringMethod(IntPtr obj, IntPtr methodID, Span<jvalue> args) { }
 
 	public static string CallStringMethod(IntPtr obj, IntPtr methodID, jvalue[] args) { }
 
-	[ThreadSafe]
 	public static string CallStringMethodUnsafe(IntPtr obj, IntPtr methodID, jvalue* args) { }
+
+	[ThreadSafe]
+	private static JStringBinding CallStringMethodUnsafeInternal(IntPtr obj, IntPtr methodID, jvalue* args) { }
+
+	private static void CallStringMethodUnsafeInternal_Injected(IntPtr obj, IntPtr methodID, jvalue* args, out JStringBinding ret) { }
 
 	public static void CallVoidMethod(IntPtr obj, IntPtr methodID, Span<jvalue> args) { }
 
 	[ThreadSafe]
 	public static void CallVoidMethodUnsafe(IntPtr obj, IntPtr methodID, jvalue* args) { }
+
+	[ThreadSafe]
+	private static IntPtr ConvertToBooleanArray(Boolean[] array) { }
+
+	private static IntPtr ConvertToBooleanArray_Injected(ref ManagedSpanWrapper array) { }
 
 	[ThreadSafe]
 	public static void DeleteLocalRef(IntPtr obj) { }
@@ -130,12 +156,18 @@ public static class AndroidJNI
 	[ThreadSafe]
 	public static IntPtr FindClass(string name) { }
 
+	private static IntPtr FindClass_Injected(ref ManagedSpanWrapper name) { }
+
 	[ThreadSafe]
 	public static Boolean[] FromBooleanArray(IntPtr array) { }
+
+	private static void FromBooleanArray_Injected(IntPtr array, out BlittableArrayWrapper ret) { }
 
 	[Obsolete("AndroidJNI.FromByteArray is obsolete. Use AndroidJNI.FromSByteArray method instead")]
 	[ThreadSafe]
 	public static Byte[] FromByteArray(IntPtr array) { }
+
+	private static void FromByteArray_Injected(IntPtr array, out BlittableArrayWrapper ret) { }
 
 	[ThreadSafe]
 	public static Char[] FromCharArray(IntPtr array) { }
@@ -167,8 +199,12 @@ public static class AndroidJNI
 	[ThreadSafe]
 	public static IntPtr GetFieldID(IntPtr clazz, string name, string sig) { }
 
+	private static IntPtr GetFieldID_Injected(IntPtr clazz, ref ManagedSpanWrapper name, ref ManagedSpanWrapper sig) { }
+
 	[ThreadSafe]
 	public static IntPtr GetMethodID(IntPtr clazz, string name, string sig) { }
+
+	private static IntPtr GetMethodID_Injected(IntPtr clazz, ref ManagedSpanWrapper name, ref ManagedSpanWrapper sig) { }
 
 	[ThreadSafe]
 	public static IntPtr GetObjectArrayElement(IntPtr array, int index) { }
@@ -188,6 +224,8 @@ public static class AndroidJNI
 	[ThreadSafe]
 	public static IntPtr GetStaticFieldID(IntPtr clazz, string name, string sig) { }
 
+	private static IntPtr GetStaticFieldID_Injected(IntPtr clazz, ref ManagedSpanWrapper name, ref ManagedSpanWrapper sig) { }
+
 	[ThreadSafe]
 	public static float GetStaticFloatField(IntPtr clazz, IntPtr fieldID) { }
 
@@ -200,6 +238,8 @@ public static class AndroidJNI
 	[ThreadSafe]
 	public static IntPtr GetStaticMethodID(IntPtr clazz, string name, string sig) { }
 
+	private static IntPtr GetStaticMethodID_Injected(IntPtr clazz, ref ManagedSpanWrapper name, ref ManagedSpanWrapper sig) { }
+
 	[ThreadSafe]
 	public static IntPtr GetStaticObjectField(IntPtr clazz, IntPtr fieldID) { }
 
@@ -209,11 +249,22 @@ public static class AndroidJNI
 	[ThreadSafe]
 	public static short GetStaticShortField(IntPtr clazz, IntPtr fieldID) { }
 
-	[ThreadSafe]
 	public static string GetStaticStringField(IntPtr clazz, IntPtr fieldID) { }
 
 	[ThreadSafe]
+	private static JStringBinding GetStaticStringFieldInternal(IntPtr clazz, IntPtr fieldID) { }
+
+	private static void GetStaticStringFieldInternal_Injected(IntPtr clazz, IntPtr fieldID, out JStringBinding ret) { }
+
 	public static string GetStringChars(IntPtr str) { }
+
+	[ThreadSafe]
+	private static JStringBinding GetStringCharsInternal(IntPtr str) { }
+
+	private static void GetStringCharsInternal_Injected(IntPtr str, out JStringBinding ret) { }
+
+	[RequiredByNativeCode]
+	private static void InvokeAction(Action action) { }
 
 	[ThreadSafe]
 	public static bool IsSameObject(IntPtr obj1, IntPtr obj2) { }
@@ -237,6 +288,8 @@ public static class AndroidJNI
 	[ThreadSafe]
 	private static IntPtr NewStringFromStr(string chars) { }
 
+	private static IntPtr NewStringFromStr_Injected(ref ManagedSpanWrapper chars) { }
+
 	[ThreadSafe]
 	public static IntPtr NewWeakGlobalRef(IntPtr obj) { }
 
@@ -250,29 +303,35 @@ public static class AndroidJNI
 	internal static void QueueDeleteGlobalRef(IntPtr obj) { }
 
 	[ThreadSafe]
-	public static void SetObjectArrayElement(IntPtr array, int index, IntPtr obj) { }
+	private static void ReleaseStringChars(JStringBinding str) { }
+
+	private static void ReleaseStringChars_Injected(in JStringBinding str) { }
 
 	[ThreadSafe]
+	public static void SetObjectArrayElement(IntPtr array, int index, IntPtr obj) { }
+
 	public static IntPtr ToBooleanArray(Boolean[] array) { }
 
 	[Obsolete("AndroidJNI.ToByteArray is obsolete. Use AndroidJNI.ToSByteArray method instead")]
 	[ThreadSafe]
 	public static IntPtr ToByteArray(Byte[] array) { }
 
-	public static IntPtr ToCharArray(Char[] array) { }
+	private static IntPtr ToByteArray_Injected(ref ManagedSpanWrapper array) { }
 
 	[ThreadSafe]
 	public static IntPtr ToCharArray(Char* array, int length) { }
 
-	public static IntPtr ToDoubleArray(Double[] array) { }
+	public static IntPtr ToCharArray(Char[] array) { }
 
 	[ThreadSafe]
 	public static IntPtr ToDoubleArray(Double* array, int length) { }
 
-	public static IntPtr ToFloatArray(Single[] array) { }
+	public static IntPtr ToDoubleArray(Double[] array) { }
 
 	[ThreadSafe]
 	public static IntPtr ToFloatArray(Single* array, int length) { }
+
+	public static IntPtr ToFloatArray(Single[] array) { }
 
 	[ThreadSafe]
 	public static IntPtr ToIntArray(Int32* array, int length) { }
@@ -284,20 +343,20 @@ public static class AndroidJNI
 	[ThreadSafe]
 	public static IntPtr ToLongArray(Int64* array, int length) { }
 
-	public static IntPtr ToObjectArray(IntPtr[] array, IntPtr arrayClass) { }
-
 	[ThreadSafe]
 	public static IntPtr ToObjectArray(IntPtr* array, int length, IntPtr arrayClass) { }
+
+	public static IntPtr ToObjectArray(IntPtr[] array, IntPtr arrayClass) { }
 
 	[ThreadSafe]
 	public static IntPtr ToSByteArray(SByte* array, int length) { }
 
 	public static IntPtr ToSByteArray(SByte[] array) { }
 
+	public static IntPtr ToShortArray(Int16[] array) { }
+
 	[ThreadSafe]
 	public static IntPtr ToShortArray(Int16* array, int length) { }
-
-	public static IntPtr ToShortArray(Int16[] array) { }
 
 }
 

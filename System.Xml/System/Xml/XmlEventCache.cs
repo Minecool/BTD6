@@ -22,7 +22,7 @@ internal sealed class XmlEventCache : XmlRawWriter
 
 		public string String1
 		{
-			 get { } //Length: 5
+			 get { } //Length: 291
 		}
 
 		public string String2

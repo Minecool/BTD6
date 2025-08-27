@@ -9,7 +9,7 @@ public struct Bone
 	public uint parentBoneIndex
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public Vector3 position

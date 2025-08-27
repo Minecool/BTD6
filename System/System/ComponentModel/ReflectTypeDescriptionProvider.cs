@@ -51,7 +51,7 @@ internal sealed class ReflectTypeDescriptionProvider : TypeDescriptionProvider
 
 	private static Hashtable IntrinsicTypeConverters
 	{
-		private get { } //Length: 2366
+		private get { } //Length: 2215
 	}
 
 	private static ReflectTypeDescriptionProvider() { }

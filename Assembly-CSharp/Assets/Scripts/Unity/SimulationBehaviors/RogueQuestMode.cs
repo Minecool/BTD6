@@ -18,7 +18,7 @@ public class RogueQuestMode : SimulationBehavior, IUISummaryScreenBehavior, IUIB
 	}
 
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 68
 	}
@@ -35,7 +35,7 @@ public class RogueQuestMode : SimulationBehavior, IUISummaryScreenBehavior, IUIB
 
 	public RogueQuestMode() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public override SubGameType get_SelectedScoreUI() { }
 

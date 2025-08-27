@@ -53,7 +53,6 @@ public sealed class Timer : MarshalByRefObject, IDisposable, IAsyncDisposable
 
 	}
 
-	private const long MaxValue = 4294967294; //Field offset: 0x0
 	private TimerCallback callback; //Field offset: 0x18
 	private object state; //Field offset: 0x20
 	private long due_time_ms; //Field offset: 0x28

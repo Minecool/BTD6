@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class StylePropertyAnimationSystem : IStylePropertyAnimationSystem
 {
 	private struct AnimationDataSet
@@ -353,6 +354,17 @@ internal class StylePropertyAnimationSystem : IStylePropertyAnimationSystem
 
 	}
 
+	private class ValuesEnum : ValuesDiscrete<Int32>
+	{
+
+		public ValuesEnum() { }
+
+		protected virtual void UpdateComputedStyle(int i) { }
+
+		protected virtual void UpdateComputedStyle() { }
+
+	}
+
 	private class ValuesFloat : Values<Single>
 	{
 		[CompilerGenerated]
@@ -618,19 +630,20 @@ internal class StylePropertyAnimationSystem : IStylePropertyAnimationSystem
 	private ValuesInt m_Ints; //Field offset: 0x20
 	private ValuesLength m_Lengths; //Field offset: 0x28
 	private ValuesColor m_Colors; //Field offset: 0x30
-	private ValuesBackground m_Backgrounds; //Field offset: 0x38
-	private ValuesFontDefinition m_FontDefinitions; //Field offset: 0x40
-	private ValuesFont m_Fonts; //Field offset: 0x48
-	private ValuesTextShadow m_TextShadows; //Field offset: 0x50
-	private ValuesScale m_Scale; //Field offset: 0x58
-	private ValuesRotate m_Rotate; //Field offset: 0x60
-	private ValuesTranslate m_Translate; //Field offset: 0x68
-	private ValuesTransformOrigin m_TransformOrigin; //Field offset: 0x70
-	private ValuesBackgroundPosition m_BackgroundPosition; //Field offset: 0x78
-	private ValuesBackgroundRepeat m_BackgroundRepeat; //Field offset: 0x80
-	private ValuesBackgroundSize m_BackgroundSize; //Field offset: 0x88
-	private readonly List<Values> m_AllValues; //Field offset: 0x90
-	private readonly Dictionary<StylePropertyId, Values> m_PropertyToValues; //Field offset: 0x98
+	private ValuesEnum m_Enums; //Field offset: 0x38
+	private ValuesBackground m_Backgrounds; //Field offset: 0x40
+	private ValuesFontDefinition m_FontDefinitions; //Field offset: 0x48
+	private ValuesFont m_Fonts; //Field offset: 0x50
+	private ValuesTextShadow m_TextShadows; //Field offset: 0x58
+	private ValuesScale m_Scale; //Field offset: 0x60
+	private ValuesRotate m_Rotate; //Field offset: 0x68
+	private ValuesTranslate m_Translate; //Field offset: 0x70
+	private ValuesTransformOrigin m_TransformOrigin; //Field offset: 0x78
+	private ValuesBackgroundPosition m_BackgroundPosition; //Field offset: 0x80
+	private ValuesBackgroundRepeat m_BackgroundRepeat; //Field offset: 0x88
+	private ValuesBackgroundSize m_BackgroundSize; //Field offset: 0x90
+	private readonly List<Values> m_AllValues; //Field offset: 0x98
+	private readonly Dictionary<StylePropertyId, Values> m_PropertyToValues; //Field offset: 0xA0
 
 	public StylePropertyAnimationSystem() { }
 
@@ -677,6 +690,8 @@ internal class StylePropertyAnimationSystem : IStylePropertyAnimationSystem
 	private bool StartTransition(VisualElement owner, StylePropertyId prop, T startValue, T endValue, int durationMs, int delayMs, Func<Single, Single> easingCurve, Values<T> values) { }
 
 	public override bool StartTransition(VisualElement owner, StylePropertyId prop, Scale startValue, Scale endValue, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
+
+	public override bool StartTransitionEnum(VisualElement owner, StylePropertyId prop, int startValue, int endValue, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
 
 	public override void Update() { }
 

@@ -16,7 +16,7 @@ public class PiercePercentageSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 359
+		 get { } //Length: 293
 	}
 
 	public PiercePercentageSupport() { }

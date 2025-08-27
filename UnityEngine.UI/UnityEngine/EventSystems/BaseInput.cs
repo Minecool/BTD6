@@ -35,6 +35,11 @@ public class BaseInput : UIBehaviour
 		 get { } //Length: 7
 	}
 
+	public override float mouseScrollDeltaPerTick
+	{
+		 get { } //Length: 9
+	}
+
 	public override int touchCount
 	{
 		 get { } //Length: 7
@@ -58,6 +63,8 @@ public class BaseInput : UIBehaviour
 	public override bool get_mousePresent() { }
 
 	public override Vector2 get_mouseScrollDelta() { }
+
+	public override float get_mouseScrollDeltaPerTick() { }
 
 	public override int get_touchCount() { }
 

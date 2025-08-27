@@ -184,7 +184,7 @@ internal sealed class XmlSqlBinaryReader : XmlReader, IXmlNamespaceResolver
 
 	public virtual int Depth
 	{
-		 get { } //Length: 206
+		 get { } //Length: 204
 	}
 
 	public virtual bool EOF
@@ -234,7 +234,7 @@ internal sealed class XmlSqlBinaryReader : XmlReader, IXmlNamespaceResolver
 
 	public virtual string Value
 	{
-		 get { } //Length: 892
+		 get { } //Length: 184
 	}
 
 	public virtual Type ValueType
@@ -244,7 +244,7 @@ internal sealed class XmlSqlBinaryReader : XmlReader, IXmlNamespaceResolver
 
 	public virtual string XmlLang
 	{
-		 get { } //Length: 176
+		 get { } //Length: 134
 	}
 
 	public virtual XmlSpace XmlSpace

@@ -106,7 +106,7 @@ public class CanvasScaler : UIBehaviour
 	public Vector2 referenceResolution
 	{
 		 get { } //Length: 19
-		 set { } //Length: 116
+		 set { } //Length: 110
 	}
 
 	public float scaleFactor

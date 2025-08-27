@@ -15,8 +15,8 @@ public class XmlSchemaSimpleContentRestriction : XmlSchemaContent
 		 set { } //Length: 5
 	}
 
-	[XmlElement("attribute", typeof(XmlSchemaAttribute))]
 	[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+	[XmlElement("attribute", typeof(XmlSchemaAttribute))]
 	public XmlSchemaObjectCollection Attributes
 	{
 		 get { } //Length: 5
@@ -36,18 +36,18 @@ public class XmlSchemaSimpleContentRestriction : XmlSchemaContent
 		 set { } //Length: 149
 	}
 
-	[XmlElement("maxLength", typeof(XmlSchemaMaxLengthFacet))]
-	[XmlElement("maxInclusive", typeof(XmlSchemaMaxInclusiveFacet))]
-	[XmlElement("maxExclusive", typeof(XmlSchemaMaxExclusiveFacet))]
-	[XmlElement("minInclusive", typeof(XmlSchemaMinInclusiveFacet))]
-	[XmlElement("minExclusive", typeof(XmlSchemaMinExclusiveFacet))]
-	[XmlElement("totalDigits", typeof(XmlSchemaTotalDigitsFacet))]
-	[XmlElement("fractionDigits", typeof(XmlSchemaFractionDigitsFacet))]
-	[XmlElement("whiteSpace", typeof(XmlSchemaWhiteSpaceFacet))]
 	[XmlElement("minLength", typeof(XmlSchemaMinLengthFacet))]
+	[XmlElement("whiteSpace", typeof(XmlSchemaWhiteSpaceFacet))]
+	[XmlElement("fractionDigits", typeof(XmlSchemaFractionDigitsFacet))]
+	[XmlElement("totalDigits", typeof(XmlSchemaTotalDigitsFacet))]
+	[XmlElement("minExclusive", typeof(XmlSchemaMinExclusiveFacet))]
+	[XmlElement("minInclusive", typeof(XmlSchemaMinInclusiveFacet))]
+	[XmlElement("maxExclusive", typeof(XmlSchemaMaxExclusiveFacet))]
+	[XmlElement("maxInclusive", typeof(XmlSchemaMaxInclusiveFacet))]
 	[XmlElement("enumeration", typeof(XmlSchemaEnumerationFacet))]
-	[XmlElement("pattern", typeof(XmlSchemaPatternFacet))]
 	[XmlElement("length", typeof(XmlSchemaLengthFacet))]
+	[XmlElement("pattern", typeof(XmlSchemaPatternFacet))]
+	[XmlElement("maxLength", typeof(XmlSchemaMaxLengthFacet))]
 	public XmlSchemaObjectCollection Facets
 	{
 		 get { } //Length: 5

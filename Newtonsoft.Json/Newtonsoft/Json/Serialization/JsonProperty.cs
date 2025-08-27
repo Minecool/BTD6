@@ -202,13 +202,13 @@ public class JsonProperty
 	public string PropertyName
 	{
 		 get { } //Length: 5
-		 set { } //Length: 117
+		 set { } //Length: 120
 	}
 
 	public Type PropertyType
 	{
 		 get { } //Length: 5
-		 set { } //Length: 116
+		 set { } //Length: 88
 	}
 
 	public bool Readable

@@ -31,7 +31,7 @@ internal class XmlNodeReaderNavigator
 
 	public int AttributeCount
 	{
-		 get { } //Length: 327
+		 get { } //Length: 320
 	}
 
 	public string BaseURI
@@ -51,12 +51,12 @@ internal class XmlNodeReaderNavigator
 
 	public bool IsDefault
 	{
-		 get { } //Length: 174
+		 get { } //Length: 173
 	}
 
 	public bool IsEmptyElement
 	{
-		 get { } //Length: 157
+		 get { } //Length: 155
 	}
 
 	private bool IsOnDeclOrDocType
@@ -66,12 +66,12 @@ internal class XmlNodeReaderNavigator
 
 	public string LocalName
 	{
-		 get { } //Length: 96
+		 get { } //Length: 68
 	}
 
 	public string Name
 	{
-		 get { } //Length: 104
+		 get { } //Length: 76
 	}
 
 	public string NamespaceURI
@@ -101,7 +101,7 @@ internal class XmlNodeReaderNavigator
 
 	public string Value
 	{
-		 get { } //Length: 668
+		 get { } //Length: 648
 	}
 
 	public string XmlLang

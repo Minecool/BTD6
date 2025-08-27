@@ -20,7 +20,7 @@ internal class HttpStreamAsyncResult : IAsyncResult
 
 	public override WaitHandle AsyncWaitHandle
 	{
-		 get { } //Length: 261
+		 get { } //Length: 221
 	}
 
 	public override bool CompletedSynchronously
@@ -30,7 +30,7 @@ internal class HttpStreamAsyncResult : IAsyncResult
 
 	public override bool IsCompleted
 	{
-		 get { } //Length: 156
+		 get { } //Length: 146
 	}
 
 	public HttpStreamAsyncResult() { }

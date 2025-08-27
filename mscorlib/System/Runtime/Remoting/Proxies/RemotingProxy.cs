@@ -10,7 +10,7 @@ internal class RemotingProxy : RealProxy, IRemotingTypeInfo
 
 	public override string TypeName
 	{
-		 get { } //Length: 286
+		 get { } //Length: 279
 	}
 
 	private static RemotingProxy() { }

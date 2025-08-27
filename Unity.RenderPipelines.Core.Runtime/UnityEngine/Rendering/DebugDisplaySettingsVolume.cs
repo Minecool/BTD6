@@ -10,10 +10,10 @@ public class DebugDisplaySettingsVolume : IDebugDisplaySettingsData, IDebugDispl
 		public SettingsPanel(DebugDisplaySettingsVolume data) { }
 
 		[CompilerGenerated]
-		private void <.ctor>b__0_0(Field<Int32> _, int __) { }
+		private void <.ctor>b__0_0(Field<Object> _, object __) { }
 
 		[CompilerGenerated]
-		private void <.ctor>b__0_1(Field<Object> _, object __) { }
+		private void <.ctor>b__0_1(Field<Int32> _, int __) { }
 
 		private void Refresh() { }
 
@@ -26,11 +26,18 @@ public class DebugDisplaySettingsVolume : IDebugDisplaySettingsData, IDebugDispl
 		public static readonly string parameter; //Field offset: 0x10
 		public static readonly string component; //Field offset: 0x18
 		public static readonly string debugViewNotSupported; //Field offset: 0x20
-		public static readonly string volumeInfo; //Field offset: 0x28
-		public static readonly string interpolatedValue; //Field offset: 0x30
-		public static readonly string defaultValue; //Field offset: 0x38
-		public static readonly string global; //Field offset: 0x40
-		public static readonly string local; //Field offset: 0x48
+		public static readonly string parameterNotOverrided; //Field offset: 0x28
+		public static readonly string volumeInfo; //Field offset: 0x30
+		public static readonly string gameObject; //Field offset: 0x38
+		public static readonly string resultValue; //Field offset: 0x40
+		public static readonly string resultValueTooltip; //Field offset: 0x48
+		public static readonly string globalDefaultValue; //Field offset: 0x50
+		public static readonly string globalDefaultValueTooltip; //Field offset: 0x58
+		public static readonly string qualityLevelValue; //Field offset: 0x60
+		public static readonly string qualityLevelValueTooltip; //Field offset: 0x68
+		public static readonly string global; //Field offset: 0x70
+		public static readonly string local; //Field offset: 0x78
+		public static readonly string volumeProfile; //Field offset: 0x80
 
 		private static Strings() { }
 
@@ -51,34 +58,15 @@ public class DebugDisplaySettingsVolume : IDebugDisplaySettingsData, IDebugDispl
 		private sealed class <>c
 		{
 			public static readonly <>c <>9; //Field offset: 0x0
-			public static Func<Object> <>9__2_0; //Field offset: 0x8
-			public static Func<Object> <>9__2_6; //Field offset: 0x10
-			public static Func<Object> <>9__3_2; //Field offset: 0x18
-			public static Func<Object> <>9__3_3; //Field offset: 0x20
-			public static Func<Object> <>9__3_6; //Field offset: 0x28
-			public static Func<Object> <>9__3_7; //Field offset: 0x30
-			public static Func<FieldInfo, Int32> <>9__3_9; //Field offset: 0x38
-			public static Func<Row, String> <>9__3_11; //Field offset: 0x40
+			public static Func<Object> <>9__9_2; //Field offset: 0x8
 
 			private static <>c() { }
 
 			public <>c() { }
 
-			internal object <CreateVolumeParameterWidget>b__2_0() { }
+			internal object <.cctor>b__11_0() { }
 
-			internal object <CreateVolumeParameterWidget>b__2_6() { }
-
-			internal string <CreateVolumeTable>b__3_11(Row t) { }
-
-			internal object <CreateVolumeTable>b__3_2() { }
-
-			internal object <CreateVolumeTable>b__3_3() { }
-
-			internal object <CreateVolumeTable>b__3_6() { }
-
-			internal object <CreateVolumeTable>b__3_7() { }
-
-			internal int <CreateVolumeTable>b__3_9(FieldInfo t) { }
+			internal object <GenerateTableColumns>b__9_2() { }
 
 		}
 
@@ -115,167 +103,105 @@ public class DebugDisplaySettingsVolume : IDebugDisplaySettingsData, IDebugDispl
 		}
 
 		[CompilerGenerated]
-		private sealed class <>c__DisplayClass2_0
-		{
-			public Type parameterType; //Field offset: 0x10
-			public VolumeParameter param; //Field offset: 0x18
-			public PropertyInfo property; //Field offset: 0x20
-
-			public <>c__DisplayClass2_0() { }
-
-			internal Object[] <CreateVolumeParameterWidget>b__5() { }
-
-			internal object <CreateVolumeParameterWidget>b__8() { }
-
-		}
-
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass2_1
-		{
-			public ColorParameter p; //Field offset: 0x10
-
-			public <>c__DisplayClass2_1() { }
-
-			internal Color <CreateVolumeParameterWidget>b__1() { }
-
-			internal void <CreateVolumeParameterWidget>b__2(Color value) { }
-
-		}
-
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass2_2
-		{
-			public BoolParameter p; //Field offset: 0x10
-
-			public <>c__DisplayClass2_2() { }
-
-			internal bool <CreateVolumeParameterWidget>b__3() { }
-
-			internal void <CreateVolumeParameterWidget>b__4(bool value) { }
-
-		}
-
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass2_3
-		{
-			public PropertyInfo nameProp; //Field offset: 0x10
-			public <>c__DisplayClass2_0 CS$<>8__locals1; //Field offset: 0x18
-
-			public <>c__DisplayClass2_3() { }
-
-			internal object <CreateVolumeParameterWidget>b__7() { }
-
-		}
-
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass3_0
+		private sealed class <>c__DisplayClass7_0
 		{
 			public DebugDisplaySettingsVolume data; //Field offset: 0x10
-			public List<Row> rows; //Field offset: 0x18
-			public Row row; //Field offset: 0x20
-			public VolumeComponent stackComponent; //Field offset: 0x28
-			public Volume[] volumes; //Field offset: 0x30
-			public Type selectedType; //Field offset: 0x38
-			public VolumeComponent inst; //Field offset: 0x40
-			public float timer; //Field offset: 0x48
-			public float refreshRate; //Field offset: 0x4C
-			public Table table; //Field offset: 0x50
+			public float timer; //Field offset: 0x18
+			public float refreshRate; //Field offset: 0x1C
+			public Table table; //Field offset: 0x20
+			public Volume[] volumes; //Field offset: 0x28
 
-			public <>c__DisplayClass3_0() { }
+			public <>c__DisplayClass7_0() { }
+
+			internal bool <CreateVolumeTable>b__0() { }
 
 			internal bool <CreateVolumeTable>b__1() { }
 
-			internal int <CreateVolumeTable>g__AddParameterRows|0(Type type, string baseName = null, int skip = 0) { }
+		}
 
-			internal void <CreateVolumeTable>g__AddRow|8(FieldInfo f, string prefix, int skip) { }
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass9_0
+		{
+			public DebugDisplaySettingsVolume data; //Field offset: 0x10
+
+			public <>c__DisplayClass9_0() { }
 
 		}
 
 		[CompilerGenerated]
-		private sealed class <>c__DisplayClass3_1
+		private sealed class <>c__DisplayClass9_1
 		{
-			public Volume volume; //Field offset: 0x10
-			public <>c__DisplayClass3_0 CS$<>8__locals1; //Field offset: 0x18
+			public VolumeParameterChain chain; //Field offset: 0x10
+			public <>c__DisplayClass9_0 CS$<>8__locals1; //Field offset: 0x38
 
-			public <>c__DisplayClass3_1() { }
+			public <>c__DisplayClass9_1() { }
 
-			internal object <CreateVolumeTable>b__4() { }
+			internal object <GenerateTableColumns>b__0() { }
 
-			internal object <CreateVolumeTable>b__5() { }
+			internal object <GenerateTableColumns>b__1() { }
+
+			internal object <GenerateTableColumns>b__3() { }
 
 		}
 
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass3_2
+		private struct VolumeParameterChain
 		{
-			public int currentParam; //Field offset: 0x10
-
-			public <>c__DisplayClass3_2() { }
+			public NameAndTooltip nameAndTooltip; //Field offset: 0x0
+			public VolumeProfile volumeProfile; //Field offset: 0x10
+			public VolumeComponent volumeComponent; //Field offset: 0x18
+			public Volume volume; //Field offset: 0x20
 
 		}
 
-		[CompilerGenerated]
-		private sealed class <>c__DisplayClass3_3
-		{
-			public VolumeComponent component; //Field offset: 0x10
-			public <>c__DisplayClass3_2 CS$<>8__locals2; //Field offset: 0x18
+		private static Value s_EmptyDebugUIValue; //Field offset: 0x0
 
-			public <>c__DisplayClass3_3() { }
-
-			internal bool <CreateVolumeTable>b__10() { }
-
-		}
-
+		private static WidgetFactory() { }
 
 		public static ObjectPopupField CreateCameraSelector(SettingsPanel panel, Action<Field`1<Object>, Object> refresh) { }
 
 		public static EnumField CreateComponentSelector(SettingsPanel panel, Action<Field`1<Int32>, Int32> refresh) { }
 
-		private static Widget CreateVolumeParameterWidget(string name, VolumeParameter param, Func<Boolean> isHiddenCallback = null) { }
+		private static Widget CreateVolumeParameterWidget(string name, bool isResultParameter, VolumeParameter param, Func<Boolean> isHiddenCallback = null) { }
 
 		public static Table CreateVolumeTable(DebugDisplaySettingsVolume data) { }
 
+		private static void GenerateTableColumns(Table table, DebugDisplaySettingsVolume data, List<VolumeParameterChain> resolutionChain) { }
+
+		private static void GenerateTableRows(Table table, List<VolumeParameterChain> resolutionChain) { }
+
+		private static List<VolumeParameterChain> GetResolutionChain(DebugDisplaySettingsVolume data) { }
+
+		private static VolumeComponent GetSelectedVolumeComponent(VolumeProfile profile, Type selectedType) { }
+
+		private static void SetTableColumnVisibility(DebugDisplaySettingsVolume data, Table table) { }
+
 	}
 
+	private const string k_PanelTitle = "Volume"; //Field offset: 0x0
 	[CompilerGenerated]
-	private readonly IVolumeDebugSettings2 <volumeDebugSettings>k__BackingField; //Field offset: 0x10
+	private readonly IVolumeDebugSettings <volumeDebugSettings>k__BackingField; //Field offset: 0x10
 	internal int volumeComponentEnumIndex; //Field offset: 0x18
+	internal Dictionary<String, VolumeComponent> debugState; //Field offset: 0x20
 
 	public override bool AreAnySettingsActive
 	{
 		 get { } //Length: 3
 	}
 
-	public override bool IsLightingActive
-	{
-		 get { } //Length: 3
-	}
-
-	public override bool IsPostProcessingAllowed
-	{
-		 get { } //Length: 3
-	}
-
-	public IVolumeDebugSettings2 volumeDebugSettings
+	public IVolumeDebugSettings volumeDebugSettings
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
 	}
 
-	public DebugDisplaySettingsVolume(IVolumeDebugSettings2 volumeDebugSettings) { }
+	public DebugDisplaySettingsVolume(IVolumeDebugSettings volumeDebugSettings) { }
 
 	public override IDebugDisplaySettingsPanelDisposable CreatePanel() { }
 
 	public override bool get_AreAnySettingsActive() { }
 
-	public override bool get_IsLightingActive() { }
-
-	public override bool get_IsPostProcessingAllowed() { }
-
 	[CompilerGenerated]
-	public IVolumeDebugSettings2 get_volumeDebugSettings() { }
-
-	public override bool TryGetScreenClearColor(ref Color color) { }
+	public IVolumeDebugSettings get_volumeDebugSettings() { }
 
 }
 

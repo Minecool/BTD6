@@ -11,6 +11,10 @@ internal static class DecalShaderPassNames
 	public const string DecalMeshForwardEmissive = "DecalMeshForwardEmissive"; //Field offset: 0x0
 	public const string DecalScreenSpaceMesh = "DecalScreenSpaceMesh"; //Field offset: 0x0
 	public const string DecalGBufferMesh = "DecalGBufferMesh"; //Field offset: 0x0
+	public const string DBufferProjectorVFX = "DBufferProjectorVFX"; //Field offset: 0x0
+	public const string DecalProjectorForwardEmissiveVFX = "DecalProjectorForwardEmissiveVFX"; //Field offset: 0x0
+	public const string DecalScreenSpaceProjectorVFX = "DecalScreenSpaceProjectorVFX"; //Field offset: 0x0
+	public const string DecalGBufferProjectorVFX = "DecalGBufferProjectorVFX"; //Field offset: 0x0
 
 }
 

@@ -20,7 +20,7 @@ public class DoorGunnerModel : AbilityBehaviorModel
 
 	public DoorGunnerMutator Mutator
 	{
-		 get { } //Length: 207
+		 get { } //Length: 211
 	}
 
 	public DoorGunnerModel(string name, PrefabReference selectionObjectPath, PrefabReference isSelectableGameObject, SoundModel activateSound, SoundModel pickupSound) { }

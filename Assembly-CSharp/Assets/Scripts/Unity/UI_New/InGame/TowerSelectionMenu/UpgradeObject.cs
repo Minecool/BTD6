@@ -9,37 +9,52 @@ public class UpgradeObject : MonoBehaviour
 	public GameObject locked; //Field offset: 0x40
 	public GameObject restricted; //Field offset: 0x48
 	public TowerSelectionMenu towerSelectionMenu; //Field offset: 0x50
-	private TowerToSimulation tts; //Field offset: 0x58
-	private int path; //Field offset: 0x60
-	private int tier; //Field offset: 0x64
+	public UpgradeModel currentUpgradeModel; //Field offset: 0x58
+	protected TowerToSimulation tts; //Field offset: 0x60
+	protected int path; //Field offset: 0x68
+	protected int tier; //Field offset: 0x6C
+
+	public bool IsUpgradePathPurchasable
+	{
+		 get { } //Length: 57
+	}
+
+	public bool IsUpgradeUnlocked
+	{
+		 get { } //Length: 503
+	}
 
 	public UpgradeObject() { }
 
 	private void Awake() { }
 
-	private int CheckBlockedPath() { }
+	protected override int CheckBlockedPath() { }
 
 	public void CheckCash() { }
 
-	private void CheckLocked() { }
+	protected override void CheckLocked() { }
 
-	private int CheckRestrictedPath() { }
+	protected override int CheckRestrictedPath() { }
 
 	public void CheckXP() { }
 
-	public bool ConfirmCanUpgrade() { }
+	public override bool ConfirmCanUpgrade() { }
 
-	public void DeInit() { }
+	public override void DeInit() { }
+
+	public bool get_IsUpgradePathPurchasable() { }
+
+	public bool get_IsUpgradeUnlocked() { }
 
 	public int GetTier() { }
 
-	private UpgradeModel GetUpgrade(TowerModel tm, UnityToSimulation bridge) { }
+	protected UpgradeModel GetUpgrade(TowerModel tm, UnityToSimulation bridge) { }
 
 	public void IncreaseTier() { }
 
-	public void InitForTower(int path, TowerToSimulation tts) { }
+	public override void InitForTower(int path, TowerToSimulation tts) { }
 
-	public void LoadUpgrades() { }
+	public override void LoadUpgrades() { }
 
 	public void OnBeastHandlerMerge() { }
 
@@ -51,11 +66,13 @@ public class UpgradeObject : MonoBehaviour
 
 	public void SetTier(int value) { }
 
+	public void ToggleGlowHighlight(bool isActive) { }
+
 	public void UpdateCost() { }
 
 	public void UpdateSpecialButtons(int path, TowerToSimulation tts) { }
 
-	public void UpdateVisuals(int path, bool upgradeClicked) { }
+	public override void UpdateVisuals(int path, bool upgradeClicked) { }
 
 	public void WobbleUpgrade() { }
 

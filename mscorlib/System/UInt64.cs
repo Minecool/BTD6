@@ -4,8 +4,6 @@ namespace System;
 [IsReadOnly]
 public struct ulong : IComparable, IConvertible, IFormattable, IComparable<UInt64>, IEquatable<UInt64>, ISpanFormattable
 {
-	public const ulong MaxValue = 18446744073709551615; //Field offset: 0x0
-	public const ulong MinValue = 0; //Field offset: 0x0
 	private readonly ulong m_value; //Field offset: 0x0
 
 	public override int CompareTo(object value) { }

@@ -7,7 +7,7 @@ internal class LockQueue
 
 	public bool IsEmpty
 	{
-		 get { } //Length: 155
+		 get { } //Length: 239
 	}
 
 	public LockQueue(ReaderWriterLock rwlock) { }

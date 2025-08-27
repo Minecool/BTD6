@@ -5,7 +5,7 @@ public class CoopPlayerIndicator : MonoBehaviour
 
 	public CoopPlayerIndicatorModel Def
 	{
-		 get { } //Length: 293
+		 get { } //Length: 294
 	}
 
 	public CoopPlayerIndicator() { }

@@ -42,7 +42,7 @@ public class PubSubMessageModel
 	}
 
 	[DataMember(Name = "messageData")]
-	public JObject RawMessageData
+	public override JObject SetMessageDataDuringDeserialising
 	{
 		 set { } //Length: 173
 	}
@@ -61,7 +61,7 @@ public class PubSubMessageModel
 	[CompilerGenerated]
 	protected void set_Payload(string value) { }
 
-	public void set_RawMessageData(JObject value) { }
+	public override void set_SetMessageDataDuringDeserialising(JObject value) { }
 
 }
 

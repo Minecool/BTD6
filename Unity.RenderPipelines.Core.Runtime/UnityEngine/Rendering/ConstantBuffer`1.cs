@@ -20,6 +20,8 @@ public class ConstantBuffer : ConstantBufferBase
 
 	public void Set(Material mat, int shaderId) { }
 
+	public void Set(MaterialPropertyBlock mpb, int shaderId) { }
+
 	public void SetGlobal(CommandBuffer cmd, int shaderId) { }
 
 	public void SetGlobal(int shaderId) { }

@@ -28,7 +28,7 @@ public class SwitchProControllerHID : Gamepad, IInputStateCallbackReceiver, IEve
 
 		public static FourCC Format
 		{
-			 get { } //Length: 58
+			 get { } //Length: 53
 		}
 
 		public static FourCC get_Format() { }
@@ -58,12 +58,12 @@ public class SwitchProControllerHID : Gamepad, IInputStateCallbackReceiver, IEve
 
 		public static FourCC Type
 		{
-			 get { } //Length: 58
+			 get { } //Length: 53
 		}
 
 		public override FourCC typeStatic
 		{
-			 get { } //Length: 58
+			 get { } //Length: 53
 		}
 
 		public static SwitchMagicOutputHIDBluetooth Create(CommandIdType type) { }
@@ -82,12 +82,12 @@ public class SwitchProControllerHID : Gamepad, IInputStateCallbackReceiver, IEve
 
 		public static FourCC Type
 		{
-			 get { } //Length: 58
+			 get { } //Length: 53
 		}
 
 		public override FourCC typeStatic
 		{
-			 get { } //Length: 58
+			 get { } //Length: 53
 		}
 
 		public static SwitchMagicOutputHIDUSB Create(CommandIdType type) { }

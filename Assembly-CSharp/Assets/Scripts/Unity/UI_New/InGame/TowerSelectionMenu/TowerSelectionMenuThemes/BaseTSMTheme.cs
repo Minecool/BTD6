@@ -27,7 +27,7 @@ public class BaseTSMTheme : MonoBehaviour
 
 	public override TSMInfoModel OnButtonPress(TowerToSimulation tower, TSMButton button) { }
 
-	public override void OnSpecialUiEvent(string eventId) { }
+	public override void OnSpecialUiEvent(TowerToSimulation selectedTower, string eventId) { }
 
 	public override void OnTargetTypeChanged(TowerToSimulation tower) { }
 

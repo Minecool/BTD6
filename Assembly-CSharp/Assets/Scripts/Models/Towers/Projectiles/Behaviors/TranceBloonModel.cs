@@ -16,7 +16,7 @@ public class TranceBloonModel : ProjectileBehaviorModel
 
 	public OrbitBloonProjectileMutator Mutator
 	{
-		 get { } //Length: 437
+		 get { } //Length: 441
 	}
 
 	public TranceBloonModel(string name, float speedMultiplier, float duration, float orbitRadius, float radiusBloonSizeMultiplier, float cooldown, DamageModel fakeDamage, float moabOrbitSpeed, int maxDotDamage) { }

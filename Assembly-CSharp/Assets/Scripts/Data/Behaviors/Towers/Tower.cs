@@ -60,19 +60,19 @@ public class Tower : Upgradeable
 	[SerializeField]
 	public int tier; //Field offset: 0xB0
 	[JsonConverter(typeof(BehaviorConverter))]
-	[SerializeReference]
+	[SerializeField]
 	public Behavior[] behaviors; //Field offset: 0xB8
-	[SerializeReference]
+	[SerializeField]
 	public Footprint footprint; //Field offset: 0xC0
-	[SerializeReference]
+	[SerializeField]
 	public ApplyMod[] mods; //Field offset: 0xC8
-	[SerializeReference]
+	[SerializeField]
 	public MonkeyAnimationController controller; //Field offset: 0xD0
-	[SerializeReference]
+	[SerializeField]
 	public UpgradePath[] upgradePaths; //Field offset: 0xD8
-	[SerializeReference]
+	[SerializeField]
 	public Hero hero; //Field offset: 0xE0
-	[SerializeReference]
+	[SerializeField]
 	public EntityEvent[] events; //Field offset: 0xE8
 
 	public virtual TowerModel Def

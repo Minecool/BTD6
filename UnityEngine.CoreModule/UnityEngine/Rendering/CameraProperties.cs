@@ -64,6 +64,7 @@ public struct CameraProperties : IEquatable<CameraProperties>
 	private uint cameraType; //Field offset: 0x3D4
 	private int projectionIsOblique; //Field offset: 0x3D8
 	private int isImplicitProjectionMatrix; //Field offset: 0x3DC
+	internal bool useInteractiveLightBakingData; //Field offset: 0x3E0
 
 	public override bool Equals(CameraProperties other) { }
 

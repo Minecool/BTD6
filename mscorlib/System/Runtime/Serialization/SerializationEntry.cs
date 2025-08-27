@@ -14,7 +14,7 @@ public struct SerializationEntry
 
 	public object Value
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	internal SerializationEntry(string entryName, object entryValue, Type entryType) { }

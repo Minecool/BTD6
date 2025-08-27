@@ -28,7 +28,7 @@ internal class TypeData
 
 	public bool IsComplexType
 	{
-		 get { } //Length: 42
+		 get { } //Length: 23
 	}
 
 	public bool IsListType
@@ -38,13 +38,13 @@ internal class TypeData
 
 	public bool IsNullable
 	{
-		 get { } //Length: 387
+		 get { } //Length: 348
 		 set { } //Length: 4
 	}
 
 	public bool IsValueType
 	{
-		 get { } //Length: 151
+		 get { } //Length: 122
 	}
 
 	public bool IsXsdType
@@ -54,12 +54,12 @@ internal class TypeData
 
 	public Type ListItemType
 	{
-		 get { } //Length: 2323
+		 get { } //Length: 2262
 	}
 
 	public TypeData ListItemTypeData
 	{
-		 get { } //Length: 235
+		 get { } //Length: 223
 	}
 
 	public SchemaTypes SchemaType

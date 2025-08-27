@@ -138,7 +138,7 @@ public sealed class ExpandoObject : IDynamicMetaObjectProvider, IDictionary<Stri
 
 		public override int Count
 		{
-			 get { } //Length: 104
+			 get { } //Length: 94
 		}
 
 		public override bool IsReadOnly
@@ -322,7 +322,7 @@ public sealed class ExpandoObject : IDynamicMetaObjectProvider, IDictionary<Stri
 
 		public override int Count
 		{
-			 get { } //Length: 1811
+			 get { } //Length: 1635
 		}
 
 		public override bool IsReadOnly
@@ -388,8 +388,8 @@ public sealed class ExpandoObject : IDynamicMetaObjectProvider, IDictionary<Stri
 
 	private override object System.Collections.Generic.IDictionary<System.String,System.Object>.Item
 	{
-		private get { } //Length: 103
-		private set { } //Length: 129
+		private get { } //Length: 101
+		private set { } //Length: 127
 	}
 
 	private override ICollection<String> System.Collections.Generic.IDictionary<System.String,System.Object>.Keys

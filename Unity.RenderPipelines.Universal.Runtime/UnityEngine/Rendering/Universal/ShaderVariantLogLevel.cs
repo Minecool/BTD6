@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering.Universal;
 
-[Obsolete("This is obsolete, UnityEngine.Rendering.ShaderVariantLogLevel instead.", False)]
+[Obsolete("This is obsolete, UnityEngine.Rendering.ShaderVariantLogLevel instead.", True)]
 public enum ShaderVariantLogLevel
 {
 	Disabled = 0,

@@ -22,22 +22,22 @@ public class ListDictionary : IDictionary, ICollection, IEnumerable
 
 		public override object Current
 		{
-			 get { } //Length: 183
+			 get { } //Length: 181
 		}
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 123
+			 get { } //Length: 121
 		}
 
 		public override object Key
 		{
-			 get { } //Length: 106
+			 get { } //Length: 104
 		}
 
 		public override object Value
 		{
-			 get { } //Length: 106
+			 get { } //Length: 104
 		}
 
 		public NodeEnumerator(ListDictionary list) { }
@@ -68,7 +68,7 @@ public class ListDictionary : IDictionary, ICollection, IEnumerable
 
 			public override object Current
 			{
-				 get { } //Length: 121
+				 get { } //Length: 119
 			}
 
 			public NodeKeyValueEnumerator(ListDictionary list, bool isKeys) { }
@@ -137,7 +137,7 @@ public class ListDictionary : IDictionary, ICollection, IEnumerable
 	public override object Item
 	{
 		 get { } //Length: 311
-		 set { } //Length: 377
+		 set { } //Length: 366
 	}
 
 	public override ICollection Keys

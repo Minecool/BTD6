@@ -16,16 +16,21 @@ public class MutateProjectileOnAbilityModel : AbilityBehaviorModel
 	public int lifespanFrames; //Field offset: 0x30
 	public string mutatorId; //Field offset: 0x38
 	public int damageIncrease; //Field offset: 0x40
-	public ProjectileBehaviorModel projectileBehaviorModel; //Field offset: 0x48
-	public ProjectileModel projectileModel; //Field offset: 0x50
-	private ProjectileMutator mutator; //Field offset: 0x58
+	public bool cantBeAbsorbed; //Field offset: 0x44
+	public int mutatorPriority; //Field offset: 0x48
+	public ProjectileBehaviorModel projectileBehaviorModel; //Field offset: 0x50
+	public ProjectileModel projectileModel; //Field offset: 0x58
+	public PrefabReference buffDisplayPath; //Field offset: 0x60
+	public EffectModel initialEffect; //Field offset: 0x68
+	private DisplayModel buffDisplayModel; //Field offset: 0x70
+	private ProjectileMutator mutator; //Field offset: 0x78
 
 	public ProjectileMutator Mutator
 	{
-		 get { } //Length: 209
+		 get { } //Length: 235
 	}
 
-	public MutateProjectileOnAbilityModel(string name, int lifespanFrames, string mutatorId, int damageIncrease, ProjectileBehaviorModel projectileBehaviorModel, ProjectileModel projectileModel) { }
+	public MutateProjectileOnAbilityModel(string name, int lifespanFrames, string mutatorId, int damageIncrease, bool cantBeAbsorbed, int mutatorPriority, ProjectileBehaviorModel projectileBehaviorModel, ProjectileModel projectileModel, PrefabReference buffDisplayPath, EffectModel initialEffect) { }
 
 	public virtual Model Clone() { }
 

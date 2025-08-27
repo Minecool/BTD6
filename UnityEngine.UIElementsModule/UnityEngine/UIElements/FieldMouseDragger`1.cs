@@ -18,7 +18,7 @@ public class FieldMouseDragger : BaseFieldMouseDragger
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public T startValue

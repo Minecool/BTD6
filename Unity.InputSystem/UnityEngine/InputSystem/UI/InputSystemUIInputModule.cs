@@ -1,6 +1,6 @@
 namespace UnityEngine.InputSystem.UI;
 
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/UISupport.html#setting-up-ui-input")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/UISupport.html#setting-up-ui-input")]
 public class InputSystemUIInputModule : BaseInputModule
 {
 	internal enum CursorLockBehavior
@@ -17,6 +17,7 @@ public class InputSystemUIInputModule : BaseInputModule
 	}
 
 	private const float kClickSpeed = 0.3; //Field offset: 0x0
+	private const float kSmallestScrollDeltaPerTick = 1E-05; //Field offset: 0x0
 	private static DefaultInputActions defaultActions; //Field offset: 0x0
 	private static Dictionary<InputAction, InputActionReferenceState> s_InputActionReferenceCounts; //Field offset: 0x8
 	[FormerlySerializedAs("m_RepeatDelay")]
@@ -78,32 +79,33 @@ public class InputSystemUIInputModule : BaseInputModule
 	private bool m_NeedToPurgeStalePointers; //Field offset: 0xD9
 	private Action<CallbackContext> m_OnPointDelegate; //Field offset: 0xE0
 	private Action<CallbackContext> m_OnMoveDelegate; //Field offset: 0xE8
-	private Action<CallbackContext> m_OnLeftClickDelegate; //Field offset: 0xF0
-	private Action<CallbackContext> m_OnRightClickDelegate; //Field offset: 0xF8
-	private Action<CallbackContext> m_OnMiddleClickDelegate; //Field offset: 0x100
-	private Action<CallbackContext> m_OnScrollWheelDelegate; //Field offset: 0x108
-	private Action<CallbackContext> m_OnTrackedDevicePositionDelegate; //Field offset: 0x110
-	private Action<CallbackContext> m_OnTrackedDeviceOrientationDelegate; //Field offset: 0x118
-	private Action<Object> m_OnControlsChangedDelegate; //Field offset: 0x120
-	private int m_CurrentPointerId; //Field offset: 0x128
-	private int m_CurrentPointerIndex; //Field offset: 0x12C
-	internal UIPointerType m_CurrentPointerType; //Field offset: 0x130
-	internal InlinedArray<Int32> m_PointerIds; //Field offset: 0x138
-	internal InlinedArray<InputControl> m_PointerTouchControls; //Field offset: 0x148
-	internal InlinedArray<PointerModel> m_PointerStates; //Field offset: 0x160
-	private NavigationModel m_NavigationState; //Field offset: 0x390
-	private GameObject m_LocalMultiPlayerRoot; //Field offset: 0x3B0
+	private Action<CallbackContext> m_OnSubmitCancelDelegate; //Field offset: 0xF0
+	private Action<CallbackContext> m_OnLeftClickDelegate; //Field offset: 0xF8
+	private Action<CallbackContext> m_OnRightClickDelegate; //Field offset: 0x100
+	private Action<CallbackContext> m_OnMiddleClickDelegate; //Field offset: 0x108
+	private Action<CallbackContext> m_OnScrollWheelDelegate; //Field offset: 0x110
+	private Action<CallbackContext> m_OnTrackedDevicePositionDelegate; //Field offset: 0x118
+	private Action<CallbackContext> m_OnTrackedDeviceOrientationDelegate; //Field offset: 0x120
+	private Action<Object> m_OnControlsChangedDelegate; //Field offset: 0x128
+	private int m_CurrentPointerId; //Field offset: 0x130
+	private int m_CurrentPointerIndex; //Field offset: 0x134
+	internal UIPointerType m_CurrentPointerType; //Field offset: 0x138
+	internal InlinedArray<Int32> m_PointerIds; //Field offset: 0x140
+	internal InlinedArray<PointerModel> m_PointerStates; //Field offset: 0x150
+	private NavigationModel m_NavigationState; //Field offset: 0x380
+	private SubmitCancelModel m_SubmitCancelState; //Field offset: 0x3A8
+	private GameObject m_LocalMultiPlayerRoot; //Field offset: 0x3B8
 
 	public InputActionAsset actionsAsset
 	{
 		 get { } //Length: 5
-		 set { } //Length: 1691
+		 set { } //Length: 1719
 	}
 
 	public InputActionReference cancel
 	{
 		 get { } //Length: 8
-		 set { } //Length: 44
+		 set { } //Length: 53
 	}
 
 	public CursorLockBehavior cursorLockBehavior
@@ -203,9 +205,10 @@ public class InputSystemUIInputModule : BaseInputModule
 		 set { } //Length: 53
 	}
 
-	private bool sendPointerHoverToParent
+	internal bool sendPointerHoverToParent
 	{
-		private get { } //Length: 3
+		internal get { } //Length: 5
+		internal set { } //Length: 4
 	}
 
 	private bool shouldIgnoreFocus
@@ -216,7 +219,7 @@ public class InputSystemUIInputModule : BaseInputModule
 	public InputActionReference submit
 	{
 		 get { } //Length: 8
-		 set { } //Length: 44
+		 set { } //Length: 53
 	}
 
 	public float trackedDeviceDragThresholdMultiplier
@@ -264,6 +267,8 @@ public class InputSystemUIInputModule : BaseInputModule
 
 	private bool CheckForRemovedDevice(ref CallbackContext context) { }
 
+	public virtual Vector2 ConvertPointerEventScrollDeltaToTicks(Vector2 scrollDelta) { }
+
 	public virtual int ConvertUIToolkitPointerId(PointerEventData sourcePointerData) { }
 
 	private void DisableAllActions() { }
@@ -310,7 +315,7 @@ public class InputSystemUIInputModule : BaseInputModule
 
 	public InputActionReference get_scrollWheel() { }
 
-	private bool get_sendPointerHoverToParent() { }
+	internal bool get_sendPointerHoverToParent() { }
 
 	private bool get_shouldIgnoreFocus() { }
 
@@ -370,6 +375,8 @@ public class InputSystemUIInputModule : BaseInputModule
 
 	private void OnScrollCallback(CallbackContext context) { }
 
+	private void OnSubmitCancelCallback(CallbackContext context) { }
+
 	private void OnTrackedDeviceOrientationCallback(CallbackContext context) { }
 
 	private void OnTrackedDevicePositionCallback(CallbackContext context) { }
@@ -388,19 +395,22 @@ public class InputSystemUIInputModule : BaseInputModule
 
 	private void ProcessPointerButtonDrag(ref ButtonState button, ExtendedPointerEventData eventData) { }
 
-	private void ProcessPointerMovement(ref PointerModel pointer, ExtendedPointerEventData eventData) { }
-
 	private void ProcessPointerMovement(ExtendedPointerEventData eventData, GameObject currentPointerTarget) { }
+
+	private void ProcessPointerMovement(ref PointerModel pointer, ExtendedPointerEventData eventData) { }
 
 	private static void ProcessPointerScroll(ref PointerModel pointer, PointerEventData eventData) { }
 
 	private void PurgeStalePointers() { }
 
-	private void RemovePointerAtIndex(int index) { }
+	private bool RemovePointerAtIndex(int index) { }
+
+	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType::SubsystemRegistration (4))]
+	private static void ResetDefaultActions() { }
 
 	private void ResetPointers() { }
 
-	private void SendPointerExitEventsAndRemovePointer(int index) { }
+	private bool SendPointerExitEventsAndRemovePointer(int index) { }
 
 	public void set_actionsAsset(InputActionAsset value) { }
 
@@ -435,6 +445,8 @@ public class InputSystemUIInputModule : BaseInputModule
 	public void set_scrollDeltaPerTick(float value) { }
 
 	public void set_scrollWheel(InputActionReference value) { }
+
+	internal void set_sendPointerHoverToParent(bool value) { }
 
 	public void set_submit(InputActionReference value) { }
 

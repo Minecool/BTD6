@@ -34,11 +34,6 @@ public struct DrawingSettings : IEquatable<DrawingSettings>
 		 set { } //Length: 31
 	}
 
-	public Material fallbackMaterial
-	{
-		 set { } //Length: 55
-	}
-
 	public int mainLightIndex
 	{
 		 set { } //Length: 7
@@ -69,21 +64,13 @@ public struct DrawingSettings : IEquatable<DrawingSettings>
 		 set { } //Length: 7
 	}
 
-	public SortingSettings sortingSettings
-	{
-		 get { } //Length: 50
-		 set { } //Length: 47
-	}
-
 	private static DrawingSettings() { }
 
 	public DrawingSettings(ShaderTagId shaderPassName, SortingSettings sortingSettings) { }
 
-	public virtual bool Equals(object obj) { }
-
 	public override bool Equals(DrawingSettings other) { }
 
-	public SortingSettings get_sortingSettings() { }
+	public virtual bool Equals(object obj) { }
 
 	public virtual int GetHashCode() { }
 
@@ -94,8 +81,6 @@ public struct DrawingSettings : IEquatable<DrawingSettings>
 	public void set_enableDynamicBatching(bool value) { }
 
 	public void set_enableInstancing(bool value) { }
-
-	public void set_fallbackMaterial(Material value) { }
 
 	public void set_mainLightIndex(int value) { }
 
@@ -108,8 +93,6 @@ public struct DrawingSettings : IEquatable<DrawingSettings>
 	public void set_overrideShaderPassIndex(int value) { }
 
 	public void set_perObjectData(PerObjectData value) { }
-
-	public void set_sortingSettings(SortingSettings value) { }
 
 	public void SetShaderPassName(int index, ShaderTagId shaderPassName) { }
 

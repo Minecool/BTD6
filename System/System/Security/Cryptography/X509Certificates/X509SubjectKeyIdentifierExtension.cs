@@ -10,7 +10,7 @@ public sealed class X509SubjectKeyIdentifierExtension : X509Extension
 
 	public string SubjectKeyIdentifier
 	{
-		 get { } //Length: 206
+		 get { } //Length: 123
 	}
 
 	public X509SubjectKeyIdentifierExtension() { }

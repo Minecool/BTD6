@@ -6,6 +6,7 @@ public class Area : Mutable
 	public string name; //Field offset: 0x98
 	public int oo; //Field offset: 0xA0
 	public bool isActive; //Field offset: 0xA4
+	public Tower sourceTower; //Field offset: 0xA8
 
 	public Area() { }
 
@@ -32,6 +33,8 @@ public class Area : Mutable
 	public bool IsPointInside(Vector2 p) { }
 
 	public void Move(Vector2 moveBy) { }
+
+	protected virtual void OnDestroy() { }
 
 	public void Rotate(float angle) { }
 

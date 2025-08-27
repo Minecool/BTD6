@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-internal class RuntimePanel : BaseRuntimePanel
+internal class RuntimePanel : BaseRuntimePanel, IRuntimePanel, IPanel, IDisposable
 {
 	[CompilerGenerated]
 	private sealed class <>c
@@ -17,7 +17,7 @@ internal class RuntimePanel : BaseRuntimePanel
 	}
 
 	internal static readonly EventDispatcher s_EventDispatcher; //Field offset: 0x0
-	private readonly PanelSettings m_PanelSettings; //Field offset: 0x1E8
+	private readonly PanelSettings m_PanelSettings; //Field offset: 0x200
 
 	public override PanelSettings panelSettings
 	{
@@ -34,7 +34,7 @@ internal class RuntimePanel : BaseRuntimePanel
 
 	private void OnElementFocus(FocusEvent evt) { }
 
-	public virtual void Update() { }
+	internal virtual void Update() { }
 
 }
 

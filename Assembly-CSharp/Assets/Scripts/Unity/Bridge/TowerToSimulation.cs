@@ -3,7 +3,7 @@ namespace Assets.Scripts.Unity.Bridge;
 public class TowerToSimulation : Selectable
 {
 	[CompilerGenerated]
-	private sealed class <GetTowerBuffsFromSim>d__58 : IEnumerable<BuffQuery>, IEnumerable, IEnumerator<BuffQuery>, IEnumerator, IDisposable
+	private sealed class <GetTowerBuffsFromSim>d__60 : IEnumerable<BuffQuery>, IEnumerable, IEnumerator<BuffQuery>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private BuffQuery <>2__current; //Field offset: 0x18
@@ -24,7 +24,7 @@ public class TowerToSimulation : Selectable
 		}
 
 		[DebuggerHidden]
-		public <GetTowerBuffsFromSim>d__58(int <>1__state) { }
+		public <GetTowerBuffsFromSim>d__60(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -63,7 +63,7 @@ public class TowerToSimulation : Selectable
 
 	public List<AbilityToSimulation> Abilities
 	{
-		 get { } //Length: 843
+		 get { } //Length: 841
 	}
 
 	public IEnumerable<BuffQuery> activeBuffs
@@ -99,6 +99,11 @@ public class TowerToSimulation : Selectable
 	public bool IsParagon
 	{
 		 get { } //Length: 42
+	}
+
+	public bool IsPowerProTower
+	{
+		 get { } //Length: 41
 	}
 
 	public bool IsPowerTower
@@ -138,7 +143,7 @@ public class TowerToSimulation : Selectable
 
 	public Vector3 position
 	{
-		 get { } //Length: 214
+		 get { } //Length: 203
 	}
 
 	public float rotation
@@ -199,6 +204,8 @@ public class TowerToSimulation : Selectable
 
 	public bool get_IsParagon() { }
 
+	public bool get_IsPowerProTower() { }
+
 	public bool get_IsPowerTower() { }
 
 	public bool get_IsSelectable() { }
@@ -251,7 +258,7 @@ public class TowerToSimulation : Selectable
 
 	public List<TowerModel> GetSubTowerModels() { }
 
-	[IteratorStateMachine(typeof(<GetTowerBuffsFromSim>d__58))]
+	[IteratorStateMachine(typeof(<GetTowerBuffsFromSim>d__60))]
 	public IEnumerable<BuffQuery> GetTowerBuffsFromSim() { }
 
 	public float GetUpgradeCost(int pathIndex, int tier, float overrideBaseCost, bool isParagonUpgrade) { }

@@ -20,7 +20,7 @@ public struct MarkToBaseAdjustmentRecord
 	public uint baseGlyphID
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public uint markGlyphID

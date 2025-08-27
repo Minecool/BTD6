@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 {
 	[CompilerGenerated]
@@ -7,63 +8,70 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	private Action<BaseVisualElementPanel> panelDisposed; //Field offset: 0x10
 	private UIElementsBridge m_UIElementsBridge; //Field offset: 0x18
 	private float m_Scale; //Field offset: 0x20
-	internal YogaConfig yogaConfig; //Field offset: 0x28
-	private float m_PixelsPerPoint; //Field offset: 0x30
+	internal LayoutConfig layoutConfig; //Field offset: 0x28
+	private float m_PixelsPerPoint; //Field offset: 0x58
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private float <referenceSpritePixelsPerUnit>k__BackingField; //Field offset: 0x34
+	private float <referenceSpritePixelsPerUnit>k__BackingField; //Field offset: 0x5C
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private PanelClearSettings <clearSettings>k__BackingField; //Field offset: 0x38
+	private PanelClearSettings <clearSettings>k__BackingField; //Field offset: 0x60
+	internal IPanelRenderer panelRenderer; //Field offset: 0x78
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <duringLayoutPhase>k__BackingField; //Field offset: 0x4C
+	private bool <duringLayoutPhase>k__BackingField; //Field offset: 0x80
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private RepaintData <repaintData>k__BackingField; //Field offset: 0x50
+	private RepaintData <repaintData>k__BackingField; //Field offset: 0x88
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private ICursorManager <cursorManager>k__BackingField; //Field offset: 0x58
+	private ICursorManager <cursorManager>k__BackingField; //Field offset: 0x90
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private ContextualMenuManager <contextualMenuManager>k__BackingField; //Field offset: 0x60
+	private ContextualMenuManager <contextualMenuManager>k__BackingField; //Field offset: 0x98
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <disposed>k__BackingField; //Field offset: 0x68
-	internal ElementUnderPointer m_TopElementUnderPointers; //Field offset: 0x70
+	private DataBindingManager <dataBindingManager>k__BackingField; //Field offset: 0xA0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action standardShaderChanged; //Field offset: 0x78
+	private bool <disposed>k__BackingField; //Field offset: 0xA8
+	internal ElementUnderPointer m_TopElementUnderPointers; //Field offset: 0xB0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action standardWorldSpaceShaderChanged; //Field offset: 0x80
+	private Action isFlatChanged; //Field offset: 0xB8
+	private bool m_IsFlat; //Field offset: 0xC0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action atlasChanged; //Field offset: 0x88
+	private Action atlasChanged; //Field offset: 0xC8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Material> updateMaterial; //Field offset: 0x90
+	private HierarchyEvent hierarchyChanged; //Field offset: 0xD0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private HierarchyEvent hierarchyChanged; //Field offset: 0x98
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<IPanel> beforeUpdate; //Field offset: 0xA0
+	private Action<IPanel> beforeUpdate; //Field offset: 0xD8
 
 	internal event Action atlasChanged
 	{
 		[CompilerGenerated]
-		internal add { } //Length: 162
+		internal add { } //Length: 158
 		[CompilerGenerated]
-		internal remove { } //Length: 162
+		internal remove { } //Length: 158
 	}
 
 	internal event HierarchyEvent hierarchyChanged
 	{
 		[CompilerGenerated]
-		internal add { } //Length: 162
+		internal add { } //Length: 158
 		[CompilerGenerated]
-		internal remove { } //Length: 162
+		internal remove { } //Length: 158
+	}
+
+	internal event Action isFlatChanged
+	{
+		[CompilerGenerated]
+		internal add { } //Length: 158
+		[CompilerGenerated]
+		internal remove { } //Length: 158
 	}
 
 	internal event Action<BaseVisualElementPanel> panelDisposed
@@ -72,22 +80,6 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 		internal add { } //Length: 172
 		[CompilerGenerated]
 		internal remove { } //Length: 172
-	}
-
-	internal event Action standardShaderChanged
-	{
-		[CompilerGenerated]
-		internal add { } //Length: 158
-		[CompilerGenerated]
-		internal remove { } //Length: 158
-	}
-
-	internal event Action standardWorldSpaceShaderChanged
-	{
-		[CompilerGenerated]
-		internal add { } //Length: 162
-		[CompilerGenerated]
-		internal remove { } //Length: 162
 	}
 
 	public abstract AtlasBase atlas
@@ -107,23 +99,30 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	public abstract ContextType contextType
 	{
 		 get { } //Length: 0
-		 set { } //Length: 0
 	}
 
 	public internal override ContextualMenuManager contextualMenuManager
 	{
 		[CompilerGenerated]
-		 get { } //Length: 5
+		 get { } //Length: 8
 		[CompilerGenerated]
-		internal set { } //Length: 5
+		internal set { } //Length: 8
 	}
 
 	internal override ICursorManager cursorManager
 	{
 		[CompilerGenerated]
-		internal get { } //Length: 5
+		internal get { } //Length: 8
 		[CompilerGenerated]
-		internal set { } //Length: 5
+		internal set { } //Length: 8
+	}
+
+	internal override DataBindingManager dataBindingManager
+	{
+		[CompilerGenerated]
+		internal get { } //Length: 8
+		[CompilerGenerated]
+		internal set { } //Length: 8
 	}
 
 	public abstract EventDispatcher dispatcher
@@ -135,17 +134,17 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	internal bool disposed
 	{
 		[CompilerGenerated]
-		internal get { } //Length: 5
+		internal get { } //Length: 8
 		[CompilerGenerated]
-		private set { } //Length: 4
+		private set { } //Length: 7
 	}
 
 	internal bool duringLayoutPhase
 	{
 		[CompilerGenerated]
-		internal get { } //Length: 5
+		internal get { } //Length: 8
 		[CompilerGenerated]
-		internal set { } //Length: 4
+		internal set { } //Length: 7
 	}
 
 	public abstract FocusController focusController
@@ -176,15 +175,16 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 		 set { } //Length: 0
 	}
 
+	public bool isFlat
+	{
+		 get { } //Length: 8
+		 set { } //Length: 65
+	}
+
 	public abstract ScriptableObject ownerObject
 	{
 		 get { } //Length: 0
 		 set { } //Length: 0
-	}
-
-	internal float pixelsPerPoint
-	{
-		internal set { } //Length: 168
 	}
 
 	public float referenceSpritePixelsPerUnit
@@ -198,9 +198,9 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	internal override RepaintData repaintData
 	{
 		[CompilerGenerated]
-		internal get { } //Length: 5
+		internal get { } //Length: 8
 		[CompilerGenerated]
-		internal set { } //Length: 5
+		internal set { } //Length: 8
 	}
 
 	public abstract IMGUIContainer rootIMGUIContainer
@@ -216,10 +216,10 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	internal float scale
 	{
 		internal get { } //Length: 8
-		internal set { } //Length: 168
+		internal set { } //Length: 164
 	}
 
-	public float scaledPixelsPerPoint
+	public override float scaledPixelsPerPoint
 	{
 		 get { } //Length: 13
 	}
@@ -229,25 +229,16 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 		internal get { } //Length: 0
 	}
 
-	internal abstract Shader standardShader
-	{
-		internal get { } //Length: 0
-	}
-
-	internal override Shader standardWorldSpaceShader
-	{
-		internal get { } //Length: 5
-	}
-
 	internal abstract IStylePropertyAnimationSystem styleAnimationSystem
 	{
 		internal get { } //Length: 0
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal set { } //Length: 0
 	}
 
 	internal UIElementsBridge uiElementsBridge
 	{
-		internal get { } //Length: 102
+		internal get { } //Length: 100
 	}
 
 	internal abstract uint version
@@ -269,13 +260,10 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	internal void add_hierarchyChanged(HierarchyEvent value) { }
 
 	[CompilerGenerated]
+	internal void add_isFlatChanged(Action value) { }
+
+	[CompilerGenerated]
 	internal void add_panelDisposed(Action<BaseVisualElementPanel> value) { }
-
-	[CompilerGenerated]
-	internal void add_standardShaderChanged(Action value) { }
-
-	[CompilerGenerated]
-	internal void add_standardWorldSpaceShaderChanged(Action value) { }
 
 	public abstract void ApplyStyles() { }
 
@@ -283,9 +271,11 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 
 	internal void CommitElementUnderPointers() { }
 
-	protected override void Dispose(bool disposing) { }
+	internal override IGenericMenu CreateMenu() { }
 
 	public override void Dispose() { }
+
+	protected override void Dispose(bool disposing) { }
 
 	public abstract AtlasBase get_atlas() { }
 
@@ -299,6 +289,9 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 
 	[CompilerGenerated]
 	internal override ICursorManager get_cursorManager() { }
+
+	[CompilerGenerated]
+	internal override DataBindingManager get_dataBindingManager() { }
 
 	public abstract EventDispatcher get_dispatcher() { }
 
@@ -318,6 +311,8 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 
 	public abstract EventInterests get_IMGUIEventInterests() { }
 
+	public bool get_isFlat() { }
+
 	public abstract ScriptableObject get_ownerObject() { }
 
 	[CompilerGenerated]
@@ -332,13 +327,9 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 
 	internal float get_scale() { }
 
-	public float get_scaledPixelsPerPoint() { }
+	public override float get_scaledPixelsPerPoint() { }
 
 	internal abstract IScheduler get_scheduler() { }
-
-	internal abstract Shader get_standardShader() { }
-
-	internal override Shader get_standardWorldSpaceShader() { }
 
 	internal abstract IStylePropertyAnimationSystem get_styleAnimationSystem() { }
 
@@ -350,15 +341,14 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 
 	internal VisualElement GetTopElementUnderPointer(int pointerId) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal abstract IVisualTreeUpdater GetUpdater(VisualTreeUpdatePhase phase) { }
 
 	protected void InvokeAtlasChanged() { }
 
 	internal void InvokeBeforeUpdate() { }
 
-	internal void InvokeHierarchyChanged(VisualElement ve, HierarchyChangeType changeType) { }
-
-	internal void InvokeUpdateMaterial(Material mat) { }
+	internal void InvokeHierarchyChanged(VisualElement ve, HierarchyChangeType changeType, IReadOnlyList<VisualElement> additionalContext = null) { }
 
 	internal abstract void OnVersionChanged(VisualElement ele, VersionChangeType changeTypeFlag) { }
 
@@ -375,13 +365,12 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	internal void remove_hierarchyChanged(HierarchyEvent value) { }
 
 	[CompilerGenerated]
+	internal void remove_isFlatChanged(Action value) { }
+
+	[CompilerGenerated]
 	internal void remove_panelDisposed(Action<BaseVisualElementPanel> value) { }
 
-	[CompilerGenerated]
-	internal void remove_standardShaderChanged(Action value) { }
-
-	[CompilerGenerated]
-	internal void remove_standardWorldSpaceShaderChanged(Action value) { }
+	public override void Render() { }
 
 	public abstract void Repaint(Event e) { }
 
@@ -392,13 +381,14 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 	[CompilerGenerated]
 	internal void set_clearSettings(PanelClearSettings value) { }
 
-	protected abstract void set_contextType(ContextType value) { }
-
 	[CompilerGenerated]
 	internal void set_contextualMenuManager(ContextualMenuManager value) { }
 
 	[CompilerGenerated]
 	internal override void set_cursorManager(ICursorManager value) { }
+
+	[CompilerGenerated]
+	internal override void set_dataBindingManager(DataBindingManager value) { }
 
 	public abstract void set_dispatcher(EventDispatcher value) { }
 
@@ -414,9 +404,9 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 
 	public abstract void set_IMGUIEventInterests(EventInterests value) { }
 
-	protected abstract void set_ownerObject(ScriptableObject value) { }
+	public void set_isFlat(bool value) { }
 
-	internal void set_pixelsPerPoint(float value) { }
+	protected abstract void set_ownerObject(ScriptableObject value) { }
 
 	[CompilerGenerated]
 	public void set_referenceSpritePixelsPerUnit(float value) { }
@@ -426,13 +416,16 @@ internal abstract class BaseVisualElementPanel : IPanel, IDisposable, IGroupBox
 
 	internal void set_scale(float value) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal abstract void set_styleAnimationSystem(IStylePropertyAnimationSystem value) { }
+
+	internal void SetSpecializedHierarchyFlagsUpdater() { }
+
+	internal abstract void SetUpdater(IVisualTreeUpdater updater, VisualTreeUpdatePhase phase) { }
 
 	private override void UnityEngine.UIElements.IGroupBox.OnOptionAdded(IGroupBoxOption option) { }
 
 	private override void UnityEngine.UIElements.IGroupBox.OnOptionRemoved(IGroupBoxOption option) { }
-
-	public override void Update() { }
 
 	public abstract void UpdateAnimations() { }
 

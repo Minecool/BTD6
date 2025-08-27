@@ -48,7 +48,7 @@ public class UniqueConstraint : Constraint
 	[ReadOnly(True)]
 	public virtual DataTable Table
 	{
-		 get { } //Length: 48
+		 get { } //Length: 47
 	}
 
 	public UniqueConstraint(DataColumn column) { }

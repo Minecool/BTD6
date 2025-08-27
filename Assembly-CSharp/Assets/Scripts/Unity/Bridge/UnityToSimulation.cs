@@ -1675,6 +1675,8 @@ public class UnityToSimulation
 
 	public Dictionary<String, Int32> GetTowerMaxBaseIdAtATime() { }
 
+	public int GetUnlockedTierForPowerPro(string powerBaseId) { }
+
 	public float GetUpgradeCost(ObjectId id, int path, int tier, float overrideBaseCost, bool isParagonUpgrade) { }
 
 	private void GoldenBloonDegraded(Bloon bloon, int mm) { }
@@ -1694,8 +1696,6 @@ public class UnityToSimulation
 	public override void InitAnalytics() { }
 
 	public void InitFreeplayRoundSet(FreeplayRoundManager roundManager) { }
-
-	public void InitGuideArrows() { }
 
 	public override void Initialise(MapSaveDataModel mapSaveData = null) { }
 
@@ -1720,6 +1720,8 @@ public class UnityToSimulation
 	public bool IsPathSegmentIsInRange(float x, float y, float range) { }
 
 	public bool IsSandboxMode() { }
+
+	public bool IsTierUnlockedForPowerPro(string powerBaseId, int tier) { }
 
 	public bool IsTowerInventoryLimitedForPlayer(int inputId) { }
 
@@ -1764,6 +1766,10 @@ public class UnityToSimulation
 	public void OnPropSoldEvent(PropBase prop) { }
 
 	protected override void OnSafeToResyncSim(int highestCompletedRound) { }
+
+	public void OnSendAnalyticEventSim(string analyticEventId) { }
+
+	public void OnSendEventHookAnalyticEventSim(EventHookToSimulation eventHook, HookConditionModel condition, bool isEndHookCondition) { }
 
 	public void OnSetHelperMessageSim(string message, float timeUntilClear = 3) { }
 
@@ -1817,9 +1823,9 @@ public class UnityToSimulation
 
 	protected override void PurchaseMaxHeroLevel_Impl(ObjectId id, int callbackId, int inputId) { }
 
-	public PlacementQuery QueryPlacementPosition(Vector2 pos, TowerModel tm, int inputId, ObjectId forTowerId) { }
-
 	public PlacementQuery QueryPlacementPosition(Vector2 pos, PropModel pm, int inputId, ObjectId forTowerId) { }
+
+	public PlacementQuery QueryPlacementPosition(Vector2 pos, TowerModel tm, int inputId, ObjectId forTowerId) { }
 
 	public void QueueRogueBoost(RogueLootData boostLoot) { }
 

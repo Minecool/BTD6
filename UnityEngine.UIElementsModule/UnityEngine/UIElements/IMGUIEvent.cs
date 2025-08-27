@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::IMGUI (16))]
+[EventCategory(EventCategory::IMGUI (18))]
 public class IMGUIEvent : EventBase<IMGUIEvent>
 {
 	[CompilerGenerated]
@@ -20,6 +20,8 @@ public class IMGUIEvent : EventBase<IMGUIEvent>
 	private static IMGUIEvent() { }
 
 	public IMGUIEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	public static IMGUIEvent GetPooled(Event systemEvent) { }
 

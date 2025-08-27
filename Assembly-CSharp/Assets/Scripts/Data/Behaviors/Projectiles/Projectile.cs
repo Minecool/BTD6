@@ -38,7 +38,7 @@ public class Projectile : EntityBehavior<ProjectileModel>
 
 	public virtual ProjectileModel Def
 	{
-		 get { } //Length: 617
+		 get { } //Length: 571
 	}
 
 	public virtual Model Model

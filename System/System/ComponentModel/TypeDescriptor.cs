@@ -149,13 +149,13 @@ public sealed class TypeDescriptor
 	[EditorBrowsable(EditorBrowsableState::Advanced (2))]
 	public static Type ComObjectType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 77
 	}
 
 	[EditorBrowsable(EditorBrowsableState::Advanced (2))]
 	public static Type InterfaceType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 77
 	}
 
 	internal static int MetadataVersion

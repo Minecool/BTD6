@@ -25,10 +25,10 @@ public class Physics2D
 
 	public static bool get_queriesHitTriggers() { }
 
-	public static RaycastHit2D GetRayIntersection(Ray ray, float distance, int layerMask) { }
+	public static RaycastHit2D GetRayIntersection(Ray ray, float distance, int layerMask = -5) { }
 
 	[RequiredByNativeCode]
-	public static RaycastHit2D[] GetRayIntersectionAll(Ray ray, float distance, int layerMask) { }
+	public static RaycastHit2D[] GetRayIntersectionAll(Ray ray, float distance, int layerMask = -5) { }
 
 	[ExcludeFromDocs]
 	public static RaycastHit2D[] GetRayIntersectionAll(Ray ray, float distance) { }
@@ -40,16 +40,21 @@ public class Physics2D
 	[StaticAccessor("PhysicsQuery2D", StaticAccessorType::DoubleColon (2))]
 	private static RaycastHit2D[] GetRayIntersectionAll_Internal(PhysicsScene2D physicsScene, Vector3 origin, Vector3 direction, float distance, int layerMask) { }
 
-	private static RaycastHit2D[] GetRayIntersectionAll_Internal_Injected(ref PhysicsScene2D physicsScene, ref Vector3 origin, ref Vector3 direction, float distance, int layerMask) { }
+	private static void GetRayIntersectionAll_Internal_Injected(in PhysicsScene2D physicsScene, in Vector3 origin, in Vector3 direction, float distance, int layerMask, out BlittableArrayWrapper ret) { }
 
 	[ExcludeFromDocs]
+	[RequiredByNativeCode]
+	public static int GetRayIntersectionNonAlloc(Ray ray, RaycastHit2D[] results, float distance, int layerMask = -5) { }
+
+	[EditorBrowsable(EditorBrowsableState::Never (1))]
+	[ExcludeFromDocs]
+	[Obsolete("Physics2D.GetRayIntersectionNonAlloc is deprecated. Use Physics2D.GetRayIntersection instead.", False)]
 	public static int GetRayIntersectionNonAlloc(Ray ray, RaycastHit2D[] results) { }
 
+	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	[ExcludeFromDocs]
+	[Obsolete("Physics2D.GetRayIntersectionNonAlloc is deprecated. Use Physics2D.GetRayIntersection instead.", False)]
 	public static int GetRayIntersectionNonAlloc(Ray ray, RaycastHit2D[] results, float distance) { }
-
-	[RequiredByNativeCode]
-	public static int GetRayIntersectionNonAlloc(Ray ray, RaycastHit2D[] results, float distance, int layerMask) { }
 
 	[ExcludeFromDocs]
 	public static int Raycast(Vector2 origin, Vector2 direction, ContactFilter2D contactFilter, RaycastHit2D[] results) { }

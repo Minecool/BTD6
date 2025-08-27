@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class Toggle : BaseBoolField
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Toggle, UxmlTraits>
 	{
 
@@ -9,9 +10,10 @@ public class Toggle : BaseBoolField
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : BaseFieldTraits<Boolean, UxmlBoolAttributeDescription>
 	{
-		private UxmlStringAttributeDescription m_Text; //Field offset: 0x88
+		private UxmlStringAttributeDescription m_Text; //Field offset: 0xA0
 
 		public UxmlTraits() { }
 

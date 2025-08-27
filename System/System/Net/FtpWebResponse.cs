@@ -22,7 +22,7 @@ public class FtpWebResponse : WebResponse, IDisposable
 
 	public virtual WebHeaderCollection Headers
 	{
-		 get { } //Length: 235
+		 get { } //Length: 225
 	}
 
 	public virtual Uri ResponseUri

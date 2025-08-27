@@ -4,14 +4,15 @@ namespace Assets.Scripts.Data.Behaviors.Events;
 [UIComponent("EntityEvent")]
 public class EntityEvent : Behavior, IGameEditorAsset
 {
+	public string eventId; //Field offset: 0x28
 	[JsonConverter(typeof(BehaviorConverter))]
-	public EntityTrigger[] triggers; //Field offset: 0x28
+	public EntityTrigger[] triggers; //Field offset: 0x30
 	[JsonConverter(typeof(BehaviorConverter))]
-	public EntityAction[] actions; //Field offset: 0x30
-	public bool requiresAllTriggers; //Field offset: 0x38
-	public int maxActivationLimit; //Field offset: 0x3C
+	public EntityAction[] actions; //Field offset: 0x38
+	public bool requiresAllTriggers; //Field offset: 0x40
+	public int maxActivationLimit; //Field offset: 0x44
 	[UIVariableHidden]
-	public int eventEntityIndex; //Field offset: 0x40
+	public int eventEntityIndex; //Field offset: 0x48
 
 	public virtual Model Model
 	{

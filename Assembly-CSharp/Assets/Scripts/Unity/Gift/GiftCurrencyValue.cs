@@ -23,6 +23,7 @@ public class GiftCurrencyValue
 	public string xpShopItemId; //Field offset: 0xA0
 	public int xpShopItemLevel; //Field offset: 0xA8
 	public int rogueXpAmount; //Field offset: 0xAC
+	public string isFullUnlock; //Field offset: 0xB0
 
 	public GiftCurrencyValue() { }
 

@@ -252,9 +252,6 @@ public struct decimal : IFormattable, IComparable, IConvertible, IComparable<Dec
 
 	}
 
-	private const int SignMask = -2147483648; //Field offset: 0x0
-	private const int ScaleMask = 16711680; //Field offset: 0x0
-	private const int ScaleShift = 16; //Field offset: 0x0
 	[DecimalConstant(0, 0, 0, 0, 0)]
 	public static readonly decimal Zero; //Field offset: 0x0
 	[DecimalConstant(0, 0, 0, 0, 1)]

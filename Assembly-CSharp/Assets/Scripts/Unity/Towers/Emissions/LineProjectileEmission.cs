@@ -42,7 +42,7 @@ public class LineProjectileEmission : Emission
 
 	public virtual EmissionModel Def
 	{
-		 get { } //Length: 1238
+		 get { } //Length: 1250
 	}
 
 	public LineProjectileEmission() { }

@@ -110,17 +110,17 @@ public class ContentBrowserPanel : MonoBehaviour
 	public event Action<Boolean> LoadingChallengeEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action SaveOnExit
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	private ContentTypeSaveData ContentBrowserData
@@ -135,7 +135,7 @@ public class ContentBrowserPanel : MonoBehaviour
 
 	public bool HasPlayedChallenge
 	{
-		 get { } //Length: 211
+		 get { } //Length: 214
 	}
 
 	public bool HasSavedProgress

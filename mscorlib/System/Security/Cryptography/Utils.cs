@@ -6,7 +6,7 @@ internal static class Utils
 
 	internal static RNGCryptoServiceProvider StaticRandomNumberGenerator
 	{
-		internal get { } //Length: 933
+		internal get { } //Length: 805
 	}
 
 	internal static bool _ProduceLegacyHmacValues() { }

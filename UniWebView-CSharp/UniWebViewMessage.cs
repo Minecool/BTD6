@@ -42,7 +42,7 @@ public struct UniWebViewMessage
 	{
 		[CompilerGenerated]
 		[IsReadOnly]
-		 get { } //Length: 5
+		 get { } //Length: 291
 		[CompilerGenerated]
 		private set { } //Length: 5
 	}

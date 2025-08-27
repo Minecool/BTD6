@@ -184,7 +184,7 @@ public class AchievementManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 278
+		private get { } //Length: 266
 	}
 
 	internal AchievementManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

@@ -9,7 +9,7 @@ public class ProjectileSpeedSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 249
+		 get { } //Length: 283
 	}
 
 	public ProjectileSpeedSupport() { }

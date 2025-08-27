@@ -22,7 +22,7 @@ public struct VertexAttributeDescriptor : IEquatable<VertexAttributeDescriptor>
 		[IsReadOnly]
 		 get { } //Length: 3
 		[CompilerGenerated]
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int dimension

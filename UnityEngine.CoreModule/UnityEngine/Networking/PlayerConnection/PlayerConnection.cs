@@ -45,7 +45,7 @@ public class PlayerConnection : ScriptableObject, IEditorPlayerConnection
 
 	public static PlayerConnection instance
 	{
-		 get { } //Length: 237
+		 get { } //Length: 236
 	}
 
 	public bool isConnected

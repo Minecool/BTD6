@@ -5,7 +5,7 @@ public class ListViewController : BaseListViewController
 
 	protected ListView listView
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public ListViewController() { }

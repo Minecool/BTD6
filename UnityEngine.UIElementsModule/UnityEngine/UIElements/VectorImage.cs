@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-public class VectorImage : ScriptableObject
+public sealed class VectorImage : ScriptableObject
 {
 	[SerializeField]
 	internal int version; //Field offset: 0x18

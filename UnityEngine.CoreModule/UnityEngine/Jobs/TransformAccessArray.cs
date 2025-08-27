@@ -8,12 +8,12 @@ public struct TransformAccessArray : IDisposable
 
 	public bool isCreated
 	{
-		 get { } //Length: 15
+		 get { } //Length: 10
 	}
 
 	public Transform Item
 	{
-		 get { } //Length: 64
+		 get { } //Length: 106
 	}
 
 	public int length
@@ -23,10 +23,12 @@ public struct TransformAccessArray : IDisposable
 
 	public TransformAccessArray(int capacity, int desiredJobCount = -1) { }
 
-	public void Add(Transform transform) { }
-
 	[NativeMethod(Name = "TransformAccessArrayBindings::AddTransform", IsFreeFunction = True)]
 	private static void Add(IntPtr transformArrayIntPtr, Transform transform) { }
+
+	public void Add(Transform transform) { }
+
+	private static void Add_Injected(IntPtr transformArrayIntPtr, IntPtr transform) { }
 
 	public static void Allocate(int capacity, int desiredJobCount, out TransformAccessArray array) { }
 
@@ -56,12 +58,14 @@ public struct TransformAccessArray : IDisposable
 	[NativeMethod(Name = "TransformAccessArrayBindings::GetTransform", IsFreeFunction = True, ThrowsException = True)]
 	internal static Transform GetTransform(IntPtr transformArrayIntPtr, int index) { }
 
+	private static IntPtr GetTransform_Injected(IntPtr transformArrayIntPtr, int index) { }
+
 	internal IntPtr GetTransformAccessArrayForSchedule() { }
+
+	public void RemoveAtSwapBack(int index) { }
 
 	[NativeMethod(Name = "TransformAccessArrayBindings::RemoveAtSwapBack", IsFreeFunction = True, ThrowsException = True)]
 	private static void RemoveAtSwapBack(IntPtr transformArrayIntPtr, int index) { }
-
-	public void RemoveAtSwapBack(int index) { }
 
 }
 

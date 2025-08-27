@@ -3,10 +3,10 @@ namespace Assets.Scripts.Unity.Towers.Pets;
 public class PetCreateEffectOnSell : PetBehavior
 {
 	[SerializeField]
-	private PrefabReference effect; //Field offset: 0x10
+	private PrefabReference effect; //Field offset: 0x18
 	[SerializeField]
-	private float lifespan; //Field offset: 0x18
-	private PetBehaviorModel def; //Field offset: 0x20
+	private float lifespan; //Field offset: 0x20
+	private PetBehaviorModel def; //Field offset: 0x28
 
 	public virtual PetBehaviorModel Def
 	{

@@ -21,27 +21,27 @@ public class CreateProp : ProjectileBehavior
 
 	public bool HasOffsets
 	{
-		 get { } //Length: 196
+		 get { } //Length: 208
 	}
 
 	public bool HasRandomScale
 	{
-		 get { } //Length: 235
+		 get { } //Length: 247
 	}
 
 	public bool IsScaleXMinMaxSame
 	{
-		 get { } //Length: 181
+		 get { } //Length: 190
 	}
 
 	public bool IsScaleYMinMaxSame
 	{
-		 get { } //Length: 181
+		 get { } //Length: 190
 	}
 
 	public bool RequiresRandomScale
 	{
-		 get { } //Length: 189
+		 get { } //Length: 200
 	}
 
 	public CreateProp() { }

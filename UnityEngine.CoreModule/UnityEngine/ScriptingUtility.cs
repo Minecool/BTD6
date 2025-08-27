@@ -12,5 +12,8 @@ internal class ScriptingUtility
 	[RequiredByNativeCode]
 	private static bool IsManagedCodeWorking() { }
 
+	[RequiredByNativeCode]
+	private static void SetupCallbacks(IntPtr p) { }
+
 }
 

@@ -22,7 +22,7 @@ public abstract class AuthenticationProviderToken
 
 	protected private abstract Task<UserModel> LinkToLiNKAccount(LiNKAccount liNKAccount) { }
 
-	protected private abstract Task<LoginResponseModel> LoginToLiNKAccount(Api liNK) { }
+	protected private abstract Task<LiNKAccountModel> LoginToLiNKAccount(Api liNK) { }
 
 }
 

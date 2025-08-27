@@ -1,18 +1,19 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class VisualTreeStyleUpdaterTraversal : HierarchyTraversal
 {
 	[CompilerGenerated]
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Comparison<SelectorMatchRecord> <>9__24_0; //Field offset: 0x8
+		public static Comparison<SelectorMatchRecord> <>9__28_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal int <ProcessMatchedRules>b__24_0(SelectorMatchRecord a, SelectorMatchRecord b) { }
+		internal int <ProcessMatchedRules>b__28_0(SelectorMatchRecord a, SelectorMatchRecord b) { }
 
 	}
 
@@ -25,7 +26,18 @@ internal class VisualTreeStyleUpdaterTraversal : HierarchyTraversal
 	private float <currentPixelsPerPoint>k__BackingField; //Field offset: 0x30
 	private StyleMatchingContext m_StyleMatchingContext; //Field offset: 0x38
 	private StylePropertyReader m_StylePropertyReader; //Field offset: 0x40
-	private readonly List<StylePropertyId> m_AnimatedProperties; //Field offset: 0x48
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private BaseVisualElementPanel <currentPanel>k__BackingField; //Field offset: 0x48
+	private readonly List<StylePropertyId> m_AnimatedProperties; //Field offset: 0x50
+
+	private BaseVisualElementPanel currentPanel
+	{
+		[CompilerGenerated]
+		private get { } //Length: 5
+		[CompilerGenerated]
+		private set { } //Length: 5
+	}
 
 	private float currentPixelsPerPoint
 	{
@@ -46,11 +58,14 @@ internal class VisualTreeStyleUpdaterTraversal : HierarchyTraversal
 	private void ForceUpdateTransitions(VisualElement element) { }
 
 	[CompilerGenerated]
+	private BaseVisualElementPanel get_currentPanel() { }
+
+	[CompilerGenerated]
 	private float get_currentPixelsPerPoint() { }
 
 	private static void OnProcessMatchResult(VisualElement current, MatchResultInfo info) { }
 
-	public void PrepareTraversal(float pixelsPerPoint) { }
+	public void PrepareTraversal(BaseVisualElementPanel panel, float pixelsPerPoint) { }
 
 	private ComputedStyle ProcessMatchedRules(VisualElement element, List<SelectorMatchRecord> matchingSelectors) { }
 
@@ -61,6 +76,9 @@ internal class VisualTreeStyleUpdaterTraversal : HierarchyTraversal
 	private void PropagateToChildren(VisualElement ve) { }
 
 	private void PropagateToParents(VisualElement ve) { }
+
+	[CompilerGenerated]
+	private void set_currentPanel(BaseVisualElementPanel value) { }
 
 	[CompilerGenerated]
 	private void set_currentPixelsPerPoint(float value) { }

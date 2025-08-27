@@ -3,7 +3,7 @@ namespace Assets.Scripts.Unity.UI_New.InGame;
 public class InputManager
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass231_0
+	private sealed class <>c__DisplayClass232_0
 	{
 		public List<UnityDisplayNode> smokeAndMirrorsGraphics; //Field offset: 0x10
 		public InputManager <>4__this; //Field offset: 0x18
@@ -13,55 +13,55 @@ public class InputManager
 		public StandardInstaTowerButton wasInstaButton; //Field offset: 0x38
 		public TowerBasedShopMenuItemUi wasGeraldoItemMode; //Field offset: 0x40
 
-		public <>c__DisplayClass231_0() { }
+		public <>c__DisplayClass232_0() { }
 
 		internal void <CreatePlacementTower>b__0(bool success) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass258_0
+	private sealed class <>c__DisplayClass260_0
 	{
 		public InputManager <>4__this; //Field offset: 0x10
 		public List<UnityDisplayNode> towerSnappingGraphics; //Field offset: 0x18
 		public float scaleMod; //Field offset: 0x20
 		public Dictionary<PrefabReference, Vector3> offsetsToAdd; //Field offset: 0x28
 
-		public <>c__DisplayClass258_0() { }
+		public <>c__DisplayClass260_0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass258_1
+	private sealed class <>c__DisplayClass260_1
 	{
 		public PrefabReference display; //Field offset: 0x10
-		public <>c__DisplayClass258_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass260_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass258_1() { }
+		public <>c__DisplayClass260_1() { }
 
 		internal void <CreateTowerSnappingGraphicAsync>b__0(UnityDisplayNode node) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass259_0
+	private sealed class <>c__DisplayClass261_0
 	{
 		public InputManager <>4__this; //Field offset: 0x10
 		public List<UnityDisplayNode> placementGraphics; //Field offset: 0x18
 		public float scaleMod; //Field offset: 0x20
 		public Dictionary<PrefabReference, Vector3> offsetsToAdd; //Field offset: 0x28
 
-		public <>c__DisplayClass259_0() { }
+		public <>c__DisplayClass261_0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass259_1
+	private sealed class <>c__DisplayClass261_1
 	{
 		public PrefabReference display; //Field offset: 0x10
-		public <>c__DisplayClass259_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass261_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass259_1() { }
+		public <>c__DisplayClass261_1() { }
 
 		internal void <CreateTowerGraphicsAsync>b__0(UnityDisplayNode node) { }
 
@@ -469,9 +469,9 @@ public class InputManager
 	public event Action OnEnterPlacementMode
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action<Vector2> OnEraseStamps
@@ -485,25 +485,25 @@ public class InputManager
 	public event Action OnExitPlacementMode
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event StringDelegate OnHelperMessageChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event BoolDelegate OnHideShowPlacementBlockingUI
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action<Vector2, Boolean> OnMovingStampSmokeAndMirrorsGraphic
@@ -517,25 +517,25 @@ public class InputManager
 	public event Action OnSceneHit
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action<Vector2> OnSceneHitLocation
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event SelectedDelegate OnSelectionChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action<Boolean, PropToSimulation> OnTogglePropSelected
@@ -549,9 +549,9 @@ public class InputManager
 	public event Action TriggerPlacementAudio
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	private UnityToSimulation Bridge
@@ -586,7 +586,7 @@ public class InputManager
 
 	public TowerToSimulation HoveredTower
 	{
-		 get { } //Length: 133
+		 get { } //Length: 129
 	}
 
 	public private bool inMapEditorCustomItemPlacementMode
@@ -615,7 +615,7 @@ public class InputManager
 
 	public bool IsEditorModeMovingOrCopying
 	{
-		 get { } //Length: 17
+		 get { } //Length: 18
 	}
 
 	public bool IsEditorMultiPlacementModeBlockingPlacement
@@ -661,7 +661,7 @@ public class InputManager
 
 	public TowerToSimulation SelectedTower
 	{
-		 get { } //Length: 133
+		 get { } //Length: 129
 	}
 
 	public InputManager() { }
@@ -792,6 +792,8 @@ public class InputManager
 
 	public void ExitTowerMode() { }
 
+	public void ForceSelectSelectable(ISelectable sel) { }
+
 	private float GenerateNonSeededRandomNumber() { }
 
 	private UnityToSimulation get_Bridge() { }
@@ -864,6 +866,8 @@ public class InputManager
 	private void OnMovingTowerSmokeAndMirrorsGraphic(PlacementQuery placementQuery, Vector2 position) { }
 
 	public void OnPlaceablesPlacedCallback() { }
+
+	public void OnRestart() { }
 
 	public void OnSelectablePropPlacedCallback(PropToSimulation pts) { }
 

@@ -14,7 +14,7 @@ public class ViewModelCreator
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 4
+		private set { } //Length: 86
 	}
 
 	public ViewModelCreator(object behaviorInstance, List<VariableBaseViewModel> variableViewModels, List<VariableBaseViewModel> behaviorViewModels) { }

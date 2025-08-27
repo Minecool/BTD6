@@ -43,7 +43,7 @@ internal class PersistentCall : ISerializationCallbackReceiver
 
 	public string targetAssemblyTypeName
 	{
-		 get { } //Length: 177
+		 get { } //Length: 180
 	}
 
 	public PersistentCall() { }

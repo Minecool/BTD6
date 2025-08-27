@@ -113,7 +113,7 @@ public class DailyStoreSettings
 	[JsonIgnore]
 	public Int32[] TokensMonkeyMoneyCosts
 	{
-		 get { } //Length: 106
+		 get { } //Length: 104
 	}
 
 	public DailyStoreSettings() { }

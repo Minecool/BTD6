@@ -1,6 +1,6 @@
 namespace NinjaKiwi.LiNK.Client;
 
-public class Player
+public class Player : ILiNKAccountHolder
 {
 	[CompilerGenerated]
 	private struct <ActuallyBackup>d__58 : IAsyncStateMachine
@@ -34,7 +34,7 @@ public class Player
 	}
 
 	[CompilerGenerated]
-	private struct <CheckWhetherPlayingOnAnotherDevice>d__63 : IAsyncStateMachine
+	private struct <CheckWhetherPlayingOnAnotherDevice>d__62 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x0
@@ -51,7 +51,7 @@ public class Player
 	}
 
 	[CompilerGenerated]
-	private struct <InitialSync>d__59 : IAsyncStateMachine
+	private struct <ManualBackup>d__57 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x0
@@ -67,22 +67,7 @@ public class Player
 	}
 
 	[CompilerGenerated]
-	private struct <PauseTimerDuringManualBackup>d__57 : IAsyncStateMachine
-	{
-		public int <>1__state; //Field offset: 0x0
-		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x0
-		public Player<DataT> <>4__this; //Field offset: 0x0
-		private TaskAwaiter <>u__1; //Field offset: 0x0
-
-		private override void MoveNext() { }
-
-		[DebuggerHidden]
-		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
-
-	}
-
-	[CompilerGenerated]
-	private struct <ScheduledCheckAndBackup>d__60 : IAsyncStateMachine
+	private struct <ScheduledCheckAndBackup>d__59 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x0
@@ -103,7 +88,7 @@ public class Player
 
 	[CompilerGenerated]
 	private Api <LiNK>k__BackingField; //Field offset: 0x0
-	private File<Identity> identityFile; //Field offset: 0x0
+	private File<SavedIdentity> identityFile; //Field offset: 0x0
 	private SyncedFile<DataT> dataFile; //Field offset: 0x0
 	private BackupTimer autoBackupTimer; //Field offset: 0x0
 	private PlayerOptions options; //Field offset: 0x0
@@ -243,12 +228,6 @@ public class Player
 	[CompilerGenerated]
 	private void <Initialise>b__52_1() { }
 
-	[CompilerGenerated]
-	private Task <Initialise>b__52_2(LiNKAccount newLiNKAccount) { }
-
-	[CompilerGenerated]
-	private void <Initialise>b__52_3(LiNKAccount liNKAccount) { }
-
 	[AsyncStateMachine(typeof(<ActuallyBackup>d__58))]
 	private Task ActuallyBackup() { }
 
@@ -277,7 +256,7 @@ public class Player
 
 	private Task<SetPlaySessionResponse> CheckPlaySession(bool overrideRemote) { }
 
-	[AsyncStateMachine(typeof(<CheckWhetherPlayingOnAnotherDevice>d__63))]
+	[AsyncStateMachine(typeof(<CheckWhetherPlayingOnAnotherDevice>d__62))]
 	private Task<Boolean> CheckWhetherPlayingOnAnotherDevice(Task resolveTask) { }
 
 	public void Deactivate() { }
@@ -300,15 +279,14 @@ public class Player
 	[CompilerGenerated]
 	private Action<PlaySessionConflict> get_PlaySessionConflictAction() { }
 
-	internal void Initialise(Api liNK, PlayerOptions options, SyncedFile<DataT> dataFile, File<Identity> identityFile) { }
+	internal void Initialise(Api liNK, PlayerOptions options, SyncedFile<DataT> dataFile, File<SavedIdentity> identityFile, LiNKAccount liNKAccount) { }
 
-	[AsyncStateMachine(typeof(<InitialSync>d__59))]
-	internal Task InitialSync(CancellationToken canceller) { }
+	[AsyncStateMachine(typeof(<ManualBackup>d__57))]
+	internal Task ManualBackup(CancellationToken canceller) { }
 
-	private void LoadLiNKAccount(LiNKAccount newLiNKAccount) { }
+	private override LiNKAccount NinjaKiwi.LiNK.Client.ILiNKAccountHolder.GetLiNKAccount() { }
 
-	[AsyncStateMachine(typeof(<PauseTimerDuringManualBackup>d__57))]
-	private Task PauseTimerDuringManualBackup() { }
+	private override Task NinjaKiwi.LiNK.Client.ILiNKAccountHolder.SetLiNKAccount(LiNKAccount newLiNKAccount) { }
 
 	[CompilerGenerated]
 	public void remove_BackupDoneEvent(Action value) { }
@@ -330,7 +308,9 @@ public class Player
 
 	public override void Save() { }
 
-	[AsyncStateMachine(typeof(<ScheduledCheckAndBackup>d__60))]
+	private void SaveIdentity(LiNKAccount account) { }
+
+	[AsyncStateMachine(typeof(<ScheduledCheckAndBackup>d__59))]
 	private void ScheduledCheckAndBackup(bool needToBackup, int counter) { }
 
 	public void set_Data(DataT value) { }

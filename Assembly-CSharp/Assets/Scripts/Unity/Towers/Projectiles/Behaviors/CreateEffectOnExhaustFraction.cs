@@ -20,7 +20,7 @@ public class CreateEffectOnExhaustFraction : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 763
+		 get { } //Length: 764
 	}
 
 	public CreateEffectOnExhaustFraction() { }

@@ -10,7 +10,7 @@ public sealed class X509Store : IDisposable
 
 	public X509Certificate2Collection Certificates
 	{
-		 get { } //Length: 120
+		 get { } //Length: 127
 	}
 
 	private X509Stores Factory

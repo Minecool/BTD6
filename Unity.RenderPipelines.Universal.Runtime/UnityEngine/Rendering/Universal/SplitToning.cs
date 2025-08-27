@@ -1,6 +1,7 @@
 namespace UnityEngine.Rendering.Universal;
 
-[VolumeComponentMenuForRenderPipeline("Post-processing/Split Toning", new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(UniversalRenderPipeline)}])]
+[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+[VolumeComponentMenu("Post-processing/Split Toning")]
 public sealed class SplitToning : VolumeComponent, IPostProcessComponent
 {
 	[Tooltip("The color to use for shadows.")]
@@ -14,6 +15,7 @@ public sealed class SplitToning : VolumeComponent, IPostProcessComponent
 
 	public override bool IsActive() { }
 
+	[Obsolete("Unused #from(2023.1)", False)]
 	public override bool IsTileCompatible() { }
 
 }

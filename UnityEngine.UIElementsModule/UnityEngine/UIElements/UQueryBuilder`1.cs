@@ -24,9 +24,15 @@ public struct UQueryBuilder : IEquatable<UQueryBuilder`1<T>>
 
 	private void AddClass(string c) { }
 
+	private void AddClasses(String[] classes) { }
+
 	private void AddName(string id) { }
 
 	private void AddPseudoStatesRuleIfNecessasy() { }
+
+	private UQueryBuilder<T2> AddRelationship(StyleSelectorRelationship relationship) { }
+
+	private void AddType() { }
 
 	public UQueryState<T> Build() { }
 
@@ -42,6 +48,8 @@ public struct UQueryBuilder : IEquatable<UQueryBuilder`1<T>>
 
 	private void FinishSelector() { }
 
+	public void ForEach(Action<T> funcCall) { }
+
 	private List<StyleSelectorPart> get_parts() { }
 
 	private List<StyleSelector> get_styleSelectors() { }
@@ -50,7 +58,13 @@ public struct UQueryBuilder : IEquatable<UQueryBuilder`1<T>>
 
 	public UQueryBuilder<T> Name(string id) { }
 
+	public UQueryBuilder<T2> OfType(string name = null, string className = null) { }
+
+	public UQueryBuilder<T2> OfType(string name = null, String[] classes) { }
+
 	internal UQueryBuilder<T> SingleBaseType() { }
+
+	public List<T> ToList() { }
 
 }
 

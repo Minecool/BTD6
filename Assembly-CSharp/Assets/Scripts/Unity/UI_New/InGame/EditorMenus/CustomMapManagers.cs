@@ -6,39 +6,65 @@ public class CustomMapManagers
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<LayerData, Boolean> <>9__21_0; //Field offset: 0x8
+		public static Func<LayerData, Boolean> <>9__23_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <OnRemovableSoldTriggeredRerender>b__21_0(LayerData x) { }
+		internal bool <OnRemovableSoldTriggeredRerender>b__23_0(LayerData x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass21_0
+	private sealed class <>c__DisplayClass22_0
+	{
+		public MapEditorAreaData customArea; //Field offset: 0x10
+
+		public <>c__DisplayClass22_0() { }
+
+		internal bool <OnAreasChangedRedrawTriggered>b__0(Area x) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass23_0
 	{
 		public MapEditorStampData stamp; //Field offset: 0x10
 
-		public <>c__DisplayClass21_0() { }
+		public <>c__DisplayClass23_0() { }
 
 		internal bool <OnRemovableSoldTriggeredRerender>b__1(LayerData x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass29_0
+	private sealed class <>c__DisplayClass31_0
 	{
 		public RemoveableTypeGroup removeableState; //Field offset: 0x10
 		public LayerData assetLayerData; //Field offset: 0x14
 		public Func<LayerData, Boolean> <>9__1; //Field offset: 0x20
 
-		public <>c__DisplayClass29_0() { }
+		public <>c__DisplayClass31_0() { }
 
 		internal bool <TryFindLayerDataMatch>b__0(MapEditorAreaData removableArea) { }
 
 		internal bool <TryFindLayerDataMatch>b__1(LayerData layerId) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <AsyncCleanUp>d__21 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		public CustomMapManagers <>4__this; //Field offset: 0x20
+		private YieldAwaiter <>u__1; //Field offset: 0x28
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
 
 	}
 
@@ -138,7 +164,23 @@ public class CustomMapManagers
 	}
 
 	[CompilerGenerated]
-	private struct <OnRemovableSoldTriggeredRerender>d__21 : IAsyncStateMachine
+	private struct <OnAreasChangedRedrawTriggered>d__22 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
+		public CustomMapManagers <>4__this; //Field offset: 0x28
+		public List<Area> existingAreas; //Field offset: 0x30
+		private TaskAwaiter <>u__1; //Field offset: 0x38
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <OnRemovableSoldTriggeredRerender>d__23 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -237,6 +279,9 @@ public class CustomMapManagers
 
 	public CustomMapManagers() { }
 
+	[AsyncStateMachine(typeof(<AsyncCleanUp>d__21))]
+	private Task AsyncCleanUp() { }
+
 	public void Destroy() { }
 
 	[AsyncStateMachine(typeof(<Draw>d__13))]
@@ -270,7 +315,10 @@ public class CustomMapManagers
 
 	public void LoadData() { }
 
-	[AsyncStateMachine(typeof(<OnRemovableSoldTriggeredRerender>d__21))]
+	[AsyncStateMachine(typeof(<OnAreasChangedRedrawTriggered>d__22))]
+	public void OnAreasChangedRedrawTriggered(List<Area> existingAreas) { }
+
+	[AsyncStateMachine(typeof(<OnRemovableSoldTriggeredRerender>d__23))]
 	public void OnRemovableSoldTriggeredRerender(List<CustomRemoveable> customRemovables) { }
 
 	[AsyncStateMachine(typeof(<OnRestartCallback>d__20))]

@@ -2,7 +2,7 @@
 
 public static class BuildInfo
 {
-	public const string BuildId = "9410"; //Field offset: 0x0
+	public const string BuildId = "9653"; //Field offset: 0x0
 
 }
 

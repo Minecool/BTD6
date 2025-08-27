@@ -38,6 +38,7 @@ public class RectIntField : BaseCompositeField<RectInt, IntegerField, Int32>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<RectIntField, UxmlTraits>
 	{
 
@@ -45,12 +46,13 @@ public class RectIntField : BaseCompositeField<RectInt, IntegerField, Int32>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits<RectInt>
 	{
-		private UxmlIntAttributeDescription m_XValue; //Field offset: 0x80
-		private UxmlIntAttributeDescription m_YValue; //Field offset: 0x88
-		private UxmlIntAttributeDescription m_WValue; //Field offset: 0x90
-		private UxmlIntAttributeDescription m_HValue; //Field offset: 0x98
+		private UxmlIntAttributeDescription m_XValue; //Field offset: 0x98
+		private UxmlIntAttributeDescription m_YValue; //Field offset: 0xA0
+		private UxmlIntAttributeDescription m_WValue; //Field offset: 0xA8
+		private UxmlIntAttributeDescription m_HValue; //Field offset: 0xB0
 
 		public UxmlTraits() { }
 

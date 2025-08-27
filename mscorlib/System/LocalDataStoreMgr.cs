@@ -2,9 +2,6 @@ namespace System;
 
 internal sealed class LocalDataStoreMgr
 {
-	private const int InitialSlotTableSize = 64; //Field offset: 0x0
-	private const int SlotTableDoubleThreshold = 512; //Field offset: 0x0
-	private const int LargeSlotTableSizeIncrease = 128; //Field offset: 0x0
 	private Boolean[] m_SlotInfoTable; //Field offset: 0x10
 	private int m_FirstAvailableSlot; //Field offset: 0x18
 	private List<LocalDataStore> m_ManagedLocalDataStores; //Field offset: 0x20

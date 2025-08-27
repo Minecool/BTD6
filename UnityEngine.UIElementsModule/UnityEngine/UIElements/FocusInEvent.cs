@@ -24,5 +24,7 @@ public class FocusInEvent : FocusEventBase<FocusInEvent>
 
 	private void LocalInit() { }
 
+	protected private virtual void PostDispatch(IPanel panel) { }
+
 }
 

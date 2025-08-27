@@ -23,7 +23,7 @@ public class Overclock : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 638
+		 get { } //Length: 642
 	}
 
 	public Overclock() { }

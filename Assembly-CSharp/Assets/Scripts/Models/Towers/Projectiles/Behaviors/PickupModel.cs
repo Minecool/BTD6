@@ -7,8 +7,9 @@ public class PickupModel : ProjectileBehaviorModel
 	[SerializeField]
 	private float delay; //Field offset: 0x3C
 	public float delayFrames; //Field offset: 0x40
+	public bool isCamoPickup; //Field offset: 0x44
 
-	public PickupModel(string name, float collectRadius, float delay) { }
+	public PickupModel(string name, float collectRadius, float delay, bool isCamoPickup) { }
 
 	public virtual Model Clone() { }
 

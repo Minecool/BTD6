@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::EnterLeave (3))]
+[EventCategory(EventCategory::EnterLeave (4))]
 public sealed class PointerOutEvent : PointerEventBase<PointerOutEvent>
 {
 	[CompilerGenerated]
@@ -20,6 +20,8 @@ public sealed class PointerOutEvent : PointerEventBase<PointerOutEvent>
 	private static PointerOutEvent() { }
 
 	public PointerOutEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 }
 

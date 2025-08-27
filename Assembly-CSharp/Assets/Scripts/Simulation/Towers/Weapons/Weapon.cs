@@ -35,7 +35,7 @@ public class Weapon : AttackBehavior
 
 	public bool IsReloadReady
 	{
-		 get { } //Length: 103
+		 get { } //Length: 101
 	}
 
 	public int RateFrames
@@ -46,6 +46,8 @@ public class Weapon : AttackBehavior
 	public Weapon() { }
 
 	private ProjectileModel ApplyExtraDamagePrecision(ProjectileModel projectileDef) { }
+
+	public void ApplyStartingCooldown() { }
 
 	private float CalcRateFrames() { }
 

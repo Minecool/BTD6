@@ -13,7 +13,7 @@ internal static class FileSystem
 
 		public virtual bool IsInvalid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		public UnitySafeFindHandle(IntPtr handle) { }

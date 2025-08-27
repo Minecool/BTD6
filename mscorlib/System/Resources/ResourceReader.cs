@@ -22,17 +22,17 @@ public sealed class ResourceReader : IResourceReader, IEnumerable, IDisposable
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 998
+			 get { } //Length: 967
 		}
 
 		public override object Key
 		{
-			 get { } //Length: 340
+			 get { } //Length: 339
 		}
 
 		public override object Value
 		{
-			 get { } //Length: 336
+			 get { } //Length: 332
 		}
 
 		internal ResourceEnumerator(ResourceReader reader) { }

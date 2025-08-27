@@ -1,6 +1,6 @@
 namespace UnityEngine;
 
-[AttributeUsage(AttributeTargets::Field (256), Inherited = True, AllowMultiple = False)]
+[AttributeUsage(384, Inherited = True, AllowMultiple = False)]
 public sealed class DelayedAttribute : PropertyAttribute
 {
 

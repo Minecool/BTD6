@@ -18,7 +18,7 @@ public class AbilityCooldownZoneModel : BloonBehaviorModel
 
 	public CooldownMutator Mutator
 	{
-		 get { } //Length: 248
+		 get { } //Length: 252
 	}
 
 	public AbilityCooldownZoneModel(string name, float multiplier) { }

@@ -253,7 +253,7 @@ public class OverlayManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 276
+		private get { } //Length: 264
 	}
 
 	internal OverlayManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

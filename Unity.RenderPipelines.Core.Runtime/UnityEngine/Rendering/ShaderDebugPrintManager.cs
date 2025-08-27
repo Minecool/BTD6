@@ -28,12 +28,12 @@ public sealed class ShaderDebugPrintManager
 	}
 
 	private static readonly ShaderDebugPrintManager s_Instance; //Field offset: 0x0
-	private const int k_DebugUAVSlot = 7; //Field offset: 0x0
 	private const int k_FramesInFlight = 4; //Field offset: 0x0
 	private const int k_MaxBufferElements = 16384; //Field offset: 0x0
 	private const uint k_TypeHasTag = 128; //Field offset: 0x0
 	private static readonly int m_ShaderPropertyIDInputMouse; //Field offset: 0x8
 	private static readonly int m_ShaderPropertyIDInputFrame; //Field offset: 0xC
+	private static readonly int m_shaderDebugOutputData; //Field offset: 0x10
 	private List<GraphicsBuffer> m_OutputBuffers; //Field offset: 0x10
 	private List<AsyncGPUReadbackRequest> m_ReadbackRequests; //Field offset: 0x18
 	private Action<AsyncGPUReadbackRequest> m_BufferReadCompleteAction; //Field offset: 0x20
@@ -74,6 +74,8 @@ public sealed class ShaderDebugPrintManager
 	public static ShaderDebugPrintManager get_instance() { }
 
 	public string get_outputLine() { }
+
+	public void PrintImmediate() { }
 
 	public void set_outputAction(Action<String> value) { }
 

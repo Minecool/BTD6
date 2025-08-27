@@ -2,16 +2,11 @@ namespace UnityEngine.UIElements;
 
 public abstract class MultiColumnTreeViewController : BaseTreeViewController
 {
-	private MultiColumnController m_ColumnController; //Field offset: 0x58
+	private MultiColumnController m_ColumnController; //Field offset: 0x68
 
 	public MultiColumnController columnController
 	{
 		 get { } //Length: 5
-	}
-
-	internal MultiColumnCollectionHeader header
-	{
-		internal get { } //Length: 15
 	}
 
 	protected MultiColumnTreeViewController(Columns columns, SortColumnDescriptions sortDescriptions, List<SortColumnDescription> sortedColumns) { }
@@ -24,13 +19,13 @@ public abstract class MultiColumnTreeViewController : BaseTreeViewController
 
 	public MultiColumnController get_columnController() { }
 
-	internal MultiColumnCollectionHeader get_header() { }
-
 	internal virtual void InvokeMakeItem(ReusableCollectionItem reusableItem) { }
 
 	protected virtual VisualElement MakeItem() { }
 
 	protected virtual void PrepareView() { }
+
+	internal virtual void PreRefresh() { }
 
 	protected virtual void UnbindItem(VisualElement element, int index) { }
 

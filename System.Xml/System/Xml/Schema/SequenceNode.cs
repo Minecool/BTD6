@@ -17,7 +17,7 @@ internal sealed class SequenceNode : InteriorNode
 
 	public virtual bool IsNullable
 	{
-		 get { } //Length: 413
+		 get { } //Length: 416
 	}
 
 	public SequenceNode() { }

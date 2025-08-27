@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::EnterLeave (3))]
+[EventCategory(EventCategory::EnterLeave (4))]
 public sealed class PointerOverEvent : PointerEventBase<PointerOverEvent>
 {
 	[CompilerGenerated]
@@ -20,6 +20,8 @@ public sealed class PointerOverEvent : PointerEventBase<PointerOverEvent>
 	private static PointerOverEvent() { }
 
 	public PointerOverEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 }
 

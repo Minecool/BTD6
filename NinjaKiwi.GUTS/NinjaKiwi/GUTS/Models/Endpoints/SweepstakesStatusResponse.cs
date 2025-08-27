@@ -22,8 +22,10 @@ public class SweepstakesStatusResponse : EndpointResponseBase, IEndpointResponse
 	private Nullable<DateTime> <NextTaskUnlockTime>k__BackingField; //Field offset: 0x38
 	[CompilerGenerated]
 	private bool <HasShared>k__BackingField; //Field offset: 0x48
+	[CompilerGenerated]
+	private Nullable<Int32> <UnlockIntervalIndex>k__BackingField; //Field offset: 0x4C
 	[Nullable(new IL2CPP_TYPE_U1[] {2, 1}])]
-	private String[] cachedClaimedTickets; //Field offset: 0x50
+	private String[] cachedClaimedTickets; //Field offset: 0x58
 
 	public string ClaimedCsv
 	{
@@ -87,12 +89,20 @@ public class SweepstakesStatusResponse : EndpointResponseBase, IEndpointResponse
 		 set { } //Length: 4
 	}
 
+	public Nullable<Int32> UnlockIntervalIndex
+	{
+		[CompilerGenerated]
+		 get { } //Length: 5
+		[CompilerGenerated]
+		 set { } //Length: 5
+	}
+
 	public bool WasShareSeen
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public SweepstakesStatusResponse() { }
@@ -119,6 +129,9 @@ public class SweepstakesStatusResponse : EndpointResponseBase, IEndpointResponse
 
 	[CompilerGenerated]
 	public int get_UnlockedTaskIndex() { }
+
+	[CompilerGenerated]
+	public Nullable<Int32> get_UnlockIntervalIndex() { }
 
 	[CompilerGenerated]
 	public bool get_WasShareSeen() { }
@@ -148,6 +161,9 @@ public class SweepstakesStatusResponse : EndpointResponseBase, IEndpointResponse
 
 	[CompilerGenerated]
 	public void set_UnlockedTaskIndex(int value) { }
+
+	[CompilerGenerated]
+	public void set_UnlockIntervalIndex(Nullable<Int32> value) { }
 
 	[CompilerGenerated]
 	public void set_WasShareSeen(bool value) { }

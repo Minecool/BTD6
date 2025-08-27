@@ -37,12 +37,12 @@ public class File
 		[CompilerGenerated]
 		 get { } //Length: 17
 		[CompilerGenerated]
-		 set { } //Length: 14
+		 set { } //Length: 165
 	}
 
 	public bool IsLocalFile
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public int SaveCount

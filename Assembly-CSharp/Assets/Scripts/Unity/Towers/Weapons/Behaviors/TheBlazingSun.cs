@@ -22,7 +22,7 @@ public class TheBlazingSun : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 599
+		 get { } //Length: 534
 	}
 
 	public TheBlazingSun() { }

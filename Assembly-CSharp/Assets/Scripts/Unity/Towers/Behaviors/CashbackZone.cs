@@ -11,10 +11,12 @@ public class CashbackZone : TowerBehaviorBuff
 	public string expGroupName; //Field offset: 0xE8
 	public int maxStacks; //Field offset: 0xF0
 	public string expMaxStacks; //Field offset: 0xF8
+	public string baseIds; //Field offset: 0x100
+	public string expBaseIds; //Field offset: 0x108
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 211
+		 get { } //Length: 234
 	}
 
 	public CashbackZone() { }

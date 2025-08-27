@@ -12,7 +12,7 @@ public sealed class SqlChars : INullable, IXmlSerializable, ISerializable
 
 	public Char[] Buffer
 	{
-		 get { } //Length: 368
+		 get { } //Length: 366
 	}
 
 	public override bool IsNull
@@ -32,7 +32,7 @@ public sealed class SqlChars : INullable, IXmlSerializable, ISerializable
 
 	public Char[] Value
 	{
-		 get { } //Length: 562
+		 get { } //Length: 547
 	}
 
 	public SqlChars() { }

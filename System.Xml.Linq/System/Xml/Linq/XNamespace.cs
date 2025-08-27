@@ -17,7 +17,7 @@ public sealed class XNamespace
 
 	public static XNamespace None
 	{
-		 get { } //Length: 91
+		 get { } //Length: 79
 	}
 
 	public static XNamespace Xml

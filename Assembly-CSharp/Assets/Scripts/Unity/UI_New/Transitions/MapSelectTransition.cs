@@ -389,7 +389,7 @@ public class MapSelectTransition : MonoBehaviour
 
 	private int DifficultyCount
 	{
-		private get { } //Length: 149
+		private get { } //Length: 125
 	}
 
 	public MapButton[] MapButtons

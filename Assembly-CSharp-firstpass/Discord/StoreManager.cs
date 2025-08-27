@@ -324,7 +324,7 @@ public class StoreManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 292
+		private get { } //Length: 280
 	}
 
 	internal StoreManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

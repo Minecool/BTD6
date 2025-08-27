@@ -10,7 +10,7 @@ public class OrderedDictionary : IDictionary, ICollection, IEnumerable, ISeriali
 
 		public override object Current
 		{
-			 get { } //Length: 523
+			 get { } //Length: 533
 		}
 
 		public override DictionaryEntry Entry
@@ -25,7 +25,7 @@ public class OrderedDictionary : IDictionary, ICollection, IEnumerable, ISeriali
 
 		public override object Value
 		{
-			 get { } //Length: 132
+			 get { } //Length: 141
 		}
 
 		internal OrderedDictionaryEnumerator(ArrayList array, int objectReturnType) { }

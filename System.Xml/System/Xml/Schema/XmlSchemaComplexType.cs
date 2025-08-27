@@ -35,8 +35,8 @@ public class XmlSchemaComplexType : XmlSchemaType
 		internal get { } //Length: 107
 	}
 
-	[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
 	[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+	[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
 	public XmlSchemaObjectCollection Attributes
 	{
 		 get { } //Length: 111
@@ -68,8 +68,8 @@ public class XmlSchemaComplexType : XmlSchemaType
 		 get { } //Length: 7
 	}
 
-	[XmlElement("complexContent", typeof(XmlSchemaComplexContent))]
 	[XmlElement("simpleContent", typeof(XmlSchemaSimpleContent))]
+	[XmlElement("complexContent", typeof(XmlSchemaComplexContent))]
 	public XmlSchemaContentModel ContentModel
 	{
 		 get { } //Length: 8
@@ -115,10 +115,10 @@ public class XmlSchemaComplexType : XmlSchemaType
 		internal get { } //Length: 111
 	}
 
-	[XmlElement("choice", typeof(XmlSchemaChoice))]
 	[XmlElement("all", typeof(XmlSchemaAll))]
 	[XmlElement("group", typeof(XmlSchemaGroupRef))]
 	[XmlElement("sequence", typeof(XmlSchemaSequence))]
+	[XmlElement("choice", typeof(XmlSchemaChoice))]
 	public XmlSchemaParticle Particle
 	{
 		 get { } //Length: 8

@@ -31,7 +31,7 @@ internal class DictionaryWrapper : IDictionary<TKey, TValue>, ICollection<KeyVal
 
 		public override object Current
 		{
-			 get { } //Length: 888
+			 get { } //Length: 879
 		}
 
 		public override DictionaryEntry Entry
@@ -48,7 +48,7 @@ internal class DictionaryWrapper : IDictionary<TKey, TValue>, ICollection<KeyVal
 		public override object Value
 		{
 			[NullableContext(2)]
-			 get { } //Length: 118
+			 get { } //Length: 127
 		}
 
 		public DictionaryEnumerator`2(IEnumerator<KeyValuePair`2<TEnumeratorKey, TEnumeratorValue>> e) { }
@@ -79,7 +79,7 @@ internal class DictionaryWrapper : IDictionary<TKey, TValue>, ICollection<KeyVal
 
 	public override int Count
 	{
-		 get { } //Length: 237
+		 get { } //Length: 228
 	}
 
 	internal IDictionary<TKey, TValue> GenericDictionary
@@ -89,23 +89,23 @@ internal class DictionaryWrapper : IDictionary<TKey, TValue>, ICollection<KeyVal
 
 	public override bool IsReadOnly
 	{
-		 get { } //Length: 224
+		 get { } //Length: 196
 	}
 
 	public override TValue Item
 	{
-		 get { } //Length: 681
-		 set { } //Length: 714
+		 get { } //Length: 621
+		 set { } //Length: 636
 	}
 
 	public override ICollection<TKey> Keys
 	{
-		 get { } //Length: 353
+		 get { } //Length: 325
 	}
 
 	private override bool System.Collections.ICollection.IsSynchronized
 	{
-		private get { } //Length: 78
+		private get { } //Length: 76
 	}
 
 	private override object System.Collections.ICollection.SyncRoot
@@ -116,28 +116,28 @@ internal class DictionaryWrapper : IDictionary<TKey, TValue>, ICollection<KeyVal
 	[Nullable(2)]
 	private override object System.Collections.IDictionary.Item
 	{
-		private get { } //Length: 580
-		private set { } //Length: 575
+		private get { } //Length: 504
+		private set { } //Length: 507
 	}
 
 	private override ICollection System.Collections.IDictionary.Keys
 	{
-		private get { } //Length: 261
+		private get { } //Length: 241
 	}
 
 	private override ICollection System.Collections.IDictionary.Values
 	{
-		private get { } //Length: 267
+		private get { } //Length: 244
 	}
 
 	public override object UnderlyingDictionary
 	{
-		 get { } //Length: 66
+		 get { } //Length: 40
 	}
 
 	public override ICollection<TValue> Values
 	{
-		 get { } //Length: 365
+		 get { } //Length: 334
 	}
 
 	public override void Add(TKey key, TValue value) { }

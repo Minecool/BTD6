@@ -1,6 +1,6 @@
 namespace Facepunch.Steamworks;
 
-public class Lobby
+public class Lobby : IDisposable
 {
 	internal class LobbyData
 	{
@@ -46,6 +46,8 @@ public class Lobby
 	public Action<UInt64> OnLobbyJoinRequested; //Field offset: 0x70
 
 	private static Lobby() { }
+
+	public override void Dispose() { }
 
 }
 

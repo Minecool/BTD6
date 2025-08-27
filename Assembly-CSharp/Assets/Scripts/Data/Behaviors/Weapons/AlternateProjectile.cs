@@ -10,7 +10,7 @@ public class AlternateProjectile : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 289
+		 get { } //Length: 288
 	}
 
 	public AlternateProjectile() { }

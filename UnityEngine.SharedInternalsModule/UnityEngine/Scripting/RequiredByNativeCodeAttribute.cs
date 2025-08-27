@@ -36,6 +36,8 @@ internal class RequiredByNativeCodeAttribute : Attribute
 
 	public RequiredByNativeCodeAttribute(string name) { }
 
+	public RequiredByNativeCodeAttribute(bool optional) { }
+
 	[CompilerGenerated]
 	public void set_GenerateProxy(bool value) { }
 

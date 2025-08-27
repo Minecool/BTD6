@@ -38,7 +38,6 @@ public class List : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList
 
 	}
 
-	private const int DefaultCapacity = 4; //Field offset: 0x0
 	private static readonly T[] s_emptyArray; //Field offset: 0x0
 	private T[] _items; //Field offset: 0x0
 	private int _size; //Field offset: 0x0
@@ -48,7 +47,7 @@ public class List : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList
 	public int Capacity
 	{
 		 get { } //Length: 26
-		 set { } //Length: 277
+		 set { } //Length: 272
 	}
 
 	public override int Count
@@ -90,7 +89,7 @@ public class List : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList
 	private override object System.Collections.IList.Item
 	{
 		private get { } //Length: 118
-		private set { } //Length: 301
+		private set { } //Length: 293
 	}
 
 	private static List`1() { }

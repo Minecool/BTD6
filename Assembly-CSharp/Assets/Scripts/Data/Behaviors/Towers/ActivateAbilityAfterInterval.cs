@@ -8,7 +8,7 @@ public class ActivateAbilityAfterInterval : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 297
+		 get { } //Length: 294
 	}
 
 	public ActivateAbilityAfterInterval() { }

@@ -7,12 +7,12 @@ public struct EnableDeviceCommand : IInputDeviceCommandInfo
 
 	public static FourCC Type
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public static EnableDeviceCommand Create() { }

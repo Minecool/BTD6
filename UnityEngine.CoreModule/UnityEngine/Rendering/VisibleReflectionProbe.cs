@@ -50,7 +50,7 @@ public struct VisibleReflectionProbe : IEquatable<VisibleReflectionProbe>
 
 	public Texture texture
 	{
-		 get { } //Length: 151
+		 get { } //Length: 155
 	}
 
 	public override bool Equals(VisibleReflectionProbe other) { }

@@ -28,7 +28,7 @@ public class RSAManaged : RSA
 
 	public virtual int KeySize
 	{
-		 get { } //Length: 165
+		 get { } //Length: 175
 	}
 
 	public bool PublicOnly

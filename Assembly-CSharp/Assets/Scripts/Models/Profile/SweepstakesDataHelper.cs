@@ -9,8 +9,6 @@ public class SweepstakesDataHelper
 
 	public bool AdvanceToNextTask(int unlockedTaskIndex = 0) { }
 
-	public bool CheckPendingTickets(SweepstakesStatusResponse sweepstakesStatus) { }
-
 	public SweepstakesStatsForTask GetStatsForActiveTask() { }
 
 	public ValueTuple<Boolean, SweepstakesEvent, SweepstakesEventSettings> GetSweepstakesEventAndSettings() { }
@@ -18,6 +16,8 @@ public class SweepstakesDataHelper
 	public int GetTaskIndexForCurrentEvent() { }
 
 	public int GetTaskIndexForEvent(string eventId) { }
+
+	public static bool HasTicketsPendingClaim(SweepstakesEvent sweepstakesEvent, SweepstakesStatusResponse sweepstakesStatus, SweepstakesStats stats) { }
 
 	public bool IsCurrentTaskExpired(bool canUnlockNextDay = false) { }
 

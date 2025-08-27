@@ -11,7 +11,7 @@ public class RangeSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 282
+		 get { } //Length: 316
 	}
 
 	public RangeSupport() { }

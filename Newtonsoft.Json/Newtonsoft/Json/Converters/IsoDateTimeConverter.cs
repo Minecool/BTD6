@@ -21,9 +21,9 @@ public class IsoDateTimeConverter : DateTimeConverterBase
 	public string DateTimeFormat
 	{
 		[NullableContext(2)]
-		 get { } //Length: 69
+		 get { } //Length: 27
 		[NullableContext(2)]
-		 set { } //Length: 60
+		 set { } //Length: 59
 	}
 
 	public DateTimeStyles DateTimeStyles

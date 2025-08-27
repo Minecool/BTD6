@@ -11,37 +11,37 @@ public sealed class X509StoreManager
 
 	public static X509Stores CurrentUser
 	{
-		 get { } //Length: 384
+		 get { } //Length: 382
 	}
 
 	internal static string CurrentUserPath
 	{
-		internal get { } //Length: 244
+		internal get { } //Length: 242
 	}
 
 	public static X509Stores LocalMachine
 	{
-		 get { } //Length: 393
+		 get { } //Length: 391
 	}
 
 	internal static string LocalMachinePath
 	{
-		internal get { } //Length: 249
+		internal get { } //Length: 247
 	}
 
 	internal static string NewCurrentUserPath
 	{
-		internal get { } //Length: 249
+		internal get { } //Length: 247
 	}
 
 	internal static string NewLocalMachinePath
 	{
-		internal get { } //Length: 249
+		internal get { } //Length: 247
 	}
 
 	public static X509CertificateCollection TrustedRootCertificates
 	{
-		 get { } //Length: 951
+		 get { } //Length: 1290
 	}
 
 	public static X509Stores get_CurrentUser() { }

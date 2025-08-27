@@ -61,7 +61,7 @@ public class GyrfalconPatternModel : TargetSupplierModel
 
 	public AddBehaviorToBloonMutator mutator
 	{
-		 get { } //Length: 253
+		 get { } //Length: 257
 	}
 
 	public GyrfalconPatternModel(string name, float maxSpeed, float rotationSpeed, int beginMovementAnimationState, int hoverAnimationState, float snapDistance, float cooldown, DamageModel initialDamageModel, DamageModel grapplingDamageModel, ProjectileModel grabProjectileModel, float grappleDamageRate, PrefabReference selectPointDisplay, PrefabReference selectPointDisplayInvalid, int leadPiercePenalty, int ceramicPiercePenalty, int moabPiercePenalty, int bfbPiercePenalty, int zomgPiercePenalty, int ddtPiercePenalty, bool continuePickingUpBloons, float moabSpeedScale, bool enableAdjacentHover, bool keepPickingUpBloons, int snatchHoverAnimationState, int snatchFlyingAnimationState, int handlerSendAnimationState, int handlerHoverAnimationState, float bloonTargetSpeedMultiplier, DamageModifierForTagModel initialDamageMoabModifierModel, DamageModifierForTagModel grapplingDamageMoabModifierModel, DamageModifierForTagModel regrowDamageModifierModel, float idleMinTime, float idleMaxTime, float initialYOffset, float keepPickingBloonsRange, EffectModel noGrabEffectModel, float grabRadius, int grabAmount, float extraGrabAmount = 0) { }

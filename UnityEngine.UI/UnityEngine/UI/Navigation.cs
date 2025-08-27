@@ -34,7 +34,7 @@ public struct Navigation : IEquatable<Navigation>
 	public Mode mode
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public Selectable selectOnDown
@@ -57,7 +57,7 @@ public struct Navigation : IEquatable<Navigation>
 
 	public Selectable selectOnUp
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 		 set { } //Length: 5
 	}
 

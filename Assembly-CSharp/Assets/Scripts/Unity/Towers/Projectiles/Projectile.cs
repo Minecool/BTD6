@@ -47,7 +47,7 @@ public class Projectile : CascadingItemProxy
 
 	public ProjectileModel Def
 	{
-		 get { } //Length: 1687
+		 get { } //Length: 1672
 	}
 
 	public virtual Model Model

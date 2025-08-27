@@ -6,36 +6,49 @@ public class UpgradeScreen : GameMenu
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<Model, Boolean> <>9__85_0; //Field offset: 0x8
+		public static Func<Model, Boolean> <>9__87_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <PopulatePath>b__85_0(Model x) { }
+		internal bool <PopulatePath>b__87_0(Model x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass74_0
+	private sealed class <>c__DisplayClass76_0
 	{
 		public UpgradeScreen <>4__this; //Field offset: 0x10
 		public StoreItem storeItem; //Field offset: 0x18
 
-		public <>c__DisplayClass74_0() { }
+		public <>c__DisplayClass76_0() { }
 
 		internal void <SetIapButtons>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass92_0
+	private sealed class <>c__DisplayClass94_0
 	{
 		public TowerModel tower; //Field offset: 0x10
 
-		public <>c__DisplayClass92_0() { }
+		public <>c__DisplayClass94_0() { }
 
 		internal bool <IsTowerInvalid>b__0(TowerData x) { }
+
+	}
+
+	internal sealed class OnUpgradePurchased : MulticastDelegate
+	{
+
+		public OnUpgradePurchased(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(UpgradeModel upgradeModel, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(IAsyncResult result) { }
+
+		public override void Invoke(UpgradeModel upgradeModel) { }
 
 	}
 
@@ -100,6 +113,7 @@ public class UpgradeScreen : GameMenu
 	private TowerSet towerSet; //Field offset: 0x218
 	private string currTowerId; //Field offset: 0x220
 	private bool gamepadInfoMode; //Field offset: 0x228
+	private TowerModel towerModel; //Field offset: 0x230
 
 	private QuestTrackerManager QuestTrackerManager
 	{
@@ -109,10 +123,10 @@ public class UpgradeScreen : GameMenu
 	public UpgradeScreen() { }
 
 	[CompilerGenerated]
-	private GameObject <Open>b__62_0() { }
+	private GameObject <Open>b__64_0() { }
 
 	[CompilerGenerated]
-	private void <Open>b__62_1() { }
+	private void <Open>b__64_1() { }
 
 	public void AcquireUpgrade(BaseEventData eventData) { }
 

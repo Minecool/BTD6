@@ -15,7 +15,7 @@ public class AirUnit : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 539
+		 get { } //Length: 524
 	}
 
 	public AirUnit() { }

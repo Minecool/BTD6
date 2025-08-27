@@ -18,7 +18,7 @@ public sealed class PointerMoveEvent : PointerEventBase<PointerMoveEvent>
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <isHandledByDraggable>k__BackingField; //Field offset: 0x110
+	private bool <isHandledByDraggable>k__BackingField; //Field offset: 0x100
 
 	internal bool isHandledByDraggable
 	{
@@ -28,6 +28,16 @@ public sealed class PointerMoveEvent : PointerEventBase<PointerMoveEvent>
 		internal set { } //Length: 7
 	}
 
+	internal bool isPointerDown
+	{
+		internal get { } //Length: 92
+	}
+
+	internal bool isPointerUp
+	{
+		internal get { } //Length: 93
+	}
+
 	private static PointerMoveEvent() { }
 
 	public PointerMoveEvent() { }
@@ -35,11 +45,17 @@ public sealed class PointerMoveEvent : PointerEventBase<PointerMoveEvent>
 	[CompilerGenerated]
 	internal bool get_isHandledByDraggable() { }
 
+	internal bool get_isPointerDown() { }
+
+	internal bool get_isPointerUp() { }
+
 	protected virtual void Init() { }
 
 	private void LocalInit() { }
 
 	protected private virtual void PostDispatch(IPanel panel) { }
+
+	protected private virtual void PreDispatch(IPanel panel) { }
 
 	[CompilerGenerated]
 	internal void set_isHandledByDraggable(bool value) { }

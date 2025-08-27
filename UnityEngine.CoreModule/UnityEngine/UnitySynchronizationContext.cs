@@ -19,6 +19,11 @@ internal sealed class UnitySynchronizationContext : SynchronizationContext
 	private readonly int m_MainThreadID; //Field offset: 0x28
 	private int m_TrackedCount; //Field offset: 0x2C
 
+	internal int MainThreadId
+	{
+		internal get { } //Length: 4
+	}
+
 	private UnitySynchronizationContext(int mainThreadID) { }
 
 	private UnitySynchronizationContext(List<WorkRequest> queue, int mainThreadID) { }
@@ -32,6 +37,8 @@ internal sealed class UnitySynchronizationContext : SynchronizationContext
 
 	[RequiredByNativeCode]
 	private static void ExecuteTasks() { }
+
+	internal int get_MainThreadId() { }
 
 	private bool HasPendingTasks() { }
 

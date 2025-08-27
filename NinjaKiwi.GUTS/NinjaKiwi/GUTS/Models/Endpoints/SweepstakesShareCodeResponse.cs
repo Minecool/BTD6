@@ -3,7 +3,7 @@ namespace NinjaKiwi.GUTS.Models.Endpoints;
 public class SweepstakesShareCodeResponse : SweepstakesStatusResponse
 {
 	[CompilerGenerated]
-	private int <EarnedTickets>k__BackingField; //Field offset: 0x58
+	private int <EarnedTickets>k__BackingField; //Field offset: 0x60
 
 	public int EarnedTickets
 	{

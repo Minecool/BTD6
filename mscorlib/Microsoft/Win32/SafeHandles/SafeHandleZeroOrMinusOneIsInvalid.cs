@@ -5,7 +5,7 @@ public abstract class SafeHandleZeroOrMinusOneIsInvalid : SafeHandle
 
 	public virtual bool IsInvalid
 	{
-		 get { } //Length: 85
+		 get { } //Length: 75
 	}
 
 	[ReliabilityContract(Consistency::WillNotCorruptState (3), Cer::MayFail (1))]

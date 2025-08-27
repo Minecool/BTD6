@@ -16,7 +16,7 @@ public abstract class Mutable : RootBehavior
 
 	protected Mutable() { }
 
-	public override void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false) { }
+	public override void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false, bool cantBeAbsorbed = false) { }
 
 	private void ApplyMutation() { }
 
@@ -41,6 +41,8 @@ public abstract class Mutable : RootBehavior
 	public override void GetMutatorsByKey(string key, List<BehaviorMutator> mutatorsToGet) { }
 
 	public override TimedMutator GetTimedMutator(string id) { }
+
+	public TimedMutator GetTimedMutatorByKey(string key) { }
 
 	public override bool HasMutator(BehaviorMutator mutator) { }
 

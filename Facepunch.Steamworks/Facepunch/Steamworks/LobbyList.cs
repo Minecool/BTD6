@@ -19,6 +19,8 @@ public class LobbyList : IDisposable
 		[CompilerGenerated]
 		private string <LobbyType>k__BackingField; //Field offset: 0x40
 
+		public Lobby() { }
+
 	}
 
 	internal Client client; //Field offset: 0x10

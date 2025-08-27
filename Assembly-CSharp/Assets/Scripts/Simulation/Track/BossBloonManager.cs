@@ -32,7 +32,7 @@ public class BossBloonManager
 
 	private float SpawnDistance
 	{
-		private get { } //Length: 71
+		private get { } //Length: 63
 	}
 
 	public BossBloonManager() { }

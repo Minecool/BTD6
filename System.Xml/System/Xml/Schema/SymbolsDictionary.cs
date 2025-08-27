@@ -23,7 +23,7 @@ internal class SymbolsDictionary
 
 	public int Item
 	{
-		 get { } //Length: 230
+		 get { } //Length: 198
 	}
 
 	public SymbolsDictionary() { }

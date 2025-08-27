@@ -3,12 +3,12 @@ namespace UnityEngine.UIElements.Internal;
 internal class MultiColumnCollectionHeader : VisualElement, IDisposable
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass65_0
+	private sealed class <>c__DisplayClass67_0
 	{
 		public Column column; //Field offset: 0x10
 		public MultiColumnCollectionHeader <>4__this; //Field offset: 0x18
 
-		public <>c__DisplayClass65_0() { }
+		public <>c__DisplayClass67_0() { }
 
 		internal void <OnContextualMenuManipulator>b__1(DropdownMenuAction a) { }
 
@@ -17,11 +17,11 @@ internal class MultiColumnCollectionHeader : VisualElement, IDisposable
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass71_0
+	private sealed class <>c__DisplayClass73_0
 	{
 		public Column column; //Field offset: 0x10
 
-		public <>c__DisplayClass71_0() { }
+		public <>c__DisplayClass73_0() { }
 
 		internal bool <UpdateSortColumnDescriptionsOnClick>b__0(SortColumnDescription d) { }
 
@@ -108,72 +108,72 @@ internal class MultiColumnCollectionHeader : VisualElement, IDisposable
 	public static readonly string columnContainerUssClassName; //Field offset: 0x8
 	public static readonly string handleContainerUssClassName; //Field offset: 0x10
 	public static readonly string reorderableUssClassName; //Field offset: 0x18
-	private bool m_SortingEnabled; //Field offset: 0x3C8
-	private List<SortColumnDescription> m_SortedColumns; //Field offset: 0x3D0
-	private SortColumnDescriptions m_SortDescriptions; //Field offset: 0x3D8
-	private List<SortedColumnState> m_OldSortedColumnStates; //Field offset: 0x3E0
-	private bool m_SortingUpdatesTemporarilyDisabled; //Field offset: 0x3E8
-	private ViewState m_ViewState; //Field offset: 0x3F0
-	private bool m_ApplyingViewState; //Field offset: 0x3F8
-	private bool m_DoLayoutScheduled; //Field offset: 0x3F9
+	private bool m_SortingEnabled; //Field offset: 0x4A8
+	private List<SortColumnDescription> m_SortedColumns; //Field offset: 0x4B0
+	private SortColumnDescriptions m_SortDescriptions; //Field offset: 0x4B8
+	private List<SortedColumnState> m_OldSortedColumnStates; //Field offset: 0x4C0
+	private bool m_SortingUpdatesTemporarilyDisabled; //Field offset: 0x4C8
+	private ViewState m_ViewState; //Field offset: 0x4D0
+	private bool m_ApplyingViewState; //Field offset: 0x4D8
+	private bool m_DoLayoutScheduled; //Field offset: 0x4D9
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly Dictionary<Column, ColumnData> <columnDataMap>k__BackingField; //Field offset: 0x400
+	private readonly Dictionary<Column, ColumnData> <columnDataMap>k__BackingField; //Field offset: 0x4E0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly ColumnLayout <columnLayout>k__BackingField; //Field offset: 0x408
+	private readonly ColumnLayout <columnLayout>k__BackingField; //Field offset: 0x4E8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly VisualElement <columnContainer>k__BackingField; //Field offset: 0x410
+	private readonly VisualElement <columnContainer>k__BackingField; //Field offset: 0x4F0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly VisualElement <resizeHandleContainer>k__BackingField; //Field offset: 0x418
+	private readonly VisualElement <resizeHandleContainer>k__BackingField; //Field offset: 0x4F8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly Columns <columns>k__BackingField; //Field offset: 0x420
+	private readonly Columns <columns>k__BackingField; //Field offset: 0x500
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Int32, Single> columnResized; //Field offset: 0x428
+	private Action<Int32, Single> columnResized; //Field offset: 0x508
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action columnSortingChanged; //Field offset: 0x430
+	private Action columnSortingChanged; //Field offset: 0x510
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<ContextualMenuPopulateEvent, Column> contextMenuPopulateEvent; //Field offset: 0x438
+	private Action<ContextualMenuPopulateEvent, Column> contextMenuPopulateEvent; //Field offset: 0x518
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action viewDataRestored; //Field offset: 0x440
+	private Action viewDataRestored; //Field offset: 0x520
 
 	public event Action<Int32, Single> columnResized
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action columnSortingChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action<ContextualMenuPopulateEvent, Column> contextMenuPopulateEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	internal event Action viewDataRestored
 	{
 		[CompilerGenerated]
-		internal add { } //Length: 162
+		internal add { } //Length: 158
 		[CompilerGenerated]
-		internal remove { } //Length: 162
+		internal remove { } //Length: 158
 	}
 
 	public VisualElement columnContainer
@@ -217,6 +217,11 @@ internal class MultiColumnCollectionHeader : VisualElement, IDisposable
 		private set { } //Length: 153
 	}
 
+	internal IReadOnlyList<SortColumnDescription> sortedColumnReadonly
+	{
+		internal get { } //Length: 8
+	}
+
 	public IEnumerable<SortColumnDescription> sortedColumns
 	{
 		 get { } //Length: 8
@@ -233,7 +238,7 @@ internal class MultiColumnCollectionHeader : VisualElement, IDisposable
 	public MultiColumnCollectionHeader(Columns columns, SortColumnDescriptions sortDescriptions, List<SortColumnDescription> sortedColumns) { }
 
 	[CompilerGenerated]
-	private void <OnContextualMenuManipulator>b__65_0(DropdownMenuAction a) { }
+	private void <OnContextualMenuManipulator>b__67_0(DropdownMenuAction a) { }
 
 	[CompilerGenerated]
 	public void add_columnResized(Action<Int32, Single> value) { }
@@ -273,6 +278,8 @@ internal class MultiColumnCollectionHeader : VisualElement, IDisposable
 	public VisualElement get_resizeHandleContainer() { }
 
 	public SortColumnDescriptions get_sortDescriptions() { }
+
+	internal IReadOnlyList<SortColumnDescription> get_sortedColumnReadonly() { }
 
 	public IEnumerable<SortColumnDescription> get_sortedColumns() { }
 

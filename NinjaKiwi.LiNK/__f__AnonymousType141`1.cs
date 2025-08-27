@@ -4,20 +4,20 @@
 internal sealed class <>f__AnonymousType141
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <accessToken>j__TPar <accessToken>i__Field; //Field offset: 0x0
+	private readonly <displayName>j__TPar <displayName>i__Field; //Field offset: 0x0
 
-	public <accessToken>j__TPar accessToken
+	public <displayName>j__TPar displayName
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType141`1(<accessToken>j__TPar accessToken) { }
+	public <>f__AnonymousType141`1(<displayName>j__TPar displayName) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <accessToken>j__TPar get_accessToken() { }
+	public <displayName>j__TPar get_displayName() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

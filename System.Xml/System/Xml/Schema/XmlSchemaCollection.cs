@@ -26,7 +26,7 @@ public sealed class XmlSchemaCollection : ICollection, IEnumerable
 
 	public XmlSchema Item
 	{
-		 get { } //Length: 175
+		 get { } //Length: 163
 	}
 
 	public XmlNameTable NameTable

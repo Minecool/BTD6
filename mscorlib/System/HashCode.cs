@@ -18,9 +18,13 @@ public struct HashCode
 
 	public void Add(T value) { }
 
+	public static int Combine(T1 value1, T2 value2) { }
+
 	public static int Combine(T1 value1, T2 value2, T3 value3, T4 value4) { }
 
 	public static int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5) { }
+
+	public static int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6) { }
 
 	public static int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6, T7 value7, T8 value8) { }
 

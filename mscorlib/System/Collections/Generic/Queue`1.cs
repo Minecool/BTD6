@@ -38,8 +38,6 @@ public class Queue : IEnumerable<T>, IEnumerable, ICollection, IReadOnlyCollecti
 
 	}
 
-	private const int MinimumGrow = 4; //Field offset: 0x0
-	private const int GrowFactor = 200; //Field offset: 0x0
 	private T[] _array; //Field offset: 0x0
 	private int _head; //Field offset: 0x0
 	private int _tail; //Field offset: 0x0
@@ -101,6 +99,8 @@ public class Queue : IEnumerable<T>, IEnumerable, ICollection, IReadOnlyCollecti
 	public T[] ToArray() { }
 
 	public bool TryDequeue(out T result) { }
+
+	public bool TryPeek(out T result) { }
 
 }
 

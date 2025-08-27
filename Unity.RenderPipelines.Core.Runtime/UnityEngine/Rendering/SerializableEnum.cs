@@ -9,7 +9,7 @@ public class SerializableEnum
 
 	public Enum value
 	{
-		 get { } //Length: 305
+		 get { } //Length: 277
 		 set { } //Length: 54
 	}
 

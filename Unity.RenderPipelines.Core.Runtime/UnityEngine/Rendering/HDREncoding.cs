@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering;
 
-[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.11\\Runtime\\PostProcessing\\HDROutputDefines.cs")]
+[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@da6c8615357e\\Runtime\\PostProcessing\\HDROutputDefines.cs")]
 public enum HDREncoding
 {
 	Linear = 3,

@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[EventCategory(EventCategory::PointerDown (3))]
 public class MouseDownEvent : MouseEventBase<MouseDownEvent>
 {
 	[CompilerGenerated]

@@ -4,5 +4,7 @@ namespace Unity.Properties;
 public class DontCreatePropertyAttribute : Attribute
 {
 
+	public DontCreatePropertyAttribute() { }
+
 }
 

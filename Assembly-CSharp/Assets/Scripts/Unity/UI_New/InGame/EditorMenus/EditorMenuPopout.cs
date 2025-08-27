@@ -1201,7 +1201,7 @@ public class EditorMenuPopout : MonoBehaviour
 
 	public bool IsInPropMode
 	{
-		 get { } //Length: 158
+		 get { } //Length: 150
 	}
 
 	public bool IsPanelExtended

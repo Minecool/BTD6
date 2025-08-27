@@ -9,9 +9,9 @@ public class JoinSessionMessage : Message
 
 	public JoinSessionMessage(Byte[] data) { }
 
-	public JoinSessionMessage(string matchID, int peerID, string globalID) { }
+	public JoinSessionMessage(int peerID, string matchID, string globalID) { }
 
-	protected virtual Byte[] CreateBytes() { }
+	private static Byte[] CreateBytes(int peerID, string matchID, string globalID) { }
 
 }
 

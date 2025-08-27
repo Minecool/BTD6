@@ -5,7 +5,7 @@ internal class MultiColumnHeaderColumnSortIndicator : VisualElement
 	public static readonly string ussClassName; //Field offset: 0x0
 	public static readonly string arrowUssClassName; //Field offset: 0x8
 	public static readonly string indexLabelUssClassName; //Field offset: 0x10
-	private Label m_IndexLabel; //Field offset: 0x3C8
+	private Label m_IndexLabel; //Field offset: 0x4A8
 
 	public string sortOrderLabel
 	{

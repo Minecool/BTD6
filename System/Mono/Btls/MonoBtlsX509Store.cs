@@ -15,7 +15,7 @@ internal class MonoBtlsX509Store : MonoBtlsObject
 
 	internal BoringX509StoreHandle Handle
 	{
-		internal get { } //Length: 113
+		internal get { } //Length: 117
 	}
 
 	internal MonoBtlsX509Store() { }

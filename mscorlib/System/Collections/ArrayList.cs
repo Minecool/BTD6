@@ -235,7 +235,7 @@ public class ArrayList : IList, ICollection, IEnumerable, ICloneable
 
 	public override int Capacity
 	{
-		 set { } //Length: 262
+		 set { } //Length: 260
 	}
 
 	public override int Count

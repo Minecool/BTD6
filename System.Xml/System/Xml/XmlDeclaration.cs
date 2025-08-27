@@ -9,13 +9,13 @@ public class XmlDeclaration : XmlLinkedNode
 	public string Encoding
 	{
 		 get { } //Length: 5
-		 set { } //Length: 91
+		 set { } //Length: 45
 	}
 
 	public virtual string InnerText
 	{
 		 get { } //Length: 345
-		 set { } //Length: 684
+		 set { } //Length: 642
 	}
 
 	public virtual string LocalName
@@ -36,7 +36,7 @@ public class XmlDeclaration : XmlLinkedNode
 	public string Standalone
 	{
 		 get { } //Length: 5
-		 set { } //Length: 319
+		 set { } //Length: 307
 	}
 
 	public virtual string Value

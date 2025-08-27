@@ -34,12 +34,12 @@ public sealed class AssemblyName : ICloneable, ISerializable, IDeserializationCa
 
 	public string FullName
 	{
-		 get { } //Length: 1030
+		 get { } //Length: 991
 	}
 
 	private bool IsPublicKeyValid
 	{
-		private get { } //Length: 160
+		private get { } //Length: 127
 	}
 
 	public string Name

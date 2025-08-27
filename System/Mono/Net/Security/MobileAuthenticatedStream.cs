@@ -149,12 +149,12 @@ internal abstract class MobileAuthenticatedStream : AuthenticatedStream, IDispos
 
 	public override X509Certificate InternalLocalCertificate
 	{
-		 get { } //Length: 250
+		 get { } //Length: 234
 	}
 
 	public virtual bool IsAuthenticated
 	{
-		 get { } //Length: 202
+		 get { } //Length: 191
 	}
 
 	public virtual long Length
@@ -164,7 +164,7 @@ internal abstract class MobileAuthenticatedStream : AuthenticatedStream, IDispos
 
 	public override X509Certificate LocalCertificate
 	{
-		 get { } //Length: 280
+		 get { } //Length: 268
 	}
 
 	public virtual long Position

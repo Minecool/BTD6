@@ -4,6 +4,13 @@ namespace UnityEngine;
 [RequiredByNativeCode]
 public sealed class Coroutine : YieldInstruction
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(Coroutine coroutine) { }
+
+	}
+
 	internal IntPtr m_Ptr; //Field offset: 0x10
 
 	private Coroutine() { }

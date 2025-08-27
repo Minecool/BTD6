@@ -34,12 +34,17 @@ public class AbilityToSimulation
 
 	public bool IsDestroyed
 	{
-		 get { } //Length: 19
+		 get { } //Length: 17
 	}
 
 	public bool IsEnabled
 	{
 		 get { } //Length: 29
+	}
+
+	public bool IsPassive
+	{
+		 get { } //Length: 38
 	}
 
 	public bool IsReady
@@ -83,6 +88,8 @@ public class AbilityToSimulation
 	public bool get_IsDestroyed() { }
 
 	public bool get_IsEnabled() { }
+
+	public bool get_IsPassive() { }
 
 	public bool get_IsReady() { }
 

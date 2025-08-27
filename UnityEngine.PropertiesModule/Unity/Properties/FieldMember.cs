@@ -16,7 +16,7 @@ internal struct FieldMember : IMemberInfo
 	public override string Name
 	{
 		[CompilerGenerated]
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public override Type ValueType
@@ -34,6 +34,10 @@ internal struct FieldMember : IMemberInfo
 	public override Type get_ValueType() { }
 
 	public override IEnumerable<Attribute> GetCustomAttributes() { }
+
+	public override object GetValue(object obj) { }
+
+	public override void SetValue(object obj, object value) { }
 
 }
 

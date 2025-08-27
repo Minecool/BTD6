@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class DropdownField : PopupField<String>
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<DropdownField, UxmlTraits>
 	{
 
@@ -9,10 +10,11 @@ public class DropdownField : PopupField<String>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits<String>
 	{
-		private UxmlIntAttributeDescription m_Index; //Field offset: 0x80
-		private UxmlStringAttributeDescription m_Choices; //Field offset: 0x88
+		private UxmlIntAttributeDescription m_Index; //Field offset: 0x98
+		private UxmlStringAttributeDescription m_Choices; //Field offset: 0xA0
 
 		public UxmlTraits() { }
 

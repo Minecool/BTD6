@@ -46,7 +46,7 @@ internal class XmlWellFormedWriter : XmlWriter
 
 		internal string StringValue
 		{
-			internal get { } //Length: 58
+			internal get { } //Length: 56
 		}
 
 		public AttributeValueCache() { }
@@ -246,7 +246,7 @@ internal class XmlWellFormedWriter : XmlWriter
 
 	private bool InBase64
 	{
-		private get { } //Length: 32
+		private get { } //Length: 24
 	}
 
 	private bool IsClosedOrErrorState

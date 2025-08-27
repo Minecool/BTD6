@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public abstract class BaseField : BindableElement, INotifyValueChanged<TValueType>, IEditableElement
 {
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
 		private UxmlStringAttributeDescription m_Label; //Field offset: 0x0
@@ -10,37 +11,44 @@ public abstract class BaseField : BindableElement, INotifyValueChanged<TValueTyp
 
 		public virtual void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) { }
 
-		internal static List<String> ParseChoiceList(string choicesFromBag) { }
-
 	}
 
-	public static readonly string ussClassName; //Field offset: 0x0
-	private static CustomStyleProperty<Single> s_LabelExtraContextWidthProperty; //Field offset: 0x0
+	internal static readonly BindingId valueProperty; //Field offset: 0x0
 	private static CustomStyleProperty<Single> s_LabelBaseMinWidthProperty; //Field offset: 0x0
 	private static CustomStyleProperty<Single> s_LabelExtraPaddingProperty; //Field offset: 0x0
 	private static CustomStyleProperty<Single> s_LabelWidthRatioProperty; //Field offset: 0x0
-	protected private static readonly string mixedValueString; //Field offset: 0x0
-	private static readonly string inspectorFieldUssClassName; //Field offset: 0x0
 	protected private static readonly PropertyName serializedPropertyCopyName; //Field offset: 0x0
+	private static readonly string inspectorFieldUssClassName; //Field offset: 0x0
+	public static readonly string alignedFieldUssClassName; //Field offset: 0x0
 	public static readonly string mixedValueLabelUssClassName; //Field offset: 0x0
-	public static readonly string labelDraggerVariantUssClassName; //Field offset: 0x0
+	protected private static readonly string mixedValueString; //Field offset: 0x0
 	public static readonly string noLabelVariantUssClassName; //Field offset: 0x0
 	public static readonly string inputUssClassName; //Field offset: 0x0
 	public static readonly string labelUssClassName; //Field offset: 0x0
-	public static readonly string alignedFieldUssClassName; //Field offset: 0x0
-	private bool m_ShowMixedValue; //Field offset: 0x0
+	public static readonly string ussClassName; //Field offset: 0x0
+	internal static readonly BindingId showMixedValueProperty; //Field offset: 0x0
+	internal static readonly BindingId labelProperty; //Field offset: 0x0
+	public static readonly string labelDraggerVariantUssClassName; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Label <labelElement>k__BackingField; //Field offset: 0x0
 	private VisualElement m_CachedInspectorElement; //Field offset: 0x0
 	private VisualElement m_CachedContextWidthElement; //Field offset: 0x0
 	private bool m_SkipValidation; //Field offset: 0x0
 	private Label m_MixedValueLabel; //Field offset: 0x0
+	private bool m_ShowMixedValue; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Label <labelElement>k__BackingField; //Field offset: 0x0
+	private DispatchMode <dispatchMode>k__BackingField; //Field offset: 0x0
 	private float m_LabelWidthRatio; //Field offset: 0x0
+	[DontCreateProperty]
 	[SerializeField]
 	private TValueType m_Value; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Action viewDataRestored; //Field offset: 0x0
+	internal Action<Expression> expressionEvaluated; //Field offset: 0x0
 	private VisualElement m_VisualInput; //Field offset: 0x0
-	private float m_LabelExtraContextWidth; //Field offset: 0x0
 	private float m_LabelBaseMinWidth; //Field offset: 0x0
 	private float m_LabelExtraPadding; //Field offset: 0x0
 	[CompilerGenerated]
@@ -56,15 +64,38 @@ public abstract class BaseField : BindableElement, INotifyValueChanged<TValueTyp
 	internal event Func<TValueType, TValueType> onValidateValue
 	{
 		[CompilerGenerated]
-		internal add { } //Length: 194
+		internal add { } //Length: 192
 		[CompilerGenerated]
-		internal remove { } //Length: 194
+		internal remove { } //Length: 192
 	}
 
+	internal event Action viewDataRestored
+	{
+		[CompilerGenerated]
+		internal add { } //Length: 158
+		[CompilerGenerated]
+		internal remove { } //Length: 158
+	}
+
+	override bool canSwitchToMixedValue
+	{
+		 get { } //Length: 3
+	}
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal DispatchMode dispatchMode
+	{
+		[CompilerGenerated]
+		internal get { } //Length: 7
+		[CompilerGenerated]
+		internal set { } //Length: 7
+	}
+
+	[CreateProperty]
 	public override string label
 	{
 		 get { } //Length: 45
-		 set { } //Length: 491
+		 set { } //Length: 605
 	}
 
 	public private override Label labelElement
@@ -77,7 +108,7 @@ public abstract class BaseField : BindableElement, INotifyValueChanged<TValueTyp
 
 	protected Label mixedValueLabel
 	{
-		 get { } //Length: 369
+		 get { } //Length: 404
 	}
 
 	protected TValueType rawValue
@@ -86,10 +117,11 @@ public abstract class BaseField : BindableElement, INotifyValueChanged<TValueTyp
 		 set { } //Length: 7
 	}
 
+	[CreateProperty]
 	public override bool showMixedValue
 	{
 		 get { } //Length: 8
-		 set { } //Length: 32
+		 set { } //Length: 215
 	}
 
 	private override Action UnityEngine.UIElements.IEditableElement.editingEnded
@@ -104,32 +136,45 @@ public abstract class BaseField : BindableElement, INotifyValueChanged<TValueTyp
 		private get { } //Length: 8
 	}
 
+	[CreateProperty]
 	public override TValueType value
 	{
 		 get { } //Length: 10
-		 set { } //Length: 442
+		 set { } //Length: 678
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal VisualElement visualInput
 	{
 		internal get { } //Length: 10
-		internal set { } //Length: 343
+		internal set { } //Length: 347
 	}
 
 	private static BaseField`1() { }
 
 	protected BaseField`1(string label, VisualElement visualInput) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal BaseField`1(string label) { }
 
 	[CompilerGenerated]
 	internal void add_onValidateValue(Func<TValueType, TValueType> value) { }
 
+	[CompilerGenerated]
+	internal void add_viewDataRestored(Action value) { }
+
 	private void AlignLabel() { }
+
+	private Rect ComputeTooltipRect() { }
 
 	internal void EndEditing(EventBase e) { }
 
 	internal override bool EqualsCurrentValue(TValueType value) { }
+
+	override bool get_canSwitchToMixedValue() { }
+
+	[CompilerGenerated]
+	internal DispatchMode get_dispatchMode() { }
 
 	public override string get_label() { }
 
@@ -148,6 +193,9 @@ public abstract class BaseField : BindableElement, INotifyValueChanged<TValueTyp
 
 	internal virtual Rect GetTooltipRect() { }
 
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(TooltipEvent)}])]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
+
 	private void OnAttachToPanel(AttachToPanelEvent e) { }
 
 	private void OnCustomStyleResolved(CustomStyleResolvedEvent evt) { }
@@ -162,6 +210,12 @@ public abstract class BaseField : BindableElement, INotifyValueChanged<TValueTyp
 
 	[CompilerGenerated]
 	internal void remove_onValidateValue(Func<TValueType, TValueType> value) { }
+
+	[CompilerGenerated]
+	internal void remove_viewDataRestored(Action value) { }
+
+	[CompilerGenerated]
+	internal void set_dispatchMode(DispatchMode value) { }
 
 	public void set_label(string value) { }
 

@@ -78,6 +78,8 @@ public abstract class CollectionViewController : IDisposable
 
 	protected override void PrepareView() { }
 
+	internal override void PreRefresh() { }
+
 	protected void RaiseItemIndexChanged(int srcIndex, int dstIndex) { }
 
 	protected void RaiseItemsSourceChanged() { }
@@ -90,7 +92,9 @@ public abstract class CollectionViewController : IDisposable
 
 	public override void set_itemsSource(IList value) { }
 
-	protected void SetItemsSourceWithoutNotify(IList source) { }
+	internal override void SetBindingContext(ReusableCollectionItem reusableItem, int index) { }
+
+	 void SetHierarchyViewModelWithoutNotify(HierarchyViewModel source) { }
 
 	public void SetView(BaseVerticalCollectionView collectionView) { }
 

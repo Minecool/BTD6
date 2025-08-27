@@ -8,7 +8,7 @@ public class FreeUpgradeSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 157
+		 get { } //Length: 191
 	}
 
 	public FreeUpgradeSupport() { }

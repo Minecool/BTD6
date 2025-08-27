@@ -3,7 +3,7 @@ namespace UnityEngine.UIElements;
 public class GenericDropdownMenu : IGenericMenu
 {
 	[CompilerGenerated]
-	private struct <>c__DisplayClass39_0
+	private struct <>c__DisplayClass48_0
 	{
 		public GenericDropdownMenu <>4__this; //Field offset: 0x0
 		public int selectedIndex; //Field offset: 0x8
@@ -23,11 +23,13 @@ public class GenericDropdownMenu : IGenericMenu
 
 	public static readonly string ussClassName; //Field offset: 0x0
 	public static readonly string itemUssClassName; //Field offset: 0x8
-	public static readonly string labelUssClassName; //Field offset: 0x10
-	public static readonly string containerInnerUssClassName; //Field offset: 0x18
-	public static readonly string containerOuterUssClassName; //Field offset: 0x20
-	public static readonly string checkmarkUssClassName; //Field offset: 0x28
-	public static readonly string separatorUssClassName; //Field offset: 0x30
+	public static readonly string itemContentUssClassName; //Field offset: 0x10
+	public static readonly string labelUssClassName; //Field offset: 0x18
+	public static readonly string containerInnerUssClassName; //Field offset: 0x20
+	public static readonly string containerOuterUssClassName; //Field offset: 0x28
+	public static readonly string checkmarkUssClassName; //Field offset: 0x30
+	public static readonly string separatorUssClassName; //Field offset: 0x38
+	public static readonly string contentWidthUssClassName; //Field offset: 0x40
 	private List<MenuItem> m_Items; //Field offset: 0x10
 	private VisualElement m_MenuContainer; //Field offset: 0x18
 	private VisualElement m_OuterContainer; //Field offset: 0x20
@@ -36,13 +38,18 @@ public class GenericDropdownMenu : IGenericMenu
 	private VisualElement m_TargetElement; //Field offset: 0x38
 	private Rect m_DesiredRect; //Field offset: 0x40
 	private KeyboardNavigationManipulator m_NavigationManipulator; //Field offset: 0x50
+	private float m_PositionTop; //Field offset: 0x58
+	private float m_PositionLeft; //Field offset: 0x5C
+	private float m_ContentWidth; //Field offset: 0x60
+	private bool m_FitContentWidth; //Field offset: 0x64
+	private bool m_ShownAboveTarget; //Field offset: 0x65
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <isSingleSelectionDropdown>k__BackingField; //Field offset: 0x58
+	private bool <isSingleSelectionDropdown>k__BackingField; //Field offset: 0x66
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <closeOnParentResize>k__BackingField; //Field offset: 0x59
-	private Vector2 m_MousePosition; //Field offset: 0x5C
+	private bool <closeOnParentResize>k__BackingField; //Field offset: 0x67
+	private Vector2 m_MousePosition; //Field offset: 0x68
 
 	internal bool closeOnParentResize
 	{
@@ -70,10 +77,10 @@ public class GenericDropdownMenu : IGenericMenu
 	public GenericDropdownMenu() { }
 
 	[CompilerGenerated]
-	private void <Apply>g__UpdateSelectionDown|39_0(int newIndex, ref <>c__DisplayClass39_0 unnamed_param_1) { }
+	private void <Apply>g__UpdateSelectionDown|48_0(int newIndex, ref <>c__DisplayClass48_0 unnamed_param_1) { }
 
 	[CompilerGenerated]
-	private void <Apply>g__UpdateSelectionUp|39_1(int newIndex, ref <>c__DisplayClass39_0 unnamed_param_1) { }
+	private void <Apply>g__UpdateSelectionUp|48_1(int newIndex, ref <>c__DisplayClass48_0 unnamed_param_1) { }
 
 	private MenuItem AddItem(string itemName, bool isChecked, bool isEnabled, object data = null) { }
 
@@ -101,6 +108,8 @@ public class GenericDropdownMenu : IGenericMenu
 	[CompilerGenerated]
 	internal bool get_isSingleSelectionDropdown() { }
 
+	private float GetLargestItemWidth() { }
+
 	private int GetSelectedIndex() { }
 
 	private void Hide(bool giveFocusBack = false) { }
@@ -112,6 +121,8 @@ public class GenericDropdownMenu : IGenericMenu
 	private void OnDetachFromPanel(DetachFromPanelEvent evt) { }
 
 	private void OnFocusOut(FocusOutEvent evt) { }
+
+	private void OnInitialDisplay(GeometryChangedEvent evt) { }
 
 	private void OnParentResized(GeometryChangedEvent evt) { }
 

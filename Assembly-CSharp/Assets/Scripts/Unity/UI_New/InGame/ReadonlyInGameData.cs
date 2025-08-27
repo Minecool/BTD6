@@ -6,17 +6,18 @@ public class ReadonlyInGameData
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<PowerData, Boolean> <>9__40_0; //Field offset: 0x8
+		public static Func<PowerData, Boolean> <>9__41_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <ArePowersAllowed>b__40_0(PowerData x) { }
+		internal bool <ArePowersAllowed>b__41_0(PowerData x) { }
 
 	}
 
-	public readonly bool includeTutorial; //Field offset: 0x10
+	public readonly bool includeTutorialOld; //Field offset: 0x10
+	public readonly bool includeTutorialNew; //Field offset: 0x11
 	public readonly GameType gameType; //Field offset: 0x14
 	public readonly SubGameType subGameType; //Field offset: 0x18
 	public readonly string selectedMode; //Field offset: 0x20
@@ -69,7 +70,7 @@ public class ReadonlyInGameData
 
 	public bool IsCreationMode
 	{
-		 get { } //Length: 154
+		 get { } //Length: 157
 	}
 
 	public bool IsEditingMapMode
@@ -89,7 +90,12 @@ public class ReadonlyInGameData
 
 	public bool IsUserPlayMode
 	{
-		 get { } //Length: 154
+		 get { } //Length: 157
+	}
+
+	public bool RequiresHudManager
+	{
+		 get { } //Length: 123
 	}
 
 	public ReadonlyInGameData(InGameData data) { }
@@ -118,6 +124,8 @@ public class ReadonlyInGameData
 	public bool get_IsSandbox() { }
 
 	public bool get_IsUserPlayMode() { }
+
+	public bool get_RequiresHudManager() { }
 
 	public bool IsDoubleCashAllowed() { }
 

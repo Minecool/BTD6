@@ -11,7 +11,7 @@ public class AlternatingEjectEffect : EjectEffect
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 806
+		 get { } //Length: 807
 	}
 
 	public AlternatingEjectEffect() { }

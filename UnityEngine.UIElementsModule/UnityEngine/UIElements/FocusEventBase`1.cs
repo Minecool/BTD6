@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::Focus (10))]
+[EventCategory(EventCategory::Focus (11))]
 public abstract class FocusEventBase : EventBase<T>
 {
 	[CompilerGenerated]
@@ -19,17 +19,17 @@ public abstract class FocusEventBase : EventBase<T>
 	public private override FocusChangeDirection direction
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 8
+		private set { } //Length: 5
 	}
 
 	protected private FocusController focusController
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 70
 		[CompilerGenerated]
-		private set { } //Length: 8
+		private set { } //Length: 5
 	}
 
 	internal bool IsFocusDelegated
@@ -43,9 +43,9 @@ public abstract class FocusEventBase : EventBase<T>
 	public private override Focusable relatedTarget
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 8
+		private set { } //Length: 5
 	}
 
 	protected FocusEventBase`1() { }

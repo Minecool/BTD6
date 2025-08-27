@@ -58,13 +58,13 @@ public class TMP_SubMesh : MonoBehaviour
 
 	public Mesh mesh
 	{
-		 get { } //Length: 165
+		 get { } //Length: 164
 		 set { } //Length: 5
 	}
 
 	public MeshFilter meshFilter
 	{
-		 get { } //Length: 242
+		 get { } //Length: 241
 	}
 
 	public float padding

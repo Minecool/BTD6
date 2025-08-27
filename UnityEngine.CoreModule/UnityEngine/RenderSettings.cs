@@ -60,23 +60,23 @@ public sealed class RenderSettings : object
 	[Obsolete("RenderSettings.customReflection has been deprecated in favor of RenderSettings.customReflectionTexture.", False)]
 	public static Cubemap customReflection
 	{
-		 get { } //Length: 181
+		 get { } //Length: 224
 		[NativeThrows]
-		 set { } //Length: 51
+		 set { } //Length: 107
 	}
 
 	[NativeProperty("CustomReflection")]
 	public static Texture customReflectionTexture
 	{
-		 get { } //Length: 42
+		 get { } //Length: 84
 		[NativeThrows]
-		 set { } //Length: 51
+		 set { } //Length: 107
 	}
 
 	[NativeProperty("GeneratedSkyboxReflection")]
 	internal static Cubemap defaultReflection
 	{
-		internal get { } //Length: 42
+		internal get { } //Length: 84
 	}
 
 	public static DefaultReflectionMode defaultReflectionMode
@@ -163,8 +163,8 @@ public sealed class RenderSettings : object
 	[NativeProperty("SkyboxMaterial")]
 	public static Material skybox
 	{
-		 get { } //Length: 42
-		 set { } //Length: 51
+		 get { } //Length: 84
+		 set { } //Length: 107
 	}
 
 	public static Color subtractiveShadowColor
@@ -175,8 +175,8 @@ public sealed class RenderSettings : object
 
 	public static Light sun
 	{
-		 get { } //Length: 42
-		 set { } //Length: 51
+		 get { } //Length: 84
+		 set { } //Length: 107
 	}
 
 	private RenderSettings() { }
@@ -212,7 +212,11 @@ public sealed class RenderSettings : object
 
 	public static Texture get_customReflectionTexture() { }
 
+	private static IntPtr get_customReflectionTexture_Injected() { }
+
 	internal static Cubemap get_defaultReflection() { }
+
+	private static IntPtr get_defaultReflection_Injected() { }
 
 	public static DefaultReflectionMode get_defaultReflectionMode() { }
 
@@ -244,49 +248,57 @@ public sealed class RenderSettings : object
 
 	public static Material get_skybox() { }
 
+	private static IntPtr get_skybox_Injected() { }
+
 	public static Color get_subtractiveShadowColor() { }
 
 	private static void get_subtractiveShadowColor_Injected(out Color ret) { }
 
 	public static Light get_sun() { }
 
+	private static IntPtr get_sun_Injected() { }
+
 	[FreeFunction("GetRenderSettings")]
 	internal static object GetRenderSettings() { }
+
+	private static IntPtr GetRenderSettings_Injected() { }
 
 	[StaticAccessor("RenderSettingsScripting", StaticAccessorType::DoubleColon (2))]
 	internal static void Reset() { }
 
 	public static void set_ambientEquatorColor(Color value) { }
 
-	private static void set_ambientEquatorColor_Injected(ref Color value) { }
+	private static void set_ambientEquatorColor_Injected(in Color value) { }
 
 	public static void set_ambientGroundColor(Color value) { }
 
-	private static void set_ambientGroundColor_Injected(ref Color value) { }
+	private static void set_ambientGroundColor_Injected(in Color value) { }
 
 	public static void set_ambientIntensity(float value) { }
 
 	public static void set_ambientLight(Color value) { }
 
-	private static void set_ambientLight_Injected(ref Color value) { }
+	private static void set_ambientLight_Injected(in Color value) { }
 
 	public static void set_ambientMode(AmbientMode value) { }
 
 	public static void set_ambientProbe(SphericalHarmonicsL2 value) { }
 
-	private static void set_ambientProbe_Injected(ref SphericalHarmonicsL2 value) { }
+	private static void set_ambientProbe_Injected(in SphericalHarmonicsL2 value) { }
 
 	public static void set_ambientSkyboxAmount(float value) { }
 
 	public static void set_ambientSkyColor(Color value) { }
 
-	private static void set_ambientSkyColor_Injected(ref Color value) { }
+	private static void set_ambientSkyColor_Injected(in Color value) { }
 
 	[NativeThrows]
 	public static void set_customReflection(Cubemap value) { }
 
 	[NativeThrows]
 	public static void set_customReflectionTexture(Texture value) { }
+
+	private static void set_customReflectionTexture_Injected(IntPtr value) { }
 
 	public static void set_defaultReflectionMode(DefaultReflectionMode value) { }
 
@@ -300,7 +312,7 @@ public sealed class RenderSettings : object
 
 	public static void set_fogColor(Color value) { }
 
-	private static void set_fogColor_Injected(ref Color value) { }
+	private static void set_fogColor_Injected(in Color value) { }
 
 	public static void set_fogDensity(float value) { }
 
@@ -318,11 +330,15 @@ public sealed class RenderSettings : object
 
 	public static void set_skybox(Material value) { }
 
+	private static void set_skybox_Injected(IntPtr value) { }
+
 	public static void set_subtractiveShadowColor(Color value) { }
 
-	private static void set_subtractiveShadowColor_Injected(ref Color value) { }
+	private static void set_subtractiveShadowColor_Injected(in Color value) { }
 
 	public static void set_sun(Light value) { }
+
+	private static void set_sun_Injected(IntPtr value) { }
 
 }
 

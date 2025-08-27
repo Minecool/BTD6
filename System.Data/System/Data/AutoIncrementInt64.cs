@@ -8,13 +8,13 @@ internal sealed class AutoIncrementInt64 : AutoIncrementValue
 
 	internal virtual object Current
 	{
-		internal get { } //Length: 69
-		internal set { } //Length: 109
+		internal get { } //Length: 35
+		internal set { } //Length: 69
 	}
 
 	internal virtual Type DataType
 	{
-		internal get { } //Length: 89
+		internal get { } //Length: 50
 	}
 
 	internal virtual long Seed
@@ -26,7 +26,7 @@ internal sealed class AutoIncrementInt64 : AutoIncrementValue
 	internal virtual long Step
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 128
+		internal set { } //Length: 124
 	}
 
 	public AutoIncrementInt64() { }

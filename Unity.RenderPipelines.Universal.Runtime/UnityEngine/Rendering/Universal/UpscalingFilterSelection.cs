@@ -6,5 +6,6 @@ public enum UpscalingFilterSelection
 	Linear = 1,
 	Point = 2,
 	FSR = 3,
+	STP = 4,
 }
 

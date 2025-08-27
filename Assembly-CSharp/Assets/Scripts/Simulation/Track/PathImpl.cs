@@ -16,7 +16,7 @@ public class PathImpl : IPath
 
 	public override float Length
 	{
-		 get { } //Length: 103
+		 get { } //Length: 99
 	}
 
 	public PathImpl(List<Vector3> points) { }

@@ -9,7 +9,7 @@ public class LatencyReportMessage : Message
 
 	public LatencyReportMessage(long latency) { }
 
-	protected virtual Byte[] CreateBytes() { }
+	private static Byte[] CreateBytes(long latency) { }
 
 }
 

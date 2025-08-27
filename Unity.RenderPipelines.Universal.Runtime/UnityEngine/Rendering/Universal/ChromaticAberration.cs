@@ -1,6 +1,7 @@
 namespace UnityEngine.Rendering.Universal;
 
-[VolumeComponentMenuForRenderPipeline("Post-processing/Chromatic Aberration", new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(UniversalRenderPipeline)}])]
+[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+[VolumeComponentMenu("Post-processing/Chromatic Aberration")]
 public sealed class ChromaticAberration : VolumeComponent, IPostProcessComponent
 {
 	[Tooltip("Use the slider to set the strength of the Chromatic Aberration effect.")]
@@ -10,6 +11,7 @@ public sealed class ChromaticAberration : VolumeComponent, IPostProcessComponent
 
 	public override bool IsActive() { }
 
+	[Obsolete("Unused #from(2023.1)", False)]
 	public override bool IsTileCompatible() { }
 
 }

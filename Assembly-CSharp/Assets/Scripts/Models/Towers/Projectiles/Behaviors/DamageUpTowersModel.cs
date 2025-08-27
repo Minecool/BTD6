@@ -25,7 +25,7 @@ public class DamageUpTowersModel : ProjectileBehaviorModel
 
 	public DamageUpMutator Mutator
 	{
-		 get { } //Length: 276
+		 get { } //Length: 280
 	}
 
 	public DamageUpTowersModel(string name, int increase, float lifespan, bool useClosest, string mutatorId, int priority, bool useTowerPosition) { }

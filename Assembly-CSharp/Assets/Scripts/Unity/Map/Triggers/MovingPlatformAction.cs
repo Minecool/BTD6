@@ -18,7 +18,7 @@ public class MovingPlatformAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 607
+		 get { } //Length: 601
 	}
 
 	public MovingPlatformAction() { }

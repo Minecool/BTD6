@@ -47,7 +47,7 @@ public class QuestSingleEventScreen : QuestScreen
 
 	public ScorePanelUI ChallengePanelUI
 	{
-		 get { } //Length: 1333
+		 get { } //Length: 1205
 	}
 
 	public QuestSingleEventScreen() { }

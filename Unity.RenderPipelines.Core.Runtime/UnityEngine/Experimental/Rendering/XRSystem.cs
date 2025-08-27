@@ -2,11 +2,19 @@ namespace UnityEngine.Experimental.Rendering;
 
 public static class XRSystem
 {
-	private static XRLayout s_Layout; //Field offset: 0x0
+	[CompilerGenerated]
+	private struct <>c__DisplayClass44_0
+	{
+		public Camera camera; //Field offset: 0x0
+
+	}
+
+	private static XRLayoutStack s_Layout; //Field offset: 0x0
 	private static Func<XRPassCreateInfo, XRPass> s_PassAllocator; //Field offset: 0x8
 	private static List<XRDisplaySubsystem> s_DisplayList; //Field offset: 0x10
 	private static XRDisplaySubsystem s_Display; //Field offset: 0x18
 	private static MSAASamples s_MSAASamples; //Field offset: 0x20
+	private static float s_OcclusionMeshScaling; //Field offset: 0x24
 	private static Material s_OcclusionMeshMaterial; //Field offset: 0x28
 	private static Material s_MirrorViewMaterial; //Field offset: 0x30
 	private static Action<XRLayout, Camera> s_LayoutOverride; //Field offset: 0x38
@@ -54,13 +62,16 @@ public static class XRSystem
 
 	private static XRSystem() { }
 
-	private static XRPassCreateInfo BuildPass(XRRenderPass xrRenderPass, ScriptableCullingParameters cullingParameters) { }
+	[CompilerGenerated]
+	internal static void <CreateDefaultLayout>g__AddViewToPass|44_0(XRPass xrPass, XRRenderPass renderPass, int renderParamIndex, ref <>c__DisplayClass44_0 unnamed_param_3) { }
+
+	private static XRPassCreateInfo BuildPass(XRRenderPass xrRenderPass, ScriptableCullingParameters cullingParameters, XRLayout layout) { }
 
 	private static XRView BuildView(XRRenderPass renderPass, XRRenderParameter renderParameter) { }
 
 	private static bool CanUseSinglePass(Camera camera, XRRenderPass renderPass) { }
 
-	internal static void CreateDefaultLayout(Camera camera) { }
+	internal static void CreateDefaultLayout(Camera camera, XRLayout layout) { }
 
 	public static void Dispose() { }
 
@@ -82,6 +93,12 @@ public static class XRSystem
 	public static XRDisplaySubsystem GetActiveDisplay() { }
 
 	public static MSAASamples GetDisplayMSAASamples() { }
+
+	internal static int GetMirrorViewMode() { }
+
+	internal static float GetOcclusionMeshScale() { }
+
+	public static float GetRenderViewportScale() { }
 
 	public static void Initialize(Func<XRPassCreateInfo, XRPass> passAllocator, Shader occlusionMeshPS, Shader mirrorViewPS) { }
 
@@ -108,7 +125,13 @@ public static class XRSystem
 
 	private static void SetLayoutOverride(Action<XRLayout, Camera> action) { }
 
+	internal static void SetMirrorViewMode(int mirrorBlitMode) { }
+
+	internal static void SetOcclusionMeshScale(float occlusionMeshScale) { }
+
 	public static void SetRenderScale(float renderScale) { }
+
+	private static RenderTextureDescriptor XrRenderTextureDescToUnityRenderTextureDesc(RenderTextureDescriptor xrDesc) { }
 
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType::BeforeSplashScreen (3))]
 	private static void XRSystemInit() { }

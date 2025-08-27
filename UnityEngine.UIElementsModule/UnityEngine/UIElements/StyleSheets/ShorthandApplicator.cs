@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets;
 
+[VisibleToOtherModules]
 internal static class ShorthandApplicator
 {
 	private static List<TimeValue> s_TransitionDelayList; //Field offset: 0x0

@@ -16,7 +16,7 @@ public abstract class EntityBehavior : RootBehavior, IEntityBehavior
 
 	public override Vector3Boxed Position
 	{
-		 get { } //Length: 181
+		 get { } //Length: 184
 	}
 
 	protected EntityBehavior() { }
@@ -97,7 +97,7 @@ public abstract class EntityBehavior : RootBehavior, IEntityBehavior
 
 	public override void OnVisibilityToggled(bool isVisible) { }
 
-	public override float Pickup() { }
+	public override float Pickup(Tower towerPickingUp) { }
 
 	public override void PostAttached() { }
 

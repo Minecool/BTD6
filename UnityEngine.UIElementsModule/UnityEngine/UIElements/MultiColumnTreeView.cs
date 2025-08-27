@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class MultiColumnTreeView : BaseTreeView
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<MultiColumnTreeView, UxmlTraits>
 	{
 
@@ -9,11 +10,12 @@ public class MultiColumnTreeView : BaseTreeView
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private readonly UxmlBoolAttributeDescription m_SortingEnabled; //Field offset: 0xB8
-		private readonly UxmlObjectAttributeDescription<Columns> m_Columns; //Field offset: 0xC0
-		private readonly UxmlObjectAttributeDescription<SortColumnDescriptions> m_SortColumnDescriptions; //Field offset: 0xC8
+		private readonly UxmlEnumAttributeDescription<ColumnSortingMode> m_SortingMode; //Field offset: 0xD0
+		private readonly UxmlObjectAttributeDescription<Columns> m_Columns; //Field offset: 0xD8
+		private readonly UxmlObjectAttributeDescription<SortColumnDescriptions> m_SortColumnDescriptions; //Field offset: 0xE0
 
 		public UxmlTraits() { }
 
@@ -21,42 +23,53 @@ public class MultiColumnTreeView : BaseTreeView
 
 	}
 
-	private Columns m_Columns; //Field offset: 0x4C0
-	private bool m_SortingEnabled; //Field offset: 0x4C8
-	private SortColumnDescriptions m_SortColumnDescriptions; //Field offset: 0x4D0
-	private List<SortColumnDescription> m_SortedColumns; //Field offset: 0x4D8
+	private static readonly BindingId columnsProperty; //Field offset: 0x0
+	private static readonly BindingId sortColumnDescriptionsProperty; //Field offset: 0x98
+	private static readonly BindingId sortingModeProperty; //Field offset: 0x130
+	private Columns m_Columns; //Field offset: 0x5C0
+	private ColumnSortingMode m_SortingMode; //Field offset: 0x5C8
+	private SortColumnDescriptions m_SortColumnDescriptions; //Field offset: 0x5D0
+	private List<SortColumnDescription> m_SortedColumns; //Field offset: 0x5D8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action columnSortingChanged; //Field offset: 0x4E0
+	private Action columnSortingChanged; //Field offset: 0x5E0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<ContextualMenuPopulateEvent, Column> headerContextMenuPopulateEvent; //Field offset: 0x4E8
+	private Action<ContextualMenuPopulateEvent, Column> headerContextMenuPopulateEvent; //Field offset: 0x5E8
 
+	[CreateProperty]
 	public private Columns columns
 	{
 		 get { } //Length: 8
-		private set { } //Length: 138
+		private set { } //Length: 348
 	}
 
+	[CreateProperty]
 	public private SortColumnDescriptions sortColumnDescriptions
 	{
 		 get { } //Length: 8
-		private set { } //Length: 152
+		private set { } //Length: 255
 	}
 
-	public bool sortingEnabled
+	[CreateProperty]
+	public ColumnSortingMode sortingMode
 	{
-		 set { } //Length: 95
+		 get { } //Length: 7
+		 set { } //Length: 178
 	}
 
 	public MultiColumnTreeViewController viewController
 	{
-		 get { } //Length: 136
+		 get { } //Length: 133
 	}
+
+	private static MultiColumnTreeView() { }
 
 	public MultiColumnTreeView() { }
 
 	public MultiColumnTreeView(Columns columns) { }
+
+	private void ColumnsChanged(object sender, BindablePropertyChangedEventArgs args) { }
 
 	protected virtual CollectionViewController CreateViewController() { }
 
@@ -65,6 +78,8 @@ public class MultiColumnTreeView : BaseTreeView
 	public Columns get_columns() { }
 
 	public SortColumnDescriptions get_sortColumnDescriptions() { }
+
+	public ColumnSortingMode get_sortingMode() { }
 
 	public MultiColumnTreeViewController get_viewController() { }
 
@@ -76,7 +91,7 @@ public class MultiColumnTreeView : BaseTreeView
 
 	private void set_sortColumnDescriptions(SortColumnDescriptions value) { }
 
-	public void set_sortingEnabled(bool value) { }
+	public void set_sortingMode(ColumnSortingMode value) { }
 
 	public virtual void SetViewController(CollectionViewController controller) { }
 

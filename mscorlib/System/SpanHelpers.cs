@@ -14,11 +14,15 @@ internal static class SpanHelpers
 
 	public static bool EndsWithOrdinalIgnoreCaseHelper(ReadOnlySpan<Char> span, ReadOnlySpan<Char> value) { }
 
-	public static int IndexOf(ref byte searchSpace, byte value, int length) { }
+	public static int IndexOf(ref T searchSpace, T value, int length) { }
+
+	public static int IndexOf(ref T searchSpace, int searchSpaceLength, ref T value, int valueLength) { }
+
+	public static int IndexOf(ref byte searchSpace, int searchSpaceLength, ref byte value, int valueLength) { }
 
 	public static int IndexOf(ref char searchSpace, char value, int length) { }
 
-	public static int IndexOf(ref T searchSpace, T value, int length) { }
+	public static int IndexOf(ref byte searchSpace, byte value, int length) { }
 
 	public static int IndexOfAny(ref T searchSpace, int searchSpaceLength, ref T value, int valueLength) { }
 

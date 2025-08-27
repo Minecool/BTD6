@@ -2,57 +2,57 @@ namespace UnityEngine.UIElements.Internal;
 
 internal class ColumnMover : PointerManipulator
 {
-	private float m_StartPos; //Field offset: 0x38
-	private float m_LastPos; //Field offset: 0x3C
-	private bool m_Active; //Field offset: 0x40
-	private bool m_Moving; //Field offset: 0x41
-	private bool m_Cancelled; //Field offset: 0x42
-	private MultiColumnCollectionHeader m_Header; //Field offset: 0x48
-	private VisualElement m_PreviewElement; //Field offset: 0x50
-	private MultiColumnHeaderColumnMoveLocationPreview m_LocationPreviewElement; //Field offset: 0x58
-	private Column m_ColumnToMove; //Field offset: 0x60
-	private float m_ColumnToMovePos; //Field offset: 0x68
-	private float m_ColumnToMoveWidth; //Field offset: 0x6C
-	private Column m_DestinationColumn; //Field offset: 0x70
-	private bool m_MoveBeforeDestination; //Field offset: 0x78
+	private float m_StartPos; //Field offset: 0x28
+	private float m_LastPos; //Field offset: 0x2C
+	private bool m_Active; //Field offset: 0x30
+	private bool m_Moving; //Field offset: 0x31
+	private bool m_Cancelled; //Field offset: 0x32
+	private MultiColumnCollectionHeader m_Header; //Field offset: 0x38
+	private VisualElement m_PreviewElement; //Field offset: 0x40
+	private MultiColumnHeaderColumnMoveLocationPreview m_LocationPreviewElement; //Field offset: 0x48
+	private Column m_ColumnToMove; //Field offset: 0x50
+	private float m_ColumnToMovePos; //Field offset: 0x58
+	private float m_ColumnToMoveWidth; //Field offset: 0x5C
+	private Column m_DestinationColumn; //Field offset: 0x60
+	private bool m_MoveBeforeDestination; //Field offset: 0x68
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private ColumnLayout <columnLayout>k__BackingField; //Field offset: 0x80
+	private ColumnLayout <columnLayout>k__BackingField; //Field offset: 0x70
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<ColumnMover> activeChanged; //Field offset: 0x88
+	private Action<ColumnMover> activeChanged; //Field offset: 0x78
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<ColumnMover> movingChanged; //Field offset: 0x90
+	private Action<ColumnMover> movingChanged; //Field offset: 0x80
 
 	public event Action<ColumnMover> activeChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 172
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 172
 	}
 
 	public event Action<ColumnMover> movingChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public bool active
 	{
 		 get { } //Length: 5
-		 set { } //Length: 36
+		 set { } //Length: 33
 	}
 
 	public ColumnLayout columnLayout
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 8
+		 set { } //Length: 5
 	}
 
 	public bool moving
@@ -82,17 +82,7 @@ internal class ColumnMover : PointerManipulator
 
 	public bool get_moving() { }
 
-	private static bool IsNotMouseEvent(int pointerId) { }
-
 	private void OnKeyDown(KeyDownEvent e) { }
-
-	private void OnMouseCaptureOut(MouseCaptureOutEvent evt) { }
-
-	protected void OnMouseDown(MouseDownEvent evt) { }
-
-	protected void OnMouseMove(MouseMoveEvent evt) { }
-
-	protected void OnMouseUp(MouseUpEvent evt) { }
 
 	private void OnPointerCancel(PointerCancelEvent evt) { }
 

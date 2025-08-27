@@ -20,7 +20,7 @@ public class Shadow : BaseMeshEffect
 	public Vector2 effectDistance
 	{
 		 get { } //Length: 19
-		 set { } //Length: 318
+		 set { } //Length: 296
 	}
 
 	public bool useGraphicAlpha

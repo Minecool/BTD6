@@ -26,7 +26,7 @@ public struct SpriteState : IEquatable<SpriteState>
 
 	public Sprite pressedSprite
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 		 set { } //Length: 5
 	}
 

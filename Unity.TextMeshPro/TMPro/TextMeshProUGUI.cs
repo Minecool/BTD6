@@ -3,9 +3,9 @@ namespace TMPro;
 [AddComponentMenu("UI/TextMeshPro - Text (UI)", 11)]
 [DisallowMultipleComponent]
 [ExecuteAlways]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.2")]
-[RequireComponent(typeof(CanvasRenderer))]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/TextMeshPro/index.html")]
 [RequireComponent(typeof(RectTransform))]
+[RequireComponent(typeof(CanvasRenderer))]
 public class TextMeshProUGUI : TMP_Text, ILayoutElement
 {
 	[CompilerGenerated]
@@ -135,9 +135,9 @@ public class TextMeshProUGUI : TMP_Text, ILayoutElement
 	public virtual event Action<TMP_TextInfo> OnPreRenderText
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public virtual bool autoSizeTextContainer

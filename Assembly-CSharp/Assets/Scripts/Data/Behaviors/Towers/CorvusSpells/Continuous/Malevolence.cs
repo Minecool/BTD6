@@ -8,7 +8,7 @@ public class Malevolence : CorvusContinuousSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 748
+		 get { } //Length: 759
 	}
 
 	public Malevolence() { }

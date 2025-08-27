@@ -136,7 +136,7 @@ public class BossUI : DynamicUiObject
 
 	protected override Bloon TargetBloon
 	{
-		 get { } //Length: 58
+		 get { } //Length: 49
 	}
 
 	protected override Nullable<Int32> TargetBloonTier

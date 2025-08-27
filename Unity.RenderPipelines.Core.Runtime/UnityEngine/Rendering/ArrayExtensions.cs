@@ -5,6 +5,9 @@ public static class ArrayExtensions
 {
 
 	[Extension]
+	public static void FillArray(ref NativeArray<T>& array, in T value, int startIndex = 0, int length = -1) { }
+
+	[Extension]
 	public static void ResizeArray(ref NativeArray<T>& array, int capacity) { }
 
 	[Extension]

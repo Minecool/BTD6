@@ -109,7 +109,7 @@ public class XmlTextWriter : XmlWriter
 
 	public Stream BaseStream
 	{
-		 get { } //Length: 142
+		 get { } //Length: 119
 	}
 
 	public Formatting Formatting

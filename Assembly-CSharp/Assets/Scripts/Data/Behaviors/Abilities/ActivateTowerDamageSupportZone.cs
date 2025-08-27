@@ -19,7 +19,7 @@ public class ActivateTowerDamageSupportZone : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 533
+		 get { } //Length: 536
 	}
 
 	public ActivateTowerDamageSupportZone() { }

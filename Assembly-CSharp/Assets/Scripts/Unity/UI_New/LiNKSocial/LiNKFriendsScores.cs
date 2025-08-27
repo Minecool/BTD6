@@ -224,7 +224,7 @@ public static class LiNKFriendsScores
 
 	private static IEnumerable<ScoreDifficulty> SortedDifficulties
 	{
-		private get { } //Length: 496
+		private get { } //Length: 472
 	}
 
 	private static LiNKFriendsScores() { }

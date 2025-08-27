@@ -29,12 +29,12 @@ public class XmlNamedNodeMap : IEnumerable
 
 		public int Count
 		{
-			 get { } //Length: 152
+			 get { } //Length: 129
 		}
 
 		public object Item
 		{
-			 get { } //Length: 309
+			 get { } //Length: 288
 		}
 
 		public void Add(object value) { }

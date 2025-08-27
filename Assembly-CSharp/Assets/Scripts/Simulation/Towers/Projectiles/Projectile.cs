@@ -1,7 +1,7 @@
 namespace Assets.Scripts.Simulation.Towers.Projectiles;
 
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public class Projectile : Collidable<IProjectileBehavior>
 {
 	internal struct CritRoll
@@ -18,7 +18,7 @@ public class Projectile : Collidable<IProjectileBehavior>
 	public ProjectileModel projectileModel; //Field offset: 0x158
 	public List<ObjectId> collidedWith; //Field offset: 0x160
 	private readonly List<RootBehavior> createdBehaviors; //Field offset: 0x168
-	private readonly List<IProjectileBehavior> projectileBehaviorsOrderedByPass; //Field offset: 0x170
+	private readonly RootObjectLockList<IProjectileBehavior> projectileBehaviorsOrderedByPass; //Field offset: 0x170
 	private readonly RootObjectLockList<IProjectileBehavior> projectileBehaviors; //Field offset: 0x178
 	public Age ageBehavior; //Field offset: 0x180
 	public Vector3 emittedFrom; //Field offset: 0x188
@@ -46,7 +46,7 @@ public class Projectile : Collidable<IProjectileBehavior>
 
 	public int Age
 	{
-		 get { } //Length: 27
+		 get { } //Length: 22
 	}
 
 	public virtual RootObjectLockList<IProjectileBehavior> Behaviors
@@ -70,7 +70,7 @@ public class Projectile : Collidable<IProjectileBehavior>
 	public virtual Tower EmittedBy
 	{
 		 get { } //Length: 8
-		 set { } //Length: 584
+		 set { } //Length: 567
 	}
 
 	public ObjectId EmittedByTowerId
@@ -80,12 +80,12 @@ public class Projectile : Collidable<IProjectileBehavior>
 
 	public float ExhaustDurationFraction
 	{
-		 get { } //Length: 93
+		 get { } //Length: 88
 	}
 
 	public float ExhaustFraction
 	{
-		 get { } //Length: 143
+		 get { } //Length: 138
 	}
 
 	public float ExhaustPeirceFraction
@@ -210,7 +210,7 @@ public class Projectile : Collidable<IProjectileBehavior>
 
 	public void OnTowerDestroyed(RootObject obj) { }
 
-	public virtual float Pickup() { }
+	public virtual float Pickup(Tower towerPickingUp) { }
 
 	public float RollForCrits(float baseDamage) { }
 

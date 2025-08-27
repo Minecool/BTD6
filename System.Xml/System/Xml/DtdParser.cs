@@ -155,7 +155,7 @@ internal class DtdParser : IDtdParser
 
 	private string BaseUriStr
 	{
-		private get { } //Length: 189
+		private get { } //Length: 177
 	}
 
 	private bool IgnoreEntityReferences

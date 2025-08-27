@@ -13,19 +13,12 @@ internal static class SpookyHash
 
 	}
 
-	private static readonly bool AllowUnalignedRead; //Field offset: 0x0
-
-	private static SpookyHash() { }
-
-	private static bool AttemptDetectAllowUnalignedRead() { }
 
 	private static void End(UInt64* data, ref ulong h0, ref ulong h1, ref ulong h2, ref ulong h3, ref ulong h4, ref ulong h5, ref ulong h6, ref ulong h7, ref ulong h8, ref ulong h9, ref ulong h10, ref ulong h11) { }
 
 	private static void EndPartial(ref ulong h0, ref ulong h1, ref ulong h2, ref ulong h3, ref ulong h4, ref ulong h5, ref ulong h6, ref ulong h7, ref ulong h8, ref ulong h9, ref ulong h10, ref ulong h11) { }
 
 	public static void Hash(Void* message, ulong length, UInt64* hash1, UInt64* hash2) { }
-
-	private static void memset(Void* dst, int value, ulong numberOfBytes) { }
 
 	private static void Mix(UInt64* data, ref ulong s0, ref ulong s1, ref ulong s2, ref ulong s3, ref ulong s4, ref ulong s5, ref ulong s6, ref ulong s7, ref ulong s8, ref ulong s9, ref ulong s10, ref ulong s11) { }
 

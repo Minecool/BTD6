@@ -7,12 +7,11 @@ internal class CodePageDataItem
 	internal int m_uiFamilyCodePage; //Field offset: 0x14
 	internal string m_webName; //Field offset: 0x18
 	internal string m_headerName; //Field offset: 0x20
-	internal string m_bodyName; //Field offset: 0x28
-	internal uint m_flags; //Field offset: 0x30
+	internal uint m_flags; //Field offset: 0x28
 
 	public string HeaderName
 	{
-		 get { } //Length: 192
+		 get { } //Length: 191
 	}
 
 	public string WebName

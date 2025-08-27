@@ -1,6 +1,7 @@
 namespace UnityEngine.InputSystem.UI;
 
 [AddComponentMenu("Event/Tracked Device Raycaster")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/TrackedInputDevices.html#tracked-device-raycaster")]
 [RequireComponent(typeof(Canvas))]
 public class TrackedDeviceRaycaster : BaseRaycaster
 {
@@ -127,7 +128,7 @@ public class TrackedDeviceRaycaster : BaseRaycaster
 	public bool ignoreReversedGraphics
 	{
 		 get { } //Length: 5
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public float maxDistance

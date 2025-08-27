@@ -21,7 +21,7 @@ internal sealed class DataError
 	internal string Text
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 96
+		internal set { } //Length: 32
 	}
 
 	internal DataError() { }

@@ -174,7 +174,7 @@ public class ScrollRect : UIBehaviour, IInitializePotentialDragHandler, IEventSy
 
 	public Vector2 normalizedPosition
 	{
-		 get { } //Length: 53
+		 get { } //Length: 56
 		 set { } //Length: 76
 	}
 

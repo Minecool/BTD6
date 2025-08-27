@@ -18,7 +18,7 @@ internal struct DualMotorRumble
 
 	public bool isRumbling
 	{
-		 get { } //Length: 60
+		 get { } //Length: 63
 	}
 
 	public private float lowFrequencyMotorSpeed

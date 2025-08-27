@@ -24,7 +24,7 @@ public static class ModdingDetection
 
 	public static bool CanShowLoginReminder_PleaseDontMod
 	{
-		 get { } //Length: 18
+		 get { } //Length: 21
 	}
 
 	public static bool CanShowModdingWarning_PleaseDontMod
@@ -34,12 +34,12 @@ public static class ModdingDetection
 
 	public static bool CanSubmitLeaderboardScores_UnfairToMod
 	{
-		 get { } //Length: 18
+		 get { } //Length: 21
 	}
 
 	public static bool CanUpdateDailyChallengeStats_SillyToMod
 	{
-		 get { } //Length: 18
+		 get { } //Length: 21
 	}
 
 	public static bool HasModDeveloperCommandLineArg_PleaseDontMod

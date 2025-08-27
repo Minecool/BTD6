@@ -24,7 +24,7 @@ public struct BitArray8 : IBitArray
 
 	public override string humanizedData
 	{
-		 get { } //Length: 210
+		 get { } //Length: 207
 	}
 
 	public override bool Item

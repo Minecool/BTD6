@@ -28,18 +28,18 @@ public class LobbyModel
 		 set { } //Length: 5
 	}
 
-	[DataMember(Name = "metadata")]
-	public JObject RawMetadata
-	{
-		 set { } //Length: 381
-	}
-
 	public RelayInfo RelayInfo
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
 		 set { } //Length: 5
+	}
+
+	[DataMember(Name = "metadata")]
+	public JObject SetMetadataDuringDeserialising
+	{
+		 set { } //Length: 396
 	}
 
 	public LobbyModel() { }
@@ -53,10 +53,10 @@ public class LobbyModel
 	[CompilerGenerated]
 	protected void set_Metadata(JObject value) { }
 
-	public void set_RawMetadata(JObject value) { }
-
 	[CompilerGenerated]
 	protected void set_RelayInfo(RelayInfo value) { }
+
+	public void set_SetMetadataDuringDeserialising(JObject value) { }
 
 }
 

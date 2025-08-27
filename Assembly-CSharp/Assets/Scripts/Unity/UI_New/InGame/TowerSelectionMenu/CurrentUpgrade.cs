@@ -15,14 +15,14 @@ public class CurrentUpgrade : DynamicUiObject, IPointerEnterHandler, IEventSyste
 	public GameObject beastMergedGameObject; //Field offset: 0x70
 	public NK_TextMeshProUGUI beastPowerText; //Field offset: 0x78
 	public NK_TextMeshProUGUI beastPowerMergedText; //Field offset: 0x80
-	private UpgradeModel current; //Field offset: 0x88
-	private string title; //Field offset: 0x90
-	private string desc; //Field offset: 0x98
+	protected UpgradeModel current; //Field offset: 0x88
+	protected string title; //Field offset: 0x90
+	protected string desc; //Field offset: 0x98
 	public int row; //Field offset: 0xA0
-	private TowerToSimulation currentTower; //Field offset: 0xA8
-	private float hoverPopupDelay; //Field offset: 0xB0
-	private bool hovering; //Field offset: 0xB4
-	private float hoverTimer; //Field offset: 0xB8
+	protected TowerToSimulation currentTower; //Field offset: 0xA8
+	protected float hoverPopupDelay; //Field offset: 0xB0
+	protected bool hovering; //Field offset: 0xB4
+	protected float hoverTimer; //Field offset: 0xB8
 
 	public CurrentUpgrade() { }
 
@@ -36,9 +36,9 @@ public class CurrentUpgrade : DynamicUiObject, IPointerEnterHandler, IEventSyste
 
 	public override void OnPointerExit(PointerEventData eventData) { }
 
-	private void SetImageActive(GameObject obj, bool active) { }
+	protected void SetImageActive(GameObject obj, bool active) { }
 
-	private void SetTextActive(GameObject obj, bool active) { }
+	protected void SetTextActive(GameObject obj, bool active) { }
 
 	public void SetUpgradeModel(UpgradeModel um, TowerToSimulation currentTower) { }
 
@@ -46,7 +46,7 @@ public class CurrentUpgrade : DynamicUiObject, IPointerEnterHandler, IEventSyste
 
 	private void UpdateBeastHandlerDisplay() { }
 
-	public void UpdateVisuals() { }
+	public override void UpdateVisuals() { }
 
 	public void WobbleUpgrade() { }
 

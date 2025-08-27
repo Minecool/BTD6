@@ -18,7 +18,7 @@ public class EziliSupportModel : TowerBehaviorModel
 
 	public NecromancerPierceMutator NecroPierceMutator
 	{
-		 get { } //Length: 309
+		 get { } //Length: 313
 	}
 
 	public EziliSupportModel(string name, float necroPierceMultiplier, NecromancerPierceMutator necroPierceMutator) { }

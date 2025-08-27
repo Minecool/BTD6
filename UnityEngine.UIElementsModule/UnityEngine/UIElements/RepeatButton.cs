@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class RepeatButton : TextElement
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<RepeatButton, UxmlTraits>
 	{
 
@@ -9,10 +10,11 @@ public class RepeatButton : TextElement
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private UxmlLongAttributeDescription m_Delay; //Field offset: 0x98
-		private UxmlLongAttributeDescription m_Interval; //Field offset: 0xA0
+		private UxmlLongAttributeDescription m_Delay; //Field offset: 0xD0
+		private UxmlLongAttributeDescription m_Interval; //Field offset: 0xD8
 
 		public UxmlTraits() { }
 
@@ -21,7 +23,13 @@ public class RepeatButton : TextElement
 	}
 
 	public static readonly string ussClassName; //Field offset: 0x0
-	private Clickable m_Clickable; //Field offset: 0x4A0
+	private Clickable m_Clickable; //Field offset: 0x5A8
+	private bool m_AcceptClicksIfDisabled; //Field offset: 0x5B0
+
+	internal bool acceptClicksIfDisabled
+	{
+		internal set { } //Length: 35
+	}
 
 	private static RepeatButton() { }
 
@@ -30,6 +38,8 @@ public class RepeatButton : TextElement
 	public RepeatButton(Action clickEvent, long delay, long interval) { }
 
 	internal void AddAction(Action clickEvent) { }
+
+	internal void set_acceptClicksIfDisabled(bool value) { }
 
 	public void SetAction(Action clickEvent, long delay, long interval) { }
 

@@ -3,8 +3,27 @@ namespace UnityEngine.AddressableAssets.ResourceLocators;
 public class ResourceLocationMap : IResourceLocator
 {
 	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static Func<KeyValuePair`2<Object, IList`1<IResourceLocation>>, IEnumerable`1<IResourceLocation>> <>9__8_0; //Field offset: 0x8
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal IEnumerable<IResourceLocation> <get_AllLocations>b__8_0(KeyValuePair<Object, IList`1<IResourceLocation>> k) { }
+
+	}
+
+	[CompilerGenerated]
 	private string <LocatorId>k__BackingField; //Field offset: 0x10
 	private Dictionary<Object, IList`1<IResourceLocation>> locations; //Field offset: 0x18
+
+	public override IEnumerable<IResourceLocation> AllLocations
+	{
+		 get { } //Length: 247
+	}
 
 	public override IEnumerable<Object> Keys
 	{
@@ -31,6 +50,8 @@ public class ResourceLocationMap : IResourceLocator
 	public void Add(object key, IResourceLocation location) { }
 
 	public void Add(object key, IList<IResourceLocation> locations) { }
+
+	public override IEnumerable<IResourceLocation> get_AllLocations() { }
 
 	public override IEnumerable<Object> get_Keys() { }
 

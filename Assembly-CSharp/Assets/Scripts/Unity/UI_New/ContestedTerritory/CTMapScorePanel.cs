@@ -40,9 +40,9 @@ public class CTMapScorePanel : MonoBehaviour
 	public event EventHandler DetailsOpened
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public private string GuildId

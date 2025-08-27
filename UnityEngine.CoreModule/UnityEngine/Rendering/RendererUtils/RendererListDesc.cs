@@ -12,8 +12,11 @@ public struct RendererListDesc
 	public bool excludeObjectMotionVectors; //Field offset: 0x90
 	public int layerMask; //Field offset: 0x94
 	public uint renderingLayerMask; //Field offset: 0x98
-	public int overrideMaterialPassIndex; //Field offset: 0x9C
-	public int overrideShaderPassIndex; //Field offset: 0xA0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private uint <batchLayerMask>k__BackingField; //Field offset: 0x9C
+	public int overrideMaterialPassIndex; //Field offset: 0xA0
+	public int overrideShaderPassIndex; //Field offset: 0xA4
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private CullingResults <cullingResult>k__BackingField; //Field offset: 0xA8
@@ -26,6 +29,13 @@ public struct RendererListDesc
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private ShaderTagId[] <passNames>k__BackingField; //Field offset: 0xC8
+
+	public uint batchLayerMask
+	{
+		[CompilerGenerated]
+		[IsReadOnly]
+		 get { } //Length: 7
+	}
 
 	internal Camera camera
 	{
@@ -58,6 +68,10 @@ public struct RendererListDesc
 	private static RendererListDesc() { }
 
 	public static RendererListParams ConvertToParameters(in RendererListDesc desc) { }
+
+	[CompilerGenerated]
+	[IsReadOnly]
+	public uint get_batchLayerMask() { }
 
 	[CompilerGenerated]
 	[IsReadOnly]

@@ -12,8 +12,6 @@ internal class InstallationId : IInstallationId, IServiceComponent
 
 	private static string GenerateGuid() { }
 
-	public override string GetOrCreateIdentifier() { }
-
 	private static string ReadIdentifierFromFile() { }
 
 	private static void WriteIdentifierToFile(string identifier) { }

@@ -38,6 +38,25 @@ public static class JobsUtility
 		 set { } //Length: 51
 	}
 
+	public static int JobWorkerCount
+	{
+		 get { } //Length: 42
+	}
+
+	public static int ThreadIndex
+	{
+		[BurstAuthorizedExternalMethod]
+		[FreeFunction("GetJobWorkerIndex", IsThreadSafe = True)]
+		 get { } //Length: 42
+	}
+
+	public static int ThreadIndexCount
+	{
+		[BurstAuthorizedExternalMethod]
+		[FreeFunction("GetJobWorkerIndexCount", IsThreadSafe = True)]
+		 get { } //Length: 42
+	}
+
 	[FreeFunction(ThrowsException = True, IsThreadSafe = True)]
 	private static IntPtr CreateJobReflectionData(Type wrapperJobType, Type userJobType, object managedJobFunction0, object managedJobFunction1, object managedJobFunction2) { }
 
@@ -45,6 +64,19 @@ public static class JobsUtility
 
 	[NativeMethod(IsFreeFunction = True, IsThreadSafe = True)]
 	public static bool get_IsExecutingJob() { }
+
+	public static int get_JobWorkerCount() { }
+
+	[BurstAuthorizedExternalMethod]
+	[FreeFunction("GetJobWorkerIndex", IsThreadSafe = True)]
+	public static int get_ThreadIndex() { }
+
+	[BurstAuthorizedExternalMethod]
+	[FreeFunction("GetJobWorkerIndexCount", IsThreadSafe = True)]
+	public static int get_ThreadIndexCount() { }
+
+	[FreeFunction("JobSystem::GetJobQueueWorkerThreadCount")]
+	private static int GetJobQueueWorkerThreadCount() { }
 
 	public static void GetJobRange(ref JobRanges ranges, int jobIndex, out int beginIndex, out int endIndex) { }
 

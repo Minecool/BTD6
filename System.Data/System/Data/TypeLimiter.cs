@@ -59,7 +59,7 @@ internal sealed class TypeLimiter
 
 	private static bool IsTypeLimitingDisabled
 	{
-		private get { } //Length: 98
+		private get { } //Length: 99
 	}
 
 	private TypeLimiter(Scope scope) { }

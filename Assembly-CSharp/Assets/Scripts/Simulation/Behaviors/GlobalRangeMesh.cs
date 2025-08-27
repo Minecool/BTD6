@@ -20,11 +20,11 @@ public class GlobalRangeMesh : MeshBehavior
 		}
 
 		private NativeList<BlockerEdge> edges; //Field offset: 0x0
-		private NativeList<float2> polyPoints; //Field offset: 0x10
-		private NativeList<Pex> polyPointsToExterior; //Field offset: 0x20
-		private readonly float ox; //Field offset: 0x30
-		private readonly float oy; //Field offset: 0x34
-		private readonly float radius; //Field offset: 0x38
+		private NativeList<float2> polyPoints; //Field offset: 0x8
+		private NativeList<Pex> polyPointsToExterior; //Field offset: 0x10
+		private readonly float ox; //Field offset: 0x18
+		private readonly float oy; //Field offset: 0x1C
+		private readonly float radius; //Field offset: 0x20
 
 		public CalculateVisibilityPolygonPointsJob(NativeList<BlockerEdge> edges, NativeList<float2> polyPoints, NativeList<Pex> polyPointsToExterior, float ox, float oy, float radius) { }
 
@@ -42,8 +42,8 @@ public class GlobalRangeMesh : MeshBehavior
 
 	private static List<Mesh> meshPool; //Field offset: 0x0
 	private static NativeList<BlockerEdge> _edges; //Field offset: 0x8
-	private static NativeList<float2> _polyPoints; //Field offset: 0x18
-	private static NativeList<Pex> _polyPointsToExterior; //Field offset: 0x28
+	private static NativeList<float2> _polyPoints; //Field offset: 0x10
+	private static NativeList<Pex> _polyPointsToExterior; //Field offset: 0x18
 
 	private static GlobalRangeMesh() { }
 

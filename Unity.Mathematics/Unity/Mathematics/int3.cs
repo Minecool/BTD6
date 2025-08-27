@@ -14,8 +14,6 @@ public struct int3 : IEquatable<int3>, IFormattable
 	public int y; //Field offset: 0x4
 	public int z; //Field offset: 0x8
 
-	public int3(int x, int y, int z) { }
-
 	public override bool Equals(int3 rhs) { }
 
 	public virtual bool Equals(object o) { }

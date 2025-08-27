@@ -16,7 +16,7 @@ public class CreateEffectOnExhausted : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 893
+		 get { } //Length: 944
 	}
 
 	public CreateEffectOnExhausted() { }

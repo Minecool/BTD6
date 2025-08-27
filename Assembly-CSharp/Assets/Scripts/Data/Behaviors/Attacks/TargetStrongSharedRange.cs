@@ -8,7 +8,7 @@ public class TargetStrongSharedRange : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 156
+		 get { } //Length: 188
 	}
 
 	public TargetStrongSharedRange() { }

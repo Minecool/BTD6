@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering;
 
-[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.11\\Runtime\\Lighting\\ProbeVolume\\ProbeReferenceVolume.Debug.cs")]
+[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@da6c8615357e\\Runtime\\Lighting\\ProbeVolume\\ProbeReferenceVolume.Debug.cs")]
 public enum DebugProbeShadingMode
 {
 	SH = 0,
@@ -8,7 +8,11 @@ public enum DebugProbeShadingMode
 	SHL0L1 = 2,
 	Validity = 3,
 	ValidityOverDilationThreshold = 4,
-	InvalidatedByTouchupVolumes = 5,
-	Size = 6,
+	RenderingLayerMasks = 5,
+	InvalidatedByAdjustmentVolumes = 6,
+	Size = 7,
+	SkyOcclusionSH = 8,
+	SkyDirection = 9,
+	ProbeOcclusion = 10,
 }
 

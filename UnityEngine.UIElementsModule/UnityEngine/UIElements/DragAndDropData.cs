@@ -1,7 +1,16 @@
 namespace UnityEngine.UIElements;
 
-internal abstract class DragAndDropData
+public abstract class DragAndDropData
 {
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private String[] <paths>k__BackingField; //Field offset: 0x10
+
+	public override String[] paths
+	{
+		[CompilerGenerated]
+		 set { } //Length: 5
+	}
 
 	public abstract object source
 	{
@@ -13,6 +22,9 @@ internal abstract class DragAndDropData
 	public abstract object get_source() { }
 
 	public abstract object GetGenericData(string key) { }
+
+	[CompilerGenerated]
+	public override void set_paths(String[] value) { }
 
 }
 

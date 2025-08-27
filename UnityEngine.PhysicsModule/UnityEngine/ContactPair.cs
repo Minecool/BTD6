@@ -12,51 +12,53 @@ public struct ContactPair
 	internal readonly CollisionPairEventFlags m_Events; //Field offset: 0x16
 	internal readonly Vector3 m_ImpulseSum; //Field offset: 0x18
 
-	public Collider Collider
+	public Collider collider
 	{
-		 get { } //Length: 114
+		 get { } //Length: 87
 	}
 
-	internal bool HasRemovedCollider
+	internal bool hasRemovedCollider
 	{
 		internal get { } //Length: 20
 	}
 
-	public bool IsCollisionEnter
+	public bool isCollisionEnter
 	{
 		 get { } //Length: 8
 	}
 
-	public bool IsCollisionExit
+	public bool isCollisionExit
 	{
 		 get { } //Length: 8
 	}
 
-	public bool IsCollisionStay
+	public bool isCollisionStay
 	{
 		 get { } //Length: 8
 	}
 
-	public Collider OtherCollider
+	public Collider otherCollider
 	{
-		 get { } //Length: 116
+		 get { } //Length: 88
 	}
 
 	internal int ExtractContactsArray(ContactPoint[] managedContainer, bool flipped) { }
 
-	private static int ExtractContactsArray_Injected(ref ContactPair _unity_self, ContactPoint[] managedContainer, bool flipped) { }
+	public Collider get_collider() { }
 
-	public Collider get_Collider() { }
+	internal bool get_hasRemovedCollider() { }
 
-	internal bool get_HasRemovedCollider() { }
+	public bool get_isCollisionEnter() { }
 
-	public bool get_IsCollisionEnter() { }
+	public bool get_isCollisionExit() { }
 
-	public bool get_IsCollisionExit() { }
+	public bool get_isCollisionStay() { }
 
-	public bool get_IsCollisionStay() { }
+	public Collider get_otherCollider() { }
 
-	public Collider get_OtherCollider() { }
+	public ContactPairPoint GetContactPoint(int index) { }
+
+	internal ContactPairPoint* GetContactPoint_Internal(int index) { }
 
 }
 

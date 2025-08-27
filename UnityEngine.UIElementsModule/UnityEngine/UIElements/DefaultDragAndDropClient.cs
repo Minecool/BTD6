@@ -2,10 +2,10 @@ namespace UnityEngine.UIElements;
 
 internal class DefaultDragAndDropClient : DragAndDropData, IDragAndDrop
 {
-	private readonly Hashtable m_GenericData; //Field offset: 0x10
-	private Label m_DraggedInfoLabel; //Field offset: 0x18
-	private DragVisualMode m_VisualMode; //Field offset: 0x20
-	private IEnumerable<Object> m_UnityObjectReferences; //Field offset: 0x28
+	private readonly Hashtable m_GenericData; //Field offset: 0x18
+	private Label m_DraggedInfoLabel; //Field offset: 0x20
+	private DragVisualMode m_VisualMode; //Field offset: 0x28
+	private IEnumerable<Object> m_UnityObjectReferences; //Field offset: 0x30
 
 	public override DragAndDropData data
 	{

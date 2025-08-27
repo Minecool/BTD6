@@ -28,7 +28,7 @@ public class X509Certificate : ISerializable
 
 	public DSA DSA
 	{
-		 get { } //Length: 867
+		 get { } //Length: 861
 		 set { } //Length: 24
 	}
 
@@ -39,7 +39,7 @@ public class X509Certificate : ISerializable
 
 	public Byte[] Hash
 	{
-		 get { } //Length: 562
+		 get { } //Length: 560
 	}
 
 	public bool IsCurrent
@@ -64,34 +64,34 @@ public class X509Certificate : ISerializable
 
 	public override Byte[] KeyAlgorithmParameters
 	{
-		 get { } //Length: 123
+		 get { } //Length: 121
 		 set { } //Length: 5
 	}
 
 	public override Byte[] PublicKey
 	{
-		 get { } //Length: 123
+		 get { } //Length: 121
 	}
 
 	public override Byte[] RawData
 	{
-		 get { } //Length: 123
+		 get { } //Length: 121
 	}
 
 	public override RSA RSA
 	{
-		 get { } //Length: 503
+		 get { } //Length: 502
 		 set { } //Length: 24
 	}
 
 	public override Byte[] SerialNumber
 	{
-		 get { } //Length: 129
+		 get { } //Length: 124
 	}
 
 	public override Byte[] Signature
 	{
-		 get { } //Length: 1058
+		 get { } //Length: 1053
 	}
 
 	public override string SubjectName

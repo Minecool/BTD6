@@ -23,7 +23,7 @@ public class JsonContainerContract : JsonContract
 	internal JsonContract ItemContract
 	{
 		internal get { } //Length: 8
-		internal set { } //Length: 65
+		internal set { } //Length: 87
 	}
 
 	public JsonConverter ItemConverter

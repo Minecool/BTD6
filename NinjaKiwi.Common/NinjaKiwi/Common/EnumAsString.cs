@@ -3,7 +3,7 @@ namespace NinjaKiwi.Common;
 [AttributeUsage(AttributeTargets::Field (256))]
 public class EnumAsString : PropertyAttribute
 {
-	public Type enumType; //Field offset: 0x10
+	public Type enumType; //Field offset: 0x18
 
 	public EnumAsString(Type enumType) { }
 

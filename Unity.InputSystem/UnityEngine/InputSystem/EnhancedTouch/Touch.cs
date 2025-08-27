@@ -127,7 +127,7 @@ public struct Touch : IEquatable<Touch>
 
 	public static ReadOnlyArray<Finger> fingers
 	{
-		 get { } //Length: 136
+		 get { } //Length: 139
 	}
 
 	public TouchHistory history
@@ -142,7 +142,7 @@ public struct Touch : IEquatable<Touch>
 
 	public bool isInProgress
 	{
-		 get { } //Length: 96
+		 get { } //Length: 97
 	}
 
 	public bool isTap

@@ -8,7 +8,7 @@ public class ActivateAbilityOnRoundStart : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 221
+		 get { } //Length: 217
 	}
 
 	public ActivateAbilityOnRoundStart() { }

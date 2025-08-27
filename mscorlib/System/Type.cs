@@ -3,8 +3,6 @@ namespace System;
 public abstract class Type : MemberInfo
 {
 	private static Binder s_defaultBinder; //Field offset: 0x0
-	private const BindingFlags DefaultLookup = 28; //Field offset: 0x0
-	internal const string DefaultTypeNameWhenMissingMetadata = "UnknownType"; //Field offset: 0x0
 	public static readonly char Delimiter; //Field offset: 0x8
 	public static readonly Type[] EmptyTypes; //Field offset: 0x10
 	public static readonly object Missing; //Field offset: 0x18
@@ -50,7 +48,7 @@ public abstract class Type : MemberInfo
 
 	public static Binder DefaultBinder
 	{
-		 get { } //Length: 223
+		 get { } //Length: 211
 	}
 
 	public abstract string FullName
@@ -135,7 +133,7 @@ public abstract class Type : MemberInfo
 
 	public override bool IsEnum
 	{
-		 get { } //Length: 195
+		 get { } //Length: 119
 	}
 
 	public override bool IsExplicitLayout
@@ -165,7 +163,7 @@ public abstract class Type : MemberInfo
 
 	public override bool IsInterface
 	{
-		 get { } //Length: 199
+		 get { } //Length: 195
 	}
 
 	public override bool IsMarshalByRef
@@ -175,7 +173,7 @@ public abstract class Type : MemberInfo
 
 	public bool IsNested
 	{
-		 get { } //Length: 95
+		 get { } //Length: 61
 	}
 
 	public override bool IsNestedAssembly
@@ -215,7 +213,7 @@ public abstract class Type : MemberInfo
 
 	public override bool IsSerializable
 	{
-		 get { } //Length: 477
+		 get { } //Length: 364
 	}
 
 	public override bool IsSignatureType
@@ -245,7 +243,7 @@ public abstract class Type : MemberInfo
 
 	public bool IsVisible
 	{
-		 get { } //Length: 491
+		 get { } //Length: 457
 	}
 
 	public virtual MemberTypes MemberType
@@ -448,8 +446,6 @@ public abstract class Type : MemberInfo
 
 	public abstract EventInfo GetEvent(string name, BindingFlags bindingAttr) { }
 
-	public override EventInfo GetEvent(string name) { }
-
 	public abstract FieldInfo GetField(string name, BindingFlags bindingAttr) { }
 
 	public override FieldInfo GetField(string name) { }
@@ -490,19 +486,15 @@ public abstract class Type : MemberInfo
 
 	protected abstract MethodInfo GetMethodImpl(string name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers) { }
 
-	public abstract MethodInfo[] GetMethods(BindingFlags bindingAttr) { }
-
 	public override MethodInfo[] GetMethods() { }
+
+	public abstract MethodInfo[] GetMethods(BindingFlags bindingAttr) { }
 
 	public abstract Type GetNestedType(string name, BindingFlags bindingAttr) { }
 
 	public override PropertyInfo[] GetProperties() { }
 
 	public abstract PropertyInfo[] GetProperties(BindingFlags bindingAttr) { }
-
-	public override PropertyInfo GetProperty(string name) { }
-
-	public override PropertyInfo GetProperty(string name, BindingFlags bindingAttr) { }
 
 	public override PropertyInfo GetProperty(string name, Type returnType) { }
 
@@ -512,19 +504,23 @@ public abstract class Type : MemberInfo
 
 	public override PropertyInfo GetProperty(string name, BindingFlags bindingAttr, Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers) { }
 
+	public override PropertyInfo GetProperty(string name) { }
+
+	public override PropertyInfo GetProperty(string name, BindingFlags bindingAttr) { }
+
 	protected abstract PropertyInfo GetPropertyImpl(string name, BindingFlags bindingAttr, Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers) { }
 
 	internal Type GetRootElementType() { }
 
-	public static Type GetType(string typeName, bool throwOnError, bool ignoreCase) { }
+	public override Type GetType() { }
 
-	public static Type GetType(string typeName, bool throwOnError) { }
+	public static Type GetType(string typeName, bool throwOnError, bool ignoreCase) { }
 
 	public static Type GetType(string typeName) { }
 
-	public override Type GetType() { }
-
 	public static Type GetType(string typeName, Func<AssemblyName, Assembly> assemblyResolver, Func<Assembly, String, Boolean, Type> typeResolver, bool throwOnError) { }
+
+	public static Type GetType(string typeName, bool throwOnError) { }
 
 	public static TypeCode GetTypeCode(Type type) { }
 

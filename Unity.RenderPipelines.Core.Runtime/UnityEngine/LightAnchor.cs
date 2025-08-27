@@ -40,7 +40,7 @@ public class LightAnchor : MonoBehaviour
 
 	public Vector3 anchorPosition
 	{
-		 get { } //Length: 405
+		 get { } //Length: 487
 	}
 
 	public Vector3 anchorPositionOffset

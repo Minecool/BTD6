@@ -12,7 +12,7 @@ public class ParagonAssetSwap : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 286
+		 get { } //Length: 274
 	}
 
 	public ParagonAssetSwap() { }

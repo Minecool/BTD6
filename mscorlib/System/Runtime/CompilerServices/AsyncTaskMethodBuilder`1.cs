@@ -13,6 +13,8 @@ public struct AsyncTaskMethodBuilder
 
 	private static AsyncTaskMethodBuilder`1() { }
 
+	public void AwaitOnCompleted(ref TAwaiter awaiter, ref TStateMachine stateMachine) { }
+
 	public void AwaitUnsafeOnCompleted(ref TAwaiter awaiter, ref TStateMachine stateMachine) { }
 
 	public static AsyncTaskMethodBuilder<TResult> Create() { }

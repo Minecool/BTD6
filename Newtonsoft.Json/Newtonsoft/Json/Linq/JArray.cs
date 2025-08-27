@@ -20,7 +20,7 @@ public class JArray : JContainer, IList<JToken>, ICollection<JToken>, IEnumerabl
 	[Nullable(2)]
 	public virtual JToken Item
 	{
-		 get { } //Length: 301
+		 get { } //Length: 289
 	}
 
 	public override JToken Item
@@ -50,15 +50,19 @@ public class JArray : JContainer, IList<JToken>, ICollection<JToken>, IEnumerabl
 
 	public override void CopyTo(JToken[] array, int arrayIndex) { }
 
+	internal virtual bool DeepEquals(JToken node) { }
+
 	protected virtual IList<JToken> get_ChildrenTokens() { }
 
 	public override bool get_IsReadOnly() { }
 
-	public override JToken get_Item(int index) { }
-
 	public virtual JToken get_Item(object key) { }
 
+	public override JToken get_Item(int index) { }
+
 	public virtual JTokenType get_Type() { }
+
+	internal virtual int GetDeepHashCode() { }
 
 	public override IEnumerator<JToken> GetEnumerator() { }
 
@@ -69,9 +73,9 @@ public class JArray : JContainer, IList<JToken>, ICollection<JToken>, IEnumerabl
 
 	public override void Insert(int index, JToken item) { }
 
-	public static JArray Load(JsonReader reader) { }
-
 	public static JArray Load(JsonReader reader, JsonLoadSettings settings) { }
+
+	public static JArray Load(JsonReader reader) { }
 
 	public override bool Remove(JToken item) { }
 

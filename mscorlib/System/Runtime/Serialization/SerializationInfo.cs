@@ -3,9 +3,6 @@ namespace System.Runtime.Serialization;
 [ComVisible(True)]
 public sealed class SerializationInfo
 {
-	private const int defaultSize = 4; //Field offset: 0x0
-	private const string s_mscorlibAssemblySimpleName = "mscorlib"; //Field offset: 0x0
-	private const string s_mscorlibFileName = "mscorlib.dll"; //Field offset: 0x0
 	internal String[] m_members; //Field offset: 0x10
 	internal Object[] m_data; //Field offset: 0x18
 	internal Type[] m_types; //Field offset: 0x20

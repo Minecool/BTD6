@@ -1,17 +1,21 @@
 namespace NinjaKiwi.NKMulti;
 
-public class Message
+public abstract class Message
 {
-	public readonly string Code; //Field offset: 0x10
-	protected Byte[] bytes; //Field offset: 0x18
+	public const int MAX_LENGTH = 32767; //Field offset: 0x0
+	public readonly string code; //Field offset: 0x10
+	public readonly Byte[] bytes; //Field offset: 0x18
 
-	protected Message(string code) { }
+	public int LengthWhenSerialised
+	{
+		 get { } //Length: 41
+	}
 
-	public Message(string code, Byte[] data) { }
+	public Message(string code, Byte[] bytes) { }
 
-	protected override Byte[] CreateBytes() { }
+	public int get_LengthWhenSerialised() { }
 
-	public Byte[] GetBytes() { }
+	protected static int GetMessageHeaderLength(string code) { }
 
 }
 

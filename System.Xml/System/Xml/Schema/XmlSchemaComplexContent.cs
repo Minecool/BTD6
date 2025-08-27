@@ -6,8 +6,8 @@ public class XmlSchemaComplexContent : XmlSchemaContentModel
 	private bool isMixed; //Field offset: 0x58
 	private bool hasMixedAttribute; //Field offset: 0x59
 
-	[XmlElement("extension", typeof(XmlSchemaComplexContentExtension))]
 	[XmlElement("restriction", typeof(XmlSchemaComplexContentRestriction))]
+	[XmlElement("extension", typeof(XmlSchemaComplexContentExtension))]
 	public virtual XmlSchemaContent Content
 	{
 		 get { } //Length: 5

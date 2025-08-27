@@ -25,7 +25,7 @@ public class ParagonDegreeDataModel
 
 	public int MaxInvestment
 	{
-		 get { } //Length: 48
+		 get { } //Length: 45
 	}
 
 	public ParagonDegreeDataModel(Int32[] powerDegreeRequirements, float attackCooldownReductionX, float piercePercentPerDegree, float pierceIncreasePerDegree, float damagePercentPerDegree, float damageIncreasePerDegree, float damageIncreaseForDegrees, int degreeCount, int maxPowerFromPops, int maxPowerFromMoneySpent, int maxPowerFromNonTier5Count, int maxPowerFromTier5Count, float popsOverX, float moneySpentOverX, float nonTier5TowersMultByX, float tier5TowersMultByX, float bonusBossDamagePercent, int bonusBossDamagePerDegrees, float cashEarnedContributionModifier, float paidContributionPenalty) { }

@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class VisualElementFactoryRegistry
 {
 	private static Dictionary<String, List`1<IUxmlFactory>> s_Factories; //Field offset: 0x0
@@ -7,12 +8,14 @@ internal class VisualElementFactoryRegistry
 
 	internal static Dictionary<String, List`1<IUxmlFactory>> factories
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 238
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal static Dictionary<String, List`1<IUxmlFactory>> get_factories() { }
 
-	private static string GetMovedUIControlTypeName(Type type, MovedFromAttribute attr) { }
+	internal static string GetMovedUIControlTypeName(Type type, MovedFromAttribute attr) { }
 
 	private static void RegisterEngineFactories() { }
 
@@ -20,6 +23,7 @@ internal class VisualElementFactoryRegistry
 
 	internal static void RegisterUserFactories() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal static bool TryGetValue(string fullTypeName, out List<IUxmlFactory>& factoryList) { }
 
 }

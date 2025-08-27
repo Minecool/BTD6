@@ -25,7 +25,7 @@ public class OculusRemote : InputDevice
 		[CompilerGenerated]
 		 get { } //Length: 8
 		[CompilerGenerated]
-		 set { } //Length: 95
+		 set { } //Length: 8
 	}
 
 	[InputControl]

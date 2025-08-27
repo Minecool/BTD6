@@ -6,7 +6,7 @@ public class TriggerGameModeBehaviors : SimulationBehavior
 	public bool triggerInfinitRoundsMode; //Field offset: 0x19
 	public bool showCurrentRoundNum; //Field offset: 0x1A
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 131
 	}
@@ -20,7 +20,7 @@ public class TriggerGameModeBehaviors : SimulationBehavior
 
 	public TriggerGameModeBehaviors(bool triggerInfinitHealthMode, bool triggerInfinitRoundsMode, bool showCurrentRoundNum) { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

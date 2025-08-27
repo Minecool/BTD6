@@ -29,7 +29,7 @@ public class SlowBloonsZoneModel : TowerBehaviorModel
 
 	public BehaviorMutator mutator
 	{
-		 get { } //Length: 287
+		 get { } //Length: 289
 	}
 
 	public SlowBloonsZoneModel(string name, float zoneRadius, string mutationId, bool isUnique, FilterModel[] filters, float speedScale, float speedChange, bool bindRadiusToTowerRange, float radiusOffset, string bloonTag, bool inclusive, BehaviorMutator mutator = null) { }

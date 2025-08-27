@@ -4,31 +4,34 @@ namespace UnityEngine.UIElements;
 public class PopupField : BasePopupField<T, T>
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass26_0
+	private sealed class <>c__DisplayClass27_0
 	{
 		public T item; //Field offset: 0x0
 		public PopupField<T> <>4__this; //Field offset: 0x0
 
-		public <>c__DisplayClass26_0() { }
+		public <>c__DisplayClass27_0() { }
 
 		internal void <AddMenuItems>b__0() { }
 
 	}
 
+	internal static readonly BindingId indexProperty; //Field offset: 0x0
 	public static readonly string ussClassName; //Field offset: 0x0
 	public static readonly string labelUssClassName; //Field offset: 0x0
 	public static readonly string inputUssClassName; //Field offset: 0x0
 	private int m_Index; //Field offset: 0x0
 
+	[CreateProperty]
 	public int index
 	{
-		 set { } //Length: 141
+		 get { } //Length: 9
+		 set { } //Length: 249
 	}
 
 	public virtual T value
 	{
 		 get { } //Length: 38
-		 set { } //Length: 110
+		 set { } //Length: 234
 	}
 
 	private static PopupField`1() { }
@@ -38,6 +41,8 @@ public class PopupField : BasePopupField<T, T>
 	internal virtual void AddMenuItems(IGenericMenu menu) { }
 
 	private void ChangeValueFromMenu(T menuItem) { }
+
+	public int get_index() { }
 
 	public virtual T get_value() { }
 

@@ -2,6 +2,19 @@ namespace Assets.Scripts.Unity.UI_New.Main.PowersSelect;
 
 public class PowerSelectButton : MonoBehaviour
 {
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass24_0
+	{
+		public PowerSelectButton <>4__this; //Field offset: 0x10
+		public PowersSelectScreen powersSelectScreen; //Field offset: 0x18
+		public PowerModel powerModel; //Field offset: 0x20
+
+		public <>c__DisplayClass24_0() { }
+
+		internal void <SetPower>b__0(AsyncOperationHandle<GameObject> handle) { }
+
+	}
+
 	internal sealed class SelectHander : MulticastDelegate
 	{
 
@@ -31,7 +44,13 @@ public class PowerSelectButton : MonoBehaviour
 	public GameObject newNotify; //Field offset: 0x78
 	public GameObject defaultBackground; //Field offset: 0x80
 	public GameObject iapBackground; //Field offset: 0x88
-	private int loadIconFrame; //Field offset: 0x90
+	public GameObject animatedIcon; //Field offset: 0x90
+	public GameObject newRibbon; //Field offset: 0x98
+	[Header("Icon background")]
+	public GameObject bgPower; //Field offset: 0xA0
+	public GameObject bgPowerPro; //Field offset: 0xA8
+	public GameObject bgIAP; //Field offset: 0xB0
+	private int loadIconFrame; //Field offset: 0xB8
 
 	public event SelectHander OnSelect
 	{
@@ -44,7 +63,7 @@ public class PowerSelectButton : MonoBehaviour
 	public PowerSelectButton() { }
 
 	[CompilerGenerated]
-	private void <Init>b__17_0(bool selected) { }
+	private void <Init>b__22_0(bool selected) { }
 
 	[CompilerGenerated]
 	public void add_OnSelect(SelectHander value) { }
@@ -54,7 +73,7 @@ public class PowerSelectButton : MonoBehaviour
 	[CompilerGenerated]
 	public void remove_OnSelect(SelectHander value) { }
 
-	public void SetPower(PowerModel powerModel, int loadIconFrame) { }
+	public void SetPower(PowersSelectScreen powersSelectScreen, PowerModel powerModel, int loadIconFrame, Transform animatedIconParent) { }
 
 	private void SetSelected(bool selected) { }
 

@@ -7,7 +7,11 @@ internal class TextEditorEventHandler
 
 	protected TextEditorEventHandler(TextElement textElement, TextEditingUtilities editingUtilities) { }
 
-	public override void ExecuteDefaultActionAtTarget(EventBase evt) { }
+	public override void HandleEventBubbleUp(EventBase evt) { }
+
+	public override void RegisterCallbacksOnTarget(VisualElement target) { }
+
+	public override void UnregisterCallbacksFromTarget(VisualElement target) { }
 
 }
 

@@ -98,7 +98,7 @@ public class ConcurrentQueue : IEnumerable<T>, IEnumerable, ICollection, IReadOn
 
 	public override int Count
 	{
-		 get { } //Length: 725
+		 get { } //Length: 762
 	}
 
 	private override bool System.Collections.ICollection.IsSynchronized

@@ -2,136 +2,346 @@ namespace UnityEngine.Rendering.Universal;
 
 public struct CameraData
 {
-	private Matrix4x4 m_ViewMatrix; //Field offset: 0x0
-	private Matrix4x4 m_ProjectionMatrix; //Field offset: 0x40
-	private Matrix4x4 m_JitterMatrix; //Field offset: 0x80
-	public Camera camera; //Field offset: 0xC0
-	public CameraRenderType renderType; //Field offset: 0xC8
-	public RenderTexture targetTexture; //Field offset: 0xD0
-	public RenderTextureDescriptor cameraTargetDescriptor; //Field offset: 0xD8
-	internal Rect pixelRect; //Field offset: 0x10C
-	internal bool useScreenCoordOverride; //Field offset: 0x11C
-	internal Vector4 screenSizeOverride; //Field offset: 0x120
-	internal Vector4 screenCoordScaleBias; //Field offset: 0x130
-	internal int pixelWidth; //Field offset: 0x140
-	internal int pixelHeight; //Field offset: 0x144
-	internal float aspectRatio; //Field offset: 0x148
-	public float renderScale; //Field offset: 0x14C
-	internal ImageScalingMode imageScalingMode; //Field offset: 0x150
-	internal ImageUpscalingFilter upscalingFilter; //Field offset: 0x154
-	internal bool fsrOverrideSharpness; //Field offset: 0x158
-	internal float fsrSharpness; //Field offset: 0x15C
-	internal HDRColorBufferPrecision hdrColorBufferPrecision; //Field offset: 0x160
-	public bool clearDepth; //Field offset: 0x164
-	public CameraType cameraType; //Field offset: 0x168
-	public bool isDefaultViewport; //Field offset: 0x16C
-	public bool isHdrEnabled; //Field offset: 0x16D
-	public bool allowHDROutput; //Field offset: 0x16E
-	public bool requiresDepthTexture; //Field offset: 0x16F
-	public bool requiresOpaqueTexture; //Field offset: 0x170
-	public bool postProcessingRequiresDepthTexture; //Field offset: 0x171
-	public bool xrRendering; //Field offset: 0x172
-	internal bool stackLastCameraOutputToHDR; //Field offset: 0x173
-	public SortingCriteria defaultOpaqueSortFlags; //Field offset: 0x174
-	[CompilerGenerated]
-	private XRPass <xr>k__BackingField; //Field offset: 0x178
-	[Obsolete("Please use xr.enabled instead.", True)]
-	public bool isStereoEnabled; //Field offset: 0x180
-	public float maxShadowDistance; //Field offset: 0x184
-	public bool postProcessEnabled; //Field offset: 0x188
-	internal bool stackAnyPostProcessingEnabled; //Field offset: 0x189
-	public IEnumerator<Action`2<RenderTargetIdentifier, CommandBuffer>> captureActions; //Field offset: 0x190
-	public LayerMask volumeLayerMask; //Field offset: 0x198
-	public Transform volumeTrigger; //Field offset: 0x1A0
-	public bool isStopNaNEnabled; //Field offset: 0x1A8
-	public bool isDitheringEnabled; //Field offset: 0x1A9
-	public AntialiasingMode antialiasing; //Field offset: 0x1AC
-	public AntialiasingQuality antialiasingQuality; //Field offset: 0x1B0
-	public ScriptableRenderer renderer; //Field offset: 0x1B8
-	public bool resolveFinalTarget; //Field offset: 0x1C0
-	public Vector3 worldSpaceCameraPos; //Field offset: 0x1C4
-	public Color backgroundColor; //Field offset: 0x1D0
-	internal TaaPersistentData taaPersistentData; //Field offset: 0x1E0
-	internal Settings taaSettings; //Field offset: 0x1E8
-	public Camera baseCamera; //Field offset: 0x208
+	private ContextContainer frameData; //Field offset: 0x0
+
+	public bool allowHDROutput
+	{
+		 get { } //Length: 79
+	}
+
+	public AntialiasingMode antialiasing
+	{
+		 get { } //Length: 79
+	}
+
+	public AntialiasingQuality antialiasingQuality
+	{
+		 get { } //Length: 79
+	}
+
+	internal float aspectRatio
+	{
+		internal get { } //Length: 79
+	}
+
+	public Color backgroundColor
+	{
+		 get { } //Length: 79
+	}
+
+	public Camera baseCamera
+	{
+		 get { } //Length: 79
+	}
+
+	public Camera camera
+	{
+		 get { } //Length: 79
+	}
+
+	public RenderTextureDescriptor cameraTargetDescriptor
+	{
+		 get { } //Length: 79
+	}
+
+	public CameraType cameraType
+	{
+		 get { } //Length: 79
+	}
+
+	public IEnumerator<Action`2<RenderTargetIdentifier, CommandBuffer>>& captureActions
+	{
+		 get { } //Length: 79
+	}
+
+	public bool clearDepth
+	{
+		 get { } //Length: 79
+	}
+
+	public SortingCriteria defaultOpaqueSortFlags
+	{
+		 get { } //Length: 79
+	}
+
+	internal bool fsrOverrideSharpness
+	{
+		internal get { } //Length: 79
+	}
+
+	internal float fsrSharpness
+	{
+		internal get { } //Length: 79
+	}
+
+	internal HDRColorBufferPrecision hdrColorBufferPrecision
+	{
+		internal get { } //Length: 79
+	}
 
 	public ColorGamut hdrDisplayColorGamut
 	{
-		 get { } //Length: 137
+		 get { } //Length: 82
 	}
 
 	public HDRDisplayInformation hdrDisplayInformation
 	{
-		 get { } //Length: 299
+		 get { } //Length: 110
+	}
+
+	public UniversalCameraHistory historyManager
+	{
+		 get { } //Length: 79
+	}
+
+	internal ImageScalingMode imageScalingMode
+	{
+		internal get { } //Length: 79
+	}
+
+	public bool isAlphaOutputEnabled
+	{
+		 get { } //Length: 79
+	}
+
+	public bool isDefaultViewport
+	{
+		 get { } //Length: 79
+	}
+
+	public bool isDitheringEnabled
+	{
+		 get { } //Length: 79
+	}
+
+	public bool isHdrEnabled
+	{
+		 get { } //Length: 79
 	}
 
 	public bool isHDROutputActive
 	{
-		 get { } //Length: 169
+		 get { } //Length: 82
 	}
 
 	public bool isPreviewCamera
 	{
-		 get { } //Length: 11
+		 get { } //Length: 82
 	}
 
 	internal bool isRenderPassSupportedCamera
 	{
-		internal get { } //Length: 23
+		internal get { } //Length: 82
 	}
 
 	public bool isSceneViewCamera
 	{
-		 get { } //Length: 11
+		 get { } //Length: 82
+	}
+
+	public bool isStopNaNEnabled
+	{
+		 get { } //Length: 79
+	}
+
+	public float maxShadowDistance
+	{
+		 get { } //Length: 79
+	}
+
+	internal int pixelHeight
+	{
+		internal get { } //Length: 79
+	}
+
+	internal Rect pixelRect
+	{
+		internal get { } //Length: 79
+	}
+
+	internal int pixelWidth
+	{
+		internal get { } //Length: 79
+	}
+
+	public bool postProcessEnabled
+	{
+		 get { } //Length: 79
+	}
+
+	public bool postProcessingRequiresDepthTexture
+	{
+		 get { } //Length: 79
+	}
+
+	public ScriptableRenderer renderer
+	{
+		 get { } //Length: 79
+	}
+
+	public float renderScale
+	{
+		 get { } //Length: 79
 	}
 
 	public bool rendersOverlayUI
 	{
-		 get { } //Length: 104
+		 get { } //Length: 82
+	}
+
+	public CameraRenderType renderType
+	{
+		 get { } //Length: 79
+	}
+
+	public bool requiresDepthTexture
+	{
+		 get { } //Length: 79
+	}
+
+	public bool requiresOpaqueTexture
+	{
+		 get { } //Length: 79
 	}
 
 	internal bool requireSrgbConversion
 	{
-		internal get { } //Length: 443
+		internal get { } //Length: 82
 	}
 
 	internal bool resetHistory
 	{
-		internal get { } //Length: 11
+		internal get { } //Length: 82
+	}
+
+	public bool resolveFinalTarget
+	{
+		 get { } //Length: 79
 	}
 
 	internal bool resolveToScreen
 	{
-		internal get { } //Length: 171
+		internal get { } //Length: 82
 	}
 
-	public int scaledHeight
+	internal Vector4 screenCoordScaleBias
 	{
-		 get { } //Length: 68
+		internal get { } //Length: 79
 	}
 
-	public int scaledWidth
+	internal Vector4 screenSizeOverride
 	{
-		 get { } //Length: 68
+		internal get { } //Length: 79
+	}
+
+	internal TaaHistory taaHistory
+	{
+		internal get { } //Length: 79
+	}
+
+	internal Settings taaSettings
+	{
+		internal get { } //Length: 79
+	}
+
+	public RenderTexture targetTexture
+	{
+		 get { } //Length: 79
+	}
+
+	internal UniversalCameraData universalCameraData
+	{
+		internal get { } //Length: 67
+	}
+
+	internal ImageUpscalingFilter upscalingFilter
+	{
+		internal get { } //Length: 79
+	}
+
+	internal bool useScreenCoordOverride
+	{
+		internal get { } //Length: 79
+	}
+
+	public LayerMask volumeLayerMask
+	{
+		 get { } //Length: 79
+	}
+
+	public Transform volumeTrigger
+	{
+		 get { } //Length: 79
+	}
+
+	public Vector3 worldSpaceCameraPos
+	{
+		 get { } //Length: 79
 	}
 
 	public internal XRPass xr
 	{
-		[CompilerGenerated]
-		[IsReadOnly]
-		 get { } //Length: 8
-		[CompilerGenerated]
-		internal set { } //Length: 8
+		 get { } //Length: 80
+		internal set { } //Length: 92
+	}
+
+	public bool xrRendering
+	{
+		 get { } //Length: 79
 	}
 
 	internal XRPassUniversal xrUniversal
 	{
-		internal get { } //Length: 133
+		internal get { } //Length: 82
 	}
+
+	internal CameraData(ContextContainer frameData) { }
+
+	public bool get_allowHDROutput() { }
+
+	public AntialiasingMode get_antialiasing() { }
+
+	public AntialiasingQuality get_antialiasingQuality() { }
+
+	internal float get_aspectRatio() { }
+
+	public Color get_backgroundColor() { }
+
+	public Camera get_baseCamera() { }
+
+	public Camera get_camera() { }
+
+	public RenderTextureDescriptor get_cameraTargetDescriptor() { }
+
+	public CameraType get_cameraType() { }
+
+	public IEnumerator<Action`2<RenderTargetIdentifier, CommandBuffer>>& get_captureActions() { }
+
+	public bool get_clearDepth() { }
+
+	public SortingCriteria get_defaultOpaqueSortFlags() { }
+
+	internal bool get_fsrOverrideSharpness() { }
+
+	internal float get_fsrSharpness() { }
+
+	internal HDRColorBufferPrecision get_hdrColorBufferPrecision() { }
 
 	public ColorGamut get_hdrDisplayColorGamut() { }
 
 	public HDRDisplayInformation get_hdrDisplayInformation() { }
+
+	public UniversalCameraHistory get_historyManager() { }
+
+	internal ImageScalingMode get_imageScalingMode() { }
+
+	public bool get_isAlphaOutputEnabled() { }
+
+	public bool get_isDefaultViewport() { }
+
+	public bool get_isDitheringEnabled() { }
+
+	public bool get_isHdrEnabled() { }
 
 	public bool get_isHDROutputActive() { }
 
@@ -141,27 +351,71 @@ public struct CameraData
 
 	public bool get_isSceneViewCamera() { }
 
+	public bool get_isStopNaNEnabled() { }
+
+	public float get_maxShadowDistance() { }
+
+	internal int get_pixelHeight() { }
+
+	internal Rect get_pixelRect() { }
+
+	internal int get_pixelWidth() { }
+
+	public bool get_postProcessEnabled() { }
+
+	public bool get_postProcessingRequiresDepthTexture() { }
+
+	public ScriptableRenderer get_renderer() { }
+
+	public float get_renderScale() { }
+
 	public bool get_rendersOverlayUI() { }
+
+	public CameraRenderType get_renderType() { }
+
+	public bool get_requiresDepthTexture() { }
+
+	public bool get_requiresOpaqueTexture() { }
 
 	internal bool get_requireSrgbConversion() { }
 
 	internal bool get_resetHistory() { }
 
+	public bool get_resolveFinalTarget() { }
+
 	internal bool get_resolveToScreen() { }
 
-	public int get_scaledHeight() { }
+	internal Vector4 get_screenCoordScaleBias() { }
 
-	public int get_scaledWidth() { }
+	internal Vector4 get_screenSizeOverride() { }
 
-	[CompilerGenerated]
-	[IsReadOnly]
+	internal TaaHistory get_taaHistory() { }
+
+	internal Settings get_taaSettings() { }
+
+	public RenderTexture get_targetTexture() { }
+
+	internal UniversalCameraData get_universalCameraData() { }
+
+	internal ImageUpscalingFilter get_upscalingFilter() { }
+
+	internal bool get_useScreenCoordOverride() { }
+
+	public LayerMask get_volumeLayerMask() { }
+
+	public Transform get_volumeTrigger() { }
+
+	public Vector3 get_worldSpaceCameraPos() { }
+
 	public XRPass get_xr() { }
+
+	public bool get_xrRendering() { }
 
 	internal XRPassUniversal get_xrUniversal() { }
 
-	public Matrix4x4 GetGPUProjectionMatrix(int viewIndex = 0) { }
-
 	internal Matrix4x4 GetGPUProjectionMatrix(bool renderIntoTexture, int viewIndex = 0) { }
+
+	public Matrix4x4 GetGPUProjectionMatrix(int viewIndex = 0) { }
 
 	public Matrix4x4 GetGPUProjectionMatrixNoJitter(int viewIndex = 0) { }
 
@@ -171,6 +425,7 @@ public struct CameraData
 
 	public Matrix4x4 GetViewMatrix(int viewIndex = 0) { }
 
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public bool IsCameraProjectionMatrixFlipped() { }
 
 	public bool IsHandleYFlipped(RTHandle handle) { }
@@ -179,9 +434,8 @@ public struct CameraData
 
 	internal bool IsTemporalAAEnabled() { }
 
-	internal void PushBuiltinShaderConstantsXR(CommandBuffer cmd, bool renderIntoTexture) { }
+	internal void PushBuiltinShaderConstantsXR(RasterCommandBuffer cmd, bool renderIntoTexture) { }
 
-	[CompilerGenerated]
 	internal void set_xr(XRPass value) { }
 
 	internal void SetViewAndProjectionMatrix(Matrix4x4 viewMatrix, Matrix4x4 projectionMatrix) { }

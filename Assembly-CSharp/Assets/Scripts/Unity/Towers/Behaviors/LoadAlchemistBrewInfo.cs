@@ -10,7 +10,7 @@ public class LoadAlchemistBrewInfo : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 366
+		 get { } //Length: 358
 	}
 
 	public LoadAlchemistBrewInfo() { }

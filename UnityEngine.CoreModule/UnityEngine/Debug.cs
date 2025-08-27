@@ -1,6 +1,8 @@
 namespace UnityEngine;
 
 [NativeHeader("Runtime/Export/Debug/Debug.bindings.h")]
+[NativeHeader("Runtime/Diagnostics/IntegrityCheck.h")]
+[NativeHeader("Runtime/Diagnostics/Validation.h")]
 public class Debug
 {
 	internal static readonly ILogger s_DefaultLogger; //Field offset: 0x0
@@ -27,10 +29,13 @@ public class Debug
 	[RequiredByNativeCode]
 	internal static bool CallOverridenDebugHandler(Exception exception, object obj) { }
 
+	[ExcludeFromDocs]
+	public static void DrawLine(Vector3 start, Vector3 end, Color color) { }
+
 	[FreeFunction("DebugDrawLine", IsThreadSafe = True)]
 	public static void DrawLine(Vector3 start, Vector3 end, Color color, float duration, bool depthTest) { }
 
-	private static void DrawLine_Injected(ref Vector3 start, ref Vector3 end, ref Color color, float duration, bool depthTest) { }
+	private static void DrawLine_Injected(in Vector3 start, in Vector3 end, in Color color, float duration, bool depthTest) { }
 
 	[ExcludeFromDocs]
 	public static void DrawRay(Vector3 start, Vector3 dir, Color color, float duration) { }
@@ -39,6 +44,8 @@ public class Debug
 
 	[ThreadSafe]
 	public static int ExtractStackTraceNoAlloc(Byte* buffer, int bufferMax, string projectFolder) { }
+
+	private static int ExtractStackTraceNoAlloc_Injected(Byte* buffer, int bufferMax, ref ManagedSpanWrapper projectFolder) { }
 
 	public static bool get_isDebugBuild() { }
 
@@ -57,13 +64,13 @@ public class Debug
 	[Conditional("UNITY_ASSERTIONS")]
 	public static void LogAssertionFormat(string format, Object[] args) { }
 
-	public static void LogError(object message) { }
-
 	public static void LogError(object message, object context) { }
 
-	public static void LogErrorFormat(string format, Object[] args) { }
+	public static void LogError(object message) { }
 
 	public static void LogErrorFormat(object context, string format, Object[] args) { }
+
+	public static void LogErrorFormat(string format, Object[] args) { }
 
 	public static void LogException(Exception exception) { }
 
@@ -77,9 +84,9 @@ public class Debug
 
 	public static void LogWarning(object message) { }
 
-	public static void LogWarningFormat(object context, string format, Object[] args) { }
-
 	public static void LogWarningFormat(string format, Object[] args) { }
+
+	public static void LogWarningFormat(object context, string format, Object[] args) { }
 
 }
 

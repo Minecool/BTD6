@@ -25,13 +25,14 @@ public abstract class BehaviorMutator
 	public bool isGeraldoBuff; //Field offset: 0x51
 	public bool isArtifactMutator; //Field offset: 0x52
 	public bool dontRemoveOnBloonDegrade; //Field offset: 0x53
+	public bool cantBeAbsorbed; //Field offset: 0x54
 	public List<MutationLimiter> limiters; //Field offset: 0x58
 	private Dictionary<Model, Model> resultCache; //Field offset: 0x60
 	private HashSet<ObjectId> mutated; //Field offset: 0x68
 
 	private static BehaviorMutator() { }
 
-	protected BehaviorMutator(string id, bool isUnique = true, int priority = 1, bool lastAppliesFirst = false, BuffIndicatorModel buffIndicator = null, int stackCount = 0, string saveId = null, bool isArtifactMutator = false, bool dontRemoveOnBloonDegrade = false) { }
+	protected BehaviorMutator(string id, bool isUnique = true, int priority = 1, bool lastAppliesFirst = false, BuffIndicatorModel buffIndicator = null, int stackCount = 0, string saveId = null, bool isArtifactMutator = false, bool dontRemoveOnBloonDegrade = false, bool cantBeAbsorbed = false) { }
 
 	public void AddMutating(Mutable mutable) { }
 
@@ -39,7 +40,7 @@ public abstract class BehaviorMutator
 
 	public override bool CountBuffTowardsAchievement() { }
 
-	protected void Initialise(string id, int stackCount, int priority, bool lastAppliesFirst, BuffIndicatorModel buffIndicator, string saveId, bool isArtifactMutator, bool dontRemoveOnBloonDegrade) { }
+	protected void Initialise(string id, int stackCount, int priority, bool lastAppliesFirst, BuffIndicatorModel buffIndicator, string saveId, bool isArtifactMutator, bool dontRemoveOnBloonDegrade, bool cantBeAbsorbed) { }
 
 	public bool Match(string checkId) { }
 

@@ -6,7 +6,7 @@ public class ToggleSplitter : Splitter
 
 	public virtual SplitterModel Def
 	{
-		 get { } //Length: 507
+		 get { } //Length: 498
 	}
 
 	public ToggleSplitter() { }

@@ -8,7 +8,7 @@ public class MonkeyCityIncomeSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 186
+		 get { } //Length: 220
 	}
 
 	public MonkeyCityIncomeSupport() { }

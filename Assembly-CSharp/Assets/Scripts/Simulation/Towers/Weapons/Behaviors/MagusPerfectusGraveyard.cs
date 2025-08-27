@@ -6,17 +6,17 @@ public class MagusPerfectusGraveyard : WeaponBehavior
 
 	private MagusPerfectusGraveyardStateManager GraveyardManager
 	{
-		private get { } //Length: 170
+		private get { } //Length: 180
 	}
 
 	private Tower ParagonTower
 	{
-		private get { } //Length: 160
+		private get { } //Length: 170
 	}
 
 	private ObjectId ParagonTowerId
 	{
-		private get { } //Length: 123
+		private get { } //Length: 133
 	}
 
 	public MagusPerfectusGraveyard() { }

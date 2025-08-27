@@ -53,12 +53,12 @@ public class AdoraSunGodTransformationModel : TowerBehaviorModel
 
 	public DarkMutator darkMutator
 	{
-		 get { } //Length: 229
+		 get { } //Length: 231
 	}
 
 	public Mutator regularMutator
 	{
-		 get { } //Length: 226
+		 get { } //Length: 230
 	}
 
 	public AdoraSunGodTransformationModel(string name, AssetPathModel newDisplayPath, int damageBonus, int pierceBonus, int ballOfLightDamageBonus, int ballOfLightPierceBonus, int upgradeAnimation, float weaponDelay, EffectModel effectModel, SpriteReference portraitRef, AssetPathModel newDisplayDarkPath, AssetPathModel projectileDisplayDarkPath, AssetPathModel bolDisplayDarkPath, AssetPathModel bolProjectileDisplayDarkPath, AssetPathModel laolProjectileDisplayDarkPath, EffectModel effectDarkModel, SpriteReference portraitDarkRef, AssetPathModel beamHitDisplayDarkPath, int upgradeAnimationDarkPath, LongArmOfLightModel longArmOfLightBehaviorModel, TowerModel ballOfLightModel, AdoraTransformSoundModel adoraTransformSoundModel) { }

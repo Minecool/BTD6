@@ -97,18 +97,18 @@ public class PropertyDescriptorCollection : ICollection, IEnumerable, IList, IDi
 
 	private override object System.Collections.IDictionary.Item
 	{
-		private get { } //Length: 141
-		private set { } //Length: 1091
+		private get { } //Length: 92
+		private set { } //Length: 1047
 	}
 
 	private override ICollection System.Collections.IDictionary.Keys
 	{
-		private get { } //Length: 172
+		private get { } //Length: 189
 	}
 
 	private override ICollection System.Collections.IDictionary.Values
 	{
-		private get { } //Length: 201
+		private get { } //Length: 199
 	}
 
 	private override bool System.Collections.IList.IsFixedSize
@@ -124,7 +124,7 @@ public class PropertyDescriptorCollection : ICollection, IEnumerable, IList, IDi
 	private override object System.Collections.IList.Item
 	{
 		private get { } //Length: 20
-		private set { } //Length: 543
+		private set { } //Length: 531
 	}
 
 	private static PropertyDescriptorCollection() { }

@@ -3,24 +3,13 @@ namespace Assets.Scripts.Unity.Bridge;
 public class AnalyticsGameSessionInfo
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass90_0
-	{
-		public int playerId; //Field offset: 0x10
-
-		public <>c__DisplayClass90_0() { }
-
-		internal long <GetTotalDamageDoneByPlayerId>b__0(TowerPopInfo t) { }
-
-	}
-
-	[CompilerGenerated]
 	private sealed class <>c__DisplayClass91_0
 	{
 		public int playerId; //Field offset: 0x10
 
 		public <>c__DisplayClass91_0() { }
 
-		internal bool <GetTowersPlacedByPlayerId>b__0(TowerPlaceInfo t) { }
+		internal long <GetTotalDamageDoneByPlayerId>b__0(TowerPopInfo t) { }
 
 	}
 
@@ -31,7 +20,7 @@ public class AnalyticsGameSessionInfo
 
 		public <>c__DisplayClass92_0() { }
 
-		internal bool <GetPowersActivatedByPlayerId>b__0(PowerActivateInfo p) { }
+		internal bool <GetTowersPlacedByPlayerId>b__0(TowerPlaceInfo t) { }
 
 	}
 
@@ -41,6 +30,17 @@ public class AnalyticsGameSessionInfo
 		public int playerId; //Field offset: 0x10
 
 		public <>c__DisplayClass93_0() { }
+
+		internal bool <GetPowersActivatedByPlayerId>b__0(PowerActivateInfo p) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass94_0
+	{
+		public int playerId; //Field offset: 0x10
+
+		public <>c__DisplayClass94_0() { }
 
 		internal bool <GetAbilitiesActivatedByPlayerId>b__0(AbilityActivateInfo a) { }
 
@@ -74,6 +74,7 @@ public class AnalyticsGameSessionInfo
 		public double cashBefore; //Field offset: 0x30
 		public double cashAfter; //Field offset: 0x38
 		public float createdAt; //Field offset: 0x40
+		public bool powersPro; //Field offset: 0x44
 
 		public BaseTowerUpgradeInfo() { }
 
@@ -278,6 +279,7 @@ public class AnalyticsGameSessionInfo
 	public bool studentLoans; //Field offset: 0x1C8
 	public int gluedBloons; //Field offset: 0x1CC
 	public double cashSpentThisRound; //Field offset: 0x1D0
+	public int caveMonkeyRestingPlaceHits; //Field offset: 0x1D8
 
 	[JsonIgnore]
 	public float CurrentSessionLength

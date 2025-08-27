@@ -49,7 +49,7 @@ public class Exception : ISerializable
 
 	public override string Message
 	{
-		 get { } //Length: 239
+		 get { } //Length: 235
 	}
 
 	public override string Source
@@ -85,8 +85,6 @@ public class Exception : ISerializable
 	public override string get_Source() { }
 
 	public override string get_StackTrace() { }
-
-	public override Exception GetBaseException() { }
 
 	private string GetClassName() { }
 

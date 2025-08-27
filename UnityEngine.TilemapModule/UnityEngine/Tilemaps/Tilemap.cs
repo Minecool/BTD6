@@ -1,10 +1,10 @@
 namespace UnityEngine.Tilemaps;
 
+[NativeHeader("Modules/Tilemap/Public/TilemapMarshalling.h")]
 [NativeHeader("Modules/Grid/Public/GridMarshalling.h")]
 [NativeHeader("Modules/Grid/Public/Grid.h")]
 [NativeHeader("Runtime/Graphics/SpriteFrame.h")]
 [NativeHeader("Modules/Tilemap/Public/TilemapTile.h")]
-[NativeHeader("Modules/Tilemap/Public/TilemapMarshalling.h")]
 [NativeType(Header = "Modules/Tilemap/Public/Tilemap.h")]
 [RequireComponent(typeof(Transform))]
 public sealed class Tilemap : GridLayout
@@ -32,12 +32,18 @@ public sealed class Tilemap : GridLayout
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private static Action<Tilemap, NativeArray`1<Vector3Int>> tilemapPositionsChanged; //Field offset: 0x8
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private static Action<Tilemap, NativeArray`1<Vector3Int>> loopEndedForTileAnimation; //Field offset: 0x10
 	private bool m_BufferSyncTile; //Field offset: 0x18
 
 	internal bool bufferSyncTile
 	{
 		internal get { } //Length: 7
 	}
+
+	[RequiredByNativeCode]
+	private void DoLoopEndedForTileAnimationCallback(int count, IntPtr positionsIntPtr) { }
 
 	[RequiredByNativeCode]
 	private void DoPositionsChangedCallback(int count, IntPtr positionsIntPtr) { }
@@ -48,11 +54,18 @@ public sealed class Tilemap : GridLayout
 	internal bool get_bufferSyncTile() { }
 
 	[RequiredByNativeCode]
+	internal void GetLoopEndedForTileAnimationCallbackSettings(ref bool hasEndLoopForTileAnimationCallback) { }
+
+	[RequiredByNativeCode]
 	internal void GetSyncTileCallbackSettings(ref SyncTileCallbackSettings settings) { }
+
+	private void HandleLoopEndedForTileAnimationCallback(int count, IntPtr positionsIntPtr) { }
 
 	private void HandlePositionsChangedCallback(int count, IntPtr positionsIntPtr) { }
 
 	private void HandleSyncTileCallback(SyncTile[] syncTiles) { }
+
+	internal static bool HasLoopEndedForTileAnimationCallback() { }
 
 	internal static bool HasPositionsChangedCallback() { }
 
@@ -61,10 +74,14 @@ public sealed class Tilemap : GridLayout
 	[NativeMethod(Name = "RefreshTileAsset")]
 	public void RefreshTile(Vector3Int position) { }
 
-	private void RefreshTile_Injected(ref Vector3Int position) { }
+	private static void RefreshTile_Injected(IntPtr _unity_self, in Vector3Int position) { }
 
 	[FreeFunction(Name = "TilemapBindings::RefreshTileAssetsNative", HasExplicitThis = True)]
 	internal void RefreshTilesNative(Void* positions, int count) { }
+
+	private static void RefreshTilesNative_Injected(IntPtr _unity_self, Void* positions, int count) { }
+
+	private void SendLoopEndedForTileAnimationCallback(NativeArray<Vector3Int> positions) { }
 
 	private void SendTilemapPositionsChangedCallback(NativeArray<Vector3Int> positions) { }
 

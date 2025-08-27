@@ -40,6 +40,17 @@ public class QuestBrowserScreen : GameMenu
 	}
 
 	[CompilerGenerated]
+	private sealed class <>c__DisplayClass14_0
+	{
+		public QuestDetails tutorialQuest; //Field offset: 0x10
+
+		public <>c__DisplayClass14_0() { }
+
+		internal bool <SortQuests>b__1(QuestPanel q) { }
+
+	}
+
+	[CompilerGenerated]
 	private sealed class <>c__DisplayClass8_0
 	{
 		public TabButton tabCategory; //Field offset: 0x10

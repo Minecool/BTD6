@@ -10,7 +10,7 @@ public class OnRoundEndedTrigger : EntityTrigger
 
 	protected virtual void OnDestroy() { }
 
-	private void OnRoundEnd(int round) { }
+	private void OnRoundEnd(int roundIndex) { }
 
 	public virtual void UpdatedModel(Model modelToUse) { }
 

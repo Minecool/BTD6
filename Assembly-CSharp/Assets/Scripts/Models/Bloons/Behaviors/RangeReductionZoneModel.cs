@@ -18,7 +18,7 @@ public class RangeReductionZoneModel : BloonBehaviorModel
 
 	public RangeMutator Mutator
 	{
-		 get { } //Length: 248
+		 get { } //Length: 252
 	}
 
 	public RangeReductionZoneModel() { }

@@ -10,7 +10,7 @@ public struct AvailabilityScore : IComparable<AvailabilityScore>
 
 	public static AvailabilityScore Zero
 	{
-		 get { } //Length: 69
+		 get { } //Length: 36
 	}
 
 	private static AvailabilityScore() { }

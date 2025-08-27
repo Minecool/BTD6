@@ -11,7 +11,7 @@ public class JTokenWriter : JsonWriter
 
 	public JToken Token
 	{
-		 get { } //Length: 17
+		 get { } //Length: 14
 	}
 
 	public JTokenWriter() { }

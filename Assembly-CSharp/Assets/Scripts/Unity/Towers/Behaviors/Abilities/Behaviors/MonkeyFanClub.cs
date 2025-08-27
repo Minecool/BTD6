@@ -45,7 +45,7 @@ public class MonkeyFanClub : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 1472
+		 get { } //Length: 1462
 	}
 
 	public MonkeyFanClub() { }

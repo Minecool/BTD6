@@ -10,18 +10,26 @@ internal static class PropertyBagStore
 
 	private static readonly ConcurrentDictionary<Type, IPropertyBag> s_PropertyBags; //Field offset: 0x0
 	private static readonly List<Type> s_RegisteredTypes; //Field offset: 0x8
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private static Action<Type, IPropertyBag> NewTypeRegistered; //Field offset: 0x10
-	private static ReflectedPropertyBagProvider s_PropertyBagProvider; //Field offset: 0x18
+	private static ReflectedPropertyBagProvider s_PropertyBagProvider; //Field offset: 0x10
+
+	private static ReflectedPropertyBagProvider ReflectedPropertyBagProvider
+	{
+		private get { } //Length: 173
+	}
 
 	private static PropertyBagStore() { }
 
 	internal static void AddPropertyBag(IPropertyBag<TContainer> propertyBag) { }
 
+	internal static void CreatePropertyBagProvider() { }
+
+	private static ReflectedPropertyBagProvider get_ReflectedPropertyBagProvider() { }
+
 	internal static IPropertyBag<TContainer> GetPropertyBag() { }
 
 	internal static IPropertyBag GetPropertyBag(Type type) { }
+
+	internal static bool TryGetPropertyBagForValue(ref TValue value, out IPropertyBag propertyBag) { }
 
 }
 

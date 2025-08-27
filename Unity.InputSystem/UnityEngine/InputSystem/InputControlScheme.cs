@@ -31,7 +31,7 @@ public struct InputControlScheme : IEquatable<InputControlScheme>
 
 		public bool isOptional
 		{
-			 get { } //Length: 8
+			 get { } //Length: 7
 			 set { } //Length: 25
 		}
 
@@ -82,12 +82,12 @@ public struct InputControlScheme : IEquatable<InputControlScheme>
 
 			public override Match Current
 			{
-				 get { } //Length: 166
+				 get { } //Length: 151
 			}
 
 			private override object System.Collections.IEnumerator.Current
 			{
-				private get { } //Length: 224
+				private get { } //Length: 197
 			}
 
 			public override void Dispose() { }
@@ -120,7 +120,7 @@ public struct InputControlScheme : IEquatable<InputControlScheme>
 
 			public bool isOptional
 			{
-				 get { } //Length: 53
+				 get { } //Length: 62
 			}
 
 			public DeviceRequirement requirement
@@ -160,7 +160,7 @@ public struct InputControlScheme : IEquatable<InputControlScheme>
 
 		public InputControlList<InputDevice> devices
 		{
-			 get { } //Length: 320
+			 get { } //Length: 291
 		}
 
 		public bool hasMissingOptionalDevices
@@ -180,7 +180,7 @@ public struct InputControlScheme : IEquatable<InputControlScheme>
 
 		public Match Item
 		{
-			 get { } //Length: 153
+			 get { } //Length: 151
 		}
 
 		public float score
@@ -245,7 +245,7 @@ public struct InputControlScheme : IEquatable<InputControlScheme>
 
 	public string bindingGroup
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 		 set { } //Length: 5
 	}
 

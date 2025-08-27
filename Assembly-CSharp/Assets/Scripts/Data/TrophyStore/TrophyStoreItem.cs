@@ -41,5 +41,7 @@ public class TrophyStoreItem : ScriptableObject
 
 	public TrophyItemType GetPrimaryItemType() { }
 
+	public bool IsIapStoreItem() { }
+
 }
 

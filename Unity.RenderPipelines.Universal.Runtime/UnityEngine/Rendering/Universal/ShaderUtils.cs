@@ -15,7 +15,14 @@ public static class ShaderUtils
 
 	private static readonly String[] s_ShaderPaths; //Field offset: 0x0
 
+	internal static float PersistentDeltaTime
+	{
+		internal get { } //Length: 7
+	}
+
 	private static ShaderUtils() { }
+
+	internal static float get_PersistentDeltaTime() { }
 
 	public static ShaderPathID GetEnumFromPath(string path) { }
 

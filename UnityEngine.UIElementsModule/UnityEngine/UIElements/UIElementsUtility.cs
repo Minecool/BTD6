@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class UIElementsUtility : IUIElementsUtility
 {
 	private static Stack<IMGUIContainer> s_ContainerStack; //Field offset: 0x0
@@ -7,6 +8,7 @@ internal class UIElementsUtility : IUIElementsUtility
 	private static Event s_EventInstance; //Field offset: 0x10
 	internal static Color editorPlayModeTintColor; //Field offset: 0x18
 	internal static float singleLineHeight; //Field offset: 0x28
+	internal static bool s_EnableOSXContextualMenuEventsOnNonOSXPlatforms; //Field offset: 0x2C
 	private static UIElementsUtility s_Instance; //Field offset: 0x30
 	internal static List<Panel> s_PanelsIterationList; //Field offset: 0x38
 	internal static readonly string s_RepaintProfilerMarkerName; //Field offset: 0x40
@@ -14,6 +16,11 @@ internal class UIElementsUtility : IUIElementsUtility
 	private static readonly ProfilerMarker s_RepaintProfilerMarker; //Field offset: 0x50
 	private static readonly ProfilerMarker s_EventProfilerMarker; //Field offset: 0x58
 	internal static Char[] s_Modifiers; //Field offset: 0x60
+
+	public static bool isOSXContextualMenuPlatform
+	{
+		 get { } //Length: 144
+	}
 
 	private static UIElementsUtility() { }
 
@@ -28,6 +35,8 @@ internal class UIElementsUtility : IUIElementsUtility
 	private static bool DoDispatch(BaseVisualElementPanel panel) { }
 
 	internal static void EndContainerGUI(Event evt, Rect layoutSize) { }
+
+	public static bool get_isOSXContextualMenuPlatform() { }
 
 	internal static void GetAllPanels(List<Panel> panels, ContextType contextType) { }
 

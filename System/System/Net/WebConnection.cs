@@ -93,7 +93,7 @@ internal class WebConnection : IDisposable
 
 	public bool Closed
 	{
-		 get { } //Length: 590
+		 get { } //Length: 638
 	}
 
 	public DateTime IdleSince

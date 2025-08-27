@@ -9,7 +9,7 @@ public struct Scene
 
 	internal string guid
 	{
-		internal get { } //Length: 49
+		internal get { } //Length: 11
 	}
 
 	public int handle
@@ -24,7 +24,7 @@ public struct Scene
 
 	public string name
 	{
-		 get { } //Length: 49
+		 get { } //Length: 11
 	}
 
 	public int rootCount
@@ -47,6 +47,8 @@ public struct Scene
 	[StaticAccessor("SceneBindings", StaticAccessorType::DoubleColon (2))]
 	private static string GetGUIDInternal(int sceneHandle) { }
 
+	private static void GetGUIDInternal_Injected(int sceneHandle, out ManagedSpanWrapper ret) { }
+
 	public virtual int GetHashCode() { }
 
 	[StaticAccessor("SceneBindings", StaticAccessorType::DoubleColon (2))]
@@ -54,6 +56,8 @@ public struct Scene
 
 	[StaticAccessor("SceneBindings", StaticAccessorType::DoubleColon (2))]
 	private static string GetNameInternal(int sceneHandle) { }
+
+	private static void GetNameInternal_Injected(int sceneHandle, out ManagedSpanWrapper ret) { }
 
 	[StaticAccessor("SceneBindings", StaticAccessorType::DoubleColon (2))]
 	private static int GetRootCountInternal(int sceneHandle) { }

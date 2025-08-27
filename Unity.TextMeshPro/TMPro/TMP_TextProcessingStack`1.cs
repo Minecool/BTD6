@@ -18,7 +18,7 @@ public struct TMP_TextProcessingStack
 
 	public T current
 	{
-		 get { } //Length: 69
+		 get { } //Length: 68
 	}
 
 	public int rolloverSize

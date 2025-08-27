@@ -115,7 +115,7 @@ public abstract class TextWriter : MarshalByRefObject, IDisposable, IAsyncDispos
 
 	public override IFormatProvider FormatProvider
 	{
-		 get { } //Length: 87
+		 get { } //Length: 84
 	}
 
 	public override string NewLine

@@ -18,7 +18,7 @@ public class PlacementAreaTypeRangeBuffModel : PlacementBehaviorModel
 
 	public RangeMutator Mutator
 	{
-		 get { } //Length: 233
+		 get { } //Length: 237
 	}
 
 	public PlacementAreaTypeRangeBuffModel(string name, float rangeMultiplier) { }

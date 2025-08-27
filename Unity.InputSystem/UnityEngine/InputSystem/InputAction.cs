@@ -15,7 +15,7 @@ public sealed class InputAction : ICloneable, IDisposable
 
 		public InputAction action
 		{
-			 get { } //Length: 79
+			 get { } //Length: 78
 		}
 
 		private int actionIndex
@@ -30,12 +30,12 @@ public sealed class InputAction : ICloneable, IDisposable
 
 		public bool canceled
 		{
-			 get { } //Length: 63
+			 get { } //Length: 60
 		}
 
 		public InputControl control
 		{
-			 get { } //Length: 108
+			 get { } //Length: 101
 		}
 
 		private int controlIndex
@@ -45,7 +45,7 @@ public sealed class InputAction : ICloneable, IDisposable
 
 		public double duration
 		{
-			 get { } //Length: 111
+			 get { } //Length: 109
 		}
 
 		public IInputInteraction interaction
@@ -60,37 +60,37 @@ public sealed class InputAction : ICloneable, IDisposable
 
 		public bool performed
 		{
-			 get { } //Length: 63
+			 get { } //Length: 60
 		}
 
 		public InputActionPhase phase
 		{
-			 get { } //Length: 51
+			 get { } //Length: 50
 		}
 
 		public bool started
 		{
-			 get { } //Length: 63
+			 get { } //Length: 60
 		}
 
 		public double startTime
 		{
-			 get { } //Length: 54
+			 get { } //Length: 53
 		}
 
 		public double time
 		{
-			 get { } //Length: 54
+			 get { } //Length: 53
 		}
 
 		public int valueSizeInBytes
 		{
-			 get { } //Length: 129
+			 get { } //Length: 131
 		}
 
 		public Type valueType
 		{
-			 get { } //Length: 132
+			 get { } //Length: 131
 		}
 
 		public InputAction get_action() { }
@@ -137,6 +137,8 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	}
 
+	private static readonly ProfilerMarker k_InputActionEnableProfilerMarker; //Field offset: 0x0
+	private static readonly ProfilerMarker k_InputActionDisableProfilerMarker; //Field offset: 0x8
 	[SerializeField]
 	[Tooltip("Human readable name of the action. Must be unique within its action map (case is ignored). Can be changed without breaking references to the action.")]
 	internal string m_Name; //Field offset: 0x10
@@ -189,12 +191,12 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public InputActionMap actionMap
 	{
-		 get { } //Length: 26
+		 get { } //Length: 21
 	}
 
 	public InputControl activeControl
 	{
-		 get { } //Length: 126
+		 get { } //Length: 127
 	}
 
 	public Type activeValueType
@@ -205,7 +207,7 @@ public sealed class InputAction : ICloneable, IDisposable
 	public Nullable<InputBinding> bindingMask
 	{
 		 get { } //Length: 60
-		 set { } //Length: 601
+		 set { } //Length: 607
 	}
 
 	public ReadOnlyArray<InputBinding> bindings
@@ -215,17 +217,17 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public ReadOnlyArray<InputControl> controls
 	{
-		 get { } //Length: 220
+		 get { } //Length: 218
 	}
 
 	private TriggerState currentState
 	{
-		private get { } //Length: 134
+		private get { } //Length: 129
 	}
 
 	public bool enabled
 	{
-		 get { } //Length: 96
+		 get { } //Length: 95
 	}
 
 	public string expectedControlType
@@ -236,7 +238,7 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public Guid id
 	{
-		 get { } //Length: 110
+		 get { } //Length: 102
 	}
 
 	internal Guid idDontGenerate
@@ -246,7 +248,7 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public bool inProgress
 	{
-		 get { } //Length: 85
+		 get { } //Length: 82
 	}
 
 	public string interactions
@@ -256,7 +258,7 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	internal bool isSingletonAction
 	{
-		internal get { } //Length: 28
+		internal get { } //Length: 23
 	}
 
 	public string name
@@ -266,7 +268,7 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public InputActionPhase phase
 	{
-		 get { } //Length: 92
+		 get { } //Length: 89
 	}
 
 	public string processors
@@ -276,7 +278,7 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public bool triggered
 	{
-		 get { } //Length: 141
+		 get { } //Length: 128
 	}
 
 	public InputActionType type
@@ -286,9 +288,11 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public bool wantsInitialStateCheck
 	{
-		 get { } //Length: 17
+		 get { } //Length: 16
 		 set { } //Length: 25
 	}
+
+	private static InputAction() { }
 
 	public InputAction(string name = null, InputActionType type = 0, string binding = null, string interactions = null, string processors = null, string expectedControlType = null) { }
 
@@ -315,6 +319,8 @@ public sealed class InputAction : ICloneable, IDisposable
 	public override void Dispose() { }
 
 	public void Enable() { }
+
+	private int ExpectedFrame() { }
 
 	internal Nullable<InputBinding> FindEffectiveBindingMask() { }
 
@@ -396,11 +402,19 @@ public sealed class InputAction : ICloneable, IDisposable
 
 	public virtual string ToString() { }
 
+	public bool WasCompletedThisDynamicUpdate() { }
+
 	public bool WasCompletedThisFrame() { }
+
+	public bool WasPerformedThisDynamicUpdate() { }
 
 	public bool WasPerformedThisFrame() { }
 
+	public bool WasPressedThisDynamicUpdate() { }
+
 	public bool WasPressedThisFrame() { }
+
+	public bool WasReleasedThisDynamicUpdate() { }
 
 	public bool WasReleasedThisFrame() { }
 

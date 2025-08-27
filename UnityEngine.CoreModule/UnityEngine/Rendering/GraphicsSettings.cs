@@ -4,21 +4,40 @@ namespace UnityEngine.Rendering;
 [StaticAccessor("GetGraphicsSettings()", StaticAccessorType::Dot (0))]
 public sealed class GraphicsSettings : object
 {
+	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal RenderPipelineGlobalSettings <.cctor>b__93_0() { }
+
+	}
+
+	private static Lazy<RenderPipelineGlobalSettings> s_CurrentRenderPipelineGlobalSettings; //Field offset: 0x0
 
 	public static RenderPipelineAsset currentRenderPipeline
 	{
-		 get { } //Length: 152
+		 get { } //Length: 155
 	}
 
-	public static uint defaultRenderingLayerMask
+	public static Type currentRenderPipelineAssetType
 	{
-		 set { } //Length: 49
+		 get { } //Length: 225
 	}
 
 	[NativeName("CurrentRenderPipeline")]
 	private static ScriptableObject INTERNAL_currentRenderPipeline
 	{
-		private get { } //Length: 42
+		private get { } //Length: 117
+	}
+
+	public static bool isScriptableRenderPipelineEnabled
+	{
+		 get { } //Length: 116
 	}
 
 	public static bool lightsUseColorTemperature
@@ -37,27 +56,42 @@ public sealed class GraphicsSettings : object
 		 set { } //Length: 51
 	}
 
+	private static GraphicsSettings() { }
+
 	public static RenderPipelineAsset get_currentRenderPipeline() { }
+
+	public static Type get_currentRenderPipelineAssetType() { }
 
 	private static ScriptableObject get_INTERNAL_currentRenderPipeline() { }
 
+	private static IntPtr get_INTERNAL_currentRenderPipeline_Injected() { }
+
+	public static bool get_isScriptableRenderPipelineEnabled() { }
+
 	public static bool get_lightsUseLinearIntensity() { }
 
-	public static RenderPipelineGlobalSettings GetSettingsForRenderPipeline() { }
+	[RequiredByNativeCode]
+	[VisibleToOtherModules]
+	internal static Material GetDefaultMaterial(DefaultMaterialType type) { }
 
-	[NativeName("GetSettingsForRenderPipeline")]
-	private static object GetSettingsForRenderPipeline(string renderpipelineName) { }
+	[RequiredByNativeCode]
+	[VisibleToOtherModules]
+	internal static Shader GetDefaultShader(DefaultShaderType type) { }
+
+	public static T GetRenderPipelineSettings() { }
+
+	public static RenderPipelineGlobalSettings GetSettingsForRenderPipeline() { }
 
 	public static bool HasShaderDefine(GraphicsTier tier, BuiltinShaderDefine defineHash) { }
 
 	public static bool HasShaderDefine(BuiltinShaderDefine defineHash) { }
 
-	[NativeName("RegisterRenderPipelineSettings")]
-	private static void RegisterRenderPipeline(string renderpipelineName, object settings) { }
+	private static RenderPipelineGlobalSettings Internal_GetCurrentRenderPipelineGlobalSettings() { }
 
-	public static void RegisterRenderPipelineSettings(RenderPipelineGlobalSettings settings) { }
+	[NativeName("GetSettingsForRenderPipeline")]
+	private static object Internal_GetSettingsForRenderPipeline(string renderpipelineName) { }
 
-	public static void set_defaultRenderingLayerMask(uint value) { }
+	private static IntPtr Internal_GetSettingsForRenderPipeline_Injected(ref ManagedSpanWrapper renderpipelineName) { }
 
 	public static void set_lightsUseColorTemperature(bool value) { }
 
@@ -65,10 +99,9 @@ public sealed class GraphicsSettings : object
 
 	public static void set_useScriptableRenderPipelineBatching(bool value) { }
 
-	[NativeName("UnregisterRenderPipelineSettings")]
-	private static void UnregisterRenderPipeline(string renderpipelineName) { }
+	public static bool TryGetCurrentRenderPipelineGlobalSettings(out RenderPipelineGlobalSettings asset) { }
 
-	public static void UnregisterRenderPipelineSettings() { }
+	public static bool TryGetRenderPipelineSettings(out T settings) { }
 
 }
 

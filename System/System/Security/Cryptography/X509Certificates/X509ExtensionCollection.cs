@@ -18,7 +18,7 @@ public sealed class X509ExtensionCollection : ICollection, IEnumerable
 
 	public X509Extension Item
 	{
-		 get { } //Length: 637
+		 get { } //Length: 670
 	}
 
 	public override object SyncRoot

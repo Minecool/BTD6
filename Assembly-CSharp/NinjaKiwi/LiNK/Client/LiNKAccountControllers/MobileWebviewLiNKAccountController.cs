@@ -6,18 +6,26 @@ public class MobileWebviewLiNKAccountController
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Action <>9__24_0; //Field offset: 0x8
+		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"parameterName", "parameterValue"}])]
+		public static Func<ValueTuple`2<String, String>, Boolean> <>9__16_0; //Field offset: 0x8
+		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"parameterName", "parameterValue"}])]
+		public static Func<ValueTuple`2<String, String>, String> <>9__16_1; //Field offset: 0x10
+		public static Action <>9__26_0; //Field offset: 0x18
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <MonitorWebviewEvents>b__24_0() { }
+		internal bool <GetFlattenedParameters>b__16_0(ValueTuple<String, String> x) { }
+
+		internal string <GetFlattenedParameters>b__16_1(ValueTuple<String, String> x) { }
+
+		internal void <MonitorWebviewEvents>b__26_0() { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <CreateEverything>d__20 : IAsyncStateMachine
+	private struct <CreateEverything>d__22 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -32,7 +40,7 @@ public class MobileWebviewLiNKAccountController
 	}
 
 	[CompilerGenerated]
-	private struct <OpenAccountPanel>d__11 : IAsyncStateMachine
+	private struct <OpenAccountPanel>d__12 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -47,7 +55,7 @@ public class MobileWebviewLiNKAccountController
 	}
 
 	[CompilerGenerated]
-	private struct <PerformAccountTask>d__23 : IAsyncStateMachine
+	private struct <PerformAccountTask>d__25 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -65,7 +73,7 @@ public class MobileWebviewLiNKAccountController
 	}
 
 	[CompilerGenerated]
-	private struct <PerformLoadTask>d__22 : IAsyncStateMachine
+	private struct <PerformLoadTask>d__24 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -88,7 +96,6 @@ public class MobileWebviewLiNKAccountController
 	private WebviewBackground background; //Field offset: 0x28
 	private AsyncOperationHandle<SceneInstance> loadOperation; //Field offset: 0x30
 	private bool destroyed; //Field offset: 0x48
-	private readonly int webviewVersion; //Field offset: 0x4C
 	private readonly Action logoutAction; //Field offset: 0x50
 
 	private static string UnityMode
@@ -96,51 +103,60 @@ public class MobileWebviewLiNKAccountController
 		private get { } //Length: 44
 	}
 
-	public MobileWebviewLiNKAccountController(LiNKAccountController liNKAccountController, int webviewVersion, Action logoutAction) { }
+	private int WebviewVersion
+	{
+		private get { } //Length: 149
+	}
+
+	public MobileWebviewLiNKAccountController(LiNKAccountController liNKAccountController, Action logoutAction) { }
 
 	[CompilerGenerated]
-	private void <DestroyEverything>b__21_0(AsyncOperationHandle<SceneInstance> _) { }
+	private void <DestroyEverything>b__23_0(AsyncOperationHandle<SceneInstance> _) { }
 
 	[CompilerGenerated]
-	private void <MonitorWebviewEvents>b__24_1(AuthProviderType authProviderType) { }
+	private void <MonitorWebviewEvents>b__26_1(AuthProviderType authProviderType) { }
 
 	[CompilerGenerated]
-	private void <MonitorWebviewEvents>b__24_2(LoginResponseModel loginResponseModel) { }
+	private void <MonitorWebviewEvents>b__26_2(LiNKAccountModel loginResponseModel) { }
 
 	[CompilerGenerated]
-	private void <MonitorWebviewEvents>b__24_3(AuthProviderType authProviderType) { }
+	private void <MonitorWebviewEvents>b__26_3(AuthProviderType authProviderType) { }
 
 	[CompilerGenerated]
-	private void <MonitorWebviewEvents>b__24_4() { }
+	private void <MonitorWebviewEvents>b__26_4() { }
 
 	private void AddIfNotNull(List<String> values, object check, string value) { }
 
-	[AsyncStateMachine(typeof(<CreateEverything>d__20))]
+	[AsyncStateMachine(typeof(<CreateEverything>d__22))]
 	private Task CreateEverything() { }
 
 	private void DestroyEverything() { }
 
 	private static string get_UnityMode() { }
 
+	private int get_WebviewVersion() { }
+
+	private string GetFlattenedParameters(List<ValueTuple`2<String, String>> parameters) { }
+
 	private static string GetLocale() { }
+
+	private string GetPageUrl() { }
 
 	private string GetProviders(AuthenticationProvidersCollection auth) { }
 
-	private Uri GetUri() { }
+	private string GetUrlV1() { }
 
-	private Uri GetUriV1() { }
-
-	private Uri GetUriV2() { }
+	private string GetUrlV2() { }
 
 	private void MonitorWebviewEvents(WebviewFromPlugin webview) { }
 
-	[AsyncStateMachine(typeof(<OpenAccountPanel>d__11))]
+	[AsyncStateMachine(typeof(<OpenAccountPanel>d__12))]
 	public Task OpenAccountPanel() { }
 
-	[AsyncStateMachine(typeof(<PerformAccountTask>d__23))]
+	[AsyncStateMachine(typeof(<PerformAccountTask>d__25))]
 	private void PerformAccountTask(Task accountTask, AuthProviderType provider, string taskName) { }
 
-	[AsyncStateMachine(typeof(<PerformLoadTask>d__22))]
+	[AsyncStateMachine(typeof(<PerformLoadTask>d__24))]
 	private Task PerformLoadTask(Task task) { }
 
 	private void RunJavascript() { }

@@ -3,8 +3,11 @@ namespace UnityEngine.ResourceManagement.Util;
 internal sealed class IdCacheKey : IOperationCacheKey, IEquatable<IOperationCacheKey>
 {
 	public string ID; //Field offset: 0x10
+	public Type locationType; //Field offset: 0x18
 
 	public IdCacheKey(string id) { }
+
+	public IdCacheKey(Type locType, string id) { }
 
 	private bool Equals(IdCacheKey other) { }
 

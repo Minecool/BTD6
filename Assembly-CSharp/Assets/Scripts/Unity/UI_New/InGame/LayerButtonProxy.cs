@@ -26,7 +26,7 @@ public class LayerButtonProxy : MonoBehaviour
 
 	public LayerData LayerData
 	{
-		 get { } //Length: 29
+		 get { } //Length: 58
 	}
 
 	public LayerButtonProxy() { }

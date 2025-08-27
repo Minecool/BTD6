@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class StyleMatchingContext
 {
 	private List<StyleSheet> m_StyleSheetStack; //Field offset: 0x10

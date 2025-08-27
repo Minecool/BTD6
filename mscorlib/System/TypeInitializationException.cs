@@ -6,7 +6,7 @@ public sealed class TypeInitializationException : SystemException
 
 	public string TypeName
 	{
-		 get { } //Length: 83
+		 get { } //Length: 30
 	}
 
 	private TypeInitializationException() { }

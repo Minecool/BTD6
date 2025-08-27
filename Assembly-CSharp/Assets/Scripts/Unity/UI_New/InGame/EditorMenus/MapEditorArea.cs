@@ -141,7 +141,7 @@ public class MapEditorArea : MapEditorSpriteShapeController
 
 	public AreaData Def
 	{
-		 get { } //Length: 97
+		 get { } //Length: 87
 	}
 
 	public bool InRemovableEditMode

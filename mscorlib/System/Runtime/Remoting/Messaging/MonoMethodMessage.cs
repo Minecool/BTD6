@@ -18,7 +18,7 @@ internal class MonoMethodMessage : IMethodCallMessage, IMethodMessage, IMessage,
 
 	public override int ArgCount
 	{
-		 get { } //Length: 144
+		 get { } //Length: 140
 	}
 
 	public override Object[] Args
@@ -54,12 +54,12 @@ internal class MonoMethodMessage : IMethodCallMessage, IMethodMessage, IMessage,
 
 	public override string MethodName
 	{
-		 get { } //Length: 117
+		 get { } //Length: 89
 	}
 
 	public override object MethodSignature
 	{
-		 get { } //Length: 290
+		 get { } //Length: 311
 	}
 
 	public override int OutArgCount
@@ -69,7 +69,7 @@ internal class MonoMethodMessage : IMethodCallMessage, IMethodMessage, IMessage,
 
 	public override Object[] OutArgs
 	{
-		 get { } //Length: 378
+		 get { } //Length: 375
 	}
 
 	public override IDictionary Properties
@@ -90,7 +90,7 @@ internal class MonoMethodMessage : IMethodCallMessage, IMethodMessage, IMessage,
 
 	public override string TypeName
 	{
-		 get { } //Length: 144
+		 get { } //Length: 116
 	}
 
 	public override string Uri

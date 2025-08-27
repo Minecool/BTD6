@@ -15,7 +15,7 @@ public class SharedTowerGrid : SimulationBehavior
 
 	}
 
-	private Dictionary<PathSegment, List`1<PathSegmentInRange>> pathSegmentCounts; //Field offset: 0x58
+	private Dictionary<PathSegment, List`1<SharedPathSegmentsInRange>> pathSegmentCounts; //Field offset: 0x58
 	[CompilerGenerated]
 	private GridChanged OnGridChanged; //Field offset: 0x60
 
@@ -32,7 +32,7 @@ public class SharedTowerGrid : SimulationBehavior
 	[CompilerGenerated]
 	public void add_OnGridChanged(GridChanged value) { }
 
-	public Dictionary<PathSegment, List`1<PathSegmentInRange>> GetSharedTowerPathSegments() { }
+	public Dictionary<PathSegment, List`1<SharedPathSegmentsInRange>> GetSharedTowerPathSegments() { }
 
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 
@@ -41,7 +41,7 @@ public class SharedTowerGrid : SimulationBehavior
 	[CompilerGenerated]
 	public void remove_OnGridChanged(GridChanged value) { }
 
-	public void TowerPathSegmentsChanged(List<PathSegmentInRange> oldPathSegments, List<PathSegmentInRange> newPathSegments, Vector3 position, float range) { }
+	public void TowerPathSegmentsChanged(List<PathSegmentInRange> oldPathSegments, List<PathSegmentInRange> newPathSegments, Vector3 position, float range, string baseId) { }
 
 	public void TowerPathSegmentsRemoved(List<PathSegmentInRange> oldPathSegments) { }
 

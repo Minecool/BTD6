@@ -16,7 +16,7 @@ public struct Span
 	{
 		[Intrinsic]
 		[NonVersionable]
-		 get { } //Length: 45
+		 get { } //Length: 49
 	}
 
 	public int Length

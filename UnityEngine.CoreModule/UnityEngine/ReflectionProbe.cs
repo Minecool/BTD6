@@ -18,7 +18,7 @@ public sealed class ReflectionProbe : Behaviour
 	[StaticAccessor("GetReflectionProbes()")]
 	public static Texture defaultTexture
 	{
-		 get { } //Length: 42
+		 get { } //Length: 117
 	}
 
 	[StaticAccessor("GetReflectionProbes()")]
@@ -29,7 +29,7 @@ public sealed class ReflectionProbe : Behaviour
 
 	public ReflectionProbeRefreshMode refreshMode
 	{
-		 get { } //Length: 51
+		 get { } //Length: 151
 	}
 
 	private static ReflectionProbe() { }
@@ -42,11 +42,15 @@ public sealed class ReflectionProbe : Behaviour
 
 	public static Texture get_defaultTexture() { }
 
+	private static IntPtr get_defaultTexture_Injected() { }
+
 	public static Vector4 get_defaultTextureHDRDecodeValues() { }
 
 	private static void get_defaultTextureHDRDecodeValues_Injected(out Vector4 ret) { }
 
 	public ReflectionProbeRefreshMode get_refreshMode() { }
+
+	private static ReflectionProbeRefreshMode get_refreshMode_Injected(IntPtr _unity_self) { }
 
 }
 

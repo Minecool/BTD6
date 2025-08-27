@@ -29,11 +29,11 @@ public class Map : RootBehavior
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass110_0
+	private sealed class <>c__DisplayClass111_0
 	{
 		public RegenRemovable regenRemovable; //Field offset: 0x10
 
-		public <>c__DisplayClass110_0() { }
+		public <>c__DisplayClass111_0() { }
 
 		internal bool <GetSelection>b__0(Area x) { }
 
@@ -109,25 +109,25 @@ public class Map : RootBehavior
 	public event Action OnAreasChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action<String> OnInteractableClicked
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action<Removeable> OnRemoveableSold
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public int AreaCount
@@ -341,6 +341,8 @@ public class Map : RootBehavior
 	public void SetUpSpawnersWithNewCustomPaths(Spawner spawner, List<PathModel> pathModels) { }
 
 	public ObjectId TakeNextFreeAreaID() { }
+
+	public void ToggleAreaVisibility(int layerId, bool isVisible) { }
 
 	public void TogglePathSplitter(bool setActive) { }
 

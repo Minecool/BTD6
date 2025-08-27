@@ -25,7 +25,7 @@ public struct Vector4 : IEquatable<Vector4>, IFormattable
 
 	public Vector4 normalized
 	{
-		 get { } //Length: 199
+		 get { } //Length: 192
 	}
 
 	public static Vector4 one
@@ -46,6 +46,8 @@ public struct Vector4 : IEquatable<Vector4>, IFormattable
 	private static Vector4() { }
 
 	public Vector4(float x, float y, float z, float w) { }
+
+	public Vector4(float x, float y, float z) { }
 
 	public Vector4(float x, float y) { }
 
@@ -77,11 +79,11 @@ public struct Vector4 : IEquatable<Vector4>, IFormattable
 
 	public static bool op_Equality(Vector4 lhs, Vector4 rhs) { }
 
-	public static Vector3 op_Implicit(Vector4 v) { }
-
 	public static Vector4 op_Implicit(Vector2 v) { }
 
 	public static Vector2 op_Implicit(Vector4 v) { }
+
+	public static Vector3 op_Implicit(Vector4 v) { }
 
 	public static Vector4 op_Implicit(Vector3 v) { }
 

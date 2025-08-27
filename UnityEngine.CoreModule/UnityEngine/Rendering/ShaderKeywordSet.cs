@@ -16,7 +16,7 @@ public struct ShaderKeywordSet
 	[FreeFunction("keywords::IsKeywordEnabled")]
 	private static bool IsKeywordNameEnabled(ShaderKeywordSet state, string name) { }
 
-	private static bool IsKeywordNameEnabled_Injected(ref ShaderKeywordSet state, string name) { }
+	private static bool IsKeywordNameEnabled_Injected(in ShaderKeywordSet state, ref ManagedSpanWrapper name) { }
 
 }
 

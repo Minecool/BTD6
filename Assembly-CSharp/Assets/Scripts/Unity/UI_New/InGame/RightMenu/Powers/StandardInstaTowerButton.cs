@@ -2,9 +2,9 @@ namespace Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers;
 
 public class StandardInstaTowerButton : StandardPowerButton
 {
-	public NK_TextMeshProUGUI tiers; //Field offset: 0x78
-	private bool locked; //Field offset: 0x80
-	private TowerModel instaTowerModel; //Field offset: 0x88
+	public NK_TextMeshProUGUI tiers; //Field offset: 0x90
+	private bool locked; //Field offset: 0x98
+	private TowerModel instaTowerModel; //Field offset: 0xA0
 
 	public StandardInstaTowerButton() { }
 

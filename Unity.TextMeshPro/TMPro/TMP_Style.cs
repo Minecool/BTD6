@@ -30,7 +30,7 @@ public class TMP_Style
 
 	public static TMP_Style NormalStyle
 	{
-		 get { } //Length: 200
+		 get { } //Length: 178
 	}
 
 	public string styleClosingDefinition

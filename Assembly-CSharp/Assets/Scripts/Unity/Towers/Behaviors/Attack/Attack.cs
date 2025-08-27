@@ -24,7 +24,7 @@ public class Attack : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 851
+		 get { } //Length: 848
 	}
 
 	public Attack() { }

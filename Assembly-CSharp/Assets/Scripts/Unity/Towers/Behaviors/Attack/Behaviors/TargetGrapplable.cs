@@ -12,7 +12,7 @@ public class TargetGrapplable : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 378
+		 get { } //Length: 374
 	}
 
 	public TargetGrapplable() { }

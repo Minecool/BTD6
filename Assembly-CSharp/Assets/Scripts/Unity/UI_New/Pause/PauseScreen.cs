@@ -178,12 +178,12 @@ public class PauseScreen : GameMenu
 
 	private bool CanRaceAgain
 	{
-		private get { } //Length: 176
+		private get { } //Length: 168
 	}
 
 	private bool CanUseCheckpoint
 	{
-		private get { } //Length: 692
+		private get { } //Length: 703
 	}
 
 	private string ContinueMapSaveId
@@ -203,7 +203,7 @@ public class PauseScreen : GameMenu
 
 	private bool IsMapEditorCreationMode
 	{
-		private get { } //Length: 348
+		private get { } //Length: 340
 	}
 
 	private LegendsDataModel LegendsData
@@ -223,7 +223,7 @@ public class PauseScreen : GameMenu
 
 	private bool UseRogueLives
 	{
-		private get { } //Length: 171
+		private get { } //Length: 174
 	}
 
 	public PauseScreen() { }

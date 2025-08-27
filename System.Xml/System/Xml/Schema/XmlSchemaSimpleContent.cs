@@ -4,8 +4,8 @@ public class XmlSchemaSimpleContent : XmlSchemaContentModel
 {
 	private XmlSchemaContent content; //Field offset: 0x50
 
-	[XmlElement("restriction", typeof(XmlSchemaSimpleContentRestriction))]
 	[XmlElement("extension", typeof(XmlSchemaSimpleContentExtension))]
+	[XmlElement("restriction", typeof(XmlSchemaSimpleContentRestriction))]
 	public virtual XmlSchemaContent Content
 	{
 		 get { } //Length: 5

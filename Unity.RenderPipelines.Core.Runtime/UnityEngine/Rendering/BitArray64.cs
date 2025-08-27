@@ -24,13 +24,13 @@ public struct BitArray64 : IBitArray
 
 	public override string humanizedData
 	{
-		 get { } //Length: 316
+		 get { } //Length: 313
 	}
 
 	public override bool Item
 	{
 		 get { } //Length: 24
-		 set { } //Length: 27
+		 set { } //Length: 31
 	}
 
 	public BitArray64(ulong initValue) { }

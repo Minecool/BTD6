@@ -3,29 +3,29 @@ namespace Assets.Scripts.Unity.GeraldoItems;
 public class GeraldoChangeTowerBehavior : GeraldoItemBehavior
 {
 	[SerializeField]
-	private string targetTowerBaseId; //Field offset: 0x10
+	private string targetTowerBaseId; //Field offset: 0x18
 	[SerializeField]
-	private int path1TierMax; //Field offset: 0x18
+	private int path1TierMax; //Field offset: 0x20
 	[SerializeField]
-	private int path2TierMax; //Field offset: 0x1C
+	private int path2TierMax; //Field offset: 0x24
 	[SerializeField]
-	private int path3TierMax; //Field offset: 0x20
+	private int path3TierMax; //Field offset: 0x28
 	[SerializeField]
-	private string resultingTowerName; //Field offset: 0x28
+	private string resultingTowerName; //Field offset: 0x30
 	[SerializeField]
-	private PrefabReference effectAtTower; //Field offset: 0x30
+	private PrefabReference effectAtTower; //Field offset: 0x38
 	[SerializeField]
-	private string upgradedTowerName; //Field offset: 0x38
+	private string upgradedTowerName; //Field offset: 0x40
 	[SerializeField]
-	private int upgradedTowerUnlockedAt; //Field offset: 0x40
+	private int upgradedTowerUnlockedAt; //Field offset: 0x48
 	[SerializeField]
-	private int resultingPath1TierMax; //Field offset: 0x44
+	private int resultingPath1TierMax; //Field offset: 0x4C
 	[SerializeField]
-	private int resultingPath2TierMax; //Field offset: 0x48
+	private int resultingPath2TierMax; //Field offset: 0x50
 	[SerializeField]
-	private int resultingPath3TierMax; //Field offset: 0x4C
+	private int resultingPath3TierMax; //Field offset: 0x54
 	[SerializeField]
-	private string upgradeBlockId; //Field offset: 0x50
+	private string upgradeBlockId; //Field offset: 0x58
 
 	public virtual GeraldoItemBehaviorModel Def
 	{

@@ -9,9 +9,9 @@ public class LatencyTestMessage : Message
 
 	public LatencyTestMessage(Byte[] data) { }
 
-	public LatencyTestMessage(int peerID, long timestamp, bool isReply = false) { }
+	public LatencyTestMessage(int peerID, long timestamp) { }
 
-	protected virtual Byte[] CreateBytes() { }
+	private static Byte[] CreateBytes(long timestamp, int peerID) { }
 
 }
 

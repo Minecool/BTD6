@@ -11,7 +11,7 @@ public class AncestralMight : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 918
+		 get { } //Length: 920
 	}
 
 	public AncestralMight() { }

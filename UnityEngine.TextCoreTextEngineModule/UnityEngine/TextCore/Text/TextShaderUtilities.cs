@@ -75,24 +75,40 @@ public static class TextShaderUtilities
 	public static string ShaderTag_CullMode; //Field offset: 0x138
 	private static float m_clamp; //Field offset: 0x140
 	public static bool isInitialized; //Field offset: 0x144
-	private static Shader k_ShaderRef_MobileSDF; //Field offset: 0x148
-	private static Shader k_ShaderRef_MobileBitmap; //Field offset: 0x150
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal static readonly string k_SDFText; //Field offset: 0x148
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal static readonly string k_BitmapText; //Field offset: 0x150
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal static readonly string k_SpriteText; //Field offset: 0x158
+	private static Shader k_ShaderRef_MobileSDF; //Field offset: 0x160
+	private static Shader k_ShaderRef_MobileBitmap; //Field offset: 0x168
+	private static Shader k_ShaderRef_Sprite; //Field offset: 0x170
 
 	internal static Shader ShaderRef_MobileBitmap
 	{
-		internal get { } //Length: 539
+		internal get { } //Length: 253
 	}
 
 	internal static Shader ShaderRef_MobileSDF
 	{
-		internal get { } //Length: 539
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+		internal get { } //Length: 206
+	}
+
+	internal static Shader ShaderRef_Sprite
+	{
+		internal get { } //Length: 387
 	}
 
 	private static TextShaderUtilities() { }
 
 	internal static Shader get_ShaderRef_MobileBitmap() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static Shader get_ShaderRef_MobileSDF() { }
+
+	internal static Shader get_ShaderRef_Sprite() { }
 
 	internal static void GetShaderPropertyIDs() { }
 

@@ -101,7 +101,7 @@ public class UnityDisplayNode : MonoBehaviour
 	public bool AnimationEnabled
 	{
 		 get { } //Length: 8
-		 set { } //Length: 300
+		 set { } //Length: 304
 	}
 
 	public float AnimationSpeed
@@ -111,7 +111,7 @@ public class UnityDisplayNode : MonoBehaviour
 
 	public int AnimationState
 	{
-		 set { } //Length: 366
+		 set { } //Length: 362
 	}
 
 	public bool Fullscreen
@@ -132,7 +132,7 @@ public class UnityDisplayNode : MonoBehaviour
 
 	public bool IsSprite
 	{
-		 set { } //Length: 214
+		 set { } //Length: 206
 	}
 
 	public Mesh Mesh
@@ -149,19 +149,19 @@ public class UnityDisplayNode : MonoBehaviour
 	public float Rotation
 	{
 		 get { } //Length: 9
-		 set { } //Length: 370
+		 set { } //Length: 353
 	}
 
 	public Vector3 Scale
 	{
 		 get { } //Length: 71
-		 set { } //Length: 278
+		 set { } //Length: 296
 	}
 
 	public int SortingOrder
 	{
 		 get { } //Length: 7
-		 set { } //Length: 213
+		 set { } //Length: 205
 	}
 
 	public UnityDisplayNode() { }

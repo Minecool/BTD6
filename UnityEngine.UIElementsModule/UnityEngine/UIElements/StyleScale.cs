@@ -8,12 +8,16 @@ public struct StyleScale : IStyleValue<Scale>, IEquatable<StyleScale>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override Scale value
 	{
-		 get { } //Length: 188
+		 get { } //Length: 328
+		 set { } //Length: 95
 	}
+
+	public StyleScale(Scale v) { }
 
 	public StyleScale(StyleKeyword keyword) { }
 
@@ -32,6 +36,12 @@ public struct StyleScale : IStyleValue<Scale>, IEquatable<StyleScale>
 	public static bool op_Equality(StyleScale lhs, StyleScale rhs) { }
 
 	public static StyleScale op_Implicit(StyleKeyword keyword) { }
+
+	public static StyleScale op_Implicit(Scale v) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(Scale value) { }
 
 	public virtual string ToString() { }
 

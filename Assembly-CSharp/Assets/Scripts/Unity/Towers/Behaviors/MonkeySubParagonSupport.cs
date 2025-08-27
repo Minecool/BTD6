@@ -17,7 +17,7 @@ public class MonkeySubParagonSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 382
+		 get { } //Length: 322
 	}
 
 	public MonkeySubParagonSupport() { }

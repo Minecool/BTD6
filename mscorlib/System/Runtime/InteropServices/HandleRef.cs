@@ -8,7 +8,7 @@ public struct HandleRef
 
 	public IntPtr Handle
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public HandleRef(object wrapper, IntPtr handle) { }

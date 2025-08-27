@@ -7,7 +7,7 @@ public class Repel : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 644
+		 get { } //Length: 658
 	}
 
 	public Repel() { }

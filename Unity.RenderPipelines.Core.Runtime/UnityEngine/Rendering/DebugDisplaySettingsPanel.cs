@@ -17,7 +17,7 @@ public abstract class DebugDisplaySettingsPanel : IDebugDisplaySettingsPanelDisp
 
 	public override string PanelName
 	{
-		 get { } //Length: 78
+		 get { } //Length: 36
 	}
 
 	public override Widget[] Widgets

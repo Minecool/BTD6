@@ -26,12 +26,12 @@ public struct Color : IEquatable<Color>
 
 	public bool IsKnownColor
 	{
-		 get { } //Length: 8
+		 get { } //Length: 7
 	}
 
 	public string Name
 	{
-		 get { } //Length: 247
+		 get { } //Length: 246
 	}
 
 	public byte R

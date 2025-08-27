@@ -2,22 +2,23 @@ namespace UnityEngine;
 
 [NativeHeader("Modules/Physics/MeshCollider.h")]
 [NativeHeader("Runtime/Graphics/Mesh/Mesh.h")]
-[RequiredByNativeCode]
+[RequireComponent(typeof(Transform))]
 public class MeshCollider : Collider
 {
 
 	public bool convex
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public MeshColliderCookingOptions cookingOptions
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
+	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	[Obsolete("MeshCollider.inflateMesh is no longer supported. The new cooking algorithm doesn't need inflation to be used.")]
 	public bool inflateMesh
 	{
@@ -27,10 +28,11 @@ public class MeshCollider : Collider
 
 	public Mesh sharedMesh
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 144
+		 set { } //Length: 177
 	}
 
+	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	[Obsolete("MeshCollider.skinWidth is no longer used.")]
 	public float skinWidth
 	{
@@ -50,11 +52,17 @@ public class MeshCollider : Collider
 
 	public bool get_convex() { }
 
+	private static bool get_convex_Injected(IntPtr _unity_self) { }
+
 	public MeshColliderCookingOptions get_cookingOptions() { }
+
+	private static MeshColliderCookingOptions get_cookingOptions_Injected(IntPtr _unity_self) { }
 
 	public bool get_inflateMesh() { }
 
 	public Mesh get_sharedMesh() { }
+
+	private static IntPtr get_sharedMesh_Injected(IntPtr _unity_self) { }
 
 	public float get_skinWidth() { }
 
@@ -62,11 +70,17 @@ public class MeshCollider : Collider
 
 	public void set_convex(bool value) { }
 
+	private static void set_convex_Injected(IntPtr _unity_self, bool value) { }
+
 	public void set_cookingOptions(MeshColliderCookingOptions value) { }
+
+	private static void set_cookingOptions_Injected(IntPtr _unity_self, MeshColliderCookingOptions value) { }
 
 	public void set_inflateMesh(bool value) { }
 
 	public void set_sharedMesh(Mesh value) { }
+
+	private static void set_sharedMesh_Injected(IntPtr _unity_self, IntPtr value) { }
 
 	public void set_skinWidth(float value) { }
 

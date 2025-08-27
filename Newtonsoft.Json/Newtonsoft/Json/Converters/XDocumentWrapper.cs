@@ -7,24 +7,24 @@ internal class XDocumentWrapper : XContainerWrapper, IXmlDocument, IXmlNode
 
 	public virtual List<IXmlNode> ChildNodes
 	{
-		 get { } //Length: 378
+		 get { } //Length: 374
 	}
 
 	private XDocument Document
 	{
-		private get { } //Length: 107
+		private get { } //Length: 103
 	}
 
 	[Nullable(2)]
 	public override IXmlElement DocumentElement
 	{
 		[NullableContext(2)]
-		 get { } //Length: 230
+		 get { } //Length: 228
 	}
 
 	protected virtual bool HasChildNodes
 	{
-		 get { } //Length: 153
+		 get { } //Length: 151
 	}
 
 	public XDocumentWrapper(XDocument document) { }

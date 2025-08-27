@@ -111,11 +111,10 @@ internal class LightCookieManager : IDisposable
 		{
 			public Vector2Int resolution; //Field offset: 0x0
 			public GraphicsFormat format; //Field offset: 0x8
-			public bool useMips; //Field offset: 0xC
 
 			public bool isPow2
 			{
-				 get { } //Length: 43
+				 get { } //Length: 26
 			}
 
 			public bool isSquare
@@ -130,60 +129,11 @@ internal class LightCookieManager : IDisposable
 		}
 
 		public AtlasSettings atlas; //Field offset: 0x0
-		public int maxAdditionalLights; //Field offset: 0x10
-		public float cubeOctahedralSizeScale; //Field offset: 0x14
-		public bool useStructuredBuffer; //Field offset: 0x18
+		public int maxAdditionalLights; //Field offset: 0xC
+		public float cubeOctahedralSizeScale; //Field offset: 0x10
+		public bool useStructuredBuffer; //Field offset: 0x14
 
 		public static Settings Create() { }
-
-	}
-
-	[DefaultMember("Item")]
-	private struct ShaderBitArray
-	{
-		private const int k_BitsPerElement = 32; //Field offset: 0x0
-		private const int k_ElementShift = 5; //Field offset: 0x0
-		private const int k_ElementMask = 31; //Field offset: 0x0
-		private Single[] m_Data; //Field offset: 0x0
-
-		public int bitCapacity
-		{
-			 get { } //Length: 22
-		}
-
-		public Single[] data
-		{
-			 get { } //Length: 4
-		}
-
-		public int elemLength
-		{
-			 get { } //Length: 16
-		}
-
-		public bool Item
-		{
-			 get { } //Length: 74
-			 set { } //Length: 84
-		}
-
-		public void Clear() { }
-
-		public int get_bitCapacity() { }
-
-		public Single[] get_data() { }
-
-		public int get_elemLength() { }
-
-		public bool get_Item(int index) { }
-
-		private void GetElementIndexAndBitOffset(int index, out int elemIndex, out int bitOffset) { }
-
-		public void Resize(int bitCount) { }
-
-		public void set_Item(int index, bool value) { }
-
-		public virtual string ToString() { }
 
 	}
 
@@ -203,31 +153,6 @@ internal class LightCookieManager : IDisposable
 		public static readonly int additionalLightsLightTypes; //Field offset: 0x2C
 
 		private static ShaderProperty() { }
-
-	}
-
-	private struct Sorting
-	{
-		[CompilerGenerated]
-		private struct <>c__DisplayClass2_0
-		{
-			public T[] data; //Field offset: 0x0
-
-		}
-
-
-		[CompilerGenerated]
-		internal static void <Median3Pivot>g__Swap|2_0(int a, int b, ref <>c__DisplayClass2_0<T>& unnamed_param_2) { }
-
-		public static void InsertionSort(T[] data, int start, int end, Func<T, T, Int32> compare) { }
-
-		private static T Median3Pivot(T[] data, int start, int pivot, int end, Func<T, T, Int32> compare) { }
-
-		private static int Partition(T[] data, int start, int end, Func<T, T, Int32> compare) { }
-
-		public static void QuickSort(T[] data, Func<T, T, Int32> compare) { }
-
-		public static void QuickSort(T[] data, int start, int end, Func<T, T, Int32> compare) { }
 
 	}
 
@@ -287,13 +212,18 @@ internal class LightCookieManager : IDisposable
 	private Texture2DAtlas m_AdditionalLightsCookieAtlas; //Field offset: 0x10
 	private LightCookieShaderData m_AdditionalLightsCookieShaderData; //Field offset: 0x18
 	private readonly Settings m_Settings; //Field offset: 0x20
-	private WorkMemory m_WorkMem; //Field offset: 0x40
-	private Int32[] m_VisibleLightIndexToShaderDataIndex; //Field offset: 0x48
-	private int m_CookieSizeDivisor; //Field offset: 0x50
-	private uint m_PrevCookieRequestPixelCount; //Field offset: 0x54
-	private int m_PrevWarnFrame; //Field offset: 0x58
+	private WorkMemory m_WorkMem; //Field offset: 0x38
+	private Int32[] m_VisibleLightIndexToShaderDataIndex; //Field offset: 0x40
+	private int m_CookieSizeDivisor; //Field offset: 0x48
+	private uint m_PrevCookieRequestPixelCount; //Field offset: 0x4C
+	private int m_PrevWarnFrame; //Field offset: 0x50
 	[CompilerGenerated]
-	private bool <IsKeywordLightCookieEnabled>k__BackingField; //Field offset: 0x5C
+	private bool <IsKeywordLightCookieEnabled>k__BackingField; //Field offset: 0x54
+
+	internal RTHandle AdditionalLightsCookieAtlasTexture
+	{
+		internal get { } //Length: 15
+	}
 
 	internal bool IsKeywordLightCookieEnabled
 	{
@@ -323,7 +253,9 @@ internal class LightCookieManager : IDisposable
 
 	private int FetchUVRects(CommandBuffer cmd, ref WorkSlice<LightCookieMapping>& validLightMappings, Vector4[] textureAtlasUVRects, int cookieSizeDivisor) { }
 
-	private int FilterAndValidateAdditionalLights(ref LightData lightData, LightCookieMapping[] validLightMappings) { }
+	private int FilterAndValidateAdditionalLights(UniversalLightData lightData, LightCookieMapping[] validLightMappings) { }
+
+	internal RTHandle get_AdditionalLightsCookieAtlasTexture() { }
 
 	[CompilerGenerated]
 	internal bool get_IsKeywordLightCookieEnabled() { }
@@ -341,9 +273,9 @@ internal class LightCookieManager : IDisposable
 	[CompilerGenerated]
 	private void set_IsKeywordLightCookieEnabled(bool value) { }
 
-	public void Setup(ScriptableRenderContext ctx, CommandBuffer cmd, ref LightData lightData) { }
+	public void Setup(CommandBuffer cmd, UniversalLightData lightData) { }
 
-	private bool SetupAdditionalLights(CommandBuffer cmd, ref LightData lightData) { }
+	private bool SetupAdditionalLights(CommandBuffer cmd, UniversalLightData lightData) { }
 
 	private bool SetupMainLight(CommandBuffer cmd, ref VisibleLight visibleMainLight) { }
 
@@ -351,7 +283,7 @@ internal class LightCookieManager : IDisposable
 
 	private int UpdateAdditionalLightsAtlas(CommandBuffer cmd, ref WorkSlice<LightCookieMapping>& validLightMappings, Vector4[] textureAtlasUVRects) { }
 
-	private void UploadAdditionalLights(CommandBuffer cmd, ref LightData lightData, ref WorkSlice<LightCookieMapping>& validLightMappings, ref WorkSlice<Vector4>& validUvRects) { }
+	private void UploadAdditionalLights(CommandBuffer cmd, UniversalLightData lightData, ref WorkSlice<LightCookieMapping>& validLightMappings, ref WorkSlice<Vector4>& validUvRects) { }
 
 }
 

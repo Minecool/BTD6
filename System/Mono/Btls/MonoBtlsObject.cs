@@ -7,7 +7,7 @@ internal abstract class MonoBtlsObject : IDisposable
 
 		public virtual bool IsInvalid
 		{
-			 get { } //Length: 14
+			 get { } //Length: 9
 		}
 
 		internal MonoBtlsHandle(IntPtr handle, bool ownsHandle) { }
@@ -26,7 +26,7 @@ internal abstract class MonoBtlsObject : IDisposable
 
 	public bool IsValid
 	{
-		 get { } //Length: 51
+		 get { } //Length: 49
 	}
 
 	internal MonoBtlsObject(MonoBtlsHandle handle) { }

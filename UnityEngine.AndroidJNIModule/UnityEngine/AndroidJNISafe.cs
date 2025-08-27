@@ -35,9 +35,9 @@ internal class AndroidJNISafe
 
 	public static long CallStaticLongMethod(IntPtr clazz, IntPtr methodID, Span<jvalue> args) { }
 
-	public static IntPtr CallStaticObjectMethod(IntPtr clazz, IntPtr methodID, Span<jvalue> args) { }
-
 	public static IntPtr CallStaticObjectMethod(IntPtr clazz, IntPtr methodID, jvalue[] args) { }
+
+	public static IntPtr CallStaticObjectMethod(IntPtr clazz, IntPtr methodID, Span<jvalue> args) { }
 
 	public static sbyte CallStaticSByteMethod(IntPtr clazz, IntPtr methodID, Span<jvalue> args) { }
 
@@ -118,6 +118,8 @@ internal class AndroidJNISafe
 	public static IntPtr NewObject(IntPtr clazz, IntPtr methodID, Span<jvalue> args) { }
 
 	public static IntPtr NewString(string chars) { }
+
+	public static void PushLocalFrame(int capacity) { }
 
 	public static void QueueDeleteGlobalRef(IntPtr globalref) { }
 

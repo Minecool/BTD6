@@ -34,7 +34,8 @@ internal class ReflectedPropertyBagProvider
 		private bool <hasCreatePropertyAttribute>5__5; //Field offset: 0x51
 		private bool <hasNonSerializedAttribute>5__6; //Field offset: 0x52
 		private bool <hasSerializedFieldAttribute>5__7; //Field offset: 0x53
-		private FieldInfo <field>5__8; //Field offset: 0x58
+		private bool <hasSerializeReferenceAttribute>5__8; //Field offset: 0x54
+		private FieldInfo <field>5__9; //Field offset: 0x58
 
 		private override MemberInfo System.Collections.Generic.IEnumerator<System.Reflection.MemberInfo>.Current
 		{

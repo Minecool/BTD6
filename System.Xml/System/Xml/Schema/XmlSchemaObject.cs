@@ -20,7 +20,7 @@ public abstract class XmlSchemaObject
 	internal bool IsProcessing
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 4
+		internal set { } //Length: 86
 	}
 
 	[XmlIgnore]

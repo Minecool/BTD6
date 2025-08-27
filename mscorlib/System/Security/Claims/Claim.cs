@@ -14,7 +14,7 @@ public class Claim
 
 	public IDictionary<String, String> Properties
 	{
-		 get { } //Length: 256
+		 get { } //Length: 246
 	}
 
 	public internal ClaimsIdentity Subject

@@ -160,7 +160,7 @@ internal sealed class XmlValidatingReaderImpl : XmlReader, IXmlLineInfo, IXmlNam
 
 	public virtual XmlReaderSettings Settings
 	{
-		 get { } //Length: 204
+		 get { } //Length: 203
 	}
 
 	internal bool StandAlone

@@ -1,50 +1,51 @@
 namespace UnityEngine;
 
 [NativeHeader("Modules/Physics/BoxCollider.h")]
-[RequiredByNativeCode]
+[RequireComponent(typeof(Transform))]
 public class BoxCollider : Collider
 {
 
 	public Vector3 center
 	{
-		 get { } //Length: 77
-		 set { } //Length: 66
+		 get { } //Length: 144
+		 set { } //Length: 133
 	}
 
+	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	[Obsolete("Use BoxCollider.size instead. (UnityUpgradable) -> size")]
 	public Vector3 extents
 	{
-		 get { } //Length: 138
-		 set { } //Length: 116
+		 get { } //Length: 221
+		 set { } //Length: 202
 	}
 
 	public Vector3 size
 	{
-		 get { } //Length: 77
-		 set { } //Length: 66
+		 get { } //Length: 144
+		 set { } //Length: 133
 	}
 
 	public BoxCollider() { }
 
 	public Vector3 get_center() { }
 
-	private void get_center_Injected(out Vector3 ret) { }
+	private static void get_center_Injected(IntPtr _unity_self, out Vector3 ret) { }
 
 	public Vector3 get_extents() { }
 
 	public Vector3 get_size() { }
 
-	private void get_size_Injected(out Vector3 ret) { }
+	private static void get_size_Injected(IntPtr _unity_self, out Vector3 ret) { }
 
 	public void set_center(Vector3 value) { }
 
-	private void set_center_Injected(ref Vector3 value) { }
+	private static void set_center_Injected(IntPtr _unity_self, in Vector3 value) { }
 
 	public void set_extents(Vector3 value) { }
 
 	public void set_size(Vector3 value) { }
 
-	private void set_size_Injected(ref Vector3 value) { }
+	private static void set_size_Injected(IntPtr _unity_self, in Vector3 value) { }
 
 }
 

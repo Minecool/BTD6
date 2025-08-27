@@ -56,6 +56,8 @@ public class AndroidJavaObject : IDisposable
 
 	protected virtual void Finalize() { }
 
+	internal static ReturnType FromJavaArray(IntPtr jobject) { }
+
 	internal static ReturnType FromJavaArrayDeleteLocalRef(IntPtr jobject) { }
 
 	public IntPtr GetRawClass() { }

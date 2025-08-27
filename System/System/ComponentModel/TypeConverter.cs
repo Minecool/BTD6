@@ -49,17 +49,17 @@ public class TypeConverter
 
 		public int Count
 		{
-			 get { } //Length: 101
+			 get { } //Length: 94
 		}
 
 		public object Item
 		{
-			 get { } //Length: 233
+			 get { } //Length: 239
 		}
 
 		private override int System.Collections.ICollection.Count
 		{
-			private get { } //Length: 101
+			private get { } //Length: 94
 		}
 
 		private override bool System.Collections.ICollection.IsSynchronized

@@ -107,12 +107,6 @@ public struct PostLateUpdate
 	}
 
 	[RequiredByNativeCode]
-	public struct PlayerRenderUIEBatchModeOffscreen
-	{
-
-	}
-
-	[RequiredByNativeCode]
 	internal struct PlayerSendFrameComplete
 	{
 
@@ -192,6 +186,18 @@ public struct PostLateUpdate
 
 	[RequiredByNativeCode]
 	internal struct TriggerEndOfFrameCallbacks
+	{
+
+	}
+
+	[RequiredByNativeCode]
+	public struct UIElementsRenderBatchModeOffscreen
+	{
+
+	}
+
+	[RequiredByNativeCode]
+	public struct UIElementsRepaintPanels
 	{
 
 	}

@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class GroupBox : BindableElement, IGroupBox
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<GroupBox, UxmlTraits>
 	{
 
@@ -9,9 +10,10 @@ public class GroupBox : BindableElement, IGroupBox
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private UxmlStringAttributeDescription m_Text; //Field offset: 0x78
+		private UxmlStringAttributeDescription m_Text; //Field offset: 0x90
 
 		public UxmlTraits() { }
 
@@ -19,13 +21,16 @@ public class GroupBox : BindableElement, IGroupBox
 
 	}
 
-	public static readonly string ussClassName; //Field offset: 0x0
-	public static readonly string labelUssClassName; //Field offset: 0x8
-	private Label m_TitleLabel; //Field offset: 0x3D8
+	internal static readonly BindingId textProperty; //Field offset: 0x0
+	public static readonly string ussClassName; //Field offset: 0x98
+	public static readonly string labelUssClassName; //Field offset: 0xA0
+	private Label m_TitleLabel; //Field offset: 0x4B8
 
+	[CreateProperty]
 	public string text
 	{
-		 set { } //Length: 301
+		 get { } //Length: 35
+		 set { } //Length: 457
 	}
 
 	private static GroupBox() { }
@@ -33,6 +38,8 @@ public class GroupBox : BindableElement, IGroupBox
 	public GroupBox() { }
 
 	public GroupBox(string text) { }
+
+	public string get_text() { }
 
 	public void set_text(string value) { }
 

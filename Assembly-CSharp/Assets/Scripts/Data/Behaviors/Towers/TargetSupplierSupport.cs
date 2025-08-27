@@ -8,7 +8,7 @@ public class TargetSupplierSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 358
+		 get { } //Length: 354
 	}
 
 	public TargetSupplierSupport() { }

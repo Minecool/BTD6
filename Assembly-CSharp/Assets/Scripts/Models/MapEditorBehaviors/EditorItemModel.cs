@@ -16,7 +16,7 @@ public class EditorItemModel : EntityModel
 
 	public bool IsVarient
 	{
-		 get { } //Length: 22
+		 get { } //Length: 25
 	}
 
 	public int NumVarients

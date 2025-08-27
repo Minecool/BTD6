@@ -15,10 +15,22 @@ public interface ITextEdition
 		 set { } //Length: 168
 	}
 
+	internal Func<String> GetDefaultValueType
+	{
+		internal get { } //Length: 0
+		internal set { } //Length: 0
+	}
+
 	public bool hideMobileInput
 	{
 		 get { } //Length: 171
 		 set { } //Length: 168
+	}
+
+	public bool hidePlaceholderOnFocus
+	{
+		 get { } //Length: 0
+		 set { } //Length: 0
 	}
 
 	public bool isDelayed
@@ -47,6 +59,7 @@ public interface ITextEdition
 
 	public char maskChar
 	{
+		 get { } //Length: 0
 		 set { } //Length: 0
 	}
 
@@ -56,6 +69,7 @@ public interface ITextEdition
 		 set { } //Length: 0
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Action MoveFocusToCompositeRoot
 	{
 		internal get { } //Length: 0
@@ -66,6 +80,12 @@ public interface ITextEdition
 	{
 		internal get { } //Length: 0
 		internal set { } //Length: 0
+	}
+
+	public string placeholder
+	{
+		 get { } //Length: 0
+		 set { } //Length: 0
 	}
 
 	internal Action<Boolean> UpdateScrollOffset
@@ -92,7 +112,11 @@ public interface ITextEdition
 
 	public bool get_autoCorrection() { }
 
+	internal Func<String> get_GetDefaultValueType() { }
+
 	public bool get_hideMobileInput() { }
+
+	public bool get_hidePlaceholderOnFocus() { }
 
 	public bool get_isDelayed() { }
 
@@ -102,11 +126,15 @@ public interface ITextEdition
 
 	public TouchScreenKeyboardType get_keyboardType() { }
 
+	public char get_maskChar() { }
+
 	public int get_maxLength() { }
 
 	internal Action get_MoveFocusToCompositeRoot() { }
 
 	internal bool get_multiline() { }
+
+	public string get_placeholder() { }
 
 	internal Action<Boolean> get_UpdateScrollOffset() { }
 
@@ -116,13 +144,18 @@ public interface ITextEdition
 
 	internal void RestoreValueAndText() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void SaveValueAndText() { }
 
 	internal void set_AcceptCharacter(Func<Char, Boolean> value) { }
 
 	public void set_autoCorrection(bool value) { }
 
+	internal void set_GetDefaultValueType(Func<String> value) { }
+
 	public void set_hideMobileInput(bool value) { }
+
+	public void set_hidePlaceholderOnFocus(bool value) { }
 
 	public void set_isDelayed(bool value) { }
 
@@ -139,6 +172,8 @@ public interface ITextEdition
 	internal void set_MoveFocusToCompositeRoot(Action value) { }
 
 	internal void set_multiline(bool value) { }
+
+	public void set_placeholder(string value) { }
 
 	internal void set_UpdateScrollOffset(Action<Boolean> value) { }
 

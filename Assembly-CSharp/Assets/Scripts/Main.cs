@@ -6,56 +6,59 @@ public class Main : MonoBehaviour
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static SystemDetailValue <>9__13_0; //Field offset: 0x8
-		public static SystemDetailValue <>9__13_1; //Field offset: 0x10
-		public static SystemDetailValue <>9__13_2; //Field offset: 0x18
-		public static Func<Exception, Boolean> <>9__21_2; //Field offset: 0x20
-		public static Func<Exception, Boolean> <>9__21_3; //Field offset: 0x28
-		public static Func<Exception, Boolean> <>9__22_0; //Field offset: 0x30
-		public static Func<Task> <>9__28_3; //Field offset: 0x38
-		public static Func<Task> <>9__28_4; //Field offset: 0x40
-		public static Action<LiNKAccount> <>9__41_1; //Field offset: 0x48
-		public static Action<LiNKAccount> <>9__41_2; //Field offset: 0x50
-		public static Action<LiNKAccount> <>9__41_3; //Field offset: 0x58
-		public static Action<LiNKAccount> <>9__41_4; //Field offset: 0x60
+		public static SystemDetailValue <>9__14_0; //Field offset: 0x8
+		public static SystemDetailValue <>9__14_1; //Field offset: 0x10
+		public static SystemDetailValue <>9__14_2; //Field offset: 0x18
+		public static Func<Exception, Boolean> <>9__23_2; //Field offset: 0x20
+		public static Func<Exception, Boolean> <>9__23_3; //Field offset: 0x28
+		public static Func<Exception, Boolean> <>9__25_0; //Field offset: 0x30
+		public static Func<Task> <>9__31_3; //Field offset: 0x38
+		public static Func<Task> <>9__31_4; //Field offset: 0x40
+		public static Action<LiNKAccount> <>9__44_1; //Field offset: 0x48
+		public static Action<LiNKAccount> <>9__44_2; //Field offset: 0x50
+		public static Action<LiNKAccount> <>9__44_3; //Field offset: 0x58
+		public static Action<LiNKAccount> <>9__44_4; //Field offset: 0x60
+		public static Func<Byte, String> <>9__48_0; //Field offset: 0x68
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal Task <InitialLoadTasks>b__28_3() { }
+		internal string <GetSteamSessionTicket>b__48_0(byte b) { }
 
-		internal Task <InitialLoadTasks>b__28_4() { }
+		internal Task <InitialLoadTasks>b__31_3() { }
 
-		internal bool <LoadingSequence>b__21_2(Exception x) { }
+		internal Task <InitialLoadTasks>b__31_4() { }
 
-		internal bool <LoadingSequence>b__21_3(Exception x) { }
+		internal bool <LoadingSequence>b__23_2(Exception x) { }
 
-		internal void <LoadPlayer>b__41_1(LiNKAccount newAccount) { }
+		internal bool <LoadingSequence>b__23_3(Exception x) { }
 
-		internal void <LoadPlayer>b__41_2(LiNKAccount _) { }
+		internal void <LoadPlayer>b__44_1(LiNKAccount newAccount) { }
 
-		internal void <LoadPlayer>b__41_3(LiNKAccount _) { }
+		internal void <LoadPlayer>b__44_2(LiNKAccount _) { }
 
-		internal void <LoadPlayer>b__41_4(LiNKAccount _) { }
+		internal void <LoadPlayer>b__44_3(LiNKAccount _) { }
 
-		internal string <SetupErrorHandler>b__13_0() { }
+		internal void <LoadPlayer>b__44_4(LiNKAccount _) { }
 
-		internal string <SetupErrorHandler>b__13_1() { }
+		internal string <SetupErrorHandler>b__14_0() { }
 
-		internal string <SetupErrorHandler>b__13_2() { }
+		internal string <SetupErrorHandler>b__14_1() { }
 
-		internal bool <ShowPlayerLoadingErrorPopup>b__22_0(Exception ex) { }
+		internal string <SetupErrorHandler>b__14_2() { }
+
+		internal bool <ShowPlayerLoadingErrorPopup>b__25_0(Exception ex) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass21_0
+	private sealed class <>c__DisplayClass23_0
 	{
 		public Task initialLoadTasks; //Field offset: 0x10
 		public Task playerLoadTasks; //Field offset: 0x18
 
-		public <>c__DisplayClass21_0() { }
+		public <>c__DisplayClass23_0() { }
 
 		internal bool <LoadingSequence>b__0() { }
 
@@ -64,11 +67,11 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass22_0
+	private sealed class <>c__DisplayClass25_0
 	{
 		public AggregateException aggregateException; //Field offset: 0x10
 
-		public <>c__DisplayClass22_0() { }
+		public <>c__DisplayClass25_0() { }
 
 		internal void <ShowPlayerLoadingErrorPopup>b__1() { }
 
@@ -77,22 +80,22 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass24_0
+	private sealed class <>c__DisplayClass27_0
 	{
 		public Task task; //Field offset: 0x10
 
-		public <>c__DisplayClass24_0() { }
+		public <>c__DisplayClass27_0() { }
 
 		internal bool <LoadLocs>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass28_0
+	private sealed class <>c__DisplayClass31_0
 	{
 		public InitialLoadingScreen loadingScreen; //Field offset: 0x10
 
-		public <>c__DisplayClass28_0() { }
+		public <>c__DisplayClass31_0() { }
 
 		internal Task <InitialLoadTasks>b__0() { }
 
@@ -103,31 +106,31 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass34_0
+	private sealed class <>c__DisplayClass37_0
 	{
 		public string modelName; //Field offset: 0x10
 		public Func<String, Boolean> <>9__0; //Field offset: 0x18
 
-		public <>c__DisplayClass34_0() { }
+		public <>c__DisplayClass37_0() { }
 
 		internal bool <IsOutdatedDevice>b__0(string s) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass41_0
+	private sealed class <>c__DisplayClass44_0
 	{
 		public Main <>4__this; //Field offset: 0x10
 		public PlayerService playerService; //Field offset: 0x18
 
-		public <>c__DisplayClass41_0() { }
+		public <>c__DisplayClass44_0() { }
 
 		internal void <LoadPlayer>b__0(LiNKAccount _) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <CheckForceOrSoftUpdate>d__35 : IAsyncStateMachine
+	private struct <CheckForceOrSoftUpdate>d__38 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -146,7 +149,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <CheckVersionAsync>d__33 : IAsyncStateMachine
+	private struct <CheckVersionAsync>d__36 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -161,7 +164,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <InitGameData>d__36 : IAsyncStateMachine
+	private struct <InitGameData>d__39 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -176,7 +179,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <Initialize>d__20 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <Initialize>d__22 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -197,7 +200,7 @@ public class Main : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <Initialize>d__20(int <>1__state) { }
+		public <Initialize>d__22(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -216,14 +219,14 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <InitialLoadTasks>d__28 : IAsyncStateMachine
+	private struct <InitialLoadTasks>d__31 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public InitialLoadingScreen loadingScreen; //Field offset: 0x20
 		public bool isFirstLoad; //Field offset: 0x28
 		public Main <>4__this; //Field offset: 0x30
-		private <>c__DisplayClass28_0 <>8__1; //Field offset: 0x38
+		private <>c__DisplayClass31_0 <>8__1; //Field offset: 0x38
 		private LocalizationManager <loc>5__2; //Field offset: 0x40
 		private List<KeyValuePair`2<String, Func`1<Task>>> <tasks>5__3; //Field offset: 0x48
 		private int <taskIdx>5__4; //Field offset: 0x50
@@ -238,7 +241,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <LoadFontsFromPlayerProfileLanguage>d__32 : IAsyncStateMachine
+	private struct <LoadFontsFromPlayerProfileLanguage>d__35 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -252,7 +255,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <LoadGameData>d__37 : IAsyncStateMachine
+	private struct <LoadGameData>d__40 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -266,7 +269,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <LoadGlobalScene>d__38 : IAsyncStateMachine
+	private struct <LoadGlobalScene>d__41 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -280,19 +283,22 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <LoadingSequence>d__21 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <LoadingSequence>d__23 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
 		public bool isFirstLoad; //Field offset: 0x20
 		public Main <>4__this; //Field offset: 0x28
-		private <>c__DisplayClass21_0 <>8__1; //Field offset: 0x30
+		private <>c__DisplayClass23_0 <>8__1; //Field offset: 0x30
 		public Action onFistLoadComplete; //Field offset: 0x38
 		private AnimatedSceneLoader<InitialLoadingScreen> <loadingScene>5__2; //Field offset: 0x40
 		private AnimatedSceneLoader<TitleScreen> <titleScene>5__3; //Field offset: 0x48
-		private Task<ProfanityFilter> <profanityLoader>5__4; //Field offset: 0x50
-		private AnimatedSceneLoader<GenericAnimatedScene> <splashScene>5__5; //Field offset: 0x58
-		private AnimatedSceneLoader<GenericAnimatedScene> <arcadeSplash>5__6; //Field offset: 0x60
+		private bool <debugForceTutorial>5__4; //Field offset: 0x50
+		private TutorialType <forceTutorialType>5__5; //Field offset: 0x54
+		private Btd6Player <player>5__6; //Field offset: 0x58
+		private Task<ProfanityFilter> <profanityLoader>5__7; //Field offset: 0x60
+		private AnimatedSceneLoader<GenericAnimatedScene> <splashScene>5__8; //Field offset: 0x68
+		private AnimatedSceneLoader<GenericAnimatedScene> <arcadeSplash>5__9; //Field offset: 0x70
 
 		private override object System.Collections.Generic.IEnumerator<System.Object>.Current
 		{
@@ -307,7 +313,7 @@ public class Main : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <LoadingSequence>d__21(int <>1__state) { }
+		public <LoadingSequence>d__23(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -326,7 +332,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <LoadLocs>d__24 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <LoadLocs>d__27 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -345,7 +351,7 @@ public class Main : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <LoadLocs>d__24(int <>1__state) { }
+		public <LoadLocs>d__27(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -364,12 +370,12 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <LoadPlayer>d__41 : IAsyncStateMachine
+	private struct <LoadPlayer>d__44 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public Main <>4__this; //Field offset: 0x20
-		private <>c__DisplayClass41_0 <>8__1; //Field offset: 0x28
+		private <>c__DisplayClass44_0 <>8__1; //Field offset: 0x28
 		private Btd6Player <player>5__2; //Field offset: 0x30
 		private string <oldNoLinkId>5__3; //Field offset: 0x38
 		private object <>7__wrap3; //Field offset: 0x40
@@ -385,7 +391,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <PlayerLoadTasks>d__31 : IAsyncStateMachine
+	private struct <PlayerLoadTasks>d__34 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -403,7 +409,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <PreloadFriendsAndGuildsAsync>d__23 : IAsyncStateMachine
+	private struct <PreloadFriendsAndGuildsAsync>d__26 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -418,7 +424,7 @@ public class Main : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <UploadCrashLogs>d__29 : IAsyncStateMachine
+	private struct <UploadCrashLogs>d__32 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -440,6 +446,7 @@ public class Main : MonoBehaviour
 
 	[CompilerGenerated]
 	private static Client <SteamworksClient>k__BackingField; //Field offset: 0x0
+	public const int TargetFrameRate = 60; //Field offset: 0x0
 	private static bool isFirstLoad; //Field offset: 0x8
 	public static bool LoadPlayer_GameIsReloadingFromScratch; //Field offset: 0x9
 	private static bool hasSeenModdingPopup; //Field offset: 0xA
@@ -468,73 +475,79 @@ public class Main : MonoBehaviour
 	public Main() { }
 
 	[CompilerGenerated]
-	private void <Start>b__12_1() { }
+	private void <Start>b__13_1() { }
 
 	[CompilerGenerated]
-	internal static void <Start>g__onFistLoadComplete|12_0() { }
+	internal static void <Start>g__onFistLoadComplete|13_0() { }
 
 	private void Awake() { }
 
 	private void CheckDataIdMismatch(Btd6Player player) { }
 
-	[AsyncStateMachine(typeof(<CheckForceOrSoftUpdate>d__35))]
+	[AsyncStateMachine(typeof(<CheckForceOrSoftUpdate>d__38))]
 	private static Task CheckForceOrSoftUpdate(VersionSettings versionSettings, InitialLoadingScreen loadingScreen) { }
 
 	private void CheckResolution() { }
 
-	[AsyncStateMachine(typeof(<CheckVersionAsync>d__33))]
+	[AsyncStateMachine(typeof(<CheckVersionAsync>d__36))]
 	private static Task CheckVersionAsync(InitialLoadingScreen loadingScreen) { }
 
 	[CompilerGenerated]
 	public static Client get_SteamworksClient() { }
 
+	public static string GetSteamSessionTicket() { }
+
 	private AnimatedSceneLoader<TitleScreen> GetTitleScene() { }
 
 	private void HandleException(string logString) { }
 
-	[AsyncStateMachine(typeof(<InitGameData>d__36))]
+	[AsyncStateMachine(typeof(<InitGameData>d__39))]
 	private Task InitGameData() { }
 
-	[IteratorStateMachine(typeof(<Initialize>d__20))]
+	[IteratorStateMachine(typeof(<Initialize>d__22))]
 	private IEnumerator Initialize(bool isFirstLoad, Action onLoadingComplete) { }
 
 	private void InitializeDeepLinkManager() { }
 
 	private void InitializeSteamworksClient() { }
 
-	[AsyncStateMachine(typeof(<InitialLoadTasks>d__28))]
+	[AsyncStateMachine(typeof(<InitialLoadTasks>d__31))]
 	private Task InitialLoadTasks(InitialLoadingScreen loadingScreen, bool isFirstLoad) { }
 
 	private static bool IsOutdatedDevice(VersionSettings versionSettings) { }
 
-	[AsyncStateMachine(typeof(<LoadFontsFromPlayerProfileLanguage>d__32))]
+	[AsyncStateMachine(typeof(<LoadFontsFromPlayerProfileLanguage>d__35))]
 	public static Task LoadFontsFromPlayerProfileLanguage() { }
 
-	[AsyncStateMachine(typeof(<LoadGameData>d__37))]
+	[AsyncStateMachine(typeof(<LoadGameData>d__40))]
 	private Task LoadGameData() { }
 
-	[AsyncStateMachine(typeof(<LoadGlobalScene>d__38))]
+	[AsyncStateMachine(typeof(<LoadGlobalScene>d__41))]
 	private Task LoadGlobalScene() { }
 
-	[IteratorStateMachine(typeof(<LoadingSequence>d__21))]
+	[IteratorStateMachine(typeof(<LoadingSequence>d__23))]
 	private IEnumerator LoadingSequence(bool isFirstLoad, Action onFistLoadComplete) { }
 
-	[IteratorStateMachine(typeof(<LoadLocs>d__24))]
+	[IteratorStateMachine(typeof(<LoadLocs>d__27))]
 	public IEnumerator LoadLocs() { }
 
-	[AsyncStateMachine(typeof(<LoadPlayer>d__41))]
+	[AsyncStateMachine(typeof(<LoadPlayer>d__44))]
 	private Task LoadPlayer() { }
 
+	private static void LoadTutorial(Btd6Player player, bool debugForceTutorial, TutorialType forceTutorialType) { }
+
 	private void OnAppDowngraded(Version from, Version to) { }
+
+	private void OnAppFirstRunDetected() { }
 
 	private void OnAppUpgraded(Version from, Version to) { }
 
 	private void OneTimeLoadTasks() { }
 
-	[AsyncStateMachine(typeof(<PlayerLoadTasks>d__31))]
+	[AsyncStateMachine(typeof(<PlayerLoadTasks>d__34))]
 	private Task PlayerLoadTasks() { }
 
-	[AsyncStateMachine(typeof(<PreloadFriendsAndGuildsAsync>d__23))]
+	[AsyncStateMachine(typeof(<PreloadFriendsAndGuildsAsync>d__26))]
 	private void PreloadFriendsAndGuildsAsync(LiNKAccount linkAccount = null) { }
 
 	private void QuitIfRunningInProton() { }
@@ -556,7 +569,7 @@ public class Main : MonoBehaviour
 
 	private void UpdateDisplayName(PlayerService playerService) { }
 
-	[AsyncStateMachine(typeof(<UploadCrashLogs>d__29))]
+	[AsyncStateMachine(typeof(<UploadCrashLogs>d__32))]
 	private Task UploadCrashLogs() { }
 
 }

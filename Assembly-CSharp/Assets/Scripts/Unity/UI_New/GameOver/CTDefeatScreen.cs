@@ -36,12 +36,12 @@ public class CTDefeatScreen : CheckpointDefeatScreen
 
 	protected virtual bool CanPlayAgain
 	{
-		 get { } //Length: 115
+		 get { } //Length: 118
 	}
 
 	private static string ContinueMapSaveId
 	{
-		private get { } //Length: 18
+		private get { } //Length: 16
 	}
 
 	public CTDefeatScreen() { }

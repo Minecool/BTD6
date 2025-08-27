@@ -585,7 +585,7 @@ public class TeamsScreen : GameMenu
 
 	public private bool IsTeamAdminEnabled
 	{
-		 get { } //Length: 168
+		 get { } //Length: 167
 		private set { } //Length: 129
 	}
 

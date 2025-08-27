@@ -101,7 +101,7 @@ internal class GooglePlayStoreService : IGooglePlayStoreService
 
 	public override void Purchase(ProductDefinition product) { }
 
-	public override void Purchase(ProductDefinition product, Product oldProduct, Nullable<GooglePlayProrationMode> desiredProrationMode) { }
+	public override void Purchase(ProductDefinition product, Product oldProduct, Nullable<GooglePlayReplacementMode> desiredReplacementMode) { }
 
 	public override void ResumeConnection() { }
 

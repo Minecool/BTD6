@@ -18,7 +18,7 @@ public class VolumeComponent : ScriptableObject
 
 	internal sealed class Indent : PropertyAttribute
 	{
-		public readonly int relativeAmount; //Field offset: 0x10
+		public readonly int relativeAmount; //Field offset: 0x18
 
 		public Indent(int relativeAmount = 1) { }
 

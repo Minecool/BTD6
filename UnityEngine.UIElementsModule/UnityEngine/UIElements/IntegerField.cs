@@ -13,7 +13,7 @@ public class IntegerField : TextValueField<Int32>
 
 		private IntegerField parentIntegerField
 		{
-			private get { } //Length: 113
+			private get { } //Length: 117
 		}
 
 		internal IntegerInput() { }
@@ -30,6 +30,7 @@ public class IntegerField : TextValueField<Int32>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<IntegerField, UxmlTraits>
 	{
 
@@ -37,6 +38,7 @@ public class IntegerField : TextValueField<Int32>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : TextValueFieldTraits<Int32, UxmlIntAttributeDescription>
 	{
 
@@ -50,7 +52,7 @@ public class IntegerField : TextValueField<Int32>
 
 	private IntegerInput integerInput
 	{
-		private get { } //Length: 122
+		private get { } //Length: 118
 	}
 
 	private static IntegerField() { }

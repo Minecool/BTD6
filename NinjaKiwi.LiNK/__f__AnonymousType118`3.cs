@@ -4,38 +4,38 @@
 internal sealed class <>f__AnonymousType118
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <filename>j__TPar <filename>i__Field; //Field offset: 0x0
+	private readonly <mmv>j__TPar <mmv>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <data>j__TPar <data>i__Field; //Field offset: 0x0
+	private readonly <gameMode>j__TPar <gameMode>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <expiresIn>j__TPar <expiresIn>i__Field; //Field offset: 0x0
+	private readonly <preferredSwarm>j__TPar <preferredSwarm>i__Field; //Field offset: 0x0
 
-	public <data>j__TPar data
+	public <gameMode>j__TPar gameMode
 	{
 		 get { } //Length: 5
 	}
 
-	public <expiresIn>j__TPar expiresIn
+	public <mmv>j__TPar mmv
 	{
 		 get { } //Length: 5
 	}
 
-	public <filename>j__TPar filename
+	public <preferredSwarm>j__TPar preferredSwarm
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType118`3(<filename>j__TPar filename, <data>j__TPar data, <expiresIn>j__TPar expiresIn) { }
+	public <>f__AnonymousType118`3(<mmv>j__TPar mmv, <gameMode>j__TPar gameMode, <preferredSwarm>j__TPar preferredSwarm) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <data>j__TPar get_data() { }
+	public <gameMode>j__TPar get_gameMode() { }
 
-	public <expiresIn>j__TPar get_expiresIn() { }
+	public <mmv>j__TPar get_mmv() { }
 
-	public <filename>j__TPar get_filename() { }
+	public <preferredSwarm>j__TPar get_preferredSwarm() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

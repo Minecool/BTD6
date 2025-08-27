@@ -6,14 +6,7 @@ namespace UnityEngine;
 public class Collider2D : Behaviour
 {
 
-	public Bounds bounds
-	{
-		 get { } //Length: 81
-	}
-
-	public Bounds get_bounds() { }
-
-	private void get_bounds_Injected(out Bounds ret) { }
+	public Collider2D() { }
 
 }
 

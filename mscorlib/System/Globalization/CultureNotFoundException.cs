@@ -12,7 +12,7 @@ public class CultureNotFoundException : ArgumentException
 
 	private string FormatedInvalidCultureId
 	{
-		private get { } //Length: 282
+		private get { } //Length: 270
 	}
 
 	public override Nullable<Int32> InvalidCultureId
@@ -27,7 +27,7 @@ public class CultureNotFoundException : ArgumentException
 
 	public virtual string Message
 	{
-		 get { } //Length: 409
+		 get { } //Length: 397
 	}
 
 	public CultureNotFoundException() { }

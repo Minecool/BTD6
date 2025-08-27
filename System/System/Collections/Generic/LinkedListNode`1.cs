@@ -9,12 +9,12 @@ public sealed class LinkedListNode
 
 	public LinkedListNode<T> Next
 	{
-		 get { } //Length: 51
+		 get { } //Length: 40
 	}
 
 	public LinkedListNode<T> Previous
 	{
-		 get { } //Length: 47
+		 get { } //Length: 40
 	}
 
 	public T Value

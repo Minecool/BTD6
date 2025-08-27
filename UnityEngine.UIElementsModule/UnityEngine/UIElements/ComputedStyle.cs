@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal struct ComputedStyle
 {
 	public StyleDataRef<InheritedData> inheritedData; //Field offset: 0x0
@@ -8,11 +9,10 @@ internal struct ComputedStyle
 	public StyleDataRef<TransformData> transformData; //Field offset: 0x18
 	public StyleDataRef<TransitionData> transitionData; //Field offset: 0x20
 	public StyleDataRef<VisualData> visualData; //Field offset: 0x28
-	public YogaNode yogaNode; //Field offset: 0x30
-	public Dictionary<String, StylePropertyValue> customProperties; //Field offset: 0x38
-	public long matchingRulesHash; //Field offset: 0x40
-	public float dpiScaling; //Field offset: 0x48
-	public ComputedTransitionProperty[] computedTransitions; //Field offset: 0x50
+	public Dictionary<String, StylePropertyValue> customProperties; //Field offset: 0x30
+	public long matchingRulesHash; //Field offset: 0x38
+	public float dpiScaling; //Field offset: 0x40
+	public ComputedTransitionProperty[] computedTransitions; //Field offset: 0x48
 
 	public Align alignContent
 	{
@@ -339,6 +339,11 @@ internal struct ComputedStyle
 		 get { } //Length: 81
 	}
 
+	public EditorTextRenderingMode unityEditorTextRenderingMode
+	{
+		 get { } //Length: 61
+	}
+
 	public Font unityFont
 	{
 		 get { } //Length: 62
@@ -389,7 +394,17 @@ internal struct ComputedStyle
 		 get { } //Length: 62
 	}
 
+	public SliceType unitySliceType
+	{
+		 get { } //Length: 62
+	}
+
 	public TextAnchor unityTextAlign
+	{
+		 get { } //Length: 61
+	}
+
+	public TextGeneratorType unityTextGenerator
 	{
 		 get { } //Length: 61
 	}
@@ -411,7 +426,7 @@ internal struct ComputedStyle
 
 	public Visibility visibility
 	{
-		 get { } //Length: 61
+		 get { } //Length: 64
 	}
 
 	public WhiteSpace whiteSpace
@@ -426,7 +441,7 @@ internal struct ComputedStyle
 
 	public Length wordSpacing
 	{
-		 get { } //Length: 1475
+		 get { } //Length: 1357
 	}
 
 	public ComputedStyle Acquire() { }
@@ -447,9 +462,13 @@ internal struct ComputedStyle
 
 	public void ApplyProperties(StylePropertyReader reader, ref ComputedStyle parentStyle) { }
 
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Color newValue) { }
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Font newValue) { }
 
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, FontDefinition newValue) { }
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Length newValue) { }
+
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Background newValue) { }
+
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Color newValue) { }
 
 	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, BackgroundSize newValue) { }
 
@@ -461,21 +480,17 @@ internal struct ComputedStyle
 
 	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, float newValue) { }
 
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Length newValue) { }
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Rotate newValue) { }
 
 	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, TransformOrigin newValue) { }
 
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Translate newValue) { }
-
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Background newValue) { }
-
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Rotate newValue) { }
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, FontDefinition newValue) { }
 
 	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Scale newValue) { }
 
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, TextShadow newValue) { }
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Translate newValue) { }
 
-	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, Font newValue) { }
+	public void ApplyPropertyAnimation(VisualElement ve, StylePropertyId id, TextShadow newValue) { }
 
 	public void ApplyStyleBackgroundSize(BackgroundSize backgroundSizeValue) { }
 
@@ -639,6 +654,8 @@ internal struct ComputedStyle
 
 	public Color get_unityBackgroundImageTintColor() { }
 
+	public EditorTextRenderingMode get_unityEditorTextRenderingMode() { }
+
 	public Font get_unityFont() { }
 
 	public FontDefinition get_unityFontDefinition() { }
@@ -659,7 +676,11 @@ internal struct ComputedStyle
 
 	public int get_unitySliceTop() { }
 
+	public SliceType get_unitySliceType() { }
+
 	public TextAnchor get_unityTextAlign() { }
+
+	public TextGeneratorType get_unityTextGenerator() { }
 
 	public Color get_unityTextOutlineColor() { }
 
@@ -687,9 +708,17 @@ internal struct ComputedStyle
 
 	public static bool StartAnimationInline(VisualElement element, StylePropertyId id, ref ComputedStyle computedStyle, StyleValue sv, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
 
-	public static bool StartAnimationInlineTranslate(VisualElement element, ref ComputedStyle computedStyle, StyleTranslate translate, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
+	public static bool StartAnimationInlineBackgroundSize(VisualElement element, ref ComputedStyle computedStyle, StyleBackgroundSize backgroundSize, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
 
-	public void SyncWithLayout(YogaNode targetNode) { }
+	public static bool StartAnimationInlineRotate(VisualElement element, ref ComputedStyle computedStyle, StyleRotate rotate, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
+
+	public static bool StartAnimationInlineScale(VisualElement element, ref ComputedStyle computedStyle, StyleScale scale, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
+
+	public static bool StartAnimationInlineTextShadow(VisualElement element, ref ComputedStyle computedStyle, StyleTextShadow textShadow, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
+
+	public static bool StartAnimationInlineTransformOrigin(VisualElement element, ref ComputedStyle computedStyle, StyleTransformOrigin transformOrigin, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
+
+	public static bool StartAnimationInlineTranslate(VisualElement element, ref ComputedStyle computedStyle, StyleTranslate translate, int durationMs, int delayMs, Func<Single, Single> easingCurve) { }
 
 }
 

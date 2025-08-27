@@ -55,7 +55,7 @@ public class Slider : Selectable, IDragHandler, IEventSystemHandler, IInitialize
 
 	private Axis axis
 	{
-		private get { } //Length: 21
+		private get { } //Length: 13
 	}
 
 	public Direction direction
@@ -102,7 +102,7 @@ public class Slider : Selectable, IDragHandler, IEventSystemHandler, IInitialize
 
 	private bool reverseValue
 	{
-		private get { } //Length: 23
+		private get { } //Length: 19
 	}
 
 	private float stepSize

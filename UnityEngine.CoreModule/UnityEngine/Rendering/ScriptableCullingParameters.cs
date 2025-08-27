@@ -25,12 +25,11 @@ public struct ScriptableCullingParameters : IEquatable<ScriptableCullingParamete
 	private const int k_CullingJobCountUpperLimit = 16; //Field offset: 0x0
 	private const int k_CullingJobCountLowerLimit = 1; //Field offset: 0x0
 	public static readonly int layerCount; //Field offset: 0x4
-	private int m_IsOrthographic; //Field offset: 0x0
-	private LODParameters m_LODParameters; //Field offset: 0x4
+	private LODParameters m_LODParameters; //Field offset: 0x0
 	[FixedBuffer(typeof(byte, 160)]
-	internal <m_CullingPlanes>e__FixedBuffer m_CullingPlanes; //Field offset: 0x20
-	private int m_CullingPlaneCount; //Field offset: 0xC0
-	private uint m_CullingMask; //Field offset: 0xC4
+	internal <m_CullingPlanes>e__FixedBuffer m_CullingPlanes; //Field offset: 0x1C
+	private int m_CullingPlaneCount; //Field offset: 0xBC
+	private uint m_CullingMask; //Field offset: 0xC0
 	private ulong m_SceneMask; //Field offset: 0xC8
 	private ulong m_ViewID; //Field offset: 0xD0
 	[FixedBuffer(typeof(float, 32)]
@@ -43,14 +42,14 @@ public struct ScriptableCullingParameters : IEquatable<ScriptableCullingParamete
 	private CullingOptions m_CullingOptions; //Field offset: 0x1B0
 	private ReflectionProbeSortingCriteria m_ReflectionProbeSortingCriteria; //Field offset: 0x1B4
 	private CameraProperties m_CameraProperties; //Field offset: 0x1B8
-	private float m_AccurateOcclusionThreshold; //Field offset: 0x598
-	private int m_MaximumPortalCullingJobs; //Field offset: 0x59C
-	private Matrix4x4 m_StereoViewMatrix; //Field offset: 0x5A0
-	private Matrix4x4 m_StereoProjectionMatrix; //Field offset: 0x5E0
-	private float m_StereoSeparationDistance; //Field offset: 0x620
-	private int m_maximumVisibleLights; //Field offset: 0x624
-	private bool m_ConservativeEnclosingSphere; //Field offset: 0x628
-	private int m_NumIterationsEnclosingSphere; //Field offset: 0x62C
+	private float m_AccurateOcclusionThreshold; //Field offset: 0x59C
+	private int m_MaximumPortalCullingJobs; //Field offset: 0x5A0
+	private Matrix4x4 m_StereoViewMatrix; //Field offset: 0x5A4
+	private Matrix4x4 m_StereoProjectionMatrix; //Field offset: 0x5E4
+	private float m_StereoSeparationDistance; //Field offset: 0x624
+	private int m_maximumVisibleLights; //Field offset: 0x628
+	private bool m_ConservativeEnclosingSphere; //Field offset: 0x62C
+	private int m_NumIterationsEnclosingSphere; //Field offset: 0x630
 
 	public bool conservativeEnclosingSphere
 	{
@@ -66,11 +65,6 @@ public struct ScriptableCullingParameters : IEquatable<ScriptableCullingParamete
 	public int cullingPlaneCount
 	{
 		 get { } //Length: 9
-	}
-
-	public bool isOrthographic
-	{
-		 set { } //Length: 88
 	}
 
 	public int maximumVisibleLights
@@ -130,8 +124,6 @@ public struct ScriptableCullingParameters : IEquatable<ScriptableCullingParamete
 	public void set_conservativeEnclosingSphere(bool value) { }
 
 	public void set_cullingOptions(CullingOptions value) { }
-
-	public void set_isOrthographic(bool value) { }
 
 	public void set_maximumVisibleLights(int value) { }
 

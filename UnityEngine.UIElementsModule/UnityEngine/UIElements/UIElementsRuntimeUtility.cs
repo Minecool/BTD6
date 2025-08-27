@@ -6,17 +6,15 @@ internal static class UIElementsRuntimeUtility
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Comparison<Panel> <>9__48_0; //Field offset: 0x8
+		public static Comparison<Panel> <>9__43_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <.cctor>b__9_0() { }
+		internal void <.cctor>b__3_0(int displayIndex, int sortOrder) { }
 
-		internal void <.cctor>b__9_1(int displayIndex, int sortOrder) { }
-
-		internal int <SortPanels>b__48_0(Panel a, Panel b) { }
+		internal int <SortPanels>b__43_0(Panel a, Panel b) { }
 
 	}
 
@@ -86,12 +84,18 @@ internal static class UIElementsRuntimeUtility
 
 	public static BaseRuntimePanel FindOrCreateRuntimePanel(ScriptableObject ownerObject, CreateRuntimePanelDelegate createDelegate) { }
 
+	private static Vector2 FlipDeltaY(Vector2 delta) { }
+
+	internal static Vector2 FlipY(Vector2 p, float displayHeight) { }
+
 	[CompilerGenerated]
 	internal static object get_activeEventSystem() { }
 
 	internal static DefaultEventSystem get_defaultEventSystem() { }
 
 	internal static bool get_useDefaultEventSystem() { }
+
+	private static float GetRuntimeDisplayHeight(int targetDisplay) { }
 
 	internal static List<Panel> GetSortedPlayerPanels() { }
 
@@ -114,11 +118,15 @@ internal static class UIElementsRuntimeUtility
 
 	internal static void RemoveUnusedPanels() { }
 
+	public static void RenderOffscreenPanels() { }
+
 	internal static void RenderOverlaysBeforePriority(int displayIndex, float maxPriority) { }
 
-	public static void RepaintOffscreenPanels() { }
+	public static void RenderPanel(BaseRuntimePanel panel, bool restoreState = true) { }
 
-	public static void RepaintOverlayPanel(BaseRuntimePanel panel) { }
+	public static void RepaintPanel(BaseRuntimePanel panel) { }
+
+	public static void RepaintPanels(bool onlyOffscreen) { }
 
 	internal static Vector2 ScreenBottomLeftToPanelDelta(Vector2 delta) { }
 
@@ -135,7 +143,7 @@ internal static class UIElementsRuntimeUtility
 
 	public static void UnregisterPlayerloopCallback() { }
 
-	public static void UpdateRuntimePanels() { }
+	public static void UpdatePanels() { }
 
 }
 

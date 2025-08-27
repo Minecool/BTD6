@@ -8,7 +8,7 @@ public class AsnEncodedData
 	public Oid Oid
 	{
 		 get { } //Length: 5
-		 set { } //Length: 150
+		 set { } //Length: 140
 	}
 
 	public Byte[] RawData

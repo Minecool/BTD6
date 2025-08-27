@@ -205,12 +205,12 @@ public class EditorMenu : RatioObject
 
 	private PlayerContentInfo CreationContentInfo
 	{
-		private get { } //Length: 431
+		private get { } //Length: 509
 	}
 
 	private CustomMapModel CurrentCustomMapModel
 	{
-		private get { } //Length: 42
+		private get { } //Length: 36
 	}
 
 	public private bool Is16_9Enabled

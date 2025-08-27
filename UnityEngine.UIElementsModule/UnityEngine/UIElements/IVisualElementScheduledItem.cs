@@ -20,5 +20,7 @@ public interface IVisualElementScheduledItem
 
 	public IVisualElementScheduledItem StartingIn(long delayMs) { }
 
+	public IVisualElementScheduledItem Until(Func<Boolean> stopCondition) { }
+
 }
 

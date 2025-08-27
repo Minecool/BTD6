@@ -317,7 +317,7 @@ public class LeaderboardPlayerPanel : MonoBehaviour
 
 	public Task DefaultWaitTime
 	{
-		 get { } //Length: 69
+		 get { } //Length: 67
 	}
 
 	private bool IsCtEvent

@@ -20,7 +20,7 @@ public class MoabTakedown : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 440
+		 get { } //Length: 436
 	}
 
 	public MoabTakedown() { }

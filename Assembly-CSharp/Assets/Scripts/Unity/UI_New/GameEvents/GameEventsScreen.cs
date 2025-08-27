@@ -527,6 +527,7 @@ public class GameEventsScreen : GameMenu
 		public GameEventsScreen <>4__this; //Field offset: 0x20
 		private <>c__DisplayClass56_0 <>8__1; //Field offset: 0x28
 		private bool <canShowEndedEvent>5__2; //Field offset: 0x30
+		private bool <isShowingCurrentEvent>5__3; //Field offset: 0x31
 		private TaskAwaiter<Boolean> <>u__1; //Field offset: 0x38
 		private TaskAwaiter <>u__2; //Field offset: 0x40
 
@@ -595,7 +596,7 @@ public class GameEventsScreen : GameMenu
 
 	private AnalyticsManager Analytics
 	{
-		private get { } //Length: 54
+		private get { } //Length: 223
 	}
 
 	public IReadOnlyCollection<SpriteReference> CollectionEventBackgrounds

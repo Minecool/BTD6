@@ -25,7 +25,7 @@ public struct Vector3Int : IEquatable<Vector3Int>, IFormattable
 	public int x
 	{
 		 get { } //Length: 5
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int y
@@ -76,8 +76,6 @@ public struct Vector3Int : IEquatable<Vector3Int>, IFormattable
 	public static bool op_Equality(Vector3Int lhs, Vector3Int rhs) { }
 
 	public static Vector3 op_Implicit(Vector3Int v) { }
-
-	public static bool op_Inequality(Vector3Int lhs, Vector3Int rhs) { }
 
 	public static Vector3Int op_Multiply(Vector3Int a, int b) { }
 

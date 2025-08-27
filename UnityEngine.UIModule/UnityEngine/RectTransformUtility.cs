@@ -1,9 +1,9 @@
 namespace UnityEngine;
 
 [NativeHeader("Runtime/Camera/Camera.h")]
-[NativeHeader("Modules/UI/Canvas.h")]
-[NativeHeader("Modules/UI/RectTransformUtil.h")]
 [NativeHeader("Runtime/Transform/RectTransform.h")]
+[NativeHeader("Modules/UI/RectTransformUtil.h")]
+[NativeHeader("Modules/UI/Canvas.h")]
 [StaticAccessor("UI", StaticAccessorType::DoubleColon (2))]
 public sealed class RectTransformUtility
 {
@@ -19,15 +19,15 @@ public sealed class RectTransformUtility
 
 	public static Vector2 PixelAdjustPoint(Vector2 point, Transform elementTransform, Canvas canvas) { }
 
-	private static void PixelAdjustPoint_Injected(ref Vector2 point, Transform elementTransform, Canvas canvas, out Vector2 ret) { }
+	private static void PixelAdjustPoint_Injected(in Vector2 point, IntPtr elementTransform, IntPtr canvas, out Vector2 ret) { }
 
 	public static Rect PixelAdjustRect(RectTransform rectTransform, Canvas canvas) { }
 
-	private static void PixelAdjustRect_Injected(RectTransform rectTransform, Canvas canvas, out Rect ret) { }
+	private static void PixelAdjustRect_Injected(IntPtr rectTransform, IntPtr canvas, out Rect ret) { }
 
 	private static bool PointInRectangle(Vector2 screenPoint, RectTransform rect, Camera cam, Vector4 offset) { }
 
-	private static bool PointInRectangle_Injected(ref Vector2 screenPoint, RectTransform rect, Camera cam, ref Vector4 offset) { }
+	private static bool PointInRectangle_Injected(in Vector2 screenPoint, IntPtr rect, IntPtr cam, in Vector4 offset) { }
 
 	public static bool RectangleContainsScreenPoint(RectTransform rect, Vector2 screenPoint, Camera cam, Vector4 offset) { }
 

@@ -79,7 +79,7 @@ public abstract class Graphic : UIBehaviour, ICanvasElement
 
 	public override Material materialForRendering
 	{
-		 get { } //Length: 463
+		 get { } //Length: 464
 	}
 
 	public Vector4 raycastPadding
@@ -91,7 +91,7 @@ public abstract class Graphic : UIBehaviour, ICanvasElement
 	public override bool raycastTarget
 	{
 		 get { } //Length: 5
-		 set { } //Length: 219
+		 set { } //Length: 220
 	}
 
 	public override RectTransform rectTransform

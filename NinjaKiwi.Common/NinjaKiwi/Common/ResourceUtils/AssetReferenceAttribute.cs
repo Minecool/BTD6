@@ -17,7 +17,7 @@ public class AssetReferenceAttribute : PropertyAttribute
 
 	}
 
-	public Type[] objTypes; //Field offset: 0x10
+	public Type[] objTypes; //Field offset: 0x18
 
 	public AssetReferenceAttribute() { }
 

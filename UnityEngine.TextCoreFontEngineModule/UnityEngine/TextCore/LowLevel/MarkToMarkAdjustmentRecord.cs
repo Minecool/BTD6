@@ -1,6 +1,7 @@
 namespace UnityEngine.TextCore.LowLevel;
 
 [UsedByNativeCode]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.TextCoreTextEngineModule"}])]
 internal struct MarkToMarkAdjustmentRecord
 {
 	[NativeName("baseMarkGlyphID")]
@@ -19,21 +20,25 @@ internal struct MarkToMarkAdjustmentRecord
 	public GlyphAnchorPoint baseMarkGlyphAnchorPoint
 	{
 		 get { } //Length: 19
+		 set { } //Length: 5
 	}
 
 	public uint baseMarkGlyphID
 	{
 		 get { } //Length: 5
+		 set { } //Length: 8900
 	}
 
 	public uint combiningMarkGlyphID
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public MarkPositionAdjustment combiningMarkPositionAdjustment
 	{
 		 get { } //Length: 19
+		 set { } //Length: 5
 	}
 
 	public GlyphAnchorPoint get_baseMarkGlyphAnchorPoint() { }
@@ -43,6 +48,14 @@ internal struct MarkToMarkAdjustmentRecord
 	public uint get_combiningMarkGlyphID() { }
 
 	public MarkPositionAdjustment get_combiningMarkPositionAdjustment() { }
+
+	public void set_baseMarkGlyphAnchorPoint(GlyphAnchorPoint value) { }
+
+	public void set_baseMarkGlyphID(uint value) { }
+
+	public void set_combiningMarkGlyphID(uint value) { }
+
+	public void set_combiningMarkPositionAdjustment(MarkPositionAdjustment value) { }
 
 }
 

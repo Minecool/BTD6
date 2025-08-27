@@ -19,12 +19,12 @@ internal class KeyPairPersistence
 
 	private string ContainerName
 	{
-		private get { } //Length: 326
+		private get { } //Length: 314
 	}
 
 	public string Filename
 	{
-		 get { } //Length: 417
+		 get { } //Length: 405
 	}
 
 	public string KeyValue
@@ -35,7 +35,7 @@ internal class KeyPairPersistence
 
 	private static string MachinePath
 	{
-		private get { } //Length: 1328
+		private get { } //Length: 1302
 	}
 
 	private bool UseDefaultKeyContainer
@@ -50,7 +50,7 @@ internal class KeyPairPersistence
 
 	private static string UserPath
 	{
-		private get { } //Length: 1324
+		private get { } //Length: 1298
 	}
 
 	internal static bool _CanSecure(Char* root) { }

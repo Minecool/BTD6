@@ -72,6 +72,8 @@ public class ThreadLocal : IDisposable
 
 	public ThreadLocal`1() { }
 
+	public ThreadLocal`1(Func<T> valueFactory) { }
+
 	private void CreateLinkedSlot(LinkedSlotVolatile<T>[] slotArray, int id, T value) { }
 
 	public override void Dispose() { }

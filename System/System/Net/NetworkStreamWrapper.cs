@@ -50,7 +50,7 @@ internal class NetworkStreamWrapper : Stream
 
 	internal IPAddress ServerAddress
 	{
-		internal get { } //Length: 138
+		internal get { } //Length: 136
 	}
 
 	internal Socket Socket
@@ -60,7 +60,7 @@ internal class NetworkStreamWrapper : Stream
 
 	protected bool UsingSecureStream
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public virtual int WriteTimeout

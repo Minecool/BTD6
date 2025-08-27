@@ -2,16 +2,16 @@ namespace UnityEngine.UIElements;
 
 internal class ListViewDraggerAnimated : ListViewDragger
 {
-	private int m_DragStartIndex; //Field offset: 0x78
-	private int m_CurrentIndex; //Field offset: 0x7C
-	private float m_SelectionHeight; //Field offset: 0x80
-	private float m_LocalOffsetOnStart; //Field offset: 0x84
-	private Vector3 m_CurrentPointerPosition; //Field offset: 0x88
-	private ReusableCollectionItem m_Item; //Field offset: 0x98
-	private ReusableCollectionItem m_OffsetItem; //Field offset: 0xA0
+	private int m_DragStartIndex; //Field offset: 0x80
+	private int m_CurrentIndex; //Field offset: 0x84
+	private float m_SelectionHeight; //Field offset: 0x88
+	private float m_LocalOffsetOnStart; //Field offset: 0x8C
+	private Vector3 m_CurrentPointerPosition; //Field offset: 0x90
+	private ReusableCollectionItem m_Item; //Field offset: 0xA0
+	private ReusableCollectionItem m_OffsetItem; //Field offset: 0xA8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <isDragging>k__BackingField; //Field offset: 0xA8
+	private bool <isDragging>k__BackingField; //Field offset: 0xB0
 
 	public ReusableCollectionItem draggedItem
 	{

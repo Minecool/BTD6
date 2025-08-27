@@ -30,12 +30,12 @@ public static class Json
 
 		private TOKEN NextToken
 		{
-			private get { } //Length: 780
+			private get { } //Length: 744
 		}
 
 		private string NextWord
 		{
-			private get { } //Length: 479
+			private get { } //Length: 467
 		}
 
 		private char PeekChar

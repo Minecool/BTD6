@@ -30,8 +30,6 @@ public struct ContactFilter2D
 
 	private void CheckConsistency() { }
 
-	private static void CheckConsistency_Injected(ref ContactFilter2D _unity_self) { }
-
 	internal static ContactFilter2D CreateLegacyFilter(int layerMask, float minDepth, float maxDepth) { }
 
 	public void SetDepth(float minDepth, float maxDepth) { }

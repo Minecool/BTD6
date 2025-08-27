@@ -1,7 +1,7 @@
 namespace Assets.Scripts.Unity.Display;
 
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public class Scene
 {
 	[CompilerGenerated]

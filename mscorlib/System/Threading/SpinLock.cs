@@ -38,6 +38,9 @@ public struct SpinLock
 	public void Enter(ref bool lockTaken) { }
 
 	[ReliabilityContract(Consistency::WillNotCorruptState (3), Cer::Success (2))]
+	public void Exit() { }
+
+	[ReliabilityContract(Consistency::WillNotCorruptState (3), Cer::Success (2))]
 	public void Exit(bool useMemoryBarrier) { }
 
 	private void ExitSlowPath(bool useMemoryBarrier) { }

@@ -26,7 +26,7 @@ public class BloonSlapModel : ProjectileBehaviorModel
 
 	public SlapMutator Mutator
 	{
-		 get { } //Length: 269
+		 get { } //Length: 273
 	}
 
 	public BloonSlapModel(string name, int valueForNormalBloons, int valueForCeramicBloons, int heavyMultiplier, int lightMultiplier, float lifespan, string mutationId) { }

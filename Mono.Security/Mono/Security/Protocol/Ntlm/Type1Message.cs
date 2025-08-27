@@ -7,12 +7,12 @@ public class Type1Message : MessageBase
 
 	public string Domain
 	{
-		 set { } //Length: 105
+		 set { } //Length: 116
 	}
 
 	public string Host
 	{
-		 set { } //Length: 105
+		 set { } //Length: 116
 	}
 
 	public Type1Message() { }

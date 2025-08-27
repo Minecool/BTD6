@@ -29,10 +29,12 @@ public class Slow : ProjectileBehavior
 	public string expMatchLayersWithDamage; //Field offset: 0x148
 	public float chance; //Field offset: 0x150
 	public string expChance; //Field offset: 0x158
+	public bool dontRemoveOnBloonDegrade; //Field offset: 0x160
+	public string expDontRemoveOnBloonDegrade; //Field offset: 0x168
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 601
+		 get { } //Length: 642
 	}
 
 	public Slow() { }

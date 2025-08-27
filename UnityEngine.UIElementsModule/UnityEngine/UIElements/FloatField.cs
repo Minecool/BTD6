@@ -13,7 +13,7 @@ public class FloatField : TextValueField<Single>
 
 		private FloatField parentFloatField
 		{
-			private get { } //Length: 113
+			private get { } //Length: 117
 		}
 
 		internal FloatInput() { }
@@ -30,6 +30,7 @@ public class FloatField : TextValueField<Single>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<FloatField, UxmlTraits>
 	{
 
@@ -37,6 +38,7 @@ public class FloatField : TextValueField<Single>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : TextValueFieldTraits<Single, UxmlFloatAttributeDescription>
 	{
 
@@ -50,7 +52,7 @@ public class FloatField : TextValueField<Single>
 
 	private FloatInput floatInput
 	{
-		private get { } //Length: 122
+		private get { } //Length: 118
 	}
 
 	private static FloatField() { }

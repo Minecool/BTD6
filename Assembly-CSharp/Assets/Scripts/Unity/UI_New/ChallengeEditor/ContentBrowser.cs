@@ -367,12 +367,12 @@ public class ContentBrowser : BrowserBase
 
 	public static bool IsAdmin
 	{
-		 get { } //Length: 93
+		 get { } //Length: 95
 	}
 
 	public static bool IsCurator
 	{
-		 get { } //Length: 93
+		 get { } //Length: 95
 	}
 
 	private bool IsOnline
@@ -397,12 +397,12 @@ public class ContentBrowser : BrowserBase
 	public private ContentType SelectedTab
 	{
 		 get { } //Length: 560
-		private set { } //Length: 251
+		private set { } //Length: 233
 	}
 
 	public List<SelectionType> SelectionTypes
 	{
-		 get { } //Length: 379
+		 get { } //Length: 355
 	}
 
 	private static ContentBrowser() { }

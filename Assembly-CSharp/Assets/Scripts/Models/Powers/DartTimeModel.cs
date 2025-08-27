@@ -32,12 +32,12 @@ public class DartTimeModel : PowerBehaviorModel
 
 	public BloonTimeSlowMutatorClass BloonTimeSlowMutator
 	{
-		 get { } //Length: 211
+		 get { } //Length: 215
 	}
 
 	public TowerTimeSlowMutatorClass TowerTimeSlowMutator
 	{
-		 get { } //Length: 211
+		 get { } //Length: 215
 	}
 
 	public DartTimeModel(string name, float bloonSpeed, float towerAttackSpeed, float duration) { }

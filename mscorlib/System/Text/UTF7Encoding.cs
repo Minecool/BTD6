@@ -49,7 +49,7 @@ public class UTF7Encoding : Encoding
 
 		public virtual int Remaining
 		{
-			 get { } //Length: 13
+			 get { } //Length: 11
 		}
 
 		public DecoderUTF7FallbackBuffer(DecoderUTF7Fallback fallback) { }

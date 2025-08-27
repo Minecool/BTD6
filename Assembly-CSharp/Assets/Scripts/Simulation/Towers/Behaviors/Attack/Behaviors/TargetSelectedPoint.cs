@@ -3,7 +3,7 @@ namespace Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors;
 public class TargetSelectedPoint : TargetSupplier
 {
 	[CompilerGenerated]
-	private sealed class <GetTargets>d__20 : IEnumerable<Target>, IEnumerable, IEnumerator<Target>, IEnumerator, IDisposable
+	private sealed class <GetTargets>d__21 : IEnumerable<Target>, IEnumerable, IEnumerator<Target>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private Target <>2__current; //Field offset: 0x18
@@ -23,7 +23,7 @@ public class TargetSelectedPoint : TargetSupplier
 		}
 
 		[DebuggerHidden]
-		public <GetTargets>d__20(int <>1__state) { }
+		public <GetTargets>d__21(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -55,6 +55,7 @@ public class TargetSelectedPoint : TargetSupplier
 	private Projectile pendingProjectileToDestroy; //Field offset: 0x90
 	private bool assignWeaponToProjectile; //Field offset: 0x98
 	private bool checkPendingProjectileToDestroy; //Field offset: 0x99
+	private bool targetPointInitialised; //Field offset: 0x9A
 
 	public bool HasValidPoint
 	{
@@ -75,7 +76,7 @@ public class TargetSelectedPoint : TargetSupplier
 
 	public virtual void GetSaveMetaData(Dictionary<String, String> metaData) { }
 
-	[IteratorStateMachine(typeof(<GetTargets>d__20))]
+	[IteratorStateMachine(typeof(<GetTargets>d__21))]
 	public virtual IEnumerable<Target> GetTargets() { }
 
 	public virtual object GetTargetTypeCustomInputData() { }

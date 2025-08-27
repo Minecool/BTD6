@@ -11,8 +11,6 @@ public class StackTrace
 		NoResourceLookup = 2,
 	}
 
-	public const int METHODS_TO_SKIP = 0; //Field offset: 0x0
-	private const string prefix = "  at "; //Field offset: 0x0
 	private static bool isAotidSet; //Field offset: 0x0
 	private static string aotid; //Field offset: 0x8
 	private StackFrame[] frames; //Field offset: 0x10
@@ -21,7 +19,7 @@ public class StackTrace
 
 	public override int FrameCount
 	{
-		 get { } //Length: 18
+		 get { } //Length: 14
 	}
 
 	public StackTrace() { }

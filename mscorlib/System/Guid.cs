@@ -81,8 +81,6 @@ public struct Guid : IFormattable, IComparable, IComparable<Guid>, IEquatable<Gu
 
 	public Guid(ReadOnlySpan<Byte> b) { }
 
-	public Guid(int a, short b, short c, Byte[] d) { }
-
 	public Guid(int a, short b, short c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) { }
 
 	public Guid(string g) { }

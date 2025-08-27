@@ -16,5 +16,7 @@ public struct BatchMaterialID : IEquatable<BatchMaterialID>
 
 	public virtual int GetHashCode() { }
 
+	public static bool op_Equality(BatchMaterialID a, BatchMaterialID b) { }
+
 }
 

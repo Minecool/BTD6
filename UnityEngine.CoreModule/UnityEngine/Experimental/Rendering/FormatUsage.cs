@@ -1,5 +1,6 @@
 namespace UnityEngine.Experimental.Rendering;
 
+[Obsolete("Use GraphicsFormatUsage instead", False)]
 public enum FormatUsage
 {
 	Sample = 0,

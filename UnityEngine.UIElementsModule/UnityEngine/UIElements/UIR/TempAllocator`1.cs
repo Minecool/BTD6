@@ -34,6 +34,8 @@ internal class TempAllocator : IDisposable
 
 	protected void Dispose(bool disposing) { }
 
+	private NativeSlice<T> DoAlloc(int count) { }
+
 	[CompilerGenerated]
 	protected bool get_disposed() { }
 

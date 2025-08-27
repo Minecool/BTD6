@@ -6,7 +6,7 @@ public class AuthorityKeyIdentifierExtension : X509Extension
 
 	public Byte[] Identifier
 	{
-		 get { } //Length: 123
+		 get { } //Length: 121
 	}
 
 	public AuthorityKeyIdentifierExtension(X509Extension extension) { }

@@ -17,7 +17,7 @@ internal class RuntimeType : TypeInfo, ISerializable, ICloneable
 
 		public T Item
 		{
-			 get { } //Length: 46
+			 get { } //Length: 45
 		}
 
 		public ListBuilder`1(int capacity) { }
@@ -81,7 +81,7 @@ internal class RuntimeType : TypeInfo, ISerializable, ICloneable
 
 	public virtual bool ContainsGenericParameters
 	{
-		 get { } //Length: 296
+		 get { } //Length: 297
 	}
 
 	public virtual MethodBase DeclaringMethod
@@ -96,7 +96,7 @@ internal class RuntimeType : TypeInfo, ISerializable, ICloneable
 
 	public virtual string FullName
 	{
-		 get { } //Length: 214
+		 get { } //Length: 210
 	}
 
 	public virtual GenericParameterAttributes GenericParameterAttributes
@@ -151,7 +151,7 @@ internal class RuntimeType : TypeInfo, ISerializable, ICloneable
 
 	public virtual MemberTypes MemberType
 	{
-		 get { } //Length: 64
+		 get { } //Length: 50
 	}
 
 	public virtual int MetadataToken

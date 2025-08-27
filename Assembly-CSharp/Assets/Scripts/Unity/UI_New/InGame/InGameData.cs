@@ -4,7 +4,8 @@ public class InGameData
 {
 	private static InGameData _editableInstance; //Field offset: 0x0
 	private static ReadonlyInGameData _readonlyGameInstance; //Field offset: 0x8
-	public bool includeTutorial; //Field offset: 0x10
+	public bool includeTutorialOld; //Field offset: 0x10
+	public bool includeTutorialNew; //Field offset: 0x11
 	public GameType gameType; //Field offset: 0x14
 	public SubGameType subGameType; //Field offset: 0x18
 	public string selectedMode; //Field offset: 0x20
@@ -123,7 +124,7 @@ public class InGameData
 
 	public void SetupRogueGame(DailyChallengeModel dcm, List<RogueInstaMonkey> instasInventory, List<ArtifactLoot> artifactsInventory, Vector2Int tileCoords, RogueTileType tileType, BossRushGameData _bossRushData, BossType boss, int stage, RogueMiniGameData miniGameData, bool isLegendaryTile, int tileSeed, bool isChimps, RogueBloonModifier modifierType, bool isReverse) { }
 
-	public void SetupTutorial() { }
+	public void SetupTutorial(TutorialType tutorialType) { }
 
 	public static void UseExistingInstance(InGameData data) { }
 

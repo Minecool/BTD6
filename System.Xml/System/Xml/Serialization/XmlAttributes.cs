@@ -19,7 +19,7 @@ public class XmlAttributes
 
 	internal Nullable<Int32> Order
 	{
-		internal get { } //Length: 176
+		internal get { } //Length: 169
 	}
 
 	internal int SortableOrder

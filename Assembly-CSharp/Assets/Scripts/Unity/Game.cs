@@ -6,26 +6,26 @@ public class Game : MonoBehaviour
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<ModModel, IEnumerable`1<MutatorModModel>> <>9__63_2; //Field offset: 0x8
-		public static ReturnCallback <>9__73_0; //Field offset: 0x10
+		public static Func<ModModel, IEnumerable`1<MutatorModModel>> <>9__64_2; //Field offset: 0x8
+		public static ReturnCallback <>9__74_0; //Field offset: 0x10
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal IEnumerable<MutatorModModel> <GetMonkeyMoneyReward>b__63_2(ModModel m) { }
+		internal IEnumerable<MutatorModModel> <GetMonkeyMoneyReward>b__64_2(ModModel m) { }
 
-		internal void <ShowLoginWebView>b__73_0() { }
+		internal void <ShowLoginWebView>b__74_0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass63_0
+	private sealed class <>c__DisplayClass64_0
 	{
 		public string difficulty; //Field offset: 0x10
 		public string mode; //Field offset: 0x18
 
-		public <>c__DisplayClass63_0() { }
+		public <>c__DisplayClass64_0() { }
 
 		internal bool <GetMonkeyMoneyReward>b__0(ModModel m) { }
 
@@ -34,7 +34,7 @@ public class Game : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <LoadGameModel>d__49 : IAsyncStateMachine
+	private struct <LoadGameModel>d__50 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -50,7 +50,7 @@ public class Game : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <LoadWebview>d__74 : IAsyncStateMachine
+	private struct <LoadWebview>d__75 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -64,7 +64,7 @@ public class Game : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <LogOutAndReloadFromScratch>d__51 : IAsyncStateMachine
+	private struct <LogOutAndReloadFromScratch>d__52 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -79,7 +79,7 @@ public class Game : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <SetupAchievements>d__46 : IAsyncStateMachine
+	private struct <SetupAchievements>d__47 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -95,7 +95,7 @@ public class Game : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <ShowLoginWebView>d__73 : IAsyncStateMachine
+	private struct <ShowLoginWebView>d__74 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -141,27 +141,28 @@ public class Game : MonoBehaviour
 	public QuestTrackerManager questTrackerManager; //Field offset: 0x78
 	public RogueLegendsManager legendsManager; //Field offset: 0x80
 	public SweepstakesDataHelper sweepstakesDataHelper; //Field offset: 0x88
+	public PowersProDataHelper powersProDataHelper; //Field offset: 0x90
 	[CompilerGenerated]
-	private GameEditorManager <GameEditorManager>k__BackingField; //Field offset: 0x90
+	private GameEditorManager <GameEditorManager>k__BackingField; //Field offset: 0x98
 	[CompilerGenerated]
-	private UpdateGame OnUpdate; //Field offset: 0x98
+	private UpdateGame OnUpdate; //Field offset: 0xA0
 
 	public event UpdateGame OnUpdate
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public AnalyticsManager analyticsManager
 	{
-		 get { } //Length: 54
+		 get { } //Length: 223
 	}
 
 	public static bool CanUseTrophyStore
 	{
-		 get { } //Length: 234
+		 get { } //Length: 237
 	}
 
 	public static bool DisableNudgeMode
@@ -200,7 +201,7 @@ public class Game : MonoBehaviour
 
 	public static string LiNKDisplayName
 	{
-		 get { } //Length: 91
+		 get { } //Length: 94
 	}
 
 	private static string MapSaveDataPath
@@ -275,15 +276,15 @@ public class Game : MonoBehaviour
 
 	public int GetOdysseyMMReward(string map, string trackDifficulty, string mode, GameModel useModel) { }
 
-	[AsyncStateMachine(typeof(<LoadGameModel>d__49))]
+	[AsyncStateMachine(typeof(<LoadGameModel>d__50))]
 	public Task LoadGameModel() { }
 
 	public static File<MapSaveDataModel> LoadMapSave() { }
 
-	[AsyncStateMachine(typeof(<LoadWebview>d__74))]
+	[AsyncStateMachine(typeof(<LoadWebview>d__75))]
 	private void LoadWebview() { }
 
-	[AsyncStateMachine(typeof(<LogOutAndReloadFromScratch>d__51))]
+	[AsyncStateMachine(typeof(<LogOutAndReloadFromScratch>d__52))]
 	public void LogOutAndReloadFromScratch() { }
 
 	private void OnDestroy() { }
@@ -298,14 +299,14 @@ public class Game : MonoBehaviour
 
 	private static void set_IsOfflineMode(bool value) { }
 
-	[AsyncStateMachine(typeof(<SetupAchievements>d__46))]
+	[AsyncStateMachine(typeof(<SetupAchievements>d__47))]
 	public Task SetupAchievements() { }
 
 	private void SetUpCameras() { }
 
 	private void SetUpRendering() { }
 
-	[AsyncStateMachine(typeof(<ShowLoginWebView>d__73))]
+	[AsyncStateMachine(typeof(<ShowLoginWebView>d__74))]
 	public void ShowLoginWebView() { }
 
 	public void StartAnalytics() { }

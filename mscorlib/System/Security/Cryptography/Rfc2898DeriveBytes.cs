@@ -24,13 +24,13 @@ public class Rfc2898DeriveBytes : DeriveBytes
 	public int IterationCount
 	{
 		 get { } //Length: 4
-		 set { } //Length: 132
+		 set { } //Length: 205
 	}
 
 	public Byte[] Salt
 	{
 		 get { } //Length: 11
-		 set { } //Length: 281
+		 set { } //Length: 275
 	}
 
 	public Rfc2898DeriveBytes(Byte[] password, Byte[] salt, int iterations) { }

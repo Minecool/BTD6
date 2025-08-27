@@ -7,7 +7,7 @@ internal class Win32NetworkInterface
 
 	public static Win32_FIXED_INFO FixedInfo
 	{
-		 get { } //Length: 2168
+		 get { } //Length: 2021
 	}
 
 	[CompilerGenerated]

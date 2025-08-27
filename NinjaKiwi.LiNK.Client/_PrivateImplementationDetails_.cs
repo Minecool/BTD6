@@ -3,57 +3,57 @@
 [CompilerGenerated]
 internal sealed class <PrivateImplementationDetails>
 {
-	public struct __StaticArrayInitTypeSize=1152
+	private struct __StaticArrayInitTypeSize=1152
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=116
+	private struct __StaticArrayInitTypeSize=116
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=120
+	private struct __StaticArrayInitTypeSize=120
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=124
+	private struct __StaticArrayInitTypeSize=124
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=19
+	private struct __StaticArrayInitTypeSize=19
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=256
+	private struct __StaticArrayInitTypeSize=256
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=384
+	private struct __StaticArrayInitTypeSize=384
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=512
+	private struct __StaticArrayInitTypeSize=512
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=6144
+	private struct __StaticArrayInitTypeSize=6144
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=68
+	private struct __StaticArrayInitTypeSize=68
 	{
 
 	}
 
-	public struct __StaticArrayInitTypeSize=76
+	private struct __StaticArrayInitTypeSize=76
 	{
 
 	}

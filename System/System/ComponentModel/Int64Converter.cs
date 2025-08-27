@@ -5,7 +5,7 @@ public class Int64Converter : BaseNumberConverter
 
 	internal virtual Type TargetType
 	{
-		internal get { } //Length: 89
+		internal get { } //Length: 50
 	}
 
 	public Int64Converter() { }

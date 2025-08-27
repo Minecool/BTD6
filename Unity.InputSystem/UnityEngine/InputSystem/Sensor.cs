@@ -6,8 +6,8 @@ public class Sensor : InputDevice
 
 	public float samplingFrequency
 	{
-		 get { } //Length: 213
-		 set { } //Length: 120
+		 get { } //Length: 202
+		 set { } //Length: 109
 	}
 
 	public Sensor() { }

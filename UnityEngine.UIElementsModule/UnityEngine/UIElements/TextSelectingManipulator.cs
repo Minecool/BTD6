@@ -1,8 +1,10 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class TextSelectingManipulator
 {
 	private const int k_DragThresholdSqr = 16; //Field offset: 0x0
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal TextSelectingUtilities m_SelectingUtilities; //Field offset: 0x10
 	private bool selectAllOnMouseUp; //Field offset: 0x18
 	private TextElement m_TextElement; //Field offset: 0x20
@@ -22,7 +24,7 @@ internal class TextSelectingManipulator
 	internal bool isClicking
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 9
+		private set { } //Length: 9
 	}
 
 	internal int selectIndex
@@ -33,13 +35,13 @@ internal class TextSelectingManipulator
 
 	public TextSelectingManipulator(TextElement textElement) { }
 
-	internal void ExecuteDefaultActionAtTarget(EventBase evt) { }
-
 	internal int get_cursorIndex() { }
 
 	internal bool get_isClicking() { }
 
 	internal int get_selectIndex() { }
+
+	internal void HandleEventBubbleUp(EventBase evt) { }
 
 	internal bool HasFocus() { }
 
@@ -47,13 +49,13 @@ internal class TextSelectingManipulator
 
 	private bool MoveDistanceQualifiesForDrag(Vector2 start, Vector2 current) { }
 
-	private void OnBlurEvent(BlurEvent evt) { }
+	private void OnBlurEvent() { }
 
 	private void OnCursorIndexChange() { }
 
 	private void OnExecuteCommandEvent(ExecuteCommandEvent evt) { }
 
-	private void OnFocusEvent(FocusEvent evt) { }
+	private void OnFocusEvent() { }
 
 	private void OnKeyDown(KeyDownEvent evt) { }
 
@@ -73,7 +75,7 @@ internal class TextSelectingManipulator
 
 	internal void set_cursorIndex(int value) { }
 
-	internal void set_isClicking(bool value) { }
+	private void set_isClicking(bool value) { }
 
 	internal void set_selectIndex(int value) { }
 

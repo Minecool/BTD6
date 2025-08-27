@@ -20,7 +20,7 @@ public class BinaryExpression : Expression
 
 	public bool IsLifted
 	{
-		 get { } //Length: 442
+		 get { } //Length: 449
 	}
 
 	internal bool IsLiftedLogical
@@ -35,7 +35,7 @@ public class BinaryExpression : Expression
 
 	internal bool IsReferenceComparison
 	{
-		internal get { } //Length: 236
+		internal get { } //Length: 239
 	}
 
 	public Expression Left

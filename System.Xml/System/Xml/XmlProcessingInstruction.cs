@@ -23,7 +23,7 @@ public class XmlProcessingInstruction : XmlLinkedNode
 
 	public virtual string Name
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	public virtual XmlNodeType NodeType

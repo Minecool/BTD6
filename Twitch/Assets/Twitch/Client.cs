@@ -68,7 +68,7 @@ public class Client
 	public private Authentication Authentication
 	{
 		 get { } //Length: 190
-		private set { } //Length: 154
+		private set { } //Length: 158
 	}
 
 	private Authenticator Authenticator

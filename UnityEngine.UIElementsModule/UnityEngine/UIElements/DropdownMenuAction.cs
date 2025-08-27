@@ -33,6 +33,12 @@ public class DropdownMenuAction : DropdownMenuItem
 		private set { } //Length: 5
 	}
 
+	public string name
+	{
+		[CompilerGenerated]
+		 get { } //Length: 5
+	}
+
 	private Status status
 	{
 		[CompilerGenerated]
@@ -50,6 +56,9 @@ public class DropdownMenuAction : DropdownMenuItem
 	public static Status AlwaysDisabled(DropdownMenuAction a) { }
 
 	public static Status AlwaysEnabled(DropdownMenuAction a) { }
+
+	[CompilerGenerated]
+	public string get_name() { }
 
 	[CompilerGenerated]
 	private void set_eventInfo(DropdownMenuEventInfo value) { }

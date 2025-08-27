@@ -14,6 +14,8 @@ public static class UISystemProfilerApi
 
 	public static void AddMarker(string name, object obj) { }
 
+	private static void AddMarker_Injected(ref ManagedSpanWrapper name, IntPtr obj) { }
+
 	public static void BeginSample(SampleType type) { }
 
 	public static void EndSample(SampleType type) { }

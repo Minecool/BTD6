@@ -12,7 +12,7 @@ public class CookieCollection : ICollection, IEnumerable
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 247
+			private get { } //Length: 242
 		}
 
 		internal CookieCollectionEnumerator(CookieCollection cookies) { }

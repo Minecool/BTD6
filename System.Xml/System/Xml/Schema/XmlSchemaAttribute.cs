@@ -29,7 +29,7 @@ public class XmlSchemaAttribute : XmlSchemaAnnotated
 	[XmlIgnore]
 	internal XmlSchemaDatatype Datatype
 	{
-		internal get { } //Length: 25
+		internal get { } //Length: 18
 	}
 
 	[DefaultValue(null)]

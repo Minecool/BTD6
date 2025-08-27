@@ -342,7 +342,7 @@ public class Discord : IDisposable
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 330
+		private get { } //Length: 318
 	}
 
 	public Discord(long clientId, ulong flags) { }

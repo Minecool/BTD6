@@ -3,11 +3,11 @@ namespace Assets.Scripts.Unity.GeraldoItems;
 public class RejuvPotionBehavior : GeraldoItemBehavior
 {
 	[SerializeField]
-	private int livesGained; //Field offset: 0x10
+	private int livesGained; //Field offset: 0x18
 	[SerializeField]
-	private PrefabReference textDisplay; //Field offset: 0x18
+	private PrefabReference textDisplay; //Field offset: 0x20
 	[SerializeField]
-	private float textDisplayLifespan; //Field offset: 0x20
+	private float textDisplayLifespan; //Field offset: 0x28
 
 	public virtual GeraldoItemBehaviorModel Def
 	{

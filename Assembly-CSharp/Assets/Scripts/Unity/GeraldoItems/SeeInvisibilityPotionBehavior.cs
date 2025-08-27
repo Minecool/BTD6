@@ -3,25 +3,25 @@ namespace Assets.Scripts.Unity.GeraldoItems;
 public class SeeInvisibilityPotionBehavior : GeraldoItemBehavior
 {
 	[SerializeField]
-	private int rounds; //Field offset: 0x10
+	private int rounds; //Field offset: 0x18
 	[SerializeField]
-	private PrefabReference buffDisplay; //Field offset: 0x18
+	private PrefabReference buffDisplay; //Field offset: 0x20
 	[SerializeField]
-	private string buffLocsName; //Field offset: 0x20
+	private string buffLocsName; //Field offset: 0x28
 	[SerializeField]
-	private string buffIconName; //Field offset: 0x28
+	private string buffIconName; //Field offset: 0x30
 	[SerializeField]
-	private PrefabReference effectAtTower; //Field offset: 0x30
+	private PrefabReference effectAtTower; //Field offset: 0x38
 	[SerializeField]
-	private int upgradeV2At; //Field offset: 0x38
+	private int upgradeV2At; //Field offset: 0x40
 	[SerializeField]
-	private int roundsUpgradedTo; //Field offset: 0x3C
+	private int roundsUpgradedTo; //Field offset: 0x44
 	[SerializeField]
-	private float upgradedRangeScale; //Field offset: 0x40
+	private float upgradedRangeScale; //Field offset: 0x48
 	[SerializeField]
-	private int upgradeV3At; //Field offset: 0x44
+	private int upgradeV3At; //Field offset: 0x4C
 	[SerializeField]
-	private int bonusCamoDamage; //Field offset: 0x48
+	private int bonusCamoDamage; //Field offset: 0x50
 
 	public virtual GeraldoItemBehaviorModel Def
 	{

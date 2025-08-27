@@ -30,9 +30,9 @@ public class XmlSchemaGroup : XmlSchemaAnnotated
 		internal set { } //Length: 5
 	}
 
-	[XmlElement("sequence", typeof(XmlSchemaSequence))]
 	[XmlElement("choice", typeof(XmlSchemaChoice))]
 	[XmlElement("all", typeof(XmlSchemaAll))]
+	[XmlElement("sequence", typeof(XmlSchemaSequence))]
 	public XmlSchemaGroupBase Particle
 	{
 		 get { } //Length: 5

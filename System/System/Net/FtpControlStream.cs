@@ -45,7 +45,7 @@ internal class FtpControlStream : CommandStream
 
 	internal string BannerMessage
 	{
-		internal get { } //Length: 40
+		internal get { } //Length: 35
 	}
 
 	internal long ContentLength
@@ -55,13 +55,13 @@ internal class FtpControlStream : CommandStream
 
 	internal NetworkCredential Credentials
 	{
-		internal get { } //Length: 184
+		internal get { } //Length: 181
 		internal set { } //Length: 147
 	}
 
 	internal string ExitMessage
 	{
-		internal get { } //Length: 40
+		internal get { } //Length: 35
 	}
 
 	internal DateTime LastModified
@@ -76,7 +76,7 @@ internal class FtpControlStream : CommandStream
 
 	internal string WelcomeMessage
 	{
-		internal get { } //Length: 40
+		internal get { } //Length: 35
 	}
 
 	private static FtpControlStream() { }

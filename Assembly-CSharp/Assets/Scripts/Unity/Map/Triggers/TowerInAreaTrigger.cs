@@ -11,7 +11,7 @@ public class TowerInAreaTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 281
+		 get { } //Length: 272
 	}
 
 	public TowerInAreaTrigger() { }

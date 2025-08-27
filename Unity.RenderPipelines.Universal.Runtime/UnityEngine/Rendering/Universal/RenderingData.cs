@@ -2,15 +2,55 @@ namespace UnityEngine.Rendering.Universal;
 
 public struct RenderingData
 {
-	internal CommandBuffer commandBuffer; //Field offset: 0x0
-	public CullingResults cullResults; //Field offset: 0x8
-	public CameraData cameraData; //Field offset: 0x18
-	public LightData lightData; //Field offset: 0x228
-	public ShadowData shadowData; //Field offset: 0x250
-	public PostProcessingData postProcessingData; //Field offset: 0x2A0
-	public bool supportsDynamicBatching; //Field offset: 0x2AC
-	public PerObjectData perObjectData; //Field offset: 0x2B0
-	public bool postProcessingEnabled; //Field offset: 0x2B4
+	internal ContextContainer frameData; //Field offset: 0x0
+	public CameraData cameraData; //Field offset: 0x8
+	public LightData lightData; //Field offset: 0x10
+	public ShadowData shadowData; //Field offset: 0x18
+	public PostProcessingData postProcessingData; //Field offset: 0x20
+
+	internal CommandBuffer commandBuffer
+	{
+		internal get { } //Length: 146
+	}
+
+	public CullingResults cullResults
+	{
+		 get { } //Length: 77
+	}
+
+	public PerObjectData perObjectData
+	{
+		 get { } //Length: 77
+	}
+
+	public bool postProcessingEnabled
+	{
+		 get { } //Length: 77
+	}
+
+	public bool supportsDynamicBatching
+	{
+		 get { } //Length: 77
+	}
+
+	internal UniversalRenderingData universalRenderingData
+	{
+		internal get { } //Length: 67
+	}
+
+	internal RenderingData(ContextContainer frameData) { }
+
+	internal CommandBuffer get_commandBuffer() { }
+
+	public CullingResults get_cullResults() { }
+
+	public PerObjectData get_perObjectData() { }
+
+	public bool get_postProcessingEnabled() { }
+
+	public bool get_supportsDynamicBatching() { }
+
+	internal UniversalRenderingData get_universalRenderingData() { }
 
 }
 

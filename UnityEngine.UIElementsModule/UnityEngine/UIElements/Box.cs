@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class Box : VisualElement
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Box>
 	{
 

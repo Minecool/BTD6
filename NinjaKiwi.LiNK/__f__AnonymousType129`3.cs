@@ -4,38 +4,38 @@
 internal sealed class <>f__AnonymousType129
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <username>j__TPar <username>i__Field; //Field offset: 0x0
+	private readonly <duration>j__TPar <duration>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <email>j__TPar <email>i__Field; //Field offset: 0x0
+	private readonly <gamestate>j__TPar <gamestate>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <password>j__TPar <password>i__Field; //Field offset: 0x0
+	private readonly <makeCurrent>j__TPar <makeCurrent>i__Field; //Field offset: 0x0
 
-	public <email>j__TPar email
+	public <duration>j__TPar duration
 	{
 		 get { } //Length: 5
 	}
 
-	public <password>j__TPar password
+	public <gamestate>j__TPar gamestate
 	{
 		 get { } //Length: 5
 	}
 
-	public <username>j__TPar username
+	public <makeCurrent>j__TPar makeCurrent
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType129`3(<username>j__TPar username, <email>j__TPar email, <password>j__TPar password) { }
+	public <>f__AnonymousType129`3(<duration>j__TPar duration, <gamestate>j__TPar gamestate, <makeCurrent>j__TPar makeCurrent) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <email>j__TPar get_email() { }
+	public <duration>j__TPar get_duration() { }
 
-	public <password>j__TPar get_password() { }
+	public <gamestate>j__TPar get_gamestate() { }
 
-	public <username>j__TPar get_username() { }
+	public <makeCurrent>j__TPar get_makeCurrent() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

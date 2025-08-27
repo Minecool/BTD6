@@ -39,12 +39,12 @@ public struct AsyncOperationHandle : IEnumerator
 
 	private IAsyncOperation InternalOp
 	{
-		private get { } //Length: 149
+		private get { } //Length: 148
 	}
 
 	public bool IsDone
 	{
-		 get { } //Length: 149
+		 get { } //Length: 148
 	}
 
 	internal string LocationName

@@ -139,6 +139,8 @@ public class JProperty : JContainer
 	[NullableContext(2)]
 	internal virtual bool ContainsItem(JToken item) { }
 
+	internal virtual bool DeepEquals(JToken node) { }
+
 	protected virtual IList<JToken> get_ChildrenTokens() { }
 
 	[DebuggerStepThrough]
@@ -149,6 +151,8 @@ public class JProperty : JContainer
 
 	[DebuggerStepThrough]
 	public JToken get_Value() { }
+
+	internal virtual int GetDeepHashCode() { }
 
 	internal virtual JToken GetItem(int index) { }
 

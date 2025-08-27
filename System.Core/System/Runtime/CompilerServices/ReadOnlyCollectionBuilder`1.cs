@@ -17,7 +17,7 @@ public sealed class ReadOnlyCollectionBuilder : IList<T>, ICollection<T>, IEnume
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 66
+			private get { } //Length: 67
 		}
 
 		internal Enumerator(ReadOnlyCollectionBuilder<T> builder) { }
@@ -40,7 +40,7 @@ public sealed class ReadOnlyCollectionBuilder : IList<T>, ICollection<T>, IEnume
 
 	public int Capacity
 	{
-		 set { } //Length: 252
+		 set { } //Length: 250
 	}
 
 	public override int Count
@@ -82,7 +82,7 @@ public sealed class ReadOnlyCollectionBuilder : IList<T>, ICollection<T>, IEnume
 	private override object System.Collections.IList.Item
 	{
 		private get { } //Length: 138
-		private set { } //Length: 379
+		private set { } //Length: 371
 	}
 
 	public ReadOnlyCollectionBuilder`1() { }

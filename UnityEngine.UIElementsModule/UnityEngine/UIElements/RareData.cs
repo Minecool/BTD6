@@ -11,7 +11,8 @@ internal struct RareData : IStyleDataGroup<RareData>, IEquatable<RareData>
 	public int unitySliceRight; //Field offset: 0x38
 	public float unitySliceScale; //Field offset: 0x3C
 	public int unitySliceTop; //Field offset: 0x40
-	public TextOverflowPosition unityTextOverflowPosition; //Field offset: 0x44
+	public SliceType unitySliceType; //Field offset: 0x44
+	public TextOverflowPosition unityTextOverflowPosition; //Field offset: 0x48
 
 	public override RareData Copy() { }
 

@@ -34,7 +34,7 @@ internal struct PointerModel
 		public bool isPressed
 		{
 			 get { } //Length: 4
-			 set { } //Length: 68
+			 set { } //Length: 71
 		}
 
 		public float pressTime
@@ -50,7 +50,7 @@ internal struct PointerModel
 
 		public bool wasReleasedThisFrame
 		{
-			 get { } //Length: 17
+			 get { } //Length: 16
 		}
 
 		public void CopyPressStateFrom(PointerEventData eventData) { }
@@ -152,7 +152,7 @@ internal struct PointerModel
 	public Vector3 worldPosition
 	{
 		 get { } //Length: 25
-		 set { } //Length: 116
+		 set { } //Length: 132
 	}
 
 	public PointerModel(ExtendedPointerEventData eventData) { }

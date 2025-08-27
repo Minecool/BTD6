@@ -21,11 +21,15 @@ public struct Plane : IFormattable
 
 	public Plane(Vector3 inNormal, Vector3 inPoint) { }
 
+	public Plane(Vector3 inNormal, float d) { }
+
 	public Plane(Vector3 a, Vector3 b, Vector3 c) { }
 
 	public float get_distance() { }
 
 	public Vector3 get_normal() { }
+
+	public float GetDistanceToPoint(Vector3 point) { }
 
 	public bool Raycast(Ray ray, out float enter) { }
 

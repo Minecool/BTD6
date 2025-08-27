@@ -4,21 +4,22 @@ public class Clickable : PointerManipulator
 {
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<EventBase> clickedWithEventInfo; //Field offset: 0x38
+	private Action<EventBase> clickedWithEventInfo; //Field offset: 0x28
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action clicked; //Field offset: 0x40
-	private readonly long m_Delay; //Field offset: 0x48
-	private readonly long m_Interval; //Field offset: 0x50
+	private Action clicked; //Field offset: 0x30
+	private readonly long m_Delay; //Field offset: 0x38
+	private readonly long m_Interval; //Field offset: 0x40
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <active>k__BackingField; //Field offset: 0x58
+	private bool <active>k__BackingField; //Field offset: 0x48
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Vector2 <lastMousePosition>k__BackingField; //Field offset: 0x5C
-	private int m_ActivePointerId; //Field offset: 0x64
-	private bool m_AcceptClicksIfDisabled; //Field offset: 0x68
-	private IVisualElementScheduledItem m_Repeater; //Field offset: 0x70
+	private Vector2 <lastMousePosition>k__BackingField; //Field offset: 0x4C
+	private int m_ActivePointerId; //Field offset: 0x54
+	private bool m_AcceptClicksIfDisabled; //Field offset: 0x58
+	private IVisualElementScheduledItem m_Repeater; //Field offset: 0x60
+	private IVisualElementScheduledItem m_PendingActivePseudoStateReset; //Field offset: 0x68
 
 	public event Action clicked
 	{
@@ -39,7 +40,7 @@ public class Clickable : PointerManipulator
 	internal bool acceptClicksIfDisabled
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 71
+		internal set { } //Length: 101
 	}
 
 	protected bool active
@@ -70,9 +71,6 @@ public class Clickable : PointerManipulator
 	public Clickable(Action handler, long delay, long interval) { }
 
 	[CompilerGenerated]
-	private void <SimulateSingleClick>b__43_0() { }
-
-	[CompilerGenerated]
 	public void add_clicked(Action value) { }
 
 	[CompilerGenerated]
@@ -92,27 +90,17 @@ public class Clickable : PointerManipulator
 
 	protected void Invoke(EventBase evt) { }
 
-	private static bool IsNotMouseEvent(int pointerId) { }
-
 	private bool IsRepeatable() { }
-
-	private void OnMouseCaptureOut(MouseCaptureOutEvent evt) { }
-
-	protected void OnMouseDown(MouseDownEvent evt) { }
-
-	protected void OnMouseMove(MouseMoveEvent evt) { }
-
-	protected void OnMouseUp(MouseUpEvent evt) { }
 
 	private void OnPointerCancel(PointerCancelEvent evt) { }
 
 	private void OnPointerCaptureOut(PointerCaptureOutEvent evt) { }
 
-	private void OnPointerDown(PointerDownEvent evt) { }
+	protected void OnPointerDown(PointerDownEvent evt) { }
 
-	private void OnPointerMove(PointerMoveEvent evt) { }
+	protected void OnPointerMove(PointerMoveEvent evt) { }
 
-	private void OnPointerUp(PointerUpEvent evt) { }
+	protected void OnPointerUp(PointerUpEvent evt) { }
 
 	private void OnTimer(TimerState timerState) { }
 
@@ -131,6 +119,8 @@ public class Clickable : PointerManipulator
 
 	[CompilerGenerated]
 	public void remove_clickedWithEventInfo(Action<EventBase> value) { }
+
+	private void ResetActivePseudoState() { }
 
 	internal void set_acceptClicksIfDisabled(bool value) { }
 

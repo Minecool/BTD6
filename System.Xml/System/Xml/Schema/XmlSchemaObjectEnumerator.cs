@@ -6,7 +6,7 @@ public class XmlSchemaObjectEnumerator : IEnumerator
 
 	public XmlSchemaObject Current
 	{
-		 get { } //Length: 149
+		 get { } //Length: 151
 	}
 
 	private override object System.Collections.IEnumerator.Current

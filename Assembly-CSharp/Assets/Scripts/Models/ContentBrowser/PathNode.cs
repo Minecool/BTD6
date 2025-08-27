@@ -23,7 +23,7 @@ public class PathNode : ISplineNode, ICloneable<PathNode>
 	[JsonIgnore]
 	public override Vector3 LeftTangentPosition
 	{
-		 get { } //Length: 57
+		 get { } //Length: 73
 	}
 
 	[JsonIgnore]
@@ -35,7 +35,7 @@ public class PathNode : ISplineNode, ICloneable<PathNode>
 	[JsonIgnore]
 	public override Vector3 RightTangentPosition
 	{
-		 get { } //Length: 57
+		 get { } //Length: 73
 	}
 
 	public PathNode() { }

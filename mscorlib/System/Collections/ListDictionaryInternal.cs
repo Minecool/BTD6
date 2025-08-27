@@ -22,22 +22,22 @@ internal class ListDictionaryInternal : IDictionary, ICollection, IEnumerable
 
 		public override object Current
 		{
-			 get { } //Length: 175
+			 get { } //Length: 170
 		}
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 123
+			 get { } //Length: 118
 		}
 
 		public override object Key
 		{
-			 get { } //Length: 106
+			 get { } //Length: 104
 		}
 
 		public override object Value
 		{
-			 get { } //Length: 106
+			 get { } //Length: 104
 		}
 
 		public NodeEnumerator(ListDictionaryInternal list) { }
@@ -68,7 +68,7 @@ internal class ListDictionaryInternal : IDictionary, ICollection, IEnumerable
 
 			public override object Current
 			{
-				 get { } //Length: 121
+				 get { } //Length: 119
 			}
 
 			public NodeKeyValueEnumerator(ListDictionaryInternal list, bool isKeys) { }

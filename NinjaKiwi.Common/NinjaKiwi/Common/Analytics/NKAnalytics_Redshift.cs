@@ -201,17 +201,17 @@ public class NKAnalytics_Redshift : AnalyticsService
 	public event AcceptRejectDelegate EventAccepted
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event AcceptRejectDelegate EventRejected
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public string Host

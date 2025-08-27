@@ -5,7 +5,7 @@ public class UInt64Converter : BaseNumberConverter
 
 	internal virtual Type TargetType
 	{
-		internal get { } //Length: 89
+		internal get { } //Length: 50
 	}
 
 	public UInt64Converter() { }

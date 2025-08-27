@@ -2,10 +2,35 @@ namespace UnityEngine.Rendering.Universal.Internal;
 
 internal class DeferredLights
 {
+	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static BaseRenderFunc<SetupLightPassData, UnsafeGraphContext> <>9__139_0; //Field offset: 0x8
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal void <SetupRenderGraphLights>b__139_0(SetupLightPassData data, UnsafeGraphContext rgContext) { }
+
+	}
+
 	public struct InitParams
 	{
 		public Material stencilDeferredMaterial; //Field offset: 0x0
 		public LightCookieManager lightCookieManager; //Field offset: 0x8
+
+	}
+
+	private class SetupLightPassData
+	{
+		internal UniversalCameraData cameraData; //Field offset: 0x10
+		internal UniversalLightData lightData; //Field offset: 0x18
+		internal DeferredLights deferredLights; //Field offset: 0x20
+		internal Vector2Int cameraTargetSizeCopy; //Field offset: 0x28
+
+		public SetupLightPassData() { }
 
 	}
 
@@ -69,24 +94,26 @@ internal class DeferredLights
 	}
 
 	internal static readonly String[] k_GBufferNames; //Field offset: 0x0
-	private static readonly String[] k_StencilDeferredPassNames; //Field offset: 0x8
-	private static readonly ushort k_InvalidLightOffset; //Field offset: 0x10
-	private static readonly string k_SetupLights; //Field offset: 0x18
-	private static readonly string k_DeferredPass; //Field offset: 0x20
-	private static readonly string k_DeferredStencilPass; //Field offset: 0x28
-	private static readonly string k_DeferredFogPass; //Field offset: 0x30
-	private static readonly string k_ClearStencilPartial; //Field offset: 0x38
-	private static readonly string k_SetupLightConstants; //Field offset: 0x40
-	private static readonly float kStencilShapeGuard; //Field offset: 0x48
-	private static readonly ProfilingSampler m_ProfilingSetupLights; //Field offset: 0x50
-	private static readonly ProfilingSampler m_ProfilingDeferredPass; //Field offset: 0x58
-	private static readonly ProfilingSampler m_ProfilingSetupLightConstants; //Field offset: 0x60
+	internal static readonly Int32[] k_GBufferShaderPropertyIDs; //Field offset: 0x8
+	private static readonly String[] k_StencilDeferredPassNames; //Field offset: 0x10
+	private static readonly ushort k_InvalidLightOffset; //Field offset: 0x18
+	private static readonly string k_SetupLights; //Field offset: 0x20
+	private static readonly string k_DeferredPass; //Field offset: 0x28
+	private static readonly string k_DeferredStencilPass; //Field offset: 0x30
+	private static readonly string k_DeferredFogPass; //Field offset: 0x38
+	private static readonly string k_ClearStencilPartial; //Field offset: 0x40
+	private static readonly string k_SetupLightConstants; //Field offset: 0x48
+	private static readonly float kStencilShapeGuard; //Field offset: 0x50
+	private static readonly ProfilingSampler m_ProfilingSetupLights; //Field offset: 0x58
+	private static readonly ProfilingSampler m_ProfilingDeferredPass; //Field offset: 0x60
+	private static readonly ProfilingSampler m_ProfilingSetupLightConstants; //Field offset: 0x68
+	private static ProfilingSampler s_SetupDeferredLights; //Field offset: 0x70
 	[CompilerGenerated]
 	private MaskSize <RenderingLayerMaskSize>k__BackingField; //Field offset: 0x10
 	[CompilerGenerated]
 	private bool <UseDecalLayers>k__BackingField; //Field offset: 0x14
 	[CompilerGenerated]
-	private bool <UseRenderPass>k__BackingField; //Field offset: 0x15
+	private bool <UseFramebufferFetch>k__BackingField; //Field offset: 0x15
 	[CompilerGenerated]
 	private bool <HasDepthPrepass>k__BackingField; //Field offset: 0x16
 	[CompilerGenerated]
@@ -210,6 +237,11 @@ internal class DeferredLights
 		internal set { } //Length: 5
 	}
 
+	internal int GBufferInputAttachmentCount
+	{
+		internal get { } //Length: 14
+	}
+
 	internal int GBufferLightingIndex
 	{
 		internal get { } //Length: 6
@@ -320,6 +352,14 @@ internal class DeferredLights
 		internal set { } //Length: 4
 	}
 
+	internal bool UseFramebufferFetch
+	{
+		[CompilerGenerated]
+		internal get { } //Length: 5
+		[CompilerGenerated]
+		internal set { } //Length: 4
+	}
+
 	internal bool UseJobSystem
 	{
 		[CompilerGenerated]
@@ -338,14 +378,6 @@ internal class DeferredLights
 		internal get { } //Length: 102
 	}
 
-	internal bool UseRenderPass
-	{
-		[CompilerGenerated]
-		internal get { } //Length: 5
-		[CompilerGenerated]
-		internal set { } //Length: 4
-	}
-
 	internal bool UseShadowMask
 	{
 		internal get { } //Length: 8
@@ -355,7 +387,7 @@ internal class DeferredLights
 
 	internal DeferredLights(InitParams initParams, bool useNativeRenderPass = false) { }
 
-	internal void ClearStencilPartial(CommandBuffer cmd) { }
+	internal void ClearStencilPartial(RasterCommandBuffer cmd) { }
 
 	private static Mesh CreateFullscreenMesh() { }
 
@@ -367,7 +399,7 @@ internal class DeferredLights
 
 	internal void DisableFramebufferFetchInput() { }
 
-	internal void ExecuteDeferredPass(ScriptableRenderContext context, ref RenderingData renderingData) { }
+	internal void ExecuteDeferredPass(RasterCommandBuffer cmd, UniversalCameraData cameraData, UniversalLightData lightData, UniversalShadowData shadowData) { }
 
 	[CompilerGenerated]
 	internal bool get_AccurateGbufferNormals() { }
@@ -396,6 +428,8 @@ internal class DeferredLights
 
 	[CompilerGenerated]
 	internal GraphicsFormat[] get_GbufferFormats() { }
+
+	internal int get_GBufferInputAttachmentCount() { }
 
 	internal int get_GBufferLightingIndex() { }
 
@@ -440,18 +474,20 @@ internal class DeferredLights
 	internal bool get_UseDecalLayers() { }
 
 	[CompilerGenerated]
+	internal bool get_UseFramebufferFetch() { }
+
+	[CompilerGenerated]
 	internal bool get_UseJobSystem() { }
 
 	internal bool get_UseLightLayers() { }
 
 	internal bool get_UseRenderingLayers() { }
 
-	[CompilerGenerated]
-	internal bool get_UseRenderPass() { }
-
 	internal bool get_UseShadowMask() { }
 
 	internal GraphicsFormat GetGBufferFormat(int index) { }
+
+	internal Matrix4x4[] GetScreenToWorldMatrix(UniversalCameraData cameraData) { }
 
 	private bool HasStencilLightsOfType(LightType type) { }
 
@@ -465,25 +501,25 @@ internal class DeferredLights
 
 	internal static StencilState OverwriteStencil(StencilState s, int stencilWriteMask) { }
 
-	private void PrecomputeLights(out NativeArray<UInt16>& stencilVisLights, out NativeArray<UInt16>& stencilVisLightOffsets, ref NativeArray<VisibleLight>& visibleLights, bool hasAdditionalLights, Matrix4x4 view, bool isOrthographic, float zNear) { }
+	private void PrecomputeLights(out NativeArray<UInt16>& stencilVisLights, out NativeArray<UInt16>& stencilVisLightOffsets, ref NativeArray<VisibleLight>& visibleLights, bool hasAdditionalLights) { }
 
 	internal void ReAllocateGBufferIfNeeded(RenderTextureDescriptor gbufferSlice, int gbufferIndex) { }
 
 	internal void ReleaseGbufferResources() { }
 
-	private void RenderFog(ScriptableRenderContext context, CommandBuffer cmd, ref RenderingData renderingData) { }
+	private void RenderFog(RasterCommandBuffer cmd, bool isOrthographic) { }
 
-	private void RenderSSAOBeforeShading(CommandBuffer cmd, ref RenderingData renderingData) { }
+	private void RenderSSAOBeforeShading(RasterCommandBuffer cmd) { }
 
-	private void RenderStencilDirectionalLights(CommandBuffer cmd, ref RenderingData renderingData, NativeArray<VisibleLight> visibleLights, int mainLightIndex) { }
+	private void RenderStencilDirectionalLights(RasterCommandBuffer cmd, bool stripShadowsOffVariants, UniversalLightData lightData, UniversalShadowData shadowData, NativeArray<VisibleLight> visibleLights, bool hasAdditionalLightPass, bool hasLightCookieManager, int mainLightIndex) { }
 
-	private void RenderStencilLights(ScriptableRenderContext context, CommandBuffer cmd, ref RenderingData renderingData) { }
+	private void RenderStencilLights(RasterCommandBuffer cmd, UniversalLightData lightData, UniversalShadowData shadowData, bool stripShadowsOffVariants) { }
 
-	private void RenderStencilPointLights(CommandBuffer cmd, ref RenderingData renderingData, NativeArray<VisibleLight> visibleLights) { }
+	private void RenderStencilPointLights(RasterCommandBuffer cmd, bool stripShadowsOffVariants, UniversalLightData lightData, UniversalShadowData shadowData, NativeArray<VisibleLight> visibleLights, bool hasAdditionalLightPass, bool hasLightCookieManager) { }
 
-	private void RenderStencilSpotLights(CommandBuffer cmd, ref RenderingData renderingData, NativeArray<VisibleLight> visibleLights) { }
+	private void RenderStencilSpotLights(RasterCommandBuffer cmd, bool stripShadowsOffVariants, UniversalLightData lightData, UniversalShadowData shadowData, NativeArray<VisibleLight> visibleLights, bool hasAdditionalLightPass, bool hasLightCookieManager) { }
 
-	internal void ResolveMixedLightingMode(ref RenderingData renderingData) { }
+	internal void ResolveMixedLightingMode(UniversalLightData lightData) { }
 
 	[CompilerGenerated]
 	internal void set_AccurateGbufferNormals(bool value) { }
@@ -540,24 +576,32 @@ internal class DeferredLights
 	internal void set_UseDecalLayers(bool value) { }
 
 	[CompilerGenerated]
-	internal void set_UseJobSystem(bool value) { }
+	internal void set_UseFramebufferFetch(bool value) { }
 
 	[CompilerGenerated]
-	internal void set_UseRenderPass(bool value) { }
+	internal void set_UseJobSystem(bool value) { }
 
-	private void SetAdditionalLightsShadowsKeyword(ref CommandBuffer cmd, ref RenderingData renderingData, bool hasDeferredShadows) { }
+	private void SetAdditionalLightsShadowsKeyword(ref RasterCommandBuffer cmd, bool stripShadowsOffVariants, bool additionalLightShadowsEnabled, bool hasDeferredShadows, bool shouldOverride, ref bool lastShadowsKeyword) { }
+
+	private void SetLightCookiesKeyword(RasterCommandBuffer cmd, int visLightIndex, bool hasLightCookieManager, bool shouldOverride, ref bool lastLightCookieState, ref int lastCookieLightIndex) { }
+
+	private void SetRenderingLayersMask(RasterCommandBuffer cmd, Light light, int shaderPropertyID) { }
+
+	private void SetSoftShadowsKeyword(RasterCommandBuffer cmd, UniversalShadowData shadowData, Light light, bool hasDeferredShadows, bool shouldOverride, ref bool lastHasSoftShadow) { }
+
+	public void Setup(AdditionalLightsShadowCasterPass additionalLightsShadowCasterPass, bool hasDepthPrepass, bool hasNormalPrepass, bool hasRenderingLayerPrepass, RTHandle depthCopyTexture, RTHandle depthAttachment, RTHandle colorAttachment) { }
 
 	internal void Setup(AdditionalLightsShadowCasterPass additionalLightsShadowCasterPass) { }
 
-	public void Setup(ref RenderingData renderingData, AdditionalLightsShadowCasterPass additionalLightsShadowCasterPass, bool hasDepthPrepass, bool hasNormalPrepass, bool hasRenderingLayerPrepass, RTHandle depthCopyTexture, RTHandle depthAttachment, RTHandle colorAttachment) { }
+	internal void SetupLights(CommandBuffer cmd, UniversalCameraData cameraData, Vector2Int cameraTargetSizeCopy, UniversalLightData lightData, bool isRenderGraph = false) { }
 
-	internal void SetupLights(ScriptableRenderContext context, ref RenderingData renderingData) { }
+	private void SetupMainLightConstants(CommandBuffer cmd, UniversalLightData lightData) { }
 
-	private void SetupMainLightConstants(CommandBuffer cmd, ref LightData lightData) { }
+	private void SetupMatrixConstants(RasterCommandBuffer cmd, UniversalCameraData cameraData) { }
 
-	private void SetupMatrixConstants(CommandBuffer cmd, ref RenderingData renderingData) { }
+	internal void SetupRenderGraphLights(RenderGraph renderGraph, UniversalCameraData cameraData, UniversalLightData lightData) { }
 
-	private void SetupShaderLightConstants(CommandBuffer cmd, ref RenderingData renderingData) { }
+	private void SetupShaderLightConstants(CommandBuffer cmd, UniversalLightData lightData) { }
 
 	internal void UpdateDeferredInputAttachments() { }
 

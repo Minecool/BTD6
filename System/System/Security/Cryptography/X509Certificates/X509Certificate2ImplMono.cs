@@ -34,8 +34,8 @@ internal class X509Certificate2ImplMono : X509Certificate2ImplUnix
 
 	public virtual AsymmetricAlgorithm PrivateKey
 	{
-		 get { } //Length: 1100
-		 set { } //Length: 602
+		 get { } //Length: 1092
+		 set { } //Length: 554
 	}
 
 	private static X509Certificate2ImplMono() { }

@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 public class Label : TextElement
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Label, UxmlTraits>
 	{
 
@@ -9,6 +10,7 @@ public class Label : TextElement
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
 

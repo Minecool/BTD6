@@ -16,27 +16,27 @@ public class SortedList : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 		public override KeyValuePair<TKey, TValue> Current
 		{
-			 get { } //Length: 3075
+			 get { } //Length: 109
 		}
 
 		private override DictionaryEntry System.Collections.IDictionaryEnumerator.Entry
 		{
-			private get { } //Length: 298
+			private get { } //Length: 296
 		}
 
 		private override object System.Collections.IDictionaryEnumerator.Key
 		{
-			private get { } //Length: 210
+			private get { } //Length: 208
 		}
 
 		private override object System.Collections.IDictionaryEnumerator.Value
 		{
-			private get { } //Length: 212
+			private get { } //Length: 210
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 540
+			private get { } //Length: 531
 		}
 
 		internal Enumerator(SortedList<TKey, TValue> sortedList, int getEnumeratorRetType) { }
@@ -144,7 +144,7 @@ public class SortedList : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 147
+			private get { } //Length: 150
 		}
 
 		internal SortedListKeyEnumerator(SortedList<TKey, TValue> sortedList) { }
@@ -175,7 +175,7 @@ public class SortedList : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 149
+			private get { } //Length: 152
 		}
 
 		internal SortedListValueEnumerator(SortedList<TKey, TValue> sortedList) { }
@@ -274,7 +274,7 @@ public class SortedList : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 	public int Capacity
 	{
-		 set { } //Length: 416
+		 set { } //Length: 406
 	}
 
 	public override int Count
@@ -284,7 +284,7 @@ public class SortedList : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 	public override TValue Item
 	{
-		 get { } //Length: 281
+		 get { } //Length: 277
 		 set { } //Length: 197
 	}
 
@@ -336,7 +336,7 @@ public class SortedList : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 	private override object System.Collections.IDictionary.Item
 	{
 		private get { } //Length: 411
-		private set { } //Length: 819
+		private set { } //Length: 810
 	}
 
 	private override ICollection System.Collections.IDictionary.Keys

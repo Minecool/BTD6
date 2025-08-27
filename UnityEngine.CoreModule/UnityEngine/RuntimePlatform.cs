@@ -37,7 +37,8 @@ public enum RuntimePlatform
 	Switch = 32,
 	Lumin = 33,
 	Stadia = 34,
-	CloudRendering = 35,
+	CloudRendering = -1,
+	LinuxHeadlessSimulation = 35,
 	GameCoreScarlett = -1,
 	GameCoreXboxSeries = 36,
 	GameCoreXboxOne = 37,
@@ -54,5 +55,8 @@ public enum RuntimePlatform
 	QNXX64 = 48,
 	QNXX86 = 49,
 	VisionOS = 50,
+	Switch2 = 51,
+	KeplerArm64 = 52,
+	KeplerX64 = 53,
 }
 

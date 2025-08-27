@@ -9,7 +9,7 @@ internal class ASN1
 
 	public int Count
 	{
-		 get { } //Length: 34
+		 get { } //Length: 32
 	}
 
 	public Byte[] Value

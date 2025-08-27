@@ -41,7 +41,7 @@ public struct ValueTask : IEquatable<ValueTask>
 
 	public bool IsCompleted
 	{
-		 get { } //Length: 237
+		 get { } //Length: 233
 	}
 
 	private static ValueTask() { }

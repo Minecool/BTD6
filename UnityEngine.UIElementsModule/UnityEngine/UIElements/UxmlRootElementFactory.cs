@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[Obsolete("UxmlRootElementFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 public class UxmlRootElementFactory : UxmlFactory<VisualElement, UxmlRootElementTraits>
 {
 

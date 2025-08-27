@@ -12,7 +12,7 @@ public class HexManager : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 247
+		 get { } //Length: 243
 	}
 
 	public HexManager() { }

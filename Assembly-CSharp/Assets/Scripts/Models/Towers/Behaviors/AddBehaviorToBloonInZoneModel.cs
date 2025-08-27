@@ -26,7 +26,7 @@ public class AddBehaviorToBloonInZoneModel : TowerBehaviorWithOverlayModel
 
 	public BehaviorMutator mutator
 	{
-		 get { } //Length: 284
+		 get { } //Length: 286
 	}
 
 	public AddBehaviorToBloonInZoneModel(string name, float zoneRadius, string mutationId, bool isUnique, BloonBehaviorModel[] behaviors, FilterModel[] filters, string overlayType, bool bindRadiusToTowerRange = false, float radiusOffset = 0, BehaviorMutator mutator = null) { }

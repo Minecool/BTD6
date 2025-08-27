@@ -11,7 +11,7 @@ public class RegenRemovable : MonoBehaviour
 
 	public RegenRemovableModel Def
 	{
-		 get { } //Length: 464
+		 get { } //Length: 460
 	}
 
 	public RegenRemovable() { }

@@ -21,7 +21,7 @@ public class MutateDamageOnAbilityModel : AbilityBehaviorModel
 
 	public DamageMutator Mutator
 	{
-		 get { } //Length: 247
+		 get { } //Length: 251
 	}
 
 	public MutateDamageOnAbilityModel(string name, int lifespanFrames, int damageIncrease, string targetDamageId) { }

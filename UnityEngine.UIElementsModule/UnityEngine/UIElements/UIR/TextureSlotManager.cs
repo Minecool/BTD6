@@ -28,7 +28,7 @@ internal class TextureSlotManager
 
 	public TextureSlotManager() { }
 
-	public void Bind(TextureId id, float sdfScale, int slot, MaterialPropertyBlock mat) { }
+	public void Bind(TextureId id, float sdfScale, float sharpness, int slot, MaterialPropertyBlock mat, CommandList commandList = null) { }
 
 	public int FindOldestSlot() { }
 
@@ -44,7 +44,7 @@ internal class TextureSlotManager
 	[CompilerGenerated]
 	private void set_FreeSlots(int value) { }
 
-	public void SetGpuData(int slotIndex, TextureId id, int textureWidth, int textureHeight, float sdfScale) { }
+	public void SetGpuData(int slotIndex, TextureId id, int textureWidth, int textureHeight, float sdfScale, float sharpness) { }
 
 	public void StartNewBatch() { }
 

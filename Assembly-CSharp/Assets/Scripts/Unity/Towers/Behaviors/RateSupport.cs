@@ -16,7 +16,7 @@ public class RateSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 384
+		 get { } //Length: 323
 	}
 
 	public RateSupport() { }

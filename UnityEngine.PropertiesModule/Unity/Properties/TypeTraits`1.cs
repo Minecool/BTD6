@@ -120,6 +120,12 @@ public static class TypeTraits
 		 get { } //Length: 155
 	}
 
+	public static bool IsUnityObject
+	{
+		[CompilerGenerated]
+		 get { } //Length: 155
+	}
+
 	public static bool IsValueType
 	{
 		[CompilerGenerated]
@@ -160,6 +166,9 @@ public static class TypeTraits
 
 	[CompilerGenerated]
 	public static bool get_IsString() { }
+
+	[CompilerGenerated]
+	public static bool get_IsUnityObject() { }
 
 	[CompilerGenerated]
 	public static bool get_IsValueType() { }

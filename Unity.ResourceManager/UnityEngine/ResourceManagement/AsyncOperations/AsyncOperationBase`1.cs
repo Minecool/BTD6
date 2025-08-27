@@ -48,7 +48,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	internal event Action<AsyncOperationHandle`1<TObject>> Completed
 	{
-		internal add { } //Length: 165
+		internal add { } //Length: 166
 		internal remove { } //Length: 33
 	}
 
@@ -86,7 +86,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	internal bool CompletedEventHasListeners
 	{
-		internal get { } //Length: 52
+		internal get { } //Length: 50
 	}
 
 	internal object Current
@@ -101,7 +101,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	internal bool DestroyedEventHasListeners
 	{
-		internal get { } //Length: 79
+		internal get { } //Length: 77
 	}
 
 	internal AsyncOperationHandle<TObject> Handle
@@ -111,7 +111,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	internal bool IsDone
 	{
-		internal get { } //Length: 17
+		internal get { } //Length: 18
 	}
 
 	public internal override bool IsRunning
@@ -163,7 +163,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	internal Task<TObject> Task
 	{
-		internal get { } //Length: 242
+		internal get { } //Length: 241
 	}
 
 	private override string UnityEngine.ResourceManagement.AsyncOperations.IAsyncOperation.DebugName
@@ -178,7 +178,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	private override bool UnityEngine.ResourceManagement.AsyncOperations.IAsyncOperation.IsDone
 	{
-		private get { } //Length: 17
+		private get { } //Length: 18
 	}
 
 	private override Action<IAsyncOperation> UnityEngine.ResourceManagement.AsyncOperations.IAsyncOperation.OnDestroy
@@ -203,7 +203,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	private override Type UnityEngine.ResourceManagement.AsyncOperations.IAsyncOperation.ResultType
 	{
-		private get { } //Length: 91
+		private get { } //Length: 60
 	}
 
 	private override AsyncOperationStatus UnityEngine.ResourceManagement.AsyncOperations.IAsyncOperation.Status
@@ -213,7 +213,7 @@ public abstract class AsyncOperationBase : IAsyncOperation
 
 	private override Task<Object> UnityEngine.ResourceManagement.AsyncOperations.IAsyncOperation.Task
 	{
-		private get { } //Length: 300
+		private get { } //Length: 299
 	}
 
 	private override int UnityEngine.ResourceManagement.AsyncOperations.IAsyncOperation.Version

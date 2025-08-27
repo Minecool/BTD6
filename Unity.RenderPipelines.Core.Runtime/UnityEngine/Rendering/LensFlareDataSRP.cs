@@ -6,5 +6,7 @@ public sealed class LensFlareDataSRP : ScriptableObject
 
 	public LensFlareDataSRP() { }
 
+	public bool HasAModulateByLightColorElement() { }
+
 }
 

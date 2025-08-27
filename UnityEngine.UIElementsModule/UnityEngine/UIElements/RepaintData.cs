@@ -18,7 +18,7 @@ internal class RepaintData
 	public Matrix4x4 currentOffset
 	{
 		[CompilerGenerated]
-		 get { } //Length: 35
+		 get { } //Length: 170
 	}
 
 	public Rect currentWorldClip

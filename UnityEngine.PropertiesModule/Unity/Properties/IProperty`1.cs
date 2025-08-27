@@ -1,6 +1,6 @@
 namespace Unity.Properties;
 
-public interface IProperty : IProperty
+public interface IProperty : IProperty, IPropertyAccept<TContainer>
 {
 
 }

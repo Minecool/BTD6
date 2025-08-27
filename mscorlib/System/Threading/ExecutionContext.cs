@@ -24,7 +24,7 @@ public sealed class ExecutionContext : IDisposable, ISerializable
 
 		public bool IsFlowSuppressed
 		{
-			 get { } //Length: 20
+			 get { } //Length: 18
 		}
 
 		public bool IsNull
@@ -34,17 +34,17 @@ public sealed class ExecutionContext : IDisposable, ISerializable
 
 		public Reader LogicalCallContext
 		{
-			 get { } //Length: 113
+			 get { } //Length: 31
 		}
 
 		public SynchronizationContext SynchronizationContext
 		{
-			 get { } //Length: 17
+			 get { } //Length: 14
 		}
 
 		public SynchronizationContext SynchronizationContextNoFlow
 		{
-			 get { } //Length: 17
+			 get { } //Length: 14
 		}
 
 		public Reader(ExecutionContext ec) { }
@@ -97,7 +97,7 @@ public sealed class ExecutionContext : IDisposable, ISerializable
 
 	internal bool IsPreAllocatedDefault
 	{
-		internal get { } //Length: 9
+		internal get { } //Length: 10
 	}
 
 	internal LogicalCallContext LogicalCallContext
@@ -142,9 +142,9 @@ public sealed class ExecutionContext : IDisposable, ISerializable
 
 	public override void Dispose() { }
 
-	internal static void EstablishCopyOnWriteScope(ref ExecutionContextSwitcher ecsw) { }
-
 	private static void EstablishCopyOnWriteScope(Thread currentThread, bool knownNullWindowsIdentity, ref ExecutionContextSwitcher ecsw) { }
+
+	internal static void EstablishCopyOnWriteScope(ref ExecutionContextSwitcher ecsw) { }
 
 	[FriendAccessAllowed]
 	internal static ExecutionContext FastCapture() { }
@@ -174,15 +174,17 @@ public sealed class ExecutionContext : IDisposable, ISerializable
 	[HandleProcessCorruptedStateExceptions]
 	internal static void OnAsyncLocalContextChanged(ExecutionContext previous, ExecutionContext current) { }
 
+	public static void RestoreFlow() { }
+
 	public static void Run(ExecutionContext executionContext, ContextCallback callback, object state) { }
 
 	[FriendAccessAllowed]
 	internal static void Run(ExecutionContext executionContext, ContextCallback callback, object state, bool preserveSyncCtx) { }
 
-	internal static void RunInternal(ExecutionContext executionContext, ContextCallback callback, object state) { }
-
 	[HandleProcessCorruptedStateExceptions]
 	internal static void RunInternal(ExecutionContext executionContext, ContextCallback callback, object state, bool preserveSyncCtx) { }
+
+	internal static void RunInternal(ExecutionContext executionContext, ContextCallback callback, object state) { }
 
 	internal void set_IllogicalCallContext(IllogicalCallContext value) { }
 
@@ -200,6 +202,8 @@ public sealed class ExecutionContext : IDisposable, ISerializable
 
 	[HandleProcessCorruptedStateExceptions]
 	internal static ExecutionContextSwitcher SetExecutionContext(ExecutionContext executionContext, bool preserveSyncCtx) { }
+
+	public static AsyncFlowControl SuppressFlow() { }
 
 }
 

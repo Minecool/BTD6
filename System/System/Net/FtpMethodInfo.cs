@@ -15,7 +15,7 @@ internal class FtpMethodInfo
 
 	internal bool IsDownload
 	{
-		internal get { } //Length: 8
+		internal get { } //Length: 7
 	}
 
 	internal bool IsUpload

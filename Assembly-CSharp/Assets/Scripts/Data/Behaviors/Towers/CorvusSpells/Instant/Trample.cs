@@ -8,7 +8,7 @@ public class Trample : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 681
+		 get { } //Length: 695
 	}
 
 	public Trample() { }

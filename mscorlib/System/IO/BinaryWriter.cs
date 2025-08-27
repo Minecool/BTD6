@@ -4,17 +4,14 @@ namespace System.IO;
 public class BinaryWriter : IDisposable, IAsyncDisposable
 {
 	public static readonly BinaryWriter Null; //Field offset: 0x0
-	private const int LargeByteBufferSize = 256; //Field offset: 0x0
 	protected Stream OutStream; //Field offset: 0x10
 	private Byte[] _buffer; //Field offset: 0x18
 	private Encoding _encoding; //Field offset: 0x20
 	private Encoder _encoder; //Field offset: 0x28
 	[OptionalField]
 	private bool _leaveOpen; //Field offset: 0x30
-	[OptionalField]
-	private Char[] _tmpOneCharBuffer; //Field offset: 0x38
-	private Byte[] _largeByteBuffer; //Field offset: 0x40
-	private int _maxChars; //Field offset: 0x48
+	private Byte[] _largeByteBuffer; //Field offset: 0x38
+	private int _maxChars; //Field offset: 0x40
 
 	public override Stream BaseStream
 	{
@@ -60,13 +57,13 @@ public class BinaryWriter : IDisposable, IAsyncDisposable
 	[CLSCompliant(False)]
 	public override void Write(ushort value) { }
 
-	public override void Write(char ch) { }
+	public override void Write(short value) { }
 
-	public override void Write(double value) { }
+	public override void Write(Byte[] buffer, int index, int count) { }
 
 	public override void Write(Char[] chars) { }
 
-	public override void Write(Byte[] buffer, int index, int count) { }
+	public override void Write(char ch) { }
 
 	[CLSCompliant(False)]
 	public override void Write(sbyte value) { }
@@ -75,7 +72,9 @@ public class BinaryWriter : IDisposable, IAsyncDisposable
 
 	public override void Write(bool value) { }
 
-	public override void Write(short value) { }
+	public override void Write(ReadOnlySpan<Byte> buffer) { }
+
+	public override void Write(double value) { }
 
 	public override void Write(Byte[] buffer) { }
 

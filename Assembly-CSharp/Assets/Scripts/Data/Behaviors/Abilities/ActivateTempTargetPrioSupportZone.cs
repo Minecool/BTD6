@@ -19,7 +19,7 @@ public class ActivateTempTargetPrioSupportZone : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 548
+		 get { } //Length: 544
 	}
 
 	public ActivateTempTargetPrioSupportZone() { }

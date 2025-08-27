@@ -223,13 +223,13 @@ public class DailyChallengeModel : IContentBrowserData
 
 	public ChallengeCreationType ChallengeCreationType
 	{
-		 get { } //Length: 216
+		 get { } //Length: 32
 	}
 
 	[JsonIgnore]
 	public bool HasCustomRounds
 	{
-		 get { } //Length: 69
+		 get { } //Length: 65
 	}
 
 	[JsonIgnore]

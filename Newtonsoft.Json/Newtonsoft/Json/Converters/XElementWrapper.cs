@@ -9,38 +9,38 @@ internal class XElementWrapper : XContainerWrapper, IXmlElement, IXmlNode
 
 	public virtual List<IXmlNode> Attributes
 	{
-		 get { } //Length: 1044
+		 get { } //Length: 1042
 	}
 
 	private XElement Element
 	{
-		private get { } //Length: 107
+		private get { } //Length: 103
 	}
 
 	public override bool IsEmpty
 	{
-		 get { } //Length: 116
+		 get { } //Length: 114
 	}
 
 	[Nullable(2)]
 	public virtual string LocalName
 	{
 		[NullableContext(2)]
-		 get { } //Length: 122
+		 get { } //Length: 118
 	}
 
 	[Nullable(2)]
 	public virtual string NamespaceUri
 	{
 		[NullableContext(2)]
-		 get { } //Length: 124
+		 get { } //Length: 120
 	}
 
 	[Nullable(2)]
 	public virtual string Value
 	{
 		[NullableContext(2)]
-		 get { } //Length: 116
+		 get { } //Length: 114
 	}
 
 	public XElementWrapper(XElement element) { }

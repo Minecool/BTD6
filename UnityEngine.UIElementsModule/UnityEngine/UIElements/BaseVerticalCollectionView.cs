@@ -3,18 +3,32 @@ namespace UnityEngine.UIElements;
 public abstract class BaseVerticalCollectionView : BindableElement, ISerializationCallbackReceiver
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass162_0
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static Action <>9__179_1; //Field offset: 0x8
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal void <.ctor>b__179_1() { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass182_0
 	{
 		public int id; //Field offset: 0x10
 
-		public <>c__DisplayClass162_0() { }
+		public <>c__DisplayClass182_0() { }
 
 		internal bool <GetRootElementForId>b__0(ReusableCollectionItem t) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <>c__DisplayClass172_0
+	private struct <>c__DisplayClass193_0
 	{
 		public bool selectedIndicesChanged; //Field offset: 0x0
 		public BaseVerticalCollectionView <>4__this; //Field offset: 0x8
@@ -23,7 +37,7 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 	}
 
 	[CompilerGenerated]
-	private struct <>c__DisplayClass183_0
+	private struct <>c__DisplayClass204_0
 	{
 		public BaseVerticalCollectionView <>4__this; //Field offset: 0x0
 		public bool shiftKey; //Field offset: 0x8
@@ -31,7 +45,7 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 	}
 
 	[CompilerGenerated]
-	private sealed class <get_selectedItems>d__72 : IEnumerable<Object>, IEnumerable, IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <get_selectedItems>d__88 : IEnumerable<Object>, IEnumerable, IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -54,7 +68,7 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 		}
 
 		[DebuggerHidden]
-		public <get_selectedItems>d__72(int <>1__state) { }
+		public <get_selectedItems>d__88(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -146,6 +160,8 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 
 		public int FirstIndex() { }
 
+		public object FirstObject() { }
+
 		public int get_capacity() { }
 
 		public int get_idCount() { }
@@ -170,15 +186,16 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private readonly UxmlIntAttributeDescription m_FixedItemHeight; //Field offset: 0x78
-		private readonly UxmlEnumAttributeDescription<CollectionVirtualizationMethod> m_VirtualizationMethod; //Field offset: 0x80
-		private readonly UxmlBoolAttributeDescription m_ShowBorder; //Field offset: 0x88
-		private readonly UxmlEnumAttributeDescription<SelectionType> m_SelectionType; //Field offset: 0x90
-		private readonly UxmlEnumAttributeDescription<AlternatingRowBackground> m_ShowAlternatingRowBackgrounds; //Field offset: 0x98
-		private readonly UxmlBoolAttributeDescription m_Reorderable; //Field offset: 0xA0
-		private readonly UxmlBoolAttributeDescription m_HorizontalScrollingEnabled; //Field offset: 0xA8
+		private readonly UxmlEnumAttributeDescription<CollectionVirtualizationMethod> m_VirtualizationMethod; //Field offset: 0x90
+		private readonly UxmlIntAttributeDescription m_FixedItemHeight; //Field offset: 0x98
+		private readonly UxmlBoolAttributeDescription m_ShowBorder; //Field offset: 0xA0
+		private readonly UxmlEnumAttributeDescription<SelectionType> m_SelectionType; //Field offset: 0xA8
+		private readonly UxmlEnumAttributeDescription<AlternatingRowBackground> m_ShowAlternatingRowBackgrounds; //Field offset: 0xB0
+		private readonly UxmlBoolAttributeDescription m_Reorderable; //Field offset: 0xB8
+		private readonly UxmlBoolAttributeDescription m_HorizontalScrollingEnabled; //Field offset: 0xC0
 
 		public UxmlTraits() { }
 
@@ -186,86 +203,107 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 
 	}
 
-	private static readonly ProfilerMarker k_RefreshMarker; //Field offset: 0x0
-	private static readonly ProfilerMarker k_RebuildMarker; //Field offset: 0x8
-	private static readonly List<ReusableCollectionItem> k_EmptyItems; //Field offset: 0x10
-	internal static readonly int s_DefaultItemHeight; //Field offset: 0x18
-	internal static CustomStyleProperty<Int32> s_ItemHeightProperty; //Field offset: 0x20
-	public static readonly string ussClassName; //Field offset: 0x28
-	public static readonly string borderUssClassName; //Field offset: 0x30
-	public static readonly string itemUssClassName; //Field offset: 0x38
-	public static readonly string dragHoverBarUssClassName; //Field offset: 0x40
-	public static readonly string dragHoverMarkerUssClassName; //Field offset: 0x48
-	public static readonly string itemDragHoverUssClassName; //Field offset: 0x50
-	public static readonly string itemSelectedVariantUssClassName; //Field offset: 0x58
-	public static readonly string itemAlternativeBackgroundUssClassName; //Field offset: 0x60
-	public static readonly string listScrollViewUssClassName; //Field offset: 0x68
-	internal static readonly string backgroundFillUssClassName; //Field offset: 0x70
+	internal static readonly BindingId itemsSourceProperty; //Field offset: 0x0
+	internal static readonly BindingId selectionTypeProperty; //Field offset: 0x98
+	internal static readonly BindingId selectedItemProperty; //Field offset: 0x130
+	internal static readonly BindingId selectedItemsProperty; //Field offset: 0x1C8
+	internal static readonly BindingId selectedIndexProperty; //Field offset: 0x260
+	internal static readonly BindingId selectedIndicesProperty; //Field offset: 0x2F8
+	internal static readonly BindingId showBorderProperty; //Field offset: 0x390
+	internal static readonly BindingId reorderableProperty; //Field offset: 0x428
+	internal static readonly BindingId horizontalScrollingEnabledProperty; //Field offset: 0x4C0
+	internal static readonly BindingId showAlternatingRowBackgroundsProperty; //Field offset: 0x558
+	internal static readonly BindingId virtualizationMethodProperty; //Field offset: 0x5F0
+	internal static readonly BindingId fixedItemHeightProperty; //Field offset: 0x688
+	private static readonly ProfilerMarker k_RefreshMarker; //Field offset: 0x720
+	private static readonly ProfilerMarker k_RebuildMarker; //Field offset: 0x728
+	private static readonly List<ReusableCollectionItem> k_EmptyItems; //Field offset: 0x730
+	internal static readonly string k_InvalidTemplateError; //Field offset: 0x738
+	internal static CustomStyleProperty<Int32> s_ItemHeightProperty; //Field offset: 0x740
+	public static readonly string ussClassName; //Field offset: 0x748
+	public static readonly string borderUssClassName; //Field offset: 0x750
+	public static readonly string itemUssClassName; //Field offset: 0x758
+	public static readonly string dragHoverBarUssClassName; //Field offset: 0x760
+	public static readonly string dragHoverMarkerUssClassName; //Field offset: 0x768
+	public static readonly string itemDragHoverUssClassName; //Field offset: 0x770
+	public static readonly string itemSelectedVariantUssClassName; //Field offset: 0x778
+	public static readonly string itemAlternativeBackgroundUssClassName; //Field offset: 0x780
+	public static readonly string listScrollViewUssClassName; //Field offset: 0x788
+	internal static readonly string backgroundFillUssClassName; //Field offset: 0x790
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<IEnumerable`1<Object>> itemsChosen; //Field offset: 0x3D8
+	private Action<IEnumerable`1<Object>> itemsChosen; //Field offset: 0x4B8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<IEnumerable`1<Object>> selectionChanged; //Field offset: 0x3E0
+	private Action<IEnumerable`1<Object>> selectionChanged; //Field offset: 0x4C0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<IEnumerable`1<Int32>> selectedIndicesChanged; //Field offset: 0x3E8
+	private Action<IEnumerable`1<Int32>> selectedIndicesChanged; //Field offset: 0x4C8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Int32, Int32> itemIndexChanged; //Field offset: 0x3F0
+	private Action<Int32, Int32> itemIndexChanged; //Field offset: 0x4D0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action itemsSourceChanged; //Field offset: 0x3F8
+	private Action itemsSourceChanged; //Field offset: 0x4D8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action selectionNotChanged; //Field offset: 0x400
+	private Action m_SelectionNotChanged; //Field offset: 0x4E0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Func<CanStartDragArgs, Boolean> canStartDrag; //Field offset: 0x408
+	private Func<CanStartDragArgs, Boolean> canStartDrag; //Field offset: 0x4E8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Func<SetupDragAndDropArgs, StartDragArgs> setupDragAndDrop; //Field offset: 0x410
+	private Func<SetupDragAndDropArgs, StartDragArgs> setupDragAndDrop; //Field offset: 0x4F0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Func<HandleDragAndDropArgs, DragVisualMode> dragAndDropUpdate; //Field offset: 0x418
+	private Func<HandleDragAndDropArgs, DragVisualMode> dragAndDropUpdate; //Field offset: 0x4F8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Func<HandleDragAndDropArgs, DragVisualMode> handleDrop; //Field offset: 0x420
-	private SelectionType m_SelectionType; //Field offset: 0x428
-	private bool m_HorizontalScrollingEnabled; //Field offset: 0x42C
+	private Func<HandleDragAndDropArgs, DragVisualMode> handleDrop; //Field offset: 0x500
+	private SelectionType m_SelectionType; //Field offset: 0x508
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal bool allowSingleClickChoice; //Field offset: 0x50C
+	private bool m_HorizontalScrollingEnabled; //Field offset: 0x50D
+	[DontCreateProperty]
 	[SerializeField]
-	private AlternatingRowBackground m_ShowAlternatingRowBackgrounds; //Field offset: 0x430
-	internal float m_FixedItemHeight; //Field offset: 0x434
-	internal bool m_ItemHeightIsInline; //Field offset: 0x438
-	private CollectionVirtualizationMethod m_VirtualizationMethod; //Field offset: 0x43C
-	private readonly ScrollView m_ScrollView; //Field offset: 0x440
-	private CollectionViewController m_ViewController; //Field offset: 0x448
-	private CollectionVirtualizationController m_VirtualizationController; //Field offset: 0x450
-	private KeyboardNavigationManipulator m_NavigationManipulator; //Field offset: 0x458
+	private AlternatingRowBackground m_ShowAlternatingRowBackgrounds; //Field offset: 0x510
+	internal float m_FixedItemHeight; //Field offset: 0x514
+	internal bool m_ItemHeightIsInline; //Field offset: 0x518
+	private CollectionVirtualizationMethod m_VirtualizationMethod; //Field offset: 0x51C
+	private readonly ScrollView m_ScrollView; //Field offset: 0x520
+	private CollectionViewController m_ViewController; //Field offset: 0x528
+	private CollectionVirtualizationController m_VirtualizationController; //Field offset: 0x530
+	private KeyboardNavigationManipulator m_NavigationManipulator; //Field offset: 0x538
+	[DontCreateProperty]
 	[SerializeField]
-	internal SerializedVirtualizationData serializedVirtualizationData; //Field offset: 0x460
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal SerializedVirtualizationData serializedVirtualizationData; //Field offset: 0x540
+	[DontCreateProperty]
 	[SerializeField]
-	private readonly List<Int32> m_SelectedIds; //Field offset: 0x468
-	private readonly Selection m_Selection; //Field offset: 0x470
-	private float m_LastHeight; //Field offset: 0x478
-	private bool m_IsRangeSelectionDirectionUp; //Field offset: 0x47C
-	private ListViewDragger m_Dragger; //Field offset: 0x480
-	private Action<Int32, Int32> m_ItemIndexChangedCallback; //Field offset: 0x488
-	private Action m_ItemsSourceChangedCallback; //Field offset: 0x490
-	internal IVisualElementScheduledItem m_RebuildScheduled; //Field offset: 0x498
-	private Vector3 m_TouchDownPosition; //Field offset: 0x4A0
+	private List<Int32> m_SelectedIds; //Field offset: 0x548
+	private readonly Selection m_Selection; //Field offset: 0x550
+	private float m_LastHeight; //Field offset: 0x558
+	private bool m_IsRangeSelectionDirectionUp; //Field offset: 0x55C
+	private ListViewDragger m_Dragger; //Field offset: 0x560
+	private Action<Int32, Int32> m_ItemIndexChangedCallback; //Field offset: 0x568
+	private Action m_ItemsSourceChangedCallback; //Field offset: 0x570
+	private IVisualElementScheduledItem m_RebuildScheduled; //Field offset: 0x578
+	internal int m_PreviousRefreshedCount; //Field offset: 0x580
+	private Vector3 m_TouchDownPosition; //Field offset: 0x584
+	private long m_LastPointerDownTimeStamp; //Field offset: 0x590
+	private int m_PointerDownCount; //Field offset: 0x598
 
 	public event Action<IEnumerable`1<Object>> selectionChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	internal IEnumerable<ReusableCollectionItem> activeItems
 	{
-		internal get { } //Length: 121
+		internal get { } //Length: 124
 	}
 
 	public virtual VisualElement contentContainer
@@ -278,21 +316,30 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 		internal get { } //Length: 8
 	}
 
+	[CreateProperty]
 	public float fixedItemHeight
 	{
 		 get { } //Length: 9
-		 set { } //Length: 248
+		 set { } //Length: 320
 	}
 
+	[CreateProperty]
 	public bool horizontalScrollingEnabled
 	{
-		 set { } //Length: 99
+		 get { } //Length: 8
+		 set { } //Length: 182
 	}
 
+	internal bool isRebuildScheduled
+	{
+		internal get { } //Length: 76
+	}
+
+	[CreateProperty]
 	public IList itemsSource
 	{
 		 get { } //Length: 35
-		 set { } //Length: 115
+		 set { } //Length: 298
 	}
 
 	internal float lastHeight
@@ -300,54 +347,69 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 		internal get { } //Length: 9
 	}
 
+	[CreateProperty]
 	public bool reorderable
 	{
 		 get { } //Length: 141
-		 set { } //Length: 147
+		 set { } //Length: 329
 	}
 
 	internal ScrollView scrollView
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 8
 	}
 
-	internal IEnumerable<Int32> selectedIds
+	public IEnumerable<Int32> selectedIds
 	{
-		internal get { } //Length: 30
+		 get { } //Length: 30
 	}
 
+	[CreateProperty]
 	public int selectedIndex
 	{
-		 get { } //Length: 187
+		 get { } //Length: 184
 		 set { } //Length: 8
 	}
 
+	[CreateProperty(ReadOnly = True)]
 	public IEnumerable<Int32> selectedIndices
 	{
 		 get { } //Length: 30
 	}
 
+	[CreateProperty(ReadOnly = True)]
+	public object selectedItem
+	{
+		 get { } //Length: 211
+	}
+
+	[CreateProperty(ReadOnly = True)]
 	public IEnumerable<Object> selectedItems
 	{
-		[IteratorStateMachine(typeof(<get_selectedItems>d__72))]
+		[IteratorStateMachine(typeof(<get_selectedItems>d__88))]
 		 get { } //Length: 101
 	}
 
+	[CreateProperty]
 	public SelectionType selectionType
 	{
 		 get { } //Length: 9
-		 set { } //Length: 144
+		 set { } //Length: 261
 	}
 
+	[CreateProperty]
 	public AlternatingRowBackground showAlternatingRowBackgrounds
 	{
 		 get { } //Length: 9
-		 set { } //Length: 22
+		 set { } //Length: 134
 	}
 
+	[CreateProperty]
 	public bool showBorder
 	{
-		 set { } //Length: 128
+		 get { } //Length: 115
+		 set { } //Length: 236
 	}
 
 	public CollectionViewController viewController
@@ -357,13 +419,15 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 
 	internal CollectionVirtualizationController virtualizationController
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 61
 	}
 
+	[CreateProperty]
 	public CollectionVirtualizationMethod virtualizationMethod
 	{
-		 get { } //Length: 7
-		 set { } //Length: 62
+		 get { } //Length: 262
+		 set { } //Length: 153
 	}
 
 	private static BaseVerticalCollectionView() { }
@@ -373,13 +437,13 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 	public BaseVerticalCollectionView() { }
 
 	[CompilerGenerated]
-	private void <.ctor>b__159_0(float v) { }
+	private void <.ctor>b__179_0(float v) { }
 
 	[CompilerGenerated]
-	private void <Apply>g__HandleSelectionAndScroll|183_0(int index, ref <>c__DisplayClass183_0 unnamed_param_1) { }
+	private void <Apply>g__HandleSelectionAndScroll|204_0(int index, ref <>c__DisplayClass204_0 unnamed_param_1) { }
 
 	[CompilerGenerated]
-	private void <RefreshSelection>g__NotifyIfChanged|172_0(ref <>c__DisplayClass172_0 unnamed_param_0) { }
+	private void <RefreshSelection>g__NotifyIfChanged|193_0(ref <>c__DisplayClass193_0 unnamed_param_0) { }
 
 	[CompilerGenerated]
 	public void add_selectionChanged(Action<IEnumerable`1<Object>> value) { }
@@ -390,9 +454,9 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 
 	private void AddToSelectionWithoutValidation(int index) { }
 
-	private void Apply(KeyboardNavigationOperation op, EventBase sourceEvent) { }
-
 	private bool Apply(KeyboardNavigationOperation op, bool shiftKey, bool altKey) { }
+
+	private void Apply(KeyboardNavigationOperation op, EventBase sourceEvent) { }
 
 	public void ClearSelection() { }
 
@@ -410,9 +474,10 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 
 	internal void DoRangeSelection(int rangeSelectionFinalIndex) { }
 
-	private void DoSelect(Vector2 localPosition, int clickCount, bool actionKey, bool shiftKey) { }
+	private void DoSelect(Vector2 localPosition, int mouseButton, int clickCount, bool actionKey, bool shiftKey) { }
 
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(PointerUpEvent), typeof(FocusEvent), typeof(NavigationSubmitEvent), typeof(BlurEvent)}])]
+	[EventInterest(EventInterestOptions::Inherit (0))]
+	[Obsolete("ExecuteDefaultAction override has been removed because default event handling was migrated to HandleEventBubbleUp. Please use HandleEventBubbleUp.", False)]
 	protected virtual void ExecuteDefaultAction(EventBase evt) { }
 
 	internal IEnumerable<ReusableCollectionItem> get_activeItems() { }
@@ -423,29 +488,39 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 
 	public float get_fixedItemHeight() { }
 
+	public bool get_horizontalScrollingEnabled() { }
+
+	internal bool get_isRebuildScheduled() { }
+
 	public IList get_itemsSource() { }
 
 	internal float get_lastHeight() { }
 
 	public bool get_reorderable() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal ScrollView get_scrollView() { }
 
-	internal IEnumerable<Int32> get_selectedIds() { }
+	public IEnumerable<Int32> get_selectedIds() { }
 
 	public int get_selectedIndex() { }
 
 	public IEnumerable<Int32> get_selectedIndices() { }
 
-	[IteratorStateMachine(typeof(<get_selectedItems>d__72))]
+	public object get_selectedItem() { }
+
+	[IteratorStateMachine(typeof(<get_selectedItems>d__88))]
 	public IEnumerable<Object> get_selectedItems() { }
 
 	public SelectionType get_selectionType() { }
 
 	public AlternatingRowBackground get_showAlternatingRowBackgrounds() { }
 
+	public bool get_showBorder() { }
+
 	public CollectionViewController get_viewController() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal CollectionVirtualizationController get_virtualizationController() { }
 
 	public CollectionVirtualizationMethod get_virtualizationMethod() { }
@@ -455,6 +530,9 @@ public abstract class BaseVerticalCollectionView : BindableElement, ISerializati
 	internal CollectionVirtualizationController GetOrCreateVirtualizationController() { }
 
 	public VisualElement GetRootElementForId(int id) { }
+
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(PointerUpEvent), typeof(FocusInEvent), typeof(FocusOutEvent), typeof(NavigationSubmitEvent)}])]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
 
 	override bool HandleItemNavigation(bool moveIn, bool altKey) { }
 

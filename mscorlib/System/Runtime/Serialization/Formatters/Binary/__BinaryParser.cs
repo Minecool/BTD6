@@ -45,7 +45,7 @@ internal sealed class __BinaryParser
 
 	internal BinaryAssemblyInfo SystemAssemblyInfo
 	{
-		internal get { } //Length: 190
+		internal get { } //Length: 193
 	}
 
 	private static __BinaryParser() { }

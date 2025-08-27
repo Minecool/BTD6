@@ -6,7 +6,7 @@ namespace UnityEngine.UI;
 public class Scrollbar : Selectable, IBeginDragHandler, IEventSystemHandler, IDragHandler, IInitializePotentialDragHandler, ICanvasElement
 {
 	[CompilerGenerated]
-	private sealed class <ClickRepeat>d__58 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <ClickRepeat>d__59 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -27,7 +27,7 @@ public class Scrollbar : Selectable, IBeginDragHandler, IEventSystemHandler, IDr
 		}
 
 		[DebuggerHidden]
-		public <ClickRepeat>d__58(int <>1__state) { }
+		public <ClickRepeat>d__59(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -91,7 +91,7 @@ public class Scrollbar : Selectable, IBeginDragHandler, IEventSystemHandler, IDr
 
 	private Axis axis
 	{
-		private get { } //Length: 21
+		private get { } //Length: 13
 	}
 
 	public Direction direction
@@ -120,7 +120,7 @@ public class Scrollbar : Selectable, IBeginDragHandler, IEventSystemHandler, IDr
 
 	private bool reverseValue
 	{
-		private get { } //Length: 23
+		private get { } //Length: 19
 	}
 
 	public float size
@@ -131,21 +131,21 @@ public class Scrollbar : Selectable, IBeginDragHandler, IEventSystemHandler, IDr
 
 	private float stepSize
 	{
-		private get { } //Length: 46
+		private get { } //Length: 42
 	}
 
 	public float value
 	{
-		 get { } //Length: 81
+		 get { } //Length: 80
 		 set { } //Length: 11
 	}
 
 	protected Scrollbar() { }
 
-	[IteratorStateMachine(typeof(<ClickRepeat>d__58))]
-	protected IEnumerator ClickRepeat(Vector2 screenPosition, Camera camera) { }
-
 	protected IEnumerator ClickRepeat(PointerEventData eventData) { }
+
+	[IteratorStateMachine(typeof(<ClickRepeat>d__59))]
+	protected IEnumerator ClickRepeat(Vector2 screenPosition, Camera camera) { }
 
 	private void DoUpdateDrag(Vector2 handleCorner, float remainingSize) { }
 
@@ -226,6 +226,8 @@ public class Scrollbar : Selectable, IBeginDragHandler, IEventSystemHandler, IDr
 	private void UpdateCachedReferences() { }
 
 	private void UpdateDrag(PointerEventData eventData) { }
+
+	private void UpdateDrag(RectTransform containerRect, Vector2 position, Camera camera) { }
 
 	private void UpdateVisuals() { }
 

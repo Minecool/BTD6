@@ -40,12 +40,12 @@ internal class MonoChunkParser
 
 	public bool DataAvailable
 	{
-		 get { } //Length: 269
+		 get { } //Length: 256
 	}
 
 	public bool WantMore
 	{
-		 get { } //Length: 23
+		 get { } //Length: 22
 	}
 
 	public MonoChunkParser(WebHeaderCollection headers) { }

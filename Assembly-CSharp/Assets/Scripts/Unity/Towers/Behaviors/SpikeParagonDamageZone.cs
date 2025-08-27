@@ -48,7 +48,7 @@ public class SpikeParagonDamageZone : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 910
+		 get { } //Length: 906
 	}
 
 	public SpikeParagonDamageZone() { }

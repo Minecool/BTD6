@@ -5,6 +5,13 @@ namespace UnityEngine.Windows.WebCam;
 [NativeHeader("PlatformDependent/Win/Webcam/PhotoCaptureFrame.h")]
 public sealed class PhotoCaptureFrame : IDisposable
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(PhotoCaptureFrame photoCaptureFrame) { }
+
+	}
+
 	private IntPtr m_NativePtr; //Field offset: 0x10
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
@@ -47,6 +54,8 @@ public sealed class PhotoCaptureFrame : IDisposable
 	[ThreadAndSerializationSafe]
 	private void Dispose_Internal() { }
 
+	private static void Dispose_Internal_Injected(IntPtr _unity_self) { }
+
 	protected virtual void Finalize() { }
 
 	[CompilerGenerated]
@@ -55,11 +64,17 @@ public sealed class PhotoCaptureFrame : IDisposable
 	[ThreadAndSerializationSafe]
 	private CapturePixelFormat GetCapturePixelFormat() { }
 
+	private static CapturePixelFormat GetCapturePixelFormat_Injected(IntPtr _unity_self) { }
+
 	[ThreadAndSerializationSafe]
 	private int GetDataLength() { }
 
+	private static int GetDataLength_Injected(IntPtr _unity_self) { }
+
 	[ThreadAndSerializationSafe]
 	private bool GetHasLocationData() { }
+
+	private static bool GetHasLocationData_Injected(IntPtr _unity_self) { }
 
 	[CompilerGenerated]
 	private void set_dataLength(int value) { }

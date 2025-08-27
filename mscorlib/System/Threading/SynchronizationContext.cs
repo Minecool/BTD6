@@ -2,16 +2,11 @@ namespace System.Threading;
 
 public class SynchronizationContext
 {
-	private static Type s_cachedPreparedType1; //Field offset: 0x0
-	private static Type s_cachedPreparedType2; //Field offset: 0x8
-	private static Type s_cachedPreparedType3; //Field offset: 0x10
-	private static Type s_cachedPreparedType4; //Field offset: 0x18
-	private static Type s_cachedPreparedType5; //Field offset: 0x20
 	private SynchronizationContextProperties _props; //Field offset: 0x10
 
 	public static SynchronizationContext Current
 	{
-		 get { } //Length: 121
+		 get { } //Length: 117
 	}
 
 	internal static SynchronizationContext CurrentExplicit
@@ -22,7 +17,7 @@ public class SynchronizationContext
 	internal static SynchronizationContext CurrentNoFlow
 	{
 		[FriendAccessAllowed]
-		internal get { } //Length: 121
+		internal get { } //Length: 117
 	}
 
 	public SynchronizationContext() { }

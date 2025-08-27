@@ -5,10 +5,11 @@ public class Pickup : ProjectileBehavior
 {
 	public float collectRadius; //Field offset: 0x30
 	public float delay; //Field offset: 0x34
+	public bool canAttractCamo; //Field offset: 0x38
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 130
+		 get { } //Length: 148
 	}
 
 	public Pickup() { }

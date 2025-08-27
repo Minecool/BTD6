@@ -22,12 +22,12 @@ public class HttpResponseMessage : IDisposable
 
 	public HttpResponseHeaders Headers
 	{
-		 get { } //Length: 149
+		 get { } //Length: 148
 	}
 
 	public bool IsSuccessStatusCode
 	{
-		 get { } //Length: 23
+		 get { } //Length: 22
 	}
 
 	public string ReasonPhrase

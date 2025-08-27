@@ -17,7 +17,7 @@ public class DamageOverTimeZone : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 361
+		 get { } //Length: 357
 	}
 
 	public DamageOverTimeZone() { }

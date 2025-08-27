@@ -4,10 +4,9 @@ internal class ElementUnderPointer
 {
 	private VisualElement[] m_PendingTopElementUnderPointer; //Field offset: 0x10
 	private VisualElement[] m_TopElementUnderPointer; //Field offset: 0x18
-	private IPointerEvent[] m_TriggerPointerEvent; //Field offset: 0x20
-	private IMouseEvent[] m_TriggerMouseEvent; //Field offset: 0x28
-	private Vector2[] m_PickingPointerPositions; //Field offset: 0x30
-	private Boolean[] m_IsPickingPointerTemporaries; //Field offset: 0x38
+	private IPointerOrMouseEvent[] m_TriggerEvent; //Field offset: 0x20
+	private Vector2[] m_PickingPointerPositions; //Field offset: 0x28
+	private Boolean[] m_IsPickingPointerTemporaries; //Field offset: 0x30
 
 	public ElementUnderPointer() { }
 

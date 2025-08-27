@@ -1,7 +1,7 @@
 namespace UnityEngine.UIElements;
 
 [IsReadOnly]
-internal struct SetupDragAndDropArgs
+public struct SetupDragAndDropArgs
 {
 	public readonly VisualElement draggedElement; //Field offset: 0x0
 	public readonly IEnumerable<Int32> selectedIds; //Field offset: 0x8

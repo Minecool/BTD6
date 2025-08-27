@@ -24,7 +24,7 @@ public sealed class TypeBinaryExpression : Expression
 
 	public virtual Type Type
 	{
-		 get { } //Length: 89
+		 get { } //Length: 50
 	}
 
 	public Type TypeOperand

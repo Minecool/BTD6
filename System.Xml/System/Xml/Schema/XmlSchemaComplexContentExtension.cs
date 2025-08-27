@@ -28,8 +28,8 @@ public class XmlSchemaComplexContentExtension : XmlSchemaContent
 		 set { } //Length: 149
 	}
 
-	[XmlElement("all", typeof(XmlSchemaAll))]
 	[XmlElement("sequence", typeof(XmlSchemaSequence))]
+	[XmlElement("all", typeof(XmlSchemaAll))]
 	[XmlElement("choice", typeof(XmlSchemaChoice))]
 	[XmlElement("group", typeof(XmlSchemaGroupRef))]
 	public XmlSchemaParticle Particle

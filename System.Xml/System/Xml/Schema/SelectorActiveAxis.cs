@@ -8,7 +8,7 @@ internal class SelectorActiveAxis : ActiveAxis
 
 	public int lastDepth
 	{
-		 get { } //Length: 162
+		 get { } //Length: 157
 	}
 
 	public SelectorActiveAxis(Asttree axisTree, ConstraintStruct cs) { }

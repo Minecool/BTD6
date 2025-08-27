@@ -1,10 +1,10 @@
 namespace UnityEngine.Animations;
 
-[NativeHeader("Modules/Animation/ScriptBindings/Animator.bindings.h")]
-[NativeHeader("Modules/Animation/ScriptBindings/AnimatorControllerPlayable.bindings.h")]
 [NativeHeader("Modules/Animation/AnimatorInfo.h")]
-[NativeHeader("Modules/Animation/RuntimeAnimatorController.h")]
+[NativeHeader("Modules/Animation/ScriptBindings/AnimatorControllerPlayable.bindings.h")]
+[NativeHeader("Modules/Animation/ScriptBindings/Animator.bindings.h")]
 [NativeHeader("Modules/Animation/Director/AnimatorControllerPlayable.h")]
+[NativeHeader("Modules/Animation/RuntimeAnimatorController.h")]
 [RequiredByNativeCode]
 [StaticAccessor("AnimatorControllerPlayableBindings", StaticAccessorType::DoubleColon (2))]
 public struct AnimatorControllerPlayable : IPlayable, IEquatable<AnimatorControllerPlayable>

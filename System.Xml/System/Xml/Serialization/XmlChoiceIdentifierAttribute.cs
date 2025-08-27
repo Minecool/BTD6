@@ -7,7 +7,7 @@ public class XmlChoiceIdentifierAttribute : Attribute
 
 	public string MemberName
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	internal void AddKeyHash(StringBuilder sb) { }

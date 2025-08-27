@@ -11,7 +11,7 @@ public class EventDescriptorCollection : ICollection, IEnumerable, IList
 
 		public override object Current
 		{
-			 get { } //Length: 108
+			 get { } //Length: 104
 		}
 
 		public ArraySubsetEnumerator(Array array, int count) { }
@@ -75,7 +75,7 @@ public class EventDescriptorCollection : ICollection, IEnumerable, IList
 	private override object System.Collections.IList.Item
 	{
 		private get { } //Length: 20
-		private set { } //Length: 398
+		private set { } //Length: 390
 	}
 
 	private static EventDescriptorCollection() { }

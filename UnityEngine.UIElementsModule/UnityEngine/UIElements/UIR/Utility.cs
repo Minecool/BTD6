@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements.UIR;
 
-[NativeHeader("ModuleOverrides/com.unity.ui/Core/Native/Renderer/UIRendererUtility.h")]
+[NativeHeader("Modules/UIElements/Core/Native/Renderer/UIRendererUtility.h")]
 [VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"Unity.UIElements"}])]
 internal class Utility
 {
@@ -47,19 +47,7 @@ internal class Utility
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private static Action FlushPendingResources; //Field offset: 0x10
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private static Action<Camera> RegisterIntermediateRenderers; //Field offset: 0x18
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private static Action<IntPtr> RenderNodeAdd; //Field offset: 0x20
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private static Action<IntPtr> RenderNodeExecute; //Field offset: 0x28
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private static Action<IntPtr> RenderNodeCleanup; //Field offset: 0x30
-	private static ProfilerMarker s_MarkerRaiseEngineUpdate; //Field offset: 0x38
+	private static ProfilerMarker s_MarkerRaiseEngineUpdate; //Field offset: 0x18
 
 	public static event Action EngineUpdate
 	{
@@ -85,22 +73,6 @@ internal class Utility
 		 remove { } //Length: 257
 	}
 
-	public static event Action<Camera> RegisterIntermediateRenderers
-	{
-		[CompilerGenerated]
-		 add { } //Length: 261
-		[CompilerGenerated]
-		 remove { } //Length: 261
-	}
-
-	public static event Action<IntPtr> RenderNodeExecute
-	{
-		[CompilerGenerated]
-		 add { } //Length: 261
-		[CompilerGenerated]
-		 remove { } //Length: 261
-	}
-
 	private static Utility() { }
 
 	[CompilerGenerated]
@@ -112,12 +84,6 @@ internal class Utility
 	[CompilerGenerated]
 	public static void add_GraphicsResourcesRecreate(Action<Boolean> value) { }
 
-	[CompilerGenerated]
-	public static void add_RegisterIntermediateRenderers(Action<Camera> value) { }
-
-	[CompilerGenerated]
-	public static void add_RenderNodeExecute(Action<IntPtr> value) { }
-
 	[ThreadSafe]
 	private static IntPtr AllocateBuffer(int elementCount, int elementStride, bool vertexBuffer) { }
 
@@ -127,7 +93,7 @@ internal class Utility
 	[ThreadSafe]
 	public static IntPtr CreateStencilState(StencilState stencilState) { }
 
-	private static IntPtr CreateStencilState_Injected(ref StencilState stencilState) { }
+	private static IntPtr CreateStencilState_Injected(in StencilState stencilState) { }
 
 	[ThreadSafe]
 	public static void DisableScissor() { }
@@ -150,6 +116,8 @@ internal class Utility
 
 	[ThreadSafe]
 	public static IntPtr GetVertexDeclaration(VertexAttributeDescriptor[] vertexAttributes) { }
+
+	private static IntPtr GetVertexDeclaration_Injected(ref ManagedSpanWrapper vertexAttributes) { }
 
 	[ThreadSafe]
 	public static bool HasMappedBufferRange() { }
@@ -174,22 +142,6 @@ internal class Utility
 	[RequiredByNativeCode]
 	internal static void RaiseGraphicsResourcesRecreate(bool recreate) { }
 
-	[RequiredByNativeCode]
-	internal static void RaiseRegisterIntermediateRenderers(Camera camera) { }
-
-	[RequiredByNativeCode]
-	internal static void RaiseRenderNodeAdd(IntPtr userData) { }
-
-	[RequiredByNativeCode]
-	internal static void RaiseRenderNodeCleanup(IntPtr userData) { }
-
-	[RequiredByNativeCode]
-	internal static void RaiseRenderNodeExecute(IntPtr userData) { }
-
-	public static void RegisterIntermediateRenderer(Camera camera, Material material, Matrix4x4 transform, Bounds aabb, int renderLayer, int shadowCasting, bool receiveShadows, int sameDistanceSortPriority, ulong sceneCullingMask, int rendererCallbackFlags, IntPtr userData, int userDataSize) { }
-
-	private static void RegisterIntermediateRenderer_Injected(Camera camera, Material material, ref Matrix4x4 transform, ref Bounds aabb, int renderLayer, int shadowCasting, bool receiveShadows, int sameDistanceSortPriority, ulong sceneCullingMask, int rendererCallbackFlags, IntPtr userData, int userDataSize) { }
-
 	[CompilerGenerated]
 	public static void remove_EngineUpdate(Action value) { }
 
@@ -199,27 +151,18 @@ internal class Utility
 	[CompilerGenerated]
 	public static void remove_GraphicsResourcesRecreate(Action<Boolean> value) { }
 
-	[CompilerGenerated]
-	public static void remove_RegisterIntermediateRenderers(Action<Camera> value) { }
-
-	[CompilerGenerated]
-	public static void remove_RenderNodeExecute(Action<IntPtr> value) { }
-
 	[ThreadSafe]
 	public static void SetPropertyBlock(MaterialPropertyBlock props) { }
+
+	private static void SetPropertyBlock_Injected(IntPtr props) { }
 
 	[ThreadSafe]
 	public static void SetScissorRect(RectInt scissorRect) { }
 
-	private static void SetScissorRect_Injected(ref RectInt scissorRect) { }
+	private static void SetScissorRect_Injected(in RectInt scissorRect) { }
 
 	[ThreadSafe]
 	public static void SetStencilState(IntPtr stencilState, int stencilRef) { }
-
-	[ThreadSafe]
-	private static void SetVectorArray(MaterialPropertyBlock props, int name, IntPtr vector4s, int count) { }
-
-	public static void SetVectorArray(MaterialPropertyBlock props, int name, NativeSlice<T> vector4s) { }
 
 	[ThreadSafe]
 	public static void SyncRenderThread() { }

@@ -89,7 +89,7 @@ public sealed class FtpWebRequest : WebRequest
 
 	public X509CertificateCollection ClientCertificates
 	{
-		 get { } //Length: 251
+		 get { } //Length: 267
 	}
 
 	public virtual string ConnectionGroupName
@@ -126,7 +126,7 @@ public sealed class FtpWebRequest : WebRequest
 
 	private bool InUse
 	{
-		private get { } //Length: 17
+		private get { } //Length: 18
 	}
 
 	public virtual string Method

@@ -21,13 +21,13 @@ internal static class MiscHelpers
 		private override TValue System.Collections.Generic.IEnumerator<TValue>.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 175
+			private get { } //Length: 147
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 176
+			private get { } //Length: 156
 		}
 
 		[DebuggerHidden]

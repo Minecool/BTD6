@@ -14,7 +14,7 @@ public sealed class SqlXml : INullable, IXmlSerializable
 
 	private static MethodInfo CreateSqlReaderMethodInfo
 	{
-		private get { } //Length: 295
+		private get { } //Length: 281
 	}
 
 	public override bool IsNull

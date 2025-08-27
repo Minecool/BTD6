@@ -6,7 +6,7 @@ public class SpawnTowerOnRound : SimulationBehavior
 	public String[] prePlaceTowerIndexs; //Field offset: 0x20
 	public Int32[] round; //Field offset: 0x28
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 128
 	}
@@ -18,7 +18,7 @@ public class SpawnTowerOnRound : SimulationBehavior
 
 	public SpawnTowerOnRound() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

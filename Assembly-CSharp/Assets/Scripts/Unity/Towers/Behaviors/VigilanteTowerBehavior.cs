@@ -22,7 +22,7 @@ public class VigilanteTowerBehavior : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 353
+		 get { } //Length: 362
 	}
 
 	public VigilanteTowerBehavior() { }

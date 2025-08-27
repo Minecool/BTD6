@@ -1,6 +1,7 @@
 namespace UnityEngine;
 
 [Flags]
+[NativeHeader("Runtime/Export/Graphics/GraphicsBuffer.bindings.h")]
 public enum ComputeBufferType
 {
 	Default = 0,

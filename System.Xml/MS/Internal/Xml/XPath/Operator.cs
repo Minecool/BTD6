@@ -28,7 +28,7 @@ internal class Operator : AstNode
 
 	public virtual XPathResultType ReturnType
 	{
-		 get { } //Length: 27
+		 get { } //Length: 28
 	}
 
 	public virtual AstType Type

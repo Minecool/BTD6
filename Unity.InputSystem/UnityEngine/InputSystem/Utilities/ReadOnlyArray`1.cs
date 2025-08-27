@@ -12,7 +12,7 @@ public struct ReadOnlyArray : IReadOnlyList<TValue>, IEnumerable<TValue>, IEnume
 
 		public override TValue Current
 		{
-			 get { } //Length: 207
+			 get { } //Length: 197
 		}
 
 		private override object System.Collections.IEnumerator.Current
@@ -45,7 +45,7 @@ public struct ReadOnlyArray : IReadOnlyList<TValue>, IEnumerable<TValue>, IEnume
 
 	public override TValue Item
 	{
-		 get { } //Length: 175
+		 get { } //Length: 171
 	}
 
 	public ReadOnlyArray`1(TValue[] array) { }

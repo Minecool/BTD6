@@ -1,6 +1,7 @@
 namespace UnityEngine.Rendering.Universal;
 
-[VolumeComponentMenuForRenderPipeline("Post-processing/Film Grain", new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(UniversalRenderPipeline)}])]
+[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+[VolumeComponentMenu("Post-processing/Film Grain")]
 public sealed class FilmGrain : VolumeComponent, IPostProcessComponent
 {
 	[Tooltip("The type of grain to use. You can select a preset or provide your own texture by selecting Custom.")]
@@ -16,6 +17,7 @@ public sealed class FilmGrain : VolumeComponent, IPostProcessComponent
 
 	public override bool IsActive() { }
 
+	[Obsolete("Unused #from(2023.1)", False)]
 	public override bool IsTileCompatible() { }
 
 }

@@ -3,13 +3,20 @@ namespace UnityEngine;
 [NativeHeader("Modules/IMGUI/GUIStyle.bindings.h")]
 public sealed class GUIStyleState
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(GUIStyleState guiStyleState) { }
+
+	}
+
 	internal IntPtr m_Ptr; //Field offset: 0x10
 	private readonly GUIStyle m_SourceStyle; //Field offset: 0x18
 
 	[NativeProperty("textColor", False, TargetType::Field (1))]
 	public Color textColor
 	{
-		 set { } //Length: 66
+		 set { } //Length: 90
 	}
 
 	public GUIStyleState() { }
@@ -18,6 +25,8 @@ public sealed class GUIStyleState
 
 	[FreeFunction(Name = "GUIStyleState_Bindings::Cleanup", IsThreadSafe = True, HasExplicitThis = True)]
 	private void Cleanup() { }
+
+	private static void Cleanup_Injected(IntPtr _unity_self) { }
 
 	protected virtual void Finalize() { }
 
@@ -28,7 +37,7 @@ public sealed class GUIStyleState
 
 	public void set_textColor(Color value) { }
 
-	private void set_textColor_Injected(ref Color value) { }
+	private static void set_textColor_Injected(IntPtr _unity_self, in Color value) { }
 
 }
 

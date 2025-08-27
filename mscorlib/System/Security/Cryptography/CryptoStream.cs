@@ -125,7 +125,7 @@ public class CryptoStream : Stream, IDisposable
 
 	private SemaphoreSlim AsyncActiveSemaphore
 	{
-		private get { } //Length: 244
+		private get { } //Length: 247
 	}
 
 	public virtual bool CanRead

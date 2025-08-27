@@ -13,8 +13,9 @@ public class Ability : TowerBehavior
 	public int activationsThisRound; //Field offset: 0x8C
 	private bool abilityUpdated; //Field offset: 0x90
 	public int currentAdditionalCharges; //Field offset: 0x94
-	public bool hideAbility; //Field offset: 0x98
-	public bool hideAbilityInBottomRow; //Field offset: 0x99
+	private TSMInfoModel tsmInfoModel; //Field offset: 0x98
+	public bool hideAbility; //Field offset: 0xA0
+	public bool hideAbilityInBottomRow; //Field offset: 0xA1
 
 	public float CooldownRemaining
 	{
@@ -44,12 +45,12 @@ public class Ability : TowerBehavior
 
 	public bool ShowAbilityInBottomRow
 	{
-		 get { } //Length: 399
+		 get { } //Length: 396
 	}
 
 	public bool ShowInAbilityMenu
 	{
-		 get { } //Length: 463
+		 get { } //Length: 460
 	}
 
 	public Ability() { }
@@ -84,6 +85,8 @@ public class Ability : TowerBehavior
 
 	public virtual void GetSaveMetaData(Dictionary<String, String> metaData) { }
 
+	public virtual void GetTsmThemeInfo(out TSMInfoModel info, out string infoId) { }
+
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 
 	public bool IsCashGenerating() { }
@@ -99,6 +102,8 @@ public class Ability : TowerBehavior
 	public virtual void OnPreLivesLost(bool fromLeak) { }
 
 	private void OnRoundStartSim(int roundNumber) { }
+
+	public virtual void OnTsmThemeAction(string themeId, string buttonId, TSMInfoModel info) { }
 
 	public virtual void OnUpgraded(int pathUpgraded) { }
 

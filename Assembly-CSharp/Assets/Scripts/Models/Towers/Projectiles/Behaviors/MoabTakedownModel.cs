@@ -28,7 +28,7 @@ public class MoabTakedownModel : ProjectileBehaviorModel
 
 	public BloonWorthMutator bloonWorthMutator
 	{
-		 get { } //Length: 302
+		 get { } //Length: 306
 	}
 
 	public MoabTakedownModel(string name, float speed, bool increaseMoabBloonWorth, float multiplier, float additive, IncreaseWorthTextEffectModel increaseWorthTextEffectModel, float destroyBloonRadius, PrefabReference displayAtEjectId) { }

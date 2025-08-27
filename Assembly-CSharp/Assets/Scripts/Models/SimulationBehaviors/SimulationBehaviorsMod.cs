@@ -61,6 +61,8 @@ public class SimulationBehaviorsMod
 
 		public virtual bool CanConvert(Type t) { }
 
+		private static Type FindTypeByName(string typeName) { }
+
 		public virtual bool get_CanWrite() { }
 
 		public virtual object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) { }

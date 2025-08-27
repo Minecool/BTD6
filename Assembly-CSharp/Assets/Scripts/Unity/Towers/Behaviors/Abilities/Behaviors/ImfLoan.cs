@@ -14,7 +14,7 @@ public class ImfLoan : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 1080
+		 get { } //Length: 1137
 	}
 
 	public ImfLoan() { }

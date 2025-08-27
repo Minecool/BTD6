@@ -50,7 +50,7 @@ internal sealed class SimpleType : ISerializable
 
 	public string SimpleTypeQualifiedName
 	{
-		 get { } //Length: 94
+		 get { } //Length: 90
 	}
 
 	internal XmlQualifiedName XmlBaseType

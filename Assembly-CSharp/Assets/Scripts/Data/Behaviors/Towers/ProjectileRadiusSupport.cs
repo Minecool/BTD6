@@ -11,7 +11,7 @@ public class ProjectileRadiusSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 303
+		 get { } //Length: 338
 	}
 
 	public ProjectileRadiusSupport() { }

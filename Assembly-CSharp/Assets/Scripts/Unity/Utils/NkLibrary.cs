@@ -129,7 +129,7 @@ public class NkLibrary
 
 	public static NkLibrary Instance
 	{
-		 get { } //Length: 492
+		 get { } //Length: 473
 	}
 
 	private TimeSpan Now

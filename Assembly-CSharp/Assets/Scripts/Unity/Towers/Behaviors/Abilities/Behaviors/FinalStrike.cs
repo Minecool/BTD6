@@ -37,7 +37,7 @@ public class FinalStrike : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 1316
+		 get { } //Length: 1315
 	}
 
 	public FinalStrike() { }

@@ -12,12 +12,12 @@ internal class ChainOperationTypelessDepedency : AsyncOperationBase<TObject>
 
 	protected virtual string DebugName
 	{
-		 get { } //Length: 209
+		 get { } //Length: 197
 	}
 
 	protected virtual float Progress
 	{
-		 get { } //Length: 365
+		 get { } //Length: 368
 	}
 
 	internal AsyncOperationHandle<TObject> WrappedOp

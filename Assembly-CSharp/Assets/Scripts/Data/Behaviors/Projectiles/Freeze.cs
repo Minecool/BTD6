@@ -17,7 +17,7 @@ public class Freeze : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 470
+		 get { } //Length: 466
 	}
 
 	public Freeze() { }

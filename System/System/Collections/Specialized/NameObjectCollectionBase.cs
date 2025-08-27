@@ -19,7 +19,7 @@ public abstract class NameObjectCollectionBase : ICollection, IEnumerable, ISeri
 
 		public override object Current
 		{
-			 get { } //Length: 179
+			 get { } //Length: 177
 		}
 
 		internal NameObjectKeysEnumerator(NameObjectCollectionBase coll) { }

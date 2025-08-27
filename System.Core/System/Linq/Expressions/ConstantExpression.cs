@@ -13,7 +13,7 @@ public class ConstantExpression : Expression
 
 	public virtual Type Type
 	{
-		 get { } //Length: 115
+		 get { } //Length: 77
 	}
 
 	public object Value

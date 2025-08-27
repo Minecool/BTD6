@@ -14,12 +14,12 @@ public abstract class DataRelationCollection : InternalDataCollectionBase
 
 		public virtual DataRelation Item
 		{
-			 get { } //Length: 266
+			 get { } //Length: 265
 		}
 
 		public virtual DataRelation Item
 		{
-			 get { } //Length: 249
+			 get { } //Length: 269
 		}
 
 		protected virtual ArrayList List
@@ -64,12 +64,12 @@ public abstract class DataRelationCollection : InternalDataCollectionBase
 
 		public virtual DataRelation Item
 		{
-			 get { } //Length: 266
+			 get { } //Length: 265
 		}
 
 		public virtual DataRelation Item
 		{
-			 get { } //Length: 249
+			 get { } //Length: 269
 		}
 
 		protected virtual ArrayList List

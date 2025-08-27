@@ -1,6 +1,6 @@
 namespace NinjaKiwi.LiNK.Client.Files;
 
-internal class ReplaceOnDisposeStrategy : FileSystemStorage
+internal sealed class ReplaceOnDisposeStrategy : FileSystemStorage
 {
 	[CompilerGenerated]
 	private sealed class <GetAllReadStreams>d__1 : IEnumerable<Stream>, IEnumerable, IEnumerator<Stream>, IEnumerator, IDisposable

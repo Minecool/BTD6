@@ -4,6 +4,13 @@ namespace UnityEngine;
 [UsedByNativeCode]
 public sealed class TextGenerator : IDisposable
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(TextGenerator textGenerator) { }
+
+	}
+
 	internal IntPtr m_Ptr; //Field offset: 0x10
 	private string m_LastString; //Field offset: 0x18
 	private TextGenerationSettings m_LastSettings; //Field offset: 0x20
@@ -18,37 +25,37 @@ public sealed class TextGenerator : IDisposable
 
 	public int characterCount
 	{
-		 get { } //Length: 51
+		 get { } //Length: 81
 	}
 
 	public int characterCountVisible
 	{
-		 get { } //Length: 53
+		 get { } //Length: 83
 	}
 
 	public IList<UICharInfo> characters
 	{
-		 get { } //Length: 107
+		 get { } //Length: 133
 	}
 
 	public int lineCount
 	{
-		 get { } //Length: 51
+		 get { } //Length: 81
 	}
 
 	public IList<UILineInfo> lines
 	{
-		 get { } //Length: 107
+		 get { } //Length: 133
 	}
 
 	public Rect rectExtents
 	{
-		 get { } //Length: 75
+		 get { } //Length: 105
 	}
 
 	public IList<UIVertex> verts
 	{
-		 get { } //Length: 107
+		 get { } //Length: 133
 	}
 
 	public TextGenerator() { }
@@ -59,17 +66,21 @@ public sealed class TextGenerator : IDisposable
 
 	public int get_characterCount() { }
 
+	private static int get_characterCount_Injected(IntPtr _unity_self) { }
+
 	public int get_characterCountVisible() { }
 
 	public IList<UICharInfo> get_characters() { }
 
 	public int get_lineCount() { }
 
+	private static int get_lineCount_Injected(IntPtr _unity_self) { }
+
 	public IList<UILineInfo> get_lines() { }
 
 	public Rect get_rectExtents() { }
 
-	private void get_rectExtents_Injected(out Rect ret) { }
+	private static void get_rectExtents_Injected(IntPtr _unity_self, out Rect ret) { }
 
 	public IList<UIVertex> get_verts() { }
 
@@ -78,10 +89,14 @@ public sealed class TextGenerator : IDisposable
 	[NativeThrows]
 	private void GetCharactersInternal(object characters) { }
 
+	private static void GetCharactersInternal_Injected(IntPtr _unity_self, object characters) { }
+
 	public void GetLines(List<UILineInfo> lines) { }
 
 	[NativeThrows]
 	private void GetLinesInternal(object lines) { }
+
+	private static void GetLinesInternal_Injected(IntPtr _unity_self, object lines) { }
 
 	public float GetPreferredHeight(string str, TextGenerationSettings settings) { }
 
@@ -91,6 +106,8 @@ public sealed class TextGenerator : IDisposable
 
 	[NativeThrows]
 	private void GetVerticesInternal(object vertices) { }
+
+	private static void GetVerticesInternal_Injected(IntPtr _unity_self, object vertices) { }
 
 	[NativeMethod(IsThreadSafe = True)]
 	private static IntPtr Internal_Create() { }
@@ -102,11 +119,11 @@ public sealed class TextGenerator : IDisposable
 
 	public bool Populate(string str, TextGenerationSettings settings) { }
 
-	internal bool Populate_Internal(string str, Font font, Color color, int fontSize, float scaleFactor, float lineSpacing, FontStyle style, bool richText, bool resizeTextForBestFit, int resizeTextMinSize, int resizeTextMaxSize, VerticalWrapMode verticalOverFlow, HorizontalWrapMode horizontalOverflow, bool updateBounds, TextAnchor anchor, Vector2 extents, Vector2 pivot, bool generateOutOfBounds, bool alignByGeometry, out TextGenerationError error) { }
-
 	internal bool Populate_Internal(string str, Font font, Color color, int fontSize, float scaleFactor, float lineSpacing, FontStyle style, bool richText, bool resizeTextForBestFit, int resizeTextMinSize, int resizeTextMaxSize, int verticalOverFlow, int horizontalOverflow, bool updateBounds, TextAnchor anchor, float extentsX, float extentsY, float pivotX, float pivotY, bool generateOutOfBounds, bool alignByGeometry, out uint error) { }
 
-	private bool Populate_Internal_Injected(string str, Font font, ref Color color, int fontSize, float scaleFactor, float lineSpacing, FontStyle style, bool richText, bool resizeTextForBestFit, int resizeTextMinSize, int resizeTextMaxSize, int verticalOverFlow, int horizontalOverflow, bool updateBounds, TextAnchor anchor, float extentsX, float extentsY, float pivotX, float pivotY, bool generateOutOfBounds, bool alignByGeometry, out uint error) { }
+	internal bool Populate_Internal(string str, Font font, Color color, int fontSize, float scaleFactor, float lineSpacing, FontStyle style, bool richText, bool resizeTextForBestFit, int resizeTextMinSize, int resizeTextMaxSize, VerticalWrapMode verticalOverFlow, HorizontalWrapMode horizontalOverflow, bool updateBounds, TextAnchor anchor, Vector2 extents, Vector2 pivot, bool generateOutOfBounds, bool alignByGeometry, out TextGenerationError error) { }
+
+	private static bool Populate_Internal_Injected(IntPtr _unity_self, ref ManagedSpanWrapper str, IntPtr font, in Color color, int fontSize, float scaleFactor, float lineSpacing, FontStyle style, bool richText, bool resizeTextForBestFit, int resizeTextMinSize, int resizeTextMaxSize, int verticalOverFlow, int horizontalOverflow, bool updateBounds, TextAnchor anchor, float extentsX, float extentsY, float pivotX, float pivotY, bool generateOutOfBounds, bool alignByGeometry, out uint error) { }
 
 	private TextGenerationError PopulateAlways(string str, TextGenerationSettings settings) { }
 

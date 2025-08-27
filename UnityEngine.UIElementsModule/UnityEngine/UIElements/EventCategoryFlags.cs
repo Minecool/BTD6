@@ -5,7 +5,7 @@ internal enum EventCategoryFlags
 {
 	None = 0,
 	All = -1,
-	TriggeredByOS = 81974,
-	TargetOnly = 2768,
+	TriggeredByOS = 426094,
+	TargetOnly = 5536,
 }
 

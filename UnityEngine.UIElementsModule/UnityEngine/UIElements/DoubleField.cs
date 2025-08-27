@@ -13,7 +13,7 @@ public class DoubleField : TextValueField<Double>
 
 		private DoubleField parentDoubleField
 		{
-			private get { } //Length: 113
+			private get { } //Length: 117
 		}
 
 		internal DoubleInput() { }
@@ -30,6 +30,7 @@ public class DoubleField : TextValueField<Double>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<DoubleField, UxmlTraits>
 	{
 
@@ -37,6 +38,7 @@ public class DoubleField : TextValueField<Double>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : TextValueFieldTraits<Double, UxmlDoubleAttributeDescription>
 	{
 
@@ -50,7 +52,7 @@ public class DoubleField : TextValueField<Double>
 
 	private DoubleInput doubleInput
 	{
-		private get { } //Length: 122
+		private get { } //Length: 118
 	}
 
 	private static DoubleField() { }

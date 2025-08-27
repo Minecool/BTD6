@@ -8,7 +8,7 @@ public class XPathException : SystemException
 
 	public virtual string Message
 	{
-		 get { } //Length: 25
+		 get { } //Length: 20
 	}
 
 	protected XPathException(SerializationInfo info, StreamingContext context) { }

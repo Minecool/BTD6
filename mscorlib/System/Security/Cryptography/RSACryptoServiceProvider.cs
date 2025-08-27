@@ -13,7 +13,7 @@ public sealed class RSACryptoServiceProvider : RSA
 
 	public virtual int KeySize
 	{
-		 get { } //Length: 35
+		 get { } //Length: 36
 	}
 
 	[ComVisible(False)]

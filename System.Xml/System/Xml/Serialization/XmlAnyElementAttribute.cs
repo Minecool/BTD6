@@ -9,7 +9,7 @@ public class XmlAnyElementAttribute : Attribute
 
 	public string Name
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	public string Namespace

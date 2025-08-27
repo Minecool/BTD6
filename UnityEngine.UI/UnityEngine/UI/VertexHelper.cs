@@ -17,12 +17,12 @@ public class VertexHelper : IDisposable
 
 	public int currentIndexCount
 	{
-		 get { } //Length: 65
+		 get { } //Length: 61
 	}
 
 	public int currentVertCount
 	{
-		 get { } //Length: 65
+		 get { } //Length: 61
 	}
 
 	private static VertexHelper() { }

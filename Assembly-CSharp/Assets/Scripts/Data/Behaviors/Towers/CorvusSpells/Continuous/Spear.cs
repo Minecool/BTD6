@@ -7,7 +7,7 @@ public class Spear : CorvusContinuousSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 715
+		 get { } //Length: 726
 	}
 
 	public Spear() { }

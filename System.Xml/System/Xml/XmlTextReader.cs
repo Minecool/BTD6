@@ -153,7 +153,7 @@ public class XmlTextReader : XmlReader, IXmlLineInfo, IXmlNamespaceResolver
 
 	internal bool XmlValidatingReaderCompatibilityMode
 	{
-		internal set { } //Length: 1066
+		internal set { } //Length: 973
 	}
 
 	public XmlTextReader(Stream input) { }

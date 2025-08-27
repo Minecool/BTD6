@@ -19,12 +19,12 @@ public struct QueryKeyNameCommand : IInputDeviceCommandInfo
 
 	public static FourCC Type
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public static QueryKeyNameCommand Create(Key key) { }

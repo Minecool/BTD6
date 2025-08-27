@@ -16,11 +16,11 @@ internal class FileFormatV1 : FileFormat
 
 	public FileFormatV1() { }
 
-	public FileFormatV1(BinaryReader reader) { }
-
 	public static FileFormatV1 FromFile(File<T> file) { }
 
 	public virtual int get_Version() { }
+
+	public static FileFormatV1 Read(BinaryReader reader) { }
 
 	public virtual Byte[] ToBytes() { }
 

@@ -1,6 +1,5 @@
 namespace UnityEngine.Rendering;
 
-[Obsolete("This variant is obsolete and kept only for not breaking user code. Use IVolumeDebugSettings2 for all new usage.", False)]
 public interface IVolumeDebugSettings
 {
 

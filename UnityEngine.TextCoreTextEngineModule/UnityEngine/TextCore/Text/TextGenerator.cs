@@ -1,5 +1,6 @@
 namespace UnityEngine.TextCore.Text;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 internal class TextGenerator
 {
 	internal sealed class MissingCharacterEventCallback : MulticastDelegate
@@ -22,8 +23,56 @@ internal class TextGenerator
 
 	}
 
+	private const int k_Tab = 9; //Field offset: 0x0
+	private const int k_ParagraphSeparator = 8233; //Field offset: 0x0
+	private const int k_RightSingleQuote = 8217; //Field offset: 0x0
+	private const int k_Square = 9633; //Field offset: 0x0
+	private const int k_HangulJamoStart = 4352; //Field offset: 0x0
+	private const int k_HangulJamoEnd = 4607; //Field offset: 0x0
+	private const int k_CjkStart = 11904; //Field offset: 0x0
+	private const int k_CjkEnd = 40959; //Field offset: 0x0
+	private const int k_HangulJameExtendedStart = 43360; //Field offset: 0x0
+	private const int k_HangulJameExtendedEnd = 43391; //Field offset: 0x0
+	private const int k_LineSeparator = 8232; //Field offset: 0x0
+	private const int k_HangulSyllablesStart = 44032; //Field offset: 0x0
+	private const int k_CjkIdeographsStart = 63744; //Field offset: 0x0
+	private const int k_CjkIdeographsEnd = 64255; //Field offset: 0x0
+	private const int k_CjkFormsStart = 65072; //Field offset: 0x0
+	private const int k_CjkHalfwidthStart = 65280; //Field offset: 0x0
+	private const int k_CjkHalfwidthEnd = 65519; //Field offset: 0x0
+	private const int k_EndOfText = 3; //Field offset: 0x0
+	private const float k_FloatUnset = -32767; //Field offset: 0x0
+	private const int k_MaxCharacters = 8; //Field offset: 0x0
 	private static TextGenerator s_TextGenerator; //Field offset: 0x0
-	protected static bool m_IsTextTruncated; //Field offset: 0x8
+	private const int k_HangulSyllablesEnd = 55295; //Field offset: 0x0
+	private const int k_HorizontalEllipsis = 8230; //Field offset: 0x0
+	private const int k_CjkFormsEnd = 65103; //Field offset: 0x0
+	private const int k_NarrowNoBreakSpace = 8239; //Field offset: 0x0
+	private const int k_LineFeed = 10; //Field offset: 0x0
+	private const int k_VerticalTab = 11; //Field offset: 0x0
+	private const int k_CarriageReturn = 13; //Field offset: 0x0
+	private const int k_Space = 32; //Field offset: 0x0
+	private const int k_DoubleQuotes = 34; //Field offset: 0x0
+	private const int k_NumberSign = 35; //Field offset: 0x0
+	private const int k_PercentSign = 37; //Field offset: 0x0
+	private const int k_Plus = 43; //Field offset: 0x0
+	private const int k_Period = 46; //Field offset: 0x0
+	private const int k_LesserThan = 60; //Field offset: 0x0
+	private const int k_SingleQuote = 39; //Field offset: 0x0
+	private const int k_GreaterThan = 62; //Field offset: 0x0
+	private const int k_ZeroWidthSpace = 8203; //Field offset: 0x0
+	private const int k_NonBreakingHyphen = 8209; //Field offset: 0x0
+	private const int k_Equal = 61; //Field offset: 0x0
+	private const int k_FigureSpace = 8199; //Field offset: 0x0
+	private const int k_HyphenMinus = 45; //Field offset: 0x0
+	private const int k_Hyphen = 8208; //Field offset: 0x0
+	private const int k_NoBreakSpace = 160; //Field offset: 0x0
+	private const int k_Underline = 95; //Field offset: 0x0
+	private const int k_SoftHyphen = 173; //Field offset: 0x0
+	private const int k_WordJoiner = 8288; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private static bool <IsExecutingJob>k__BackingField; //Field offset: 0x8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private static MissingCharacterEventCallback OnMissingCharacter; //Field offset: 0x10
@@ -35,6 +84,7 @@ internal class TextGenerator
 	private Char[] m_HtmlTag; //Field offset: 0x30
 	internal HighlightState m_HighlightState; //Field offset: 0x38
 	protected bool m_IsIgnoringAlignment; //Field offset: 0x4C
+	protected bool m_IsTextTruncated; //Field offset: 0x4D
 	private Vector3[] m_RectTransformCorners; //Field offset: 0x50
 	private float m_MarginWidth; //Field offset: 0x58
 	private float m_MarginHeight; //Field offset: 0x5C
@@ -80,52 +130,50 @@ internal class TextGenerator
 	private bool m_IsDrivenLineSpacing; //Field offset: 0x2E8
 	private float m_CSpacing; //Field offset: 0x2EC
 	private float m_MonoSpacing; //Field offset: 0x2F0
-	private float m_XAdvance; //Field offset: 0x2F4
-	private float m_TagLineIndent; //Field offset: 0x2F8
-	private float m_TagIndent; //Field offset: 0x2FC
-	private TextProcessingStack<Single> m_IndentStack; //Field offset: 0x300
-	private bool m_TagNoParsing; //Field offset: 0x320
-	private int m_CharacterCount; //Field offset: 0x324
-	private int m_FirstCharacterOfLine; //Field offset: 0x328
-	private int m_LastCharacterOfLine; //Field offset: 0x32C
-	private int m_FirstVisibleCharacterOfLine; //Field offset: 0x330
-	private int m_LastVisibleCharacterOfLine; //Field offset: 0x334
-	private float m_MaxLineAscender; //Field offset: 0x338
-	private float m_MaxLineDescender; //Field offset: 0x33C
-	private int m_LineNumber; //Field offset: 0x340
-	private int m_LineVisibleCharacterCount; //Field offset: 0x344
-	private int m_LineVisibleSpaceCount; //Field offset: 0x348
-	private int m_FirstOverflowCharacterIndex; //Field offset: 0x34C
-	private int m_PageNumber; //Field offset: 0x350
-	private float m_MarginLeft; //Field offset: 0x354
-	private float m_MarginRight; //Field offset: 0x358
-	private float m_Width; //Field offset: 0x35C
-	private Extents m_MeshExtents; //Field offset: 0x360
-	private float m_MaxCapHeight; //Field offset: 0x370
-	private float m_MaxAscender; //Field offset: 0x374
-	private float m_MaxDescender; //Field offset: 0x378
-	private bool m_IsNewPage; //Field offset: 0x37C
-	private bool m_IsNonBreakingSpace; //Field offset: 0x37D
-	private WordWrapState m_SavedWordWrapState; //Field offset: 0x380
-	private WordWrapState m_SavedLineState; //Field offset: 0x718
-	private WordWrapState m_SavedEllipsisState; //Field offset: 0xAB0
-	private WordWrapState m_SavedLastValidState; //Field offset: 0xE48
-	private WordWrapState m_SavedSoftLineBreakState; //Field offset: 0x11E0
-	private TextElementType m_TextElementType; //Field offset: 0x1578
-	private bool m_isTextLayoutPhase; //Field offset: 0x1579
-	private int m_SpriteIndex; //Field offset: 0x157C
-	private Color32 m_SpriteColor; //Field offset: 0x1580
-	private TextElement m_CachedTextElement; //Field offset: 0x1588
-	private Color32 m_HighlightColor; //Field offset: 0x1590
-	private float m_CharWidthAdjDelta; //Field offset: 0x1594
-	private float m_MaxFontSize; //Field offset: 0x1598
-	private float m_MinFontSize; //Field offset: 0x159C
-	private int m_AutoSizeIterationCount; //Field offset: 0x15A0
-	private int m_AutoSizeMaxIterationCount; //Field offset: 0x15A4
-	private bool m_IsAutoSizePointSizeSet; //Field offset: 0x15A8
-	private float m_StartOfLineAscender; //Field offset: 0x15AC
-	private float m_LineSpacingDelta; //Field offset: 0x15B0
-	private MaterialReference[] m_MaterialReferences; //Field offset: 0x15B8
+	private bool m_DuoSpace; //Field offset: 0x2F4
+	private float m_XAdvance; //Field offset: 0x2F8
+	private float m_TagLineIndent; //Field offset: 0x2FC
+	private float m_TagIndent; //Field offset: 0x300
+	private TextProcessingStack<Single> m_IndentStack; //Field offset: 0x308
+	private bool m_TagNoParsing; //Field offset: 0x328
+	private int m_CharacterCount; //Field offset: 0x32C
+	private int m_FirstCharacterOfLine; //Field offset: 0x330
+	private int m_LastCharacterOfLine; //Field offset: 0x334
+	private int m_FirstVisibleCharacterOfLine; //Field offset: 0x338
+	private int m_LastVisibleCharacterOfLine; //Field offset: 0x33C
+	private float m_MaxLineAscender; //Field offset: 0x340
+	private float m_MaxLineDescender; //Field offset: 0x344
+	private int m_LineNumber; //Field offset: 0x348
+	private int m_LineVisibleCharacterCount; //Field offset: 0x34C
+	private int m_LineVisibleSpaceCount; //Field offset: 0x350
+	private int m_FirstOverflowCharacterIndex; //Field offset: 0x354
+	private float m_MarginLeft; //Field offset: 0x358
+	private float m_MarginRight; //Field offset: 0x35C
+	private float m_Width; //Field offset: 0x360
+	private Extents m_MeshExtents; //Field offset: 0x364
+	private float m_MaxCapHeight; //Field offset: 0x374
+	private float m_MaxAscender; //Field offset: 0x378
+	private float m_MaxDescender; //Field offset: 0x37C
+	private bool m_IsNonBreakingSpace; //Field offset: 0x380
+	private WordWrapState m_SavedWordWrapState; //Field offset: 0x388
+	private WordWrapState m_SavedLineState; //Field offset: 0x720
+	private WordWrapState m_SavedEllipsisState; //Field offset: 0xAB8
+	private WordWrapState m_SavedLastValidState; //Field offset: 0xE50
+	private WordWrapState m_SavedSoftLineBreakState; //Field offset: 0x11E8
+	private TextElementType m_TextElementType; //Field offset: 0x1580
+	private bool m_isTextLayoutPhase; //Field offset: 0x1581
+	private int m_SpriteIndex; //Field offset: 0x1584
+	private Color32 m_SpriteColor; //Field offset: 0x1588
+	private TextElement m_CachedTextElement; //Field offset: 0x1590
+	private Color32 m_HighlightColor; //Field offset: 0x1598
+	private float m_CharWidthAdjDelta; //Field offset: 0x159C
+	private float m_MaxFontSize; //Field offset: 0x15A0
+	private float m_MinFontSize; //Field offset: 0x15A4
+	private int m_AutoSizeIterationCount; //Field offset: 0x15A8
+	private int m_AutoSizeMaxIterationCount; //Field offset: 0x15AC
+	private float m_StartOfLineAscender; //Field offset: 0x15B0
+	private float m_LineSpacingDelta; //Field offset: 0x15B4
+	internal MaterialReference[] m_MaterialReferences; //Field offset: 0x15B8
 	private int m_SpriteCount; //Field offset: 0x15C0
 	private TextProcessingStack<Int32> m_StyleStack; //Field offset: 0x15C8
 	private TextProcessingStack<WordWrapState> m_EllipsisInsertionCandidateStack; //Field offset: 0x15E8
@@ -139,24 +187,38 @@ internal class TextGenerator
 	private Single[] m_AttributeParameterValues; //Field offset: 0x19D8
 	private Dictionary<Int32, Int32> m_MaterialReferenceIndexLookup; //Field offset: 0x19E0
 	private bool m_IsCalculatingPreferredValues; //Field offset: 0x19E8
-	private SpriteAsset m_DefaultSpriteAsset; //Field offset: 0x19F0
-	private bool m_TintSprite; //Field offset: 0x19F8
-	protected SpecialCharacter m_Ellipsis; //Field offset: 0x1A00
-	protected SpecialCharacter m_Underline; //Field offset: 0x1A20
-	private TextElementInfo[] m_InternalTextElementInfo; //Field offset: 0x1A40
+	private bool m_TintSprite; //Field offset: 0x19E9
+	protected SpecialCharacter m_Ellipsis; //Field offset: 0x19F0
+	protected SpecialCharacter m_Underline; //Field offset: 0x1A10
+	private TextElementInfo[] m_InternalTextElementInfo; //Field offset: 0x1A30
 
-	public static bool isTextTruncated
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal static bool IsExecutingJob
 	{
-		 get { } //Length: 55
+		[CompilerGenerated]
+		internal get { } //Length: 55
+		[CompilerGenerated]
+		internal set { } //Length: 372
+	}
+
+	public bool isTextTruncated
+	{
+		 get { } //Length: 7
 	}
 
 	public TextGenerator() { }
 
-	protected override Vector2 CalculatePreferredValues(ref float fontSize, Vector2 marginSize, bool isTextAutoSizingEnabled, TextWrappingMode textWrapMode, TextGenerationSettings generationSettings, TextInfo textInfo) { }
+	protected override Vector2 CalculatePreferredValues(ref float fontSize, Vector2 marginSize, bool isTextAutoSizingEnabled, TextGenerationSettings generationSettings, TextInfo textInfo) { }
 
 	private void ClearMarkupTagAttributes() { }
 
 	private static void ClearMesh(bool updateMesh, TextInfo textInfo) { }
+
+	internal void CloseAllLinkTags(TextInfo textInfo) { }
+
+	internal void CloseLastLinkTag(TextInfo textInfo) { }
+
+	private void CloseLinkTag(TextInfo textInfo, int index) { }
 
 	private void ComputeMarginSize(Rect rect, Vector4 margins) { }
 
@@ -166,37 +228,46 @@ internal class TextGenerator
 
 	private void DrawUnderlineMesh(Vector3 start, Vector3 end, float startScale, float endScale, float maxScale, float sdfScale, Color32 underlineColor, TextGenerationSettings generationSettings, TextInfo textInfo) { }
 
-	public static void GenerateText(TextGenerationSettings settings, TextInfo textInfo) { }
+	public void GenerateText(TextGenerationSettings settings, TextInfo textInfo) { }
 
-	private void GenerateTextMesh(TextGenerationSettings generationSettings, TextInfo textInfo) { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal void GenerateTextMesh(TextGenerationSettings generationSettings, TextInfo textInfo) { }
 
-	public static bool get_isTextTruncated() { }
+	[CompilerGenerated]
+	internal static bool get_IsExecutingJob() { }
 
-	protected void GetEllipsisSpecialCharacter(TextGenerationSettings generationSettings) { }
+	public bool get_isTextTruncated() { }
 
-	public static Vector2 GetPreferredValues(TextGenerationSettings settings, TextInfo textInfo) { }
+	protected bool GetEllipsisSpecialCharacter(TextGenerationSettings generationSettings) { }
+
+	public Vector2 GetPreferredValues(TextGenerationSettings settings, TextInfo textInfo) { }
 
 	private Vector2 GetPreferredValuesInternal(TextGenerationSettings generationSettings, TextInfo textInfo) { }
 
-	protected void GetSpecialCharacters(TextGenerationSettings generationSettings) { }
+	protected bool GetSpecialCharacters(TextGenerationSettings generationSettings) { }
 
-	internal TextElement GetTextElement(TextGenerationSettings generationSettings, uint unicode, FontAsset fontAsset, FontStyles fontStyle, TextFontWeight fontWeight, out bool isUsingAlternativeTypeface) { }
+	private TextElement GetTextElement(TextGenerationSettings generationSettings, uint unicode, FontAsset fontAsset, FontStyles fontStyle, TextFontWeight fontWeight, out bool isUsingAlternativeTypeface, bool populateLigatures) { }
 
-	private static TextGenerator GetTextGenerator() { }
-
-	protected void GetUnderlineSpecialCharacter(TextGenerationSettings generationSettings) { }
+	protected bool GetUnderlineSpecialCharacter(TextGenerationSettings generationSettings) { }
 
 	private void InsertNewLine(int i, float baseScale, float currentElementScale, float currentEmScale, float boldSpacingAdjustment, float characterSpacingAdjustment, float width, float lineGap, ref bool isMaxVisibleDescenderSet, ref float maxVisibleDescender, TextGenerationSettings generationSettings, TextInfo textInfo) { }
 
-	private void PopulateTextBackingArray(string sourceText) { }
+	public void LayoutPhase(TextInfo textInfo, TextGenerationSettings generationSettings, float maxVisibleDescender) { }
 
-	private void PopulateTextBackingArray(string sourceText, int start, int length) { }
+	public void ParsingPhase(TextInfo textInfo, TextGenerationSettings generationSettings, out uint charCode, out float maxVisibleDescender) { }
+
+	private bool PopulateFontAsset(TextGenerationSettings generationSettings, TextProcessingElement[] textProcessingArray) { }
+
+	private void PopulateTextBackingArray(in RenderedText sourceText) { }
 
 	private void PopulateTextProcessingArray(TextGenerationSettings generationSettings) { }
 
-	private void Prepare(TextGenerationSettings generationSettings, TextInfo textInfo) { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal void Prepare(TextGenerationSettings generationSettings, TextInfo textInfo) { }
 
-	protected int RestoreWordWrappingState(ref WordWrapState state, TextInfo textInfo) { }
+	internal bool PrepareFontAsset(TextGenerationSettings generationSettings) { }
+
+	private int RestoreWordWrappingState(ref WordWrapState state, TextInfo textInfo) { }
 
 	private void SaveGlyphVertexInfo(float padding, float stylePadding, Color32 vertexColor, TextGenerationSettings generationSettings, TextInfo textInfo) { }
 
@@ -204,9 +275,12 @@ internal class TextGenerator
 
 	private void SaveWordWrappingState(ref WordWrapState state, int index, int count, TextInfo textInfo) { }
 
-	internal int SetArraySizes(TextProcessingElement[] textProcessingArray, TextGenerationSettings generationSettings, TextInfo textInfo) { }
+	[CompilerGenerated]
+	internal static void set_IsExecutingJob(bool value) { }
 
-	protected bool ValidateHtmlTag(TextProcessingElement[] chars, int startIndex, out int endIndex, TextGenerationSettings generationSettings, TextInfo textInfo) { }
+	private int SetArraySizes(TextProcessingElement[] textProcessingArray, TextGenerationSettings generationSettings, TextInfo textInfo) { }
+
+	private bool ValidateHtmlTag(TextProcessingElement[] chars, int startIndex, out int endIndex, TextGenerationSettings generationSettings, TextInfo textInfo, out bool isThreadSuccess) { }
 
 }
 

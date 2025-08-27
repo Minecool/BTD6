@@ -57,7 +57,7 @@ public abstract class JsonWriter : IDisposable
 
 	internal string ContainerPath
 	{
-		internal get { } //Length: 148
+		internal get { } //Length: 134
 	}
 
 	public CultureInfo Culture
@@ -101,7 +101,7 @@ public abstract class JsonWriter : IDisposable
 
 	public string Path
 	{
-		 get { } //Length: 264
+		 get { } //Length: 252
 	}
 
 	public StringEscapeHandling StringEscapeHandling
@@ -112,12 +112,12 @@ public abstract class JsonWriter : IDisposable
 
 	protected private int Top
 	{
-		private get { } //Length: 81
+		private get { } //Length: 82
 	}
 
 	public WriteState WriteState
 	{
-		 get { } //Length: 28
+		 get { } //Length: 36
 	}
 
 	private static JsonWriter() { }

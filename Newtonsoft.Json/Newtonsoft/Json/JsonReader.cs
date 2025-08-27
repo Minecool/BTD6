@@ -82,7 +82,7 @@ public abstract class JsonReader : IDisposable
 
 	public override int Depth
 	{
-		 get { } //Length: 111
+		 get { } //Length: 115
 	}
 
 	public FloatParseHandling FloatParseHandling
@@ -101,7 +101,7 @@ public abstract class JsonReader : IDisposable
 	public override string Path
 	{
 		[NullableContext(1)]
-		 get { } //Length: 264
+		 get { } //Length: 252
 	}
 
 	public bool SupportMultipleContent

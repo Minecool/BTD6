@@ -3,13 +3,13 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 public class TSMThemeBeastHandler : TSMThemeWithActionButton
 {
 	private const int minFramesSinceMove = 120; //Field offset: 0x0
-	public TSMButton moveButton; //Field offset: 0xE0
-	public TSMButton moveButtonSecond; //Field offset: 0xE8
-	public Image firstTowerMoveIcon; //Field offset: 0xF0
-	public Image secondTowerMoveIcon; //Field offset: 0xF8
-	public Image cooldownFade; //Field offset: 0x100
-	public Image cooldownFadeSecond; //Field offset: 0x108
-	public GameObject targetPriorityObject; //Field offset: 0x110
+	public TSMButton moveButton; //Field offset: 0xF8
+	public TSMButton moveButtonSecond; //Field offset: 0x100
+	public Image firstTowerMoveIcon; //Field offset: 0x108
+	public Image secondTowerMoveIcon; //Field offset: 0x110
+	public Image cooldownFade; //Field offset: 0x118
+	public Image cooldownFadeSecond; //Field offset: 0x120
+	public GameObject targetPriorityObject; //Field offset: 0x128
 
 	public TSMThemeBeastHandler() { }
 

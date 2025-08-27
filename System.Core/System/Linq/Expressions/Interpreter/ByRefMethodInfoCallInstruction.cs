@@ -6,7 +6,7 @@ internal class ByRefMethodInfoCallInstruction : MethodInfoCallInstruction
 
 	public virtual int ProducedStack
 	{
-		 get { } //Length: 162
+		 get { } //Length: 127
 	}
 
 	internal ByRefMethodInfoCallInstruction(MethodInfo target, int argumentCount, ByRefUpdater[] byrefArgs) { }

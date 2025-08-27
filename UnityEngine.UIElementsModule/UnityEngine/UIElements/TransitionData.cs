@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal struct TransitionData : IStyleDataGroup<TransitionData>, IEquatable<TransitionData>
 {
 	public List<TimeValue> transitionDelay; //Field offset: 0x0

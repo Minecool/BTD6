@@ -23,6 +23,7 @@ public class Hash128Field : TextInputBaseField<Hash128>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<Hash128Field, UxmlTraits>
 	{
 
@@ -30,6 +31,7 @@ public class Hash128Field : TextInputBaseField<Hash128>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : TextValueFieldTraits<Hash128, UxmlHash128AttributeDescription>
 	{
 
@@ -40,7 +42,6 @@ public class Hash128Field : TextInputBaseField<Hash128>
 	public static readonly string ussClassName; //Field offset: 0x0
 	public static readonly string labelUssClassName; //Field offset: 0x8
 	public static readonly string inputUssClassName; //Field offset: 0x10
-	internal bool m_UpdateTextFromValue; //Field offset: 0x460
 
 	public virtual Hash128 value
 	{
@@ -54,10 +55,10 @@ public class Hash128Field : TextInputBaseField<Hash128>
 
 	public Hash128Field(string label, int maxLength = -1) { }
 
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(BlurEvent)}])]
-	protected virtual void ExecuteDefaultAction(EventBase evt) { }
-
 	public virtual Hash128 get_value() { }
+
+	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(FocusOutEvent)}])]
+	protected virtual void HandleEventBubbleUp(EventBase evt) { }
 
 	public virtual void set_value(Hash128 value) { }
 

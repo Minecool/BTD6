@@ -19,7 +19,7 @@ public sealed class UnaryExpression : Expression
 
 	public bool IsLifted
 	{
-		 get { } //Length: 618
+		 get { } //Length: 621
 	}
 
 	public bool IsLiftedToNull

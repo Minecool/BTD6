@@ -9,7 +9,7 @@ public class DarkDungeonsFireTriggerAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 318
+		 get { } //Length: 314
 	}
 
 	public DarkDungeonsFireTriggerAction() { }

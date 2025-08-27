@@ -40,7 +40,7 @@ public class SetScoreResponse : EndpointResponseBase, IEndpointResponse
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	[JsonIgnore]

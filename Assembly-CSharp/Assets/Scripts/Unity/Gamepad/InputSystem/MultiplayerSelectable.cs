@@ -63,9 +63,9 @@ public abstract class MultiplayerSelectable : MonoBehaviour, IMoveHandler, IEven
 	public event Action<MultiplayerSelectable> OnSubmitEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public bool enableNavMove

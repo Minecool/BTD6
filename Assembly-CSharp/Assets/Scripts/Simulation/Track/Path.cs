@@ -65,7 +65,7 @@ public class Path : IPath
 
 	public float MaxDistUntilLeak
 	{
-		 get { } //Length: 125
+		 get { } //Length: 109
 	}
 
 	public float MaxDistUntilSpawn
@@ -75,7 +75,7 @@ public class Path : IPath
 
 	public float MaxDistUntilSpawnFromPathEnd
 	{
-		 get { } //Length: 129
+		 get { } //Length: 116
 	}
 
 	private static Path() { }

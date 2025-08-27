@@ -53,12 +53,12 @@ public sealed class DataColumnCollection : InternalDataCollectionBase
 
 	public DataColumn Item
 	{
-		 get { } //Length: 216
+		 get { } //Length: 212
 	}
 
 	public DataColumn Item
 	{
-		 get { } //Length: 381
+		 get { } //Length: 391
 	}
 
 	internal DataColumn Item

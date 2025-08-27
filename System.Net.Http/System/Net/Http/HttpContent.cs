@@ -68,12 +68,12 @@ public abstract class HttpContent : IDisposable
 
 	public HttpContentHeaders Headers
 	{
-		 get { } //Length: 153
+		 get { } //Length: 152
 	}
 
 	internal Nullable<Int64> LoadedBufferLength
 	{
-		internal get { } //Length: 154
+		internal get { } //Length: 142
 	}
 
 	protected HttpContent() { }

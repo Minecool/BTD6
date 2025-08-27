@@ -45,7 +45,7 @@ public sealed class HttpListenerRequest
 
 	public Stream InputStream
 	{
-		 get { } //Length: 170
+		 get { } //Length: 165
 	}
 
 	public bool IsSecureConnection
@@ -55,12 +55,12 @@ public sealed class HttpListenerRequest
 
 	public bool KeepAlive
 	{
-		 get { } //Length: 380
+		 get { } //Length: 376
 	}
 
 	public IPEndPoint LocalEndPoint
 	{
-		 get { } //Length: 252
+		 get { } //Length: 232
 	}
 
 	public Version ProtocolVersion

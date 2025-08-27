@@ -11,7 +11,7 @@ public struct SignatureInfo
 	{
 		[CompilerGenerated]
 		[IsReadOnly]
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public string Signature

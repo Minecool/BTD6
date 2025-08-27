@@ -49,7 +49,7 @@ public class Product
 
 	public bool hasReceipt
 	{
-		 get { } //Length: 22
+		 get { } //Length: 25
 	}
 
 	public internal ProductMetadata metadata

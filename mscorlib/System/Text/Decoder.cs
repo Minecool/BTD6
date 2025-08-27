@@ -12,7 +12,7 @@ public abstract class Decoder
 
 	public DecoderFallbackBuffer FallbackBuffer
 	{
-		 get { } //Length: 115
+		 get { } //Length: 106
 	}
 
 	internal bool InternalHasFallbackBuffer

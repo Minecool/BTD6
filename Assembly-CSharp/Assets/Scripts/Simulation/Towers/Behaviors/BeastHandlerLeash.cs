@@ -122,12 +122,12 @@ public class BeastHandlerLeash : TowerBehavior
 
 	public Tower LeashedTower
 	{
-		 get { } //Length: 34
+		 get { } //Length: 21
 	}
 
 	public Tower LeashedTowerSecond
 	{
-		 get { } //Length: 34
+		 get { } //Length: 21
 	}
 
 	public BeastHandlerLeash() { }

@@ -4,13 +4,13 @@ namespace UnityEngine.UIElements;
 public abstract class BaseCompositeField : BaseField<TValueType>
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass24_0
+	private sealed class <>c__DisplayClass18_0
 	{
 		public FieldDescription<TValueType, TField, TFieldValue> desc; //Field offset: 0x0
 		public TField field; //Field offset: 0x0
 		public BaseCompositeField<TValueType, TField, TFieldValue> <>4__this; //Field offset: 0x0
 
-		public <>c__DisplayClass24_0() { }
+		public <>c__DisplayClass18_0() { }
 
 		internal TFieldValue <.ctor>b__0(TFieldValue newValue) { }
 
@@ -50,7 +50,6 @@ public abstract class BaseCompositeField : BaseField<TValueType>
 	private List<TField> m_Fields; //Field offset: 0x0
 	private bool m_ShouldUpdateDisplay; //Field offset: 0x0
 	private bool m_ForceUpdateDisplay; //Field offset: 0x0
-	private int m_PropertyIndex; //Field offset: 0x0
 
 	private static BaseCompositeField`3() { }
 

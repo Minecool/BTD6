@@ -2,9 +2,9 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeEnergisingTotem : TSMThemeDefault
 {
-	public TSMButton rechargeButton; //Field offset: 0xC0
-	public NK_TextMeshProUGUI rechargeCostText; //Field offset: 0xC8
-	private readonly TSMInfoModel info; //Field offset: 0xD0
+	public TSMButton rechargeButton; //Field offset: 0xD8
+	public NK_TextMeshProUGUI rechargeCostText; //Field offset: 0xE0
+	private readonly TSMInfoModel info; //Field offset: 0xE8
 
 	public TSMThemeEnergisingTotem() { }
 

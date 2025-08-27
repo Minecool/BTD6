@@ -10,8 +10,8 @@ public struct Quaternion
 
 	public Vector3 EulerAngles
 	{
-		 get { } //Length: 292
-		 set { } //Length: 355
+		 get { } //Length: 289
+		 set { } //Length: 325
 	}
 
 	public float Length

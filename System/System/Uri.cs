@@ -155,32 +155,32 @@ public class Uri : ISerializable
 
 	public string AbsolutePath
 	{
-		 get { } //Length: 194
+		 get { } //Length: 193
 	}
 
 	public string AbsoluteUri
 	{
-		 get { } //Length: 296
+		 get { } //Length: 289
 	}
 
 	private bool AllowIdn
 	{
-		private get { } //Length: 229
+		private get { } //Length: 227
 	}
 
 	public string Authority
 	{
-		 get { } //Length: 139
+		 get { } //Length: 136
 	}
 
 	public string DnsSafeHost
 	{
-		 get { } //Length: 783
+		 get { } //Length: 757
 	}
 
 	public string Fragment
 	{
-		 get { } //Length: 296
+		 get { } //Length: 291
 	}
 
 	internal bool HasAuthority
@@ -190,12 +190,12 @@ public class Uri : ISerializable
 
 	public string Host
 	{
-		 get { } //Length: 139
+		 get { } //Length: 136
 	}
 
 	public UriHostNameType HostNameType
 	{
-		 get { } //Length: 335
+		 get { } //Length: 314
 	}
 
 	private Flags HostType
@@ -215,7 +215,7 @@ public class Uri : ISerializable
 
 	public bool IsDefaultPort
 	{
-		 get { } //Length: 248
+		 get { } //Length: 233
 	}
 
 	private bool IsDosPath
@@ -225,7 +225,7 @@ public class Uri : ISerializable
 
 	public bool IsFile
 	{
-		 get { } //Length: 197
+		 get { } //Length: 195
 	}
 
 	private bool IsImplicitFile
@@ -235,7 +235,7 @@ public class Uri : ISerializable
 
 	public bool IsLoopback
 	{
-		 get { } //Length: 186
+		 get { } //Length: 183
 	}
 
 	private bool IsNotAbsoluteUri
@@ -265,37 +265,37 @@ public class Uri : ISerializable
 
 	public string OriginalString
 	{
-		 get { } //Length: 94
+		 get { } //Length: 96
 	}
 
 	private bool OriginalStringSwitched
 	{
-		private get { } //Length: 95
+		private get { } //Length: 97
 	}
 
 	public string PathAndQuery
 	{
-		 get { } //Length: 206
+		 get { } //Length: 202
 	}
 
 	public int Port
 	{
-		 get { } //Length: 264
+		 get { } //Length: 253
 	}
 
 	private string PrivateAbsolutePath
 	{
-		private get { } //Length: 190
+		private get { } //Length: 185
 	}
 
 	public string Query
 	{
-		 get { } //Length: 296
+		 get { } //Length: 291
 	}
 
 	public string Scheme
 	{
-		 get { } //Length: 129
+		 get { } //Length: 127
 	}
 
 	private ushort SecuredPathIndex
@@ -305,7 +305,7 @@ public class Uri : ISerializable
 
 	public String[] Segments
 	{
-		 get { } //Length: 525
+		 get { } //Length: 503
 	}
 
 	private UriParser Syntax
@@ -325,7 +325,7 @@ public class Uri : ISerializable
 
 	public string UserInfo
 	{
-		 get { } //Length: 139
+		 get { } //Length: 136
 	}
 
 	private static Uri() { }

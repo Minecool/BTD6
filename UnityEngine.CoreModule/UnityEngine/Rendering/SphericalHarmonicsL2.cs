@@ -49,6 +49,8 @@ public struct SphericalHarmonicsL2 : IEquatable<SphericalHarmonicsL2>
 
 	public static bool op_Equality(SphericalHarmonicsL2 lhs, SphericalHarmonicsL2 rhs) { }
 
+	public static bool op_Inequality(SphericalHarmonicsL2 lhs, SphericalHarmonicsL2 rhs) { }
+
 	public void set_Item(int rgb, int coefficient, float value) { }
 
 }

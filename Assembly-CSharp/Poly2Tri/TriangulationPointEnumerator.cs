@@ -7,12 +7,12 @@ public class TriangulationPointEnumerator : IEnumerator<TriangulationPoint>, IEn
 
 	public override TriangulationPoint Current
 	{
-		 get { } //Length: 248
+		 get { } //Length: 241
 	}
 
 	private override object System.Collections.IEnumerator.Current
 	{
-		private get { } //Length: 248
+		private get { } //Length: 241
 	}
 
 	public TriangulationPointEnumerator(IList<Point2D> points) { }

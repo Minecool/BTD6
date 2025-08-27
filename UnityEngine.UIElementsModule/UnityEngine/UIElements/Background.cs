@@ -2,6 +2,153 @@ namespace UnityEngine.UIElements;
 
 public struct Background : IEquatable<Background>
 {
+	public class PropertyBag : ContainerPropertyBag<Background>
+	{
+		private class RenderTextureProperty : Property<Background, RenderTexture>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public RenderTextureProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual RenderTexture GetValue(ref Background container) { }
+
+			public virtual void SetValue(ref Background container, RenderTexture value) { }
+
+		}
+
+		private class SpriteProperty : Property<Background, Sprite>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public SpriteProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual Sprite GetValue(ref Background container) { }
+
+			public virtual void SetValue(ref Background container, Sprite value) { }
+
+		}
+
+		private class TextureProperty : Property<Background, Texture2D>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public TextureProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual Texture2D GetValue(ref Background container) { }
+
+			public virtual void SetValue(ref Background container, Texture2D value) { }
+
+		}
+
+		private class VectorImageProperty : Property<Background, VectorImage>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public VectorImageProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual VectorImage GetValue(ref Background container) { }
+
+			public virtual void SetValue(ref Background container, VectorImage value) { }
+
+		}
+
+
+		public PropertyBag() { }
+
+	}
+
 	private Texture2D m_Texture; //Field offset: 0x0
 	private Sprite m_Sprite; //Field offset: 0x8
 	private RenderTexture m_RenderTexture; //Field offset: 0x10
@@ -55,7 +202,11 @@ public struct Background : IEquatable<Background>
 
 	public virtual int GetHashCode() { }
 
+	public bool IsEmpty() { }
+
 	public static bool op_Equality(Background lhs, Background rhs) { }
+
+	public static Background op_Implicit(Texture2D v) { }
 
 	public static bool op_Inequality(Background lhs, Background rhs) { }
 

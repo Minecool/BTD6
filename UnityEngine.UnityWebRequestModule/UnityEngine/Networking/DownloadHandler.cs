@@ -3,6 +3,13 @@ namespace UnityEngine.Networking;
 [NativeHeader("Modules/UnityWebRequest/Public/DownloadHandler/DownloadHandler.h")]
 public class DownloadHandler : IDisposable
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(DownloadHandler handler) { }
+
+	}
+
 	[VisibleToOtherModules]
 	internal IntPtr m_Ptr; //Field offset: 0x10
 
@@ -13,7 +20,7 @@ public class DownloadHandler : IDisposable
 
 	public string error
 	{
-		 get { } //Length: 51
+		 get { } //Length: 9
 	}
 
 	public string text
@@ -31,6 +38,7 @@ public class DownloadHandler : IDisposable
 
 	public override void Dispose() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UnityWebRequestAudioModule", "UnityEngine.UnityWebRequestTextureModule"}])]
 	internal static void DisposeNativeArray(ref NativeArray<Byte>& data) { }
 
 	protected virtual void Finalize() { }
@@ -43,9 +51,13 @@ public class DownloadHandler : IDisposable
 
 	private string GetContentType() { }
 
+	private static void GetContentType_Injected(IntPtr _unity_self, out ManagedSpanWrapper ret) { }
+
 	protected override Byte[] GetData() { }
 
 	private string GetErrorMsg() { }
+
+	private static void GetErrorMsg_Injected(IntPtr _unity_self, out ManagedSpanWrapper ret) { }
 
 	protected override NativeArray<Byte> GetNativeData() { }
 
@@ -62,6 +74,9 @@ public class DownloadHandler : IDisposable
 
 	internal static Byte[] InternalGetByteArray(DownloadHandler dh) { }
 
+	private static Byte* InternalGetByteArray_Injected(IntPtr dh, out int length) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UnityWebRequestAudioModule", "UnityEngine.UnityWebRequestTextureModule"}])]
 	internal static NativeArray<Byte> InternalGetNativeArray(DownloadHandler dh, ref NativeArray<Byte>& nativeArray) { }
 
 	[Obsolete("Use ReceiveContentLengthHeader")]
@@ -74,7 +89,9 @@ public class DownloadHandler : IDisposable
 	protected override bool ReceiveData(Byte[] data, int dataLength) { }
 
 	[NativeMethod(IsThreadSafe = True)]
-	private void Release() { }
+	private void ReleaseFromScripting() { }
+
+	private static void ReleaseFromScripting_Injected(IntPtr _unity_self) { }
 
 }
 

@@ -2,38 +2,42 @@ namespace UnityEngine.UIElements;
 
 public abstract class Focusable : CallbackEventHandler
 {
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <focusable>k__BackingField; //Field offset: 0x20
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private int <tabIndex>k__BackingField; //Field offset: 0x24
+	internal static readonly BindingId focusableProperty; //Field offset: 0x0
+	internal static readonly BindingId tabIndexProperty; //Field offset: 0x98
+	internal static readonly BindingId delegatesFocusProperty; //Field offset: 0x130
+	internal static readonly BindingId canGrabFocusProperty; //Field offset: 0x1C8
+	private bool m_Focusable; //Field offset: 0x20
+	private int m_TabIndex; //Field offset: 0x24
 	private bool m_DelegatesFocus; //Field offset: 0x28
 	private bool m_ExcludeFromFocusRing; //Field offset: 0x29
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private bool <isEligibleToReceiveFocusFromDisabledChild>k__BackingField; //Field offset: 0x2A
 
+	[CreateProperty(ReadOnly = True)]
 	public override bool canGrabFocus
 	{
-		 get { } //Length: 5
+		 get { } //Length: 20
 	}
 
+	[CreateProperty]
 	public bool delegatesFocus
 	{
 		 get { } //Length: 7
-		 set { } //Length: 4
+		 set { } //Length: 121
 	}
 
 	internal bool excludeFromFocusRing
 	{
 		internal get { } //Length: 7
-		internal set { } //Length: 208
+		internal set { } //Length: 204
 	}
 
-	public bool focusable
+	[CreateProperty]
+	public override bool focusable
 	{
-		[CompilerGenerated]
 		 get { } //Length: 5
-		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 114
 	}
 
 	public abstract FocusController focusController
@@ -41,25 +45,29 @@ public abstract class Focusable : CallbackEventHandler
 		 get { } //Length: 0
 	}
 
-	public int tabIndex
+	internal bool isEligibleToReceiveFocusFromDisabledChild
 	{
 		[CompilerGenerated]
-		 get { } //Length: 4
+		internal get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		internal set { } //Length: 4
 	}
+
+	[CreateProperty]
+	public int tabIndex
+	{
+		 get { } //Length: 4
+		 set { } //Length: 118
+	}
+
+	private static Focusable() { }
 
 	protected Focusable() { }
 
 	public override void Blur() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void BlurImmediately() { }
-
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(PointerDownEvent), typeof(NavigationMoveEvent)}])]
-	protected virtual void ExecuteDefaultAction(EventBase evt) { }
-
-	[EventInterest(new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(PointerDownEvent), typeof(NavigationMoveEvent)}])]
-	internal virtual void ExecuteDefaultActionDisabled(EventBase evt) { }
 
 	public override void Focus() { }
 
@@ -69,28 +77,28 @@ public abstract class Focusable : CallbackEventHandler
 
 	internal bool get_excludeFromFocusRing() { }
 
-	[CompilerGenerated]
-	public bool get_focusable() { }
+	public override bool get_focusable() { }
 
 	public abstract FocusController get_focusController() { }
 
 	[CompilerGenerated]
+	internal bool get_isEligibleToReceiveFocusFromDisabledChild() { }
+
 	public int get_tabIndex() { }
 
 	private static Focusable GetFirstFocusableChild(VisualElement ve) { }
 
-	private Focusable GetFocusDelegate() { }
-
-	private void ProcessEvent(EventBase evt) { }
+	internal Focusable GetFocusDelegate() { }
 
 	public void set_delegatesFocus(bool value) { }
 
 	internal void set_excludeFromFocusRing(bool value) { }
 
-	[CompilerGenerated]
-	public void set_focusable(bool value) { }
+	public override void set_focusable(bool value) { }
 
 	[CompilerGenerated]
+	internal void set_isEligibleToReceiveFocusFromDisabledChild(bool value) { }
+
 	public void set_tabIndex(int value) { }
 
 }

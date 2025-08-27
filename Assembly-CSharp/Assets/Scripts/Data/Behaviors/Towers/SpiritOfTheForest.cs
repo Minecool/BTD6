@@ -37,7 +37,7 @@ public class SpiritOfTheForest : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1312
+		 get { } //Length: 1298
 	}
 
 	public SpiritOfTheForest() { }

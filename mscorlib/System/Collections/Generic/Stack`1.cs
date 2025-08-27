@@ -14,12 +14,12 @@ public class Stack : IEnumerable<T>, IEnumerable, ICollection, IReadOnlyCollecti
 
 		public override T Current
 		{
-			 get { } //Length: 61
+			 get { } //Length: 68
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 151
+			private get { } //Length: 153
 		}
 
 		internal Enumerator(Stack<T> stack) { }
@@ -38,7 +38,6 @@ public class Stack : IEnumerable<T>, IEnumerable, ICollection, IReadOnlyCollecti
 
 	}
 
-	private const int DefaultCapacity = 4; //Field offset: 0x0
 	private T[] _array; //Field offset: 0x0
 	private int _size; //Field offset: 0x0
 	private int _version; //Field offset: 0x0
@@ -69,6 +68,8 @@ public class Stack : IEnumerable<T>, IEnumerable, ICollection, IReadOnlyCollecti
 
 	public override int get_Count() { }
 
+	public Enumerator<T> GetEnumerator() { }
+
 	public T Peek() { }
 
 	public T Pop() { }
@@ -90,6 +91,8 @@ public class Stack : IEnumerable<T>, IEnumerable, ICollection, IReadOnlyCollecti
 	private void ThrowForEmptyStack() { }
 
 	public T[] ToArray() { }
+
+	public bool TryPop(out T result) { }
 
 }
 

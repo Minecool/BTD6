@@ -404,7 +404,7 @@ public class TMP_FontAsset : TMP_Asset
 
 	internal void InitializeMarkToMarkAdjustmentRecordsLookupDictionary() { }
 
-	private FontEngineError LoadFontFace() { }
+	internal FontEngineError LoadFontFace() { }
 
 	private void OnDestroy() { }
 

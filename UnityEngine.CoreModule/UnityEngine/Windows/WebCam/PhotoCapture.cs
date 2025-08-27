@@ -5,6 +5,13 @@ namespace UnityEngine.Windows.WebCam;
 [StaticAccessor("PhotoCapture", StaticAccessorType::DoubleColon (2))]
 public class PhotoCapture : IDisposable
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(PhotoCapture photoCapture) { }
+
+	}
+
 	internal enum CaptureResultType
 	{
 		Success = 0,
@@ -74,10 +81,14 @@ public class PhotoCapture : IDisposable
 	[NativeName("Dispose")]
 	private void Dispose_Internal() { }
 
+	private static void Dispose_Internal_Injected(IntPtr _unity_self) { }
+
 	[NativeConditional("(PLATFORM_WIN || PLATFORM_WINRT) && !PLATFORM_XBOXONE")]
 	[NativeName("DisposeThreaded")]
 	[ThreadAndSerializationSafe]
 	private void DisposeThreaded_Internal() { }
+
+	private static void DisposeThreaded_Internal_Injected(IntPtr _unity_self) { }
 
 	protected virtual void Finalize() { }
 

@@ -33,7 +33,7 @@ internal struct ModuleHandle
 
 	internal static double OrientFastDouble(double2 a, double2 b, double2 c) { }
 
-	public static float4 Tessellate(Allocator allocator, in NativeArray<float2>& points, in NativeArray<int2>& edges, ref NativeArray<float2>& outVertices, out int outVertexCount, ref NativeArray<Int32>& outIndices, out int outIndexCount, ref NativeArray<int2>& outEdges, out int outEdgeCount) { }
+	public static float4 Tessellate(Allocator allocator, in NativeArray<float2>& points, in NativeArray<int2>& edges, ref NativeArray<float2>& outVertices, out int outVertexCount, ref NativeArray<Int32>& outIndices, out int outIndexCount, ref NativeArray<int2>& outEdges, out int outEdgeCount, bool runPlanarGraph) { }
 
 	private static void TransferOutput(NativeArray<int2> srcEdges, int srcEdgeCount, ref NativeArray<int2>& dstEdges, ref int dstEdgeCount, NativeArray<Int32> srcIndices, int srcIndexCount, ref NativeArray<Int32>& dstIndices, ref int dstIndexCount, NativeArray<float2> srcVertices, int srcVertexCount, ref NativeArray<float2>& dstVertices, ref int dstVertexCount) { }
 

@@ -17,22 +17,22 @@ internal class ListenerAsyncResult : IAsyncResult
 
 	public override object AsyncState
 	{
-		 get { } //Length: 23
+		 get { } //Length: 24
 	}
 
 	public override WaitHandle AsyncWaitHandle
 	{
-		 get { } //Length: 302
+		 get { } //Length: 244
 	}
 
 	public override bool CompletedSynchronously
 	{
-		 get { } //Length: 23
+		 get { } //Length: 24
 	}
 
 	public override bool IsCompleted
 	{
-		 get { } //Length: 195
+		 get { } //Length: 163
 	}
 
 	private static ListenerAsyncResult() { }

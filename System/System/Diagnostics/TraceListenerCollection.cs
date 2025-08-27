@@ -33,7 +33,7 @@ public class TraceListenerCollection : IList, ICollection, IEnumerable
 	private override object System.Collections.IList.Item
 	{
 		private get { } //Length: 42
-		private set { } //Length: 302
+		private set { } //Length: 479
 	}
 
 	internal TraceListenerCollection() { }

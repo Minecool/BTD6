@@ -7,19 +7,19 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
 		public static Func<ResourceLocatorInfo, IResourceLocator> <>9__59_0; //Field offset: 0x8
-		public static Func<ResourceLocatorInfo, Boolean> <>9__146_0; //Field offset: 0x10
-		public static Func<ResourceLocatorInfo, String> <>9__146_1; //Field offset: 0x18
-		public static Func<ResourceLocatorInfo, String> <>9__150_0; //Field offset: 0x20
+		public static Func<ResourceLocatorInfo, Boolean> <>9__143_0; //Field offset: 0x10
+		public static Func<ResourceLocatorInfo, String> <>9__143_1; //Field offset: 0x18
+		public static Func<ResourceLocatorInfo, String> <>9__147_0; //Field offset: 0x20
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal string <CleanBundleCache>b__150_0(ResourceLocatorInfo s) { }
+		internal string <CleanBundleCache>b__147_0(ResourceLocatorInfo s) { }
 
-		internal bool <get_CatalogsWithAvailableUpdates>b__146_0(ResourceLocatorInfo s) { }
+		internal bool <get_CatalogsWithAvailableUpdates>b__143_0(ResourceLocatorInfo s) { }
 
-		internal string <get_CatalogsWithAvailableUpdates>b__146_1(ResourceLocatorInfo s) { }
+		internal string <get_CatalogsWithAvailableUpdates>b__143_1(ResourceLocatorInfo s) { }
 
 		internal IResourceLocator <get_ResourceLocators>b__59_0(ResourceLocatorInfo l) { }
 
@@ -171,8 +171,9 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public object key; //Field offset: 0x18
 		public LoadSceneParameters loadSceneParameters; //Field offset: 0x20
-		public bool activateOnLoad; //Field offset: 0x28
-		public int priority; //Field offset: 0x2C
+		public SceneReleaseMode releaseMode; //Field offset: 0x28
+		public bool activateOnLoad; //Field offset: 0x2C
+		public int priority; //Field offset: 0x30
 
 		public <>c__DisplayClass128_0() { }
 
@@ -185,9 +186,10 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 	{
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public IResourceLocation key; //Field offset: 0x18
-		public LoadSceneMode loadMode; //Field offset: 0x20
-		public bool activateOnLoad; //Field offset: 0x24
-		public int priority; //Field offset: 0x28
+		public LoadSceneParameters loadSceneParameters; //Field offset: 0x20
+		public SceneReleaseMode releaseMode; //Field offset: 0x28
+		public bool activateOnLoad; //Field offset: 0x2C
+		public int priority; //Field offset: 0x30
 
 		public <>c__DisplayClass129_0() { }
 
@@ -196,77 +198,77 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass138_0
+	private sealed class <>c__DisplayClass135_0
 	{
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public UnloadSceneOptions unloadOptions; //Field offset: 0x18
 		public bool autoReleaseHandle; //Field offset: 0x1C
 
-		public <>c__DisplayClass138_0() { }
+		public <>c__DisplayClass135_0() { }
 
 		internal AsyncOperationHandle<SceneInstance> <CreateUnloadSceneWithChain>b__0(AsyncOperationHandle completedHandle) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass139_0
+	private sealed class <>c__DisplayClass136_0
 	{
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public UnloadSceneOptions unloadOptions; //Field offset: 0x18
 		public bool autoReleaseHandle; //Field offset: 0x1C
 
-		public <>c__DisplayClass139_0() { }
+		public <>c__DisplayClass136_0() { }
 
 		internal AsyncOperationHandle<SceneInstance> <CreateUnloadSceneWithChain>b__0(AsyncOperationHandle<SceneInstance> completedHandle) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass143_0
+	private sealed class <>c__DisplayClass140_0
 	{
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public bool autoReleaseHandle; //Field offset: 0x18
 
-		public <>c__DisplayClass143_0() { }
+		public <>c__DisplayClass140_0() { }
 
 		internal AsyncOperationHandle<List`1<String>> <CheckForCatalogUpdatesWithChain>b__0(AsyncOperationHandle op) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass147_0
+	private sealed class <>c__DisplayClass144_0
 	{
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public bool autoReleaseHandle; //Field offset: 0x18
 		public bool autoCleanBundleCache; //Field offset: 0x19
 
-		public <>c__DisplayClass147_0() { }
+		public <>c__DisplayClass144_0() { }
 
 		internal AsyncOperationHandle<List`1<IResourceLocator>> <UpdateCatalogs>b__0(AsyncOperationHandle<List`1<String>> depOp) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass152_0
+	private sealed class <>c__DisplayClass149_0
 	{
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public AsyncOperationHandle<IList`1<AsyncOperationHandle>> depOp; //Field offset: 0x18
 		public bool forceSingleThreading; //Field offset: 0x30
 
-		public <>c__DisplayClass152_0() { }
+		public <>c__DisplayClass149_0() { }
 
 		internal AsyncOperationHandle<Boolean> <CleanBundleCacheWithChain>b__0(AsyncOperationHandle op) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass153_0
+	private sealed class <>c__DisplayClass150_0
 	{
 		public AddressablesImpl <>4__this; //Field offset: 0x10
 		public IEnumerable<String> catalogIds; //Field offset: 0x18
 		public bool forceSingleThreading; //Field offset: 0x20
 
-		public <>c__DisplayClass153_0() { }
+		public <>c__DisplayClass150_0() { }
 
 		internal AsyncOperationHandle<Boolean> <CleanBundleCacheWithChain>b__0(AsyncOperationHandle op) { }
 
@@ -469,6 +471,11 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 	private AsyncOperationHandle<Boolean> m_ActiveCleanBundleCacheOperation; //Field offset: 0xA8
 	internal bool hasStartedInitialization; //Field offset: 0xC0
 
+	internal int ActiveSceneInstances
+	{
+		internal get { } //Length: 63
+	}
+
 	public string BuildPath
 	{
 		 get { } //Length: 583
@@ -487,7 +494,7 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	public AsyncOperationHandle ChainOperation
 	{
-		 get { } //Length: 556
+		 get { } //Length: 617
 	}
 
 	public IInstanceProvider InstanceProvider
@@ -522,14 +529,9 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 		 get { } //Length: 7
 	}
 
-	internal int SceneOperationCount
-	{
-		internal get { } //Length: 63
-	}
-
 	internal bool ShouldChainRequest
 	{
-		internal get { } //Length: 180
+		internal get { } //Length: 203
 	}
 
 	public string StreamingAssetsSubFolder
@@ -564,19 +566,19 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	internal AsyncOperationHandle<List`1<String>> CheckForCatalogUpdatesWithChain(bool autoReleaseHandle) { }
 
+	internal AsyncOperationHandle<Boolean> CleanBundleCache(AsyncOperationHandle<IList`1<AsyncOperationHandle>> depOp, bool forceSingleThreading) { }
+
 	internal AsyncOperationHandle<Boolean> CleanBundleCache(IEnumerable<String> catalogIds, bool forceSingleThreading) { }
 
-	internal AsyncOperationHandle<Boolean> CleanBundleCache(AsyncOperationHandle<IList`1<AsyncOperationHandle>> depOp, bool forceSingleThreading) { }
+	internal AsyncOperationHandle<Boolean> CleanBundleCacheWithChain(IEnumerable<String> catalogIds, bool forceSingleThreading) { }
 
 	internal AsyncOperationHandle<Boolean> CleanBundleCacheWithChain(AsyncOperationHandle<IList`1<AsyncOperationHandle>> depOp, bool forceSingleThreading) { }
 
-	internal AsyncOperationHandle<Boolean> CleanBundleCacheWithChain(IEnumerable<String> catalogIds, bool forceSingleThreading) { }
+	public AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(object key, bool autoReleaseHandle) { }
 
 	public AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(IEnumerable keys, bool autoReleaseHandle) { }
 
 	public AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(IList<IResourceLocation> locations, bool autoReleaseHandle) { }
-
-	public AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(object key, bool autoReleaseHandle) { }
 
 	internal bool ClearDependencyCacheForKey(object key) { }
 
@@ -586,15 +588,15 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	private AsyncOperationHandle<Int64> ComputeCatalogSizeWithChain(IResourceLocation catalogLoc) { }
 
-	public ResourceLocationBase CreateCatalogLocationWithHashDependencies(string catalogPath, string hashFilePath) { }
-
 	public ResourceLocationBase CreateCatalogLocationWithHashDependencies(IResourceLocation catalogLocation) { }
+
+	public ResourceLocationBase CreateCatalogLocationWithHashDependencies(string catalogPath, string hashFilePath) { }
 
 	public ResourceLocationBase CreateCatalogLocationWithHashDependencies(string catalogLocation) { }
 
-	internal AsyncOperationHandle<SceneInstance> CreateUnloadSceneWithChain(AsyncOperationHandle handle, UnloadSceneOptions unloadOptions, bool autoReleaseHandle) { }
-
 	internal AsyncOperationHandle<SceneInstance> CreateUnloadSceneWithChain(AsyncOperationHandle<SceneInstance> handle, UnloadSceneOptions unloadOptions, bool autoReleaseHandle) { }
+
+	internal AsyncOperationHandle<SceneInstance> CreateUnloadSceneWithChain(AsyncOperationHandle handle, UnloadSceneOptions unloadOptions, bool autoReleaseHandle) { }
 
 	public AsyncOperationHandle DownloadDependenciesAsync(IEnumerable keys, MergeMode mode, bool autoReleaseHandle = false) { }
 
@@ -604,15 +606,17 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	private AsyncOperationHandle DownloadDependenciesAsyncWithChain(AsyncOperationHandle dep, IEnumerable keys, MergeMode mode, bool autoReleaseHandle) { }
 
-	private AsyncOperationHandle DownloadDependenciesAsyncWithChain(AsyncOperationHandle dep, IList<IResourceLocation> locations, bool autoReleaseHandle) { }
-
 	private AsyncOperationHandle DownloadDependenciesAsyncWithChain(AsyncOperationHandle dep, object key, bool autoReleaseHandle) { }
+
+	private AsyncOperationHandle DownloadDependenciesAsyncWithChain(AsyncOperationHandle dep, IList<IResourceLocation> locations, bool autoReleaseHandle) { }
 
 	public override bool Equals(IResourceLocation x, IResourceLocation y) { }
 
 	private object EvaluateKey(object obj) { }
 
 	private static List<IResourceLocation> GatherDependenciesFromLocations(IList<IResourceLocation> locations) { }
+
+	internal int get_ActiveSceneInstances() { }
 
 	public string get_BuildPath() { }
 
@@ -634,8 +638,6 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	public string get_RuntimePath() { }
 
-	internal int get_SceneOperationCount() { }
-
 	internal bool get_ShouldChainRequest() { }
 
 	public string get_StreamingAssetsSubFolder() { }
@@ -644,13 +646,13 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	public Action<UnityWebRequest> get_WebRequestOverride() { }
 
-	public AsyncOperationHandle<Int64> GetDownloadSizeAsync(object key) { }
-
 	public AsyncOperationHandle<Int64> GetDownloadSizeAsync(IEnumerable keys) { }
 
-	private AsyncOperationHandle<Int64> GetDownloadSizeWithChain(AsyncOperationHandle dep, IEnumerable keys) { }
+	public AsyncOperationHandle<Int64> GetDownloadSizeAsync(object key) { }
 
 	private AsyncOperationHandle<Int64> GetDownloadSizeWithChain(AsyncOperationHandle dep, object key) { }
+
+	private AsyncOperationHandle<Int64> GetDownloadSizeWithChain(AsyncOperationHandle dep, IEnumerable keys) { }
 
 	public override int GetHashCode(IResourceLocation loc) { }
 
@@ -662,23 +664,23 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	internal bool GetResourceLocations(IEnumerable keys, Type type, MergeMode merge, out IList<IResourceLocation>& locations) { }
 
-	public AsyncOperationHandle<IResourceLocator> InitializeAsync() { }
-
 	public AsyncOperationHandle<IResourceLocator> InitializeAsync(bool autoReleaseHandle) { }
+
+	public AsyncOperationHandle<IResourceLocator> InitializeAsync() { }
 
 	public AsyncOperationHandle<IResourceLocator> InitializeAsync(string runtimeDataPath, string providerSuffix = null, bool autoReleaseHandle = true) { }
 
-	public AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
-
 	public AsyncOperationHandle<GameObject> InstantiateAsync(object key, Transform parent = null, bool instantiateInWorldSpace = false, bool trackHandle = true) { }
 
-	public AsyncOperationHandle<GameObject> InstantiateAsync(object key, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
+	public AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
+
+	public AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, Transform parent = null, bool instantiateInWorldSpace = false, bool trackHandle = true) { }
 
 	public AsyncOperationHandle<GameObject> InstantiateAsync(object key, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
 
 	public AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
 
-	public AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, Transform parent = null, bool instantiateInWorldSpace = false, bool trackHandle = true) { }
+	public AsyncOperationHandle<GameObject> InstantiateAsync(object key, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
 
 	private AsyncOperationHandle<GameObject> InstantiateWithChain(AsyncOperationHandle dep, object key, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
 
@@ -688,9 +690,9 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	internal bool IsCatalogCached(IResourceLocation catalogLoc, Hash128 remoteHash) { }
 
-	public AsyncOperationHandle<TObject> LoadAssetAsync(IResourceLocation location) { }
-
 	public AsyncOperationHandle<TObject> LoadAssetAsync(object key) { }
+
+	public AsyncOperationHandle<TObject> LoadAssetAsync(IResourceLocation location) { }
 
 	public AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IEnumerable keys, Action<TObject> callback, MergeMode mode, bool releaseDependenciesOnFailure) { }
 
@@ -704,33 +706,27 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	private AsyncOperationHandle<IList`1<TObject>> LoadAssetsWithChain(AsyncOperationHandle dep, IEnumerable keys, Action<TObject> callback, MergeMode mode, bool releaseDependenciesOnFailure) { }
 
-	private AsyncOperationHandle<TObject> LoadAssetWithChain(AsyncOperationHandle dep, object key) { }
-
 	private AsyncOperationHandle<TObject> LoadAssetWithChain(AsyncOperationHandle dep, IResourceLocation loc) { }
+
+	private AsyncOperationHandle<TObject> LoadAssetWithChain(AsyncOperationHandle dep, object key) { }
 
 	public AsyncOperationHandle<IResourceLocator> LoadContentCatalogAsync(string catalogPath, bool autoReleaseHandle = true, string providerSuffix = null) { }
 
-	public AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsAsync(object key, Type type = null) { }
-
 	public AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsAsync(IEnumerable keys, MergeMode mode, Type type = null) { }
 
-	public AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsWithChain(AsyncOperationHandle dep, object key, Type type) { }
+	public AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsAsync(object key, Type type = null) { }
 
 	public AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsWithChain(AsyncOperationHandle dep, IEnumerable keys, MergeMode mode, Type type) { }
 
-	public AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneParameters loadSceneParameters, bool activateOnLoad = true, int priority = 100, bool trackHandle = true) { }
+	public AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsWithChain(AsyncOperationHandle dep, object key, Type type) { }
 
-	public AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location) { }
+	public AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneParameters loadSceneParameters, SceneReleaseMode releaseMode = 0, bool activateOnLoad = true, int priority = 100, bool trackHandle = true) { }
 
-	public AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key) { }
+	public AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key, LoadSceneParameters loadSceneParameters, SceneReleaseMode releaseMode = 0, bool activateOnLoad = true, int priority = 100, bool trackHandle = true) { }
 
-	public AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100, bool trackHandle = true) { }
+	internal AsyncOperationHandle<SceneInstance> LoadSceneWithChain(AsyncOperationHandle dep, IResourceLocation key, LoadSceneParameters loadSceneParameters, SceneReleaseMode releaseMode = 0, bool activateOnLoad = true, int priority = 100) { }
 
-	public AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key, LoadSceneParameters loadSceneParameters, bool activateOnLoad = true, int priority = 100, bool trackHandle = true) { }
-
-	internal AsyncOperationHandle<SceneInstance> LoadSceneWithChain(AsyncOperationHandle dep, IResourceLocation key, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100) { }
-
-	internal AsyncOperationHandle<SceneInstance> LoadSceneWithChain(AsyncOperationHandle dep, object key, LoadSceneParameters loadSceneParameters, bool activateOnLoad = true, int priority = 100) { }
+	internal AsyncOperationHandle<SceneInstance> LoadSceneWithChain(AsyncOperationHandle dep, object key, LoadSceneParameters loadSceneParameters, SceneReleaseMode releaseMode = 0, bool activateOnLoad = true, int priority = 100) { }
 
 	public void Log(string msg) { }
 
@@ -738,9 +734,9 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	public void LogErrorFormat(string format, Object[] args) { }
 
-	public void LogException(Exception ex) { }
-
 	public void LogException(AsyncOperationHandle op, Exception ex) { }
+
+	public void LogException(Exception ex) { }
 
 	public void LogFormat(string format, Object[] args) { }
 
@@ -783,9 +779,9 @@ internal class AddressablesImpl : IEqualityComparer<IResourceLocation>
 
 	private AsyncOperationHandle TrackHandle(AsyncOperationHandle handle) { }
 
-	private AsyncOperationHandle<TObject> TrackHandle(AsyncOperationHandle<TObject> handle) { }
-
 	private AsyncOperationHandle<SceneInstance> TrackHandle(AsyncOperationHandle<SceneInstance> handle) { }
+
+	private AsyncOperationHandle<TObject> TrackHandle(AsyncOperationHandle<TObject> handle) { }
 
 	public AsyncOperationHandle<SceneInstance> UnloadSceneAsync(AsyncOperationHandle<SceneInstance> handle, UnloadSceneOptions unloadOptions = 0, bool autoReleaseHandle = true) { }
 

@@ -141,7 +141,7 @@ public class HeroUpgradeDetails : GameMenu
 
 	public static bool CanUseRealMoneyStore
 	{
-		 get { } //Length: 168
+		 get { } //Length: 171
 	}
 
 	public private string LastHeroShown

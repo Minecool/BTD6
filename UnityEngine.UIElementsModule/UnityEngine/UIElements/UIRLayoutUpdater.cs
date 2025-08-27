@@ -1,10 +1,15 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class UIRLayoutUpdater : BaseVisualTreeUpdater
 {
 	private static readonly string s_Description; //Field offset: 0x0
 	private static readonly ProfilerMarker s_ProfilerMarker; //Field offset: 0x8
-	private List<KeyValuePair`2<Rect, VisualElement>> changeEventsList; //Field offset: 0x20
+	private static readonly ProfilerMarker k_ComputeLayoutMarker; //Field offset: 0x10
+	private static readonly ProfilerMarker k_UpdateSubTreeMarker; //Field offset: 0x18
+	private static readonly ProfilerMarker k_DispatchChangeEventsMarker; //Field offset: 0x20
+	private List<ValueTuple`3<Rect, Rect, VisualElement>> changeEventsList; //Field offset: 0x28
+	private List<VisualElement> missedHierarchyChangeEventsList; //Field offset: 0x30
 
 	public virtual ProfilerMarker profilerMarker
 	{
@@ -15,7 +20,9 @@ internal class UIRLayoutUpdater : BaseVisualTreeUpdater
 
 	public UIRLayoutUpdater() { }
 
-	private void DispatchChangeEvents(List<KeyValuePair`2<Rect, VisualElement>> changeEvents, int currentLayoutPass) { }
+	private void DispatchChangeEvents(List<ValueTuple`3<Rect, Rect, VisualElement>> changeEvents, int currentLayoutPass) { }
+
+	private void DispatchMissedHierarchyChangeEvents(List<VisualElement> missedHierarchyChangeEvents, int currentLayoutPass) { }
 
 	public virtual ProfilerMarker get_profilerMarker() { }
 
@@ -23,7 +30,9 @@ internal class UIRLayoutUpdater : BaseVisualTreeUpdater
 
 	public virtual void Update() { }
 
-	private void UpdateSubTree(VisualElement ve, bool isDisplayed, List<KeyValuePair`2<Rect, VisualElement>> changeEvents) { }
+	private static bool UpdateHierarchyDisplayed(VisualElement ve, List<ValueTuple`3<Rect, Rect, VisualElement>> changeEvents, bool inheritedDisplayed = true) { }
+
+	private void UpdateSubTree(VisualElement ve, List<ValueTuple`3<Rect, Rect, VisualElement>> changeEvents) { }
 
 }
 

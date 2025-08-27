@@ -6,28 +6,28 @@ public class FontFeatureTable
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<GlyphPairAdjustmentRecord, UInt32> <>9__25_0; //Field offset: 0x8
-		public static Func<GlyphPairAdjustmentRecord, UInt32> <>9__25_1; //Field offset: 0x10
-		public static Func<MarkToBaseAdjustmentRecord, UInt32> <>9__26_0; //Field offset: 0x18
-		public static Func<MarkToBaseAdjustmentRecord, UInt32> <>9__26_1; //Field offset: 0x20
-		public static Func<MarkToMarkAdjustmentRecord, UInt32> <>9__27_0; //Field offset: 0x28
-		public static Func<MarkToMarkAdjustmentRecord, UInt32> <>9__27_1; //Field offset: 0x30
+		public static Func<GlyphPairAdjustmentRecord, UInt32> <>9__24_0; //Field offset: 0x8
+		public static Func<GlyphPairAdjustmentRecord, UInt32> <>9__24_1; //Field offset: 0x10
+		public static Func<MarkToBaseAdjustmentRecord, UInt32> <>9__25_0; //Field offset: 0x18
+		public static Func<MarkToBaseAdjustmentRecord, UInt32> <>9__25_1; //Field offset: 0x20
+		public static Func<MarkToMarkAdjustmentRecord, UInt32> <>9__26_0; //Field offset: 0x28
+		public static Func<MarkToMarkAdjustmentRecord, UInt32> <>9__26_1; //Field offset: 0x30
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal uint <SortGlyphPairAdjustmentRecords>b__25_0(GlyphPairAdjustmentRecord s) { }
+		internal uint <SortGlyphPairAdjustmentRecords>b__24_0(GlyphPairAdjustmentRecord s) { }
 
-		internal uint <SortGlyphPairAdjustmentRecords>b__25_1(GlyphPairAdjustmentRecord s) { }
+		internal uint <SortGlyphPairAdjustmentRecords>b__24_1(GlyphPairAdjustmentRecord s) { }
 
-		internal uint <SortMarkToBaseAdjustmentRecords>b__26_0(MarkToBaseAdjustmentRecord s) { }
+		internal uint <SortMarkToBaseAdjustmentRecords>b__25_0(MarkToBaseAdjustmentRecord s) { }
 
-		internal uint <SortMarkToBaseAdjustmentRecords>b__26_1(MarkToBaseAdjustmentRecord s) { }
+		internal uint <SortMarkToBaseAdjustmentRecords>b__25_1(MarkToBaseAdjustmentRecord s) { }
 
-		internal uint <SortMarkToMarkAdjustmentRecords>b__27_0(MarkToMarkAdjustmentRecord s) { }
+		internal uint <SortMarkToMarkAdjustmentRecords>b__26_0(MarkToMarkAdjustmentRecord s) { }
 
-		internal uint <SortMarkToMarkAdjustmentRecords>b__27_1(MarkToMarkAdjustmentRecord s) { }
+		internal uint <SortMarkToMarkAdjustmentRecords>b__26_1(MarkToMarkAdjustmentRecord s) { }
 
 	}
 
@@ -36,7 +36,7 @@ public class FontFeatureTable
 	[SerializeField]
 	internal List<LigatureSubstitutionRecord> m_LigatureSubstitutionRecords; //Field offset: 0x18
 	[SerializeField]
-	internal List<GlyphPairAdjustmentRecord> m_GlyphPairAdjustmentRecords; //Field offset: 0x20
+	private List<GlyphPairAdjustmentRecord> m_GlyphPairAdjustmentRecords; //Field offset: 0x20
 	[SerializeField]
 	internal List<MarkToBaseAdjustmentRecord> m_MarkToBaseAdjustmentRecords; //Field offset: 0x28
 	[SerializeField]
@@ -46,7 +46,28 @@ public class FontFeatureTable
 	internal Dictionary<UInt32, MarkToBaseAdjustmentRecord> m_MarkToBaseAdjustmentRecordLookup; //Field offset: 0x48
 	internal Dictionary<UInt32, MarkToMarkAdjustmentRecord> m_MarkToMarkAdjustmentRecordLookup; //Field offset: 0x50
 
+	internal List<GlyphPairAdjustmentRecord> glyphPairAdjustmentRecords
+	{
+		internal get { } //Length: 5
+	}
+
+	internal List<MarkToBaseAdjustmentRecord> MarkToBaseAdjustmentRecords
+	{
+		internal get { } //Length: 7
+	}
+
+	internal List<MarkToMarkAdjustmentRecord> MarkToMarkAdjustmentRecords
+	{
+		internal get { } //Length: 7
+	}
+
 	internal FontFeatureTable() { }
+
+	internal List<GlyphPairAdjustmentRecord> get_glyphPairAdjustmentRecords() { }
+
+	internal List<MarkToBaseAdjustmentRecord> get_MarkToBaseAdjustmentRecords() { }
+
+	internal List<MarkToMarkAdjustmentRecord> get_MarkToMarkAdjustmentRecords() { }
 
 	public void SortGlyphPairAdjustmentRecords() { }
 

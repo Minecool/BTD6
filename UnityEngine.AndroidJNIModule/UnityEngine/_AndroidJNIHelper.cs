@@ -3,6 +3,9 @@ namespace UnityEngine;
 [UsedByNativeCode]
 internal sealed class _AndroidJNIHelper
 {
+	private static int FRAME_SIZE_FOR_ARRAYS; //Field offset: 0x0
+
+	private static _AndroidJNIHelper() { }
 
 	public static AndroidJavaObject Box(object obj) { }
 
@@ -18,19 +21,19 @@ internal sealed class _AndroidJNIHelper
 
 	public static void DeleteJNIArgArray(Object[] args, Span<jvalue> jniArgs) { }
 
-	public static IntPtr GetConstructorID(IntPtr jclass, string signature) { }
-
 	public static IntPtr GetConstructorID(IntPtr jclass, Object[] args) { }
 
-	public static IntPtr GetFieldID(IntPtr jclass, string fieldName, bool isStatic) { }
+	public static IntPtr GetConstructorID(IntPtr jclass, string signature) { }
 
 	public static IntPtr GetFieldID(IntPtr jclass, string fieldName, string signature, bool isStatic) { }
 
-	public static IntPtr GetMethodID(IntPtr jclass, string methodName, Object[] args, bool isStatic) { }
+	public static IntPtr GetFieldID(IntPtr jclass, string fieldName, bool isStatic) { }
 
 	public static IntPtr GetMethodID(IntPtr jclass, string methodName, Object[] args, bool isStatic) { }
 
 	public static IntPtr GetMethodID(IntPtr jclass, string methodName, string signature, bool isStatic) { }
+
+	public static IntPtr GetMethodID(IntPtr jclass, string methodName, Object[] args, bool isStatic) { }
 
 	private static IntPtr GetMethodIDFallback(IntPtr jclass, string methodName, string signature, bool isStatic) { }
 

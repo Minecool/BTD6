@@ -14,16 +14,6 @@ public struct SortingSettings : IEquatable<SortingSettings>
 		 set { } //Length: 4
 	}
 
-	public Vector3 customAxis
-	{
-		 set { } //Length: 16
-	}
-
-	public DistanceMetric distanceMetric
-	{
-		 set { } //Length: 4
-	}
-
 	public SortingSettings(Camera camera) { }
 
 	public override bool Equals(SortingSettings other) { }
@@ -35,10 +25,6 @@ public struct SortingSettings : IEquatable<SortingSettings>
 	public virtual int GetHashCode() { }
 
 	public void set_criteria(SortingCriteria value) { }
-
-	public void set_customAxis(Vector3 value) { }
-
-	public void set_distanceMetric(DistanceMetric value) { }
 
 }
 

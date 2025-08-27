@@ -3,13 +3,13 @@ namespace Assets.Scripts.Unity.UI_New.SweepStakes;
 public class SweepstakesWinnerDisplay : MonoBehaviour
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass8_0
+	private sealed class <>c__DisplayClass9_0
 	{
-		public SweepstakesEventEndedScreen sweepstakesScreen; //Field offset: 0x10
-		public SweepstakesWinnerDisplay <>4__this; //Field offset: 0x18
+		public SweepstakesWinnerDisplay <>4__this; //Field offset: 0x10
+		public SweepstakesEventEndedScreen sweepstakesScreen; //Field offset: 0x18
 		public Func<Task> <>9__1; //Field offset: 0x20
 
-		public <>c__DisplayClass8_0() { }
+		public <>c__DisplayClass9_0() { }
 
 		internal void <Init>b__0() { }
 
@@ -18,7 +18,7 @@ public class SweepstakesWinnerDisplay : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <Bind>d__9 : IAsyncStateMachine
+	private struct <Bind>d__10 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -36,7 +36,7 @@ public class SweepstakesWinnerDisplay : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <GetPlayerName>d__12 : IAsyncStateMachine
+	private struct <GetPlayerName>d__13 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<String> <>t__builder; //Field offset: 0x8
@@ -53,7 +53,7 @@ public class SweepstakesWinnerDisplay : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <GetPlayerStats>d__11 : IAsyncStateMachine
+	private struct <GetPlayerStats>d__12 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Btd6PlayerStats> <>t__builder; //Field offset: 0x8
@@ -81,20 +81,21 @@ public class SweepstakesWinnerDisplay : MonoBehaviour
 	[SerializeField]
 	private GameObject playerDataObj; //Field offset: 0x48
 	private string playerId; //Field offset: 0x50
+	private bool canShowPlayerStats; //Field offset: 0x58
 
 	public SweepstakesWinnerDisplay() { }
 
 	private void Awake() { }
 
-	[AsyncStateMachine(typeof(<Bind>d__9))]
+	[AsyncStateMachine(typeof(<Bind>d__10))]
 	public Task Bind(string playerId, Task<Dictionary`2<String, String>> playerNamesTask) { }
 
 	public void ButtonsInteractable(bool isInteractable) { }
 
-	[AsyncStateMachine(typeof(<GetPlayerName>d__12))]
+	[AsyncStateMachine(typeof(<GetPlayerName>d__13))]
 	private static Task<String> GetPlayerName(Task<Dictionary`2<String, String>> playerNamesTask, string playerId) { }
 
-	[AsyncStateMachine(typeof(<GetPlayerStats>d__11))]
+	[AsyncStateMachine(typeof(<GetPlayerStats>d__12))]
 	private static Task<Btd6PlayerStats> GetPlayerStats(string playerId) { }
 
 	public void Init(SweepstakesEventEndedScreen sweepstakesScreen) { }

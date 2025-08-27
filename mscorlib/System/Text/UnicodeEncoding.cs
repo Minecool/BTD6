@@ -31,7 +31,7 @@ public class UnicodeEncoding : Encoding
 
 	public virtual ReadOnlySpan<Byte> Preamble
 	{
-		 get { } //Length: 352
+		 get { } //Length: 340
 	}
 
 	private static UnicodeEncoding() { }

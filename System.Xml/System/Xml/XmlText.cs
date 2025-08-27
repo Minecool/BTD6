@@ -31,7 +31,7 @@ public class XmlText : XmlCharacterData
 	public virtual string Value
 	{
 		 get { } //Length: 20
-		 set { } //Length: 183
+		 set { } //Length: 182
 	}
 
 	internal XmlText(string strData) { }

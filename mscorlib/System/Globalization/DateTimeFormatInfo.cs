@@ -122,7 +122,7 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 
 	private String[] AllLongTimePatterns
 	{
-		private get { } //Length: 217
+		private get { } //Length: 216
 	}
 
 	private String[] AllShortDatePatterns
@@ -132,7 +132,7 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 
 	private String[] AllShortTimePatterns
 	{
-		private get { } //Length: 217
+		private get { } //Length: 216
 	}
 
 	private String[] AllYearMonthPatterns
@@ -148,7 +148,7 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 	public Calendar Calendar
 	{
 		 get { } //Length: 70
-		 set { } //Length: 1252
+		 set { } //Length: 1264
 	}
 
 	internal CompareInfo CompareInfo
@@ -168,7 +168,7 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 
 	public static DateTimeFormatInfo CurrentInfo
 	{
-		 get { } //Length: 269
+		 get { } //Length: 257
 	}
 
 	public string DateSeparator
@@ -178,7 +178,7 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 
 	internal string DateTimeOffsetPattern
 	{
-		internal get { } //Length: 613
+		internal get { } //Length: 614
 	}
 
 	public String[] DayNames
@@ -193,7 +193,7 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 
 	internal DateTimeFormatFlags FormatFlags
 	{
-		internal get { } //Length: 23
+		internal get { } //Length: 19
 	}
 
 	public string FullDateTimePattern
@@ -208,7 +208,7 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 
 	internal string FullTimeSpanPositivePattern
 	{
-		internal get { } //Length: 211
+		internal get { } //Length: 208
 	}
 
 	internal string GeneralLongTimePattern
@@ -228,17 +228,17 @@ public sealed class DateTimeFormatInfo : IFormatProvider, ICloneable
 
 	internal bool HasSpacesInDayNames
 	{
-		internal get { } //Length: 46
+		internal get { } //Length: 32
 	}
 
 	internal bool HasSpacesInMonthNames
 	{
-		internal get { } //Length: 46
+		internal get { } //Length: 32
 	}
 
 	internal bool HasYearMonthAdjustment
 	{
-		internal get { } //Length: 46
+		internal get { } //Length: 32
 	}
 
 	public static DateTimeFormatInfo InvariantInfo

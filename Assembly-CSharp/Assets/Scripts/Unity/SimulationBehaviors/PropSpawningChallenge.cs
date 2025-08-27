@@ -14,9 +14,9 @@ public class PropSpawningChallenge : SimulationBehavior
 	public string defeatLoc; //Field offset: 0x48
 	public SpriteReference hudIcon; //Field offset: 0x50
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
-		 get { } //Length: 1055
+		 get { } //Length: 1075
 	}
 
 	public virtual string Type
@@ -26,7 +26,7 @@ public class PropSpawningChallenge : SimulationBehavior
 
 	public PropSpawningChallenge() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

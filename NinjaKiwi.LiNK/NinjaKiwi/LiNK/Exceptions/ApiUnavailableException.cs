@@ -2,7 +2,7 @@ namespace NinjaKiwi.LiNK.Exceptions;
 
 public class ApiUnavailableException : NetworkException
 {
-	public const string RESPONSE_MESSAGE = "ERR_API_IS_NOT_AVAILABLE"; //Field offset: 0x0
+	internal const string RESPONSE_MESSAGE = "ERR_API_IS_NOT_AVAILABLE"; //Field offset: 0x0
 	private const string NOT_AVAILABLE = "Service not available"; //Field offset: 0x0
 
 	public virtual string Message

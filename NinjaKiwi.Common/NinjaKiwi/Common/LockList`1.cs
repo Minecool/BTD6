@@ -24,8 +24,8 @@ public class LockList : IEnumerable<T>, IEnumerable
 
 	}
 
-	[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 	[Il2CppSetOption(Option::NullChecks (1), False)]
+	[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 	[IsReadOnly]
 	private struct LockActionAddRange : ILockAction<T>
 	{
@@ -89,7 +89,7 @@ public class LockList : IEnumerable<T>, IEnumerable
 
 			public T Current
 			{
-				 get { } //Length: 167
+				 get { } //Length: 165
 			}
 
 			public Enumerator(LockList<T> list, Predicate<T> iterationPredicate) { }

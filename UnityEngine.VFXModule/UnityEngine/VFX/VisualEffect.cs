@@ -10,12 +10,14 @@ public class VisualEffect : Behaviour
 
 	public VisualEffectAsset visualEffectAsset
 	{
-		 get { } //Length: 51
+		 get { } //Length: 298
 	}
 
 	public VFXEventAttribute CreateVFXEventAttribute() { }
 
 	public VisualEffectAsset get_visualEffectAsset() { }
+
+	private static IntPtr get_visualEffectAsset_Injected(IntPtr _unity_self) { }
 
 	[RequiredByNativeCode]
 	private static VFXEventAttribute InvokeGetCachedEventAttributeForOutputEvent_Internal(VisualEffect source) { }

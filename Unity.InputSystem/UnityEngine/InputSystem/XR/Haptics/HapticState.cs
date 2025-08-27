@@ -22,7 +22,7 @@ public struct HapticState
 		[IsReadOnly]
 		 get { } //Length: 3
 		[CompilerGenerated]
-		private set { } //Length: 3
+		private set { } //Length: 8900
 	}
 
 	public HapticState(uint samplesQueued, uint samplesAvailable) { }

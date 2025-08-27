@@ -4,10 +4,10 @@ namespace UnityEngine;
 internal class PropertyNameUtils
 {
 
-	[FreeFunction(IsThreadSafe = True)]
+	[FreeFunction("PropertyNameFromStringICall", IsThreadSafe = True)]
 	public static PropertyName PropertyNameFromString(string name) { }
 
-	private static void PropertyNameFromString_Injected(string name, out PropertyName ret) { }
+	private static void PropertyNameFromString_Injected(ref ManagedSpanWrapper name, out PropertyName ret) { }
 
 }
 

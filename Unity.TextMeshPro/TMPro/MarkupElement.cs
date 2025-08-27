@@ -12,25 +12,25 @@ internal struct MarkupElement
 
 	public int NameHashCode
 	{
-		 get { } //Length: 39
+		 get { } //Length: 36
 		 set { } //Length: 108
 	}
 
 	public int ValueHashCode
 	{
-		 get { } //Length: 39
+		 get { } //Length: 36
 		 set { } //Length: 37
 	}
 
 	public int ValueLength
 	{
-		 get { } //Length: 39
+		 get { } //Length: 36
 		 set { } //Length: 37
 	}
 
 	public int ValueStartIndex
 	{
-		 get { } //Length: 39
+		 get { } //Length: 36
 		 set { } //Length: 37
 	}
 

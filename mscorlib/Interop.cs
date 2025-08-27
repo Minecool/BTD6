@@ -298,7 +298,7 @@ internal static class Interop
 
 			internal ReadOnlySpan<Char> cFileName
 			{
-				internal get { } //Length: 478
+				internal get { } //Length: 382
 			}
 
 			internal ReadOnlySpan<Char> get_cFileName() { }

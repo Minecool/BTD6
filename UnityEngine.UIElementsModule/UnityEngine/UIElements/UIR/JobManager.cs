@@ -4,7 +4,7 @@ internal class JobManager : IDisposable
 {
 	private NativePagedList<NudgeJobData> m_NudgeJobs; //Field offset: 0x10
 	private NativePagedList<ConvertMeshJobData> m_ConvertMeshJobs; //Field offset: 0x18
-	private NativePagedList<CopyClosingMeshJobData> m_CopyClosingMeshJobs; //Field offset: 0x20
+	private NativePagedList<CopyMeshJobData> m_CopyMeshJobs; //Field offset: 0x20
 	private JobMerger m_JobMerger; //Field offset: 0x28
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
@@ -15,7 +15,7 @@ internal class JobManager : IDisposable
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 4
+		private set { } //Length: 86
 	}
 
 	public JobManager() { }
@@ -24,11 +24,11 @@ internal class JobManager : IDisposable
 
 	public void Add(ref ConvertMeshJobData job) { }
 
-	public void Add(ref CopyClosingMeshJobData job) { }
-
-	public void CompleteClosingMeshJobs() { }
+	public void Add(ref CopyMeshJobData job) { }
 
 	public void CompleteConvertMeshJobs() { }
+
+	public void CompleteCopyMeshJobs() { }
 
 	public void CompleteNudgeJobs() { }
 

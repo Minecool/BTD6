@@ -59,12 +59,12 @@ public static class MapEditorItemTagEnum
 
 	public static String[] Names
 	{
-		 get { } //Length: 244
+		 get { } //Length: 220
 	}
 
 	public static MapEditorItemTag[] Values
 	{
-		 get { } //Length: 322
+		 get { } //Length: 298
 	}
 
 	private static MapEditorItemTagEnum() { }

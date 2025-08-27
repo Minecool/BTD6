@@ -45,7 +45,7 @@ public class SplineNode : DraggableNode, ISplineNode
 
 	public Vector2 TransformToSplinePosition
 	{
-		 get { } //Length: 113
+		 get { } //Length: 116
 	}
 
 	public SplineNode() { }

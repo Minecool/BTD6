@@ -29,7 +29,7 @@ public class GridLayout : Behaviour
 	[FreeFunction("GridLayoutBindings::CellToLocalInterpolated", HasExplicitThis = True)]
 	public Vector3 CellToLocalInterpolated(Vector3 cellPosition) { }
 
-	private void CellToLocalInterpolated_Injected(ref Vector3 cellPosition, out Vector3 ret) { }
+	private static void CellToLocalInterpolated_Injected(IntPtr _unity_self, in Vector3 cellPosition, out Vector3 ret) { }
 
 	[RequiredByNativeCode]
 	private void DoNothing() { }
@@ -37,12 +37,12 @@ public class GridLayout : Behaviour
 	[FreeFunction("GridLayoutBindings::GetLayoutCellCenter", HasExplicitThis = True)]
 	public Vector3 GetLayoutCellCenter() { }
 
-	private void GetLayoutCellCenter_Injected(out Vector3 ret) { }
+	private static void GetLayoutCellCenter_Injected(IntPtr _unity_self, out Vector3 ret) { }
 
 	[FreeFunction("GridLayoutBindings::LocalToWorld", HasExplicitThis = True)]
 	public Vector3 LocalToWorld(Vector3 localPosition) { }
 
-	private void LocalToWorld_Injected(ref Vector3 localPosition, out Vector3 ret) { }
+	private static void LocalToWorld_Injected(IntPtr _unity_self, in Vector3 localPosition, out Vector3 ret) { }
 
 }
 

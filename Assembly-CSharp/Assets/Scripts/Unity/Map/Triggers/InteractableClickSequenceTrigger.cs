@@ -7,7 +7,7 @@ public class InteractableClickSequenceTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public InteractableClickSequenceTrigger() { }

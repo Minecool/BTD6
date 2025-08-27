@@ -8,14 +8,18 @@ public struct StyleFont : IStyleValue<Font>, IEquatable<StyleFont>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override Font value
 	{
 		 get { } //Length: 13
+		 set { } //Length: 11
 	}
 
 	public StyleFont(Font v) { }
+
+	public StyleFont(StyleKeyword keyword) { }
 
 	internal StyleFont(Font v, StyleKeyword keyword) { }
 
@@ -31,7 +35,13 @@ public struct StyleFont : IStyleValue<Font>, IEquatable<StyleFont>
 
 	public static bool op_Equality(StyleFont lhs, StyleFont rhs) { }
 
+	public static StyleFont op_Implicit(StyleKeyword keyword) { }
+
 	public static StyleFont op_Implicit(Font v) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(Font value) { }
 
 	public virtual string ToString() { }
 

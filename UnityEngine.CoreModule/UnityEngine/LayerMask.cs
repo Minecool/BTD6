@@ -12,7 +12,7 @@ public struct LayerMask
 	public int value
 	{
 		 get { } //Length: 5
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int get_value() { }
@@ -22,6 +22,8 @@ public struct LayerMask
 	[NativeMethod("StringToLayer")]
 	[StaticAccessor("GetTagManager()", StaticAccessorType::Dot (0))]
 	public static int NameToLayer(string layerName) { }
+
+	private static int NameToLayer_Injected(ref ManagedSpanWrapper layerName) { }
 
 	public static int op_Implicit(LayerMask mask) { }
 

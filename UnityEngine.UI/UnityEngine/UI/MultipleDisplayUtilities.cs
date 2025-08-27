@@ -7,7 +7,7 @@ internal static class MultipleDisplayUtilities
 
 	internal static Vector3 GetRelativeMousePositionForRaycast(PointerEventData eventData) { }
 
-	public static Vector3 RelativeMouseAtScaled(Vector2 position) { }
+	public static Vector3 RelativeMouseAtScaled(Vector2 position, int displayIndex) { }
 
 }
 

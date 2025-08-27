@@ -60,13 +60,13 @@ public class GUI
 	internal static Material blendMaterial
 	{
 		[FreeFunction("GetGUIBlendMaterial")]
-		internal get { } //Length: 42
+		internal get { } //Length: 117
 	}
 
 	internal static Material blitMaterial
 	{
 		[FreeFunction("GetGUIBlitMaterial")]
-		internal get { } //Length: 42
+		internal get { } //Length: 117
 	}
 
 	public static bool changed
@@ -110,13 +110,13 @@ public class GUI
 	internal static Material roundedRectMaterial
 	{
 		[FreeFunction("GetGUIRoundedRectMaterial")]
-		internal get { } //Length: 42
+		internal get { } //Length: 117
 	}
 
 	internal static Material roundedRectWithColorPerBorderMaterial
 	{
 		[FreeFunction("GetGUIRoundedRectWithColorPerBorderMaterial")]
-		internal get { } //Length: 42
+		internal get { } //Length: 117
 	}
 
 	internal static int scrollTroughSide
@@ -136,7 +136,7 @@ public class GUI
 	public static GUISkin skin
 	{
 		 get { } //Length: 119
-		 set { } //Length: 570
+		 set { } //Length: 113
 	}
 
 	internal static bool usePageScrollbars
@@ -146,15 +146,15 @@ public class GUI
 
 	private static GUI() { }
 
-	internal static void BeginGroup(Rect position, GUIContent content, GUIStyle style, Vector2 scrollOffset) { }
-
 	public static void BeginGroup(Rect position, GUIContent content, GUIStyle style) { }
+
+	internal static void BeginGroup(Rect position, GUIContent content, GUIStyle style, Vector2 scrollOffset) { }
 
 	internal static Vector2 BeginScrollView(Rect position, Vector2 scrollPosition, Rect viewRect, bool alwaysShowHorizontal, bool alwaysShowVertical, GUIStyle horizontalScrollbar, GUIStyle verticalScrollbar, GUIStyle background) { }
 
-	public static void Box(Rect position, string text) { }
-
 	public static void Box(Rect position, GUIContent content, GUIStyle style) { }
+
+	public static void Box(Rect position, string text) { }
 
 	public static bool Button(Rect position, GUIContent content, GUIStyle style) { }
 
@@ -181,21 +181,21 @@ public class GUI
 
 	internal static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect, Color leftColor, Color topColor, Color rightColor, Color bottomColor, Vector4 borderWidths, Vector4 borderRadiuses, bool drawSmoothCorners) { }
 
-	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect, Color color, Vector4 borderWidths, float borderRadius) { }
-
-	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect) { }
-
-	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend) { }
-
-	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect, Color color, Vector4 borderWidths, Vector4 borderRadiuses) { }
-
 	internal static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect, Color color, Vector4 borderWidths, Vector4 borderRadiuses, bool drawSmoothCorners) { }
+
+	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect, Color color, Vector4 borderWidths, float borderRadius) { }
 
 	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect, Color color, float borderWidth, float borderRadius) { }
 
-	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode) { }
+	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect) { }
 
 	public static void DrawTexture(Rect position, Texture image) { }
+
+	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend, float imageAspect, Color color, Vector4 borderWidths, Vector4 borderRadiuses) { }
+
+	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode) { }
+
+	public static void DrawTexture(Rect position, Texture image, ScaleMode scaleMode, bool alphaBlend) { }
 
 	public static void EndGroup() { }
 
@@ -208,8 +208,12 @@ public class GUI
 	[FreeFunction("GetGUIBlendMaterial")]
 	internal static Material get_blendMaterial() { }
 
+	private static IntPtr get_blendMaterial_Injected() { }
+
 	[FreeFunction("GetGUIBlitMaterial")]
 	internal static Material get_blitMaterial() { }
+
+	private static IntPtr get_blitMaterial_Injected() { }
 
 	public static bool get_changed() { }
 
@@ -231,8 +235,12 @@ public class GUI
 	[FreeFunction("GetGUIRoundedRectMaterial")]
 	internal static Material get_roundedRectMaterial() { }
 
+	private static IntPtr get_roundedRectMaterial_Injected() { }
+
 	[FreeFunction("GetGUIRoundedRectWithColorPerBorderMaterial")]
 	internal static Material get_roundedRectWithColorPerBorderMaterial() { }
+
+	private static IntPtr get_roundedRectWithColorPerBorderMaterial_Injected() { }
 
 	[CompilerGenerated]
 	internal static int get_scrollTroughSide() { }
@@ -252,7 +260,7 @@ public class GUI
 
 	private static Rect Internal_DoWindow(int id, int instanceID, Rect clientRect, WindowFunction func, GUIContent title, GUIStyle style, object skin, bool forceRectOnLayout) { }
 
-	private static void Internal_DoWindow_Injected(int id, int instanceID, ref Rect clientRect, WindowFunction func, GUIContent title, GUIStyle style, object skin, bool forceRectOnLayout, out Rect ret) { }
+	private static void Internal_DoWindow_Injected(int id, int instanceID, in Rect clientRect, WindowFunction func, GUIContent title, GUIStyle style, object skin, bool forceRectOnLayout, out Rect ret) { }
 
 	internal static void InternalRepaintEditorWindow() { }
 
@@ -268,17 +276,17 @@ public class GUI
 
 	public static void set_backgroundColor(Color value) { }
 
-	private static void set_backgroundColor_Injected(ref Color value) { }
+	private static void set_backgroundColor_Injected(in Color value) { }
 
 	public static void set_changed(bool value) { }
 
 	public static void set_color(Color value) { }
 
-	private static void set_color_Injected(ref Color value) { }
+	private static void set_color_Injected(in Color value) { }
 
 	public static void set_contentColor(Color value) { }
 
-	private static void set_contentColor_Injected(ref Color value) { }
+	private static void set_contentColor_Injected(in Color value) { }
 
 	public static void set_enabled(bool value) { }
 

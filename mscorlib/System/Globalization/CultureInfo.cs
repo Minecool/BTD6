@@ -86,12 +86,12 @@ public class CultureInfo : ICloneable, IFormatProvider
 
 	internal int CalendarType
 	{
-		internal get { } //Length: 152
+		internal get { } //Length: 150
 	}
 
 	public override CompareInfo CompareInfo
 	{
-		 get { } //Length: 313
+		 get { } //Length: 303
 	}
 
 	public static CultureInfo CurrentCulture
@@ -133,7 +133,7 @@ public class CultureInfo : ICloneable, IFormatProvider
 
 	public override bool IsNeutralCulture
 	{
-		 get { } //Length: 61
+		 get { } //Length: 60
 	}
 
 	public override int LCID
@@ -154,7 +154,7 @@ public class CultureInfo : ICloneable, IFormatProvider
 
 	public override CultureInfo Parent
 	{
-		 get { } //Length: 654
+		 get { } //Length: 611
 	}
 
 	internal string SortName
@@ -169,7 +169,7 @@ public class CultureInfo : ICloneable, IFormatProvider
 
 	public override TextInfo TextInfo
 	{
-		 get { } //Length: 375
+		 get { } //Length: 335
 	}
 
 	internal static CultureInfo UserDefaultCulture

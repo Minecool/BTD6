@@ -70,7 +70,7 @@ public abstract class XContainer : XNode
 
 	public XNode LastNode
 	{
-		 get { } //Length: 343
+		 get { } //Length: 307
 	}
 
 	internal XContainer() { }

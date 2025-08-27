@@ -7,7 +7,7 @@ public class SetHeroLevelOnRound : SimulationBehavior
 	public Int32[] round; //Field offset: 0x20
 	public Int32[] level; //Field offset: 0x28
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 128
 	}
@@ -21,7 +21,7 @@ public class SetHeroLevelOnRound : SimulationBehavior
 
 	public SetHeroLevelOnRound(Int32[] round, string tower, Int32[] level) { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

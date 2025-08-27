@@ -4,7 +4,7 @@ namespace System.Runtime.CompilerServices;
 public struct ConfiguredTaskAwaitable
 {
 	[IsReadOnly]
-	internal struct ConfiguredTaskAwaiter : ICriticalNotifyCompletion
+	internal struct ConfiguredTaskAwaiter : ICriticalNotifyCompletion, INotifyCompletion
 	{
 		internal readonly Task m_task; //Field offset: 0x0
 		internal readonly bool m_continueOnCapturedContext; //Field offset: 0x8

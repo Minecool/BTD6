@@ -15,10 +15,19 @@ public static class UQueryExtensions
 	private static UQueryExtensions() { }
 
 	[Extension]
-	public static VisualElement Q(VisualElement e, string name = null, string className = null) { }
+	public static VisualElement Q(VisualElement e, string name = null, String[] classes) { }
 
 	[Extension]
 	public static T Q(VisualElement e, string name = null, string className = null) { }
+
+	[Extension]
+	public static VisualElement Q(VisualElement e, string name = null, string className = null) { }
+
+	[Extension]
+	public static UQueryBuilder<T> Query(VisualElement e, string name = null, String[] classes) { }
+
+	[Extension]
+	public static UQueryBuilder<T> Query(VisualElement e, string name = null, string className = null) { }
 
 }
 

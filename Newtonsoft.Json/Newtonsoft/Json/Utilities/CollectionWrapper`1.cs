@@ -13,12 +13,12 @@ internal class CollectionWrapper : ICollection<T>, IEnumerable<T>, IEnumerable, 
 
 	public override int Count
 	{
-		 get { } //Length: 155
+		 get { } //Length: 143
 	}
 
 	public override bool IsReadOnly
 	{
-		 get { } //Length: 158
+		 get { } //Length: 146
 	}
 
 	private override bool System.Collections.ICollection.IsSynchronized
@@ -33,7 +33,7 @@ internal class CollectionWrapper : ICollection<T>, IEnumerable<T>, IEnumerable, 
 
 	private override bool System.Collections.IList.IsFixedSize
 	{
-		private get { } //Length: 158
+		private get { } //Length: 146
 	}
 
 	[Nullable(2)]

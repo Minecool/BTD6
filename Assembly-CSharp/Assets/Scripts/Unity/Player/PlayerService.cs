@@ -176,8 +176,7 @@ public class PlayerService : PlayerService<Btd6Player, ProfileModel>
 		private LiNKAccount <linkAccount>5__2; //Field offset: 0x38
 		private string <accountId>5__3; //Field offset: 0x40
 		private int <attempt>5__4; //Field offset: 0x48
-		private TaskAwaiter<UserModel> <>u__1; //Field offset: 0x50
-		private TaskAwaiter <>u__2; //Field offset: 0x58
+		private TaskAwaiter <>u__1; //Field offset: 0x50
 
 		private override void MoveNext() { }
 
@@ -222,7 +221,7 @@ public class PlayerService : PlayerService<Btd6Player, ProfileModel>
 
 	public static Api NoLiNKApi
 	{
-		 get { } //Length: 358
+		 get { } //Length: 359
 	}
 
 	public static string NoLiNKId

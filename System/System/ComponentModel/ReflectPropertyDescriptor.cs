@@ -31,7 +31,7 @@ internal sealed class ReflectPropertyDescriptor : PropertyDescriptor
 
 	private object AmbientValue
 	{
-		private get { } //Length: 439
+		private get { } //Length: 430
 	}
 
 	public virtual Type ComponentType
@@ -41,22 +41,22 @@ internal sealed class ReflectPropertyDescriptor : PropertyDescriptor
 
 	private object DefaultValue
 	{
-		private get { } //Length: 758
+		private get { } //Length: 733
 	}
 
 	private MethodInfo GetMethodValue
 	{
-		private get { } //Length: 1284
+		private get { } //Length: 1272
 	}
 
 	private bool IsExtender
 	{
-		private get { } //Length: 83
+		private get { } //Length: 52
 	}
 
 	public virtual bool IsReadOnly
 	{
-		 get { } //Length: 262
+		 get { } //Length: 253
 	}
 
 	public virtual Type PropertyType
@@ -66,17 +66,17 @@ internal sealed class ReflectPropertyDescriptor : PropertyDescriptor
 
 	private MethodInfo ResetMethodValue
 	{
-		private get { } //Length: 580
+		private get { } //Length: 557
 	}
 
 	private MethodInfo SetMethodValue
 	{
-		private get { } //Length: 1602
+		private get { } //Length: 1570
 	}
 
 	private MethodInfo ShouldSerializeMethodValue
 	{
-		private get { } //Length: 580
+		private get { } //Length: 557
 	}
 
 	private static ReflectPropertyDescriptor() { }

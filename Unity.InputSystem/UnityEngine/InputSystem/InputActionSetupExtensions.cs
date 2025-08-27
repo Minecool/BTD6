@@ -22,17 +22,17 @@ public static class InputActionSetupExtensions
 
 		public InputBinding binding
 		{
-			 get { } //Length: 295
+			 get { } //Length: 292
 		}
 
 		public int bindingIndex
 		{
-			 get { } //Length: 132
+			 get { } //Length: 136
 		}
 
 		public bool valid
 		{
-			 get { } //Length: 100
+			 get { } //Length: 87
 		}
 
 		internal BindingSyntax(InputActionMap map, int bindingIndexInMap, InputAction action = null) { }
@@ -99,7 +99,7 @@ public static class InputActionSetupExtensions
 
 		public int bindingIndex
 		{
-			 get { } //Length: 37
+			 get { } //Length: 38
 		}
 
 		internal CompositeSyntax(InputActionMap map, InputAction action, int compositeIndex) { }

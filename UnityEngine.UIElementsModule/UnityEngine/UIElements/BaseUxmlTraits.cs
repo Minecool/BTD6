@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[Obsolete("BaseUxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 public abstract class BaseUxmlTraits
 {
 	[CompilerGenerated]

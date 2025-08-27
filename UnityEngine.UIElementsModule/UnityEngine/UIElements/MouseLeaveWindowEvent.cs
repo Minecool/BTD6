@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::EnterLeaveWindow (4))]
+[EventCategory(EventCategory::EnterLeaveWindow (5))]
 public class MouseLeaveWindowEvent : MouseEventBase<MouseLeaveWindowEvent>
 {
 	[CompilerGenerated]
@@ -20,6 +20,8 @@ public class MouseLeaveWindowEvent : MouseEventBase<MouseLeaveWindowEvent>
 	private static MouseLeaveWindowEvent() { }
 
 	public MouseLeaveWindowEvent() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	public static MouseLeaveWindowEvent GetPooled(Event systemEvent) { }
 

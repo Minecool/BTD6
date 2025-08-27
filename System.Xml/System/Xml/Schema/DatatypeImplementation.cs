@@ -146,12 +146,12 @@ internal abstract class DatatypeImplementation : XmlSchemaDatatype
 
 	internal virtual bool HasLexicalFacets
 	{
-		internal get { } //Length: 31
+		internal get { } //Length: 29
 	}
 
 	internal virtual bool HasValueFacets
 	{
-		internal get { } //Length: 31
+		internal get { } //Length: 29
 	}
 
 	internal abstract Type ListValueType
@@ -191,7 +191,7 @@ internal abstract class DatatypeImplementation : XmlSchemaDatatype
 
 	public virtual Type ValueType
 	{
-		 get { } //Length: 89
+		 get { } //Length: 50
 	}
 
 	public virtual XmlSchemaDatatypeVariety Variety

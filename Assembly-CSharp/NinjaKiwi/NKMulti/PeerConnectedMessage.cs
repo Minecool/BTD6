@@ -10,7 +10,7 @@ public class PeerConnectedMessage : Message
 
 	public PeerConnectedMessage(int peerID, List<Byte> connectedPlayers) { }
 
-	protected virtual Byte[] CreateBytes() { }
+	private static Byte[] CreateBytes(int peerID, List<Byte> connectedPlayers) { }
 
 }
 

@@ -35,7 +35,7 @@ public class TeamBrowserAdvancedPanel : MonoBehaviour
 
 	public bool IsDefaultSearch
 	{
-		 get { } //Length: 199
+		 get { } //Length: 224
 	}
 
 	public int MaxTeamSizeFilter

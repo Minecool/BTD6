@@ -10,8 +10,5 @@ public static class MouseCaptureController
 	[Extension]
 	public static bool HasMouseCapture(IEventHandler handler) { }
 
-	[Extension]
-	public static void ReleaseMouse(IEventHandler handler) { }
-
 }
 

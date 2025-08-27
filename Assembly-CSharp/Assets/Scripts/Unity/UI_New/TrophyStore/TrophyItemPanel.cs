@@ -67,9 +67,9 @@ public class TrophyItemPanel : MonoBehaviour
 	public event Action SaleEnded
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public bool LimitedTimeExpired

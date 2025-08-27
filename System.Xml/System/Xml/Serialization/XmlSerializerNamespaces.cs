@@ -11,7 +11,7 @@ public class XmlSerializerNamespaces
 
 	internal ArrayList NamespaceList
 	{
-		internal get { } //Length: 990
+		internal get { } //Length: 982
 	}
 
 	internal Hashtable Namespaces

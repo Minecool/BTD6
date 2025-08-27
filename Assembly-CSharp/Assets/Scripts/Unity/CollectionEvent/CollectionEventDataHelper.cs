@@ -50,7 +50,7 @@ public class CollectionEventDataHelper
 
 	public CollectablesEvent ActiveEvent
 	{
-		 get { } //Length: 124
+		 get { } //Length: 131
 	}
 
 	public int AmountCollected
@@ -85,7 +85,7 @@ public class CollectionEventDataHelper
 
 	public static CollectionEventDataHelper instance
 	{
-		 get { } //Length: 254
+		 get { } //Length: 253
 	}
 
 	public Int32[] Milestones
@@ -100,7 +100,7 @@ public class CollectionEventDataHelper
 
 	public ThemeType Theme
 	{
-		 get { } //Length: 346
+		 get { } //Length: 327
 	}
 
 	public CollectablesEvent ThisEvent

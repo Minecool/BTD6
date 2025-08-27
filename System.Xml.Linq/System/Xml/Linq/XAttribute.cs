@@ -8,7 +8,7 @@ public class XAttribute : XObject
 
 	public bool IsNamespaceDeclaration
 	{
-		 get { } //Length: 131
+		 get { } //Length: 127
 	}
 
 	public XName Name

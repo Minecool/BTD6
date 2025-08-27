@@ -2,7 +2,7 @@ namespace UnityEngine.InputSystem;
 
 [AddComponentMenu("Input/Player Input")]
 [DisallowMultipleComponent]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/PlayerInput.html")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/PlayerInput.html")]
 public class PlayerInput : MonoBehaviour
 {
 	internal class ActionEvent : UnityEvent<CallbackContext>
@@ -67,53 +67,54 @@ public class PlayerInput : MonoBehaviour
 	private static int s_InitSplitScreenIndex; //Field offset: 0x2C
 	private static string s_InitControlScheme; //Field offset: 0x30
 	internal static bool s_DestroyIfDeviceSetupUnsuccessful; //Field offset: 0x38
+	private int m_AllMapsHashCode; //Field offset: 0x20
 	[SerializeField]
 	[Tooltip("Input actions associated with the player.")]
-	internal InputActionAsset m_Actions; //Field offset: 0x20
+	internal InputActionAsset m_Actions; //Field offset: 0x28
 	[SerializeField]
 	[Tooltip("Determine how notifications should be sent when an input-related event associated with the player happens.")]
-	internal PlayerNotifications m_NotificationBehavior; //Field offset: 0x28
+	internal PlayerNotifications m_NotificationBehavior; //Field offset: 0x30
 	[SerializeField]
 	[Tooltip("UI InputModule that should have it's input actions synchronized to this PlayerInput's actions.")]
-	internal InputSystemUIInputModule m_UIInputModule; //Field offset: 0x30
+	internal InputSystemUIInputModule m_UIInputModule; //Field offset: 0x38
 	[SerializeField]
 	[Tooltip("Event that is triggered when the PlayerInput loses a paired device (e.g. its battery runs out).")]
-	internal DeviceLostEvent m_DeviceLostEvent; //Field offset: 0x38
+	internal DeviceLostEvent m_DeviceLostEvent; //Field offset: 0x40
 	[SerializeField]
-	internal DeviceRegainedEvent m_DeviceRegainedEvent; //Field offset: 0x40
+	internal DeviceRegainedEvent m_DeviceRegainedEvent; //Field offset: 0x48
 	[SerializeField]
-	internal ControlsChangedEvent m_ControlsChangedEvent; //Field offset: 0x48
+	internal ControlsChangedEvent m_ControlsChangedEvent; //Field offset: 0x50
 	[SerializeField]
-	internal ActionEvent[] m_ActionEvents; //Field offset: 0x50
+	internal ActionEvent[] m_ActionEvents; //Field offset: 0x58
 	[SerializeField]
-	internal bool m_NeverAutoSwitchControlSchemes; //Field offset: 0x58
+	internal bool m_NeverAutoSwitchControlSchemes; //Field offset: 0x60
 	[SerializeField]
-	internal string m_DefaultControlScheme; //Field offset: 0x60
+	internal string m_DefaultControlScheme; //Field offset: 0x68
 	[SerializeField]
-	internal string m_DefaultActionMap; //Field offset: 0x68
+	internal string m_DefaultActionMap; //Field offset: 0x70
 	[SerializeField]
-	internal int m_SplitScreenIndex; //Field offset: 0x70
+	internal int m_SplitScreenIndex; //Field offset: 0x78
 	[SerializeField]
 	[Tooltip("Reference to the player's view camera. Note that this is only required when using split-screen and/or per-player UIs. Otherwise it is safe to leave this property uninitialized.")]
-	internal Camera m_Camera; //Field offset: 0x78
-	private InputValue m_InputValueObject; //Field offset: 0x80
-	internal InputActionMap m_CurrentActionMap; //Field offset: 0x88
-	private int m_PlayerIndex; //Field offset: 0x90
-	private bool m_InputActive; //Field offset: 0x94
-	private bool m_Enabled; //Field offset: 0x95
-	internal bool m_ActionsInitialized; //Field offset: 0x96
-	private Dictionary<String, String> m_ActionMessageNames; //Field offset: 0x98
-	private InputUser m_InputUser; //Field offset: 0xA0
-	private Action<CallbackContext> m_ActionTriggeredDelegate; //Field offset: 0xA8
-	private CallbackArray<Action`1<PlayerInput>> m_DeviceLostCallbacks; //Field offset: 0xB0
-	private CallbackArray<Action`1<PlayerInput>> m_DeviceRegainedCallbacks; //Field offset: 0x100
-	private CallbackArray<Action`1<PlayerInput>> m_ControlsChangedCallbacks; //Field offset: 0x150
-	private CallbackArray<Action`1<CallbackContext>> m_ActionTriggeredCallbacks; //Field offset: 0x1A0
-	private Action<InputControl, InputEventPtr> m_UnpairedDeviceUsedDelegate; //Field offset: 0x1F0
-	private Func<InputDevice, InputEventPtr, Boolean> m_PreFilterUnpairedDeviceUsedDelegate; //Field offset: 0x1F8
-	private bool m_OnUnpairedDeviceUsedHooked; //Field offset: 0x200
-	private Action<InputDevice, InputDeviceChange> m_DeviceChangeDelegate; //Field offset: 0x208
-	private bool m_OnDeviceChangeHooked; //Field offset: 0x210
+	internal Camera m_Camera; //Field offset: 0x80
+	private InputValue m_InputValueObject; //Field offset: 0x88
+	internal InputActionMap m_CurrentActionMap; //Field offset: 0x90
+	private int m_PlayerIndex; //Field offset: 0x98
+	private bool m_InputActive; //Field offset: 0x9C
+	private bool m_Enabled; //Field offset: 0x9D
+	internal bool m_ActionsInitialized; //Field offset: 0x9E
+	private Dictionary<String, String> m_ActionMessageNames; //Field offset: 0xA0
+	private InputUser m_InputUser; //Field offset: 0xA8
+	private Action<CallbackContext> m_ActionTriggeredDelegate; //Field offset: 0xB0
+	private CallbackArray<Action`1<PlayerInput>> m_DeviceLostCallbacks; //Field offset: 0xB8
+	private CallbackArray<Action`1<PlayerInput>> m_DeviceRegainedCallbacks; //Field offset: 0x108
+	private CallbackArray<Action`1<PlayerInput>> m_ControlsChangedCallbacks; //Field offset: 0x158
+	private CallbackArray<Action`1<CallbackContext>> m_ActionTriggeredCallbacks; //Field offset: 0x1A8
+	private Action<InputControl, InputEventPtr> m_UnpairedDeviceUsedDelegate; //Field offset: 0x1F8
+	private Func<InputDevice, InputEventPtr, Boolean> m_PreFilterUnpairedDeviceUsedDelegate; //Field offset: 0x200
+	private bool m_OnUnpairedDeviceUsedHooked; //Field offset: 0x208
+	private Action<InputDevice, InputDeviceChange> m_DeviceChangeDelegate; //Field offset: 0x210
+	private bool m_OnDeviceChangeHooked; //Field offset: 0x218
 
 	public event Action<CallbackContext> onActionTriggered
 	{
@@ -148,7 +149,7 @@ public class PlayerInput : MonoBehaviour
 	public InputActionAsset actions
 	{
 		 get { } //Length: 69
-		 set { } //Length: 246
+		 set { } //Length: 302
 	}
 
 	[Obsolete("Use inputIsActive instead.")]
@@ -159,13 +160,13 @@ public class PlayerInput : MonoBehaviour
 
 	public static ReadOnlyArray<PlayerInput> all
 	{
-		 get { } //Length: 129
+		 get { } //Length: 132
 	}
 
 	public Camera camera
 	{
-		 get { } //Length: 70
-		 set { } //Length: 5
+		 get { } //Length: 8
+		 set { } //Length: 8
 	}
 
 	public ControlsChangedEvent controlsChangedEvent
@@ -181,7 +182,7 @@ public class PlayerInput : MonoBehaviour
 
 	public string currentControlScheme
 	{
-		 get { } //Length: 190
+		 get { } //Length: 176
 	}
 
 	public string defaultActionMap
@@ -208,7 +209,7 @@ public class PlayerInput : MonoBehaviour
 
 	public ReadOnlyArray<InputDevice> devices
 	{
-		 get { } //Length: 159
+		 get { } //Length: 164
 	}
 
 	public bool hasMissingRequiredDevices
@@ -281,6 +282,8 @@ public class PlayerInput : MonoBehaviour
 
 	private void ClearCaches() { }
 
+	private void CopyActionAssetAndApplyBindingOverrides() { }
+
 	public void DeactivateInput() { }
 
 	public void DebugLogAction(CallbackContext context) { }
@@ -349,9 +352,9 @@ public class PlayerInput : MonoBehaviour
 
 	private void InstallOnActionTriggeredHook() { }
 
-	public static PlayerInput Instantiate(GameObject prefab, int playerIndex = -1, string controlScheme = null, int splitScreenIndex = -1, InputDevice pairWithDevice = null) { }
-
 	public static PlayerInput Instantiate(GameObject prefab, int playerIndex = -1, string controlScheme = null, int splitScreenIndex = -1, InputDevice[] pairWithDevices) { }
+
+	public static PlayerInput Instantiate(GameObject prefab, int playerIndex = -1, string controlScheme = null, int splitScreenIndex = -1, InputDevice pairWithDevice = null) { }
 
 	private void OnActionTriggered(CallbackContext context) { }
 
@@ -419,6 +422,8 @@ public class PlayerInput : MonoBehaviour
 	private void UninitializeActions() { }
 
 	private void UninstallOnActionTriggeredHook() { }
+
+	private void UpdateDelegates() { }
 
 }
 

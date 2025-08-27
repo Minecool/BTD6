@@ -12,6 +12,8 @@ public struct UQueryState : IEnumerable<T>, IEnumerable, IEquatable<UQueryState`
 		{
 			[CompilerGenerated]
 			internal get { } //Length: 5
+			[CompilerGenerated]
+			internal set { } //Length: 5
 		}
 
 		public ActionQueryMatcher() { }
@@ -20,6 +22,9 @@ public struct UQueryState : IEnumerable<T>, IEnumerable, IEquatable<UQueryState`
 		internal Action<T> get_callBack() { }
 
 		protected virtual bool OnRuleMatchedElement(RuleMatcher matcher, VisualElement element) { }
+
+		[CompilerGenerated]
+		internal void set_callBack(Action<T> value) { }
 
 	}
 
@@ -96,6 +101,8 @@ public struct UQueryState : IEnumerable<T>, IEnumerable, IEquatable<UQueryState`
 
 	public T First() { }
 
+	public void ForEach(Action<T> funcCall) { }
+
 	public Enumerator<T> GetEnumerator() { }
 
 	public virtual int GetHashCode() { }
@@ -107,6 +114,10 @@ public struct UQueryState : IEnumerable<T>, IEnumerable, IEquatable<UQueryState`
 	private override IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { }
 
 	private override IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	public void ToList(List<T> results) { }
+
+	public List<T> ToList() { }
 
 }
 

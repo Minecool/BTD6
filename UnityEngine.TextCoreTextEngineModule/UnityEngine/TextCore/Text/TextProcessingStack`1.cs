@@ -3,6 +3,7 @@ namespace UnityEngine.TextCore.Text;
 [DebuggerDisplay("Item count = {m_Count}")]
 internal struct TextProcessingStack
 {
+	private const int k_DefaultCapacity = 4; //Field offset: 0x0
 	public T[] itemStack; //Field offset: 0x0
 	public int index; //Field offset: 0x0
 	private T m_DefaultItem; //Field offset: 0x0
@@ -17,7 +18,7 @@ internal struct TextProcessingStack
 
 	public T current
 	{
-		 get { } //Length: 69
+		 get { } //Length: 68
 	}
 
 	public TextProcessingStack`1(T[] stack) { }

@@ -8,5 +8,7 @@ public class SendPacketsElement
 	internal int m_Count; //Field offset: 0x24
 	private bool m_endOfPacket; //Field offset: 0x28
 
+	private SendPacketsElement() { }
+
 }
 

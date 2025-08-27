@@ -29,7 +29,7 @@ public class FertilizerBehaviorModel : GeraldoItemBehaviorModel
 
 	public FertilizerMutator Mutator
 	{
-		 get { } //Length: 267
+		 get { } //Length: 271
 	}
 
 	public FertilizerBehaviorModel(string name, float cashScale, float cashIncrement, int rounds, int path1TierLimit, int path2TierLimit, int path3TierLimit, PrefabReference buffDisplayPath, string buffLocsName, string buffIconName, PrefabReference effectAtTowerId) { }

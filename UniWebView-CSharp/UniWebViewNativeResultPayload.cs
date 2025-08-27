@@ -10,7 +10,7 @@ public class UniWebViewNativeResultPayload
 
 	public Dictionary<String, Object> Extra
 	{
-		 get { } //Length: 160
+		 get { } //Length: 155
 	}
 
 	public UniWebViewNativeResultPayload() { }

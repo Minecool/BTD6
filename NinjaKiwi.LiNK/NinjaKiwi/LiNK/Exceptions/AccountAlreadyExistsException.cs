@@ -5,7 +5,7 @@ public class AccountAlreadyExistsException : InternetException
 
 	public AccountAlreadyExistsException(string url) { }
 
-	public static bool MatchesType(string type) { }
+	internal static bool MatchesType(string type) { }
 
 }
 

@@ -26,7 +26,7 @@ public class AddAcidicMixtureToProjectileModel : ProjectileBehaviorModel
 
 	public AddAcidicMixtureToProjectileMutator Mutator
 	{
-		 get { } //Length: 277
+		 get { } //Length: 281
 	}
 
 	public AddAcidicMixtureToProjectileModel(string name, string mutationId, int cap, TowerBehaviorModel[] towerBehaviors, WeaponBehaviorModel[] weapBehaviors, ProjectileBehaviorModel[] projBehaviors, PrefabReference assetId, string ignoreList, string buffLocsName, string buffIconName) { }

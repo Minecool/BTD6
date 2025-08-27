@@ -35,7 +35,7 @@ public class FontData : ISerializationCallbackReceiver
 	public bool alignByGeometry
 	{
 		 get { } //Length: 5
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public TextAnchor alignment

@@ -2,6 +2,7 @@ namespace Unity.Collections.LowLevel.Unsafe;
 
 [NativeHeader("Runtime/Export/BurstLike/BurstLike.bindings.h")]
 [StaticAccessor("BurstLike", StaticAccessorType::DoubleColon (2))]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.ParticleSystemModule"}])]
 internal static class BurstLike
 {
 	public static class SharedStatic
@@ -12,6 +13,7 @@ internal static class BurstLike
 	}
 
 	[IsReadOnly]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.ParticleSystemModule"}])]
 	public struct SharedStatic
 	{
 		private readonly Void* _buffer; //Field offset: 0x0

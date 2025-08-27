@@ -1,6 +1,6 @@
 namespace UnityEngine.InputSystem.UI;
 
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/UISupport.html#multiplayer-uis")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/UISupport.html#multiplayer-uis")]
 public class MultiplayerEventSystem : EventSystem
 {
 	[SerializeField]

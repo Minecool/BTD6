@@ -34,7 +34,7 @@ public class RegionInfo
 
 	public static RegionInfo CurrentRegion
 	{
-		 get { } //Length: 528
+		 get { } //Length: 526
 	}
 
 	[MonoTODO("DisplayName currently only returns the EnglishName")]
@@ -56,7 +56,7 @@ public class RegionInfo
 
 	public override bool IsMetric
 	{
-		 get { } //Length: 112
+		 get { } //Length: 113
 	}
 
 	public override string ISOCurrencySymbol

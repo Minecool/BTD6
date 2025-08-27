@@ -6,7 +6,7 @@ public class TriggerDialogueOnRound : SimulationBehavior
 	public bool saveSeen; //Field offset: 0x20
 	public int round; //Field offset: 0x24
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 128
 	}
@@ -20,7 +20,7 @@ public class TriggerDialogueOnRound : SimulationBehavior
 
 	public TriggerDialogueOnRound(DialogueData dialogue, int round, bool saveSeen) { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

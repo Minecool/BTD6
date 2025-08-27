@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[Obsolete("UxmlStyleFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 public class UxmlStyleFactory : UxmlFactory<VisualElement, UxmlStyleTraits>
 {
 

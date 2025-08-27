@@ -23,7 +23,7 @@ public class ChangeProjectileDisplayModel : AbilityBehaviorModel
 
 	public ChangeProjectileDisplayMutator Mutator
 	{
-		 get { } //Length: 209
+		 get { } //Length: 213
 	}
 
 	public ChangeProjectileDisplayModel(string name, float lifespan, AssetPathModel displayPath, ProjectileModel projectileModel, string mutatorId) { }

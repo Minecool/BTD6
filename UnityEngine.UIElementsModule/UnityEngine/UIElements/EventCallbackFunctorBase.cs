@@ -1,39 +1,19 @@
 namespace UnityEngine.UIElements;
 
-internal abstract class EventCallbackFunctorBase
+internal abstract class EventCallbackFunctorBase : IDisposable
 {
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly CallbackPhase <phase>k__BackingField; //Field offset: 0x10
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly InvokePolicy <invokePolicy>k__BackingField; //Field offset: 0x14
+	public long eventTypeId; //Field offset: 0x10
+	public InvokePolicy invokePolicy; //Field offset: 0x18
 
-	public InvokePolicy invokePolicy
-	{
-		[CompilerGenerated]
-		 get { } //Length: 4
-	}
+	protected EventCallbackFunctorBase() { }
 
-	public CallbackPhase phase
-	{
-		[CompilerGenerated]
-		 get { } //Length: 94
-	}
+	public abstract void Dispose() { }
 
-	protected EventCallbackFunctorBase(CallbackPhase phase, InvokePolicy invokePolicy) { }
+	public abstract void Invoke(EventBase evt) { }
 
-	[CompilerGenerated]
-	public InvokePolicy get_invokePolicy() { }
+	public abstract bool IsEquivalentTo(long eventTypeId, Delegate callback) { }
 
-	[CompilerGenerated]
-	public CallbackPhase get_phase() { }
-
-	public abstract void Invoke(EventBase evt, PropagationPhase propagationPhase) { }
-
-	public abstract bool IsEquivalentTo(long eventTypeId, Delegate callback, CallbackPhase phase) { }
-
-	protected bool PhaseMatches(PropagationPhase propagationPhase) { }
+	public abstract void UnregisterCallback(CallbackEventHandler target, TrickleDown useTrickleDown) { }
 
 }
 

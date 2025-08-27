@@ -155,11 +155,11 @@ public class OculusTouchController : XRControllerWithRumble
 		 set { } //Length: 8
 	}
 
-	[InputControl(name = "deviceRotation", layout = "Quaternion", aliases = new IL2CPP_TYPE_STRING[] {"controllerRotation"}])]
-	[InputControl(name = "devicePosition", layout = "Vector3", aliases = new IL2CPP_TYPE_STRING[] {"controllerPosition"}])]
 	[InputControl(aliases = new IL2CPP_TYPE_STRING[] {"JoystickOrPadTouched", "thumbstickTouch"}])]
-	[InputControl(name = "isTracked", layout = "Button", aliases = new IL2CPP_TYPE_STRING[] {"ControllerIsTracked"}])]
 	[InputControl(name = "trackingState", layout = "Integer", aliases = new IL2CPP_TYPE_STRING[] {"controllerTrackingState"}])]
+	[InputControl(name = "isTracked", layout = "Button", aliases = new IL2CPP_TYPE_STRING[] {"ControllerIsTracked"}])]
+	[InputControl(name = "devicePosition", layout = "Vector3", aliases = new IL2CPP_TYPE_STRING[] {"controllerPosition"}])]
+	[InputControl(name = "deviceRotation", layout = "Quaternion", aliases = new IL2CPP_TYPE_STRING[] {"controllerRotation"}])]
 	public ButtonControl thumbstickTouched
 	{
 		[CompilerGenerated]

@@ -8,7 +8,7 @@ public class CalloutPairs : CalloutType
 
 	private PlayerData LowScoreData
 	{
-		private get { } //Length: 131
+		private get { } //Length: 127
 	}
 
 	public CalloutPairs(float weightCalloutHigh, float weightCalloutLow, double highMinValue, double lowMinValue, double exclusionRange = -1, List<String> difficultiesAwardedIn = null) { }

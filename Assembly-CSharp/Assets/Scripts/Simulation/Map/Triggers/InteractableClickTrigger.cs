@@ -7,7 +7,7 @@ public class InteractableClickTrigger : MapTrigger
 
 	private bool IsOffCooldown
 	{
-		private get { } //Length: 76
+		private get { } //Length: 73
 	}
 
 	public InteractableClickTrigger() { }

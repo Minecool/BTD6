@@ -1,12 +1,13 @@
 namespace UnityEngine.TextCore.Text;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.IMGUIModule", "UnityEngine.UIElementsModule"}])]
 internal struct LineInfo
 {
 	internal int controlCharacterCount; //Field offset: 0x0
 	public int characterCount; //Field offset: 0x4
 	public int visibleCharacterCount; //Field offset: 0x8
-	public int spaceCount; //Field offset: 0xC
-	public int visibleSpaceCount; //Field offset: 0x10
+	public int visibleSpaceCount; //Field offset: 0xC
+	public int spaceCount; //Field offset: 0x10
 	public int wordCount; //Field offset: 0x14
 	public int firstCharacterIndex; //Field offset: 0x18
 	public int firstVisibleCharacterIndex; //Field offset: 0x1C

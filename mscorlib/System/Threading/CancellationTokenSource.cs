@@ -45,10 +45,6 @@ public class CancellationTokenSource : IDisposable
 	}
 
 	internal static readonly CancellationTokenSource s_canceledSource; //Field offset: 0x0
-	private const int CannotBeCanceled = 0; //Field offset: 0x0
-	private const int NotCanceledState = 1; //Field offset: 0x0
-	private const int NotifyingState = 2; //Field offset: 0x0
-	private const int NotifyingCompleteState = 3; //Field offset: 0x0
 	internal static readonly CancellationTokenSource s_neverCanceledSource; //Field offset: 0x8
 	private static readonly int s_nLists; //Field offset: 0x10
 	private static readonly TimerCallback s_timerCallback; //Field offset: 0x18

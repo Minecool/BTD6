@@ -6,13 +6,13 @@ public class ShopMenu : RatioObject
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static UnityAction <>9__39_0; //Field offset: 0x8
+		public static UnityAction <>9__38_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <Awake>b__39_0() { }
+		internal void <Awake>b__38_0() { }
 
 	}
 
@@ -30,33 +30,32 @@ public class ShopMenu : RatioObject
 	public GameObject sendRound; //Field offset: 0x68
 	public Button upgradesButton; //Field offset: 0x70
 	public AudioClip clickSound; //Field offset: 0x78
-	public AudioClip click3Sound; //Field offset: 0x80
-	public RectTransform scrollMaskRogue; //Field offset: 0x88
-	public bool isVertical; //Field offset: 0x90
-	public GoFastForwardToggle goFFToggle; //Field offset: 0x98
-	public GameObject summaryScreenPanel; //Field offset: 0xA0
-	public Button editorBackButton; //Field offset: 0xA8
-	public Button editorTowerModeBackButton; //Field offset: 0xB0
-	public Image editorBackLoadingIcon; //Field offset: 0xB8
-	public GameObject rogueTowerButtonPrefab; //Field offset: 0xC0
-	public GameObject rogueTowerButtons; //Field offset: 0xC8
-	public GameObject roguePowerButtonPrefab; //Field offset: 0xD0
-	public GameObject rogueBoostTowerButtons; //Field offset: 0xD8
-	public GameObject rogueObj; //Field offset: 0xE0
-	private SelectedDisplay selectedTowerDisplay; //Field offset: 0xE8
-	private List<ITowerPurchaseButton> activeTowerButtons; //Field offset: 0xF0
-	private List<GameObject> activePowerButtons; //Field offset: 0xF8
-	private bool lockToTower; //Field offset: 0x100
-	private bool resetButtonPositions; //Field offset: 0x101
-	private bool initialised; //Field offset: 0x102
-	private IScroller scroller; //Field offset: 0x108
-	private List<RogueInstaMonkey> rogueInstaMonkeys; //Field offset: 0x110
-	private bool rebuildTowerSet; //Field offset: 0x118
-	private List<RogueInstaMonkey> newInstas; //Field offset: 0x120
-	private bool disallowSelectingDifferentTowers; //Field offset: 0x128
-	private ITowerPurchaseButton selectedButton; //Field offset: 0x130
-	private String[] monkeyTeams; //Field offset: 0x138
-	private bool showingMonkeyTeams; //Field offset: 0x140
+	public RectTransform scrollMaskRogue; //Field offset: 0x80
+	public bool isVertical; //Field offset: 0x88
+	public GoFastForwardToggle goFFToggle; //Field offset: 0x90
+	public GameObject summaryScreenPanel; //Field offset: 0x98
+	public Button editorBackButton; //Field offset: 0xA0
+	public Button editorTowerModeBackButton; //Field offset: 0xA8
+	public Image editorBackLoadingIcon; //Field offset: 0xB0
+	public GameObject rogueTowerButtonPrefab; //Field offset: 0xB8
+	public GameObject rogueTowerButtons; //Field offset: 0xC0
+	public GameObject roguePowerButtonPrefab; //Field offset: 0xC8
+	public GameObject rogueBoostTowerButtons; //Field offset: 0xD0
+	public GameObject rogueObj; //Field offset: 0xD8
+	private SelectedDisplay selectedTowerDisplay; //Field offset: 0xE0
+	private List<ITowerPurchaseButton> activeTowerButtons; //Field offset: 0xE8
+	private List<GameObject> activePowerButtons; //Field offset: 0xF0
+	private bool lockToTower; //Field offset: 0xF8
+	private bool resetButtonPositions; //Field offset: 0xF9
+	private bool initialised; //Field offset: 0xFA
+	private IScroller scroller; //Field offset: 0x100
+	private List<RogueInstaMonkey> rogueInstaMonkeys; //Field offset: 0x108
+	private bool rebuildTowerSet; //Field offset: 0x110
+	private List<RogueInstaMonkey> newInstas; //Field offset: 0x118
+	private bool disallowSelectingDifferentTowers; //Field offset: 0x120
+	private ITowerPurchaseButton selectedButton; //Field offset: 0x128
+	private String[] monkeyTeams; //Field offset: 0x130
+	private bool showingMonkeyTeams; //Field offset: 0x138
 
 	public List<ITowerPurchaseButton> ActiveTowerButtons
 	{
@@ -163,7 +162,7 @@ public class ShopMenu : RatioObject
 
 	public void ScrollToTower(int towerIndex) { }
 
-	public void Select(ITowerPurchaseButton b) { }
+	public void Select(ITowerPurchaseButton b, string nameDisplayOverride = null, bool upgradesButtonInteractableOverride = false) { }
 
 	public void SendRound() { }
 

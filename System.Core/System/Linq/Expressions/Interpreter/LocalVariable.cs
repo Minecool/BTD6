@@ -12,7 +12,7 @@ internal sealed class LocalVariable
 
 	public bool IsBoxed
 	{
-		 get { } //Length: 8
+		 get { } //Length: 7
 		 set { } //Length: 25
 	}
 

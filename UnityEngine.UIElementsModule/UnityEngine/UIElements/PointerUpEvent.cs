@@ -26,5 +26,7 @@ public sealed class PointerUpEvent : PointerEventBase<PointerUpEvent>
 
 	protected private virtual void PostDispatch(IPanel panel) { }
 
+	protected private virtual void PreDispatch(IPanel panel) { }
+
 }
 

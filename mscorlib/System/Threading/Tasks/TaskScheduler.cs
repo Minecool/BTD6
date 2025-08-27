@@ -9,21 +9,20 @@ public abstract class TaskScheduler
 
 	}
 
-	private static ConditionalWeakTable<TaskScheduler, Object> s_activeTaskSchedulers; //Field offset: 0x0
-	private static readonly TaskScheduler s_defaultTaskScheduler; //Field offset: 0x8
-	internal static int s_taskSchedulerIdCounter; //Field offset: 0x10
-	private static EventHandler<UnobservedTaskExceptionEventArgs> _unobservedTaskException; //Field offset: 0x18
-	private static readonly Lock _unobservedTaskExceptionLockObject; //Field offset: 0x20
+	private static readonly TaskScheduler s_defaultTaskScheduler; //Field offset: 0x0
+	internal static int s_taskSchedulerIdCounter; //Field offset: 0x8
+	private static EventHandler<UnobservedTaskExceptionEventArgs> _unobservedTaskException; //Field offset: 0x10
+	private static readonly Lock _unobservedTaskExceptionLockObject; //Field offset: 0x18
 	private int m_taskSchedulerId; //Field offset: 0x10
 
 	public static TaskScheduler Current
 	{
-		 get { } //Length: 157
+		 get { } //Length: 156
 	}
 
 	public static TaskScheduler Default
 	{
-		 get { } //Length: 79
+		 get { } //Length: 78
 	}
 
 	public int Id

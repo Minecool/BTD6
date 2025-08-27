@@ -54,7 +54,20 @@ public class DynamicArray
 
 	}
 
-	private T[] m_Array; //Field offset: 0x0
+	internal sealed class SortComparer : MulticastDelegate
+	{
+
+		public SortComparer(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(T x, T y, AsyncCallback callback, object object) { }
+
+		public override int EndInvoke(IAsyncResult result) { }
+
+		public override int Invoke(T x, T y) { }
+
+	}
+
+	protected T[] m_Array; //Field offset: 0x0
 	[CompilerGenerated]
 	private int <size>k__BackingField; //Field offset: 0x0
 
@@ -65,26 +78,30 @@ public class DynamicArray
 
 	public T Item
 	{
-		 get { } //Length: 46
+		 get { } //Length: 49
 	}
 
-	public private int size
+	public int size
 	{
 		[CompilerGenerated]
 		 get { } //Length: 4
 		[CompilerGenerated]
-		private set { } //Length: 4
+		 set { } //Length: 4
 	}
 
 	public DynamicArray`1() { }
 
 	public DynamicArray`1(int size) { }
 
+	public DynamicArray`1(int capacity, bool resize) { }
+
+	public DynamicArray`1(DynamicArray<T> deepCopy) { }
+
 	public int Add(in T value) { }
 
 	public void AddRange(DynamicArray<T> array) { }
 
-	internal void BumpVersion() { }
+	protected private void BumpVersion() { }
 
 	public void Clear() { }
 
@@ -107,7 +124,14 @@ public class DynamicArray
 
 	public int IndexOf(T item) { }
 
+	public void Insert(int index, T item) { }
+
+	[Obsolete("This is deprecated because it returns an incorrect value. It may returns an array with elements beyond the size. Please use Span/ReadOnly if you want safe raw access to the DynamicArray memory.", False)]
 	public static T[] op_Implicit(DynamicArray<T> array) { }
+
+	public static ReadOnlySpan<T> op_Implicit(DynamicArray<T> array) { }
+
+	public static Span<T> op_Implicit(DynamicArray<T> array) { }
 
 	public bool Remove(T item) { }
 
@@ -119,8 +143,10 @@ public class DynamicArray
 
 	public void Resize(int newSize, bool keepContent = false) { }
 
+	public void ResizeAndClear(int newSize) { }
+
 	[CompilerGenerated]
-	private void set_size(int value) { }
+	protected void set_size(int value) { }
 
 	public RangeEnumerable<T> SubRange(int first, int numItems) { }
 

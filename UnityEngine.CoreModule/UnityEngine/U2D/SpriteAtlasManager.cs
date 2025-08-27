@@ -1,7 +1,7 @@
 namespace UnityEngine.U2D;
 
-[NativeHeader("Runtime/2D/SpriteAtlas/SpriteAtlasManager.h")]
 [NativeHeader("Runtime/2D/SpriteAtlas/SpriteAtlas.h")]
+[NativeHeader("Runtime/2D/SpriteAtlas/SpriteAtlasManager.h")]
 [StaticAccessor("GetSpriteAtlasManager()", StaticAccessorType::Dot (0))]
 public class SpriteAtlasManager
 {
@@ -38,6 +38,8 @@ public class SpriteAtlasManager
 	private static void PostRegisteredAtlas(SpriteAtlas spriteAtlas) { }
 
 	internal static void Register(SpriteAtlas spriteAtlas) { }
+
+	private static void Register_Injected(IntPtr spriteAtlas) { }
 
 	[CompilerGenerated]
 	public static void remove_atlasRegistered(Action<SpriteAtlas> value) { }

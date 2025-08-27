@@ -50,12 +50,12 @@ public class AddBerserkerBrewToProjectileModel : ProjectileBehaviorModel
 
 	public BlockerMutator Blocker
 	{
-		 get { } //Length: 256
+		 get { } //Length: 260
 	}
 
 	public BeserkerBrewMutator Mutator
 	{
-		 get { } //Length: 272
+		 get { } //Length: 276
 	}
 
 	private static AddBerserkerBrewToProjectileModel() { }

@@ -14,7 +14,11 @@ public abstract class ContextualMenuManager
 		internal set { } //Length: 4
 	}
 
+	protected ContextualMenuManager() { }
+
 	public void DisplayMenu(EventBase triggerEvent, IEventHandler target) { }
+
+	internal void DisplayMenu(EventBase triggerEvent, IEventHandler target, DropdownMenu menu) { }
 
 	public abstract void DisplayMenuIfEventMatches(EventBase evt, IEventHandler eventHandler) { }
 

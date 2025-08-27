@@ -19,8 +19,15 @@ public class SwarmModel
 	public bool acceptingPlayers; //Field offset: 0x38
 	[DataMember(Name = "gameMode")]
 	public string gameMode; //Field offset: 0x40
+	internal bool isValid; //Field offset: 0x48
 
 	public SwarmModel() { }
+
+	[OnDeserialized]
+	internal void OnDeserialised(StreamingContext streamingContext) { }
+
+	[OnError]
+	internal void OnError(StreamingContext context, ErrorContext errorContext) { }
 
 }
 

@@ -17,12 +17,14 @@ public class SweepstakesDailyTaskTier : MonoBehaviour
 	[SerializeField]
 	private Image taskBarProgress; //Field offset: 0x48
 	[SerializeField]
-	private Color lockedTextColor; //Field offset: 0x50
-	private SweepstakesTaskSettings sweepstakesTaskSettings; //Field offset: 0x60
-	private SweepstakesStatusResponse sweepstakesStatus; //Field offset: 0x68
-	private int taskStepIndex; //Field offset: 0x70
-	private int taskIndex; //Field offset: 0x74
-	private bool isCompleted; //Field offset: 0x78
+	private GameObject lockedProgressIcon; //Field offset: 0x50
+	[SerializeField]
+	private Color lockedTextColor; //Field offset: 0x58
+	private SweepstakesTaskSettings sweepstakesTaskSettings; //Field offset: 0x68
+	private SweepstakesStatusResponse sweepstakesStatus; //Field offset: 0x70
+	private int taskStepIndex; //Field offset: 0x78
+	private int taskIndex; //Field offset: 0x7C
+	private bool isCompleted; //Field offset: 0x80
 
 	public SweepstakesDailyTaskTier() { }
 

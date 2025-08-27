@@ -8,11 +8,13 @@ public struct StyleLength : IStyleValue<Length>, IEquatable<StyleLength>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 75
 	}
 
 	public override Length value
 	{
-		 get { } //Length: 25
+		 get { } //Length: 22
+		 set { } //Length: 43
 	}
 
 	public StyleLength(float v) { }
@@ -40,6 +42,10 @@ public struct StyleLength : IStyleValue<Length>, IEquatable<StyleLength>
 	public static StyleLength op_Implicit(float v) { }
 
 	public static StyleLength op_Implicit(Length v) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(Length value) { }
 
 	public virtual string ToString() { }
 

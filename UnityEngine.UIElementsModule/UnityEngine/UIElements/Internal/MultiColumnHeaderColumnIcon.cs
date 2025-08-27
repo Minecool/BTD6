@@ -5,7 +5,7 @@ internal class MultiColumnHeaderColumnIcon : Image
 	public static readonly string ussClassName; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <isImageInline>k__BackingField; //Field offset: 0x410
+	private bool <isImageInline>k__BackingField; //Field offset: 0x4F0
 
 	public bool isImageInline
 	{

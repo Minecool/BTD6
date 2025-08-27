@@ -8,7 +8,7 @@ internal struct PinnedArray : IDisposable
 
 	public int length
 	{
-		 get { } //Length: 16
+		 get { } //Length: 13
 	}
 
 	public PinnedArray`1(int length) { }

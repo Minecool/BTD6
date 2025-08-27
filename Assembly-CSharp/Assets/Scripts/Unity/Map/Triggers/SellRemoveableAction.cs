@@ -7,7 +7,7 @@ public class SellRemoveableAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 204
+		 get { } //Length: 192
 	}
 
 	public SellRemoveableAction() { }

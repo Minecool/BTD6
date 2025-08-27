@@ -26,7 +26,7 @@ internal class BaseValidator
 
 	public IDtdInfo DtdInfo
 	{
-		 set { } //Length: 224
+		 set { } //Length: 193
 	}
 
 	public ValidationEventHandler EventHandler
@@ -66,7 +66,7 @@ internal class BaseValidator
 
 	public SchemaNames SchemaNames
 	{
-		 get { } //Length: 157
+		 get { } //Length: 137
 	}
 
 	public XmlResolver XmlResolver

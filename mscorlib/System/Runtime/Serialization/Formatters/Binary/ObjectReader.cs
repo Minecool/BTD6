@@ -49,7 +49,7 @@ internal sealed class ObjectReader
 	internal object TopObject
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 20
+		internal set { } //Length: 18
 	}
 
 	private SerStack ValueFixupStack

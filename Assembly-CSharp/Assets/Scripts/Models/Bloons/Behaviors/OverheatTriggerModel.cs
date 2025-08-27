@@ -40,7 +40,7 @@ public class OverheatTriggerModel : BloonBehaviorTriggerModel
 
 	public OverheatMutator Mutator
 	{
-		 get { } //Length: 278
+		 get { } //Length: 282
 	}
 
 	public TowerFreezeMutator MutatorStun

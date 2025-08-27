@@ -5,22 +5,23 @@ public class UniversalRenderPipelineVolumeDebugSettings : VolumeDebugSettings<Un
 
 	public virtual LayerMask selectedCameraLayerMask
 	{
-		 get { } //Length: 171
+		 get { } //Length: 224
 	}
 
 	public virtual Vector3 selectedCameraPosition
 	{
-		 get { } //Length: 222
+		 get { } //Length: 257
 	}
 
 	public virtual VolumeStack selectedCameraVolumeStack
 	{
-		 get { } //Length: 271
+		 get { } //Length: 299
 	}
 
+	[Obsolete("This property is obsolete and kept only for not breaking user code. VolumeDebugSettings will use current pipeline when it needs to gather volume component types and paths. #from(23.2)", False)]
 	public virtual Type targetRenderPipeline
 	{
-		 get { } //Length: 89
+		 get { } //Length: 77
 	}
 
 	public UniversalRenderPipelineVolumeDebugSettings() { }

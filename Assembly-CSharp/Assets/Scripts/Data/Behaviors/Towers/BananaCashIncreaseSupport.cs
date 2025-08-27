@@ -13,7 +13,7 @@ public class BananaCashIncreaseSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 308
+		 get { } //Length: 342
 	}
 
 	public BananaCashIncreaseSupport() { }

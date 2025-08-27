@@ -1,5 +1,7 @@
 namespace UnityEngine;
 
+[NativeHeader("Modules/Physics/PhysXContactModification.h")]
+[NativeHeader("Modules/Physics/PhysicsCollisionGeometry.h")]
 public struct ModifiableContactPair
 {
 	private IntPtr actor; //Field offset: 0x0

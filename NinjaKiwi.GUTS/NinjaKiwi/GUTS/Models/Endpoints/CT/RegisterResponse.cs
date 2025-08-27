@@ -8,7 +8,7 @@ public class RegisterResponse : EndpointResponseBase, IUserServerIdsResponse, IE
 	[JsonIgnore]
 	public override bool Success
 	{
-		 get { } //Length: 61
+		 get { } //Length: 59
 	}
 
 	public override UserServerIds UserServerIds

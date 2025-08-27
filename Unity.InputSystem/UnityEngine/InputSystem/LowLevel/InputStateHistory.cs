@@ -10,7 +10,7 @@ public class InputStateHistory : IDisposable, IEnumerable<Record>, IEnumerable, 
 
 		public override Record Current
 		{
-			 get { } //Length: 284
+			 get { } //Length: 274
 		}
 
 		private override object System.Collections.IEnumerator.Current
@@ -55,7 +55,7 @@ public class InputStateHistory : IDisposable, IEnumerable<Record>, IEnumerable, 
 
 		public Record next
 		{
-			 get { } //Length: 168
+			 get { } //Length: 162
 		}
 
 		public InputStateHistory owner
@@ -65,7 +65,7 @@ public class InputStateHistory : IDisposable, IEnumerable<Record>, IEnumerable, 
 
 		public Record previous
 		{
-			 get { } //Length: 168
+			 get { } //Length: 154
 		}
 
 		internal int recordIndex
@@ -80,7 +80,7 @@ public class InputStateHistory : IDisposable, IEnumerable<Record>, IEnumerable, 
 
 		public bool valid
 		{
-			 get { } //Length: 70
+			 get { } //Length: 67
 		}
 
 		internal uint version
@@ -226,8 +226,8 @@ public class InputStateHistory : IDisposable, IEnumerable<Record>, IEnumerable, 
 
 	public Record Item
 	{
-		 get { } //Length: 286
-		 set { } //Length: 298
+		 get { } //Length: 270
+		 set { } //Length: 282
 	}
 
 	public Action<Record> onRecordAdded

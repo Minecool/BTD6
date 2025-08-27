@@ -75,7 +75,7 @@ public sealed class ValueAnimation : IValueAnimationUpdate
 
 	public T from
 	{
-		 get { } //Length: 72
+		 get { } //Length: 70
 		 set { } //Length: 9
 	}
 

@@ -94,7 +94,7 @@ public class OdysseySaveData : BaseSaveDataModel
 	[JsonIgnore]
 	public OdysseyDifficultySaveData ActiveDifficultySaveData
 	{
-		 get { } //Length: 139
+		 get { } //Length: 137
 	}
 
 	[JsonConstructor]

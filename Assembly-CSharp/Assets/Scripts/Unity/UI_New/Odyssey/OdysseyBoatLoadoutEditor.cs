@@ -59,7 +59,7 @@ public class OdysseyBoatLoadoutEditor : OdysseyBoatLoadoutPanel
 
 	private bool IsCrewLoadoutModified
 	{
-		private get { } //Length: 1115
+		private get { } //Length: 1100
 	}
 
 	private ILocProvider Locs

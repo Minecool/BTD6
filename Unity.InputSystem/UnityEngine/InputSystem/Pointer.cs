@@ -31,7 +31,7 @@ public class Pointer : InputDevice, IInputStateCallbackReceiver
 		[CompilerGenerated]
 		 get { } //Length: 8
 		[CompilerGenerated]
-		 set { } //Length: 95
+		 set { } //Length: 8
 	}
 
 	public IntegerControl displayIndex

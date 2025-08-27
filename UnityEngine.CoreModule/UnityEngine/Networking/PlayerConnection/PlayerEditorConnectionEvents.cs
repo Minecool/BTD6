@@ -2,39 +2,6 @@ namespace UnityEngine.Networking.PlayerConnection;
 
 internal class PlayerEditorConnectionEvents
 {
-	[CompilerGenerated]
-	private sealed class <>c__DisplayClass6_0
-	{
-		public Guid messageId; //Field offset: 0x10
-
-		public <>c__DisplayClass6_0() { }
-
-		internal bool <InvokeMessageIdSubscribers>b__0(MessageTypeSubscribers x) { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <>c__DisplayClass7_0
-	{
-		public Guid messageId; //Field offset: 0x10
-
-		public <>c__DisplayClass7_0() { }
-
-		internal bool <AddAndCreate>b__0(MessageTypeSubscribers x) { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <>c__DisplayClass8_0
-	{
-		public Guid messageId; //Field offset: 0x10
-
-		public <>c__DisplayClass8_0() { }
-
-		internal bool <UnregisterManagedCallback>b__0(MessageTypeSubscribers x) { }
-
-	}
-
 	internal class ConnectionChangeEvent : UnityEvent<Int32>
 	{
 
@@ -71,15 +38,25 @@ internal class PlayerEditorConnectionEvents
 	}
 
 	[SerializeField]
-	public List<MessageTypeSubscribers> messageTypeSubscribers; //Field offset: 0x10
+	private List<MessageTypeSubscribers> m_MessageTypeSubscribers; //Field offset: 0x10
+	private Dictionary<Guid, MessageTypeSubscribers> m_SubscriberLookup; //Field offset: 0x18
 	[SerializeField]
-	public ConnectionChangeEvent connectionEvent; //Field offset: 0x18
+	public ConnectionChangeEvent connectionEvent; //Field offset: 0x20
 	[SerializeField]
-	public ConnectionChangeEvent disconnectionEvent; //Field offset: 0x20
+	public ConnectionChangeEvent disconnectionEvent; //Field offset: 0x28
+
+	public IReadOnlyList<MessageTypeSubscribers> messageTypeSubscribers
+	{
+		 get { } //Length: 5
+	}
 
 	public PlayerEditorConnectionEvents() { }
 
 	public UnityEvent<MessageEventArgs> AddAndCreate(Guid messageId) { }
+
+	private void BuildLookup() { }
+
+	public IReadOnlyList<MessageTypeSubscribers> get_messageTypeSubscribers() { }
 
 	public void InvokeMessageIdSubscribers(Guid messageId, Byte[] data, int playerId) { }
 

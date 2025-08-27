@@ -4,29 +4,29 @@
 internal sealed class <>f__AnonymousType126
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <accessToken>j__TPar <accessToken>i__Field; //Field offset: 0x0
+	private readonly <giftCode>j__TPar <giftCode>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <displayName>j__TPar <displayName>i__Field; //Field offset: 0x0
+	private readonly <sendPubsubMessageOnRedeem>j__TPar <sendPubsubMessageOnRedeem>i__Field; //Field offset: 0x0
 
-	public <accessToken>j__TPar accessToken
+	public <giftCode>j__TPar giftCode
 	{
 		 get { } //Length: 5
 	}
 
-	public <displayName>j__TPar displayName
+	public <sendPubsubMessageOnRedeem>j__TPar sendPubsubMessageOnRedeem
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType126`2(<accessToken>j__TPar accessToken, <displayName>j__TPar displayName) { }
+	public <>f__AnonymousType126`2(<giftCode>j__TPar giftCode, <sendPubsubMessageOnRedeem>j__TPar sendPubsubMessageOnRedeem) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <accessToken>j__TPar get_accessToken() { }
+	public <giftCode>j__TPar get_giftCode() { }
 
-	public <displayName>j__TPar get_displayName() { }
+	public <sendPubsubMessageOnRedeem>j__TPar get_sendPubsubMessageOnRedeem() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

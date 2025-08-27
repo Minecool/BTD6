@@ -51,7 +51,7 @@ public static class Random
 
 	public static void set_state(State value) { }
 
-	private static void set_state_Injected(ref State value) { }
+	private static void set_state_Injected(in State value) { }
 
 }
 

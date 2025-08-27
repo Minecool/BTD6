@@ -17,7 +17,7 @@ public class JConstructor : JContainer
 	[Nullable(2)]
 	public virtual JToken Item
 	{
-		 get { } //Length: 301
+		 get { } //Length: 289
 	}
 
 	[Nullable(2)]
@@ -38,6 +38,8 @@ public class JConstructor : JContainer
 
 	internal virtual JToken CloneToken(JsonCloneSettings settings = null) { }
 
+	internal virtual bool DeepEquals(JToken node) { }
+
 	protected virtual IList<JToken> get_ChildrenTokens() { }
 
 	public virtual JToken get_Item(object key) { }
@@ -46,6 +48,8 @@ public class JConstructor : JContainer
 	public string get_Name() { }
 
 	public virtual JTokenType get_Type() { }
+
+	internal virtual int GetDeepHashCode() { }
 
 	[NullableContext(2)]
 	internal virtual int IndexOfItem(JToken item) { }

@@ -7,5 +7,6 @@ public enum BatchCullingViewType
 	Light = 2,
 	Picking = 3,
 	SelectionOutline = 4,
+	Filtering = 5,
 }
 

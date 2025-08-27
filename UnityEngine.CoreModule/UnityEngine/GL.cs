@@ -1,9 +1,9 @@
 namespace UnityEngine;
 
-[NativeHeader("Runtime/GfxDevice/GfxDevice.h")]
 [NativeHeader("Runtime/Camera/CameraUtil.h")]
-[NativeHeader("Runtime/Camera/Camera.h")]
+[NativeHeader("Runtime/GfxDevice/GfxDevice.h")]
 [NativeHeader("Runtime/Graphics/GraphicsScriptBindings.h")]
+[NativeHeader("Runtime/Camera/Camera.h")]
 [StaticAccessor("GetGfxDevice()", StaticAccessorType::Dot (0))]
 public sealed class GL
 {
@@ -16,7 +16,6 @@ public sealed class GL
 	public static bool wireframe
 	{
 		 get { } //Length: 42
-		 set { } //Length: 51
 	}
 
 	[FreeFunction("GLBegin", ThrowsException = True)]
@@ -36,12 +35,12 @@ public sealed class GL
 	[FreeFunction("GLGetGPUProjectionMatrix")]
 	public static Matrix4x4 GetGPUProjectionMatrix(Matrix4x4 proj, bool renderIntoTexture) { }
 
-	private static void GetGPUProjectionMatrix_Injected(ref Matrix4x4 proj, bool renderIntoTexture, out Matrix4x4 ret) { }
+	private static void GetGPUProjectionMatrix_Injected(in Matrix4x4 proj, bool renderIntoTexture, out Matrix4x4 ret) { }
 
 	[FreeFunction]
 	private static void GLClear(bool clearDepth, bool clearColor, Color backgroundColor, float depth) { }
 
-	private static void GLClear_Injected(bool clearDepth, bool clearColor, ref Color backgroundColor, float depth) { }
+	private static void GLClear_Injected(bool clearDepth, bool clearColor, in Color backgroundColor, float depth) { }
 
 	[FreeFunction]
 	private static void GLLoadPixelMatrixScript(float left, float right, float bottom, float top) { }
@@ -57,7 +56,7 @@ public sealed class GL
 	[FreeFunction("GLLoadProjectionMatrixScript")]
 	public static void LoadProjectionMatrix(Matrix4x4 mat) { }
 
-	private static void LoadProjectionMatrix_Injected(ref Matrix4x4 mat) { }
+	private static void LoadProjectionMatrix_Injected(in Matrix4x4 mat) { }
 
 	[FreeFunction("GLPopMatrixScript")]
 	public static void PopMatrix() { }
@@ -67,11 +66,9 @@ public sealed class GL
 
 	public static void set_modelview(Matrix4x4 value) { }
 
-	public static void set_wireframe(bool value) { }
-
 	private static void SetViewMatrix(Matrix4x4 m) { }
 
-	private static void SetViewMatrix_Injected(ref Matrix4x4 m) { }
+	private static void SetViewMatrix_Injected(in Matrix4x4 m) { }
 
 	public static void TexCoord2(float x, float y) { }
 
@@ -84,7 +81,7 @@ public sealed class GL
 	[FreeFunction("SetGLViewport")]
 	public static void Viewport(Rect pixelRect) { }
 
-	private static void Viewport_Injected(ref Rect pixelRect) { }
+	private static void Viewport_Injected(in Rect pixelRect) { }
 
 }
 

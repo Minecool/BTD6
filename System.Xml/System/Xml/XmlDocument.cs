@@ -64,17 +64,17 @@ public class XmlDocument : XmlNode
 
 	internal override XmlDeclaration Declaration
 	{
-		internal get { } //Length: 176
+		internal get { } //Length: 172
 	}
 
 	public XmlElement DocumentElement
 	{
-		 get { } //Length: 130
+		 get { } //Length: 134
 	}
 
 	public override XmlDocumentType DocumentType
 	{
-		 get { } //Length: 130
+		 get { } //Length: 134
 	}
 
 	internal SchemaInfo DtdSchemaInfo

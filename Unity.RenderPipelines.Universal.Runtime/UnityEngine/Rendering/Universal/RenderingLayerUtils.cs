@@ -29,11 +29,13 @@ internal static class RenderingLayerUtils
 
 	private static MaskSize GetMaskSize(int bits) { }
 
-	public static bool RequireRenderingLayers(UniversalRendererData universalRendererData, int msaaSampleCount, out Event combinedEvent, out MaskSize combinedMaskSize) { }
-
 	public static bool RequireRenderingLayers(UniversalRenderer universalRenderer, List<ScriptableRendererFeature> rendererFeatures, int msaaSampleCount, out Event combinedEvent, out MaskSize combinedMaskSize) { }
 
+	internal static bool RequireRenderingLayers(List<ScriptableRendererFeature> rendererFeatures, RenderingMode renderingMode, bool accurateGbufferNormals, int msaaSampleCount, out Event combinedEvent, out MaskSize combinedMaskSize) { }
+
 	public static void SetupProperties(CommandBuffer cmd, MaskSize maskSize) { }
+
+	internal static void SetupProperties(RasterCommandBuffer cmd, MaskSize maskSize) { }
 
 	public static uint ToValidRenderingLayers(uint renderingLayers) { }
 

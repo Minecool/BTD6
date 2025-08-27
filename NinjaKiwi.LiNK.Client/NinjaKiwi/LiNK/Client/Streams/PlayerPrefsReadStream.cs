@@ -21,7 +21,7 @@ internal class PlayerPrefsReadStream : PlayerPrefsStream
 	public virtual long Position
 	{
 		 get { } //Length: 5
-		 set { } //Length: 476
+		 set { } //Length: 473
 	}
 
 	public PlayerPrefsReadStream(string key, int bufferSize) { }

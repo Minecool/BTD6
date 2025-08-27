@@ -21,7 +21,7 @@ public class ParagonOfPowerModel : SimulationBehaviorModel
 
 	public RateMutatorClass RateMutator
 	{
-		 get { } //Length: 498
+		 get { } //Length: 503
 	}
 
 	public ParagonOfPowerModel(string name, float rateMultiplier, string buffLocsName, string buffIconName) { }

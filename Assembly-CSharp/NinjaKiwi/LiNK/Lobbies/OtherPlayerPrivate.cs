@@ -68,17 +68,17 @@ public class OtherPlayerPrivate
 	public event Action AWOLEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action KickedEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action<TimeSpan, TimeSpan, Boolean> LatencyUpdateEvent

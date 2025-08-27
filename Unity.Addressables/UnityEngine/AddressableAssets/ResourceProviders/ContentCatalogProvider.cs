@@ -7,7 +7,8 @@ public class ContentCatalogProvider : ResourceProviderBase
 	{
 		Remote = 0,
 		Cache = 1,
-		Count = 2,
+		Local = 2,
+		Count = 3,
 	}
 
 	public class InternalOp
@@ -76,7 +77,7 @@ public class ContentCatalogProvider : ResourceProviderBase
 
 		}
 
-		private const string kCatalogExt = ".json"; //Field offset: 0x0
+		private const string kCatalogExt = ".bin"; //Field offset: 0x0
 		private string m_LocalDataPath; //Field offset: 0x10
 		private string m_RemoteHashValue; //Field offset: 0x18
 		internal string m_LocalHashValue; //Field offset: 0x20

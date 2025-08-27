@@ -45,7 +45,7 @@ public class UpgradeArtifactsPanel : MonoBehaviour
 
 	private RogueGameSaveData RogueSaveData
 	{
-		private get { } //Length: 227
+		private get { } //Length: 319
 	}
 
 	public UpgradeArtifactsPanel() { }

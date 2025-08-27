@@ -8,7 +8,7 @@ public abstract class BaseLoot
 
 	public bool IsLeaderboardBadge
 	{
-		 get { } //Length: 101
+		 get { } //Length: 97
 	}
 
 	private static BaseLoot() { }

@@ -25,7 +25,7 @@ internal class PathList
 	public object Item
 	{
 		 get { } //Length: 42
-		 set { } //Length: 244
+		 set { } //Length: 231
 	}
 
 	public object SyncRoot

@@ -127,8 +127,6 @@ public sealed class BufferedStream : Stream
 
 	}
 
-	private const int MaxShadowBufferSize = 81920; //Field offset: 0x0
-	private const int DefaultBufferSize = 4096; //Field offset: 0x0
 	private Stream _stream; //Field offset: 0x28
 	private Byte[] _buffer; //Field offset: 0x30
 	private readonly int _bufferSize; //Field offset: 0x38
@@ -140,22 +138,22 @@ public sealed class BufferedStream : Stream
 
 	public virtual bool CanRead
 	{
-		 get { } //Length: 34
+		 get { } //Length: 32
 	}
 
 	public virtual bool CanSeek
 	{
-		 get { } //Length: 34
+		 get { } //Length: 32
 	}
 
 	public virtual bool CanWrite
 	{
-		 get { } //Length: 34
+		 get { } //Length: 32
 	}
 
 	public virtual long Length
 	{
-		 get { } //Length: 205
+		 get { } //Length: 202
 	}
 
 	public virtual long Position

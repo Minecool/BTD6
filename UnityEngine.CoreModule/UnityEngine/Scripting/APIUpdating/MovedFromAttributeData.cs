@@ -1,5 +1,6 @@
 namespace UnityEngine.Scripting.APIUpdating;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 internal struct MovedFromAttributeData
 {
 	public string className; //Field offset: 0x0

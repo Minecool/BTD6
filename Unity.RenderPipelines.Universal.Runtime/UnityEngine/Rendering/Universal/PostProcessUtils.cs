@@ -26,7 +26,9 @@ public static class PostProcessUtils
 
 	public static void ConfigureFilmGrain(PostProcessData data, FilmGrain settings, int cameraPixelWidth, int cameraPixelHeight, Material material) { }
 
-	internal static void SetSourceSize(CommandBuffer cmd, RenderTextureDescriptor desc) { }
+	internal static void SetSourceSize(RasterCommandBuffer cmd, RTHandle source) { }
+
+	internal static void SetSourceSize(CommandBuffer cmd, RTHandle source) { }
 
 }
 

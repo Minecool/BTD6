@@ -7,14 +7,11 @@ public class UpgradeInfoPopup : MonoBehaviour
 	public Animator animator; //Field offset: 0x30
 	private bool openedRight; //Field offset: 0x38
 	private bool showing; //Field offset: 0x39
-	private UpgradeObject upgradeObj; //Field offset: 0x40
-	private bool forCurrent; //Field offset: 0x48
+	private bool forCurrent; //Field offset: 0x3A
 
 	public UpgradeInfoPopup() { }
 
 	public void Hide() { }
-
-	public void Init(UpgradeObject upgradeObj) { }
 
 	public bool IsShowing() { }
 
@@ -22,7 +19,7 @@ public class UpgradeInfoPopup : MonoBehaviour
 
 	public void Show(bool forCurrent) { }
 
-	public void Update() { }
+	public void UpdateInfo(UpgradeObject upgradeObj) { }
 
 }
 

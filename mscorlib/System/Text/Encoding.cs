@@ -155,52 +155,6 @@ public abstract class Encoding : ICloneable
 	}
 
 	private static Encoding defaultEncoding; //Field offset: 0x0
-	private const int ChineseHZ = 52936; //Field offset: 0x0
-	private const int DuplicateEUCCN = 51936; //Field offset: 0x0
-	private const int EUCCN = 936; //Field offset: 0x0
-	private const int EUCKR = 51949; //Field offset: 0x0
-	internal const int CodePageASCII = 20127; //Field offset: 0x0
-	internal const int ISO_8859_1 = 28591; //Field offset: 0x0
-	private const int ISCIIAssemese = 57006; //Field offset: 0x0
-	private const int ISCIIBengali = 57003; //Field offset: 0x0
-	private const int ISCIIDevanagari = 57002; //Field offset: 0x0
-	private const int ISCIIGujarathi = 57010; //Field offset: 0x0
-	private const int ISCIIKannada = 57008; //Field offset: 0x0
-	private const int ISOSimplifiedCN = 50227; //Field offset: 0x0
-	private const int ISCIIMalayalam = 57009; //Field offset: 0x0
-	private const int ISCIIPanjabi = 57011; //Field offset: 0x0
-	private const int ISCIITamil = 57004; //Field offset: 0x0
-	private const int ISCIITelugu = 57005; //Field offset: 0x0
-	private const int GB18030 = 54936; //Field offset: 0x0
-	private const int ISO_8859_8I = 38598; //Field offset: 0x0
-	private const int ISO_8859_8_Visual = 28598; //Field offset: 0x0
-	private const int ENC50229 = 50229; //Field offset: 0x0
-	private const int CodePageUTF7 = 65000; //Field offset: 0x0
-	private const int CodePageUTF8 = 65001; //Field offset: 0x0
-	private const int CodePageUTF32 = 12000; //Field offset: 0x0
-	private const int CodePageUTF32BE = 12001; //Field offset: 0x0
-	private const int ISCIIOriya = 57007; //Field offset: 0x0
-	private const int ISOKorean = 50225; //Field offset: 0x0
-	private const int EUCJP = 51932; //Field offset: 0x0
-	private const int ISO2022JPESC = 50221; //Field offset: 0x0
-	private const int MIMECONTF_MAILNEWS = 1; //Field offset: 0x0
-	private const int MIMECONTF_BROWSER = 2; //Field offset: 0x0
-	private const int ISO2022JPSISO = 50222; //Field offset: 0x0
-	private const int MIMECONTF_SAVABLE_BROWSER = 512; //Field offset: 0x0
-	private const int CodePageDefault = 0; //Field offset: 0x0
-	private const int CodePageNoOEM = 1; //Field offset: 0x0
-	private const int CodePageNoMac = 2; //Field offset: 0x0
-	private const int CodePageNoThread = 3; //Field offset: 0x0
-	private const int CodePageNoSymbol = 42; //Field offset: 0x0
-	private const int MIMECONTF_SAVABLE_MAILNEWS = 256; //Field offset: 0x0
-	private const int CodePageBigEndian = 1201; //Field offset: 0x0
-	private const int CodePageWindows1252 = 1252; //Field offset: 0x0
-	private const int CodePageMacGB2312 = 10008; //Field offset: 0x0
-	private const int CodePageGB2312 = 20936; //Field offset: 0x0
-	private const int CodePageMacKorean = 10003; //Field offset: 0x0
-	private const int CodePageDLLKorean = 20949; //Field offset: 0x0
-	private const int ISO2022JP = 50220; //Field offset: 0x0
-	private const int CodePageUnicode = 1200; //Field offset: 0x0
 	private static Encoding unicodeEncoding; //Field offset: 0x8
 	private static Encoding bigEndianUnicode; //Field offset: 0x10
 	private static Encoding utf7Encoding; //Field offset: 0x18
@@ -361,27 +315,29 @@ public abstract class Encoding : ICloneable
 
 	internal override Char[] GetBestFitUnicodeToBytesData() { }
 
-	public abstract int GetByteCount(Char[] chars, int index, int count) { }
-
-	internal override int GetByteCount(Char* chars, int count, EncoderNLS encoder) { }
-
 	[CLSCompliant(False)]
 	[ComVisible(False)]
 	public override int GetByteCount(Char* chars, int count) { }
 
+	public abstract int GetByteCount(Char[] chars, int index, int count) { }
+
+	internal override int GetByteCount(Char* chars, int count, EncoderNLS encoder) { }
+
+	public override int GetByteCount(ReadOnlySpan<Char> chars) { }
+
 	public override int GetByteCount(string s) { }
+
+	public override int GetBytes(string s, int charIndex, int charCount, Byte[] bytes, int byteIndex) { }
 
 	[CLSCompliant(False)]
 	[ComVisible(False)]
 	public override int GetBytes(Char* chars, int charCount, Byte* bytes, int byteCount) { }
 
-	internal override int GetBytes(Char* chars, int charCount, Byte* bytes, int byteCount, EncoderNLS encoder) { }
-
-	public override int GetBytes(string s, int charIndex, int charCount, Byte[] bytes, int byteIndex) { }
+	public override Byte[] GetBytes(string s) { }
 
 	public abstract int GetBytes(Char[] chars, int charIndex, int charCount, Byte[] bytes, int byteIndex) { }
 
-	public override Byte[] GetBytes(string s) { }
+	internal override int GetBytes(Char* chars, int charCount, Byte* bytes, int byteCount, EncoderNLS encoder) { }
 
 	public override Byte[] GetBytes(Char[] chars) { }
 
@@ -397,15 +353,15 @@ public abstract class Encoding : ICloneable
 
 	internal override int GetChars(Byte* bytes, int byteCount, Char* chars, int charCount, DecoderNLS decoder) { }
 
-	[CLSCompliant(False)]
-	[ComVisible(False)]
-	public override int GetChars(Byte* bytes, int byteCount, Char* chars, int charCount) { }
+	public abstract int GetChars(Byte[] bytes, int byteIndex, int byteCount, Char[] chars, int charIndex) { }
 
 	public override Char[] GetChars(Byte[] bytes) { }
 
 	public override Char[] GetChars(Byte[] bytes, int index, int count) { }
 
-	public abstract int GetChars(Byte[] bytes, int byteIndex, int byteCount, Char[] chars, int charIndex) { }
+	[CLSCompliant(False)]
+	[ComVisible(False)]
+	public override int GetChars(Byte* bytes, int byteCount, Char* chars, int charCount) { }
 
 	private void GetDataItem() { }
 
@@ -413,11 +369,11 @@ public abstract class Encoding : ICloneable
 
 	public override Encoder GetEncoder() { }
 
+	public static Encoding GetEncoding(int codepage) { }
+
 	public static Encoding GetEncoding(string name) { }
 
 	public static Encoding GetEncoding(int codepage, EncoderFallback encoderFallback, DecoderFallback decoderFallback) { }
-
-	public static Encoding GetEncoding(int codepage) { }
 
 	public virtual int GetHashCode() { }
 
@@ -427,20 +383,20 @@ public abstract class Encoding : ICloneable
 
 	public override Byte[] GetPreamble() { }
 
+	public override string GetString(Byte[] bytes, int index, int count) { }
+
+	public override string GetString(Byte[] bytes) { }
+
 	[CLSCompliant(False)]
 	[ComVisible(False)]
 	public string GetString(Byte* bytes, int byteCount) { }
 
 	public string GetString(ReadOnlySpan<Byte> bytes) { }
 
-	public override string GetString(Byte[] bytes) { }
-
-	public override string GetString(Byte[] bytes, int index, int count) { }
-
-	internal void OnDeserialized() { }
-
 	[OnDeserialized]
 	private void OnDeserialized(StreamingContext ctx) { }
+
+	internal void OnDeserialized() { }
 
 	[OnDeserializing]
 	private void OnDeserializing(StreamingContext ctx) { }
@@ -464,9 +420,9 @@ public abstract class Encoding : ICloneable
 
 	internal void ThrowBytesOverflow(EncoderNLS encoder, bool nothingEncoded) { }
 
-	internal void ThrowCharsOverflow() { }
-
 	internal void ThrowCharsOverflow(DecoderNLS decoder, bool nothingDecoded) { }
+
+	internal void ThrowCharsOverflow() { }
 
 }
 

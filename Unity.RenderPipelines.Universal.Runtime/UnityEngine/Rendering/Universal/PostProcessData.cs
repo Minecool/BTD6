@@ -2,57 +2,99 @@ namespace UnityEngine.Rendering.Universal;
 
 public class PostProcessData : ScriptableObject
 {
-	[ReloadGroup]
-	internal sealed class ShaderResources
+	[CategoryInfo(Name = "R: Default PostProcess Shaders", Order = 1000)]
+	[ElementInfo(Order = 0)]
+	[HideInInspector]
+	[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+	internal sealed class ShaderResources : IRenderPipelineResources, IRenderPipelineGraphicsSettings
 	{
-		[Reload("Shaders/PostProcessing/StopNaN.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/StopNaN.shader", SearchType::ProjectPath (0))]
 		public Shader stopNanPS; //Field offset: 0x10
-		[Reload("Shaders/PostProcessing/SubpixelMorphologicalAntialiasing.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/SubpixelMorphologicalAntialiasing.shader", SearchType::ProjectPath (0))]
 		public Shader subpixelMorphologicalAntialiasingPS; //Field offset: 0x18
-		[Reload("Shaders/PostProcessing/GaussianDepthOfField.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/GaussianDepthOfField.shader", SearchType::ProjectPath (0))]
 		public Shader gaussianDepthOfFieldPS; //Field offset: 0x20
-		[Reload("Shaders/PostProcessing/BokehDepthOfField.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/BokehDepthOfField.shader", SearchType::ProjectPath (0))]
 		public Shader bokehDepthOfFieldPS; //Field offset: 0x28
-		[Reload("Shaders/PostProcessing/CameraMotionBlur.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/CameraMotionBlur.shader", SearchType::ProjectPath (0))]
 		public Shader cameraMotionBlurPS; //Field offset: 0x30
-		[Reload("Shaders/PostProcessing/PaniniProjection.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/PaniniProjection.shader", SearchType::ProjectPath (0))]
 		public Shader paniniProjectionPS; //Field offset: 0x38
-		[Reload("Shaders/PostProcessing/LutBuilderLdr.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/LutBuilderLdr.shader", SearchType::ProjectPath (0))]
 		public Shader lutBuilderLdrPS; //Field offset: 0x40
-		[Reload("Shaders/PostProcessing/LutBuilderHdr.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/LutBuilderHdr.shader", SearchType::ProjectPath (0))]
 		public Shader lutBuilderHdrPS; //Field offset: 0x48
-		[Reload("Shaders/PostProcessing/Bloom.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/Bloom.shader", SearchType::ProjectPath (0))]
 		public Shader bloomPS; //Field offset: 0x50
-		[Reload("Shaders/PostProcessing/TemporalAA.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/TemporalAA.shader", SearchType::ProjectPath (0))]
 		public Shader temporalAntialiasingPS; //Field offset: 0x58
-		[Reload("Shaders/PostProcessing/LensFlareDataDriven.shader", Package::Root (1))]
+		[ResourcePath("Shaders/PostProcessing/LensFlareDataDriven.shader", SearchType::ProjectPath (0))]
 		public Shader LensFlareDataDrivenPS; //Field offset: 0x60
-		[Reload("Shaders/PostProcessing/ScalingSetup.shader", Package::Root (1))]
-		public Shader scalingSetupPS; //Field offset: 0x68
-		[Reload("Shaders/PostProcessing/EdgeAdaptiveSpatialUpsampling.shader", Package::Root (1))]
-		public Shader easuPS; //Field offset: 0x70
-		[Reload("Shaders/PostProcessing/UberPost.shader", Package::Root (1))]
-		public Shader uberPostPS; //Field offset: 0x78
-		[Reload("Shaders/PostProcessing/FinalPost.shader", Package::Root (1))]
-		public Shader finalPostPassPS; //Field offset: 0x80
+		[ResourcePath("Shaders/PostProcessing/LensFlareScreenSpace.shader", SearchType::ProjectPath (0))]
+		public Shader LensFlareScreenSpacePS; //Field offset: 0x68
+		[ResourcePath("Shaders/PostProcessing/ScalingSetup.shader", SearchType::ProjectPath (0))]
+		public Shader scalingSetupPS; //Field offset: 0x70
+		[ResourcePath("Shaders/PostProcessing/EdgeAdaptiveSpatialUpsampling.shader", SearchType::ProjectPath (0))]
+		public Shader easuPS; //Field offset: 0x78
+		[ResourcePath("Shaders/PostProcessing/UberPost.shader", SearchType::ProjectPath (0))]
+		public Shader uberPostPS; //Field offset: 0x80
+		[ResourcePath("Shaders/PostProcessing/FinalPost.shader", SearchType::ProjectPath (0))]
+		public Shader finalPostPassPS; //Field offset: 0x88
+		[HideInInspector]
+		[SerializeField]
+		private int m_ShaderResourcesVersion; //Field offset: 0x90
+
+		public override bool isAvailableInPlayerBuild
+		{
+			 get { } //Length: 3
+		}
+
+		public override int version
+		{
+			 get { } //Length: 7
+		}
 
 		public ShaderResources() { }
 
+		public override bool get_isAvailableInPlayerBuild() { }
+
+		public override int get_version() { }
+
 	}
 
-	[ReloadGroup]
-	internal sealed class TextureResources
+	[CategoryInfo(Name = "R: Default PostProcess Textures", Order = 1000)]
+	[ElementInfo(Order = 0)]
+	[HideInInspector]
+	[SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))]
+	internal sealed class TextureResources : IRenderPipelineResources, IRenderPipelineGraphicsSettings
 	{
-		[Reload("Textures/BlueNoise16/L/LDR_LLL1_{0}.png", 0, 32, Package::Root (1))]
+		[ResourceFormattedPaths("Textures/BlueNoise16/L/LDR_LLL1_{0}.png", 0, 32, SearchType::ProjectPath (0))]
 		public Texture2D[] blueNoise16LTex; //Field offset: 0x10
-		[Reload(new IL2CPP_TYPE_STRING[] {"Textures/FilmGrain/Thin01.png", "Textures/FilmGrain/Thin02.png", "Textures/FilmGrain/Medium01.png", "Textures/FilmGrain/Medium02.png", "Textures/FilmGrain/Medium03.png", "Textures/FilmGrain/Medium04.png", "Textures/FilmGrain/Medium05.png", "Textures/FilmGrain/Medium06.png", "Textures/FilmGrain/Large01.png", "Textures/FilmGrain/Large02.png"}], Package::Root (1))]
+		[ResourcePaths(new IL2CPP_TYPE_STRING[] {"Textures/FilmGrain/Thin01.png", "Textures/FilmGrain/Thin02.png", "Textures/FilmGrain/Medium01.png", "Textures/FilmGrain/Medium02.png", "Textures/FilmGrain/Medium03.png", "Textures/FilmGrain/Medium04.png", "Textures/FilmGrain/Medium05.png", "Textures/FilmGrain/Medium06.png", "Textures/FilmGrain/Large01.png", "Textures/FilmGrain/Large02.png"}], SearchType::ProjectPath (0))]
 		public Texture2D[] filmGrainTex; //Field offset: 0x18
-		[Reload("Textures/SMAA/AreaTex.tga", Package::Root (1))]
+		[ResourcePath("Textures/SMAA/AreaTex.tga", SearchType::ProjectPath (0))]
 		public Texture2D smaaAreaTex; //Field offset: 0x20
-		[Reload("Textures/SMAA/SearchTex.tga", Package::Root (1))]
+		[ResourcePath("Textures/SMAA/SearchTex.tga", SearchType::ProjectPath (0))]
 		public Texture2D smaaSearchTex; //Field offset: 0x28
+		[HideInInspector]
+		[SerializeField]
+		private int m_TexturesResourcesVersion; //Field offset: 0x30
+
+		public override bool isAvailableInPlayerBuild
+		{
+			 get { } //Length: 3
+		}
+
+		public override int version
+		{
+			 get { } //Length: 4
+		}
 
 		public TextureResources() { }
+
+		public override bool get_isAvailableInPlayerBuild() { }
+
+		public override int get_version() { }
 
 	}
 

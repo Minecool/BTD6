@@ -165,7 +165,7 @@ public class PropBase : CommonBehaviorProxy<IEntityBehavior>
 
 	public void OnSold(float amount) { }
 
-	public virtual float Pickup() { }
+	public virtual float Pickup(Tower towerPickingUp) { }
 
 	public override void Selected() { }
 

@@ -9,7 +9,7 @@ public class AnniversaryChallengeQuest : SimulationBehavior
 	public int numAllowedLeaks; //Field offset: 0x2C
 	public int numRoundsBeforeSpawningTarget; //Field offset: 0x30
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 189
 	}
@@ -21,7 +21,7 @@ public class AnniversaryChallengeQuest : SimulationBehavior
 
 	public AnniversaryChallengeQuest() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

@@ -144,7 +144,7 @@ internal class WebResponseStream : WebConnectionStream
 
 	private bool ExpectContent
 	{
-		private get { } //Length: 143
+		private get { } //Length: 134
 	}
 
 	public private WebHeaderCollection Headers

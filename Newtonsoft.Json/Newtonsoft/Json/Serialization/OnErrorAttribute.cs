@@ -4,5 +4,7 @@ namespace Newtonsoft.Json.Serialization;
 public sealed class OnErrorAttribute : Attribute
 {
 
+	public OnErrorAttribute() { }
+
 }
 

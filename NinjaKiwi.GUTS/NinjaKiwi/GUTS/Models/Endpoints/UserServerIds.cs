@@ -43,7 +43,7 @@ public class UserServerIds
 	[JsonIgnore]
 	public bool IsValidForCt
 	{
-		 get { } //Length: 45
+		 get { } //Length: 43
 	}
 
 	public ulong UserEntryId

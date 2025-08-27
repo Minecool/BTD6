@@ -241,10 +241,6 @@ public class Dictionary : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 	}
 
-	private const string VersionName = "Version"; //Field offset: 0x0
-	private const string HashSizeName = "HashSize"; //Field offset: 0x0
-	private const string KeyValuePairsName = "KeyValuePairs"; //Field offset: 0x0
-	private const string ComparerName = "Comparer"; //Field offset: 0x0
 	private Int32[] _buckets; //Field offset: 0x0
 	private Entry<TKey, TValue>[] _entries; //Field offset: 0x0
 	private int _count; //Field offset: 0x0
@@ -315,7 +311,7 @@ public class Dictionary : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 	private override object System.Collections.IDictionary.Item
 	{
 		private get { } //Length: 290
-		private set { } //Length: 495
+		private set { } //Length: 486
 	}
 
 	private override ICollection System.Collections.IDictionary.Keys
@@ -357,6 +353,8 @@ public class Dictionary : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 	private void CopyTo(KeyValuePair<TKey, TValue>[] array, int index) { }
 
+	public int EnsureCapacity(int capacity) { }
+
 	private int FindEntry(TKey key) { }
 
 	public override int get_Count() { }
@@ -379,9 +377,11 @@ public class Dictionary : IDictionary<TKey, TValue>, ICollection<KeyValuePair`2<
 
 	public override bool Remove(TKey key) { }
 
-	private void Resize() { }
+	public bool Remove(TKey key, out TValue value) { }
 
 	private void Resize(int newSize, bool forceNewHashCodes) { }
+
+	private void Resize() { }
 
 	public override void set_Item(TKey key, TValue value) { }
 

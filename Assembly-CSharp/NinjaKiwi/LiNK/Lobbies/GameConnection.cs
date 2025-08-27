@@ -592,9 +592,9 @@ public class GameConnection : IDisposable
 	public event Action<String> LogEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action NoPlayersAWOLEvent
@@ -640,9 +640,9 @@ public class GameConnection : IDisposable
 	public event Action<Byte> PlayerRejoinedEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action ReconnectedEvent
@@ -680,7 +680,7 @@ public class GameConnection : IDisposable
 	public IEnumerable<Player> AllPlayers
 	{
 		[IteratorStateMachine(typeof(<get_AllPlayers>d__7))]
-		 get { } //Length: 100
+		 get { } //Length: 99
 	}
 
 	private static TimeSpan ElapsedTime
@@ -690,13 +690,13 @@ public class GameConnection : IDisposable
 
 	public GameDetails GameDetails
 	{
-		 get { } //Length: 177
+		 get { } //Length: 176
 	}
 
 	public IEnumerable<Player> OtherPlayers
 	{
 		[IteratorStateMachine(typeof(<get_OtherPlayers>d__5))]
-		 get { } //Length: 100
+		 get { } //Length: 99
 	}
 
 	public TimeSpan SelfLatency

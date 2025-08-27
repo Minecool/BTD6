@@ -12,7 +12,7 @@ public class UnsignedLongField : TextValueField<UInt64>
 
 		private UnsignedLongField parentUnsignedLongField
 		{
-			private get { } //Length: 113
+			private get { } //Length: 117
 		}
 
 		internal UnsignedLongInput() { }
@@ -31,6 +31,7 @@ public class UnsignedLongField : TextValueField<UInt64>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<UnsignedLongField, UxmlTraits>
 	{
 
@@ -38,6 +39,7 @@ public class UnsignedLongField : TextValueField<UInt64>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : TextValueFieldTraits<UInt64, UxmlUnsignedLongAttributeDescription>
 	{
 
@@ -51,7 +53,7 @@ public class UnsignedLongField : TextValueField<UInt64>
 
 	private UnsignedLongInput unsignedLongInput
 	{
-		private get { } //Length: 122
+		private get { } //Length: 118
 	}
 
 	private static UnsignedLongField() { }

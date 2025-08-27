@@ -69,17 +69,17 @@ public class Texture2DAtlas
 
 	 int GetTextureHash(Texture textureA, Texture textureB) { }
 
-	public int GetTextureID(Texture texture) { }
-
 	public int GetTextureID(Texture textureA, Texture textureB) { }
+
+	public int GetTextureID(Texture texture) { }
 
 	 int GetTextureMipmapCount(int width, int height) { }
 
 	 bool Is2D(Texture texture) { }
 
-	public bool IsCached(out Vector4 scaleOffset, Texture texture) { }
-
 	public bool IsCached(out Vector4 scaleOffset, Texture textureA, Texture textureB) { }
+
+	public bool IsCached(out Vector4 scaleOffset, Texture texture) { }
 
 	public bool IsCached(out Vector4 scaleOffset, int id) { }
 
@@ -89,9 +89,11 @@ public class Texture2DAtlas
 
 	 void MarkGPUTextureValid(int instanceId, bool mipAreValid = false) { }
 
-	public override bool NeedsUpdate(Texture textureA, Texture textureB, bool needMips = false) { }
-
 	public override bool NeedsUpdate(Texture texture, bool needMips = false) { }
+
+	public override bool NeedsUpdate(int id, int updateCount, bool needMips = false) { }
+
+	public override bool NeedsUpdate(Texture textureA, Texture textureB, bool needMips = false) { }
 
 	public void Release() { }
 

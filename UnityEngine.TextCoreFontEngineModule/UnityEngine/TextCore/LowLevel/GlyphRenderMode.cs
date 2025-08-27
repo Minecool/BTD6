@@ -3,6 +3,7 @@ namespace UnityEngine.TextCore.LowLevel;
 [UsedByNativeCode]
 public enum GlyphRenderMode
 {
+	DEFAULT = 0,
 	SMOOTH_HINTED = 4121,
 	SMOOTH = 4117,
 	COLOR_HINTED = 69656,

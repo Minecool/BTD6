@@ -35,37 +35,37 @@ public sealed class XmlAtomicValue : XPathItem, ICloneable
 
 	public virtual object TypedValue
 	{
-		 get { } //Length: 517
+		 get { } //Length: 515
 	}
 
 	public virtual string Value
 	{
-		 get { } //Length: 305
+		 get { } //Length: 303
 	}
 
 	public virtual bool ValueAsBoolean
 	{
-		 get { } //Length: 269
+		 get { } //Length: 267
 	}
 
 	public virtual DateTime ValueAsDateTime
 	{
-		 get { } //Length: 269
+		 get { } //Length: 267
 	}
 
 	public virtual double ValueAsDouble
 	{
-		 get { } //Length: 269
+		 get { } //Length: 267
 	}
 
 	public virtual int ValueAsInt
 	{
-		 get { } //Length: 269
+		 get { } //Length: 267
 	}
 
 	public virtual long ValueAsLong
 	{
-		 get { } //Length: 269
+		 get { } //Length: 267
 	}
 
 	public virtual Type ValueType

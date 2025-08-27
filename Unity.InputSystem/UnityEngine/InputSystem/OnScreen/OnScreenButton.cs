@@ -1,7 +1,7 @@
 namespace UnityEngine.InputSystem.OnScreen;
 
 [AddComponentMenu("Input/On-Screen Button")]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/OnScreen.html#on-screen-buttons")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/OnScreen.html#on-screen-buttons")]
 public class OnScreenButton : OnScreenControl, IPointerDownHandler, IEventSystemHandler, IPointerUpHandler
 {
 	[InputControl(layout = "Button")]

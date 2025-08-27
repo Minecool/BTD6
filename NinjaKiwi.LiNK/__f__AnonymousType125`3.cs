@@ -4,38 +4,38 @@
 internal sealed class <>f__AnonymousType125
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <username>j__TPar <username>i__Field; //Field offset: 0x0
+	private readonly <filename>j__TPar <filename>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <identifier>j__TPar <identifier>i__Field; //Field offset: 0x0
+	private readonly <data>j__TPar <data>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <confirmation>j__TPar <confirmation>i__Field; //Field offset: 0x0
+	private readonly <expiresIn>j__TPar <expiresIn>i__Field; //Field offset: 0x0
 
-	public <confirmation>j__TPar confirmation
+	public <data>j__TPar data
 	{
 		 get { } //Length: 5
 	}
 
-	public <identifier>j__TPar identifier
+	public <expiresIn>j__TPar expiresIn
 	{
 		 get { } //Length: 5
 	}
 
-	public <username>j__TPar username
+	public <filename>j__TPar filename
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType125`3(<username>j__TPar username, <identifier>j__TPar identifier, <confirmation>j__TPar confirmation) { }
+	public <>f__AnonymousType125`3(<filename>j__TPar filename, <data>j__TPar data, <expiresIn>j__TPar expiresIn) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <confirmation>j__TPar get_confirmation() { }
+	public <data>j__TPar get_data() { }
 
-	public <identifier>j__TPar get_identifier() { }
+	public <expiresIn>j__TPar get_expiresIn() { }
 
-	public <username>j__TPar get_username() { }
+	public <filename>j__TPar get_filename() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

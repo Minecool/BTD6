@@ -10,5 +10,7 @@ public class SelectedDisplay : MonoBehaviour
 
 	public void UpdateNameDisplay(ITowerPurchaseButton button) { }
 
+	public void UpdateNameDisplay(string locsKey) { }
+
 }
 

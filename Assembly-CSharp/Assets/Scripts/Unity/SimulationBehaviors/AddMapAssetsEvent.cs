@@ -5,7 +5,7 @@ public class AddMapAssetsEvent : SimulationBehavior
 	public bool disableAmbientMapFx; //Field offset: 0x18
 	public PrefabReference[] fXPrefabs; //Field offset: 0x20
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 106
 	}
@@ -17,7 +17,7 @@ public class AddMapAssetsEvent : SimulationBehavior
 
 	public AddMapAssetsEvent() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

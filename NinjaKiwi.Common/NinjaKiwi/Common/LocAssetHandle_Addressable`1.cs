@@ -24,7 +24,7 @@ public class LocAssetHandle_Addressable : LocAssetHandle<T>
 
 	public virtual T Asset
 	{
-		 get { } //Length: 91
+		 get { } //Length: 90
 	}
 
 	public LocAssetHandle_Addressable`1(string address) { }

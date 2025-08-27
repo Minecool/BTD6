@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements.Experimental;
 
-[EventCategory(EventCategory::EnterLeave (3))]
+[EventCategory(EventCategory::EnterLeave (4))]
 public class PointerOverLinkTagEvent : PointerEventBase<PointerOverLinkTagEvent>
 {
 	[CompilerGenerated]
@@ -18,10 +18,10 @@ public class PointerOverLinkTagEvent : PointerEventBase<PointerOverLinkTagEvent>
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <linkID>k__BackingField; //Field offset: 0x110
+	private string <linkID>k__BackingField; //Field offset: 0x100
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <linkText>k__BackingField; //Field offset: 0x118
+	private string <linkText>k__BackingField; //Field offset: 0x108
 
 	private string linkID
 	{

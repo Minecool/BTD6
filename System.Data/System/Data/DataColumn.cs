@@ -48,53 +48,53 @@ public class DataColumn : MarshalByValueComponent
 	public bool AllowDBNull
 	{
 		 get { } //Length: 5
-		 set { } //Length: 332
+		 set { } //Length: 379
 	}
 
 	internal AutoIncrementValue AutoInc
 	{
-		internal get { } //Length: 244
+		internal get { } //Length: 232
 	}
 
 	[DefaultValue(False)]
 	[RefreshProperties(RefreshProperties::All (1))]
 	public bool AutoIncrement
 	{
-		 get { } //Length: 25
-		 set { } //Length: 497
+		 get { } //Length: 18
+		 set { } //Length: 467
 	}
 
 	internal object AutoIncrementCurrent
 	{
-		internal get { } //Length: 107
-		internal set { } //Length: 413
+		internal get { } //Length: 71
+		internal set { } //Length: 404
 	}
 
 	[DefaultValue(0)]
 	public long AutoIncrementSeed
 	{
-		 get { } //Length: 40
-		 set { } //Length: 251
+		 get { } //Length: 35
+		 set { } //Length: 242
 	}
 
 	[DefaultValue(1)]
 	public long AutoIncrementStep
 	{
-		 get { } //Length: 43
-		 set { } //Length: 254
+		 get { } //Length: 38
+		 set { } //Length: 245
 	}
 
 	public string Caption
 	{
-		 get { } //Length: 17
-		 set { } //Length: 208
+		 get { } //Length: 14
+		 set { } //Length: 176
 	}
 
 	[DefaultValue(MappingType::Element (1))]
 	public override MappingType ColumnMapping
 	{
 		 get { } //Length: 7
-		 set { } //Length: 690
+		 set { } //Length: 661
 	}
 
 	[DefaultValue(null)]
@@ -102,7 +102,7 @@ public class DataColumn : MarshalByValueComponent
 	public string ColumnName
 	{
 		 get { } //Length: 5
-		 set { } //Length: 986
+		 set { } //Length: 999
 	}
 
 	internal bool Computed
@@ -121,7 +121,7 @@ public class DataColumn : MarshalByValueComponent
 	public Type DataType
 	{
 		 get { } //Length: 5
-		 set { } //Length: 2864
+		 set { } //Length: 2755
 	}
 
 	[DefaultValue(DataSetDateTime::UnspecifiedLocal (3))]
@@ -129,14 +129,14 @@ public class DataColumn : MarshalByValueComponent
 	public DataSetDateTime DateTimeMode
 	{
 		 get { } //Length: 4
-		 set { } //Length: 378
+		 set { } //Length: 362
 	}
 
 	[TypeConverter(typeof(DefaultValueTypeConverter))]
 	public object DefaultValue
 	{
-		 get { } //Length: 337
-		 set { } //Length: 760
+		 get { } //Length: 328
+		 set { } //Length: 732
 	}
 
 	internal bool DefaultValueIsNull
@@ -153,8 +153,8 @@ public class DataColumn : MarshalByValueComponent
 	[RefreshProperties(RefreshProperties::All (1))]
 	public string Expression
 	{
-		 get { } //Length: 73
-		 set { } //Length: 1955
+		 get { } //Length: 71
+		 set { } //Length: 1616
 	}
 
 	[Browsable(False)]
@@ -165,7 +165,7 @@ public class DataColumn : MarshalByValueComponent
 
 	internal IFormatProvider FormatProvider
 	{
-		internal get { } //Length: 93
+		internal get { } //Length: 91
 	}
 
 	internal bool HasData
@@ -195,7 +195,7 @@ public class DataColumn : MarshalByValueComponent
 
 	internal bool IsCustomType
 	{
-		internal get { } //Length: 104
+		internal get { } //Length: 99
 	}
 
 	internal bool IsSqlType
@@ -211,25 +211,25 @@ public class DataColumn : MarshalByValueComponent
 	internal object Item
 	{
 		internal get { } //Length: 45
-		internal set { } //Length: 407
+		internal set { } //Length: 402
 	}
 
 	internal CultureInfo Locale
 	{
-		internal get { } //Length: 94
+		internal get { } //Length: 92
 	}
 
 	[DefaultValue(-1)]
 	public int MaxLength
 	{
 		 get { } //Length: 4
-		 set { } //Length: 963
+		 set { } //Length: 964
 	}
 
 	public string Namespace
 	{
-		 get { } //Length: 115
-		 set { } //Length: 400
+		 get { } //Length: 58
+		 set { } //Length: 350
 	}
 
 	internal int ObjectID
@@ -248,7 +248,7 @@ public class DataColumn : MarshalByValueComponent
 	public string Prefix
 	{
 		 get { } //Length: 8
-		 set { } //Length: 356
+		 set { } //Length: 344
 	}
 
 	[DefaultValue(False)]
@@ -267,7 +267,7 @@ public class DataColumn : MarshalByValueComponent
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private Index SortIndex
 	{
-		private get { } //Length: 196
+		private get { } //Length: 194
 	}
 
 	[Browsable(False)]
@@ -282,7 +282,7 @@ public class DataColumn : MarshalByValueComponent
 	public bool Unique
 	{
 		 get { } //Length: 8
-		 set { } //Length: 1048
+		 set { } //Length: 1083
 	}
 
 	internal string XmlDataType

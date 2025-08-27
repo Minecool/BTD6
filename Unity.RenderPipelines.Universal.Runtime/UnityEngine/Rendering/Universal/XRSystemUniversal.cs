@@ -10,9 +10,9 @@ internal static class XRSystemUniversal
 
 	internal static void EndLateLatching(Camera camera, XRPassUniversal xrPass) { }
 
-	internal static void MarkShaderProperties(CommandBuffer cmd, XRPassUniversal xrPass, bool renderIntoTexture) { }
+	internal static void MarkShaderProperties(RasterCommandBuffer cmd, XRPassUniversal xrPass, bool renderIntoTexture) { }
 
-	internal static void UnmarkShaderProperties(CommandBuffer cmd, XRPassUniversal xrPass) { }
+	internal static void UnmarkShaderProperties(RasterCommandBuffer cmd, XRPassUniversal xrPass) { }
 
 }
 

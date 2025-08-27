@@ -36,7 +36,7 @@ internal sealed class InflateManager
 	internal bool HandleRfc1950HeaderBytes
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 4
+		internal set { } //Length: 86
 	}
 
 	private static InflateManager() { }

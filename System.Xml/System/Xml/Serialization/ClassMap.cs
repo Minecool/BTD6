@@ -26,7 +26,7 @@ internal class ClassMap : ObjectMap
 
 	public ICollection AttributeMembers
 	{
-		 get { } //Length: 758
+		 get { } //Length: 787
 	}
 
 	public XmlTypeMapMemberAnyAttribute DefaultAnyAttributeMember
@@ -56,7 +56,7 @@ internal class ClassMap : ObjectMap
 
 	public bool IsOrderDependentMap
 	{
-		 get { } //Length: 640
+		 get { } //Length: 688
 	}
 
 	public ArrayList ListMembers
@@ -76,7 +76,7 @@ internal class ClassMap : ObjectMap
 
 	public XmlQualifiedName SimpleContentBaseType
 	{
-		 get { } //Length: 532
+		 get { } //Length: 534
 	}
 
 	public XmlTypeMapMember XmlTextCollector

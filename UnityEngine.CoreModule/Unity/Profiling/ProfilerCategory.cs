@@ -8,7 +8,7 @@ public struct ProfilerCategory
 
 	public static ProfilerCategory Loading
 	{
-		 get { } //Length: 103
+		 get { } //Length: 31
 	}
 
 	public static ProfilerCategory Memory

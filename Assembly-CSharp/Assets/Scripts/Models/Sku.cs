@@ -55,7 +55,7 @@ public class Sku : IContentBrowserSettings, ISweepstakesSkuSettings
 		public DateTime CacheTime
 		{
 			[CompilerGenerated]
-			 get { } //Length: 5
+			 get { } //Length: 291
 		}
 
 		public IReadOnlyCollection<String> FeaturedIds

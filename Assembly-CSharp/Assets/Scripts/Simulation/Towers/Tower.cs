@@ -3,7 +3,7 @@ namespace Assets.Scripts.Simulation.Towers;
 public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBehaviorProxy, IMutable, IRootBehavior, IRootObject
 {
 	[CompilerGenerated]
-	private sealed class <AddDiscountZoneBuffs>d__149 : IEnumerable<BuffQuery>, IEnumerable, IEnumerator<BuffQuery>, IEnumerator, IDisposable
+	private sealed class <AddDiscountZoneBuffs>d__151 : IEnumerable<BuffQuery>, IEnumerable, IEnumerator<BuffQuery>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private BuffQuery <>2__current; //Field offset: 0x18
@@ -24,7 +24,7 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 		}
 
 		[DebuggerHidden]
-		public <AddDiscountZoneBuffs>d__149(int <>1__state) { }
+		public <AddDiscountZoneBuffs>d__151(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -51,7 +51,7 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 	}
 
 	[CompilerGenerated]
-	private sealed class <AddOtherBuffs>d__150 : IEnumerable<BuffQuery>, IEnumerable, IEnumerator<BuffQuery>, IEnumerator, IDisposable
+	private sealed class <AddOtherBuffs>d__152 : IEnumerable<BuffQuery>, IEnumerable, IEnumerator<BuffQuery>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private BuffQuery <>2__current; //Field offset: 0x18
@@ -73,7 +73,7 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 		}
 
 		[DebuggerHidden]
-		public <AddOtherBuffs>d__150(int <>1__state) { }
+		public <AddOtherBuffs>d__152(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -102,7 +102,7 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 	}
 
 	[CompilerGenerated]
-	private sealed class <FindDiscountZones>d__147 : IEnumerable<DiscountZone>, IEnumerable, IEnumerator<DiscountZone>, IEnumerator, IDisposable
+	private sealed class <FindDiscountZones>d__149 : IEnumerable<DiscountZone>, IEnumerable, IEnumerator<DiscountZone>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private DiscountZone <>2__current; //Field offset: 0x18
@@ -126,7 +126,7 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 		}
 
 		[DebuggerHidden]
-		public <FindDiscountZones>d__147(int <>1__state) { }
+		public <FindDiscountZones>d__149(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -184,44 +184,45 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 	public RootObjectLockList<WeaponBehavior> weaponBehaviorsInDependants; //Field offset: 0x190
 	public RootObjectLockList<AttackBehavior> attackBehaviorsInDependants; //Field offset: 0x198
 	public List<TowerUpgradeLock> towerUpgradeLocks; //Field offset: 0x1A0
-	public RootObjectLockList<ITowerBehavior> towerBehaviors; //Field offset: 0x1A8
-	public long necroBloonsReanimated; //Field offset: 0x1B0
-	private ObjectId areaPlacedOn; //Field offset: 0x1B8
-	public Action<Tower, ObjectId, ObjectId> OnAreaChanged; //Field offset: 0x1C0
-	public List<Area> createdAreas; //Field offset: 0x1C8
-	public Action<Boolean> towerRepositioned; //Field offset: 0x1D0
-	private string lostTargetType; //Field offset: 0x1D8
-	private string loadedTargetType; //Field offset: 0x1E0
-	public string namedMonkeyKey; //Field offset: 0x1E8
-	public string towerSkinName; //Field offset: 0x1F0
-	public List<BuffQuery> activeBuffs; //Field offset: 0x1F8
+	public List<TowerTierLock> towerTierLocks; //Field offset: 0x1A8
+	public RootObjectLockList<ITowerBehavior> towerBehaviors; //Field offset: 0x1B0
+	public long necroBloonsReanimated; //Field offset: 0x1B8
+	private ObjectId areaPlacedOn; //Field offset: 0x1C0
+	public Action<Tower, ObjectId, ObjectId> OnAreaChanged; //Field offset: 0x1C8
+	public List<Area> createdAreas; //Field offset: 0x1D0
+	public Action<Boolean> towerRepositioned; //Field offset: 0x1D8
+	private string lostTargetType; //Field offset: 0x1E0
+	private string loadedTargetType; //Field offset: 0x1E8
+	public string namedMonkeyKey; //Field offset: 0x1F0
+	public string towerSkinName; //Field offset: 0x1F8
+	public List<BuffQuery> activeBuffs; //Field offset: 0x200
 	[CompilerGenerated]
-	private bool <IsSuspendedButNotScaled>k__BackingField; //Field offset: 0x200
+	private bool <IsSuspendedButNotScaled>k__BackingField; //Field offset: 0x208
 	[CompilerGenerated]
-	private bool <IsSelectionBlocked>k__BackingField; //Field offset: 0x201
+	private bool <IsSelectionBlocked>k__BackingField; //Field offset: 0x209
 	[CompilerGenerated]
-	private bool <IsSellingBlocked>k__BackingField; //Field offset: 0x202
+	private bool <IsSellingBlocked>k__BackingField; //Field offset: 0x20A
 	[CompilerGenerated]
-	private bool <IsNotUpgradeable>k__BackingField; //Field offset: 0x203
+	private bool <IsNotUpgradeable>k__BackingField; //Field offset: 0x20B
 	[CompilerGenerated]
-	private bool <LockTargetTypeSwitching>k__BackingField; //Field offset: 0x204
+	private bool <LockTargetTypeSwitching>k__BackingField; //Field offset: 0x20C
 	[CompilerGenerated]
-	private int <CustomMapTowerIndexId>k__BackingField; //Field offset: 0x208
-	private int path1NumBlockedTiers; //Field offset: 0x20C
-	private int path2NumBlockedTiers; //Field offset: 0x210
-	private int path3NumBlockedTiers; //Field offset: 0x214
-	public string powerId; //Field offset: 0x218
+	private int <CustomMapTowerIndexId>k__BackingField; //Field offset: 0x210
+	private int path1NumBlockedTiers; //Field offset: 0x214
+	private int path2NumBlockedTiers; //Field offset: 0x218
+	private int path3NumBlockedTiers; //Field offset: 0x21C
+	public string powerId; //Field offset: 0x220
 	[CompilerGenerated]
-	private OnUpgradedWithTowerDelegate OnUpgradedWithTowerEvent; //Field offset: 0x220
-	private int nextEffect; //Field offset: 0x228
-	private HashSet<DiscountZone> discountZones; //Field offset: 0x230
+	private OnUpgradedWithTowerDelegate OnUpgradedWithTowerEvent; //Field offset: 0x228
+	private int nextEffect; //Field offset: 0x230
+	private HashSet<DiscountZone> discountZones; //Field offset: 0x238
 
 	public event OnUpgradedWithTowerDelegate OnUpgradedWithTowerEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public ObjectId AreaPlacedOn
@@ -306,7 +307,7 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 
 	public float SaleValue
 	{
-		 get { } //Length: 217
+		 get { } //Length: 231
 	}
 
 	public Tower() { }
@@ -314,18 +315,18 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 	[CompilerGenerated]
 	public void add_OnUpgradedWithTowerEvent(OnUpgradedWithTowerDelegate value) { }
 
-	[IteratorStateMachine(typeof(<AddDiscountZoneBuffs>d__149))]
+	[IteratorStateMachine(typeof(<AddDiscountZoneBuffs>d__151))]
 	private IEnumerable<BuffQuery> AddDiscountZoneBuffs() { }
 
 	private void AddMapBasedMutators() { }
 
-	public virtual void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false) { }
+	public virtual void AddMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, bool cascadeMutators = false, bool includeSubTowers = false, bool ignoreRecursionCheck = false, int roundsRemaining = -1, bool isParagonMutator = false, bool cantBeAbsorbed = false) { }
 
 	private void AddMutatorFromParent(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, int roundsRemaining = -1) { }
 
 	public void AddMutatorIncludeSubTowers(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, int roundsRemaining = -1) { }
 
-	[IteratorStateMachine(typeof(<AddOtherBuffs>d__150))]
+	[IteratorStateMachine(typeof(<AddOtherBuffs>d__152))]
 	private IEnumerable<BuffQuery> AddOtherBuffs() { }
 
 	public void AddParagonMutator(BehaviorMutator mutator, int time = -1, bool updateDuration = true, bool applyMutation = true, bool onlyTimeoutWhenActive = false, bool useRoundTime = true, int roundsRemaining = -1) { }
@@ -336,9 +337,9 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 
 	public void AddPoppedCash(float cash) { }
 
-	public void ApplyTargetTypeData(TargetType type, Vector2 data) { }
-
 	public void ApplyTargetTypeData(TargetType type, Vector2[] data) { }
+
+	public void ApplyTargetTypeData(TargetType type, Vector2 data) { }
 
 	public virtual void Attatched() { }
 
@@ -358,8 +359,10 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 
 	public virtual bool FilterMutation(BehaviorMutator mutator, ICollection<BehaviorMutatorFilter> filters) { }
 
-	[IteratorStateMachine(typeof(<FindDiscountZones>d__147))]
+	[IteratorStateMachine(typeof(<FindDiscountZones>d__149))]
 	private IEnumerable<DiscountZone> FindDiscountZones(int path) { }
+
+	public void GatherTierLocks() { }
 
 	public void GatherUpgradeLocks() { }
 
@@ -452,6 +455,8 @@ public class Tower : CommonBehaviorProxy<ITowerBehavior>, ISelectable, ICommonBe
 	public void OnRoundStart(int roundNo) { }
 
 	public void OnSold(float amount) { }
+
+	public void OnTowerCrit(Projectile projectile) { }
 
 	public void OnTsmThemeAction(string themeId, string buttonId, TSMInfoModel info) { }
 

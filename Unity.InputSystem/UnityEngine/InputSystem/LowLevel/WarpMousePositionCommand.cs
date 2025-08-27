@@ -8,12 +8,12 @@ internal struct WarpMousePositionCommand : IInputDeviceCommandInfo
 
 	public static FourCC Type
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 133
+		 get { } //Length: 53
 	}
 
 	public static WarpMousePositionCommand Create(Vector2 position) { }

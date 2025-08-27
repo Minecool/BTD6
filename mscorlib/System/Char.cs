@@ -3,14 +3,7 @@ namespace System;
 [IsReadOnly]
 public struct char : IComparable, IComparable<Char>, IEquatable<Char>, IConvertible
 {
-	public const char MaxValue = '\uFFFF'; //Field offset: 0x0
-	public const char MinValue = '\u0'; //Field offset: 0x0
 	private static readonly Byte[] s_categoryForLatin1; //Field offset: 0x0
-	internal const int UNICODE_PLANE00_END = 65535; //Field offset: 0x0
-	internal const int UNICODE_PLANE01_START = 65536; //Field offset: 0x0
-	internal const int UNICODE_PLANE16_END = 1114111; //Field offset: 0x0
-	internal const int HIGH_SURROGATE_START = 55296; //Field offset: 0x0
-	internal const int LOW_SURROGATE_END = 57343; //Field offset: 0x0
 	private readonly char m_value; //Field offset: 0x0
 
 	private static Char() { }

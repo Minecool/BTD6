@@ -13,7 +13,7 @@ internal sealed class DataExpression : IFilter
 
 	internal string Expression
 	{
-		internal get { } //Length: 67
+		internal get { } //Length: 61
 	}
 
 	internal bool HasValue

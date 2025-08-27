@@ -12,7 +12,7 @@ public class DroneSwarm : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 302
+		 get { } //Length: 298
 	}
 
 	public DroneSwarm() { }

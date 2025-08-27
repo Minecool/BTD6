@@ -17,7 +17,7 @@ public class CrossPromoInfo
 
 	public bool IsValid
 	{
-		 get { } //Length: 51
+		 get { } //Length: 54
 	}
 
 	public int PromotedAppId

@@ -85,6 +85,8 @@ public class AnalyticsKonFuze
 	public Dictionary<String, LegendsStats> legendsStatsByName; //Field offset: 0x290
 	public bool hasTransferredStatsV49; //Field offset: 0x298
 	public KonFuze hasPlacedVtsg; //Field offset: 0x2A0
+	public KonFuze caveMonkeyRestingPlaceHits; //Field offset: 0x2A8
+	public HashSet<String> seenPowers; //Field offset: 0x2B0
 
 	private AnalyticsKonFuze() { }
 

@@ -7,46 +7,46 @@ public class GameData : ScriptableObject
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<RoundSet, RoundSetModel> <>9__52_0; //Field offset: 0x8
-		public static Func<IncomeSet, IncomeSetModel> <>9__53_0; //Field offset: 0x10
-		public static Func<Mod, ModModel> <>9__54_0; //Field offset: 0x18
+		public static Func<RoundSet, RoundSetModel> <>9__54_0; //Field offset: 0x8
+		public static Func<IncomeSet, IncomeSetModel> <>9__55_0; //Field offset: 0x10
+		public static Func<Mod, ModModel> <>9__56_0; //Field offset: 0x18
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal IncomeSetModel <LoadIncomeSetsAsync>b__53_0(IncomeSet m) { }
+		internal IncomeSetModel <LoadIncomeSetsAsync>b__55_0(IncomeSet m) { }
 
-		internal ModModel <LoadModsAsync>b__54_0(Mod m) { }
+		internal ModModel <LoadModsAsync>b__56_0(Mod m) { }
 
-		internal RoundSetModel <LoadRoundSetsAsync>b__52_0(RoundSet m) { }
+		internal RoundSetModel <LoadRoundSetsAsync>b__54_0(RoundSet m) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass57_0
+	private sealed class <>c__DisplayClass59_0
 	{
 		public string name; //Field offset: 0x10
 
-		public <>c__DisplayClass57_0() { }
+		public <>c__DisplayClass59_0() { }
 
 		internal bool <RoundSetByName>b__0(RoundSetModel t) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass58_0
+	private sealed class <>c__DisplayClass60_0
 	{
 		public string name; //Field offset: 0x10
 
-		public <>c__DisplayClass58_0() { }
+		public <>c__DisplayClass60_0() { }
 
 		internal bool <IncomeSetByName>b__0(IncomeSetModel t) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <LoadAsync>d__51 : IAsyncStateMachine
+	private struct <LoadAsync>d__53 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -61,7 +61,7 @@ public class GameData : ScriptableObject
 	}
 
 	[CompilerGenerated]
-	private struct <LoadDataAsync>d__55 : IAsyncStateMachine
+	private struct <LoadDataAsync>d__57 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -76,7 +76,7 @@ public class GameData : ScriptableObject
 	}
 
 	[CompilerGenerated]
-	private struct <LoadIncomeSetsAsync>d__53 : IAsyncStateMachine
+	private struct <LoadIncomeSetsAsync>d__55 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -92,7 +92,7 @@ public class GameData : ScriptableObject
 	}
 
 	[CompilerGenerated]
-	private struct <LoadModsAsync>d__54 : IAsyncStateMachine
+	private struct <LoadModsAsync>d__56 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -108,7 +108,7 @@ public class GameData : ScriptableObject
 	}
 
 	[CompilerGenerated]
-	private struct <LoadRoundSetsAsync>d__52 : IAsyncStateMachine
+	private struct <LoadRoundSetsAsync>d__54 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -166,10 +166,12 @@ public class GameData : ScriptableObject
 	public TalkingHeadHints talkingHeadHints; //Field offset: 0x150
 	public TowerSnappingData towerSnappingData; //Field offset: 0x158
 	public GamepadData gamepadData; //Field offset: 0x160
-	public SweepstakesData sweepstakesData; //Field offset: 0x168
-	public ModModel[] mods; //Field offset: 0x170
-	private RoundSetModel[] roundSets; //Field offset: 0x178
-	private IncomeSetModel[] incomeSets; //Field offset: 0x180
+	public PrefabReference hudControllerPrefab; //Field offset: 0x168
+	public SweepstakesData sweepstakesData; //Field offset: 0x170
+	public PowersProData powersProData; //Field offset: 0x178
+	public ModModel[] mods; //Field offset: 0x180
+	private RoundSetModel[] roundSets; //Field offset: 0x188
+	private IncomeSetModel[] incomeSets; //Field offset: 0x190
 
 	public static GameData Instance
 	{
@@ -192,19 +194,19 @@ public class GameData : ScriptableObject
 
 	public void Init() { }
 
-	[AsyncStateMachine(typeof(<LoadAsync>d__51))]
+	[AsyncStateMachine(typeof(<LoadAsync>d__53))]
 	public Task LoadAsync() { }
 
-	[AsyncStateMachine(typeof(<LoadDataAsync>d__55))]
+	[AsyncStateMachine(typeof(<LoadDataAsync>d__57))]
 	private Task LoadDataAsync() { }
 
-	[AsyncStateMachine(typeof(<LoadIncomeSetsAsync>d__53))]
+	[AsyncStateMachine(typeof(<LoadIncomeSetsAsync>d__55))]
 	private Task LoadIncomeSetsAsync() { }
 
-	[AsyncStateMachine(typeof(<LoadModsAsync>d__54))]
+	[AsyncStateMachine(typeof(<LoadModsAsync>d__56))]
 	private Task LoadModsAsync() { }
 
-	[AsyncStateMachine(typeof(<LoadRoundSetsAsync>d__52))]
+	[AsyncStateMachine(typeof(<LoadRoundSetsAsync>d__54))]
 	private Task LoadRoundSetsAsync() { }
 
 	public RoundSetModel RoundSetByName(string name) { }

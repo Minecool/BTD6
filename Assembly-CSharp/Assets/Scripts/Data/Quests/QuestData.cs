@@ -5,38 +5,38 @@ public class QuestData : ScriptableObject
 	[CompilerGenerated]
 	private sealed class <>c__DisplayClass10_0
 	{
-		public string towerId; //Field offset: 0x10
-
-		public <>c__DisplayClass10_0() { }
-
-		internal bool <TryGetTowerUnlockData>b__0(TowerUnlockQuest x) { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <>c__DisplayClass8_0
-	{
-		public string id; //Field offset: 0x10
-
-		public <>c__DisplayClass8_0() { }
-
-		internal bool <GetCharacterData>b__0(QuestCharacter o) { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <>c__DisplayClass9_0
-	{
 		public string questId; //Field offset: 0x10
 
-		public <>c__DisplayClass9_0() { }
+		public <>c__DisplayClass10_0() { }
 
 		internal bool <TryGetQuestData>b__0(QuestDetails x) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <LoadQuestDataAsync>d__12 : IAsyncStateMachine
+	private sealed class <>c__DisplayClass11_0
+	{
+		public string towerId; //Field offset: 0x10
+
+		public <>c__DisplayClass11_0() { }
+
+		internal bool <TryGetTowerUnlockData>b__0(TowerUnlockQuest x) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <>c__DisplayClass9_0
+	{
+		public string id; //Field offset: 0x10
+
+		public <>c__DisplayClass9_0() { }
+
+		internal bool <GetCharacterData>b__0(QuestCharacter o) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <LoadQuestDataAsync>d__13 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -54,11 +54,12 @@ public class QuestData : ScriptableObject
 	}
 
 	public PrefabReference questDialoguePrefab; //Field offset: 0x18
-	private List<QuestCharacter> characters; //Field offset: 0x20
-	private List<QuestDetails> quests; //Field offset: 0x28
+	public TutorialQuestData tutorialQuestData; //Field offset: 0x20
+	private List<QuestCharacter> characters; //Field offset: 0x28
+	private List<QuestDetails> quests; //Field offset: 0x30
 	[ReorderableList("items", True)]
 	[SerializeField]
-	private TowerQuestContainer TowerUnlockQuestsContainer; //Field offset: 0x30
+	private TowerQuestContainer TowerUnlockQuestsContainer; //Field offset: 0x38
 
 	public IList<QuestDetails> Quests
 	{
@@ -78,7 +79,7 @@ public class QuestData : ScriptableObject
 
 	public QuestCharacter GetCharacterData(string id) { }
 
-	[AsyncStateMachine(typeof(<LoadQuestDataAsync>d__12))]
+	[AsyncStateMachine(typeof(<LoadQuestDataAsync>d__13))]
 	public Task LoadQuestDataAsync() { }
 
 	public bool TryGetQuestData(string questId, out QuestDetails questDetails) { }

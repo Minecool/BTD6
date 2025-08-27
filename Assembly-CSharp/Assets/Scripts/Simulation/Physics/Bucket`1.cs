@@ -1,7 +1,7 @@
 namespace Assets.Scripts.Simulation.Physics;
 
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public class Bucket
 {
 	public readonly Vector2 centre; //Field offset: 0x0

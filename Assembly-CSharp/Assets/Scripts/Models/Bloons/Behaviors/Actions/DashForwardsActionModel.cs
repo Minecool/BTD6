@@ -29,7 +29,7 @@ public class DashForwardsActionModel : BloonBehaviorActionModel
 
 	public SetSpeedMutator SetSpeedAmountMutator
 	{
-		 get { } //Length: 259
+		 get { } //Length: 263
 	}
 
 	public DashForwardsActionModel(string name, string actionId, float dashDistance, String[] actionIds, float speedMultiplier, string dashAnimationName, bool setSpeed) { }

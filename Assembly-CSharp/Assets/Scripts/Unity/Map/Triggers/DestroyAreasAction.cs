@@ -7,7 +7,7 @@ public class DestroyAreasAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 495
+		 get { } //Length: 485
 	}
 
 	public DestroyAreasAction() { }

@@ -33,7 +33,7 @@ public class CarpetBombAbility : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 682
+		 get { } //Length: 681
 	}
 
 	public CarpetBombAbility() { }

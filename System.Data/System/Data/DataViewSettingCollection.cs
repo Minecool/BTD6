@@ -8,7 +8,7 @@ public class DataViewSettingCollection
 
 	public override DataViewSetting Item
 	{
-		 get { } //Length: 360
+		 get { } //Length: 346
 		 set { } //Length: 131
 	}
 

@@ -9,11 +9,11 @@ public class GyrfalconPattern : TargetTypeBehavior
 	public int hoverAnimationState; //Field offset: 0x44
 	public float snapDistance; //Field offset: 0x48
 	public float cooldown; //Field offset: 0x4C
-	[SerializeReference]
+	[SerializeField]
 	public Damage initialDamage; //Field offset: 0x50
-	[SerializeReference]
+	[SerializeField]
 	public Damage grapplingDamage; //Field offset: 0x58
-	[SerializeReference]
+	[SerializeField]
 	public Projectile grabProjectile; //Field offset: 0x60
 	public float grappleDamageRate; //Field offset: 0x68
 	public PrefabReference selectPointDisplay; //Field offset: 0x70
@@ -33,24 +33,24 @@ public class GyrfalconPattern : TargetTypeBehavior
 	public int handlerSendAnimationState; //Field offset: 0xAC
 	public int handlerHoverAnimationState; //Field offset: 0xB0
 	public float bloonTargetSpeedMultiplier; //Field offset: 0xB4
-	[SerializeReference]
+	[SerializeField]
 	public DamageModifierForTag initialDamageMoabModifier; //Field offset: 0xB8
-	[SerializeReference]
+	[SerializeField]
 	public DamageModifierForTag grapplingDamageMoabModifier; //Field offset: 0xC0
-	[SerializeReference]
+	[SerializeField]
 	public DamageModifierForTag regrowDamageModifier; //Field offset: 0xC8
 	public float idleMinTime; //Field offset: 0xD0
 	public float idleMaxTime; //Field offset: 0xD4
 	public float initialYOffset; //Field offset: 0xD8
 	public float keepPickingBloonsRange; //Field offset: 0xDC
-	[SerializeReference]
+	[SerializeField]
 	public Effect noGrabEffect; //Field offset: 0xE0
 	public float grabRadius; //Field offset: 0xE8
 	public int grabAmount; //Field offset: 0xEC
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 2131
+		 get { } //Length: 2051
 	}
 
 	public GyrfalconPattern() { }

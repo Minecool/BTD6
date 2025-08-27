@@ -19,7 +19,7 @@ public class RandomSpeedOffsetModel : WeaponBehaviorModel
 
 	public List<ProjectileSpeedMutator> Mutators
 	{
-		 get { } //Length: 519
+		 get { } //Length: 524
 	}
 
 	public RandomSpeedOffsetModel(string name, int minOffset, int maxOffset) { }

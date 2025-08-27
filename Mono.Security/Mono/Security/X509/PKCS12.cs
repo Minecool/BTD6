@@ -70,7 +70,7 @@ public class PKCS12 : ICloneable
 
 	public X509CertificateCollection Certificates
 	{
-		 get { } //Length: 990
+		 get { } //Length: 1014
 	}
 
 	public int IterationCount
@@ -81,7 +81,7 @@ public class PKCS12 : ICloneable
 
 	public ArrayList Keys
 	{
-		 get { } //Length: 1560
+		 get { } //Length: 1571
 	}
 
 	public static int MaximumPasswordLength
@@ -91,7 +91,7 @@ public class PKCS12 : ICloneable
 
 	public string Password
 	{
-		 set { } //Length: 408
+		 set { } //Length: 401
 	}
 
 	internal RandomNumberGenerator RNG

@@ -16,7 +16,7 @@ public class CashPerBananaFarmInRange : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 1101
+		 get { } //Length: 1158
 	}
 
 	public CashPerBananaFarmInRange() { }

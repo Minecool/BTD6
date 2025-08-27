@@ -97,7 +97,7 @@ public class SortedList : IDictionary, ICollection, IEnumerable, ICloneable
 
 		public override object Current
 		{
-			 get { } //Length: 199
+			 get { } //Length: 200
 		}
 
 		public override DictionaryEntry Entry
@@ -141,7 +141,7 @@ public class SortedList : IDictionary, ICollection, IEnumerable, ICloneable
 
 		public virtual int Count
 		{
-			 get { } //Length: 182
+			 get { } //Length: 172
 		}
 
 		public virtual bool IsReadOnly
@@ -156,8 +156,8 @@ public class SortedList : IDictionary, ICollection, IEnumerable, ICloneable
 
 		public virtual object Item
 		{
-			 get { } //Length: 208
-			 set { } //Length: 203
+			 get { } //Length: 192
+			 set { } //Length: 190
 		}
 
 		public virtual object SyncRoot
@@ -242,7 +242,7 @@ public class SortedList : IDictionary, ICollection, IEnumerable, ICloneable
 		public override object Item
 		{
 			 get { } //Length: 42
-			 set { } //Length: 1429
+			 set { } //Length: 1340
 		}
 
 		public override object SyncRoot
@@ -297,7 +297,7 @@ public class SortedList : IDictionary, ICollection, IEnumerable, ICloneable
 
 	public override int Capacity
 	{
-		 set { } //Length: 381
+		 set { } //Length: 379
 	}
 
 	public override int Count
@@ -317,7 +317,7 @@ public class SortedList : IDictionary, ICollection, IEnumerable, ICloneable
 
 	public override object Item
 	{
-		 get { } //Length: 75
+		 get { } //Length: 79
 		 set { } //Length: 300
 	}
 

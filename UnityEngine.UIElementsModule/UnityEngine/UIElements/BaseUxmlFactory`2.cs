@@ -1,27 +1,28 @@
 namespace UnityEngine.UIElements;
 
+[Obsolete("BaseUxmlFactory<TCreatedType, TTraits> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 public abstract class BaseUxmlFactory
 {
 	internal TTraits m_Traits; //Field offset: 0x0
 
 	public override string uxmlName
 	{
-		 get { } //Length: 121
+		 get { } //Length: 90
 	}
 
 	public override string uxmlNamespace
 	{
-		 get { } //Length: 156
+		 get { } //Length: 113
 	}
 
 	public override string uxmlQualifiedName
 	{
-		 get { } //Length: 121
+		 get { } //Length: 90
 	}
 
 	public override Type uxmlType
 	{
-		 get { } //Length: 88
+		 get { } //Length: 57
 	}
 
 	protected BaseUxmlFactory`2() { }

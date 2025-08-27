@@ -19,22 +19,22 @@ internal sealed class ObjectHolder
 
 	internal bool CanObjectValueChange
 	{
-		internal get { } //Length: 25
+		internal get { } //Length: 24
 	}
 
 	internal bool CanSurrogatedObjectValueChange
 	{
-		internal get { } //Length: 145
+		internal get { } //Length: 131
 	}
 
 	internal bool CompletelyFixed
 	{
-		internal get { } //Length: 29
+		internal get { } //Length: 31
 	}
 
 	internal long ContainerID
 	{
-		internal get { } //Length: 19
+		internal get { } //Length: 15
 	}
 
 	internal LongList DependentObjects
@@ -60,7 +60,7 @@ internal sealed class ObjectHolder
 
 	internal bool IsIncompleteObjectReference
 	{
-		internal get { } //Length: 8
+		internal get { } //Length: 7
 		internal set { } //Length: 25
 	}
 
@@ -82,7 +82,7 @@ internal sealed class ObjectHolder
 
 	internal bool RequiresSerInfoFixup
 	{
-		internal get { } //Length: 20
+		internal get { } //Length: 18
 		internal set { } //Length: 27
 	}
 
@@ -125,7 +125,7 @@ internal sealed class ObjectHolder
 
 	internal bool ValueTypeFixupPerformed
 	{
-		internal get { } //Length: 41
+		internal get { } //Length: 39
 		internal set { } //Length: 12
 	}
 

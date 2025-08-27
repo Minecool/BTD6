@@ -8,7 +8,7 @@ public class HeroXpScaleSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 184
+		 get { } //Length: 219
 	}
 
 	public HeroXpScaleSupport() { }

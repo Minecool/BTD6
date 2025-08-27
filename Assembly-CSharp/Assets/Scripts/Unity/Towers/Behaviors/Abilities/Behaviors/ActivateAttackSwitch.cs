@@ -12,7 +12,7 @@ public class ActivateAttackSwitch : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 396
+		 get { } //Length: 388
 	}
 
 	public ActivateAttackSwitch() { }

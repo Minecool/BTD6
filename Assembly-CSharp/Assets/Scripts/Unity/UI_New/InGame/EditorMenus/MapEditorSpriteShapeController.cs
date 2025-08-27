@@ -181,7 +181,7 @@ public abstract class MapEditorSpriteShapeController : MonoBehaviour
 
 	protected static bool GameTypeIsMapEditor
 	{
-		 get { } //Length: 76
+		 get { } //Length: 74
 	}
 
 	public DraggableNode HighlightedNode
@@ -205,7 +205,7 @@ public abstract class MapEditorSpriteShapeController : MonoBehaviour
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public bool InSmoothCornersMode

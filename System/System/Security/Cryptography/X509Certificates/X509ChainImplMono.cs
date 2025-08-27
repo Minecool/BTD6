@@ -46,12 +46,12 @@ internal class X509ChainImplMono : X509ChainImpl
 
 	private X509Store LMCAStore
 	{
-		private get { } //Length: 144
+		private get { } //Length: 141
 	}
 
 	private X509Store LMRootStore
 	{
-		private get { } //Length: 144
+		private get { } //Length: 141
 	}
 
 	private X509Certificate2Collection Roots
@@ -61,12 +61,12 @@ internal class X509ChainImplMono : X509ChainImpl
 
 	private X509Store UserCAStore
 	{
-		private get { } //Length: 144
+		private get { } //Length: 141
 	}
 
 	private X509Store UserRootStore
 	{
-		private get { } //Length: 144
+		private get { } //Length: 141
 	}
 
 	private static X509ChainImplMono() { }

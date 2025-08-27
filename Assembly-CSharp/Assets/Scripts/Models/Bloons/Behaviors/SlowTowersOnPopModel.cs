@@ -21,7 +21,7 @@ public class SlowTowersOnPopModel : BloonBehaviorModelWithTowerTracking
 
 	public TowerRateMutator Mutator
 	{
-		 get { } //Length: 248
+		 get { } //Length: 252
 	}
 
 	public SlowTowersOnPopModel() { }

@@ -20,7 +20,7 @@ public class CreateEffectOnExpire : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 891
+		 get { } //Length: 964
 	}
 
 	public CreateEffectOnExpire() { }

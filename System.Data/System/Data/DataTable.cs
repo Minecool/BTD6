@@ -105,7 +105,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	public bool CaseSensitive
 	{
 		 get { } //Length: 8
-		 set { } //Length: 186
+		 set { } //Length: 181
 	}
 
 	[Browsable(False)]
@@ -141,7 +141,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 
 	internal string DisplayExpressionInternal
 	{
-		internal get { } //Length: 89
+		internal get { } //Length: 37
 	}
 
 	internal int ElementColumnCount
@@ -157,7 +157,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 
 	internal bool EnforceConstraints
 	{
-		internal get { } //Length: 36
+		internal get { } //Length: 34
 		internal set { } //Length: 60
 	}
 
@@ -174,7 +174,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 
 	private bool IsTypedDataTable
 	{
-		private get { } //Length: 166
+		private get { } //Length: 157
 	}
 
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
@@ -186,7 +186,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	public CultureInfo Locale
 	{
 		 get { } //Length: 8
-		 set { } //Length: 966
+		 set { } //Length: 1011
 	}
 
 	internal decimal MaxOccurs
@@ -205,7 +205,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	public int MinimumCapacity
 	{
 		 get { } //Length: 26
-		 set { } //Length: 43
+		 set { } //Length: 40
 	}
 
 	internal decimal MinOccurs
@@ -217,7 +217,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	public string Namespace
 	{
 		 get { } //Length: 121
-		 set { } //Length: 610
+		 set { } //Length: 659
 	}
 
 	internal bool NeedColumnChangeEvents
@@ -232,7 +232,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 
 	internal int NestedParentsCount
 	{
-		internal get { } //Length: 661
+		internal get { } //Length: 662
 	}
 
 	internal int ObjectID
@@ -251,14 +251,14 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	public string Prefix
 	{
 		 get { } //Length: 8
-		 set { } //Length: 356
+		 set { } //Length: 344
 	}
 
 	[TypeConverter(typeof(PrimaryKeyTypeConverter))]
 	public DataColumn[] PrimaryKey
 	{
 		 get { } //Length: 94
-		 set { } //Length: 1011
+		 set { } //Length: 1021
 	}
 
 	internal int RecordCapacity
@@ -270,7 +270,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	public SerializationFormat RemotingFormat
 	{
 		 get { } //Length: 7
-		 set { } //Length: 113
+		 set { } //Length: 108
 	}
 
 	internal Hashtable RowDiffId
@@ -291,7 +291,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 
 	internal bool SelfNested
 	{
-		internal get { } //Length: 566
+		internal get { } //Length: 618
 	}
 
 	[Browsable(False)]
@@ -312,12 +312,12 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	public string TableName
 	{
 		 get { } //Length: 8
-		 set { } //Length: 1341
+		 set { } //Length: 1375
 	}
 
 	internal XmlQualifiedName TypeName
 	{
-		internal get { } //Length: 168
+		internal get { } //Length: 153
 		internal set { } //Length: 8
 	}
 
@@ -330,7 +330,7 @@ public class DataTable : MarshalByValueComponent, ISerializable, IXmlSerializabl
 	internal DataColumn XmlText
 	{
 		internal get { } //Length: 8
-		internal set { } //Length: 1482
+		internal set { } //Length: 1223
 	}
 
 	public DataTable() { }

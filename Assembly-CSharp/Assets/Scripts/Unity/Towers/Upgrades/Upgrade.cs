@@ -16,7 +16,7 @@ public class Upgrade : CascadingItem
 
 	public UpgradeModel Def
 	{
-		 get { } //Length: 427
+		 get { } //Length: 412
 	}
 
 	public bool IsParagon
@@ -26,7 +26,7 @@ public class Upgrade : CascadingItem
 
 	public virtual Model Model
 	{
-		 get { } //Length: 435
+		 get { } //Length: 400
 	}
 
 	public Upgrade() { }

@@ -3,6 +3,13 @@ namespace UnityEngine;
 [RequiredByNativeCode]
 public class ResourceRequest : AsyncOperation
 {
+	public static class BindingsMarshaller
+	{
+
+		public static ResourceRequest ConvertToManaged(IntPtr ptr) { }
+
+	}
+
 	internal string m_Path; //Field offset: 0x20
 	internal Type m_Type; //Field offset: 0x28
 
@@ -11,7 +18,7 @@ public class ResourceRequest : AsyncOperation
 		 get { } //Length: 20
 	}
 
-	public ResourceRequest() { }
+	protected ResourceRequest(IntPtr ptr) { }
 
 	public object get_asset() { }
 

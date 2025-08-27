@@ -11,10 +11,12 @@ public class CollectCashZone : TowerBehavior
 	public bool dontCountCollectedCash; //Field offset: 0x49
 	public bool dontAnimateTower; //Field offset: 0x4A
 	public bool dontRotate; //Field offset: 0x4B
+	public bool canAttractCamo; //Field offset: 0x4C
+	public float minSpeedAwaitTime; //Field offset: 0x50
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 259
+		 get { } //Length: 296
 	}
 
 	public CollectCashZone() { }

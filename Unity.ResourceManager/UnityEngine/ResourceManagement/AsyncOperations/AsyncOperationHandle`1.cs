@@ -45,12 +45,12 @@ public struct AsyncOperationHandle : IEnumerator, IEquatable<AsyncOperationHandl
 
 	internal AsyncOperationBase<TObject> InternalOp
 	{
-		internal get { } //Length: 135
+		internal get { } //Length: 134
 	}
 
 	public bool IsDone
 	{
-		 get { } //Length: 208
+		 get { } //Length: 213
 	}
 
 	internal string LocationName
@@ -91,7 +91,7 @@ public struct AsyncOperationHandle : IEnumerator, IEquatable<AsyncOperationHandl
 
 	public Task<TObject> Task
 	{
-		 get { } //Length: 329
+		 get { } //Length: 328
 	}
 
 	internal int Version

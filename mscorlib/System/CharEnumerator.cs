@@ -8,12 +8,12 @@ public sealed class CharEnumerator : IEnumerator, IEnumerator<Char>, IDisposable
 
 	public override char Current
 	{
-		 get { } //Length: 194
+		 get { } //Length: 193
 	}
 
 	private override object System.Collections.IEnumerator.Current
 	{
-		private get { } //Length: 247
+		private get { } //Length: 215
 	}
 
 	internal CharEnumerator(string str) { }

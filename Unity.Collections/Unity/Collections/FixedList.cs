@@ -1,11 +1,17 @@
 namespace Unity.Collections;
 
-[BurstCompatible]
+[GenerateTestsForBurstCompatibility]
 internal struct FixedList
 {
 
-	[BurstCompatible(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int}])]
+	[GenerateTestsForBurstCompatibility(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int, typeof(int}])]
+	internal static int Capacity() { }
+
+	[GenerateTestsForBurstCompatibility(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int}])]
 	internal static int PaddingBytes() { }
+
+	[GenerateTestsForBurstCompatibility(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int, typeof(int}])]
+	internal static int StorageBytes() { }
 
 }
 

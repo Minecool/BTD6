@@ -17,7 +17,7 @@ public struct LeaderboardRankScores
 	public ScoreModel[] Scores
 	{
 		[CompilerGenerated]
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public LeaderboardRankScores(RankModel rank, ScoreModel[] scores) { }

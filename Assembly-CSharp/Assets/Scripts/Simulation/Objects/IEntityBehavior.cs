@@ -90,7 +90,7 @@ public interface IEntityBehavior
 
 	public void OnVisibilityToggled(bool isVisible) { }
 
-	public float Pickup() { }
+	public float Pickup(Tower towerPickingUp) { }
 
 	public void PostAttached() { }
 

@@ -13,7 +13,7 @@ public interface IBloonBehavior : IEntityBehavior
 
 	public bool FilterMutation(BehaviorMutator mutation, ICollection<BehaviorMutatorFilter> filters) { }
 
-	public float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalBloonProperties, float modifiedDamage, Projectile projectile) { }
+	public float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalBloonProperties, float modifiedDamage, Projectile projectile, out bool preventFurtherModifications) { }
 
 	public bool LayersExhaused(DamageResult damageResult) { }
 

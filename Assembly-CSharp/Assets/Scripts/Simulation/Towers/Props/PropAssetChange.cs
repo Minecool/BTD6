@@ -6,7 +6,7 @@ public class PropAssetChange : TowerBehavior
 
 	private PropAssetChangeModel propModel
 	{
-		private get { } //Length: 130
+		private get { } //Length: 126
 	}
 
 	public PropAssetChange() { }

@@ -26,7 +26,7 @@ internal sealed class SchemaAttDef : SchemaDeclBase, IDtdDefaultAttributeInfo, I
 
 	internal string DefaultValueExpanded
 	{
-		internal get { } //Length: 77
+		internal get { } //Length: 27
 		internal set { } //Length: 5
 	}
 
@@ -91,7 +91,7 @@ internal sealed class SchemaAttDef : SchemaDeclBase, IDtdDefaultAttributeInfo, I
 
 	private override string System.Xml.IDtdDefaultAttributeInfo.DefaultValueExpanded
 	{
-		private get { } //Length: 77
+		private get { } //Length: 27
 	}
 
 	private override object System.Xml.IDtdDefaultAttributeInfo.DefaultValueTyped

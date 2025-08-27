@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::EnterLeave (3))]
+[EventCategory(EventCategory::EnterLeave (4))]
 public sealed class PointerLeaveEvent : PointerEventBase<PointerLeaveEvent>
 {
 	[CompilerGenerated]
@@ -21,9 +21,13 @@ public sealed class PointerLeaveEvent : PointerEventBase<PointerLeaveEvent>
 
 	public PointerLeaveEvent() { }
 
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
+
 	protected virtual void Init() { }
 
 	private void LocalInit() { }
+
+	protected private virtual void PreDispatch(IPanel panel) { }
 
 }
 

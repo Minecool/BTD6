@@ -1,9 +1,10 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal enum VisualTreeUpdatePhase
 {
-	ViewData = 0,
-	Bindings = 1,
+	Bindings = 0,
+	DataBinding = 1,
 	Animation = 2,
 	Styles = 3,
 	Layout = 4,

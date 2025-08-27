@@ -13,7 +13,7 @@ public class LatchToBloonModel : ProjectileBehaviorModel
 
 	public SlowMutator SlowMutator
 	{
-		 get { } //Length: 285
+		 get { } //Length: 284
 	}
 
 	public LatchToBloonModel(string name, bool rotateWithBloon, int animationStateOnSetTarget, int animationStateOnTowerOnDestroy, float postBloonDestroyTime, float bloonSpeedMultiplier) { }

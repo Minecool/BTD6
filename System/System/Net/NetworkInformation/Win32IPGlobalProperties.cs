@@ -5,7 +5,7 @@ internal class Win32IPGlobalProperties : IPGlobalProperties
 
 	public virtual string DomainName
 	{
-		 get { } //Length: 836
+		 get { } //Length: 31
 	}
 
 	public Win32IPGlobalProperties() { }

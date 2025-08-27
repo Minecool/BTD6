@@ -24,9 +24,16 @@ public struct AnimatorStateInfo
 		 get { } //Length: 8
 	}
 
+	public int shortNameHash
+	{
+		 get { } //Length: 5
+	}
+
 	public int get_fullPathHash() { }
 
 	public float get_normalizedTime() { }
+
+	public int get_shortNameHash() { }
 
 	public bool IsName(string name) { }
 

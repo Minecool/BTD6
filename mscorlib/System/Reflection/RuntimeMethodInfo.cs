@@ -23,7 +23,7 @@ internal class RuntimeMethodInfo : MethodInfo, ISerializable
 
 	public virtual bool ContainsGenericParameters
 	{
-		 get { } //Length: 230
+		 get { } //Length: 231
 	}
 
 	public virtual Type DeclaringType
@@ -58,12 +58,12 @@ internal class RuntimeMethodInfo : MethodInfo, ISerializable
 
 	public virtual Module Module
 	{
-		 get { } //Length: 137
+		 get { } //Length: 136
 	}
 
 	public virtual string Name
 	{
-		 get { } //Length: 16
+		 get { } //Length: 14
 	}
 
 	public virtual Type ReflectedType
@@ -73,7 +73,7 @@ internal class RuntimeMethodInfo : MethodInfo, ISerializable
 
 	private RuntimeType ReflectedTypeInternal
 	{
-		private get { } //Length: 125
+		private get { } //Length: 129
 	}
 
 	public virtual ParameterInfo ReturnParameter

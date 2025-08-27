@@ -16,7 +16,7 @@ public class Support : TowerBehavior
 
 	public bool ZoneInitialised
 	{
-		 get { } //Length: 28
+		 get { } //Length: 21
 	}
 
 	public Support() { }

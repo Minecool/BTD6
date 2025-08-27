@@ -20,5 +20,7 @@ public class PointerCaptureOutEvent : PointerCaptureEventBase<PointerCaptureOutE
 
 	public PointerCaptureOutEvent() { }
 
+	protected private virtual void PreDispatch(IPanel panel) { }
+
 }
 

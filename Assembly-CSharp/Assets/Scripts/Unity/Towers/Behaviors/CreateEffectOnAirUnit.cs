@@ -12,7 +12,7 @@ public class CreateEffectOnAirUnit : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 256
+		 get { } //Length: 259
 	}
 
 	public CreateEffectOnAirUnit() { }

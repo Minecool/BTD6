@@ -7,7 +7,7 @@ public class XmlSchemaObjectCollection : CollectionBase
 
 	public override XmlSchemaObject Item
 	{
-		 get { } //Length: 169
+		 get { } //Length: 176
 		 set { } //Length: 115
 	}
 

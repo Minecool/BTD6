@@ -26,11 +26,11 @@ public class MapLoader
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass43_0
+	private sealed class <>c__DisplayClass42_0
 	{
 		public Vector3 position; //Field offset: 0x10
 
-		public <>c__DisplayClass43_0() { }
+		public <>c__DisplayClass42_0() { }
 
 		internal void <AddAsset>b__0(AsyncOperationHandle<GameObject> h) { }
 
@@ -74,21 +74,6 @@ public class MapLoader
 
 	}
 
-	[CompilerGenerated]
-	private struct <UnloadAssetsAfterAsyncOperaton>d__41 : IAsyncStateMachine
-	{
-		public int <>1__state; //Field offset: 0x0
-		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
-		public AsyncOperationHandle op; //Field offset: 0x28
-		private TaskAwaiter<Object> <>u__1; //Field offset: 0x40
-
-		private override void MoveNext() { }
-
-		[DebuggerHidden]
-		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
-
-	}
-
 	public const string AmbientMapFxTag = "AmbientMapFxToggle"; //Field offset: 0x0
 	private AsyncOperationHandle<SceneInstance> loadOperation; //Field offset: 0x10
 	private Map currentMap; //Field offset: 0x28
@@ -114,7 +99,7 @@ public class MapLoader
 	public MapLoader(string mapName = null, Map map = null) { }
 
 	[CompilerGenerated]
-	private void <AddBossAmbientFx>b__45_0(AsyncOperationHandle<GameObject> h) { }
+	private void <AddBossAmbientFx>b__44_0(AsyncOperationHandle<GameObject> h) { }
 
 	public void AddAsset(PrefabReference asset, Vector3 position) { }
 
@@ -170,9 +155,6 @@ public class MapLoader
 	private void SupportLegacyRemoveables(List<Removeable> removeables, List<MapEventModel> events) { }
 
 	public void ToggleAllAmbientFx(bool active) { }
-
-	[AsyncStateMachine(typeof(<UnloadAssetsAfterAsyncOperaton>d__41))]
-	public static void UnloadAssetsAfterAsyncOperaton(AsyncOperationHandle op) { }
 
 	public void UpdateRound(int round, bool isSet) { }
 

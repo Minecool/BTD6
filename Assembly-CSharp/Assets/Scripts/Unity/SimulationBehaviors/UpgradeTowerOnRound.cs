@@ -4,19 +4,19 @@ public class UpgradeTowerOnRound : SimulationBehavior
 {
 	public UpgradeTowerOnRoundData[] upgradeOnRoundData; //Field offset: 0x18
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 88
 	}
 
 	public virtual string Type
 	{
-		 get { } //Length: 155
+		 get { } //Length: 79
 	}
 
 	public UpgradeTowerOnRound() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal static class StylePropertyCache
 {
 	internal static readonly Dictionary<String, String> s_PropertySyntaxCache; //Field offset: 0x0

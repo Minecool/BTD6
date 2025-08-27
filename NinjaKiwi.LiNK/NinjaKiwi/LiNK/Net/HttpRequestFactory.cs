@@ -30,7 +30,7 @@ public abstract class HttpRequestFactory
 	public abstract Task<HttpResponse> Get(string url, string etag) { }
 
 	[CompilerGenerated]
-	protected bool get_IsDisabled() { }
+	public bool get_IsDisabled() { }
 
 	public TimeSpan get_TimeoutForNextRequest() { }
 
@@ -46,6 +46,8 @@ public abstract class HttpRequestFactory
 	public void set_TimeoutForNextRequest(TimeSpan value) { }
 
 	public HttpRequestFactory SetUp(ContentEncoding requestEncoding = 0, ContentEncoding responseEncoding = 0, bool responseCompression = true, TimeSpan timeout = null) { }
+
+	protected void ThrowIfDisabled(string url) { }
 
 }
 

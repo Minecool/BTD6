@@ -11,7 +11,7 @@ internal class PurchasingFactory : IPurchasingBinder, IExtensionProvider
 
 	public IStore service
 	{
-		 get { } //Length: 102
+		 get { } //Length: 100
 		 set { } //Length: 5
 	}
 

@@ -11,7 +11,7 @@ public class XmlArrayAttribute : Attribute
 
 	public string ElementName
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	public XmlSchemaForm Form

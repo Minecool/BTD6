@@ -9,7 +9,7 @@ public abstract class InputControl : InputControl
 
 	internal InputProcessor<TValue>[] processors
 	{
-		internal get { } //Length: 95
+		internal get { } //Length: 30
 	}
 
 	[IsReadOnly]
@@ -31,7 +31,7 @@ public abstract class InputControl : InputControl
 
 	public virtual Type valueType
 	{
-		 get { } //Length: 87
+		 get { } //Length: 56
 	}
 
 	protected InputControl`1() { }

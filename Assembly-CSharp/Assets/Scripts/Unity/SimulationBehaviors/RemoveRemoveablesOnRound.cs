@@ -6,7 +6,7 @@ public class RemoveRemoveablesOnRound : SimulationBehavior
 	public string removeableNames; //Field offset: 0x20
 	public bool disableRemoveableEffects; //Field offset: 0x28
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 156
 	}
@@ -20,7 +20,7 @@ public class RemoveRemoveablesOnRound : SimulationBehavior
 
 	public RemoveRemoveablesOnRound(int round) { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

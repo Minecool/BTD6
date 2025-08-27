@@ -1,6 +1,6 @@
 namespace NinjaKiwi.LiNK.Client.Files;
 
-internal class UnEncryptedFileWriter : FileWriter
+internal sealed class UnEncryptedFileWriter : FileWriter
 {
 
 	public UnEncryptedFileWriter(Stream outputStream) { }

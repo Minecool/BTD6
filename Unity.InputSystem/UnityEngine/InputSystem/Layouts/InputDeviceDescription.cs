@@ -37,7 +37,7 @@ public struct InputDeviceDescription : IEquatable<InputDeviceDescription>
 
 	public string deviceClass
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 		 set { } //Length: 5
 	}
 

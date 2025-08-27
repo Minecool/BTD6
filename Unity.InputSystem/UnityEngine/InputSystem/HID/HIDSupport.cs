@@ -18,7 +18,7 @@ public static class HIDSupport
 	public static ReadOnlyArray<HIDPageUsage> supportedHIDUsages
 	{
 		 get { } //Length: 100
-		 set { } //Length: 658
+		 set { } //Length: 663
 	}
 
 	public static ReadOnlyArray<HIDPageUsage> get_supportedHIDUsages() { }

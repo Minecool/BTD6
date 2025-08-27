@@ -16,7 +16,7 @@ public class ContentSubmissionResponse : EndpointResponseBase, IEndpointResponse
 	[JsonIgnore]
 	public override bool Success
 	{
-		 get { } //Length: 22
+		 get { } //Length: 25
 	}
 
 	public ContentSubmissionResponse() { }

@@ -4,8 +4,6 @@ namespace System;
 [IsReadOnly]
 public struct ushort : IComparable, IConvertible, IFormattable, IComparable<UInt16>, IEquatable<UInt16>, ISpanFormattable
 {
-	public const ushort MaxValue = 65535; //Field offset: 0x0
-	public const ushort MinValue = 0; //Field offset: 0x0
 	private readonly ushort m_value; //Field offset: 0x0
 
 	public override int CompareTo(object value) { }
@@ -72,6 +70,9 @@ public struct ushort : IComparable, IConvertible, IFormattable, IComparable<UInt
 
 	[CLSCompliant(False)]
 	public static bool TryParse(ReadOnlySpan<Char> s, out ushort result) { }
+
+	[CLSCompliant(False)]
+	public static bool TryParse(string s, out ushort result) { }
 
 	[CLSCompliant(False)]
 	public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out ushort result) { }

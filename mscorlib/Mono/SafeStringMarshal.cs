@@ -7,7 +7,7 @@ internal struct SafeStringMarshal : IDisposable
 
 	public IntPtr Value
 	{
-		 get { } //Length: 65
+		 get { } //Length: 59
 	}
 
 	public SafeStringMarshal(string str) { }

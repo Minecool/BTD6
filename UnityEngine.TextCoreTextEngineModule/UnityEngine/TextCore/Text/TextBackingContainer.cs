@@ -20,7 +20,7 @@ internal struct TextBackingContainer
 	public uint Item
 	{
 		 get { } //Length: 42
-		 set { } //Length: 136
+		 set { } //Length: 91
 	}
 
 	public TextBackingContainer(int size) { }

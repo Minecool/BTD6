@@ -30,7 +30,7 @@ public class TakeAimModel : AbilityBehaviorModel
 
 	public TakeAimMutator Mutator
 	{
-		 get { } //Length: 288
+		 get { } //Length: 292
 	}
 
 	public TakeAimModel(string name, int lifespanFrames, float rangeModifier, float spreadModifier, PrefabReference selectionObjectPath, PrefabReference buffDisplayPath, EffectModel initialEffect, string buffLocsName, string buffIconName, string immunitiesGranted, int mutatorPriority) { }

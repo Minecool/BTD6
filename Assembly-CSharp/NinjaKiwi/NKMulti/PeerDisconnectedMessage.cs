@@ -10,7 +10,7 @@ public class PeerDisconnectedMessage : Message
 
 	public PeerDisconnectedMessage(int peerID, List<Byte> connectedPlayers) { }
 
-	protected virtual Byte[] CreateBytes() { }
+	private static Byte[] CreateBytes(int peerID, List<Byte> connectedPlayers) { }
 
 }
 

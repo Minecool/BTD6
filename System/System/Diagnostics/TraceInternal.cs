@@ -33,7 +33,7 @@ internal static class TraceInternal
 
 	public static TraceListenerCollection Listeners
 	{
-		 get { } //Length: 728
+		 get { } //Length: 717
 	}
 
 	public static bool UseGlobalLock

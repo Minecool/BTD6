@@ -1,54 +1,54 @@
 namespace UnityEngine.Rendering;
 
-public abstract class VolumeDebugSettings : IVolumeDebugSettings2, IVolumeDebugSettings
+public abstract class VolumeDebugSettings : IVolumeDebugSettings
 {
 	[CompilerGenerated]
 	private sealed class <>c
 	{
 		public static readonly <>c<T> <>9; //Field offset: 0x0
-		public static Func<Volume, Boolean> <>9__35_0; //Field offset: 0x0
-		public static Func<FieldInfo, Boolean> <>9__37_0; //Field offset: 0x0
-		public static Func<Type, Boolean> <>9__44_0; //Field offset: 0x0
-		public static Func<Type, Boolean> <>9__44_1; //Field offset: 0x0
-		public static Func<Type, String> <>9__44_2; //Field offset: 0x0
+		public static Func<Volume, Boolean> <>9__34_0; //Field offset: 0x0
+		public static Func<FieldInfo, Boolean> <>9__36_0; //Field offset: 0x0
+		public static Func<Type, Boolean> <>9__43_0; //Field offset: 0x0
+		public static Func<Type, Boolean> <>9__43_1; //Field offset: 0x0
+		public static Func<Type, String> <>9__43_2; //Field offset: 0x0
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <get_componentTypes>b__44_0(Type t) { }
+		internal bool <get_componentTypes>b__43_0(Type t) { }
 
-		internal bool <get_componentTypes>b__44_1(Type t) { }
+		internal bool <get_componentTypes>b__43_1(Type t) { }
 
-		internal string <get_componentTypes>b__44_2(Type t) { }
+		internal string <get_componentTypes>b__43_2(Type t) { }
 
-		internal bool <GetStates>b__37_0(FieldInfo t) { }
+		internal bool <GetStates>b__36_0(FieldInfo t) { }
 
-		internal bool <GetVolumes>b__35_0(Volume v) { }
+		internal bool <GetVolumes>b__34_0(Volume v) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass23_0
+	private sealed class <>c__DisplayClass22_0
 	{
 		public Type value; //Field offset: 0x0
 
-		public <>c__DisplayClass23_0() { }
+		public <>c__DisplayClass22_0() { }
 
 		internal bool <set_selectedComponentType>b__0(ValueTuple<String, Type> t) { }
 
 	}
 
-	private static List<ValueTuple`2<String, Type>> s_ComponentPathAndType; //Field offset: 0x0
 	private static List<Type> s_ComponentTypes; //Field offset: 0x0
 	[CompilerGenerated]
 	private static List<T> <additionalCameraDatas>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	private int <selectedComponent>k__BackingField; //Field offset: 0x0
-	private Camera m_SelectedCamera; //Field offset: 0x0
 	protected int m_SelectedCameraIndex; //Field offset: 0x0
 	private Camera[] m_CamerasArray; //Field offset: 0x0
 	private List<Camera> m_Cameras; //Field offset: 0x0
+	[CompilerGenerated]
+	private readonly Type <targetRenderPipeline>k__BackingField; //Field offset: 0x0
 	private Single[] weights; //Field offset: 0x0
 	private Volume[] volumes; //Field offset: 0x0
 	private VolumeParameter[2] savedStates; //Field offset: 0x0
@@ -57,31 +57,31 @@ public abstract class VolumeDebugSettings : IVolumeDebugSettings2, IVolumeDebugS
 	protected private static List<T> additionalCameraDatas
 	{
 		[CompilerGenerated]
-		 get { } //Length: 155
+		 get { } //Length: 161
 		[CompilerGenerated]
-		private set { } //Length: 199
+		private set { } //Length: 208
 	}
 
 	public override IEnumerable<Camera> cameras
 	{
-		 get { } //Length: 409
+		 get { } //Length: 539
 	}
 
 	[Obsolete("Please use volumeComponentsPathAndType instead, and get the second element of the tuple", False)]
 	public static List<Type> componentTypes
 	{
-		 get { } //Length: 2032
+		 get { } //Length: 2059
 	}
 
 	public override Camera selectedCamera
 	{
-		 get { } //Length: 5
+		 get { } //Length: 170
 	}
 
 	public override int selectedCameraIndex
 	{
-		 get { } //Length: 4
-		 set { } //Length: 269
+		 get { } //Length: 166
+		 set { } //Length: 159
 	}
 
 	public abstract LayerMask selectedCameraLayerMask
@@ -109,18 +109,20 @@ public abstract class VolumeDebugSettings : IVolumeDebugSettings2, IVolumeDebugS
 
 	public override Type selectedComponentType
 	{
-		 get { } //Length: 120
+		 get { } //Length: 139
 		 set { } //Length: 287
 	}
 
-	public abstract Type targetRenderPipeline
+	[Obsolete("This property is obsolete and kept only for not breaking user code. VolumeDebugSettings will use current pipeline when it needs to gather volume component types and paths. #from(23.2)", False)]
+	public override Type targetRenderPipeline
 	{
-		 get { } //Length: 0
+		[CompilerGenerated]
+		 get { } //Length: 5
 	}
 
-	public override List<ValueTuple`2<String, Type>> volumeComponentsPathAndType
+	public List<ValueTuple`2<String, Type>> volumeComponentsPathAndType
 	{
-		 get { } //Length: 337
+		 get { } //Length: 134
 	}
 
 	private static VolumeDebugSettings`1() { }
@@ -156,9 +158,10 @@ public abstract class VolumeDebugSettings : IVolumeDebugSettings2, IVolumeDebugS
 
 	public override Type get_selectedComponentType() { }
 
-	public abstract Type get_targetRenderPipeline() { }
+	[CompilerGenerated]
+	public override Type get_targetRenderPipeline() { }
 
-	public override List<ValueTuple`2<String, Type>> get_volumeComponentsPathAndType() { }
+	public List<ValueTuple`2<String, Type>> get_volumeComponentsPathAndType() { }
 
 	internal VolumeParameter GetParameter(FieldInfo field) { }
 

@@ -18,12 +18,12 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 
 		public override T Current
 		{
-			 get { } //Length: 72
+			 get { } //Length: 6
 		}
 
 		private override object System.Collections.IEnumerator.Current
 		{
-			private get { } //Length: 179
+			private get { } //Length: 94
 		}
 
 		public Enumerator(ref NativeArray<T>& array) { }
@@ -56,12 +56,12 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 
 			public override T Current
 			{
-				 get { } //Length: 72
+				 get { } //Length: 4
 			}
 
 			private override object System.Collections.IEnumerator.Current
 			{
-				private get { } //Length: 179
+				private get { } //Length: 94
 			}
 
 			public Enumerator(in ReadOnly<T> array) { }
@@ -84,7 +84,7 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 
 		public T Item
 		{
-			 get { } //Length: 173
+			 get { } //Length: 48
 		}
 
 		public int Length
@@ -94,19 +94,27 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 
 		internal ReadOnly(Void* buffer, int length) { }
 
+		[IsReadOnly]
+		public ReadOnlySpan<T> AsReadOnlySpan() { }
+
 		public T get_Item(int index) { }
 
 		public int get_Length() { }
 
 		public Enumerator<T> GetEnumerator() { }
 
+		public static ReadOnlySpan<T> op_Implicit(in ReadOnly<T> source) { }
+
 		private override IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { }
 
 		private override IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
 
+		public T UnsafeElementAt(int index) { }
+
 	}
 
 	[NativeDisableUnsafePtrRestriction]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.ContentLoadModule", "UnityEngine.TilemapModule"}])]
 	internal Void* m_Buffer; //Field offset: 0x0
 	internal int m_Length; //Field offset: 0x0
 	internal Allocator m_AllocatorLabel; //Field offset: 0x0
@@ -118,9 +126,9 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 
 	public T Item
 	{
-		 get { } //Length: 173
+		 get { } //Length: 48
 		[WriteAccessRequired]
-		 set { } //Length: 134
+		 set { } //Length: 61
 	}
 
 	public int Length
@@ -132,21 +140,30 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 
 	public NativeArray`1(T[] array, Allocator allocator) { }
 
+	public NativeArray`1(NativeArray<T> array, Allocator allocator) { }
+
 	private static void Allocate(int length, Allocator allocator, out NativeArray<T>& array) { }
 
 	public ReadOnly<T> AsReadOnly() { }
 
-	public static void Copy(T[] src, NativeArray<T> dst) { }
+	[IsReadOnly]
+	public ReadOnlySpan<T> AsReadOnlySpan() { }
 
-	public static void Copy(NativeArray<T> src, T[] dst) { }
+	[IsReadOnly]
+	[WriteAccessRequired]
+	public Span<T> AsSpan() { }
 
-	public static void Copy(NativeArray<T> src, NativeArray<T> dst, int length) { }
-
-	public static void Copy(NativeArray<T> src, T[] dst, int length) { }
+	public static void Copy(NativeArray<T> src, int srcIndex, T[] dst, int dstIndex, int length) { }
 
 	public static void Copy(NativeArray<T> src, int srcIndex, NativeArray<T> dst, int dstIndex, int length) { }
 
-	public static void Copy(NativeArray<T> src, int srcIndex, T[] dst, int dstIndex, int length) { }
+	public static void Copy(NativeArray<T> src, T[] dst, int length) { }
+
+	public static void Copy(NativeArray<T> src, NativeArray<T> dst, int length) { }
+
+	public static void Copy(NativeArray<T> src, T[] dst) { }
+
+	public static void Copy(T[] src, NativeArray<T> dst) { }
 
 	public static void Copy(NativeArray<T> src, NativeArray<T> dst) { }
 
@@ -156,18 +173,18 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 	[WriteAccessRequired]
 	public void CopyFrom(NativeArray<T> array) { }
 
-	private static void CopySafe(T[] src, int srcIndex, NativeArray<T> dst, int dstIndex, int length) { }
-
 	private static void CopySafe(NativeArray<T> src, int srcIndex, T[] dst, int dstIndex, int length) { }
+
+	private static void CopySafe(T[] src, int srcIndex, NativeArray<T> dst, int dstIndex, int length) { }
 
 	private static void CopySafe(NativeArray<T> src, int srcIndex, NativeArray<T> dst, int dstIndex, int length) { }
 
 	public void CopyTo(T[] array) { }
 
-	public JobHandle Dispose(JobHandle inputDeps) { }
-
 	[WriteAccessRequired]
 	public override void Dispose() { }
+
+	public JobHandle Dispose(JobHandle inputDeps) { }
 
 	public override bool Equals(NativeArray<T> other) { }
 
@@ -188,6 +205,10 @@ public struct NativeArray : IDisposable, IEnumerable<T>, IEnumerable, IEquatable
 	private NativeArray<U> InternalReinterpret(int length) { }
 
 	public static bool op_Equality(NativeArray<T> left, NativeArray<T> right) { }
+
+	public static Span<T> op_Implicit(in NativeArray<T>& source) { }
+
+	public static ReadOnlySpan<T> op_Implicit(in NativeArray<T>& source) { }
 
 	public NativeArray<U> Reinterpret() { }
 

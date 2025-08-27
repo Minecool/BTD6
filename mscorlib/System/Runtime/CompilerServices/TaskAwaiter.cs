@@ -1,7 +1,7 @@
 namespace System.Runtime.CompilerServices;
 
 [IsReadOnly]
-public struct TaskAwaiter : ICriticalNotifyCompletion
+public struct TaskAwaiter : ICriticalNotifyCompletion, INotifyCompletion
 {
 	[CompilerGenerated]
 	private sealed class <>c__DisplayClass11_0
@@ -31,6 +31,8 @@ public struct TaskAwaiter : ICriticalNotifyCompletion
 
 	[StackTraceHidden]
 	private static void HandleNonSuccessAndDebuggerNotification(Task task) { }
+
+	public override void OnCompleted(Action continuation) { }
 
 	internal static void OnCompletedInternal(Task task, Action continuation, bool continueOnCapturedContext, bool flowExecutionContext) { }
 

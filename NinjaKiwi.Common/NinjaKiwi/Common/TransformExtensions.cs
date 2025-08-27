@@ -11,6 +11,9 @@ public static class TransformExtensions
 	public static void DestroyAllChildren(Transform transform) { }
 
 	[Extension]
+	public static Transform FindActiveChildThatContainsName(Transform transform, string name, bool recursive = true) { }
+
+	[Extension]
 	public static Transform FindChildWithName(Transform transform, string name) { }
 
 	[Extension]

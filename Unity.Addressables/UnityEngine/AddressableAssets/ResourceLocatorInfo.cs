@@ -13,7 +13,7 @@ public class ResourceLocatorInfo
 
 	public bool CanUpdateContent
 	{
-		 get { } //Length: 169
+		 get { } //Length: 167
 	}
 
 	public private IResourceLocation CatalogLocation

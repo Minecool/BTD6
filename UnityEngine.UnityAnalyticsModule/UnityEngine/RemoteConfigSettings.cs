@@ -1,8 +1,9 @@
 namespace UnityEngine;
 
 [ExcludeFromDocs]
-[NativeHeader("UnityAnalyticsScriptingClasses.h")]
 [NativeHeader("Modules/UnityAnalytics/RemoteSettings/RemoteSettings.h")]
+[NativeHeader("UnityAnalyticsScriptingClasses.h")]
+[NativeHeader("Modules/UnityAnalyticsCommon/Public/UnityAnalyticsCommon.h")]
 public class RemoteConfigSettings
 {
 	internal IntPtr m_Ptr; //Field offset: 0x10

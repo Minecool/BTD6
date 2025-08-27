@@ -37,7 +37,7 @@ public struct Vector2 : IEquatable<Vector2>, IFormattable
 
 	public float magnitude
 	{
-		 get { } //Length: 175
+		 get { } //Length: 153
 	}
 
 	public static Vector2 negativeInfinity
@@ -51,11 +51,6 @@ public struct Vector2 : IEquatable<Vector2>, IFormattable
 	}
 
 	public static Vector2 one
-	{
-		 get { } //Length: 69
-	}
-
-	public static Vector2 positiveInfinity
 	{
 		 get { } //Length: 69
 	}
@@ -109,8 +104,6 @@ public struct Vector2 : IEquatable<Vector2>, IFormattable
 	public Vector2 get_normalized() { }
 
 	public static Vector2 get_one() { }
-
-	public static Vector2 get_positiveInfinity() { }
 
 	public static Vector2 get_right() { }
 

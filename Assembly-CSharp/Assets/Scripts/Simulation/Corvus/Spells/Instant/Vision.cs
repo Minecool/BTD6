@@ -23,7 +23,7 @@ public class Vision : CorvusInstantSpell
 
 	public virtual CorvusSpellType SpellType
 	{
-		 get { } //Length: 103
+		 get { } //Length: 31
 	}
 
 	public Vision() { }

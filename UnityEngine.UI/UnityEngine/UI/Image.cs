@@ -111,7 +111,7 @@ public class Image : MaskableGraphic, ISerializationCallbackReceiver, ILayoutEle
 	public float eventAlphaThreshold
 	{
 		 get { } //Length: 17
-		 set { } //Length: 354
+		 set { } //Length: 361
 	}
 
 	public float fillAmount
@@ -209,12 +209,12 @@ public class Image : MaskableGraphic, ISerializationCallbackReceiver, ILayoutEle
 
 	public override float preferredHeight
 	{
-		 get { } //Length: 259
+		 get { } //Length: 249
 	}
 
 	public override float preferredWidth
 	{
-		 get { } //Length: 259
+		 get { } //Length: 249
 	}
 
 	public bool preserveAspect
@@ -226,7 +226,7 @@ public class Image : MaskableGraphic, ISerializationCallbackReceiver, ILayoutEle
 	public Sprite sprite
 	{
 		 get { } //Length: 8
-		 set { } //Length: 725
+		 set { } //Length: 731
 	}
 
 	public Type type

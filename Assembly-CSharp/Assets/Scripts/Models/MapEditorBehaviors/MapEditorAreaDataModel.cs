@@ -25,7 +25,7 @@ public class MapEditorAreaDataModel : Model
 
 	public string AreaName
 	{
-		 get { } //Length: 97
+		 get { } //Length: 85
 	}
 
 	public List<ValueTuple`2<Int32, Vector3>> EvenlySpacedPonts

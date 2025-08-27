@@ -17,10 +17,10 @@ public class PointerUpLinkTagEvent : PointerEventBase<PointerUpLinkTagEvent>
 
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <linkID>k__BackingField; //Field offset: 0x110
+	private string <linkID>k__BackingField; //Field offset: 0x100
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <linkText>k__BackingField; //Field offset: 0x118
+	private string <linkText>k__BackingField; //Field offset: 0x108
 
 	private string linkID
 	{

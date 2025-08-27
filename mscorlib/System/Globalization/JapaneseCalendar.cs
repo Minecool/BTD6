@@ -32,8 +32,8 @@ public class JapaneseCalendar : Calendar
 
 	public virtual int TwoDigitYearMax
 	{
-		 get { } //Length: 67
-		 set { } //Length: 323
+		 get { } //Length: 66
+		 set { } //Length: 307
 	}
 
 	private static JapaneseCalendar() { }

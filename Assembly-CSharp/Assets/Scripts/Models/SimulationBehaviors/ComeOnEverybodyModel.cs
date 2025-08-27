@@ -35,12 +35,12 @@ public class ComeOnEverybodyModel : SimulationBehaviorModel
 
 	public PriceMutatorClass PriceMutator
 	{
-		 get { } //Length: 250
+		 get { } //Length: 254
 	}
 
 	public RateMutatorClass RateMutator
 	{
-		 get { } //Length: 282
+		 get { } //Length: 286
 	}
 
 	public ComeOnEverybodyModel(string name, float discountMultiplier, float rateMultiplier, string buffLocsNameRate, string buffIconNameRate, string buffLocsNamePrice, string buffIconNamePrice) { }

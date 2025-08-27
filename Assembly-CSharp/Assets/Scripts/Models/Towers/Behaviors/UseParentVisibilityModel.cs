@@ -17,7 +17,7 @@ public class UseParentVisibilityModel : TowerBehaviorModel
 
 	public VisibilityMutator Mutator
 	{
-		 get { } //Length: 220
+		 get { } //Length: 224
 	}
 
 	public UseParentVisibilityModel(string name) { }

@@ -16,7 +16,7 @@ public class GZipStream : Stream
 	public int BufferSize
 	{
 		 get { } //Length: 26
-		 set { } //Length: 374
+		 set { } //Length: 358
 	}
 
 	public virtual bool CanRead

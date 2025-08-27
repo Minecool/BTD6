@@ -17,5 +17,7 @@ public class DebugUIHandlerMessageBox : DebugUIHandlerWidget
 
 	internal virtual void SetWidget(Widget widget) { }
 
+	private void Update() { }
+
 }
 

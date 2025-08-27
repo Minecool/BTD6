@@ -22,7 +22,7 @@ public class MagmaPoolModel : TowerBehaviorModel
 
 	public MagmaMutator Mutator
 	{
-		 get { } //Length: 285
+		 get { } //Length: 289
 	}
 
 	public MagmaPoolModel(string name, float radius, float rateMultiplier, float rangeMultiplier) { }

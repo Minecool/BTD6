@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[Obsolete("UxmlTemplateTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 public class UxmlTemplateTraits : UxmlTraits
 {
 	private UxmlStringAttributeDescription m_Name; //Field offset: 0x18

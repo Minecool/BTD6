@@ -36,10 +36,10 @@ public sealed class LightmapSettings : object
 
 	public static LightProbes lightProbes
 	{
-		 get { } //Length: 42
+		 get { } //Length: 84
 		[FreeFunction]
 		[NativeName("SetLightProbes")]
-		 set { } //Length: 51
+		 set { } //Length: 107
 	}
 
 	private LightmapSettings() { }
@@ -54,6 +54,8 @@ public sealed class LightmapSettings : object
 	public static LightmapsModeLegacy get_lightmapsModeLegacy() { }
 
 	public static LightProbes get_lightProbes() { }
+
+	private static IntPtr get_lightProbes_Injected() { }
 
 	[NativeName("ResetAndAwakeFromLoad")]
 	internal static void Reset() { }
@@ -71,6 +73,8 @@ public sealed class LightmapSettings : object
 	[FreeFunction]
 	[NativeName("SetLightProbes")]
 	public static void set_lightProbes(LightProbes value) { }
+
+	private static void set_lightProbes_Injected(IntPtr value) { }
 
 }
 

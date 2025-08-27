@@ -1,7 +1,7 @@
 namespace UnityEngineInternal.Input;
 
-[NativeHeader("Modules/Input/Private/InputInternal.h")]
 [NativeHeader("Modules/Input/Private/InputModuleBindings.h")]
+[NativeHeader("Modules/Input/Private/InputInternal.h")]
 internal class NativeInputSystem
 {
 	public static NativeUpdateCallback onUpdate; //Field offset: 0x0
@@ -26,6 +26,13 @@ internal class NativeInputSystem
 		internal set { } //Length: 51
 	}
 
+	[NativeProperty("NormalizeScrollWheelDelta")]
+	internal static bool normalizeScrollWheelDelta
+	{
+		internal get { } //Length: 42
+		internal set { } //Length: 51
+	}
+
 	public static Action<Int32, String> onDeviceDiscovered
 	{
 		 get { } //Length: 79
@@ -41,7 +48,11 @@ internal class NativeInputSystem
 
 	public static double get_currentTimeOffsetToRealtimeSinceStartup() { }
 
+	internal static bool get_normalizeScrollWheelDelta() { }
+
 	public static Action<Int32, String> get_onDeviceDiscovered() { }
+
+	internal static float GetScrollWheelDeltaPerTick() { }
 
 	public static long IOCTL(int deviceId, int code, IntPtr data, int sizeInBytes) { }
 
@@ -58,6 +69,8 @@ internal class NativeInputSystem
 	public static void QueueInputEvent(IntPtr inputEvent) { }
 
 	internal static void set_hasDeviceDiscoveredCallback(bool value) { }
+
+	internal static void set_normalizeScrollWheelDelta(bool value) { }
 
 	public static void set_onDeviceDiscovered(Action<Int32, String> value) { }
 

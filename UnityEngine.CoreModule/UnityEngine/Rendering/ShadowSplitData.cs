@@ -33,7 +33,7 @@ public struct ShadowSplitData : IEquatable<ShadowSplitData>
 
 	public float shadowCascadeBlendCullingFactor
 	{
-		 set { } //Length: 291
+		 set { } //Length: 267
 	}
 
 	private static ShadowSplitData() { }

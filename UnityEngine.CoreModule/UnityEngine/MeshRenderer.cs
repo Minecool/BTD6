@@ -6,20 +6,20 @@ public class MeshRenderer : Renderer
 
 	public Mesh additionalVertexStreams
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 144
+		 set { } //Length: 177
 	}
 
 	public Mesh enlightenVertexStream
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 144
+		 set { } //Length: 177
 	}
 
 	public int subMeshStartIndex
 	{
 		[NativeName("GetSubMeshStartIndex")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public MeshRenderer() { }
@@ -29,14 +29,24 @@ public class MeshRenderer : Renderer
 
 	public Mesh get_additionalVertexStreams() { }
 
+	private static IntPtr get_additionalVertexStreams_Injected(IntPtr _unity_self) { }
+
 	public Mesh get_enlightenVertexStream() { }
+
+	private static IntPtr get_enlightenVertexStream_Injected(IntPtr _unity_self) { }
 
 	[NativeName("GetSubMeshStartIndex")]
 	public int get_subMeshStartIndex() { }
 
+	private static int get_subMeshStartIndex_Injected(IntPtr _unity_self) { }
+
 	public void set_additionalVertexStreams(Mesh value) { }
 
+	private static void set_additionalVertexStreams_Injected(IntPtr _unity_self, IntPtr value) { }
+
 	public void set_enlightenVertexStream(Mesh value) { }
+
+	private static void set_enlightenVertexStream_Injected(IntPtr _unity_self, IntPtr value) { }
 
 }
 

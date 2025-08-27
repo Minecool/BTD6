@@ -18,7 +18,7 @@ public struct ProvideHandle
 
 	internal bool IsValid
 	{
-		internal get { } //Length: 84
+		internal get { } //Length: 82
 	}
 
 	public IResourceLocation Location

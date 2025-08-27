@@ -7,7 +7,7 @@ public class MapEditorAreaData : MapEditorSplineData, ICloneable<MapEditorAreaDa
 	[JsonIgnore]
 	public virtual bool IsHidden
 	{
-		 get { } //Length: 17
+		 get { } //Length: 18
 	}
 
 	public MapEditorAreaData() { }

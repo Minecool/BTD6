@@ -41,32 +41,32 @@ public class HableCurve
 
 		public Vector4 midSegmentA
 		{
-			 get { } //Length: 165
+			 get { } //Length: 139
 		}
 
 		public Vector4 midSegmentB
 		{
-			 get { } //Length: 99
+			 get { } //Length: 93
 		}
 
 		public Vector4 shoSegmentA
 		{
-			 get { } //Length: 165
+			 get { } //Length: 139
 		}
 
 		public Vector4 shoSegmentB
 		{
-			 get { } //Length: 99
+			 get { } //Length: 93
 		}
 
 		public Vector4 toeSegmentA
 		{
-			 get { } //Length: 165
+			 get { } //Length: 139
 		}
 
 		public Vector4 toeSegmentB
 		{
-			 get { } //Length: 99
+			 get { } //Length: 93
 		}
 
 		internal Uniforms(HableCurve parent) { }

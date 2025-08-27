@@ -78,7 +78,7 @@ public abstract class JsonContract
 	public Type CreatedType
 	{
 		 get { } //Length: 5
-		 set { } //Length: 136
+		 set { } //Length: 140
 	}
 
 	[Nullable(new IL2CPP_TYPE_U1[] {2, 1}])]

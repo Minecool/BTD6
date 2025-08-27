@@ -13,7 +13,7 @@ public class CenterElipsePattern : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 246
+		 get { } //Length: 230
 	}
 
 	public CenterElipsePattern() { }

@@ -2,20 +2,53 @@ namespace UnityEngine.Rendering.Universal;
 
 internal class HDRDebugViewPass : ScriptableRenderPass
 {
+	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static BaseRenderFunc<PassDataCIExy, UnsafeGraphContext> <>9__17_0; //Field offset: 0x8
+		public static BaseRenderFunc<PassDataDebugView, RasterGraphContext> <>9__17_1; //Field offset: 0x10
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal void <RenderHDRDebug>b__17_0(PassDataCIExy data, UnsafeGraphContext context) { }
+
+		internal void <RenderHDRDebug>b__17_1(PassDataDebugView data, RasterGraphContext context) { }
+
+	}
+
 	private enum HDRDebugPassId
 	{
 		CIExyPrepass = 0,
 		DebugViewPass = 1,
 	}
 
-	private class PassData
+	private class PassDataCIExy
+	{
+		internal Material material; //Field offset: 0x10
+		internal Vector4 luminanceParameters; //Field offset: 0x18
+		internal TextureHandle srcColor; //Field offset: 0x28
+		internal TextureHandle xyBuffer; //Field offset: 0x38
+		internal TextureHandle passThrough; //Field offset: 0x48
+
+		public PassDataCIExy() { }
+
+	}
+
+	private class PassDataDebugView
 	{
 		internal Material material; //Field offset: 0x10
 		internal HDRDebugMode hdrDebugMode; //Field offset: 0x18
-		internal Vector4 luminanceParameters; //Field offset: 0x1C
-		internal CameraData cameraData; //Field offset: 0x30
+		internal UniversalCameraData cameraData; //Field offset: 0x20
+		internal Vector4 luminanceParameters; //Field offset: 0x28
+		internal TextureHandle overlayUITexture; //Field offset: 0x38
+		internal TextureHandle xyBuffer; //Field offset: 0x48
+		internal TextureHandle srcColor; //Field offset: 0x58
+		internal TextureHandle dstColor; //Field offset: 0x68
 
-		public PassData() { }
+		public PassDataDebugView() { }
 
 	}
 
@@ -33,30 +66,32 @@ internal class HDRDebugViewPass : ScriptableRenderPass
 
 	}
 
-	private PassData m_PassData; //Field offset: 0xE0
-	private RTHandle m_CIExyTarget; //Field offset: 0xE8
-	private RTHandle m_PassthroughRT; //Field offset: 0xF0
-	private RTHandle m_CameraTargetHandle; //Field offset: 0xF8
+	private PassDataCIExy m_PassDataCIExy; //Field offset: 0xB8
+	private PassDataDebugView m_PassDataDebugView; //Field offset: 0xC0
+	private RTHandle m_CIExyTarget; //Field offset: 0xC8
+	private RTHandle m_PassthroughRT; //Field offset: 0xD0
+	private Material m_material; //Field offset: 0xD8
 
 	public HDRDebugViewPass(Material mat) { }
-
-	public static void ConfigureDescriptor(ref RenderTextureDescriptor descriptor) { }
 
 	public static void ConfigureDescriptorForCIEPrepass(ref RenderTextureDescriptor descriptor) { }
 
 	public void Dispose() { }
 
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public virtual void Execute(ScriptableRenderContext context, ref RenderingData renderingData) { }
 
-	private static void ExecuteCIExyPrepass(CommandBuffer cmd, PassData data, RTHandle sourceTexture, RTHandle xyTarget, RTHandle destTexture) { }
+	private static void ExecuteCIExyPrepass(CommandBuffer cmd, PassDataCIExy data, RTHandle sourceTexture, RTHandle xyTarget, RTHandle destTexture) { }
 
-	private static void ExecuteHDRDebugViewFinalPass(CommandBuffer cmd, PassData data, RTHandle sourceTexture, RTHandle destination, RTHandle xyTarget) { }
+	private static void ExecuteHDRDebugViewFinalPass(RasterCommandBuffer cmd, PassDataDebugView data, RTHandle sourceTexture, RTHandle destination, RTHandle xyTarget) { }
 
-	private void ExecutePass(CommandBuffer cmd, PassData data, RTHandle sourceTexture, RTHandle xyTarget) { }
+	private void ExecutePass(CommandBuffer cmd, PassDataCIExy dataCIExy, PassDataDebugView dataDebugView, RTHandle sourceTexture, RTHandle xyTarget, RTHandle destTexture) { }
 
-	internal static Vector4 GetLuminanceParameters(ref CameraData cameraData) { }
+	internal static Vector4 GetLuminanceParameters(UniversalCameraData cameraData) { }
 
-	public void Setup(ref CameraData cameraData, HDRDebugMode hdrdebugMode) { }
+	internal void RenderHDRDebug(RenderGraph renderGraph, UniversalCameraData cameraData, TextureHandle srcColor, TextureHandle overlayUITexture, TextureHandle dstColor, HDRDebugMode hdrDebugMode) { }
+
+	public void Setup(UniversalCameraData cameraData, HDRDebugMode hdrdebugMode) { }
 
 }
 

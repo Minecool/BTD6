@@ -7,7 +7,7 @@ public class BadImageFormatException : SystemException
 
 	public virtual string Message
 	{
-		 get { } //Length: 112
+		 get { } //Length: 107
 	}
 
 	public BadImageFormatException() { }

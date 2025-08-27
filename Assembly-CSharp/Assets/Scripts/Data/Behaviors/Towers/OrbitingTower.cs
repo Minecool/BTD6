@@ -11,7 +11,7 @@ public class OrbitingTower : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 208
+		 get { } //Length: 210
 	}
 
 	public OrbitingTower() { }

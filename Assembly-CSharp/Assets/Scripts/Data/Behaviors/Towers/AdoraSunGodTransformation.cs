@@ -27,7 +27,7 @@ public class AdoraSunGodTransformation : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1273
+		 get { } //Length: 1281
 	}
 
 	public AdoraSunGodTransformation() { }

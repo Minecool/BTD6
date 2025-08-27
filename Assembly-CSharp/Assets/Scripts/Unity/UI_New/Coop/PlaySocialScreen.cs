@@ -287,9 +287,9 @@ public class PlaySocialScreen : GameMenu
 	private event Action CancelCreateLobbyEvent
 	{
 		[CompilerGenerated]
-		private add { } //Length: 162
+		private add { } //Length: 158
 		[CompilerGenerated]
-		private remove { } //Length: 162
+		private remove { } //Length: 158
 	}
 
 	public PlaySocialScreen() { }

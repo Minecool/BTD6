@@ -22,7 +22,7 @@ public class IncreaseRangeModel : AbilityBehaviorModel
 
 	public RangeMutator Mutator
 	{
-		 get { } //Length: 278
+		 get { } //Length: 282
 	}
 
 	public IncreaseRangeModel(string name, int lifespanFrames, float multiplier, float addative, bool endOnDefeatScreen) { }

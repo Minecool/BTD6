@@ -2,6 +2,118 @@ namespace UnityEngine.UIElements;
 
 public struct Cursor : IEquatable<Cursor>
 {
+	public class PropertyBag : ContainerPropertyBag<Cursor>
+	{
+		private class DefaultCursorIdProperty : Property<Cursor, Int32>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public DefaultCursorIdProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual int GetValue(ref Cursor container) { }
+
+			public virtual void SetValue(ref Cursor container, int value) { }
+
+		}
+
+		private class HotspotProperty : Property<Cursor, Vector2>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public HotspotProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual Vector2 GetValue(ref Cursor container) { }
+
+			public virtual void SetValue(ref Cursor container, Vector2 value) { }
+
+		}
+
+		private class TextureProperty : Property<Cursor, Texture2D>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public TextureProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual Texture2D GetValue(ref Cursor container) { }
+
+			public virtual void SetValue(ref Cursor container, Texture2D value) { }
+
+		}
+
+
+		public PropertyBag() { }
+
+	}
+
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private Texture2D <texture>k__BackingField; //Field offset: 0x0

@@ -9,6 +9,8 @@ public class RatioObject : MonoBehaviour
 
 	public override void OnQuitToMenu() { }
 
+	public override void OnRestart() { }
+
 	public override void OnUpdate() { }
 
 	public override bool OverrideOpenPauseMenu() { }

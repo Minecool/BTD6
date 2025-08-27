@@ -55,7 +55,7 @@ public sealed class PKCS7
 
 		public Byte[] EncryptedContent
 		{
-			 get { } //Length: 123
+			 get { } //Length: 121
 		}
 
 		public ContentInfo EncryptionAlgorithm
@@ -146,12 +146,12 @@ public sealed class PKCS7
 
 		public Byte[] SerialNumber
 		{
-			 get { } //Length: 123
+			 get { } //Length: 121
 		}
 
 		public Byte[] Signature
 		{
-			 get { } //Length: 123
+			 get { } //Length: 121
 		}
 
 		public ArrayList UnauthenticatedAttributes

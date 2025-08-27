@@ -40,9 +40,9 @@ public class CommonBehaviorProxy : Mutable, ICommonBehaviorProxy, IMutable, IRoo
 	public override event OnUpgradedDelegate OnUpgradedEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public override RootObjectLockList<T> Behaviors
@@ -255,7 +255,7 @@ public class CommonBehaviorProxy : Mutable, ICommonBehaviorProxy, IMutable, IRoo
 
 	public override void OnUpgraded(int path) { }
 
-	public override float Pickup() { }
+	public override float Pickup(Tower towerPickingUp) { }
 
 	[CompilerGenerated]
 	public override void remove_OnUpgradedEvent(OnUpgradedDelegate value) { }

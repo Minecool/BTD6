@@ -32,7 +32,7 @@ public class XmlSchemaException : SystemException
 
 	public virtual string Message
 	{
-		 get { } //Length: 25
+		 get { } //Length: 20
 	}
 
 	public XmlSchemaObject SourceSchemaObject

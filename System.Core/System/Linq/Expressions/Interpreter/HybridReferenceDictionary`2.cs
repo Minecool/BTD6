@@ -47,8 +47,8 @@ internal class HybridReferenceDictionary
 
 	public TValue Item
 	{
-		 get { } //Length: 303
-		 set { } //Length: 706
+		 get { } //Length: 287
+		 set { } //Length: 698
 	}
 
 	public HybridReferenceDictionary`2() { }

@@ -3,6 +3,20 @@ namespace Assets.Scripts.Unity.UI_New.SweepStakes;
 public class SweepstakesEventEndedScreen : GameMenu
 {
 	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static Func<Task, Boolean> <>9__18_0; //Field offset: 0x8
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal bool <LoadEventEndedUI>b__18_0(Task x) { }
+
+	}
+
+	[CompilerGenerated]
 	private struct <GetWinnersAndLoadUi>d__16 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
@@ -28,8 +42,9 @@ public class SweepstakesEventEndedScreen : GameMenu
 		private bool <playerIsAWinner>5__2; //Field offset: 0x30
 		private Task<Dictionary`2<String, String>> <playerNamesTask>5__3; //Field offset: 0x38
 		private List<Task> <bindingTasks>5__4; //Field offset: 0x40
-		private int <i>5__5; //Field offset: 0x48
-		private SweepstakesWinnerDisplay <playerDisplay>5__6; //Field offset: 0x50
+		private int <maxActiveBindingTasks>5__5; //Field offset: 0x48
+		private int <i>5__6; //Field offset: 0x4C
+		private SweepstakesWinnerDisplay <playerDisplay>5__7; //Field offset: 0x50
 		private YieldAwaiter <>u__1; //Field offset: 0x58
 
 		private override void MoveNext() { }

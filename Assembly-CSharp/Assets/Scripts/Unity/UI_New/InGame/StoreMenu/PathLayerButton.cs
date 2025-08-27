@@ -15,7 +15,7 @@ public class PathLayerButton : EditorLayerButton
 
 	public int PathWidth
 	{
-		 get { } //Length: 142
+		 get { } //Length: 144
 	}
 
 	public PathLayerButton() { }

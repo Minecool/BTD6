@@ -6,7 +6,7 @@ internal static class LocalAppContextSwitches
 
 	public static bool AllowArbitraryTypeInstantiation
 	{
-		 get { } //Length: 98
+		 get { } //Length: 99
 	}
 
 	public static bool get_AllowArbitraryTypeInstantiation() { }

@@ -10,7 +10,7 @@ public class JoinSessionResponseMessage : Message
 
 	public JoinSessionResponseMessage(bool success, List<Byte> players) { }
 
-	protected virtual Byte[] CreateBytes() { }
+	private static Byte[] CreateBytes(bool success, List<Byte> players) { }
 
 }
 

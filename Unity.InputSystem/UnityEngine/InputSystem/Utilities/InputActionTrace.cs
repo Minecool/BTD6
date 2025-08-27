@@ -24,7 +24,7 @@ public sealed class InputActionTrace : IEnumerable<ActionEventPtr>, IEnumerable,
 
 		public IInputInteraction interaction
 		{
-			 get { } //Length: 79
+			 get { } //Length: 80
 		}
 
 		public InputActionPhase phase

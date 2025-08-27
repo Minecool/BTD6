@@ -23,7 +23,7 @@ public class RectMask2D : UIBehaviour, IClipper, ICanvasRaycastFilter
 
 	internal Canvas Canvas
 	{
-		internal get { } //Length: 334
+		internal get { } //Length: 332
 	}
 
 	public Rect canvasRect
@@ -44,7 +44,7 @@ public class RectMask2D : UIBehaviour, IClipper, ICanvasRaycastFilter
 
 	private Rect rootCanvasRect
 	{
-		private get { } //Length: 473
+		private get { } //Length: 465
 	}
 
 	public Vector2Int softness

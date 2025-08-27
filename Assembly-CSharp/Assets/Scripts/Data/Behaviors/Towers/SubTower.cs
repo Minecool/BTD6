@@ -6,7 +6,7 @@ public class SubTower : Tower
 
 	public virtual TowerModel Def
 	{
-		 get { } //Length: 1000
+		 get { } //Length: 1356
 	}
 
 	public SubTower() { }

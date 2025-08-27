@@ -12,7 +12,7 @@ public struct InputUserAccountHandle : IEquatable<InputUserAccountHandle>
 
 	public ulong handle
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public InputUserAccountHandle(string apiName, ulong handle) { }

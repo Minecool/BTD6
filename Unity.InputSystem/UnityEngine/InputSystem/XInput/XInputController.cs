@@ -54,16 +54,16 @@ public class XInputController : Gamepad
 		 get { } //Length: 49
 	}
 
+	[InputControl(name = "buttonSouth", displayName = "A")]
+	[InputControl(name = "buttonEast", displayName = "B")]
+	[InputControl(name = "buttonWest", displayName = "X")]
+	[InputControl(name = "buttonNorth", displayName = "Y")]
+	[InputControl(name = "leftShoulder", displayName = "Left Bumper", shortDisplayName = "LB")]
 	[InputControl(name = "rightShoulder", displayName = "Right Bumper", shortDisplayName = "RB")]
 	[InputControl(name = "leftTrigger", shortDisplayName = "LT")]
-	[InputControl(name = "leftShoulder", displayName = "Left Bumper", shortDisplayName = "LB")]
-	[InputControl(name = "buttonNorth", displayName = "Y")]
-	[InputControl(name = "buttonWest", displayName = "X")]
-	[InputControl(name = "buttonEast", displayName = "B")]
-	[InputControl(name = "buttonSouth", displayName = "A")]
+	[InputControl(name = "rightTrigger", shortDisplayName = "RT")]
 	[InputControl(name = "start", displayName = "Menu", alias = "menu")]
 	[InputControl(name = "select", displayName = "View", alias = "view")]
-	[InputControl(name = "rightTrigger", shortDisplayName = "RT")]
 	public ButtonControl menu
 	{
 		[CompilerGenerated]

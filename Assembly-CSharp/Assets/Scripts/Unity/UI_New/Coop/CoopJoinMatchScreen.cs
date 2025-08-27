@@ -113,9 +113,9 @@ public class CoopJoinMatchScreen : GameMenu
 	private event Action CancelEvent
 	{
 		[CompilerGenerated]
-		private add { } //Length: 162
+		private add { } //Length: 158
 		[CompilerGenerated]
-		private remove { } //Length: 162
+		private remove { } //Length: 158
 	}
 
 	public CoopJoinMatchScreen() { }

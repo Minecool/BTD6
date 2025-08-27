@@ -43,7 +43,7 @@ public class PlayerContent
 
 	public string CompletionRate
 	{
-		 get { } //Length: 393
+		 get { } //Length: 376
 	}
 
 	[JsonProperty("ChallengeData")]
@@ -62,7 +62,7 @@ public class PlayerContent
 
 	public string WinRate
 	{
-		 get { } //Length: 369
+		 get { } //Length: 366
 	}
 
 	[AsyncStateMachine(typeof(<_GetData>d__11))]

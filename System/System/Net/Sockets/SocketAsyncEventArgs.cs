@@ -43,9 +43,9 @@ public class SocketAsyncEventArgs : EventArgs, IDisposable
 	public event EventHandler<SocketAsyncEventArgs> Completed
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public Socket AcceptSocket

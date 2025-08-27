@@ -10,7 +10,7 @@ internal class HeaderInfoTable
 
 	internal HeaderInfo Item
 	{
-		internal get { } //Length: 233
+		internal get { } //Length: 238
 	}
 
 	private static HeaderInfoTable() { }

@@ -13,11 +13,13 @@ public class ScriptableObject : object
 
 	public static T CreateInstance() { }
 
-	[NativeMethod(IsThreadSafe = True)]
+	[NativeMethod(IsThreadSafe = True, ThrowsException = True)]
 	private static void CreateScriptableObject(ScriptableObject self) { }
 
 	[NativeMethod(Name = "Scripting::CreateScriptableObjectWithType", IsFreeFunction = True, ThrowsException = True)]
 	internal static ScriptableObject CreateScriptableObjectInstanceFromType(Type type, bool applyDefaultsAndReset) { }
+
+	private static IntPtr CreateScriptableObjectInstanceFromType_Injected(Type type, bool applyDefaultsAndReset) { }
 
 }
 

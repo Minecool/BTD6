@@ -7,7 +7,7 @@ public class TrackBloonDistanceTraveledOnRound : SimulationBehavior
 	public String[] triggerIds; //Field offset: 0x28
 	public Single[] percentDistance; //Field offset: 0x30
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 149
 	}
@@ -21,7 +21,7 @@ public class TrackBloonDistanceTraveledOnRound : SimulationBehavior
 
 	public TrackBloonDistanceTraveledOnRound(Int32[] rounds, String[] bloonNames, String[] triggerIds, Single[] percentDistance) { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

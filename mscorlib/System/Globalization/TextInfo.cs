@@ -4,24 +4,19 @@ namespace System.Globalization;
 public class TextInfo : ICloneable, IDeserializationCallback
 {
 	internal static TextInfo s_Invariant; //Field offset: 0x0
-	private const int wordSeparatorMask = 536672256; //Field offset: 0x0
 	[OptionalField(VersionAdded = 2)]
-	private string m_listSeparator; //Field offset: 0x10
-	[OptionalField(VersionAdded = 2)]
-	private bool m_isReadOnly; //Field offset: 0x18
+	private bool m_isReadOnly; //Field offset: 0x10
 	[OptionalField(VersionAdded = 3)]
-	private string m_cultureName; //Field offset: 0x20
-	private CultureData m_cultureData; //Field offset: 0x28
-	private string m_textInfoName; //Field offset: 0x30
-	private Nullable<Boolean> m_IsAsciiCasingSameAsInvariant; //Field offset: 0x38
+	private string m_cultureName; //Field offset: 0x18
+	private CultureData m_cultureData; //Field offset: 0x20
+	private string m_textInfoName; //Field offset: 0x28
+	private Nullable<Boolean> m_IsAsciiCasingSameAsInvariant; //Field offset: 0x30
 	[OptionalField(VersionAdded = 2)]
-	private string customCultureName; //Field offset: 0x40
+	private string customCultureName; //Field offset: 0x38
 	[OptionalField(VersionAdded = 1)]
-	internal int m_nDataItem; //Field offset: 0x48
+	internal bool m_useUserOverride; //Field offset: 0x40
 	[OptionalField(VersionAdded = 1)]
-	internal bool m_useUserOverride; //Field offset: 0x4C
-	[OptionalField(VersionAdded = 1)]
-	internal int m_win32LangID; //Field offset: 0x50
+	internal int m_win32LangID; //Field offset: 0x44
 
 	[ComVisible(False)]
 	public string CultureName
@@ -36,7 +31,7 @@ public class TextInfo : ICloneable, IDeserializationCallback
 
 	private bool IsAsciiCasingSameAsInvariant
 	{
-		private get { } //Length: 219
+		private get { } //Length: 230
 	}
 
 	internal TextInfo() { }

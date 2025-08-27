@@ -21,28 +21,34 @@ public class TextAsset : object
 
 	public Byte[] bytes
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public long dataSize
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public string text
 	{
-		 get { } //Length: 129
+		 get { } //Length: 163
 	}
 
-	public TextAsset() { }
+	public TextAsset(ReadOnlySpan<Byte> bytes) { }
+
+	internal TextAsset(CreateOptions options, ReadOnlySpan<Byte> bytes) { }
+
+	internal TextAsset(CreateOptions options, string text) { }
 
 	public TextAsset(string text) { }
 
-	internal TextAsset(CreateOptions options, string text) { }
+	public TextAsset() { }
 
 	internal static string DecodeString(Byte[] bytes) { }
 
 	public Byte[] get_bytes() { }
+
+	private static Byte[] get_bytes_Injected(IntPtr _unity_self) { }
 
 	public long get_dataSize() { }
 
@@ -52,13 +58,25 @@ public class TextAsset : object
 
 	private IntPtr GetDataPtr() { }
 
+	private static IntPtr GetDataPtr_Injected(IntPtr _unity_self) { }
+
 	private long GetDataSize() { }
+
+	private static long GetDataSize_Injected(IntPtr _unity_self) { }
 
 	internal string GetPreview(int maxChars) { }
 
 	private Byte[] GetPreviewBytes(int maxByteCount) { }
 
+	private static Byte[] GetPreviewBytes_Injected(IntPtr _unity_self, int maxByteCount) { }
+
 	private static void Internal_CreateInstance(TextAsset self, string text) { }
+
+	private static void Internal_CreateInstance_Injected(TextAsset self, ref ManagedSpanWrapper text) { }
+
+	private static void Internal_CreateInstanceFromBytes(TextAsset self, ReadOnlySpan<Byte> bytes) { }
+
+	private static void Internal_CreateInstanceFromBytes_Injected(TextAsset self, ref ManagedSpanWrapper bytes) { }
 
 	public virtual string ToString() { }
 

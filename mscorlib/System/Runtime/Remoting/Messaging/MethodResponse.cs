@@ -22,7 +22,7 @@ public class MethodResponse : IMethodReturnMessage, IMethodMessage, IMessage, IS
 
 	public override int ArgCount
 	{
-		 get { } //Length: 18
+		 get { } //Length: 14
 	}
 
 	public override Object[] Args
@@ -42,22 +42,22 @@ public class MethodResponse : IMethodReturnMessage, IMethodMessage, IMessage, IS
 
 	public override MethodBase MethodBase
 	{
-		 get { } //Length: 316
+		 get { } //Length: 304
 	}
 
 	public override string MethodName
 	{
-		 get { } //Length: 86
+		 get { } //Length: 84
 	}
 
 	public override object MethodSignature
 	{
-		 get { } //Length: 198
+		 get { } //Length: 196
 	}
 
 	public override Object[] OutArgs
 	{
-		 get { } //Length: 458
+		 get { } //Length: 443
 	}
 
 	public override IDictionary Properties
@@ -78,18 +78,18 @@ public class MethodResponse : IMethodReturnMessage, IMethodMessage, IMessage, IS
 
 	private override string System.Runtime.Remoting.Messaging.IInternalMessage.Uri
 	{
-		private get { } //Length: 86
+		private get { } //Length: 84
 		private set { } //Length: 5
 	}
 
 	public override string TypeName
 	{
-		 get { } //Length: 86
+		 get { } //Length: 84
 	}
 
 	public override string Uri
 	{
-		 get { } //Length: 86
+		 get { } //Length: 84
 		 set { } //Length: 5
 	}
 

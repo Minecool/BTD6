@@ -5,7 +5,7 @@ public class MissingFieldException : MissingMemberException, ISerializable
 
 	public virtual string Message
 	{
-		 get { } //Length: 525
+		 get { } //Length: 441
 	}
 
 	public MissingFieldException() { }

@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-internal enum DragVisualMode
+public enum DragVisualMode
 {
 	None = 0,
 	Copy = 1,

@@ -21,7 +21,7 @@ public class DisableTowersInRangeModel : PropBehaviorModel
 
 	public SuspendTowerMutator Mutator
 	{
-		 get { } //Length: 295
+		 get { } //Length: 299
 	}
 
 	public DisableTowersInRangeModel(string name, int range, PrefabReference disabledTowerOverlayDisplay) { }

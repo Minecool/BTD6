@@ -7,17 +7,20 @@ public class Power : MonoBehaviour
 	public GameObject icon; //Field offset: 0x28
 	public Tower tower; //Field offset: 0x30
 	public bool isHidden; //Field offset: 0x38
-	public bool showBuffsForTower; //Field offset: 0x39
-	public int quantity; //Field offset: 0x3C
-	public bool saveImmediately; //Field offset: 0x40
-	public string storeNavigateToId; //Field offset: 0x48
-	public int orderPriority; //Field offset: 0x50
-	public bool alwaysPlaceAtScreenCentre; //Field offset: 0x54
-	private PowerModel def; //Field offset: 0x58
+	public int linkedToAchievement; //Field offset: 0x3C
+	public bool showBuffsForTower; //Field offset: 0x40
+	public int quantity; //Field offset: 0x44
+	public bool saveImmediately; //Field offset: 0x48
+	public string storeNavigateToId; //Field offset: 0x50
+	public int orderPriority; //Field offset: 0x58
+	public bool alwaysPlaceAtScreenCentre; //Field offset: 0x5C
+	public bool dontShowNew; //Field offset: 0x5D
+	public PrefabReference animatedIcon; //Field offset: 0x60
+	protected PowerModel def; //Field offset: 0x68
 
 	public PowerModel Def
 	{
-		 get { } //Length: 722
+		 get { } //Length: 831
 	}
 
 	public Power() { }

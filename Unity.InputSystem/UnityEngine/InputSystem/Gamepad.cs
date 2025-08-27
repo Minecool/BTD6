@@ -68,7 +68,7 @@ public class Gamepad : InputDevice, IDualMotorRumble, IHaptics
 		[CompilerGenerated]
 		 get { } //Length: 8
 		[CompilerGenerated]
-		 set { } //Length: 95
+		 set { } //Length: 8
 	}
 
 	public ButtonControl buttonSouth
@@ -115,7 +115,7 @@ public class Gamepad : InputDevice, IDualMotorRumble, IHaptics
 
 	public ButtonControl Item
 	{
-		 get { } //Length: 480
+		 get { } //Length: 472
 	}
 
 	public ButtonControl leftShoulder

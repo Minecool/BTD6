@@ -10,12 +10,12 @@ public abstract class MagusPerfectusAbilityBehavior : AbilityBehavior
 
 	protected Tower ParagonTower
 	{
-		 get { } //Length: 143
+		 get { } //Length: 148
 	}
 
 	private ObjectId ParagonTowerId
 	{
-		private get { } //Length: 110
+		private get { } //Length: 115
 	}
 
 	protected MagusPerfectusAbilityBehavior() { }

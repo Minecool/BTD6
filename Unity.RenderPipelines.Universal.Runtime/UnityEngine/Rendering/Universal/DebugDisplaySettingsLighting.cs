@@ -105,7 +105,7 @@ public class DebugDisplaySettingsLighting : IDebugDisplaySettingsData, IDebugDis
 
 	public override bool IsPostProcessingAllowed
 	{
-		 get { } //Length: 17
+		 get { } //Length: 18
 	}
 
 	public DebugLightingMode lightingDebugMode
@@ -149,8 +149,6 @@ public class DebugDisplaySettingsLighting : IDebugDisplaySettingsData, IDebugDis
 
 	[CompilerGenerated]
 	public void set_lightingFeatureFlags(DebugLightingFeatureFlags value) { }
-
-	public override bool TryGetScreenClearColor(ref Color color) { }
 
 	private override IDebugDisplaySettingsPanelDisposable UnityEngine.Rendering.IDebugDisplaySettingsData.CreatePanel() { }
 

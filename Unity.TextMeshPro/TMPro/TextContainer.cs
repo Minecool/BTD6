@@ -75,7 +75,7 @@ public class TextContainer : UIBehaviour
 	public Rect rect
 	{
 		 get { } //Length: 11
-		 set { } //Length: 90
+		 set { } //Length: 92
 	}
 
 	public RectTransform rectTransform

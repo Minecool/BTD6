@@ -2,6 +2,20 @@ namespace UnityEngine.ResourceManagement.ResourceProviders;
 
 public class AssetBundleResource : IAssetBundleResource, IUpdateReceiver
 {
+	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static Func<UnityWebRequestResult, Boolean> <>9__52_0; //Field offset: 0x8
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal bool <.ctor>b__52_0(UnityWebRequestResult x) { }
+
+	}
+
 	internal enum LoadType
 	{
 		None = 0,
@@ -28,12 +42,14 @@ public class AssetBundleResource : IAssetBundleResource, IUpdateReceiver
 	private ulong m_LastDownloadedByteCount; //Field offset: 0x90
 	private float m_TimeoutTimer; //Field offset: 0x98
 	private int m_TimeoutOverFrames; //Field offset: 0x9C
-	private int m_LastFrameCount; //Field offset: 0xA0
-	private float m_TimeSecSinceLastUpdate; //Field offset: 0xA4
+	internal bool m_DownloadOnly; //Field offset: 0xA0
+	private int m_LastFrameCount; //Field offset: 0xA4
+	private float m_TimeSecSinceLastUpdate; //Field offset: 0xA8
+	internal Func<UnityWebRequestResult, Boolean> m_RequestRetryCallback; //Field offset: 0xB0
 
 	internal long BytesToDownload
 	{
-		internal get { } //Length: 183
+		internal get { } //Length: 172
 	}
 
 	private bool HasTimedOut
@@ -44,10 +60,10 @@ public class AssetBundleResource : IAssetBundleResource, IUpdateReceiver
 	public AssetBundleResource() { }
 
 	[CompilerGenerated]
-	private void <AddBeginWebRequestHandler>b__43_0(UnityWebRequestAsyncOperation asyncOp) { }
+	private void <AddBeginWebRequestHandler>b__45_0(UnityWebRequestAsyncOperation asyncOp) { }
 
 	[CompilerGenerated]
-	private void <GetAssetPreloadRequest>b__28_0(AsyncOperation operation) { }
+	private void <GetAssetPreloadRequest>b__30_0(AsyncOperation operation) { }
 
 	internal void AddBeginWebRequestHandler(WebRequestQueueOperation webRequestQueueOperation) { }
 
@@ -91,7 +107,7 @@ public class AssetBundleResource : IAssetBundleResource, IUpdateReceiver
 
 	private void RemoveBundleFromProfiler() { }
 
-	public void Start(ProvideHandle provideHandle, AssetBundleUnloadOperation unloadOp) { }
+	public void Start(ProvideHandle provideHandle, AssetBundleUnloadOperation unloadOp, Func<UnityWebRequestResult, Boolean> requestRetryCallback) { }
 
 	public bool Unload(out AssetBundleUnloadOperation unloadOp) { }
 

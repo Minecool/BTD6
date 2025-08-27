@@ -13,7 +13,7 @@ public class LongField : TextValueField<Int64>
 
 		private LongField parentLongField
 		{
-			private get { } //Length: 113
+			private get { } //Length: 117
 		}
 
 		internal LongInput() { }
@@ -32,6 +32,7 @@ public class LongField : TextValueField<Int64>
 
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<LongField, UxmlTraits>
 	{
 
@@ -39,6 +40,7 @@ public class LongField : TextValueField<Int64>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : TextValueFieldTraits<Int64, UxmlLongAttributeDescription>
 	{
 
@@ -52,7 +54,7 @@ public class LongField : TextValueField<Int64>
 
 	private LongInput longInput
 	{
-		private get { } //Length: 122
+		private get { } //Length: 118
 	}
 
 	private static LongField() { }

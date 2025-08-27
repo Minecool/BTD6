@@ -23,7 +23,7 @@ public class HeatItUpDamageBuffModel : ProjectileBehaviorModel
 
 	public HeatItUpDamageMutator Mutator
 	{
-		 get { } //Length: 266
+		 get { } //Length: 270
 	}
 
 	public HeatItUpDamageBuffModel(string name, float lifespan, string mutatorId, bool useTowerPosition, string buffLocsName, string buffIconName) { }

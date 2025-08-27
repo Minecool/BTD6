@@ -52,7 +52,7 @@ public class CorvusSpellbookUi : SecondarySelectionMenuUi
 
 	public virtual TowerBasedShopItemModel TowerBasedShopItemModel
 	{
-		 get { } //Length: 127
+		 get { } //Length: 104
 	}
 
 	public CorvusSpellbookUi() { }

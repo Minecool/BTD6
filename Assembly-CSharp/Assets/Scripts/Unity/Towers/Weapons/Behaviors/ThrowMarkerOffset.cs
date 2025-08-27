@@ -7,7 +7,7 @@ public class ThrowMarkerOffset : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 739
+		 get { } //Length: 764
 	}
 
 	public ThrowMarkerOffset() { }

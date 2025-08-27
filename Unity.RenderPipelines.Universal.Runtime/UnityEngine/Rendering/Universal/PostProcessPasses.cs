@@ -38,7 +38,7 @@ internal struct PostProcessPasses : IDisposable
 
 	public PostProcessPass postProcessPass
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public PostProcessPasses(PostProcessData rendererPostProcessData, ref PostProcessParams postProcessParams) { }

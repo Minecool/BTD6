@@ -9,7 +9,7 @@ public class X509CertificateCollection : CollectionBase
 
 		public X509Certificate Current
 		{
-			 get { } //Length: 149
+			 get { } //Length: 151
 		}
 
 		private override object System.Collections.IEnumerator.Current
@@ -34,7 +34,7 @@ public class X509CertificateCollection : CollectionBase
 
 	public X509Certificate Item
 	{
-		 get { } //Length: 152
+		 get { } //Length: 159
 	}
 
 	public X509CertificateCollection() { }

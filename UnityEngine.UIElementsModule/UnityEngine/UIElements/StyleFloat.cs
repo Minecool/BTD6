@@ -8,11 +8,13 @@ public struct StyleFloat : IStyleValue<Single>, IEquatable<StyleFloat>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override float value
 	{
 		 get { } //Length: 15
+		 set { } //Length: 12
 	}
 
 	public StyleFloat(float v) { }
@@ -36,6 +38,10 @@ public struct StyleFloat : IStyleValue<Single>, IEquatable<StyleFloat>
 	public static StyleFloat op_Implicit(StyleKeyword keyword) { }
 
 	public static StyleFloat op_Implicit(float v) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(float value) { }
 
 	public virtual string ToString() { }
 

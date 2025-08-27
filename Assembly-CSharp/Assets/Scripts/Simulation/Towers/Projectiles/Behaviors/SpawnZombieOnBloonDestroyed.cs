@@ -7,17 +7,17 @@ public class SpawnZombieOnBloonDestroyed : ProjectileBehavior
 
 	private MagusPerfectusGraveyardStateManager GraveyardManager
 	{
-		private get { } //Length: 197
+		private get { } //Length: 212
 	}
 
 	private Tower ParagonTower
 	{
-		private get { } //Length: 187
+		private get { } //Length: 198
 	}
 
 	private ObjectId ParagonTowerId
 	{
-		private get { } //Length: 142
+		private get { } //Length: 161
 	}
 
 	public SpawnZombieOnBloonDestroyed() { }

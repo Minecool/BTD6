@@ -6,55 +6,52 @@ public class MainMenu : GameMenu
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static UnityAction <>9__28_0; //Field offset: 0x8
-		public static UnityAction <>9__28_1; //Field offset: 0x10
-		public static UnityAction <>9__28_2; //Field offset: 0x18
-		public static UnityAction <>9__28_3; //Field offset: 0x20
-		public static UnityAction <>9__28_4; //Field offset: 0x28
-		public static UnityAction <>9__28_5; //Field offset: 0x30
-		public static UnityAction <>9__28_6; //Field offset: 0x38
-		public static UnityAction <>9__28_7; //Field offset: 0x40
-		public static UnityAction <>9__28_8; //Field offset: 0x48
-		public static UnityAction <>9__28_9; //Field offset: 0x50
-		public static UnityAction <>9__28_10; //Field offset: 0x58
-		public static Func<IapEvent, Boolean> <>9__41_0; //Field offset: 0x60
+		public static UnityAction <>9__29_0; //Field offset: 0x8
+		public static UnityAction <>9__29_1; //Field offset: 0x10
+		public static UnityAction <>9__29_2; //Field offset: 0x18
+		public static UnityAction <>9__29_3; //Field offset: 0x20
+		public static UnityAction <>9__29_5; //Field offset: 0x28
+		public static UnityAction <>9__29_6; //Field offset: 0x30
+		public static UnityAction <>9__29_7; //Field offset: 0x38
+		public static UnityAction <>9__29_8; //Field offset: 0x40
+		public static UnityAction <>9__29_9; //Field offset: 0x48
+		public static UnityAction <>9__29_10; //Field offset: 0x50
+		public static Func<IapEvent, Boolean> <>9__45_0; //Field offset: 0x58
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <RefreshStorePip>b__41_0(IapEvent iapEvent) { }
+		internal bool <RefreshStorePip>b__45_0(IapEvent iapEvent) { }
 
-		internal void <Start>b__28_0() { }
+		internal void <Start>b__29_0() { }
 
-		internal void <Start>b__28_1() { }
+		internal void <Start>b__29_1() { }
 
-		internal void <Start>b__28_10() { }
+		internal void <Start>b__29_10() { }
 
-		internal void <Start>b__28_2() { }
+		internal void <Start>b__29_2() { }
 
-		internal void <Start>b__28_3() { }
+		internal void <Start>b__29_3() { }
 
-		internal void <Start>b__28_4() { }
+		internal void <Start>b__29_5() { }
 
-		internal void <Start>b__28_5() { }
+		internal void <Start>b__29_6() { }
 
-		internal void <Start>b__28_6() { }
+		internal void <Start>b__29_7() { }
 
-		internal void <Start>b__28_7() { }
+		internal void <Start>b__29_8() { }
 
-		internal void <Start>b__28_8() { }
-
-		internal void <Start>b__28_9() { }
+		internal void <Start>b__29_9() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass55_0
+	private sealed class <>c__DisplayClass59_0
 	{
 		public PlaySessionConflict conflict; //Field offset: 0x10
 
-		public <>c__DisplayClass55_0() { }
+		public <>c__DisplayClass59_0() { }
 
 		internal void <ShowPlaySessionPopup>b__0() { }
 
@@ -63,18 +60,7 @@ public class MainMenu : GameMenu
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass57_0
-	{
-		public HashSet<String> receivedGiftEventIds; //Field offset: 0x10
-
-		public <>c__DisplayClass57_0() { }
-
-		internal bool <ShowGiftEventPopup>b__0(GiftEvent x) { }
-
-	}
-
-	[CompilerGenerated]
-	private struct <CanOpenPendingDeepLink>d__36 : IAsyncStateMachine
+	private struct <CanOpenPendingDeepLink>d__40 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -90,7 +76,7 @@ public class MainMenu : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <CheckAndRejoinCoopGame>d__39 : IAsyncStateMachine
+	private struct <CheckAndRejoinCoopGame>d__43 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -112,7 +98,7 @@ public class MainMenu : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <CheckBlockedNkServers>d__64 : IAsyncStateMachine
+	private struct <CheckBlockedNkServers>d__67 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -135,7 +121,7 @@ public class MainMenu : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <CheckForCompletedLeaderboardRewards>d__63 : IAsyncStateMachine
+	private struct <CheckForCompletedLeaderboardRewards>d__66 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -152,7 +138,22 @@ public class MainMenu : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <QueuePopupsAsync>d__38 : IAsyncStateMachine
+	private struct <HandleTutorialCallbacks>d__31 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		public MainMenu <>4__this; //Field offset: 0x20
+		private TaskAwaiter <>u__1; //Field offset: 0x28
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <QueuePopupsAsync>d__42 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -170,7 +171,7 @@ public class MainMenu : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <RaiseExceptionsAsync>d__30 : IAsyncStateMachine
+	private struct <RaiseExceptionsAsync>d__34 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -185,7 +186,7 @@ public class MainMenu : GameMenu
 	}
 
 	[CompilerGenerated]
-	private struct <RefreshServerTimeAndSKUData>d__52 : IAsyncStateMachine
+	private struct <RefreshServerTimeAndSKUData>d__56 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -204,36 +205,39 @@ public class MainMenu : GameMenu
 	private static bool <HasBeenLoaded>k__BackingField; //Field offset: 0x0
 	private static bool requiresPopupQueue; //Field offset: 0x1
 	public static bool canShowLoginPopup; //Field offset: 0x2
+	[Header("Bottom menu")]
 	public Button monkeysBtn; //Field offset: 0x48
 	public Button heroesBtn; //Field offset: 0x50
 	public Button legendsBtn; //Field offset: 0x58
 	public Button playBtn; //Field offset: 0x60
 	public Button coopBtn; //Field offset: 0x68
 	public Button powersBtn; //Field offset: 0x70
-	public Button knowledgeBtn; //Field offset: 0x78
-	public Button playerInfoBtn; //Field offset: 0x80
-	public Button settingsBtn; //Field offset: 0x88
-	public Button achievementsBtn; //Field offset: 0x90
-	public Button storeBtn; //Field offset: 0x98
-	public Button saveButton; //Field offset: 0xA0
-	public Button trophyStoreBtn; //Field offset: 0xA8
-	public Button exitBtn; //Field offset: 0xB0
-	public Image heroButtonHeroImg; //Field offset: 0xB8
-	public GameObject settingsBtnNotify; //Field offset: 0xC0
-	private CancellationTokenSource rejoinCanceller; //Field offset: 0xC8
-	public GameObject trophyStoreLimitedTimeObj; //Field offset: 0xD0
+	public GameObject powersNewRibbon; //Field offset: 0x78
+	public Button knowledgeBtn; //Field offset: 0x80
+	[Header("Side menu")]
+	public Button playerInfoBtn; //Field offset: 0x88
+	public Button settingsBtn; //Field offset: 0x90
+	public Button achievementsBtn; //Field offset: 0x98
+	public Button storeBtn; //Field offset: 0xA0
+	public Button saveButton; //Field offset: 0xA8
+	public Button trophyStoreBtn; //Field offset: 0xB0
+	public Button exitBtn; //Field offset: 0xB8
+	public Image heroButtonHeroImg; //Field offset: 0xC0
+	public GameObject settingsBtnNotify; //Field offset: 0xC8
+	private CancellationTokenSource rejoinCanceller; //Field offset: 0xD0
+	public GameObject trophyStoreLimitedTimeObj; //Field offset: 0xD8
 	[SerializeField]
-	private GameObject mrBeastEventStoreObj; //Field offset: 0xD8
+	private GameObject mrBeastEventStoreObj; //Field offset: 0xE0
 	[SerializeField]
-	private GameObject[] disabledByServerMaintenance; //Field offset: 0xE0
-	private bool isUnderMaintenance; //Field offset: 0xE8
+	private GameObject[] disabledByServerMaintenance; //Field offset: 0xE8
+	private bool isUnderMaintenance; //Field offset: 0xF0
 	[SerializeField]
-	private GameObject storePip; //Field offset: 0xF0
+	private GameObject storePip; //Field offset: 0xF8
 	[SerializeField]
-	private GameObject legendsBtnContainer; //Field offset: 0xF8
+	private GameObject legendsBtnContainer; //Field offset: 0x100
 	[SerializeField]
-	private MainMenuMailboxPanel mainMenuMailboxPanel; //Field offset: 0x100
-	private bool hasPendingSaveWarning; //Field offset: 0x108
+	private MailboxButton mailboxButton; //Field offset: 0x108
+	private bool hasPendingSaveWarning; //Field offset: 0x110
 
 	public static bool HasBeenLoaded
 	{
@@ -245,16 +249,19 @@ public class MainMenu : GameMenu
 
 	public MainMenu() { }
 
-	[AsyncStateMachine(typeof(<CanOpenPendingDeepLink>d__36))]
+	[CompilerGenerated]
+	private void <Start>b__29_4() { }
+
+	[AsyncStateMachine(typeof(<CanOpenPendingDeepLink>d__40))]
 	private Task<Boolean> CanOpenPendingDeepLink() { }
 
-	[AsyncStateMachine(typeof(<CheckAndRejoinCoopGame>d__39))]
+	[AsyncStateMachine(typeof(<CheckAndRejoinCoopGame>d__43))]
 	private Task<Boolean> CheckAndRejoinCoopGame() { }
 
-	[AsyncStateMachine(typeof(<CheckBlockedNkServers>d__64))]
+	[AsyncStateMachine(typeof(<CheckBlockedNkServers>d__67))]
 	private static Task CheckBlockedNkServers() { }
 
-	[AsyncStateMachine(typeof(<CheckForCompletedLeaderboardRewards>d__63))]
+	[AsyncStateMachine(typeof(<CheckForCompletedLeaderboardRewards>d__66))]
 	private Task<Boolean> CheckForCompletedLeaderboardRewards() { }
 
 	public void CheckGiftbox() { }
@@ -268,7 +275,12 @@ public class MainMenu : GameMenu
 	[CompilerGenerated]
 	public static bool get_HasBeenLoaded() { }
 
+	[AsyncStateMachine(typeof(<HandleTutorialCallbacks>d__31))]
+	private Task HandleTutorialCallbacks() { }
+
 	private void HideNetflixAccessButton() { }
+
+	private void InitialiseSeenPowersList() { }
 
 	private void OnApplicationFocus(bool focus) { }
 
@@ -286,15 +298,15 @@ public class MainMenu : GameMenu
 
 	public virtual bool OverrideClose() { }
 
-	[AsyncStateMachine(typeof(<QueuePopupsAsync>d__38))]
+	[AsyncStateMachine(typeof(<QueuePopupsAsync>d__42))]
 	private void QueuePopupsAsync() { }
 
-	[AsyncStateMachine(typeof(<RaiseExceptionsAsync>d__30))]
+	[AsyncStateMachine(typeof(<RaiseExceptionsAsync>d__34))]
 	private void RaiseExceptionsAsync(Task task) { }
 
 	private void RecheckNetflixAuth() { }
 
-	[AsyncStateMachine(typeof(<RefreshServerTimeAndSKUData>d__52))]
+	[AsyncStateMachine(typeof(<RefreshServerTimeAndSKUData>d__56))]
 	private void RefreshServerTimeAndSKUData() { }
 
 	private void RefreshSKURelatedUI() { }
@@ -310,9 +322,9 @@ public class MainMenu : GameMenu
 
 	public void SetSelectedHeroImage() { }
 
-	private void ShowGiftEventPopup() { }
-
 	private void ShowNetflixAccessButton() { }
+
+	private void ShowNewPowers() { }
 
 	public void ShowPlayerStats() { }
 

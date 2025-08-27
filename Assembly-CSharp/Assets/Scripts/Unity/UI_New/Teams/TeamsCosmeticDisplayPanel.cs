@@ -121,9 +121,9 @@ public class TeamsCosmeticDisplayPanel : MonoBehaviour
 	public event CosmeticSelectionChangedDelegate CosmeticSelectionChanged
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public bool ChangesDetected

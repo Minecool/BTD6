@@ -8,11 +8,13 @@ public struct StyleCursor : IStyleValue<Cursor>, IEquatable<StyleCursor>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override Cursor value
 	{
 		 get { } //Length: 66
+		 set { } //Length: 24
 	}
 
 	public StyleCursor(StyleKeyword keyword) { }
@@ -32,6 +34,10 @@ public struct StyleCursor : IStyleValue<Cursor>, IEquatable<StyleCursor>
 	public static bool op_Equality(StyleCursor lhs, StyleCursor rhs) { }
 
 	public static StyleCursor op_Implicit(StyleKeyword keyword) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(Cursor value) { }
 
 	public virtual string ToString() { }
 

@@ -18,7 +18,7 @@ public struct CustomAttributeTypedArgument
 	{
 		[CompilerGenerated]
 		[IsReadOnly]
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public CustomAttributeTypedArgument(object value) { }

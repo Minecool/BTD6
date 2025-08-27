@@ -4,7 +4,7 @@ namespace UnityEngine;
 [UsedByNativeCode]
 public class InspectorNameAttribute : PropertyAttribute
 {
-	public readonly string displayName; //Field offset: 0x10
+	public readonly string displayName; //Field offset: 0x18
 
 	public InspectorNameAttribute(string displayName) { }
 

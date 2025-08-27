@@ -10,7 +10,7 @@ public class Finger
 
 	public Touch currentTouch
 	{
-		 get { } //Length: 576
+		 get { } //Length: 657
 	}
 
 	public int index
@@ -21,12 +21,12 @@ public class Finger
 
 	public bool isActive
 	{
-		 get { } //Length: 159
+		 get { } //Length: 144
 	}
 
 	public Touch lastTouch
 	{
-		 get { } //Length: 179
+		 get { } //Length: 171
 	}
 
 	public Touchscreen screen
@@ -37,7 +37,7 @@ public class Finger
 
 	public Vector2 screenPosition
 	{
-		 get { } //Length: 313
+		 get { } //Length: 401
 	}
 
 	public TouchHistory touchHistory

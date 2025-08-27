@@ -3,7 +3,38 @@ namespace NinjaKiwi.LiNK;
 public class LiNKAccount
 {
 	[CompilerGenerated]
-	private struct <UpdateDisplayName>d__70 : IAsyncStateMachine
+	private struct <LinkNewAuthProvider>d__80 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		public AuthenticationProviderToken token; //Field offset: 0x20
+		public LiNKAccount <>4__this; //Field offset: 0x28
+		private TaskAwaiter<UserModel> <>u__1; //Field offset: 0x30
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <RefreshInfo>d__79 : IAsyncStateMachine
+	{
+		public int <>1__state; //Field offset: 0x0
+		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+		public LiNKAccount <>4__this; //Field offset: 0x20
+		private TaskAwaiter<UserModel> <>u__1; //Field offset: 0x28
+
+		private override void MoveNext() { }
+
+		[DebuggerHidden]
+		private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+	}
+
+	[CompilerGenerated]
+	private struct <UpdateDisplayName>d__78 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
@@ -18,24 +49,6 @@ public class LiNKAccount
 
 	}
 
-	internal class AccountInfo
-	{
-		public string safeName; //Field offset: 0x10
-		public string shortCode; //Field offset: 0x18
-		public string email; //Field offset: 0x20
-		public int age; //Field offset: 0x28
-		public int clan; //Field offset: 0x2C
-		public string country; //Field offset: 0x30
-		public string continent; //Field offset: 0x38
-		public int avatar; //Field offset: 0x40
-		public bool online; //Field offset: 0x44
-		public int onlineApp; //Field offset: 0x48
-		public String[] providersAvailable; //Field offset: 0x50
-
-		public AccountInfo() { }
-
-	}
-
 	internal struct Matchmaking_QuickMatchSystem
 	{
 		[CompilerGenerated]
@@ -47,7 +60,7 @@ public class LiNKAccount
 		{
 			[CompilerGenerated]
 			[IsReadOnly]
-			 get { } //Length: 5
+			 get { } //Length: 291
 			[CompilerGenerated]
 			internal set { } //Length: 5
 		}
@@ -78,11 +91,9 @@ public class LiNKAccount
 	}
 
 	public readonly string id; //Field offset: 0x10
-	public readonly AccountInfo info; //Field offset: 0x18
-	[CompilerGenerated]
-	private string <SessionID>k__BackingField; //Field offset: 0x20
-	[CompilerGenerated]
-	private string <DisplayName>k__BackingField; //Field offset: 0x28
+	public readonly UserModel info; //Field offset: 0x18
+	internal readonly Authority authority; //Field offset: 0x20
+	private readonly ApiOptions options; //Field offset: 0x28
 	public readonly Matchmaking_QuickMatchSystem matchmaking_Quick; //Field offset: 0x30
 	public readonly PubSub_Read pubSub_Read; //Field offset: 0x40
 	public readonly PubSub_Send pubSub_Send; //Field offset: 0x48
@@ -140,50 +151,62 @@ public class LiNKAccount
 	public readonly Utils_ESCreate utils_ESCreate; //Field offset: 0x1E8
 	public readonly Utils_ESUpdate utils_ESUpdate; //Field offset: 0x1F0
 	public readonly Support_GiftCodeRedeem support_GiftCodeRedeem; //Field offset: 0x1F8
+	public readonly Squad_Create squad_Create; //Field offset: 0x200
+	public readonly Squad_Join squad_Join; //Field offset: 0x208
+	public readonly Squad_Poll squad_Poll; //Field offset: 0x210
+	public readonly Squad_Kick squad_Kick; //Field offset: 0x218
+	public readonly Squad_Leave squad_Leave; //Field offset: 0x220
+	public readonly Squad_Matchmaking squad_Matchmaking; //Field offset: 0x228
+	[CompilerGenerated]
+	private Action<LiNKAccount> ModifiedEvent; //Field offset: 0x230
 
-	public private string DisplayName
+	public event Action<LiNKAccount> ModifiedEvent
 	{
 		[CompilerGenerated]
-		 get { } //Length: 5
+		 add { } //Length: 174
 		[CompilerGenerated]
-		private set { } //Length: 5
+		 remove { } //Length: 174
+	}
+
+	public string DisplayName
+	{
+		 get { } //Length: 27
 	}
 
 	public bool IsPersonalAccount
 	{
-		 get { } //Length: 30
+		 get { } //Length: 29
 	}
 
-	public private string SessionID
+	public string SessionID
 	{
-		[CompilerGenerated]
-		 get { } //Length: 5
-		[CompilerGenerated]
-		private set { } //Length: 5
+		 get { } //Length: 45
 	}
 
-	internal LiNKAccount(HttpRequestFactory requestFactory, Authority authority, Identity identity, ApiOptions options) { }
+	internal LiNKAccount(UserModel userModel, HttpRequestFactory requestFactory, Authority authority, ApiOptions options) { }
 
 	[CompilerGenerated]
+	public void add_ModifiedEvent(Action<LiNKAccount> value) { }
+
 	public string get_DisplayName() { }
 
 	public bool get_IsPersonalAccount() { }
 
-	[CompilerGenerated]
 	public string get_SessionID() { }
 
-	public Task<UserModel> LinkNewAuthProvider(AuthenticationProviderToken token) { }
+	[AsyncStateMachine(typeof(<LinkNewAuthProvider>d__80))]
+	public Task LinkNewAuthProvider(AuthenticationProviderToken token) { }
+
+	[AsyncStateMachine(typeof(<RefreshInfo>d__79))]
+	public Task RefreshInfo() { }
 
 	[CompilerGenerated]
-	private void set_DisplayName(string value) { }
+	public void remove_ModifiedEvent(Action<LiNKAccount> value) { }
 
-	[CompilerGenerated]
-	private void set_SessionID(string value) { }
-
-	[AsyncStateMachine(typeof(<UpdateDisplayName>d__70))]
+	[AsyncStateMachine(typeof(<UpdateDisplayName>d__78))]
 	public Task UpdateDisplayName(string newDisplayName) { }
 
-	public void UpdateIdentity(Identity newIdentity) { }
+	public void UpdateInfo(UserModel newInfo) { }
 
 }
 

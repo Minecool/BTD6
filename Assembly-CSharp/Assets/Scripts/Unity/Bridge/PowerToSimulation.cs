@@ -27,7 +27,7 @@ public class PowerToSimulation : Selectable
 
 	public Vector3 Position
 	{
-		 get { } //Length: 225
+		 get { } //Length: 215
 	}
 
 	public Vector3 SimPosition

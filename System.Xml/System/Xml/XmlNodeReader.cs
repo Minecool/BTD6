@@ -49,7 +49,7 @@ public class XmlNodeReader : XmlReader, IXmlNamespaceResolver
 
 	public virtual bool IsDefault
 	{
-		 get { } //Length: 216
+		 get { } //Length: 215
 	}
 
 	public virtual bool IsEmptyElement
@@ -59,17 +59,17 @@ public class XmlNodeReader : XmlReader, IXmlNamespaceResolver
 
 	public virtual string LocalName
 	{
-		 get { } //Length: 144
+		 get { } //Length: 92
 	}
 
 	public virtual string Name
 	{
-		 get { } //Length: 92
+		 get { } //Length: 57
 	}
 
 	public virtual string NamespaceURI
 	{
-		 get { } //Length: 114
+		 get { } //Length: 79
 	}
 
 	public virtual XmlNameTable NameTable
@@ -84,7 +84,7 @@ public class XmlNodeReader : XmlReader, IXmlNamespaceResolver
 
 	public virtual string Prefix
 	{
-		 get { } //Length: 114
+		 get { } //Length: 79
 	}
 
 	public virtual ReadState ReadState
@@ -99,12 +99,12 @@ public class XmlNodeReader : XmlReader, IXmlNamespaceResolver
 
 	public virtual string Value
 	{
-		 get { } //Length: 92
+		 get { } //Length: 57
 	}
 
 	public virtual string XmlLang
 	{
-		 get { } //Length: 114
+		 get { } //Length: 79
 	}
 
 	public virtual XmlSpace XmlSpace

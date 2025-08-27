@@ -15,7 +15,7 @@ internal sealed class InternalEncoderBestFitFallbackBuffer : EncoderFallbackBuff
 
 	public virtual int Remaining
 	{
-		 get { } //Length: 13
+		 get { } //Length: 11
 	}
 
 	public InternalEncoderBestFitFallbackBuffer(InternalEncoderBestFitFallback fallback) { }

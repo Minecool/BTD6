@@ -21,7 +21,7 @@ public class SpiritTowerMovement : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 453
+		 get { } //Length: 433
 	}
 
 	public SpiritTowerMovement() { }

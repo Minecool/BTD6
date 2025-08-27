@@ -6,13 +6,13 @@ public class FinalBlitPass : ScriptableRenderPass
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static RenderFunc<PassData> <>9__16_0; //Field offset: 0x8
+		public static BaseRenderFunc<PassData, RasterGraphContext> <>9__17_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <Render>b__16_0(PassData data, RenderGraphContext context) { }
+		internal void <Render>b__17_0(PassData data, RasterGraphContext context) { }
 
 	}
 
@@ -41,41 +41,47 @@ public class FinalBlitPass : ScriptableRenderPass
 	private class PassData
 	{
 		internal TextureHandle source; //Field offset: 0x10
-		internal TextureHandle destination; //Field offset: 0x18
-		internal int sourceID; //Field offset: 0x20
-		internal Vector4 hdrOutputLuminanceParams; //Field offset: 0x24
-		internal bool requireSrgbConversion; //Field offset: 0x34
-		internal BlitMaterialData blitMaterialData; //Field offset: 0x38
-		internal RenderingData renderingData; //Field offset: 0x48
+		internal TextureHandle destination; //Field offset: 0x20
+		internal int sourceID; //Field offset: 0x30
+		internal Vector4 hdrOutputLuminanceParams; //Field offset: 0x34
+		internal bool requireSrgbConversion; //Field offset: 0x44
+		internal bool enableAlphaOutput; //Field offset: 0x45
+		internal BlitMaterialData blitMaterialData; //Field offset: 0x48
+		internal UniversalCameraData cameraData; //Field offset: 0x58
 
 		public PassData() { }
 
 	}
 
-	private RTHandle m_Source; //Field offset: 0xE0
-	private PassData m_PassData; //Field offset: 0xE8
-	private BlitMaterialData[] m_BlitMaterialData; //Field offset: 0xF0
+	private static readonly int s_CameraDepthTextureID; //Field offset: 0x0
+	private RTHandle m_Source; //Field offset: 0xB8
+	private PassData m_PassData; //Field offset: 0xC0
+	private BlitMaterialData[] m_BlitMaterialData; //Field offset: 0xC8
+
+	private static FinalBlitPass() { }
 
 	public FinalBlitPass(RenderPassEvent evt, Material blitMaterial, Material blitHDRMaterial) { }
 
 	public void Dispose() { }
 
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public virtual void Execute(ScriptableRenderContext context, ref RenderingData renderingData) { }
 
-	private static void ExecutePass(ref RenderingData renderingData, in BlitMaterialData blitMaterialData, RTHandle cameraTarget, RTHandle source) { }
+	private static void ExecutePass(RasterCommandBuffer cmd, PassData data, RTHandle source, RTHandle destination, UniversalCameraData cameraData) { }
 
-	private void InitPassData(ref RenderingData renderingData, ref PassData passData, BlitType blitType) { }
+	private void InitPassData(UniversalCameraData cameraData, ref PassData passData, BlitType blitType, bool enableAlphaOutput) { }
 
+	[Obsolete("This rendering path is for compatibility mode only (when Render Graph is disabled). Use Render Graph API instead.", False)]
 	public virtual void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData) { }
 
-	internal void Render(RenderGraph renderGraph, ref RenderingData renderingData, TextureHandle src, TextureHandle dest, TextureHandle overlayUITexture) { }
+	internal void Render(RenderGraph renderGraph, ContextContainer frameData, UniversalCameraData cameraData, in TextureHandle src, in TextureHandle dest, TextureHandle overlayUITexture) { }
 
-	[Obsolete("Use RTHandles for colorHandle")]
+	[Obsolete("Use RTHandles for colorHandle", True)]
 	public void Setup(RenderTextureDescriptor baseDescriptor, RenderTargetHandle colorHandle) { }
 
 	public void Setup(RenderTextureDescriptor baseDescriptor, RTHandle colorHandle) { }
 
-	private static void SetupHDROutput(ColorGamut hdrDisplayColorGamut, Material material, Operation hdrOperation, Vector4 hdrOutputParameters) { }
+	private static void SetupHDROutput(ColorGamut hdrDisplayColorGamut, Material material, Operation hdrOperation, Vector4 hdrOutputParameters, bool rendersOverlayUI) { }
 
 }
 

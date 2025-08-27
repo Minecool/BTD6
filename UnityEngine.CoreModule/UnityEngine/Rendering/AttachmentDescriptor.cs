@@ -11,6 +11,21 @@ public struct AttachmentDescriptor : IEquatable<AttachmentDescriptor>
 	private float m_ClearDepth; //Field offset: 0x70
 	private uint m_ClearStencil; //Field offset: 0x74
 
+	public Color clearColor
+	{
+		 set { } //Length: 8
+	}
+
+	public float clearDepth
+	{
+		 set { } //Length: 6
+	}
+
+	public uint clearStencil
+	{
+		 set { } //Length: 4
+	}
+
 	public GraphicsFormat graphicsFormat
 	{
 		 get { } //Length: 6
@@ -18,12 +33,17 @@ public struct AttachmentDescriptor : IEquatable<AttachmentDescriptor>
 
 	public RenderBufferLoadAction loadAction
 	{
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public RenderTargetIdentifier loadStoreTarget
 	{
 		 get { } //Length: 29
+		 set { } //Length: 26
+	}
+
+	public RenderTargetIdentifier resolveTarget
+	{
 		 set { } //Length: 26
 	}
 
@@ -40,9 +60,9 @@ public struct AttachmentDescriptor : IEquatable<AttachmentDescriptor>
 
 	public void ConfigureTarget(RenderTargetIdentifier target, bool loadExistingContents, bool storeResults) { }
 
-	public override bool Equals(AttachmentDescriptor other) { }
-
 	public virtual bool Equals(object obj) { }
+
+	public override bool Equals(AttachmentDescriptor other) { }
 
 	public GraphicsFormat get_graphicsFormat() { }
 
@@ -52,9 +72,17 @@ public struct AttachmentDescriptor : IEquatable<AttachmentDescriptor>
 
 	public static bool op_Inequality(AttachmentDescriptor left, AttachmentDescriptor right) { }
 
+	public void set_clearColor(Color value) { }
+
+	public void set_clearDepth(float value) { }
+
+	public void set_clearStencil(uint value) { }
+
 	public void set_loadAction(RenderBufferLoadAction value) { }
 
 	public void set_loadStoreTarget(RenderTargetIdentifier value) { }
+
+	public void set_resolveTarget(RenderTargetIdentifier value) { }
 
 	public void set_storeAction(RenderBufferStoreAction value) { }
 

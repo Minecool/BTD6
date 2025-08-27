@@ -250,7 +250,7 @@ public abstract class Stream : MarshalByRefObject, IDisposable, IAsyncDisposable
 
 		public override WaitHandle AsyncWaitHandle
 		{
-			 get { } //Length: 244
+			 get { } //Length: 247
 		}
 
 		public override bool CompletedSynchronously
@@ -286,7 +286,6 @@ public abstract class Stream : MarshalByRefObject, IDisposable, IAsyncDisposable
 	}
 
 	public static readonly Stream Null; //Field offset: 0x0
-	private const int DefaultCopyBufferSize = 81920; //Field offset: 0x0
 	private ReadWriteTask _activeReadWriteTask; //Field offset: 0x18
 	private SemaphoreSlim _asyncActiveSemaphore; //Field offset: 0x20
 

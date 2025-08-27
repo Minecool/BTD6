@@ -38,12 +38,12 @@ internal struct OneOrMore : IReadOnlyList<TValue>, IEnumerable<TValue>, IEnumera
 
 	public override int Count
 	{
-		 get { } //Length: 65
+		 get { } //Length: 55
 	}
 
 	public override TValue Item
 	{
-		 get { } //Length: 172
+		 get { } //Length: 164
 	}
 
 	public OneOrMore`2(TValue single) { }

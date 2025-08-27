@@ -8,8 +8,6 @@ public class PsiBloonBehavior : BloonBehavior
 
 	public PsiBloonBehavior() { }
 
-	private Entity CreateEffect(DisplayModel displayModel, Vector3 position, int animationState = -1) { }
-
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 
 	private void OnBloonDegrade(Projectile projectile, Bloon degradedBloon, Tower poppedBy, DamageResult damageResult) { }

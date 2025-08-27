@@ -12,11 +12,12 @@ internal abstract class DragEventsProcessor
 	private bool m_IsRegistered; //Field offset: 0x10
 	private DragState m_DragState; //Field offset: 0x14
 	private Vector3 m_Start; //Field offset: 0x18
+	private bool m_PendingPerformDrag; //Field offset: 0x24
 	protected readonly VisualElement m_Target; //Field offset: 0x28
 
 	protected IDragAndDrop dragAndDrop
 	{
-		 get { } //Length: 39
+		 get { } //Length: 419
 	}
 
 	internal override bool isEditorContext
@@ -61,6 +62,8 @@ internal abstract class DragEventsProcessor
 	private void OnPointerLeaveEvent(PointerLeaveEvent evt) { }
 
 	private void OnPointerMoveEvent(PointerMoveEvent evt) { }
+
+	private void OnPointerOutEvent(PointerOutEvent evt) { }
 
 	internal void OnPointerUpEvent(PointerUpEvent evt) { }
 

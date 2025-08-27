@@ -18,8 +18,8 @@ public class CollisionGrid
 
 	}
 
-	[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 	[Il2CppSetOption(Option::NullChecks (1), False)]
+	[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 	internal class CollisionState : IEnumerator<T>, IEnumerator, IDisposable
 	{
 		private CollisionGrid<T> grid; //Field offset: 0x0

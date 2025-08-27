@@ -218,7 +218,7 @@ public class ContestedTerritoryIslandTileRules
 
 	public ContestedTerritoryIslandTileTheme Theme
 	{
-		 get { } //Length: 22
+		 get { } //Length: 20
 	}
 
 	public ContestedTerritoryIslandTileRules(ContestedTerritoryIslandTileRulesBase baseRules, ContestedTerritoryTileGameSettings tileGameSettings) { }

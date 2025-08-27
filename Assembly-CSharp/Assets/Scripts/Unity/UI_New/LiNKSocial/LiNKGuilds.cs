@@ -869,7 +869,7 @@ public static class LiNKGuilds
 
 	public static bool AreWeOwnerOfGuild
 	{
-		 get { } //Length: 317
+		 get { } //Length: 182
 	}
 
 	public static bool CanUseGuilds
@@ -966,7 +966,7 @@ public static class LiNKGuilds
 	public private static GuildModel MyGuildModel
 	{
 		 get { } //Length: 79
-		private set { } //Length: 424
+		private set { } //Length: 422
 	}
 
 	public private static Dictionary<TeamStoreWorldSlot, List`1<String>> MyGuildSelectedWorldProps

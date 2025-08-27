@@ -10,7 +10,7 @@ public struct ProfilerRecorderSample
 
 	public long Count
 	{
-		 get { } //Length: 5
+		 get { } //Length: 291
 	}
 
 	public long get_Count() { }

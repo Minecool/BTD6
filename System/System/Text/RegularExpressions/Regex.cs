@@ -74,11 +74,13 @@ public class Regex : ISerializable
 
 	private static Regex() { }
 
-	private Regex(string pattern, RegexOptions options, TimeSpan matchTimeout, bool addToCache) { }
+	protected Regex() { }
+
+	public Regex(string pattern) { }
 
 	public Regex(string pattern, RegexOptions options) { }
 
-	public Regex(string pattern) { }
+	private Regex(string pattern, RegexOptions options, TimeSpan matchTimeout, bool addToCache) { }
 
 	private void FillCacheDictionary() { }
 
@@ -98,51 +100,47 @@ public class Regex : ISerializable
 
 	protected void InitializeReferences() { }
 
+	public bool IsMatch(string input, int startat) { }
+
 	public static bool IsMatch(string input, string pattern, RegexOptions options, TimeSpan matchTimeout) { }
 
 	public static bool IsMatch(string input, string pattern) { }
-
-	public bool IsMatch(string input, int startat) { }
 
 	public bool IsMatch(string input) { }
 
 	private static CachedCodeEntry LookupCachedAndPromote(CachedCodeEntryKey key) { }
 
+	public static Match Match(string input, string pattern) { }
+
+	public static Match Match(string input, string pattern, RegexOptions options, TimeSpan matchTimeout) { }
+
 	public Match Match(string input, int startat) { }
 
 	public Match Match(string input) { }
 
-	public static Match Match(string input, string pattern, RegexOptions options, TimeSpan matchTimeout) { }
-
-	public static Match Match(string input, string pattern) { }
-
 	public MatchCollection Matches(string input) { }
 
-	public static MatchCollection Matches(string input, string pattern, RegexOptions options, TimeSpan matchTimeout) { }
-
-	public static MatchCollection Matches(string input, string pattern) { }
-
 	public MatchCollection Matches(string input, int startat) { }
+
+	public static string Replace(string input, string pattern, MatchEvaluator evaluator) { }
+
+	public string Replace(string input, MatchEvaluator evaluator, int count, int startat) { }
+
+	public static string Replace(string input, string pattern, string replacement) { }
+
+	public static string Replace(string input, string pattern, string replacement, RegexOptions options) { }
 
 	private static string Replace(MatchEvaluator evaluator, Regex regex, string input, int count, int startat) { }
 
 	public string Replace(string input, string replacement) { }
 
-	public string Replace(string input, MatchEvaluator evaluator) { }
+	public static string Replace(string input, string pattern, string replacement, RegexOptions options, TimeSpan matchTimeout) { }
 
 	public static string Replace(string input, string pattern, MatchEvaluator evaluator, RegexOptions options, TimeSpan matchTimeout) { }
 
-	public static string Replace(string input, string pattern, MatchEvaluator evaluator) { }
+	public string Replace(string input, MatchEvaluator evaluator) { }
 
 	public string Replace(string input, string replacement, int count, int startat) { }
-
-	public static string Replace(string input, string pattern, string replacement, RegexOptions options, TimeSpan matchTimeout) { }
-
-	public static string Replace(string input, string pattern, string replacement, RegexOptions options) { }
-
-	public static string Replace(string input, string pattern, string replacement) { }
-
-	public string Replace(string input, MatchEvaluator evaluator, int count, int startat) { }
 
 	internal Match Run(bool quick, int prevlen, string input, int beginning, int length, int startat) { }
 

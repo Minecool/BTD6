@@ -26,7 +26,7 @@ public class XmlUrlResolver : XmlResolver
 
 	private static XmlDownloadManager DownloadManager
 	{
-		private get { } //Length: 216
+		private get { } //Length: 212
 	}
 
 	public XmlUrlResolver() { }

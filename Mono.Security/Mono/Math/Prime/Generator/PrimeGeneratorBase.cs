@@ -10,7 +10,7 @@ public abstract class PrimeGeneratorBase
 
 	public override PrimalityTest PrimalityTest
 	{
-		 get { } //Length: 302
+		 get { } //Length: 300
 	}
 
 	public override int TrialDivisionBounds

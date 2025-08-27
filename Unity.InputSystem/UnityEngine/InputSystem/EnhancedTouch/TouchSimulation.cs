@@ -2,7 +2,7 @@ namespace UnityEngine.InputSystem.EnhancedTouch;
 
 [AddComponentMenu("Input/Debug/Touch Simulation")]
 [ExecuteInEditMode]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/Touch.html#touch-simulation")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/Touch.html#touch-simulation")]
 public class TouchSimulation : MonoBehaviour, IInputStateChangeMonitor
 {
 	internal static TouchSimulation s_Instance; //Field offset: 0x0

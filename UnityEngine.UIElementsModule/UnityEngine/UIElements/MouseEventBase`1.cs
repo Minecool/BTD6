@@ -1,7 +1,7 @@
 namespace UnityEngine.UIElements;
 
 [EventCategory(EventCategory::Pointer (1))]
-public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInternal
+public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInternal, IPointerOrMouseEvent
 {
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
@@ -29,15 +29,7 @@ public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInt
 	private bool <UnityEngine.UIElements.IMouseEventInternal.triggeredByOS>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <UnityEngine.UIElements.IMouseEventInternal.recomputeTopElementUnderMouse>k__BackingField; //Field offset: 0x0
-	[CompilerGenerated]
-	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private IPointerEvent <UnityEngine.UIElements.IMouseEventInternal.sourcePointerEvent>k__BackingField; //Field offset: 0x0
-
-	public override bool altKey
-	{
-		 get { } //Length: 13
-	}
 
 	public override int button
 	{
@@ -55,52 +47,42 @@ public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInt
 		 set { } //Length: 7
 	}
 
-	public override bool commandKey
-	{
-		 get { } //Length: 13
-	}
-
-	public override bool ctrlKey
-	{
-		 get { } //Length: 13
-	}
-
 	public internal virtual IEventHandler currentTarget
 	{
 		 get { } //Length: 25
-		internal set { } //Length: 294
+		internal set { } //Length: 244
 	}
 
 	public internal override Vector2 localMousePosition
 	{
 		[CompilerGenerated]
-		 get { } //Length: 25
+		 get { } //Length: 19
 		[CompilerGenerated]
-		internal set { } //Length: 8
+		internal set { } //Length: 5
 	}
 
 	public override EventModifiers modifiers
 	{
 		[CompilerGenerated]
-		 get { } //Length: 7
+		 get { } //Length: 4
 		[CompilerGenerated]
-		 set { } //Length: 7
+		 set { } //Length: 4
 	}
 
 	public override Vector2 mouseDelta
 	{
 		[CompilerGenerated]
-		 get { } //Length: 25
+		 get { } //Length: 22
 		[CompilerGenerated]
-		 set { } //Length: 8
+		 set { } //Length: 5
 	}
 
 	public override Vector2 mousePosition
 	{
 		[CompilerGenerated]
-		 get { } //Length: 25
+		 get { } //Length: 19
 		[CompilerGenerated]
-		 set { } //Length: 8
+		 set { } //Length: 5
 	}
 
 	public override int pressedButtons
@@ -109,19 +91,6 @@ public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInt
 		 get { } //Length: 7
 		[CompilerGenerated]
 		 set { } //Length: 7
-	}
-
-	public override bool shiftKey
-	{
-		 get { } //Length: 13
-	}
-
-	private override bool UnityEngine.UIElements.IMouseEventInternal.recomputeTopElementUnderMouse
-	{
-		[CompilerGenerated]
-		private get { } //Length: 8
-		[CompilerGenerated]
-		private set { } //Length: 7
 	}
 
 	private override IPointerEvent UnityEngine.UIElements.IMouseEventInternal.sourcePointerEvent
@@ -140,19 +109,25 @@ public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInt
 		private set { } //Length: 7
 	}
 
+	private override int UnityEngine.UIElements.IPointerOrMouseEvent.pointerId
+	{
+		private get { } //Length: 78
+	}
+
+	private override Vector3 UnityEngine.UIElements.IPointerOrMouseEvent.position
+	{
+		private get { } //Length: 45
+	}
+
 	protected MouseEventBase`1() { }
 
-	public override bool get_altKey() { }
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	[CompilerGenerated]
 	public override int get_button() { }
 
 	[CompilerGenerated]
 	public override int get_clickCount() { }
-
-	public override bool get_commandKey() { }
-
-	public override bool get_ctrlKey() { }
 
 	public virtual IEventHandler get_currentTarget() { }
 
@@ -171,13 +146,11 @@ public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInt
 	[CompilerGenerated]
 	public override int get_pressedButtons() { }
 
-	public override bool get_shiftKey() { }
-
-	public static T GetPooled(Event systemEvent) { }
+	internal static T GetPooled(IMouseEvent triggerEvent, Vector2 mousePosition) { }
 
 	protected static T GetPooled(IPointerEvent pointerEvent) { }
 
-	internal static T GetPooled(IMouseEvent triggerEvent, Vector2 mousePosition, bool recomputeTopElementUnderMouse) { }
+	public static T GetPooled(Event systemEvent) { }
 
 	public static T GetPooled(IMouseEvent triggerEvent) { }
 
@@ -213,22 +186,20 @@ public abstract class MouseEventBase : EventBase<T>, IMouseEvent, IMouseEventInt
 	protected void set_pressedButtons(int value) { }
 
 	[CompilerGenerated]
-	private override bool UnityEngine.UIElements.IMouseEventInternal.get_recomputeTopElementUnderMouse() { }
-
-	[CompilerGenerated]
 	private override IPointerEvent UnityEngine.UIElements.IMouseEventInternal.get_sourcePointerEvent() { }
 
 	[CompilerGenerated]
 	private override bool UnityEngine.UIElements.IMouseEventInternal.get_triggeredByOS() { }
 
 	[CompilerGenerated]
-	private override void UnityEngine.UIElements.IMouseEventInternal.set_recomputeTopElementUnderMouse(bool value) { }
-
-	[CompilerGenerated]
 	private override void UnityEngine.UIElements.IMouseEventInternal.set_sourcePointerEvent(IPointerEvent value) { }
 
 	[CompilerGenerated]
 	private override void UnityEngine.UIElements.IMouseEventInternal.set_triggeredByOS(bool value) { }
+
+	private override int UnityEngine.UIElements.IPointerOrMouseEvent.get_pointerId() { }
+
+	private override Vector3 UnityEngine.UIElements.IPointerOrMouseEvent.get_position() { }
 
 }
 

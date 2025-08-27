@@ -42,70 +42,76 @@ public class SupportedRenderingFeatures
 	private bool <enlighten>k__BackingField; //Field offset: 0x25
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <lightProbeProxyVolumes>k__BackingField; //Field offset: 0x26
+	private bool <skyOcclusion>k__BackingField; //Field offset: 0x26
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <motionVectors>k__BackingField; //Field offset: 0x27
+	private bool <lightProbeProxyVolumes>k__BackingField; //Field offset: 0x27
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <receiveShadows>k__BackingField; //Field offset: 0x28
+	private bool <motionVectors>k__BackingField; //Field offset: 0x28
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <reflectionProbes>k__BackingField; //Field offset: 0x29
+	private bool <receiveShadows>k__BackingField; //Field offset: 0x29
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <reflectionProbesBlendDistance>k__BackingField; //Field offset: 0x2A
+	private bool <reflectionProbes>k__BackingField; //Field offset: 0x2A
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <rendererPriority>k__BackingField; //Field offset: 0x2B
+	private bool <reflectionProbesBlendDistance>k__BackingField; //Field offset: 0x2B
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <rendersUIOverlay>k__BackingField; //Field offset: 0x2C
+	private bool <rendererPriority>k__BackingField; //Field offset: 0x2C
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesEnvironmentLighting>k__BackingField; //Field offset: 0x2D
+	private bool <rendersUIOverlay>k__BackingField; //Field offset: 0x2D
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesFog>k__BackingField; //Field offset: 0x2E
+	private bool <overridesEnvironmentLighting>k__BackingField; //Field offset: 0x2E
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesRealtimeReflectionProbes>k__BackingField; //Field offset: 0x2F
+	private bool <overridesFog>k__BackingField; //Field offset: 0x2F
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesOtherLightingSettings>k__BackingField; //Field offset: 0x30
+	private bool <overridesRealtimeReflectionProbes>k__BackingField; //Field offset: 0x30
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <editableMaterialRenderQueue>k__BackingField; //Field offset: 0x31
+	private bool <overridesOtherLightingSettings>k__BackingField; //Field offset: 0x31
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesLODBias>k__BackingField; //Field offset: 0x32
+	private bool <editableMaterialRenderQueue>k__BackingField; //Field offset: 0x32
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesMaximumLODLevel>k__BackingField; //Field offset: 0x33
+	private bool <overridesLODBias>k__BackingField; //Field offset: 0x33
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesEnableLODCrossFade>k__BackingField; //Field offset: 0x34
+	private bool <overridesMaximumLODLevel>k__BackingField; //Field offset: 0x34
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <rendererProbes>k__BackingField; //Field offset: 0x35
+	private bool <overridesEnableLODCrossFade>k__BackingField; //Field offset: 0x35
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <particleSystemInstancing>k__BackingField; //Field offset: 0x36
+	private bool <rendererProbes>k__BackingField; //Field offset: 0x36
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <autoAmbientProbeBaking>k__BackingField; //Field offset: 0x37
+	private bool <particleSystemInstancing>k__BackingField; //Field offset: 0x37
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <autoDefaultReflectionProbeBaking>k__BackingField; //Field offset: 0x38
+	private bool <ambientProbeBaking>k__BackingField; //Field offset: 0x38
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesShadowmask>k__BackingField; //Field offset: 0x39
+	private bool <defaultReflectionProbeBaking>k__BackingField; //Field offset: 0x39
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <overridesLightProbeSystem>k__BackingField; //Field offset: 0x3A
+	private bool <overridesShadowmask>k__BackingField; //Field offset: 0x3A
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <supportsHDR>k__BackingField; //Field offset: 0x3B
+	private bool <overridesLightProbeSystem>k__BackingField; //Field offset: 0x3B
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private bool <supportsHDR>k__BackingField; //Field offset: 0x3C
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private bool <supportsClouds>k__BackingField; //Field offset: 0x3D
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private string <overridesLightProbeSystemWarningMessage>k__BackingField; //Field offset: 0x40
@@ -116,13 +122,7 @@ public class SupportedRenderingFeatures
 		 set { } //Length: 84
 	}
 
-	public bool autoAmbientProbeBaking
-	{
-		[CompilerGenerated]
-		 get { } //Length: 5
-	}
-
-	public bool autoDefaultReflectionProbeBaking
+	public bool ambientProbeBaking
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
@@ -134,14 +134,13 @@ public class SupportedRenderingFeatures
 		 get { } //Length: 4
 	}
 
-	public bool enlighten
+	public bool defaultReflectionProbeBaking
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
 	}
 
-	[Obsolete("Bake with the Progressive Lightmapper. The backend that uses Enlighten to bake is deprecated.", False)]
-	public bool enlightenLightmapper
+	public bool enlighten
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
@@ -165,22 +164,24 @@ public class SupportedRenderingFeatures
 		 get { } //Length: 4
 	}
 
-	public bool motionVectors
-	{
-		[CompilerGenerated]
-		 set { } //Length: 4
-	}
-
 	public bool overridesLightProbeSystem
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
+		[CompilerGenerated]
+		 set { } //Length: 4
 	}
 
 	public bool rendersUIOverlay
 	{
 		[CompilerGenerated]
 		 get { } //Length: 5
+		[CompilerGenerated]
+		 set { } //Length: 4
+	}
+
+	public bool skyOcclusion
+	{
 		[CompilerGenerated]
 		 set { } //Length: 4
 	}
@@ -204,19 +205,16 @@ public class SupportedRenderingFeatures
 	public static SupportedRenderingFeatures get_active() { }
 
 	[CompilerGenerated]
-	public bool get_autoAmbientProbeBaking() { }
-
-	[CompilerGenerated]
-	public bool get_autoDefaultReflectionProbeBaking() { }
+	public bool get_ambientProbeBaking() { }
 
 	[CompilerGenerated]
 	public LightmapMixedBakeModes get_defaultMixedLightingModes() { }
 
 	[CompilerGenerated]
-	public bool get_enlighten() { }
+	public bool get_defaultReflectionProbeBaking() { }
 
 	[CompilerGenerated]
-	public bool get_enlightenLightmapper() { }
+	public bool get_enlighten() { }
 
 	[CompilerGenerated]
 	public LightmapBakeType get_lightmapBakeTypes() { }
@@ -234,10 +232,10 @@ public class SupportedRenderingFeatures
 	public bool get_rendersUIOverlay() { }
 
 	[RequiredByNativeCode]
-	internal static void IsAutoAmbientProbeBakingSupported(IntPtr isSupportedPtr) { }
+	internal static void IsAmbientProbeBakingSupported(IntPtr isSupportedPtr) { }
 
 	[RequiredByNativeCode]
-	internal static void IsAutoDefaultReflectionProbeBakingSupported(IntPtr isSupportedPtr) { }
+	internal static void IsDefaultReflectionProbeBakingSupported(IntPtr isSupportedPtr) { }
 
 	internal static bool IsLightmapBakeTypeSupported(LightmapBakeType bakeType) { }
 
@@ -264,10 +262,13 @@ public class SupportedRenderingFeatures
 	public static void set_active(SupportedRenderingFeatures value) { }
 
 	[CompilerGenerated]
-	public void set_motionVectors(bool value) { }
+	public void set_overridesLightProbeSystem(bool value) { }
 
 	[CompilerGenerated]
 	public void set_rendersUIOverlay(bool value) { }
+
+	[CompilerGenerated]
+	public void set_skyOcclusion(bool value) { }
 
 	[CompilerGenerated]
 	public void set_supportsHDR(bool value) { }

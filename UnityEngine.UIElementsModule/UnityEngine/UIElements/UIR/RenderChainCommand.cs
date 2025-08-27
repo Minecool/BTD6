@@ -7,7 +7,7 @@ internal class RenderChainCommand : LinkedPoolItem<RenderChainCommand>
 	internal VisualElement owner; //Field offset: 0x18
 	internal RenderChainCommand prev; //Field offset: 0x20
 	internal RenderChainCommand next; //Field offset: 0x28
-	internal bool closing; //Field offset: 0x30
+	internal bool isTail; //Field offset: 0x30
 	internal CommandType type; //Field offset: 0x34
 	internal State state; //Field offset: 0x38
 	internal MeshHandle mesh; //Field offset: 0x50

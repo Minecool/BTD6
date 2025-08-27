@@ -66,7 +66,7 @@ public class RogueArtifactDisplayIcon : MonoBehaviour
 	public int StackCount
 	{
 		 get { } //Length: 4
-		 set { } //Length: 123
+		 set { } //Length: 126
 	}
 
 	public RogueArtifactDisplayIcon() { }

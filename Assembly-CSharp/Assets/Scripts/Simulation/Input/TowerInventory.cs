@@ -6,44 +6,44 @@ public class TowerInventory
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Comparison<FreeTowerInInventory> <>9__36_0; //Field offset: 0x8
+		public static Comparison<FreeTowerInInventory> <>9__37_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal int <AddFreeTowers>b__36_0(FreeTowerInInventory a, FreeTowerInInventory b) { }
+		internal int <AddFreeTowers>b__37_0(FreeTowerInInventory a, FreeTowerInInventory b) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass39_0
+	private sealed class <>c__DisplayClass40_0
 	{
 		public string discountName; //Field offset: 0x10
 
-		public <>c__DisplayClass39_0() { }
+		public <>c__DisplayClass40_0() { }
 
 		internal bool <AddTowerDiscount>b__0(TowerDiscount v) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass43_0
+	private sealed class <>c__DisplayClass44_0
 	{
 		public TowerDiscountSaveDataModel d; //Field offset: 0x10
 
-		public <>c__DisplayClass43_0() { }
+		public <>c__DisplayClass44_0() { }
 
 		internal bool <SetTowerDiscountSaveData>b__0(TowerDiscount v) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass43_1
+	private sealed class <>c__DisplayClass44_1
 	{
 		public TowerDiscount d; //Field offset: 0x10
 
-		public <>c__DisplayClass43_1() { }
+		public <>c__DisplayClass44_1() { }
 
 		internal bool <SetTowerDiscountSaveData>b__1(TowerDiscountSaveDataModel v) { }
 
@@ -99,6 +99,8 @@ public class TowerInventory
 
 	public bool HasInventory(TowerModel def) { }
 
+	public bool HasNonUpgradeInventory(TowerModel def) { }
+
 	public bool HasUpgradeInventory(TowerModel def) { }
 
 	public void Init(IEnumerable<TowerDetailsModel> allTowersInTheGame) { }
@@ -116,6 +118,8 @@ public class TowerInventory
 	public void SetHero(string hero) { }
 
 	public void SetMaxTowerCount(int maxTowerCount) { }
+
+	public void SetPowersProTierMaxes(GameModel model) { }
 
 	public void SetTowerDiscountSaveData(List<TowerDiscountSaveDataModel> data) { }
 

@@ -6,16 +6,29 @@ public static class TemporalAA
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static RenderFunc<TaaPassData> <>9__11_0; //Field offset: 0x8
-		public static RenderFunc<TaaPassData> <>9__11_1; //Field offset: 0x10
+		public static BaseRenderFunc<TaaPassData, RasterGraphContext> <>9__17_0; //Field offset: 0x8
+		public static BaseRenderFunc<TaaPassData, RasterGraphContext> <>9__17_1; //Field offset: 0x10
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <Render>b__11_0(TaaPassData data, RenderGraphContext context) { }
+		internal void <Render>b__17_0(TaaPassData data, RasterGraphContext context) { }
 
-		internal void <Render>b__11_1(TaaPassData data, RenderGraphContext context) { }
+		internal void <Render>b__17_1(TaaPassData data, RasterGraphContext context) { }
+
+	}
+
+	public sealed class JitterFunc : MulticastDelegate
+	{
+
+		public JitterFunc(object object, IntPtr method) { }
+
+		public override IAsyncResult BeginInvoke(int frameIndex, out Vector2 jitter, out bool allowScaling, AsyncCallback callback, object object) { }
+
+		public override void EndInvoke(out Vector2 jitter, out bool allowScaling, IAsyncResult result) { }
+
+		public override void Invoke(int frameIndex, out Vector2 jitter, out bool allowScaling) { }
 
 	}
 
@@ -130,37 +143,45 @@ public static class TemporalAA
 	private class TaaPassData
 	{
 		internal TextureHandle dstTex; //Field offset: 0x10
-		internal TextureHandle srcColorTex; //Field offset: 0x18
-		internal TextureHandle srcDepthTex; //Field offset: 0x20
-		internal TextureHandle srcMotionVectorTex; //Field offset: 0x28
-		internal TextureHandle srcTaaAccumTex; //Field offset: 0x30
-		internal Material material; //Field offset: 0x38
-		internal int passIndex; //Field offset: 0x40
-		internal float taaFrameInfluence; //Field offset: 0x44
-		internal float taaVarianceClampScale; //Field offset: 0x48
-		internal Single[] taaFilterWeights; //Field offset: 0x50
-		internal bool taaLowPrecisionSource; //Field offset: 0x58
+		internal TextureHandle srcColorTex; //Field offset: 0x20
+		internal TextureHandle srcDepthTex; //Field offset: 0x30
+		internal TextureHandle srcMotionVectorTex; //Field offset: 0x40
+		internal TextureHandle srcTaaAccumTex; //Field offset: 0x50
+		internal Material material; //Field offset: 0x60
+		internal int passIndex; //Field offset: 0x68
+		internal float taaFrameInfluence; //Field offset: 0x6C
+		internal float taaVarianceClampScale; //Field offset: 0x70
+		internal Single[] taaFilterWeights; //Field offset: 0x78
+		internal bool taaLowPrecisionSource; //Field offset: 0x80
+		internal bool taaAlphaOutput; //Field offset: 0x81
 
 		public TaaPassData() { }
 
 	}
 
-	private static readonly Vector2[] taaFilterOffsets; //Field offset: 0x0
-	private static readonly Single[] taaFilterWeights; //Field offset: 0x8
+	internal static JitterFunc s_JitterFunc; //Field offset: 0x0
+	private static readonly Vector2[] taaFilterOffsets; //Field offset: 0x8
+	private static readonly Single[] taaFilterWeights; //Field offset: 0x10
+	internal static GraphicsFormat[] AccumulationFormatList; //Field offset: 0x18
+	private static uint s_warnCounter; //Field offset: 0x20
 
 	private static TemporalAA() { }
 
-	internal static Single[] CalculateFilterWeights(float jitterScale) { }
+	internal static Single[] CalculateFilterWeights(ref Settings settings) { }
 
-	internal static Vector2 CalculateJitter(int frameIndex) { }
+	internal static void CalculateJitter(int frameIndex, out Vector2 jitter, out bool allowScaling) { }
 
-	internal static Matrix4x4 CalculateJitterMatrix(ref CameraData cameraData) { }
+	internal static Matrix4x4 CalculateJitterMatrix(UniversalCameraData cameraData, JitterFunc jitterFunc) { }
+
+	internal static int CalculateTaaFrameIndex(ref Settings settings) { }
 
 	internal static void ExecutePass(CommandBuffer cmd, Material taaMaterial, ref CameraData cameraData, RTHandle source, RTHandle destination, RenderTexture motionVectors) { }
 
-	internal static void Render(RenderGraph renderGraph, Material taaMaterial, ref CameraData cameraData, ref TextureHandle srcColor, ref TextureHandle srcDepth, ref TextureHandle srcMotionVectors, ref TextureHandle dstColor) { }
+	internal static void Render(RenderGraph renderGraph, Material taaMaterial, UniversalCameraData cameraData, ref TextureHandle srcColor, ref TextureHandle srcDepth, ref TextureHandle srcMotionVectors, ref TextureHandle dstColor) { }
 
-	internal static string ValidateAndWarn(ref CameraData cameraData) { }
+	internal static RenderTextureDescriptor TemporalAADescFromCameraDesc(ref RenderTextureDescriptor cameraDesc) { }
+
+	internal static string ValidateAndWarn(UniversalCameraData cameraData, bool isSTPRequested = false) { }
 
 }
 

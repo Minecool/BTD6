@@ -6,11 +6,11 @@ internal class VisualElementAnimationSystem : BaseVisualTreeUpdater
 	private static readonly ProfilerMarker s_ProfilerMarker; //Field offset: 0x8
 	private static readonly string s_StylePropertyAnimationDescription; //Field offset: 0x10
 	private static readonly ProfilerMarker s_StylePropertyAnimationProfilerMarker; //Field offset: 0x18
-	private HashSet<IValueAnimationUpdate> m_Animations; //Field offset: 0x20
-	private List<IValueAnimationUpdate> m_IterationList; //Field offset: 0x28
-	private bool m_HasNewAnimations; //Field offset: 0x30
-	private bool m_IterationListDirty; //Field offset: 0x31
-	private long lastUpdate; //Field offset: 0x38
+	private HashSet<IValueAnimationUpdate> m_Animations; //Field offset: 0x28
+	private List<IValueAnimationUpdate> m_IterationList; //Field offset: 0x30
+	private bool m_HasNewAnimations; //Field offset: 0x38
+	private bool m_IterationListDirty; //Field offset: 0x39
+	private long lastUpdate; //Field offset: 0x40
 
 	public virtual ProfilerMarker profilerMarker
 	{

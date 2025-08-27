@@ -4,12 +4,13 @@ namespace UnityEngine;
 public class GUILayoutUtility
 {
 	[DebuggerDisplay("id={id}, groups={layoutGroups.Count}")]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	public sealed class LayoutCache
 	{
 		[CompilerGenerated]
 		[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 		private int <id>k__BackingField; //Field offset: 0x10
-		internal GUILayoutGroup topLevel; //Field offset: 0x18
+		public GUILayoutGroup topLevel; //Field offset: 0x18
 		internal GenericStack layoutGroups; //Field offset: 0x20
 		internal GUILayoutGroup windows; //Field offset: 0x28
 
@@ -19,7 +20,7 @@ public class GUILayoutUtility
 			private set { } //Length: 4
 		}
 
-		internal LayoutCache(int instanceID = -1) { }
+		public LayoutCache(int instanceID = -1) { }
 
 		public void ResetCursor() { }
 
@@ -39,7 +40,7 @@ public class GUILayoutUtility
 
 	internal static GUIStyle spaceStyle
 	{
-		internal get { } //Length: 263
+		internal get { } //Length: 345
 	}
 
 	internal static int unbalancedgroupscount
@@ -54,6 +55,7 @@ public class GUILayoutUtility
 
 	internal static void Begin(int instanceID) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static void BeginContainer(LayoutCache cache) { }
 
 	internal static GUILayoutGroup BeginLayoutArea(GUIStyle style, Type layoutType) { }
@@ -89,12 +91,13 @@ public class GUILayoutUtility
 
 	private static void Internal_MoveWindow(int windowID, Rect r) { }
 
-	private static void Internal_MoveWindow_Injected(int windowID, ref Rect r) { }
+	private static void Internal_MoveWindow_Injected(int windowID, in Rect r) { }
 
 	internal static void Layout() { }
 
 	internal static void LayoutFreeGroup(GUILayoutGroup toplevel) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static void LayoutFromContainer(float w, float h) { }
 
 	internal static void LayoutFromEditorWindow() { }
@@ -103,6 +106,7 @@ public class GUILayoutUtility
 
 	internal static void RemoveSelectedIdList(int instanceID, bool isWindow) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal static LayoutCache SelectIDList(int instanceID, bool isWindow) { }
 
 	[CompilerGenerated]

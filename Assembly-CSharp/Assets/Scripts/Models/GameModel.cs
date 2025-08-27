@@ -6,52 +6,105 @@ public class GameModel : Model
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Func<PowerModel, Int32> <>9__72_0; //Field offset: 0x8
-		public static Func<KnowledgeCategory, KnowledgeCategory> <>9__77_0; //Field offset: 0x10
-		public static Func<KnowledgeModel, ModModel> <>9__85_0; //Field offset: 0x18
+		public static Func<PowerModel, Int32> <>9__74_0; //Field offset: 0x8
+		public static Func<PowerProModel, Int32> <>9__74_1; //Field offset: 0x10
+		public static Func<KnowledgeCategory, KnowledgeCategory> <>9__79_0; //Field offset: 0x18
+		public static Func<KnowledgeModel, ModModel> <>9__87_0; //Field offset: 0x20
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal int <.ctor>b__72_0(PowerModel p) { }
+		internal int <.ctor>b__74_0(PowerModel p) { }
 
-		internal ModModel <get_AllMods>b__85_0(KnowledgeModel k) { }
+		internal int <.ctor>b__74_1(PowerProModel p) { }
 
-		internal KnowledgeCategory <GetCategorisedKnowlege>b__77_0(KnowledgeCategory cat) { }
+		internal ModModel <get_AllMods>b__87_0(KnowledgeModel k) { }
+
+		internal KnowledgeCategory <GetCategorisedKnowlege>b__79_0(KnowledgeCategory cat) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass103_0
+	private sealed class <>c__DisplayClass106_0
 	{
 		public string towerId; //Field offset: 0x10
 
-		public <>c__DisplayClass103_0() { }
+		public <>c__DisplayClass106_0() { }
 
 		internal bool <GetCreatedTowerModel>b__0(TowerDetailsModel x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass77_0
+	private sealed class <>c__DisplayClass79_0
 	{
 		public KnowledgeCategory cat; //Field offset: 0x10
 
-		public <>c__DisplayClass77_0() { }
+		public <>c__DisplayClass79_0() { }
 
 		internal bool <GetCategorisedKnowlege>b__2(KnowledgeModel x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass86_0
+	private sealed class <>c__DisplayClass88_0
 	{
 		public string mname; //Field offset: 0x10
 
-		public <>c__DisplayClass86_0() { }
+		public <>c__DisplayClass88_0() { }
 
 		internal bool <GetModModel>b__0(ModModel m) { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <GetTowersWithBaseId>d__95 : IEnumerable<TowerModel>, IEnumerable, IEnumerator<TowerModel>, IEnumerator, IDisposable
+	{
+		private int <>1__state; //Field offset: 0x10
+		private TowerModel <>2__current; //Field offset: 0x18
+		private int <>l__initialThreadId; //Field offset: 0x20
+		public GameModel <>4__this; //Field offset: 0x28
+		private string baseId; //Field offset: 0x30
+		public string <>3__baseId; //Field offset: 0x38
+		private TowerModel[] <>7__wrap1; //Field offset: 0x40
+		private int <>7__wrap2; //Field offset: 0x48
+		private PowerModel[] <>7__wrap3; //Field offset: 0x50
+
+		private override TowerModel System.Collections.Generic.IEnumerator<Assets.Scripts.Models.Towers.TowerModel>.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 5
+		}
+
+		private override object System.Collections.IEnumerator.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 5
+		}
+
+		[DebuggerHidden]
+		public <GetTowersWithBaseId>d__95(int <>1__state) { }
+
+		private override bool MoveNext() { }
+
+		[DebuggerHidden]
+		private override IEnumerator<TowerModel> System.Collections.Generic.IEnumerable<Assets.Scripts.Models.Towers.TowerModel>.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override TowerModel System.Collections.Generic.IEnumerator<Assets.Scripts.Models.Towers.TowerModel>.get_Current() { }
+
+		[DebuggerHidden]
+		private override IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override object System.Collections.IEnumerator.get_Current() { }
+
+		[DebuggerHidden]
+		private override void System.Collections.IEnumerator.Reset() { }
+
+		[DebuggerHidden]
+		private override void System.IDisposable.Dispose() { }
 
 	}
 
@@ -108,22 +161,24 @@ public class GameModel : Model
 	public FreeplayBloonGroupModel[] freeplayGroups; //Field offset: 0x118
 	public KnowledgeModel[] allKnowledge; //Field offset: 0x120
 	public PowerModel[] powers; //Field offset: 0x128
-	public TowerDetailsModel[] towerSet; //Field offset: 0x130
-	public TowerDetailsModel[] heroSet; //Field offset: 0x138
-	public PowerDetailsModel[] powerSet; //Field offset: 0x140
-	public TowerTierRestrictionModel[] towerTierRestrictions; //Field offset: 0x148
-	public BuffIndicatorModel[] buffIndicatorModels; //Field offset: 0x150
-	public ParagonDegreeDataModel paragonDegreeDataModel; //Field offset: 0x158
-	public GeraldoItemModel[] geraldoItemModels; //Field offset: 0x160
-	public CustomMapDataModel customMapDataModel; //Field offset: 0x168
-	public MapEditorBehaviorModel mapEditorBehaviorModel; //Field offset: 0x170
-	public float globalBloonScale; //Field offset: 0x178
-	public float globalBossBloonScale; //Field offset: 0x17C
-	public float globalTowerScale; //Field offset: 0x180
-	private Dictionary<String, BloonModel> bloonsByName; //Field offset: 0x188
-	private Dictionary<String, UpgradeModel> upgradesByName; //Field offset: 0x190
-	private Dictionary<KnowledgeCategory, KnowledgeModel[]> _categorisedKnowledge; //Field offset: 0x198
-	private Dictionary<Type, Dictionary`2<String, Model>> searchCache; //Field offset: 0x1A0
+	public PowerProModel[] powersPro; //Field offset: 0x130
+	public TowerDetailsModel[] towerSet; //Field offset: 0x138
+	public TowerDetailsModel[] heroSet; //Field offset: 0x140
+	public PowerDetailsModel[] powerSet; //Field offset: 0x148
+	public TowerTierRestrictionModel[] towerTierRestrictions; //Field offset: 0x150
+	public BuffIndicatorModel[] buffIndicatorModels; //Field offset: 0x158
+	public ParagonDegreeDataModel paragonDegreeDataModel; //Field offset: 0x160
+	public GeraldoItemModel[] geraldoItemModels; //Field offset: 0x168
+	public CustomMapDataModel customMapDataModel; //Field offset: 0x170
+	public MapEditorBehaviorModel mapEditorBehaviorModel; //Field offset: 0x178
+	public float globalBloonScale; //Field offset: 0x180
+	public float globalBossBloonScale; //Field offset: 0x184
+	public float globalTowerScale; //Field offset: 0x188
+	private Dictionary<String, BloonModel> bloonsByName; //Field offset: 0x190
+	private Dictionary<String, UpgradeModel> upgradesByName; //Field offset: 0x198
+	private Dictionary<String, PowerProUpgradeModel> powerProUpgradesByName; //Field offset: 0x1A0
+	private Dictionary<KnowledgeCategory, KnowledgeModel[]> _categorisedKnowledge; //Field offset: 0x1A8
+	private Dictionary<Type, Dictionary`2<String, Model>> searchCache; //Field offset: 0x1B0
 
 	public IEnumerable<ModModel> AllMods
 	{
@@ -146,10 +201,10 @@ public class GameModel : Model
 		private set { } //Length: 8
 	}
 
-	public GameModel(TowerModel[] towers, UpgradeModel[] upgrades, BloonModel[] bloons, KnowledgeModel[] allKnowledge, PowerModel[] powers, FreeplayBloonGroupModel[] freeplayGroups, TowerDetailsModel[] towerSet, TowerDetailsModel[] heroSet, PowerDetailsModel[] powerSet, TowerTierRestrictionModel[] towerTierRestrictions, BuffIndicatorModel[] buffIndicatorModels, ParagonDegreeDataModel paragonDegreeDataModel, GeraldoItemModel[] geraldoItemModels, CustomMapDataModel customMapDataModel) { }
+	public GameModel(TowerModel[] towers, UpgradeModel[] upgrades, BloonModel[] bloons, KnowledgeModel[] allKnowledge, PowerModel[] powers, PowerProModel[] powersPro, FreeplayBloonGroupModel[] freeplayGroups, TowerDetailsModel[] towerSet, TowerDetailsModel[] heroSet, PowerDetailsModel[] powerSet, TowerTierRestrictionModel[] towerTierRestrictions, BuffIndicatorModel[] buffIndicatorModels, ParagonDegreeDataModel paragonDegreeDataModel, GeraldoItemModel[] geraldoItemModels, CustomMapDataModel customMapDataModel) { }
 
 	[CompilerGenerated]
-	private KnowledgeModel[] <GetCategorisedKnowlege>b__77_1(KnowledgeCategory cat) { }
+	private KnowledgeModel[] <GetCategorisedKnowlege>b__79_1(KnowledgeCategory cat) { }
 
 	public void CalcStartingCash(GameModel result, List<ModModel> mods) { }
 
@@ -171,6 +226,8 @@ public class GameModel : Model
 	[CompilerGenerated]
 	public RoundSetModel get_roundSet() { }
 
+	public TowerModel GetBeastHandlerPetTowerModel(string towerBaseId, int tier) { }
+
 	public BloonModel GetBloon(string id) { }
 
 	public Dictionary<KnowledgeCategory, KnowledgeModel[]> GetCategorisedKnowlege() { }
@@ -191,19 +248,30 @@ public class GameModel : Model
 
 	public UpgradeModel GetParagonUpgradeForTowerId(string baseId) { }
 
-	public PowerModel GetPowerWithName(string name) { }
+	public PowerProModel GetPowerProModel(string powerBaseId) { }
+
+	public PowerProUpgradeModel GetPowerProUpgrade(string id) { }
+
+	public PowerModel GetPowerWithId(string id) { }
 
 	public ProjectileModel GetProjectileBySaveId(string saveId) { }
+
+	public PowerProUpgradeModel GetProUpgradeForPower(string powerBaseId, int tier, int path) { }
+
+	public PowerProUpgradeModel GetProUpgradeForTower(TowerModel towerModel, int tier, int path) { }
 
 	public TowerModel GetTower(string baseId, int pathOneTier = 0, int pathTwoTier = 0, int pathThreeTier = 0) { }
 
 	public TowerModel GetTowerFromId(string id) { }
 
-	public TowerModel[] GetTowersWithBaseId(string baseId) { }
+	[IteratorStateMachine(typeof(<GetTowersWithBaseId>d__95))]
+	public IEnumerable<TowerModel> GetTowersWithBaseId(string baseId) { }
 
 	public TowerModel GetTowerWithName(string name) { }
 
 	public UpgradeModel GetUpgrade(string id) { }
+
+	public int GetXpCostForProUpgrade(string powerBaseId, int tier) { }
 
 	protected virtual bool IsEqualAfterReferenceCheck(Model to) { }
 

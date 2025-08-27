@@ -10,7 +10,7 @@ internal struct MarkupAttribute
 	public int NameHashCode
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int ValueHashCode

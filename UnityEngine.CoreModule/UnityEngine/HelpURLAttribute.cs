@@ -8,14 +8,14 @@ public class HelpURLAttribute : Attribute
 	internal readonly bool m_Dispatcher; //Field offset: 0x18
 	internal readonly string m_DispatchingFieldName; //Field offset: 0x20
 
-	public string URL
+	public override string URL
 	{
 		 get { } //Length: 5
 	}
 
 	public HelpURLAttribute(string url) { }
 
-	public string get_URL() { }
+	public override string get_URL() { }
 
 }
 

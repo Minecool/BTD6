@@ -8,7 +8,7 @@ public class PathSpawner : MonoBehaviour
 
 	public PathSpawnerModel Def
 	{
-		 get { } //Length: 238
+		 get { } //Length: 228
 	}
 
 	public PathSpawner() { }

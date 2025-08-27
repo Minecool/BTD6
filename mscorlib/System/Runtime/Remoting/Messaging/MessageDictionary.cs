@@ -16,7 +16,7 @@ internal class MessageDictionary : IDictionary, ICollection, IEnumerable
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 425
+			 get { } //Length: 417
 		}
 
 		public override object Key
@@ -26,7 +26,7 @@ internal class MessageDictionary : IDictionary, ICollection, IEnumerable
 
 		public override object Value
 		{
-			 get { } //Length: 29
+			 get { } //Length: 38
 		}
 
 		public DictionaryEnumerator(MessageDictionary methodDictionary) { }
@@ -57,7 +57,7 @@ internal class MessageDictionary : IDictionary, ICollection, IEnumerable
 
 	internal IDictionary InternalDictionary
 	{
-		internal get { } //Length: 162
+		internal get { } //Length: 149
 	}
 
 	public override bool IsReadOnly
@@ -72,13 +72,13 @@ internal class MessageDictionary : IDictionary, ICollection, IEnumerable
 
 	public override object Item
 	{
-		 get { } //Length: 279
-		 set { } //Length: 338
+		 get { } //Length: 265
+		 set { } //Length: 322
 	}
 
 	public override ICollection Keys
 	{
-		 get { } //Length: 984
+		 get { } //Length: 992
 	}
 
 	public String[] MethodKeys
@@ -93,7 +93,7 @@ internal class MessageDictionary : IDictionary, ICollection, IEnumerable
 
 	public override ICollection Values
 	{
-		 get { } //Length: 1068
+		 get { } //Length: 1063
 	}
 
 	public MessageDictionary(IMethodMessage message) { }

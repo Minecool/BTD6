@@ -16,7 +16,7 @@ public class EncryptedTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 584
+		 get { } //Length: 573
 	}
 
 	public EncryptedTrigger() { }

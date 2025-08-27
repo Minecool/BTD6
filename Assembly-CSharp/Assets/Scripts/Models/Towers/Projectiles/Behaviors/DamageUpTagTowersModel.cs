@@ -28,7 +28,7 @@ public class DamageUpTagTowersModel : ProjectileBehaviorModel
 
 	public DamageUpTagMutator Mutator
 	{
-		 get { } //Length: 209
+		 get { } //Length: 213
 	}
 
 	public DamageUpTagTowersModel(string name, int increase, string bloonTag, float lifespan, bool useClosest, string mutatorId, int priority, bool useTowerPosition) { }

@@ -118,12 +118,12 @@ public struct InputUser : IEquatable<InputUser>
 
 	public IInputActionCollection actions
 	{
-		 get { } //Length: 140
+		 get { } //Length: 139
 	}
 
 	public static ReadOnlyArray<InputUser> all
 	{
-		 get { } //Length: 130
+		 get { } //Length: 133
 	}
 
 	public Nullable<InputControlScheme> controlScheme
@@ -148,7 +148,7 @@ public struct InputUser : IEquatable<InputUser>
 
 	public int index
 	{
-		 get { } //Length: 457
+		 get { } //Length: 449
 	}
 
 	public static int listenForUnpairedDeviceActivity
@@ -159,12 +159,12 @@ public struct InputUser : IEquatable<InputUser>
 
 	public ReadOnlyArray<InputDevice> lostDevices
 	{
-		 get { } //Length: 204
+		 get { } //Length: 213
 	}
 
 	public ReadOnlyArray<InputDevice> pairedDevices
 	{
-		 get { } //Length: 198
+		 get { } //Length: 207
 	}
 
 	public Nullable<InputUserAccountHandle> platformUserAccountHandle
@@ -174,12 +174,12 @@ public struct InputUser : IEquatable<InputUser>
 
 	public string platformUserAccountId
 	{
-		 get { } //Length: 140
+		 get { } //Length: 139
 	}
 
 	public string platformUserAccountName
 	{
-		 get { } //Length: 140
+		 get { } //Length: 139
 	}
 
 	public bool valid

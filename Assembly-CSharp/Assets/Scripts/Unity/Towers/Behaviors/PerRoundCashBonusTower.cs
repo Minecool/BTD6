@@ -16,7 +16,7 @@ public class PerRoundCashBonusTower : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1141
+		 get { } //Length: 1198
 	}
 
 	public PerRoundCashBonusTower() { }

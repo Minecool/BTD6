@@ -15,7 +15,7 @@ public class TargetSelectedPoint : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 324
+		 get { } //Length: 322
 	}
 
 	public TargetSelectedPoint() { }

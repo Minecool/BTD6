@@ -21,7 +21,7 @@ public class HttpRequestMessage : IDisposable
 
 	public HttpRequestHeaders Headers
 	{
-		 get { } //Length: 149
+		 get { } //Length: 148
 	}
 
 	public HttpMethod Method
@@ -33,7 +33,7 @@ public class HttpRequestMessage : IDisposable
 	public Uri RequestUri
 	{
 		 get { } //Length: 5
-		 set { } //Length: 503
+		 set { } //Length: 501
 	}
 
 	public Version Version

@@ -150,7 +150,7 @@ public interface ICommonBehaviorProxy : IMutable, IRootBehavior, IRootObject
 
 	public void OnProjectilesCreated(List<Projectile> projectiles) { }
 
-	public float Pickup() { }
+	public float Pickup(Tower towerPickingUp) { }
 
 	[CompilerGenerated]
 	public void remove_OnUpgradedEvent(OnUpgradedDelegate value) { }

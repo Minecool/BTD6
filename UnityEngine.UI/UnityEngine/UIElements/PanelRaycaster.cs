@@ -13,7 +13,7 @@ public class PanelRaycaster : BaseRaycaster, IRuntimePanelComponent
 	public override IPanel panel
 	{
 		 get { } //Length: 5
-		 set { } //Length: 355
+		 set { } //Length: 347
 	}
 
 	public virtual int renderOrderPriority

@@ -54,14 +54,14 @@ public class NetworkStream : Stream
 
 	public virtual int ReadTimeout
 	{
-		 get { } //Length: 130
+		 get { } //Length: 96
 		 set { } //Length: 150
 	}
 
 	public virtual int WriteTimeout
 	{
-		 get { } //Length: 130
-		 set { } //Length: 153
+		 get { } //Length: 96
+		 set { } //Length: 152
 	}
 
 	public NetworkStream(Socket socket) { }

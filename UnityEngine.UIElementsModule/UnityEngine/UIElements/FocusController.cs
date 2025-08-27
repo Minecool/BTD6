@@ -5,7 +5,7 @@ public class FocusController
 	private struct FocusedElement
 	{
 		public VisualElement m_SubTreeRoot; //Field offset: 0x0
-		public Focusable m_FocusedElement; //Field offset: 0x8
+		public VisualElement m_FocusedElement; //Field offset: 0x8
 
 	}
 
@@ -15,6 +15,7 @@ public class FocusController
 	private TextElement m_SelectedTextElement; //Field offset: 0x18
 	private List<FocusedElement> m_FocusedElements; //Field offset: 0x20
 	private Focusable m_LastFocusedElement; //Field offset: 0x28
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Focusable m_LastPendingFocusedElement; //Field offset: 0x30
 	private int m_PendingFocusCount; //Field offset: 0x38
 	[CompilerGenerated]
@@ -40,9 +41,10 @@ public class FocusController
 		internal set { } //Length: 4
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal TextElement selectedTextElement
 	{
-		internal set { } //Length: 111
+		internal set { } //Length: 110
 	}
 
 	public FocusController(IFocusRing focusRing) { }
@@ -53,11 +55,13 @@ public class FocusController
 
 	internal void Blur(Focusable focusable, bool bIsFocusDelegated = false, DispatchMode dispatchMode = 1) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void BlurLastFocusedElement() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void DoFocusChange(Focusable f) { }
 
-	internal Focusable FocusNextInDirection(FocusChangeDirection direction) { }
+	internal Focusable FocusNextInDirection(Focusable currentFocusable, FocusChangeDirection direction) { }
 
 	public Focusable get_focusedElement() { }
 
@@ -69,16 +73,22 @@ public class FocusController
 
 	internal bool GetFocusableParentForPointerEvent(Focusable target, out Focusable effectiveTarget) { }
 
+	private static void GetFocusTargets(Focusable f, List<FocusedElement> outTargets) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal Focusable GetLeafFocusedElement() { }
 
 	internal Focusable GetRetargetedFocusedElement(VisualElement retargetAgainst) { }
 
 	private void GrabFocus(Focusable focusable, Focusable willTakeFocusFrom, FocusChangeDirection direction, bool bIsFocusDelegated, DispatchMode dispatchMode) { }
 
+	public void IgnoreEvent(EventBase evt) { }
+
 	internal bool IsFocused(Focusable f) { }
 
 	private bool IsLocalElement(Focusable f) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal bool IsPendingFocus(Focusable f) { }
 
 	internal void ProcessPendingFocusChange(Focusable f) { }
@@ -94,11 +104,11 @@ public class FocusController
 
 	internal void SetFocusToLastFocusedElement() { }
 
-	internal void SwitchFocus(Focusable newFocusedElement, FocusChangeDirection direction, bool bIsFocusDelegated = false, DispatchMode dispatchMode = 1) { }
-
 	internal void SwitchFocus(Focusable newFocusedElement, bool bIsFocusDelegated = false, DispatchMode dispatchMode = 1) { }
 
-	internal void SwitchFocusOnEvent(EventBase e) { }
+	internal void SwitchFocus(Focusable newFocusedElement, FocusChangeDirection direction, bool bIsFocusDelegated = false, DispatchMode dispatchMode = 1) { }
+
+	internal void SwitchFocusOnEvent(Focusable currentFocusable, EventBase e) { }
 
 	internal void SyncIMGUIFocus(int imguiKeyboardControlID, Focusable imguiContainerHavingKeyboardControl, bool forceSwitch) { }
 

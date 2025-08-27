@@ -77,17 +77,21 @@ public class TrophyStoreScreen : GameMenu
 	[CompilerGenerated]
 	private sealed class <>c__DisplayClass69_0
 	{
-		public TrophyStoreItem trophyStoreItem; //Field offset: 0x10
-		public TrophyStoreScreen <>4__this; //Field offset: 0x18
-		public TrophyItemPanel trophyItemPanel; //Field offset: 0x20
+		public bool isPurchased; //Field offset: 0x10
+		public TrophyStoreItem trophyStoreItem; //Field offset: 0x18
+		public bool isLimitedTime; //Field offset: 0x20
+		public TrophyStoreScreen <>4__this; //Field offset: 0x28
+		public TrophyItemPanel trophyItemPanel; //Field offset: 0x30
 
 		public <>c__DisplayClass69_0() { }
 
-		internal void <InstantiateItem>b__0() { }
-
-		internal bool <InstantiateItem>b__1(string x) { }
+		internal void <InstantiateItem>b__1() { }
 
 		internal bool <InstantiateItem>b__2(string x) { }
+
+		internal bool <InstantiateItem>b__3(string x) { }
+
+		internal bool <InstantiateItem>g__isVisible|0() { }
 
 	}
 

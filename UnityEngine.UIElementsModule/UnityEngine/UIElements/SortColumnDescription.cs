@@ -1,7 +1,17 @@
 namespace UnityEngine.UIElements;
 
-public class SortColumnDescription
+[UxmlObject]
+public class SortColumnDescription : INotifyBindablePropertyChanged
 {
+	[Obsolete("UxmlObjectFactory<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
+	public class UxmlObjectFactory : UxmlObjectFactory<SortColumnDescription>
+	{
+
+		public UxmlObjectFactory() { }
+
+	}
+
+	[Obsolete("UxmlObjectFactory<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectFactory : UxmlObjectFactory<T, UxmlObjectTraits`1<T>>
 	{
 
@@ -9,6 +19,7 @@ public class SortColumnDescription
 
 	}
 
+	[Obsolete("UxmlObjectTraits<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectTraits : UxmlObjectTraits<T>
 	{
 		private readonly UxmlStringAttributeDescription m_ColumnName; //Field offset: 0x0
@@ -21,6 +32,9 @@ public class SortColumnDescription
 
 	}
 
+	private static readonly BindingId columnNameProperty; //Field offset: 0x0
+	private static readonly BindingId columnIndexProperty; //Field offset: 0x98
+	private static readonly BindingId directionProperty; //Field offset: 0x130
 	[SerializeField]
 	private int m_ColumnIndex; //Field offset: 0x10
 	[SerializeField]
@@ -29,10 +43,13 @@ public class SortColumnDescription
 	private SortDirection m_SortDirection; //Field offset: 0x20
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Column <column>k__BackingField; //Field offset: 0x28
+	private EventHandler<BindablePropertyChangedEventArgs> propertyChanged; //Field offset: 0x28
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<SortColumnDescription> changed; //Field offset: 0x30
+	private Column <column>k__BackingField; //Field offset: 0x30
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Action<SortColumnDescription> changed; //Field offset: 0x38
 
 	internal event Action<SortColumnDescription> changed
 	{
@@ -40,6 +57,14 @@ public class SortColumnDescription
 		internal add { } //Length: 172
 		[CompilerGenerated]
 		internal remove { } //Length: 172
+	}
+
+	public override event EventHandler<BindablePropertyChangedEventArgs> propertyChanged
+	{
+		[CompilerGenerated]
+		 add { } //Length: 172
+		[CompilerGenerated]
+		 remove { } //Length: 172
 	}
 
 	public internal Column column
@@ -50,32 +75,40 @@ public class SortColumnDescription
 		internal set { } //Length: 5
 	}
 
+	[CreateProperty]
 	public int columnIndex
 	{
 		 get { } //Length: 94
-		 set { } //Length: 33
+		 set { } //Length: 141
 	}
 
+	[CreateProperty]
 	public string columnName
 	{
 		 get { } //Length: 5
-		 set { } //Length: 70
+		 set { } //Length: 150
 	}
 
+	[CreateProperty]
 	public SortDirection direction
 	{
 		 get { } //Length: 4
-		 set { } //Length: 33
+		 set { } //Length: 141
 	}
 
-	public SortColumnDescription() { }
-
-	public SortColumnDescription(int columnIndex, SortDirection direction) { }
+	private static SortColumnDescription() { }
 
 	public SortColumnDescription(string columnName, SortDirection direction) { }
 
+	public SortColumnDescription(int columnIndex, SortDirection direction) { }
+
+	public SortColumnDescription() { }
+
 	[CompilerGenerated]
 	internal void add_changed(Action<SortColumnDescription> value) { }
+
+	[CompilerGenerated]
+	public override void add_propertyChanged(EventHandler<BindablePropertyChangedEventArgs> value) { }
 
 	[CompilerGenerated]
 	public Column get_column() { }
@@ -86,8 +119,13 @@ public class SortColumnDescription
 
 	public SortDirection get_direction() { }
 
+	private void NotifyPropertyChanged(in BindingId property) { }
+
 	[CompilerGenerated]
 	internal void remove_changed(Action<SortColumnDescription> value) { }
+
+	[CompilerGenerated]
+	public override void remove_propertyChanged(EventHandler<BindablePropertyChangedEventArgs> value) { }
 
 	[CompilerGenerated]
 	internal void set_column(Column value) { }

@@ -1,7 +1,8 @@
 namespace UnityEngine.TextCore.LowLevel;
 
 [UsedByNativeCode]
-internal struct LigatureSubstitutionRecord
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.TextCoreTextEngineModule", "UnityEditor.TextCoreTextEngineModule"}])]
+internal struct LigatureSubstitutionRecord : IEquatable<LigatureSubstitutionRecord>
 {
 	[NativeName("componentGlyphs")]
 	[SerializeField]
@@ -13,16 +14,30 @@ internal struct LigatureSubstitutionRecord
 	public UInt32[] componentGlyphIDs
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public uint ligatureGlyphID
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
+
+	public override bool Equals(LigatureSubstitutionRecord other) { }
+
+	public virtual bool Equals(object obj) { }
 
 	public UInt32[] get_componentGlyphIDs() { }
 
 	public uint get_ligatureGlyphID() { }
+
+	public virtual int GetHashCode() { }
+
+	public static bool op_Equality(LigatureSubstitutionRecord lhs, LigatureSubstitutionRecord rhs) { }
+
+	public void set_componentGlyphIDs(UInt32[] value) { }
+
+	public void set_ligatureGlyphID(uint value) { }
 
 }
 

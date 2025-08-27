@@ -21,7 +21,7 @@ public struct RaycastHit
 
 	public Collider collider
 	{
-		 get { } //Length: 171
+		 get { } //Length: 168
 	}
 
 	public float distance

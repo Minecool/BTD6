@@ -1,11 +1,11 @@
 namespace NinjaKiwi.LiNK.Endpoints;
 
-public class User_LoginLiNK : Endpoint<LoginResponseModel>
+public class User_LoginLiNK : Endpoint<LiNKAccountModel>
 {
 
 	internal User_LoginLiNK(HttpRequestFactory requestFactory, Authority authority, ApiOptions options) { }
 
-	public Task<LoginResponseModel> Call(string email, string password) { }
+	public Task<LiNKAccountModel> Call(string email, string password) { }
 
 }
 

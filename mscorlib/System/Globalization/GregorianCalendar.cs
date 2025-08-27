@@ -33,7 +33,7 @@ public class GregorianCalendar : Calendar
 	public virtual int TwoDigitYearMax
 	{
 		 get { } //Length: 105
-		 set { } //Length: 284
+		 set { } //Length: 268
 	}
 
 	private static GregorianCalendar() { }

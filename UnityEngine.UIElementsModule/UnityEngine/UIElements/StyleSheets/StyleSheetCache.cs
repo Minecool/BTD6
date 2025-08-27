@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal static class StyleSheetCache
 {
 	private struct SheetHandleKey

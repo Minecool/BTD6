@@ -8,96 +8,96 @@ public sealed class AnimationClip : Motion
 	public bool empty
 	{
 		[NativeMethod("IsEmpty")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public AnimationEvent[] events
 	{
-		 get { } //Length: 130
-		 set { } //Length: 66
+		 get { } //Length: 520
+		 set { } //Length: 420
 	}
 
 	[NativeProperty("SampleRate", False, TargetType::Function (0))]
 	public float frameRate
 	{
-		 get { } //Length: 51
-		 set { } //Length: 67
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public bool hasGenericRootTransform
 	{
 		[NativeMethod("HasGenericRootTransform")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool hasMotionCurves
 	{
 		[NativeMethod("HasMotionCurves")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool hasMotionFloatCurves
 	{
 		[NativeMethod("HasMotionFloatCurves")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool hasRootCurves
 	{
 		[NativeMethod("HasRootCurves")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	internal bool hasRootMotion
 	{
 		[FreeFunction(Name = "AnimationClipBindings::Internal_GetHasRootMotion", HasExplicitThis = True)]
-		internal get { } //Length: 51
+		internal get { } //Length: 118
 	}
 
 	public bool humanMotion
 	{
 		[NativeMethod("IsHumanMotion")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool legacy
 	{
 		[NativeMethod("IsLegacy")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 		[NativeMethod("SetLegacy")]
-		 set { } //Length: 66
+		 set { } //Length: 134
 	}
 
 	[NativeProperty("Length", False, TargetType::Function (0))]
 	public float length
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	[NativeProperty("Bounds", False, TargetType::Function (0))]
 	public Bounds localBounds
 	{
-		 get { } //Length: 81
-		 set { } //Length: 66
+		 get { } //Length: 148
+		 set { } //Length: 133
 	}
 
 	[NativeProperty("StartTime", False, TargetType::Function (0))]
 	internal float startTime
 	{
-		internal get { } //Length: 51
+		internal get { } //Length: 118
 	}
 
 	[NativeProperty("StopTime", False, TargetType::Function (0))]
 	internal float stopTime
 	{
-		internal get { } //Length: 51
+		internal get { } //Length: 118
 	}
 
 	[NativeProperty("WrapMode", False, TargetType::Function (0))]
 	public WrapMode wrapMode
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	public AnimationClip() { }
@@ -107,52 +107,86 @@ public sealed class AnimationClip : Motion
 	[FreeFunction(Name = "AnimationClipBindings::AddEventInternal", HasExplicitThis = True)]
 	private void AddEventInternal(object evt) { }
 
+	private static void AddEventInternal_Injected(IntPtr _unity_self, object evt) { }
+
 	public void ClearCurves() { }
+
+	private static void ClearCurves_Injected(IntPtr _unity_self) { }
 
 	public void EnsureQuaternionContinuity() { }
 
+	private static void EnsureQuaternionContinuity_Injected(IntPtr _unity_self) { }
+
 	[NativeMethod("IsEmpty")]
 	public bool get_empty() { }
+
+	private static bool get_empty_Injected(IntPtr _unity_self) { }
 
 	public AnimationEvent[] get_events() { }
 
 	public float get_frameRate() { }
 
+	private static float get_frameRate_Injected(IntPtr _unity_self) { }
+
 	[NativeMethod("HasGenericRootTransform")]
 	public bool get_hasGenericRootTransform() { }
+
+	private static bool get_hasGenericRootTransform_Injected(IntPtr _unity_self) { }
 
 	[NativeMethod("HasMotionCurves")]
 	public bool get_hasMotionCurves() { }
 
+	private static bool get_hasMotionCurves_Injected(IntPtr _unity_self) { }
+
 	[NativeMethod("HasMotionFloatCurves")]
 	public bool get_hasMotionFloatCurves() { }
+
+	private static bool get_hasMotionFloatCurves_Injected(IntPtr _unity_self) { }
 
 	[NativeMethod("HasRootCurves")]
 	public bool get_hasRootCurves() { }
 
+	private static bool get_hasRootCurves_Injected(IntPtr _unity_self) { }
+
 	[FreeFunction(Name = "AnimationClipBindings::Internal_GetHasRootMotion", HasExplicitThis = True)]
 	internal bool get_hasRootMotion() { }
+
+	private static bool get_hasRootMotion_Injected(IntPtr _unity_self) { }
 
 	[NativeMethod("IsHumanMotion")]
 	public bool get_humanMotion() { }
 
+	private static bool get_humanMotion_Injected(IntPtr _unity_self) { }
+
 	[NativeMethod("IsLegacy")]
 	public bool get_legacy() { }
 
+	private static bool get_legacy_Injected(IntPtr _unity_self) { }
+
 	public float get_length() { }
+
+	private static float get_length_Injected(IntPtr _unity_self) { }
 
 	public Bounds get_localBounds() { }
 
-	private void get_localBounds_Injected(out Bounds ret) { }
+	private static void get_localBounds_Injected(IntPtr _unity_self, out Bounds ret) { }
 
 	internal float get_startTime() { }
 
+	private static float get_startTime_Injected(IntPtr _unity_self) { }
+
 	internal float get_stopTime() { }
+
+	private static float get_stopTime_Injected(IntPtr _unity_self) { }
 
 	public WrapMode get_wrapMode() { }
 
+	private static WrapMode get_wrapMode_Injected(IntPtr _unity_self) { }
+
 	[FreeFunction(Name = "AnimationClipBindings::GetEventsInternal", HasExplicitThis = True)]
-	private Array GetEventsInternal() { }
+	private void GetEventsInternal(out IntPtr values, out int size) { }
+
+	private static void GetEventsInternal_Injected(IntPtr _unity_self, out IntPtr values, out int size) { }
 
 	[FreeFunction("AnimationClipBindings::Internal_CreateAnimationClip")]
 	private static void Internal_CreateAnimationClip(AnimationClip self) { }
@@ -163,24 +197,36 @@ public sealed class AnimationClip : Motion
 
 	public void SampleAnimation(GameObject go, float time) { }
 
+	private static void SampleAnimation_Injected(IntPtr go, IntPtr clip, float inTime, WrapMode wrapMode) { }
+
 	public void set_events(AnimationEvent[] value) { }
 
 	public void set_frameRate(float value) { }
 
+	private static void set_frameRate_Injected(IntPtr _unity_self, float value) { }
+
 	[NativeMethod("SetLegacy")]
 	public void set_legacy(bool value) { }
 
+	private static void set_legacy_Injected(IntPtr _unity_self, bool value) { }
+
 	public void set_localBounds(Bounds value) { }
 
-	private void set_localBounds_Injected(ref Bounds value) { }
+	private static void set_localBounds_Injected(IntPtr _unity_self, in Bounds value) { }
 
 	public void set_wrapMode(WrapMode value) { }
+
+	private static void set_wrapMode_Injected(IntPtr _unity_self, WrapMode value) { }
 
 	[FreeFunction("AnimationClipBindings::Internal_SetCurve", HasExplicitThis = True)]
 	public void SetCurve(string relativePath, Type type, string propertyName, AnimationCurve curve) { }
 
-	[FreeFunction(Name = "AnimationClipBindings::SetEventsInternal", HasExplicitThis = True, ThrowsException = True)]
-	private void SetEventsInternal(Array value) { }
+	private static void SetCurve_Injected(IntPtr _unity_self, ref ManagedSpanWrapper relativePath, Type type, ref ManagedSpanWrapper propertyName, IntPtr curve) { }
+
+	[FreeFunction(Name = "AnimationClipBindings::SetEventsInternal", HasExplicitThis = True)]
+	private void SetEventsInternal(Void* data, int length) { }
+
+	private static void SetEventsInternal_Injected(IntPtr _unity_self, Void* data, int length) { }
 
 }
 

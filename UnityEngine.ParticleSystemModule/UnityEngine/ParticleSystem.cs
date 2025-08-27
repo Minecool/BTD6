@@ -1,13 +1,13 @@
 namespace UnityEngine;
 
-[NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemScriptBindings.h")]
-[NativeHeader("Modules/ParticleSystem/ParticleSystemGeometryJob.h")]
-[NativeHeader("ParticleSystemScriptingClasses.h")]
-[NativeHeader("ParticleSystemScriptingClasses.h")]
 [NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemModulesScriptBindings.h")]
+[NativeHeader("Modules/ParticleSystem/ParticleSystem.h")]
+[NativeHeader("Modules/ParticleSystem/ParticleSystemGeometryJob.h")]
 [NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemScriptBindings.h")]
+[NativeHeader("ParticleSystemScriptingClasses.h")]
 [NativeHeader("Modules/ParticleSystem/ParticleSystem.h")]
-[NativeHeader("Modules/ParticleSystem/ParticleSystem.h")]
+[NativeHeader("ParticleSystemScriptingClasses.h")]
+[NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemScriptBindings.h")]
 [RequireComponent(typeof(Transform))]
 [UsedByNativeCode]
 public sealed class ParticleSystem : Component
@@ -57,8 +57,14 @@ public sealed class ParticleSystem : Component
 
 		public MinMaxCurve rateOverTime
 		{
+			 set { } //Length: 217
+		}
+
+		[NativeName("RateOverTime")]
+		private MinMaxCurveBlittable rateOverTimeBlittable
+		{
 			[NativeThrows]
-			 set { } //Length: 66
+			private set { } //Length: 66
 		}
 
 		public float rateOverTimeMultiplier
@@ -70,21 +76,17 @@ public sealed class ParticleSystem : Component
 
 		public bool get_enabled() { }
 
-		private static bool get_enabled_Injected(ref EmissionModule _unity_self) { }
-
 		public float get_rateOverTimeMultiplier() { }
-
-		private static float get_rateOverTimeMultiplier_Injected(ref EmissionModule _unity_self) { }
 
 		[NativeThrows]
 		public void set_enabled(bool value) { }
 
-		private static void set_enabled_Injected(ref EmissionModule _unity_self, bool value) { }
-
-		[NativeThrows]
 		public void set_rateOverTime(MinMaxCurve value) { }
 
-		private static void set_rateOverTime_Injected(ref EmissionModule _unity_self, ref MinMaxCurve value) { }
+		[NativeThrows]
+		private void set_rateOverTimeBlittable(MinMaxCurveBlittable value) { }
+
+		private static void set_rateOverTimeBlittable_Injected(ref EmissionModule _unity_self, in MinMaxCurveBlittable value) { }
 
 	}
 
@@ -225,14 +227,27 @@ public sealed class ParticleSystem : Component
 
 		public MinMaxGradient startColor
 		{
-			 get { } //Length: 89
+			 get { } //Length: 304
+			 set { } //Length: 231
+		}
+
+		[NativeName("StartColor")]
+		private MinMaxGradientBlittable startColorBlittable
+		{
+			private get { } //Length: 89
 			[NativeThrows]
-			 set { } //Length: 66
+			private set { } //Length: 66
 		}
 
 		public MinMaxCurve startDelay
 		{
-			 get { } //Length: 79
+			 get { } //Length: 284
+		}
+
+		[NativeName("StartDelay")]
+		private MinMaxCurveBlittable startDelayBlittable
+		{
+			private get { } //Length: 79
 		}
 
 		public float startDelayMultiplier
@@ -244,7 +259,13 @@ public sealed class ParticleSystem : Component
 
 		public MinMaxCurve startLifetime
 		{
-			 get { } //Length: 79
+			 get { } //Length: 284
+		}
+
+		[NativeName("StartLifetime")]
+		private MinMaxCurveBlittable startLifetimeBlittable
+		{
+			private get { } //Length: 79
 		}
 
 		public float startLifetimeMultiplier
@@ -302,177 +323,122 @@ public sealed class ParticleSystem : Component
 
 		public float get_duration() { }
 
-		private static float get_duration_Injected(ref MainModule _unity_self) { }
-
 		public float get_gravityModifierMultiplier() { }
-
-		private static float get_gravityModifierMultiplier_Injected(ref MainModule _unity_self) { }
 
 		public bool get_loop() { }
 
-		private static bool get_loop_Injected(ref MainModule _unity_self) { }
-
 		public int get_maxParticles() { }
-
-		private static int get_maxParticles_Injected(ref MainModule _unity_self) { }
 
 		public bool get_playOnAwake() { }
 
-		private static bool get_playOnAwake_Injected(ref MainModule _unity_self) { }
-
 		public ParticleSystemScalingMode get_scalingMode() { }
-
-		private static ParticleSystemScalingMode get_scalingMode_Injected(ref MainModule _unity_self) { }
 
 		public ParticleSystemSimulationSpace get_simulationSpace() { }
 
-		private static ParticleSystemSimulationSpace get_simulationSpace_Injected(ref MainModule _unity_self) { }
-
 		public float get_simulationSpeed() { }
-
-		private static float get_simulationSpeed_Injected(ref MainModule _unity_self) { }
 
 		public MinMaxGradient get_startColor() { }
 
-		private static void get_startColor_Injected(ref MainModule _unity_self, out MinMaxGradient ret) { }
+		private MinMaxGradientBlittable get_startColorBlittable() { }
+
+		private static void get_startColorBlittable_Injected(ref MainModule _unity_self, out MinMaxGradientBlittable ret) { }
 
 		public MinMaxCurve get_startDelay() { }
 
-		private static void get_startDelay_Injected(ref MainModule _unity_self, out MinMaxCurve ret) { }
+		private MinMaxCurveBlittable get_startDelayBlittable() { }
+
+		private static void get_startDelayBlittable_Injected(ref MainModule _unity_self, out MinMaxCurveBlittable ret) { }
 
 		public float get_startDelayMultiplier() { }
 
-		private static float get_startDelayMultiplier_Injected(ref MainModule _unity_self) { }
-
 		public MinMaxCurve get_startLifetime() { }
 
-		private static void get_startLifetime_Injected(ref MainModule _unity_self, out MinMaxCurve ret) { }
+		private MinMaxCurveBlittable get_startLifetimeBlittable() { }
+
+		private static void get_startLifetimeBlittable_Injected(ref MainModule _unity_self, out MinMaxCurveBlittable ret) { }
 
 		public float get_startLifetimeMultiplier() { }
 
-		private static float get_startLifetimeMultiplier_Injected(ref MainModule _unity_self) { }
-
 		public float get_startRotationMultiplier() { }
-
-		private static float get_startRotationMultiplier_Injected(ref MainModule _unity_self) { }
 
 		public float get_startRotationXMultiplier() { }
 
-		private static float get_startRotationXMultiplier_Injected(ref MainModule _unity_self) { }
-
 		public float get_startRotationYMultiplier() { }
-
-		private static float get_startRotationYMultiplier_Injected(ref MainModule _unity_self) { }
 
 		public float get_startRotationZMultiplier() { }
 
-		private static float get_startRotationZMultiplier_Injected(ref MainModule _unity_self) { }
-
 		public float get_startSizeMultiplier() { }
 
-		private static float get_startSizeMultiplier_Injected(ref MainModule _unity_self) { }
-
 		public float get_startSpeedMultiplier() { }
-
-		private static float get_startSpeedMultiplier_Injected(ref MainModule _unity_self) { }
 
 		[NativeThrows]
 		public void set_gravityModifierMultiplier(float value) { }
 
-		private static void set_gravityModifierMultiplier_Injected(ref MainModule _unity_self, float value) { }
-
 		[NativeThrows]
 		public void set_loop(bool value) { }
-
-		private static void set_loop_Injected(ref MainModule _unity_self, bool value) { }
 
 		[NativeThrows]
 		public void set_maxParticles(int value) { }
 
-		private static void set_maxParticles_Injected(ref MainModule _unity_self, int value) { }
-
 		[NativeThrows]
 		public void set_playOnAwake(bool value) { }
-
-		private static void set_playOnAwake_Injected(ref MainModule _unity_self, bool value) { }
 
 		[NativeThrows]
 		public void set_scalingMode(ParticleSystemScalingMode value) { }
 
-		private static void set_scalingMode_Injected(ref MainModule _unity_self, ParticleSystemScalingMode value) { }
-
 		[NativeThrows]
 		public void set_simulationSpace(ParticleSystemSimulationSpace value) { }
-
-		private static void set_simulationSpace_Injected(ref MainModule _unity_self, ParticleSystemSimulationSpace value) { }
 
 		[NativeThrows]
 		public void set_simulationSpeed(float value) { }
 
-		private static void set_simulationSpeed_Injected(ref MainModule _unity_self, float value) { }
-
-		[NativeThrows]
 		public void set_startColor(MinMaxGradient value) { }
 
-		private static void set_startColor_Injected(ref MainModule _unity_self, ref MinMaxGradient value) { }
+		[NativeThrows]
+		private void set_startColorBlittable(MinMaxGradientBlittable value) { }
+
+		private static void set_startColorBlittable_Injected(ref MainModule _unity_self, in MinMaxGradientBlittable value) { }
 
 		[NativeThrows]
 		public void set_startDelayMultiplier(float value) { }
 
-		private static void set_startDelayMultiplier_Injected(ref MainModule _unity_self, float value) { }
-
 		[NativeThrows]
 		public void set_startLifetimeMultiplier(float value) { }
-
-		private static void set_startLifetimeMultiplier_Injected(ref MainModule _unity_self, float value) { }
 
 		[NativeThrows]
 		public void set_startRotationMultiplier(float value) { }
 
-		private static void set_startRotationMultiplier_Injected(ref MainModule _unity_self, float value) { }
-
 		[NativeThrows]
 		public void set_startRotationXMultiplier(float value) { }
-
-		private static void set_startRotationXMultiplier_Injected(ref MainModule _unity_self, float value) { }
 
 		[NativeThrows]
 		public void set_startRotationYMultiplier(float value) { }
 
-		private static void set_startRotationYMultiplier_Injected(ref MainModule _unity_self, float value) { }
-
 		[NativeThrows]
 		public void set_startRotationZMultiplier(float value) { }
-
-		private static void set_startRotationZMultiplier_Injected(ref MainModule _unity_self, float value) { }
 
 		[NativeThrows]
 		public void set_startSizeMultiplier(float value) { }
 
-		private static void set_startSizeMultiplier_Injected(ref MainModule _unity_self, float value) { }
-
 		[NativeThrows]
 		public void set_startSpeedMultiplier(float value) { }
 
-		private static void set_startSpeedMultiplier_Injected(ref MainModule _unity_self, float value) { }
-
 	}
 
-	[NativeType(CodegenOptions::Custom (1), "MonoMinMaxCurve", Header = "Runtime/Scripting/ScriptingCommonStructDefinitions.h")]
 	internal struct MinMaxCurve
 	{
 		[SerializeField]
-		private ParticleSystemCurveMode m_Mode; //Field offset: 0x0
+		internal ParticleSystemCurveMode m_Mode; //Field offset: 0x0
 		[SerializeField]
-		private float m_CurveMultiplier; //Field offset: 0x4
+		internal float m_CurveMultiplier; //Field offset: 0x4
 		[SerializeField]
-		private AnimationCurve m_CurveMin; //Field offset: 0x8
+		internal AnimationCurve m_CurveMin; //Field offset: 0x8
 		[SerializeField]
-		private AnimationCurve m_CurveMax; //Field offset: 0x10
+		internal AnimationCurve m_CurveMax; //Field offset: 0x10
 		[SerializeField]
-		private float m_ConstantMin; //Field offset: 0x18
+		internal float m_ConstantMin; //Field offset: 0x18
 		[SerializeField]
-		private float m_ConstantMax; //Field offset: 0x1C
+		internal float m_ConstantMax; //Field offset: 0x1C
 
 		public float constant
 		{
@@ -498,19 +464,39 @@ public sealed class ParticleSystem : Component
 
 	}
 
-	[NativeType(CodegenOptions::Custom (1), "MonoMinMaxGradient", Header = "Runtime/Scripting/ScriptingCommonStructDefinitions.h")]
+	[NativeType(CodegenOptions::Custom (1), "MonoMinMaxCurve", Header = "Runtime/Scripting/ScriptingCommonStructDefinitions.h")]
+	[RequiredByNativeCode]
+	public struct MinMaxCurveBlittable
+	{
+		private ParticleSystemCurveMode m_Mode; //Field offset: 0x0
+		private float m_CurveMultiplier; //Field offset: 0x4
+		private IntPtr m_CurveMin; //Field offset: 0x8
+		private IntPtr m_CurveMax; //Field offset: 0x10
+		internal float m_ConstantMin; //Field offset: 0x18
+		internal float m_ConstantMax; //Field offset: 0x1C
+
+		internal static MinMaxCurveBlittable FromMixMaxCurve(in MinMaxCurve minMaxCurve) { }
+
+		public static MinMaxCurve op_Implicit(MinMaxCurveBlittable minMaxCurveBlittable) { }
+
+		public static MinMaxCurveBlittable op_Implicit(MinMaxCurve minMaxCurve) { }
+
+		internal static MinMaxCurve ToMinMaxCurve(in MinMaxCurveBlittable minMaxCurveBlittable) { }
+
+	}
+
 	internal struct MinMaxGradient
 	{
 		[SerializeField]
-		private ParticleSystemGradientMode m_Mode; //Field offset: 0x0
+		internal ParticleSystemGradientMode m_Mode; //Field offset: 0x0
 		[SerializeField]
-		private Gradient m_GradientMin; //Field offset: 0x8
+		internal Gradient m_GradientMin; //Field offset: 0x8
 		[SerializeField]
-		private Gradient m_GradientMax; //Field offset: 0x10
+		internal Gradient m_GradientMax; //Field offset: 0x10
 		[SerializeField]
-		private Color m_ColorMin; //Field offset: 0x18
+		internal Color m_ColorMin; //Field offset: 0x18
 		[SerializeField]
-		private Color m_ColorMax; //Field offset: 0x28
+		internal Color m_ColorMax; //Field offset: 0x28
 
 		public Color color
 		{
@@ -522,6 +508,26 @@ public sealed class ParticleSystem : Component
 		public Color get_color() { }
 
 		public static MinMaxGradient op_Implicit(Color color) { }
+
+	}
+
+	[NativeType(CodegenOptions::Custom (1), "MonoMinMaxGradient", Header = "Runtime/Scripting/ScriptingCommonStructDefinitions.h")]
+	[RequiredByNativeCode]
+	public struct MinMaxGradientBlittable
+	{
+		private ParticleSystemGradientMode m_Mode; //Field offset: 0x0
+		private IntPtr m_GradientMin; //Field offset: 0x8
+		private IntPtr m_GradientMax; //Field offset: 0x10
+		private Color m_ColorMin; //Field offset: 0x18
+		private Color m_ColorMax; //Field offset: 0x28
+
+		internal static MinMaxGradientBlittable FromMixMaxGradient(in MinMaxGradient minMaxGradient) { }
+
+		public static MinMaxGradient op_Implicit(MinMaxGradientBlittable minMaxGradientBlittable) { }
+
+		public static MinMaxGradientBlittable op_Implicit(MinMaxGradient minMaxGradient) { }
+
+		internal static MinMaxGradient ToMinMaxGradient(in MinMaxGradientBlittable minMaxGradientBlittable) { }
 
 	}
 
@@ -556,7 +562,7 @@ public sealed class ParticleSystem : Component
 
 		public Vector3 angularVelocity3D
 		{
-			 set { } //Length: 63
+			 set { } //Length: 82
 		}
 
 		[Obsolete("Please use Particle.remainingLifetime instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/Particle.remainingLifetime", False)]
@@ -582,7 +588,7 @@ public sealed class ParticleSystem : Component
 
 		public Vector3 rotation3D
 		{
-			 set { } //Length: 63
+			 set { } //Length: 82
 		}
 
 		public Color32 startColor
@@ -597,7 +603,7 @@ public sealed class ParticleSystem : Component
 
 		public float startSize
 		{
-			 set { } //Length: 17
+			 set { } //Length: 33
 		}
 
 		public Vector3 velocity
@@ -819,7 +825,7 @@ public sealed class ParticleSystem : Component
 	[Obsolete("automaticCullingEnabled property is deprecated. Use proceduralSimulationSupported instead (UnityUpgradable) -> proceduralSimulationSupported", True)]
 	public bool automaticCullingEnabled
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public CollisionModule collision
@@ -887,13 +893,13 @@ public sealed class ParticleSystem : Component
 	public bool has3DParticleRotations
 	{
 		[NativeName("Has3DParticleRotations")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool hasNonUniformParticleSizes
 	{
 		[NativeName("HasNonUniformParticleSizes")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public InheritVelocityModule inheritVelocity
@@ -904,25 +910,25 @@ public sealed class ParticleSystem : Component
 	public bool isEmitting
 	{
 		[NativeName("SyncJobs(false)->IsEmitting")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool isPaused
 	{
 		[NativeName("SyncJobs(false)->IsPaused")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool isPlaying
 	{
 		[NativeName("SyncJobs(false)->IsPlaying")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public bool isStopped
 	{
 		[NativeName("SyncJobs(false)->IsStopped")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public LifetimeByEmitterSpeedModule lifetimeByEmitterSpeed
@@ -967,7 +973,7 @@ public sealed class ParticleSystem : Component
 	public int particleCount
 	{
 		[NativeName("SyncJobs(false)->GetParticleCount")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	[Obsolete("playbackSpeed property is deprecated. Use main.simulationSpeed instead.", False)]
@@ -986,15 +992,15 @@ public sealed class ParticleSystem : Component
 
 	public bool proceduralSimulationSupported
 	{
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public uint randomSeed
 	{
 		[NativeName("GetRandomSeed")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 		[NativeName("SyncJobs(false)->SetRandomSeed")]
-		 set { } //Length: 64
+		 set { } //Length: 131
 	}
 
 	public RotationBySpeedModule rotationBySpeed
@@ -1039,8 +1045,8 @@ public sealed class ParticleSystem : Component
 	[Obsolete("startColor property is deprecated. Use main.startColor instead.", False)]
 	public Color startColor
 	{
-		 get { } //Length: 102
-		 set { } //Length: 146
+		 get { } //Length: 78
+		 set { } //Length: 147
 	}
 
 	[Obsolete("startDelay property is deprecated. Use main.startDelay or main.startDelayMultiplier instead.", False)]
@@ -1067,7 +1073,7 @@ public sealed class ParticleSystem : Component
 	[Obsolete("startRotation3D property is deprecated. Use main.startRotationX, main.startRotationY and main.startRotationZ instead. (Or main.startRotationXMultiplier, main.startRotationYMultiplier and main.startRotationZMultiplier).", False)]
 	public Vector3 startRotation3D
 	{
-		 get { } //Length: 205
+		 get { } //Length: 216
 		 set { } //Length: 148
 	}
 
@@ -1098,15 +1104,15 @@ public sealed class ParticleSystem : Component
 	public float time
 	{
 		[NativeName("SyncJobs(false)->GetSecPosition")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 		[NativeName("SyncJobs(false)->SetSecPosition")]
-		 set { } //Length: 67
+		 set { } //Length: 134
 	}
 
 	public float totalTime
 	{
 		[NativeName("SyncJobs(false)->GetTotalSecPosition")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 	}
 
 	public TrailModule trails
@@ -1122,9 +1128,9 @@ public sealed class ParticleSystem : Component
 	public bool useAutoRandomSeed
 	{
 		[NativeName("GetAutoRandomSeed")]
-		 get { } //Length: 51
+		 get { } //Length: 118
 		[NativeName("SyncJobs(false)->SetAutoRandomSeed")]
-		 set { } //Length: 66
+		 set { } //Length: 134
 	}
 
 	public VelocityOverLifetimeModule velocityOverLifetime
@@ -1137,19 +1143,30 @@ public sealed class ParticleSystem : Component
 	[NativeName("SetUsesAxisOfRotation")]
 	public void AllocateAxisOfRotationAttribute() { }
 
+	private static void AllocateAxisOfRotationAttribute_Injected(IntPtr _unity_self) { }
+
 	[NativeName("SetUsesCustomData")]
 	public void AllocateCustomDataAttribute(ParticleSystemCustomData stream) { }
+
+	private static void AllocateCustomDataAttribute_Injected(IntPtr _unity_self, ParticleSystemCustomData stream) { }
 
 	[NativeName("SetUsesMeshIndex")]
 	public void AllocateMeshIndexAttribute() { }
 
-	[FreeFunction(Name = "ParticleSystemScriptBindings::Clear", HasExplicitThis = True)]
-	public void Clear(bool withChildren) { }
+	private static void AllocateMeshIndexAttribute_Injected(IntPtr _unity_self) { }
 
 	public void Clear() { }
 
+	[FreeFunction(Name = "ParticleSystemScriptBindings::Clear", HasExplicitThis = True)]
+	public void Clear(bool withChildren) { }
+
+	private static void Clear_Injected(IntPtr _unity_self, bool withChildren) { }
+
 	[ThreadSafe]
 	internal static void CopyManagedJobData(Void* systemPtr, out NativeParticleData particleData) { }
+
+	[Obsolete("Emit with specific parameters is deprecated. Pass a ParticleSystem.EmitParams parameter instead, which allows you to override some/all of the emission properties", False)]
+	public void Emit(Vector3 position, Vector3 velocity, float size, float lifetime, Color32 color) { }
 
 	[RequiredByNativeCode]
 	public void Emit(int count) { }
@@ -1157,19 +1174,20 @@ public sealed class ParticleSystem : Component
 	[NativeName("SyncJobs()->EmitParticlesExternal")]
 	public void Emit(EmitParams emitParams, int count) { }
 
-	[Obsolete("Emit with specific parameters is deprecated. Pass a ParticleSystem.EmitParams parameter instead, which allows you to override some/all of the emission properties", False)]
-	public void Emit(Vector3 position, Vector3 velocity, float size, float lifetime, Color32 color) { }
-
 	[Obsolete("Emit with a single particle structure is deprecated. Pass a ParticleSystem.EmitParams parameter instead, which allows you to override some/all of the emission properties", False)]
 	public void Emit(Particle particle) { }
 
-	private void Emit_Injected(ref EmitParams emitParams, int count) { }
+	private static void Emit_Injected(IntPtr _unity_self, in EmitParams emitParams, int count) { }
 
 	[NativeName("SyncJobs()->Emit")]
 	private void Emit_Internal(int count) { }
 
+	private static void Emit_Internal_Injected(IntPtr _unity_self, int count) { }
+
 	[NativeName("SyncJobs()->EmitParticleExternal")]
 	private void EmitOld_Internal(ref Particle particle) { }
+
+	private static void EmitOld_Internal_Injected(IntPtr _unity_self, ref Particle particle) { }
 
 	public bool get_automaticCullingEnabled() { }
 
@@ -1198,22 +1216,34 @@ public sealed class ParticleSystem : Component
 	[NativeName("Has3DParticleRotations")]
 	public bool get_has3DParticleRotations() { }
 
+	private static bool get_has3DParticleRotations_Injected(IntPtr _unity_self) { }
+
 	[NativeName("HasNonUniformParticleSizes")]
 	public bool get_hasNonUniformParticleSizes() { }
+
+	private static bool get_hasNonUniformParticleSizes_Injected(IntPtr _unity_self) { }
 
 	public InheritVelocityModule get_inheritVelocity() { }
 
 	[NativeName("SyncJobs(false)->IsEmitting")]
 	public bool get_isEmitting() { }
 
+	private static bool get_isEmitting_Injected(IntPtr _unity_self) { }
+
 	[NativeName("SyncJobs(false)->IsPaused")]
 	public bool get_isPaused() { }
+
+	private static bool get_isPaused_Injected(IntPtr _unity_self) { }
 
 	[NativeName("SyncJobs(false)->IsPlaying")]
 	public bool get_isPlaying() { }
 
+	private static bool get_isPlaying_Injected(IntPtr _unity_self) { }
+
 	[NativeName("SyncJobs(false)->IsStopped")]
 	public bool get_isStopped() { }
+
+	private static bool get_isStopped_Injected(IntPtr _unity_self) { }
 
 	public LifetimeByEmitterSpeedModule get_lifetimeByEmitterSpeed() { }
 
@@ -1232,14 +1262,20 @@ public sealed class ParticleSystem : Component
 	[NativeName("SyncJobs(false)->GetParticleCount")]
 	public int get_particleCount() { }
 
+	private static int get_particleCount_Injected(IntPtr _unity_self) { }
+
 	public float get_playbackSpeed() { }
 
 	public bool get_playOnAwake() { }
 
 	public bool get_proceduralSimulationSupported() { }
 
+	private static bool get_proceduralSimulationSupported_Injected(IntPtr _unity_self) { }
+
 	[NativeName("GetRandomSeed")]
 	public uint get_randomSeed() { }
+
+	private static uint get_randomSeed_Injected(IntPtr _unity_self) { }
 
 	public RotationBySpeedModule get_rotationBySpeed() { }
 
@@ -1276,8 +1312,12 @@ public sealed class ParticleSystem : Component
 	[NativeName("SyncJobs(false)->GetSecPosition")]
 	public float get_time() { }
 
+	private static float get_time_Injected(IntPtr _unity_self) { }
+
 	[NativeName("SyncJobs(false)->GetTotalSecPosition")]
 	public float get_totalTime() { }
+
+	private static float get_totalTime_Injected(IntPtr _unity_self) { }
 
 	public TrailModule get_trails() { }
 
@@ -1286,74 +1326,96 @@ public sealed class ParticleSystem : Component
 	[NativeName("GetAutoRandomSeed")]
 	public bool get_useAutoRandomSeed() { }
 
+	private static bool get_useAutoRandomSeed_Injected(IntPtr _unity_self) { }
+
 	public VelocityOverLifetimeModule get_velocityOverLifetime() { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetCustomParticleData", HasExplicitThis = True, ThrowsException = True)]
 	public int GetCustomParticleData(List<Vector4> customData, ParticleSystemCustomData streamIndex) { }
 
+	private static int GetCustomParticleData_Injected(IntPtr _unity_self, ref BlittableListWrapper customData, ParticleSystemCustomData streamIndex) { }
+
 	internal Void* GetManagedJobData() { }
+
+	private static Void* GetManagedJobData_Injected(IntPtr _unity_self) { }
 
 	internal JobHandle GetManagedJobHandle() { }
 
-	private void GetManagedJobHandle_Injected(out JobHandle ret) { }
+	private static void GetManagedJobHandle_Injected(IntPtr _unity_self, out JobHandle ret) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleCurrentColor", HasExplicitThis = True)]
 	internal Color32 GetParticleCurrentColor(ref Particle particle) { }
 
-	private void GetParticleCurrentColor_Injected(ref Particle particle, out Color32 ret) { }
+	private static void GetParticleCurrentColor_Injected(IntPtr _unity_self, ref Particle particle, out Color32 ret) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleCurrentSize", HasExplicitThis = True)]
 	internal float GetParticleCurrentSize(ref Particle particle) { }
 
+	private static float GetParticleCurrentSize_Injected(IntPtr _unity_self, ref Particle particle) { }
+
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleCurrentSize3D", HasExplicitThis = True)]
 	internal Vector3 GetParticleCurrentSize3D(ref Particle particle) { }
 
-	private void GetParticleCurrentSize3D_Injected(ref Particle particle, out Vector3 ret) { }
+	private static void GetParticleCurrentSize3D_Injected(IntPtr _unity_self, ref Particle particle, out Vector3 ret) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleMeshIndex", HasExplicitThis = True)]
 	internal int GetParticleMeshIndex(ref Particle particle) { }
 
-	public int GetParticles(out NativeArray<Particle> particles) { }
-
-	public int GetParticles(out NativeArray<Particle> particles, int size) { }
-
-	public int GetParticles(out NativeArray<Particle> particles, int size, int offset) { }
-
-	public int GetParticles(out Particle[] particles) { }
-
-	public int GetParticles(out Particle[] particles, int size) { }
+	private static int GetParticleMeshIndex_Injected(IntPtr _unity_self, ref Particle particle) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticles", HasExplicitThis = True, ThrowsException = True)]
 	public int GetParticles(out Particle[] particles, int size, int offset) { }
 
+	public int GetParticles(out Particle[] particles, int size) { }
+
+	public int GetParticles(out Particle[] particles) { }
+
+	public int GetParticles(out NativeArray<Particle> particles, int size, int offset) { }
+
+	public int GetParticles(out NativeArray<Particle> particles, int size) { }
+
+	public int GetParticles(out NativeArray<Particle> particles) { }
+
+	private static int GetParticles_Injected(IntPtr _unity_self, out BlittableArrayWrapper particles, int size, int offset) { }
+
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticlesWithNativeArray", HasExplicitThis = True, ThrowsException = True)]
 	private int GetParticlesWithNativeArray(IntPtr particles, int particlesLength, int size, int offset) { }
 
+	private static int GetParticlesWithNativeArray_Injected(IntPtr _unity_self, IntPtr particles, int particlesLength, int size, int offset) { }
+
 	public PlaybackState GetPlaybackState() { }
 
-	private void GetPlaybackState_Injected(out PlaybackState ret) { }
+	private static void GetPlaybackState_Injected(IntPtr _unity_self, out PlaybackState ret) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::GetTrailData", HasExplicitThis = True)]
 	private void GetTrailDataInternal(ref Trails trailData) { }
 
-	public int GetTrails(ref Trails trailData) { }
+	private static void GetTrailDataInternal_Injected(IntPtr _unity_self, ref Trails trailData) { }
 
 	public Trails GetTrails() { }
+
+	public int GetTrails(ref Trails trailData) { }
+
+	public bool IsAlive() { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::IsAlive", HasExplicitThis = True)]
 	public bool IsAlive(bool withChildren) { }
 
-	public bool IsAlive() { }
-
-	public void Pause() { }
+	private static bool IsAlive_Injected(IntPtr _unity_self, bool withChildren) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::Pause", HasExplicitThis = True)]
 	public void Pause(bool withChildren) { }
 
-	public void Play() { }
+	public void Pause() { }
+
+	private static void Pause_Injected(IntPtr _unity_self, bool withChildren) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::Play", HasExplicitThis = True)]
 	public void Play(bool withChildren) { }
+
+	public void Play() { }
+
+	private static void Play_Injected(IntPtr _unity_self, bool withChildren) { }
 
 	[FreeFunction(Name = "ParticleSystemGeometryJob::ResetPreMappedBufferMemory")]
 	public static void ResetPreMappedBufferMemory() { }
@@ -1380,6 +1442,8 @@ public sealed class ParticleSystem : Component
 	[NativeName("SyncJobs(false)->SetRandomSeed")]
 	public void set_randomSeed(uint value) { }
 
+	private static void set_randomSeed_Injected(IntPtr _unity_self, uint value) { }
+
 	public void set_scalingMode(ParticleSystemScalingMode value) { }
 
 	public void set_simulationSpace(ParticleSystemSimulationSpace value) { }
@@ -1401,71 +1465,96 @@ public sealed class ParticleSystem : Component
 	[NativeName("SyncJobs(false)->SetSecPosition")]
 	public void set_time(float value) { }
 
+	private static void set_time_Injected(IntPtr _unity_self, float value) { }
+
 	[NativeName("SyncJobs(false)->SetAutoRandomSeed")]
 	public void set_useAutoRandomSeed(bool value) { }
+
+	private static void set_useAutoRandomSeed_Injected(IntPtr _unity_self, bool value) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::SetCustomParticleData", HasExplicitThis = True, ThrowsException = True)]
 	public void SetCustomParticleData(List<Vector4> customData, ParticleSystemCustomData streamIndex) { }
 
+	private static void SetCustomParticleData_Injected(IntPtr _unity_self, ref BlittableListWrapper customData, ParticleSystemCustomData streamIndex) { }
+
 	internal void SetManagedJobHandle(JobHandle handle) { }
 
-	private void SetManagedJobHandle_Injected(ref JobHandle handle) { }
+	private static void SetManagedJobHandle_Injected(IntPtr _unity_self, in JobHandle handle) { }
 
 	[FreeFunction(Name = "ParticleSystemGeometryJob::SetMaximumPreMappedBufferCounts")]
 	public static void SetMaximumPreMappedBufferCounts(int vertexBuffersCount, int indexBuffersCount) { }
 
-	public void SetParticles(out NativeArray<Particle> particles, int size, int offset) { }
-
-	public void SetParticles(out Particle[] particles, int size) { }
-
-	public void SetParticles(out Particle[] particles) { }
+	public void SetParticles(out NativeArray<Particle> particles) { }
 
 	public void SetParticles(out NativeArray<Particle> particles, int size) { }
-
-	public void SetParticles(out NativeArray<Particle> particles) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::SetParticles", HasExplicitThis = True, ThrowsException = True)]
 	public void SetParticles(out Particle[] particles, int size, int offset) { }
 
+	public void SetParticles(out NativeArray<Particle> particles, int size, int offset) { }
+
+	public void SetParticles(out Particle[] particles) { }
+
+	public void SetParticles(out Particle[] particles, int size) { }
+
+	private static void SetParticles_Injected(IntPtr _unity_self, out BlittableArrayWrapper particles, int size, int offset) { }
+
 	[FreeFunction(Name = "ParticleSystemScriptBindings::SetParticlesWithNativeArray", HasExplicitThis = True, ThrowsException = True)]
 	private void SetParticlesWithNativeArray(IntPtr particles, int particlesLength, int size, int offset) { }
 
+	private static void SetParticlesWithNativeArray_Injected(IntPtr _unity_self, IntPtr particles, int particlesLength, int size, int offset) { }
+
 	public void SetPlaybackState(PlaybackState playbackState) { }
 
-	private void SetPlaybackState_Injected(ref PlaybackState playbackState) { }
+	private static void SetPlaybackState_Injected(IntPtr _unity_self, in PlaybackState playbackState) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::SetTrailData", HasExplicitThis = True)]
 	public void SetTrails(Trails trailData) { }
 
-	private void SetTrails_Injected(ref Trails trailData) { }
+	private static void SetTrails_Injected(IntPtr _unity_self, in Trails trailData) { }
 
 	public void Simulate(float t) { }
-
-	public void Simulate(float t, bool withChildren) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::Simulate", HasExplicitThis = True)]
 	public void Simulate(float t, bool withChildren, bool restart, bool fixedTimeStep) { }
 
 	public void Simulate(float t, bool withChildren, bool restart) { }
 
-	public void Stop() { }
+	public void Simulate(float t, bool withChildren) { }
+
+	private static void Simulate_Injected(IntPtr _unity_self, float t, bool withChildren, bool restart, bool fixedTimeStep) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::Stop", HasExplicitThis = True)]
 	public void Stop(bool withChildren, ParticleSystemStopBehavior stopBehavior) { }
 
+	public void Stop() { }
+
 	public void Stop(bool withChildren) { }
 
-	[FreeFunction(Name = "ParticleSystemScriptBindings::TriggerSubEmitter", HasExplicitThis = True)]
+	private static void Stop_Injected(IntPtr _unity_self, bool withChildren, ParticleSystemStopBehavior stopBehavior) { }
+
+	public void TriggerSubEmitter(int subEmitterIndex) { }
+
 	public void TriggerSubEmitter(int subEmitterIndex, List<Particle> particles) { }
 
 	public void TriggerSubEmitter(int subEmitterIndex, ref Particle particle) { }
 
-	public void TriggerSubEmitter(int subEmitterIndex) { }
+	[FreeFunction(Name = "ParticleSystemScriptBindings::TriggerSubEmitterForAllParticles", HasExplicitThis = True)]
+	private void TriggerSubEmitterForAllParticles(int subEmitterIndex) { }
+
+	private static void TriggerSubEmitterForAllParticles_Injected(IntPtr _unity_self, int subEmitterIndex) { }
 
 	[FreeFunction(Name = "ParticleSystemScriptBindings::TriggerSubEmitterForParticle", HasExplicitThis = True)]
 	internal void TriggerSubEmitterForParticle(int subEmitterIndex, Particle particle) { }
 
-	private void TriggerSubEmitterForParticle_Injected(int subEmitterIndex, ref Particle particle) { }
+	private static void TriggerSubEmitterForParticle_Injected(IntPtr _unity_self, int subEmitterIndex, in Particle particle) { }
+
+	[FreeFunction(Name = "ParticleSystemScriptBindings::TriggerSubEmitterForParticles", HasExplicitThis = True)]
+	private void TriggerSubEmitterForParticles(int subEmitterIndex, List<Particle> particles) { }
+
+	private static void TriggerSubEmitterForParticles_Injected(IntPtr _unity_self, int subEmitterIndex, ref BlittableListWrapper particles) { }
+
+	internal static bool UserJobCanBeScheduled() { }
 
 }
 

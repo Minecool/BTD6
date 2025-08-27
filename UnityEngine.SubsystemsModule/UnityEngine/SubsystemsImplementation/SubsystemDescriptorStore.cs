@@ -21,5 +21,7 @@ public static class SubsystemDescriptorStore
 
 	private static void ReportSingleSubsystemAnalytics(string id) { }
 
+	private static void ReportSingleSubsystemAnalytics_Injected(ref ManagedSpanWrapper id) { }
+
 }
 

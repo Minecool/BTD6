@@ -1,9 +1,12 @@
 namespace UnityEngine.UIElements;
 
 [EventCategory(EventCategory::Pointer (1))]
-public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEventInternal
+public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEventInternal, IPointerOrMouseEvent
 {
-	private bool m_AltitudeNeedsConversion; //Field offset: 0x0
+	private const float k_DefaultButtonPressure = 0.5; //Field offset: 0x0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private bool <UnityEngine.UIElements.IPointerEventInternal.triggeredByOS>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private EventModifiers <modifiers>k__BackingField; //Field offset: 0x0
@@ -36,7 +39,7 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 	private Vector3 <deltaPosition>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <UnityEngine.UIElements.IPointerEventInternal.triggeredByOS>k__BackingField; //Field offset: 0x0
+	private IMouseEvent <UnityEngine.UIElements.IPointerEventInternal.compatibilityMouseEvent>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private Vector3 <localPosition>k__BackingField; //Field offset: 0x0
@@ -60,22 +63,23 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 	private float m_AzimuthAngle; //Field offset: 0x0
 	private float m_AltitudeAngle; //Field offset: 0x0
 	private bool m_AzimuthNeedsConversion; //Field offset: 0x0
+	private bool m_AltitudeNeedsConversion; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private Vector3 <position>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private bool <UnityEngine.UIElements.IPointerEventInternal.recomputeTopElementUnderPointer>k__BackingField; //Field offset: 0x0
+	private int <UnityEngine.UIElements.IPointerEventInternal.displayIndex>k__BackingField; //Field offset: 0x0
 
 	public override bool actionKey
 	{
-		 get { } //Length: 138
+		 get { } //Length: 134
 	}
 
 	public override float altitudeAngle
 	{
-		 get { } //Length: 140
-		 set { } //Length: 16
+		 get { } //Length: 128
+		 set { } //Length: 10
 	}
 
 	public override bool altKey
@@ -85,8 +89,8 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 
 	public override float azimuthAngle
 	{
-		 get { } //Length: 279
-		 set { } //Length: 16
+		 get { } //Length: 267
+		 set { } //Length: 10
 	}
 
 	public override int button
@@ -118,7 +122,7 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 	public internal virtual IEventHandler currentTarget
 	{
 		 get { } //Length: 25
-		internal set { } //Length: 284
+		internal set { } //Length: 292
 	}
 
 	public override Vector3 deltaPosition
@@ -240,8 +244,8 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 
 	public override Vector2 tilt
 	{
-		 get { } //Length: 411
-		 set { } //Length: 15
+		 get { } //Length: 356
+		 set { } //Length: 9
 	}
 
 	public override float twist
@@ -249,13 +253,19 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 		[CompilerGenerated]
 		 get { } //Length: 9
 		[CompilerGenerated]
-		 set { } //Length: 9
+		 set { } //Length: 138
 	}
 
-	private override bool UnityEngine.UIElements.IPointerEventInternal.recomputeTopElementUnderPointer
+	private override IMouseEvent UnityEngine.UIElements.IPointerEventInternal.compatibilityMouseEvent
 	{
 		[CompilerGenerated]
 		private get { } //Length: 8
+		[CompilerGenerated]
+		private set { } //Length: 8
+	}
+
+	private override int UnityEngine.UIElements.IPointerEventInternal.displayIndex
+	{
 		[CompilerGenerated]
 		private set { } //Length: 7
 	}
@@ -271,6 +281,8 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 	protected PointerEventBase`1() { }
 
 	private static Vector2 AzimuthAndAlitutudeToTilt(float altitude, float azimuth) { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	public override bool get_actionKey() { }
 
@@ -341,17 +353,19 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 	[CompilerGenerated]
 	public override float get_twist() { }
 
-	internal static T GetPooled(EventType eventType, Vector3 mousePosition, Vector2 delta, int button, int clickCount, EventModifiers modifiers) { }
+	public static T GetPooled(Event systemEvent) { }
 
-	public static T GetPooled(IPointerEvent triggerEvent) { }
+	internal static T GetPooled(EventType eventType, Vector3 mousePosition, Vector2 delta, int button, int clickCount, EventModifiers modifiers, int displayIndex) { }
+
+	internal static T GetPooled(Touch touch, EventModifiers modifiers, int displayIndex) { }
+
+	internal static T GetPooled(PenData pen, EventModifiers modifiers, int displayIndex) { }
+
+	internal static T GetPooled(PointerEvent pointerEvent, Vector2 position, Vector2 deltaPosition, int pointerId, float deltaTime) { }
 
 	internal static T GetPooled(IPointerEvent triggerEvent, Vector2 position, int pointerId) { }
 
-	public static T GetPooled(PenData pen, EventModifiers modifiers = 0) { }
-
-	public static T GetPooled(Touch touch, EventModifiers modifiers = 0) { }
-
-	public static T GetPooled(Event systemEvent) { }
+	public static T GetPooled(IPointerEvent triggerEvent) { }
 
 	protected virtual void Init() { }
 
@@ -429,13 +443,16 @@ public abstract class PointerEventBase : EventBase<T>, IPointerEvent, IPointerEv
 	private static float TiltToAzimuth(Vector2 tilt) { }
 
 	[CompilerGenerated]
-	private override bool UnityEngine.UIElements.IPointerEventInternal.get_recomputeTopElementUnderPointer() { }
+	private override IMouseEvent UnityEngine.UIElements.IPointerEventInternal.get_compatibilityMouseEvent() { }
 
 	[CompilerGenerated]
 	private override bool UnityEngine.UIElements.IPointerEventInternal.get_triggeredByOS() { }
 
 	[CompilerGenerated]
-	private override void UnityEngine.UIElements.IPointerEventInternal.set_recomputeTopElementUnderPointer(bool value) { }
+	private override void UnityEngine.UIElements.IPointerEventInternal.set_compatibilityMouseEvent(IMouseEvent value) { }
+
+	[CompilerGenerated]
+	private override void UnityEngine.UIElements.IPointerEventInternal.set_displayIndex(int value) { }
 
 	[CompilerGenerated]
 	private override void UnityEngine.UIElements.IPointerEventInternal.set_triggeredByOS(bool value) { }

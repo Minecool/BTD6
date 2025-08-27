@@ -26,7 +26,7 @@ public class ActiveAchievement
 	public float CurrentProgress
 	{
 		 get { } //Length: 6
-		 set { } //Length: 475
+		 set { } //Length: 191
 	}
 
 	public float CurrentProgressPercent
@@ -36,12 +36,12 @@ public class ActiveAchievement
 
 	public string Description
 	{
-		 get { } //Length: 358
+		 get { } //Length: 346
 	}
 
 	public string EnglishName
 	{
-		 get { } //Length: 336
+		 get { } //Length: 324
 	}
 
 	public int Goal
@@ -72,7 +72,7 @@ public class ActiveAchievement
 
 	public string Name
 	{
-		 get { } //Length: 308
+		 get { } //Length: 295
 	}
 
 	public string SteamStatName
@@ -149,7 +149,7 @@ public class ActiveAchievement
 
 	private void UpdateExternalComplete() { }
 
-	public void UpdateExternalStat() { }
+	private void UpdateExternalStat() { }
 
 	public override void UpdateProgress(Btd6Player player, AnalyticsKonFuze analyticsInfo) { }
 

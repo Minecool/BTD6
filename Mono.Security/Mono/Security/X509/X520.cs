@@ -11,7 +11,7 @@ public class X520
 
 		public string Value
 		{
-			 set { } //Length: 183
+			 set { } //Length: 172
 		}
 
 		protected AttributeTypeAndValue(string oid, int upperBound) { }

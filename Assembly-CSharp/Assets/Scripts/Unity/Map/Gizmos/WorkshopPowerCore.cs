@@ -13,7 +13,7 @@ public class WorkshopPowerCore : MapGizmoBehavior
 
 	public virtual MapGizmoBehaviorModel Def
 	{
-		 get { } //Length: 670
+		 get { } //Length: 649
 	}
 
 	public WorkshopPowerCore() { }

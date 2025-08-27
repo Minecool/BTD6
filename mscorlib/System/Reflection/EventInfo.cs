@@ -15,7 +15,7 @@ public abstract class EventInfo : MemberInfo
 
 	public override Type EventHandlerType
 	{
-		 get { } //Length: 301
+		 get { } //Length: 287
 	}
 
 	public virtual MemberTypes MemberType
@@ -25,17 +25,11 @@ public abstract class EventInfo : MemberInfo
 
 	protected EventInfo() { }
 
-	[DebuggerHidden]
-	[DebuggerStepThrough]
-	public override void AddEventHandler(object target, Delegate handler) { }
-
 	public virtual bool Equals(object obj) { }
 
 	public override Type get_EventHandlerType() { }
 
 	public virtual MemberTypes get_MemberType() { }
-
-	public override MethodInfo GetAddMethod() { }
 
 	public abstract MethodInfo GetAddMethod(bool nonPublic) { }
 
@@ -52,10 +46,6 @@ public abstract class EventInfo : MemberInfo
 	public static bool op_Equality(EventInfo left, EventInfo right) { }
 
 	public static bool op_Inequality(EventInfo left, EventInfo right) { }
-
-	[DebuggerHidden]
-	[DebuggerStepThrough]
-	public override void RemoveEventHandler(object target, Delegate handler) { }
 
 }
 

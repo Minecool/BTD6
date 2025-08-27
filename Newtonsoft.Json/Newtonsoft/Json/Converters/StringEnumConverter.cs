@@ -21,8 +21,8 @@ public class StringEnumConverter : JsonConverter
 	[Obsolete("StringEnumConverter.CamelCaseText is obsolete. Set StringEnumConverter.NamingStrategy with CamelCaseNamingStrategy instead.")]
 	public bool CamelCaseText
 	{
-		 get { } //Length: 105
-		 set { } //Length: 204
+		 get { } //Length: 101
+		 set { } //Length: 192
 	}
 
 	[Nullable(2)]

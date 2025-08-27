@@ -17,7 +17,7 @@ public class EpicToken : AuthenticationProviderToken
 
 	protected private virtual Task<UserModel> LinkToLiNKAccount(LiNKAccount liNKAccount) { }
 
-	protected private virtual Task<LoginResponseModel> LoginToLiNKAccount(Api liNK) { }
+	protected private virtual Task<LiNKAccountModel> LoginToLiNKAccount(Api liNK) { }
 
 }
 

@@ -125,11 +125,15 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_AddBehaviorToTowerSupportModel_Fields(int start, int count) { }
 
+	private void Set_v_AddBehaviorToTowerTypeSupportModel_Fields(int start, int count) { }
+
 	private void Set_v_AddBerserkerBrewToProjectileModel_Fields(int start, int count) { }
 
 	private void Set_v_AddBonusDamagePerHitToBloonModel_Fields(int start, int count) { }
 
 	private void Set_v_AddCorvusManaModel_Fields(int start, int count) { }
+
+	private void Set_v_AddFreeTowerAfterRoundsModel_Fields(int start, int count) { }
 
 	private void Set_v_AddHeatActionModel_Fields(int start, int count) { }
 
@@ -223,7 +227,15 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_BananaCentralBuffModel_Fields(int start, int count) { }
 
+	private void Set_v_BananaFarmerCamoBananasModel_Fields(int start, int count) { }
+
 	private void Set_v_BananaFarmerModModel_Fields(int start, int count) { }
+
+	private void Set_v_BananaFarmerRegrowBananasModel_Fields(int start, int count) { }
+
+	private void Set_v_BananaFarmerRegrowBananasWeaponBehaviorModel_Fields(int start, int count) { }
+
+	private void Set_v_BananaPeelLimitProjectileModel_Fields(int start, int count) { }
 
 	private void Set_v_BankDepositsModModel_Fields(int start, int count) { }
 
@@ -451,6 +463,8 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_CreateNearbyWaterModel_Fields(int start, int count) { }
 
+	private void Set_v_CreateProjectileOnAbilityActivateModel_Fields(int start, int count) { }
+
 	private void Set_v_CreateProjectileOnBlockerCollideModel_Fields(int start, int count) { }
 
 	private void Set_v_CreateProjectileOnContactModel_Fields(int start, int count) { }
@@ -609,6 +623,10 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_DamageUpModel_Fields(int start, int count) { }
 
+	private void Set_v_DamageUpPerAbilityActivateModel_Fields(int start, int count) { }
+
+	private void Set_v_DamageUpPerAbilityActivateModifierModel_Fields(int start, int count) { }
+
 	private void Set_v_DamageUpTagTowersModel_Fields(int start, int count) { }
 
 	private void Set_v_DamageUpTowersModel_Fields(int start, int count) { }
@@ -633,6 +651,8 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_DestroyChildTowersOnUpgradeModel_Fields(int start, int count) { }
 
+	private void Set_v_DestroyIfTargetLostModel_Fields(int start, int count) { }
+
 	private void Set_v_DestroyProjectileIfModelChangedModel_Fields(int start, int count) { }
 
 	private void Set_v_DestroyProjectileIfTowerDestroyedModel_Fields(int start, int count) { }
@@ -640,6 +660,8 @@ public class GameModelLoader : IGameModelLoader
 	private void Set_v_DestroyProjectilesInRadiusActionModel_Fields(int start, int count) { }
 
 	private void Set_v_DestroyWhenHitImmuneModel_Fields(int start, int count) { }
+
+	private void Set_v_DetonateEffectModel_Fields(int start, int count) { }
 
 	private void Set_v_DiscountZoneModel_Fields(int start, int count) { }
 
@@ -728,6 +750,8 @@ public class GameModelLoader : IGameModelLoader
 	private void Set_v_EmissionsPerRoundFilterModel_Fields(int start, int count) { }
 
 	private void Set_v_EmissionWithOffsetsModel_Fields(int start, int count) { }
+
+	private void Set_v_EmitFromSharedTowersModel_Fields(int start, int count) { }
 
 	private void Set_v_EmitOnDamageModel_Fields(int start, int count) { }
 
@@ -831,6 +855,8 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_FilterTargetAngleModel_Fields(int start, int count) { }
 
+	private void Set_v_FilterTowerBehaviorModel_Fields(int start, int count) { }
+
 	private void Set_v_FilterTowerByPlaceableAreaModel_Fields(int start, int count) { }
 
 	private void Set_v_FilterTowerParentModel_Fields(int start, int count) { }
@@ -871,6 +897,8 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_FreeUpgradeSupportModel_Fields(int start, int count) { }
 
+	private void Set_v_FreezeDurationSupportModel_Fields(int start, int count) { }
+
 	private void Set_v_FreezeModel_Fields(int start, int count) { }
 
 	private void Set_v_FreezeModifierForTagsModel_Fields(int start, int count) { }
@@ -880,6 +908,10 @@ public class GameModelLoader : IGameModelLoader
 	private void Set_v_FreezeNearbyWaterModel_Fields(int start, int count) { }
 
 	private void Set_v_FrostboundModel_Fields(int start, int count) { }
+
+	private void Set_v_FrozenBurialModel_Fields(int start, int count) { }
+
+	private void Set_v_FrozenCascadeModel_Fields(int start, int count) { }
 
 	private void Set_v_GameModel_Fields(int start, int count) { }
 
@@ -987,6 +1019,8 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_IncreaseBloonWorthWithTierModel_Fields(int start, int count) { }
 
+	private void Set_v_IncreaseDamageFromTypeModel_Fields(int start, int count) { }
+
 	private void Set_v_IncreaseRangeModel_Fields(int start, int count) { }
 
 	private void Set_v_IncreaseRangeModModel_Fields(int start, int count) { }
@@ -1084,6 +1118,8 @@ public class GameModelLoader : IGameModelLoader
 	private void Set_v_Model_Fields(int start, int count) { }
 
 	private void Set_v_ModModel_Fields(int start, int count) { }
+
+	private void Set_v_MonkeyBankerModel_Fields(int start, int count) { }
 
 	private void Set_v_MonkeyBoostModel_Fields(int start, int count) { }
 
@@ -1242,6 +1278,14 @@ public class GameModelLoader : IGameModelLoader
 	private void Set_v_PowerModModel_Fields(int start, int count) { }
 
 	private void Set_v_PowerProjectileModel_Fields(int start, int count) { }
+
+	private void Set_v_PowerProModel_Fields(int start, int count) { }
+
+	private void Set_v_PowerProTowerModel_Fields(int start, int count) { }
+
+	private void Set_v_PowerProUpgradeModel_Fields(int start, int count) { }
+
+	private void Set_v_PowerProUpgradePathModel_Fields(int start, int count) { }
 
 	private void Set_v_PreEmptiveStrikeLauncherModel_Fields(int start, int count) { }
 
@@ -1421,6 +1465,8 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_ScaleDamageWithTimeModel_Fields(int start, int count) { }
 
+	private void Set_v_ScaleHeroXpWithTowerCountModel_Fields(int start, int count) { }
+
 	private void Set_v_ScaleProjectileModel_Fields(int start, int count) { }
 
 	private void Set_v_ScaleProjectileOverTimeModel_Fields(int start, int count) { }
@@ -1456,6 +1502,14 @@ public class GameModelLoader : IGameModelLoader
 	private void Set_v_ShowDamageTextModel_Fields(int start, int count) { }
 
 	private void Set_v_ShowTextOnHitModel_Fields(int start, int count) { }
+
+	private void Set_v_SilasApplyRimeModel_Fields(int start, int count) { }
+
+	private void Set_v_SilasIceFragmentsModel_Fields(int start, int count) { }
+
+	private void Set_v_SilasIceMonkeyUpgradeLockModel_Fields(int start, int count) { }
+
+	private void Set_v_SilasTrackTargetModel_Fields(int start, int count) { }
 
 	private void Set_v_SimTowerDiscountModModel_Fields(int start, int count) { }
 
@@ -1703,6 +1757,8 @@ public class GameModelLoader : IGameModelLoader
 
 	private void Set_v_TowerBehaviorModel_Fields(int start, int count) { }
 
+	private void Set_v_TowerBehaviorWithAbilityCooldownScaleModel_Fields(int start, int count) { }
+
 	private void Set_v_TowerBehaviorWithOverlayModel_Fields(int start, int count) { }
 
 	private void Set_v_TowerCreateParagonTowerModel_Fields(int start, int count) { }
@@ -1732,6 +1788,8 @@ public class GameModelLoader : IGameModelLoader
 	private void Set_v_TowerSellModModel_Fields(int start, int count) { }
 
 	private void Set_v_TowerXpModModel_Fields(int start, int count) { }
+
+	private void Set_v_TrackManuallyGivenTargetModel_Fields(int start, int count) { }
 
 	private void Set_v_TrackTargetModel_Fields(int start, int count) { }
 

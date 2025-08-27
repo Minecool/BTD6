@@ -17,7 +17,7 @@ public abstract class XmlSchemaFacet : XmlSchemaAnnotated
 	public override bool IsFixed
 	{
 		 get { } //Length: 5
-		 set { } //Length: 159
+		 set { } //Length: 157
 	}
 
 	[XmlAttribute("value")]

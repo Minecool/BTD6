@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-internal struct StartDragArgs
+public struct StartDragArgs
 {
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
@@ -14,6 +14,18 @@ internal struct StartDragArgs
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private IEnumerable<Object> <unityObjectReferences>k__BackingField; //Field offset: 0x18
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private String[] <assetPaths>k__BackingField; //Field offset: 0x20
+
+	internal String[] assetPaths
+	{
+		[CompilerGenerated]
+		[IsReadOnly]
+		internal get { } //Length: 5
+		[CompilerGenerated]
+		private set { } //Length: 5
+	}
 
 	internal Hashtable genericData
 	{
@@ -51,6 +63,10 @@ internal struct StartDragArgs
 
 	[CompilerGenerated]
 	[IsReadOnly]
+	internal String[] get_assetPaths() { }
+
+	[CompilerGenerated]
+	[IsReadOnly]
 	internal Hashtable get_genericData() { }
 
 	[CompilerGenerated]
@@ -64,6 +80,9 @@ internal struct StartDragArgs
 	[CompilerGenerated]
 	[IsReadOnly]
 	public DragVisualMode get_visualMode() { }
+
+	[CompilerGenerated]
+	private void set_assetPaths(String[] value) { }
 
 	[CompilerGenerated]
 	private void set_genericData(Hashtable value) { }

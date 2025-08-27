@@ -8,15 +8,15 @@ public sealed class MeshFilter : Component
 	public Mesh mesh
 	{
 		[NativeName("GetInstantiatedMeshFromScript")]
-		 get { } //Length: 51
+		 get { } //Length: 144
 		[NativeName("SetInstantiatedMesh")]
-		 set { } //Length: 66
+		 set { } //Length: 177
 	}
 
 	public Mesh sharedMesh
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 144
+		 set { } //Length: 177
 	}
 
 	public MeshFilter() { }
@@ -27,12 +27,20 @@ public sealed class MeshFilter : Component
 	[NativeName("GetInstantiatedMeshFromScript")]
 	public Mesh get_mesh() { }
 
+	private static IntPtr get_mesh_Injected(IntPtr _unity_self) { }
+
 	public Mesh get_sharedMesh() { }
+
+	private static IntPtr get_sharedMesh_Injected(IntPtr _unity_self) { }
 
 	[NativeName("SetInstantiatedMesh")]
 	public void set_mesh(Mesh value) { }
 
+	private static void set_mesh_Injected(IntPtr _unity_self, IntPtr value) { }
+
 	public void set_sharedMesh(Mesh value) { }
+
+	private static void set_sharedMesh_Injected(IntPtr _unity_self, IntPtr value) { }
 
 }
 

@@ -9,7 +9,7 @@ public class EjectEffectWithOffsets : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 239
+		 get { } //Length: 238
 	}
 
 	public EjectEffectWithOffsets() { }

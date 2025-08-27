@@ -280,7 +280,7 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 
 		internal static NodeData None
 		{
-			internal get { } //Length: 263
+			internal get { } //Length: 301
 		}
 
 		internal string StringValue
@@ -354,7 +354,7 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 
 		public virtual string DefaultNamespace
 		{
-			 get { } //Length: 54
+			 get { } //Length: 18
 		}
 
 		public NoNamespaceManager() { }
@@ -597,7 +597,7 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 
 	internal Uri DtdParserProxy_BaseUri
 	{
-		internal get { } //Length: 174
+		internal get { } //Length: 169
 	}
 
 	internal int DtdParserProxy_CurrentPosition
@@ -683,7 +683,7 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 
 	internal EntityHandling EntityHandling
 	{
-		internal set { } //Length: 141
+		internal set { } //Length: 133
 	}
 
 	public virtual bool EOF
@@ -765,7 +765,7 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 	internal bool Namespaces
 	{
 		internal get { } //Length: 8
-		internal set { } //Length: 554
+		internal set { } //Length: 516
 	}
 
 	public virtual string NamespaceURI
@@ -786,7 +786,7 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 	internal bool Normalization
 	{
 		internal get { } //Length: 8
-		internal set { } //Length: 205
+		internal set { } //Length: 200
 	}
 
 	internal OnDefaultAttributeUseDelegate OnDefaultAttributeUse
@@ -816,7 +816,7 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 
 	public virtual XmlReaderSettings Settings
 	{
-		 get { } //Length: 387
+		 get { } //Length: 385
 	}
 
 	internal bool StandAlone
@@ -836,12 +836,12 @@ internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolve
 
 	public virtual string Value
 	{
-		 get { } //Length: 353
+		 get { } //Length: 328
 	}
 
 	internal WhitespaceHandling WhitespaceHandling
 	{
-		internal set { } //Length: 225
+		internal set { } //Length: 217
 	}
 
 	public virtual string XmlLang

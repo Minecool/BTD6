@@ -18,6 +18,8 @@ public static class UnsafeUtility
 
 	public static T ArrayElementAsRef(Void* ptr, int index) { }
 
+	internal static T As(object from) { }
+
 	public static T As(ref U from) { }
 
 	public static T AsRef(Void* ptr) { }
@@ -46,10 +48,10 @@ public static class UnsafeUtility
 
 	internal static bool IsArrayBlittable(Array arr) { }
 
+	public static bool IsBlittable() { }
+
 	[ThreadSafe]
 	public static bool IsBlittable(Type type) { }
-
-	public static bool IsBlittable() { }
 
 	private static bool IsBlittableValueType(Type t) { }
 
@@ -57,10 +59,12 @@ public static class UnsafeUtility
 
 	[BurstAuthorizedExternalMethod]
 	[ThreadSafe(ThrowsException = False)]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.AIModule"}])]
 	internal static int LeakErase(IntPtr handle, LeakCategory category) { }
 
 	[BurstAuthorizedExternalMethod]
 	[ThreadSafe(ThrowsException = False)]
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.AIModule"}])]
 	internal static int LeakRecord(IntPtr handle, LeakCategory category, int callstacksToSkip) { }
 
 	[ThreadSafe(ThrowsException = True)]

@@ -7,12 +7,12 @@ public class XmlAttributeOverrides
 
 	public XmlAttributes Item
 	{
-		 get { } //Length: 85
+		 get { } //Length: 25
 	}
 
 	public XmlAttributes Item
 	{
-		 get { } //Length: 241
+		 get { } //Length: 239
 	}
 
 	public XmlAttributeOverrides() { }

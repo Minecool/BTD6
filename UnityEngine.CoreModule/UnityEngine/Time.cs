@@ -65,6 +65,12 @@ public class Time
 		 get { } //Length: 42
 	}
 
+	[NativeProperty("CurTimeRational")]
+	public static RationalTime timeAsRational
+	{
+		 get { } //Length: 60
+	}
+
 	public static float timeScale
 	{
 		 get { } //Length: 42
@@ -108,6 +114,10 @@ public class Time
 	public static float get_time() { }
 
 	public static double get_timeAsDouble() { }
+
+	public static RationalTime get_timeAsRational() { }
+
+	private static void get_timeAsRational_Injected(out RationalTime ret) { }
 
 	public static float get_timeScale() { }
 

@@ -1,8 +1,18 @@
 namespace UnityEngine.UIElements;
 
 [DefaultMember("Item")]
+[UxmlObject]
 public class SortColumnDescriptions : ICollection<SortColumnDescription>, IEnumerable<SortColumnDescription>, IEnumerable
 {
+	[Obsolete("UxmlObjectFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
+	public class UxmlObjectFactory : UxmlObjectFactory<SortColumnDescriptions>
+	{
+
+		public UxmlObjectFactory() { }
+
+	}
+
+	[Obsolete("UxmlObjectFactory<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectFactory : UxmlObjectFactory<T, UxmlObjectTraits`1<T>>
 	{
 
@@ -10,6 +20,7 @@ public class SortColumnDescriptions : ICollection<SortColumnDescription>, IEnume
 
 	}
 
+	[Obsolete("UxmlObjectTraits<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectTraits : UxmlObjectTraits<T>
 	{
 		private readonly UxmlObjectListAttributeDescription<SortColumnDescription> m_SortColumnDescriptions; //Field offset: 0x0

@@ -7,7 +7,7 @@ internal class SteamUser : IDisposable
 
 	public bool IsValid
 	{
-		 get { } //Length: 75
+		 get { } //Length: 73
 	}
 
 	internal SteamUser(BaseSteamworks steamworks, IntPtr pointer) { }

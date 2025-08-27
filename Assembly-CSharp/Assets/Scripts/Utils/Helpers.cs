@@ -4,11 +4,11 @@ namespace Assets.Scripts.Utils;
 public static class Helpers
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass26_0
+	private sealed class <>c__DisplayClass27_0
 	{
 		public string baseHeroId; //Field offset: 0x10
 
-		public <>c__DisplayClass26_0() { }
+		public <>c__DisplayClass27_0() { }
 
 		internal bool <GetHeroMmCost>b__0(HeroDetailsModel e) { }
 
@@ -17,7 +17,7 @@ public static class Helpers
 	}
 
 	[CompilerGenerated]
-	private struct <CheckInternetStatus>d__27 : IAsyncStateMachine
+	private struct <CheckInternetStatus>d__28 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Boolean> <>t__builder; //Field offset: 0x8
@@ -40,7 +40,7 @@ public static class Helpers
 
 	public static void AddInstaMonkeySet(string monkeyType, int maxTier = 5) { }
 
-	[AsyncStateMachine(typeof(<CheckInternetStatus>d__27))]
+	[AsyncStateMachine(typeof(<CheckInternetStatus>d__28))]
 	public static Task<Boolean> CheckInternetStatus(bool isCoopCheck, Nullable<TimeSpan> timeoutOverride = null) { }
 
 	public static Vector2 ClampPointWithinMap(Vector2 point, float border = 0) { }
@@ -76,6 +76,8 @@ public static class Helpers
 
 	public static void PostToInfoDump(string output) { }
 
+	public static PrefabReference RecordPrefabReference(PrefabReference prefabReference) { }
+
 	public static void ShowOkPopup(string bodyLocKey, ReturnCallback onOkCancelCallback = null) { }
 
 	public static void ShowPopup(string titleLocKey, string bodyLocKey, bool showBackground, ReturnCallback onOkCallback = null) { }
@@ -84,11 +86,11 @@ public static class Helpers
 
 	public static string ToEventTimeRemainingDisplay(TimeSpan timeRemaining, bool ignoreHeader = false) { }
 
-	public static string ToGameCompletionTimeDisplay(int milliSeconds) { }
+	public static string ToGameCompletionTimeDisplay(TimeSpan timeSpan) { }
 
 	public static string ToGameCompletionTimeDisplay(double milliSeconds) { }
 
-	public static string ToGameCompletionTimeDisplay(TimeSpan timeSpan) { }
+	public static string ToGameCompletionTimeDisplay(int milliSeconds) { }
 
 	public static string ValidateString(string text, int maxLength, Char[] allowedSymbols = null) { }
 

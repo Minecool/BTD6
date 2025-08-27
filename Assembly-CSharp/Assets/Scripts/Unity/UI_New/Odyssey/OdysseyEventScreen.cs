@@ -279,7 +279,7 @@ public class OdysseyEventScreen : GameMenu
 
 	public float LivesRemaining
 	{
-		 get { } //Length: 102
+		 get { } //Length: 91
 	}
 
 	public NK_TextMeshProUGUI LivesText
@@ -305,7 +305,7 @@ public class OdysseyEventScreen : GameMenu
 
 	public bool OdysseyVoyageStarted
 	{
-		 get { } //Length: 51
+		 get { } //Length: 44
 	}
 
 	public OdysseyWorldMenu OdysseyWorldMenu

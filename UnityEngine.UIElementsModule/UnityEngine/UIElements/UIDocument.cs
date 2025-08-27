@@ -7,6 +7,12 @@ namespace UnityEngine.UIElements;
 [HelpURL("UIE-get-started-with-runtime-ui")]
 public sealed class UIDocument : MonoBehaviour
 {
+	public enum WorldSpaceSizeMode
+	{
+		Dynamic = 0,
+		Fixed = 1,
+	}
+
 	internal const string k_RootStyleClassName = "unity-ui-document__root"; //Field offset: 0x0
 	internal const string k_VisualElementNameSuffix = "-container"; //Field offset: 0x0
 	private const int k_DefaultSortingOrder = 0; //Field offset: 0x0
@@ -22,9 +28,17 @@ public sealed class UIDocument : MonoBehaviour
 	[SerializeField]
 	private VisualTreeAsset sourceAsset; //Field offset: 0x50
 	private VisualElement m_RootVisualElement; //Field offset: 0x58
-	private int m_FirstChildInsertIndex; //Field offset: 0x60
+	private RuntimePanel m_RuntimePanel; //Field offset: 0x60
+	private int m_FirstChildInsertIndex; //Field offset: 0x68
 	[SerializeField]
-	private float m_SortingOrder; //Field offset: 0x64
+	private float m_SortingOrder; //Field offset: 0x6C
+	[SerializeField]
+	private WorldSpaceSizeMode m_WorldSpaceSizeMode; //Field offset: 0x70
+	[SerializeField]
+	private float m_WorldSpaceWidth; //Field offset: 0x74
+	[SerializeField]
+	private float m_WorldSpaceHeight; //Field offset: 0x78
+	private bool m_RootHasWorldTransform; //Field offset: 0x7C
 
 	internal int firstChildInserIndex
 	{
@@ -34,7 +48,7 @@ public sealed class UIDocument : MonoBehaviour
 	public PanelSettings panelSettings
 	{
 		 get { } //Length: 7
-		 set { } //Length: 676
+		 set { } //Length: 674
 	}
 
 	public private UIDocument parentUI
@@ -43,9 +57,19 @@ public sealed class UIDocument : MonoBehaviour
 		private set { } //Length: 5
 	}
 
+	private float pixelsPerUnit
+	{
+		private get { } //Length: 27
+	}
+
 	public VisualElement rootVisualElement
 	{
 		 get { } //Length: 7
+	}
+
+	public IRuntimePanel runtimePanel
+	{
+		 get { } //Length: 26
 	}
 
 	public float sortingOrder
@@ -60,15 +84,26 @@ public sealed class UIDocument : MonoBehaviour
 		 set { } //Length: 11
 	}
 
+	internal WorldSpaceSizeMode worldSpaceSizeMode
+	{
+		internal get { } //Length: 4
+	}
+
 	private UIDocument() { }
 
 	private void AddChildAndInsertContentToVisualTree(UIDocument child) { }
+
+	private void AddOrRemoveRendererComponent() { }
 
 	private void AddRootVisualElementToTree() { }
 
 	internal void ApplySortingOrder() { }
 
 	private void Awake() { }
+
+	private void ClearTransform() { }
+
+	private void ComputeTransform(Transform transform, out Matrix4x4 matrix) { }
 
 	private UIDocument FindUIDocumentParent() { }
 
@@ -78,11 +113,19 @@ public sealed class UIDocument : MonoBehaviour
 
 	public UIDocument get_parentUI() { }
 
+	private float get_pixelsPerUnit() { }
+
 	public VisualElement get_rootVisualElement() { }
+
+	public IRuntimePanel get_runtimePanel() { }
 
 	public float get_sortingOrder() { }
 
 	public VisualTreeAsset get_visualTreeAsset() { }
+
+	internal WorldSpaceSizeMode get_worldSpaceSizeMode() { }
+
+	private void LateUpdate() { }
 
 	private void OnDisable() { }
 
@@ -102,6 +145,10 @@ public sealed class UIDocument : MonoBehaviour
 
 	internal void Reset() { }
 
+	private void ResolveRuntimePanel() { }
+
+	private Bounds SanitizeRendererBounds(Bounds b) { }
+
 	public void set_panelSettings(PanelSettings value) { }
 
 	private void set_parentUI(UIDocument value) { }
@@ -110,9 +157,19 @@ public sealed class UIDocument : MonoBehaviour
 
 	public void set_visualTreeAsset(VisualTreeAsset value) { }
 
+	private static void SetNoTransform(VisualElement visualElement) { }
+
+	private void SetTransform() { }
+
 	private void SetupFromHierarchy() { }
 
 	private void SetupRootClassList() { }
+
+	private void UpdateCutRenderChainFlag() { }
+
+	private void UpdateRenderer() { }
+
+	private void UpdateWorldSpaceSize() { }
 
 }
 

@@ -32,7 +32,7 @@ public class AsyncResult : IAsyncResult, IMessageSink, IThreadPoolWorkItem
 
 	public override WaitHandle AsyncWaitHandle
 	{
-		 get { } //Length: 257
+		 get { } //Length: 223
 	}
 
 	internal MonoMethodMessage CallMessage

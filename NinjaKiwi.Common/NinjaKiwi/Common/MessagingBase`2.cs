@@ -55,7 +55,7 @@ public abstract class MessagingBase
 	private T trigger
 	{
 		private get { } //Length: 5
-		private set { } //Length: 204
+		private set { } //Length: 210
 	}
 
 	public static T Trigger
@@ -65,7 +65,7 @@ public abstract class MessagingBase
 
 	private T TriggerInternal
 	{
-		private get { } //Length: 532
+		private get { } //Length: 427
 	}
 
 	protected override Warn<T, TBase> WarningMode

@@ -17,17 +17,17 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 840
+			 get { } //Length: 831
 		}
 
 		public override object Key
 		{
-			 get { } //Length: 473
+			 get { } //Length: 467
 		}
 
 		public override object Value
 		{
-			 get { } //Length: 473
+			 get { } //Length: 467
 		}
 
 		public DictionaryEnumerator(IDictionary<TKey, TValue> dictionary) { }
@@ -55,7 +55,7 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 		public override int Count
 		{
-			 get { } //Length: 177
+			 get { } //Length: 178
 		}
 
 		private override bool System.Collections.Generic.ICollection<TKey>.IsReadOnly
@@ -70,7 +70,7 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 		private override object System.Collections.ICollection.SyncRoot
 		{
-			private get { } //Length: 192
+			private get { } //Length: 175
 		}
 
 		internal KeyCollection(ICollection<TKey> collection) { }
@@ -112,7 +112,7 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 		public override int Count
 		{
-			 get { } //Length: 177
+			 get { } //Length: 178
 		}
 
 		private override bool System.Collections.Generic.ICollection<TValue>.IsReadOnly
@@ -127,7 +127,7 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 		private override object System.Collections.ICollection.SyncRoot
 		{
-			private get { } //Length: 192
+			private get { } //Length: 175
 		}
 
 		internal ValueCollection(ICollection<TValue> collection) { }
@@ -172,7 +172,7 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 	public override TValue Item
 	{
-		 get { } //Length: 328
+		 get { } //Length: 298
 	}
 
 	public KeyCollection<TKey, TValue> Keys
@@ -187,28 +187,28 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 	private override TValue System.Collections.Generic.IDictionary<TKey,TValue>.Item
 	{
-		private get { } //Length: 328
+		private get { } //Length: 298
 		private set { } //Length: 73
 	}
 
 	private override ICollection<TKey> System.Collections.Generic.IDictionary<TKey,TValue>.Keys
 	{
-		private get { } //Length: 36
+		private get { } //Length: 21
 	}
 
 	private override ICollection<TValue> System.Collections.Generic.IDictionary<TKey,TValue>.Values
 	{
-		private get { } //Length: 36
+		private get { } //Length: 21
 	}
 
 	private override IEnumerable<TKey> System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Keys
 	{
-		private get { } //Length: 36
+		private get { } //Length: 21
 	}
 
 	private override IEnumerable<TValue> System.Collections.Generic.IReadOnlyDictionary<TKey,TValue>.Values
 	{
-		private get { } //Length: 36
+		private get { } //Length: 21
 	}
 
 	private override bool System.Collections.ICollection.IsSynchronized
@@ -218,7 +218,7 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 	private override object System.Collections.ICollection.SyncRoot
 	{
-		private get { } //Length: 192
+		private get { } //Length: 175
 	}
 
 	private override bool System.Collections.IDictionary.IsReadOnly
@@ -228,18 +228,18 @@ public class ReadOnlyDictionary : IDictionary<TKey, TValue>, ICollection<KeyValu
 
 	private override object System.Collections.IDictionary.Item
 	{
-		private get { } //Length: 379
+		private get { } //Length: 326
 		private set { } //Length: 73
 	}
 
 	private override ICollection System.Collections.IDictionary.Keys
 	{
-		private get { } //Length: 36
+		private get { } //Length: 21
 	}
 
 	private override ICollection System.Collections.IDictionary.Values
 	{
-		private get { } //Length: 36
+		private get { } //Length: 21
 	}
 
 	public ValueCollection<TKey, TValue> Values

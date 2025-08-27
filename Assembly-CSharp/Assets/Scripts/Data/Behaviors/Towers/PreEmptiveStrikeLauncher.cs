@@ -13,7 +13,7 @@ public class PreEmptiveStrikeLauncher : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 820
+		 get { } //Length: 822
 	}
 
 	public PreEmptiveStrikeLauncher() { }

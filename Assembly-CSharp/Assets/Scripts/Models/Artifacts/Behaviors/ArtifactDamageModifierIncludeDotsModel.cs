@@ -27,7 +27,7 @@ public class ArtifactDamageModifierIncludeDotsModel : ItemArtifactBehaviorModel
 
 	public ArtifactDamageModifierIncludeDotsMutator Mutator
 	{
-		 get { } //Length: 269
+		 get { } //Length: 273
 	}
 
 	public ArtifactDamageModifierIncludeDotsModel(string name, float damageIncrease, String[] towerTypes, bool inverseTowerTypes, TowerSet[] towerSets, bool inverseSets, Int32[] tiers, bool tiersMustBeEqual, bool inverseTiers) { }

@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal class StylePropertyReader
 {
 	public sealed class GetCursorIdFunction : MulticastDelegate
@@ -177,6 +178,7 @@ internal class StylePropertyReader
 
 	public void SetInlineContext(StyleSheet sheet, StyleProperty[] properties, StylePropertyId[] propertyIds, float dpiScaling = 1) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal static bool TryGetImageSourceFromValue(StylePropertyValue propertyValue, float dpiScaling, out ImageSource source) { }
 
 	private static bool TryReadEnum(StyleEnumType enumType, StylePropertyValue value, out int intValue) { }

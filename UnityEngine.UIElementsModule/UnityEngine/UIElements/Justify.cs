@@ -7,5 +7,6 @@ public enum Justify
 	FlexEnd = 2,
 	SpaceBetween = 3,
 	SpaceAround = 4,
+	SpaceEvenly = 5,
 }
 

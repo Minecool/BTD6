@@ -10,7 +10,7 @@ public abstract class Array : ICollection, IEnumerable, IList, IStructuralCompar
 
 		public override object Current
 		{
-			 get { } //Length: 361
+			 get { } //Length: 357
 		}
 
 		internal ArrayEnumerator(Array array) { }
@@ -62,7 +62,7 @@ public abstract class Array : ICollection, IEnumerable, IList, IStructuralCompar
 
 		public override T Current
 		{
-			 get { } //Length: 297
+			 get { } //Length: 300
 		}
 
 		private override object System.Collections.IEnumerator.Current

@@ -22,7 +22,7 @@ public class DroneIdle : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1004
+		 get { } //Length: 1008
 	}
 
 	public DroneIdle() { }

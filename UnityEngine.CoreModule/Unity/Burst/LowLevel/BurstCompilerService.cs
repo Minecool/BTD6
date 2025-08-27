@@ -16,6 +16,8 @@ internal static class BurstCompilerService
 	[FreeFunction(IsThreadSafe = True)]
 	public static int CompileAsyncDelegateMethod(object delegateMethod, string compilerOptions) { }
 
+	private static int CompileAsyncDelegateMethod_Injected(object delegateMethod, ref ManagedSpanWrapper compilerOptions) { }
+
 	[FreeFunction(IsThreadSafe = True)]
 	public static Void* GetAsyncCompiledAsyncDelegateMethod(int userID) { }
 

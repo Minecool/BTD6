@@ -1,23 +1,23 @@
 namespace UnityEngine;
 
-[NativeHeader("Runtime/Misc/PlayerSettings.h")]
-[NativeHeader("Runtime/BaseClasses/IsPlaying.h")]
-[NativeHeader("Runtime/Misc/Player.h")]
-[NativeHeader("Runtime/File/ApplicationSpecificPersistentDataPath.h")]
-[NativeHeader("Runtime/Application/AdsIdHandler.h")]
-[NativeHeader("Runtime/Utilities/Argv.h")]
-[NativeHeader("Runtime/Input/TargetFrameRate.h")]
-[NativeHeader("Runtime/Application/ApplicationInfo.h")]
-[NativeHeader("Runtime/PreloadManager/PreloadManager.h")]
-[NativeHeader("Runtime/PreloadManager/LoadSceneOperation.h")]
-[NativeHeader("Runtime/Network/NetworkUtility.h")]
-[NativeHeader("Runtime/Logging/LogSystem.h")]
-[NativeHeader("Runtime/Export/Application/Application.bindings.h")]
-[NativeHeader("Runtime/Misc/SystemInfo.h")]
-[NativeHeader("Runtime/Input/GetInput.h")]
 [NativeHeader("Runtime/Misc/BuildSettings.h")]
-[NativeHeader("Runtime/Input/InputManager.h")]
+[NativeHeader("Runtime/Misc/Player.h")]
+[NativeHeader("Runtime/Misc/PlayerSettings.h")]
+[NativeHeader("Runtime/Misc/SystemInfo.h")]
+[NativeHeader("Runtime/Application/ApplicationInfo.h")]
+[NativeHeader("Runtime/PreloadManager/LoadSceneOperation.h")]
+[NativeHeader("Runtime/BaseClasses/IsPlaying.h")]
+[NativeHeader("Runtime/PreloadManager/PreloadManager.h")]
 [NativeHeader("Runtime/Utilities/URLUtility.h")]
+[NativeHeader("Runtime/Input/InputManager.h")]
+[NativeHeader("Runtime/Application/AdsIdHandler.h")]
+[NativeHeader("Runtime/Input/GetInput.h")]
+[NativeHeader("Runtime/File/ApplicationSpecificPersistentDataPath.h")]
+[NativeHeader("Runtime/Export/Application/Application.bindings.h")]
+[NativeHeader("Runtime/Utilities/Argv.h")]
+[NativeHeader("Runtime/Logging/LogSystem.h")]
+[NativeHeader("Runtime/Input/TargetFrameRate.h")]
+[NativeHeader("Runtime/Network/NetworkUtility.h")]
 public class Application
 {
 	internal sealed class LogCallback : MulticastDelegate
@@ -71,7 +71,6 @@ public class Application
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private static Action unloading; //Field offset: 0x40
 	private static CancellationTokenSource s_currentCancellationTokenSource; //Field offset: 0x48
-	private static LogCallback s_RegisterLogCallbackDeprecated; //Field offset: 0x50
 
 	public static event Action<String> deepLinkActivated
 	{
@@ -95,12 +94,6 @@ public class Application
 		 remove { } //Length: 220
 	}
 
-	public static event LogCallback logMessageReceivedThreaded
-	{
-		 add { } //Length: 255
-		 remove { } //Length: 220
-	}
-
 	public static event LowMemoryCallback lowMemory
 	{
 		[CompilerGenerated]
@@ -117,28 +110,22 @@ public class Application
 		 remove { } //Length: 242
 	}
 
-	public static string buildGUID
-	{
-		[FreeFunction("Application_Bindings::GetBuildGUID")]
-		 get { } //Length: 42
-	}
-
 	public static string cloudProjectId
 	{
 		[FreeFunction("GetPlayerSettings().GetCloudProjectId")]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static string dataPath
 	{
 		[FreeFunction("GetAppDataPath", IsThreadSafe = True)]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static string identifier
 	{
 		[FreeFunction("GetApplicationInfo().GetApplicationIdentifier")]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static NetworkReachability internetReachability
@@ -183,7 +170,7 @@ public class Application
 	public static string persistentDataPath
 	{
 		[FreeFunction("GetPersistentDataPathApplicationSpecific")]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static RuntimePlatform platform
@@ -195,7 +182,7 @@ public class Application
 	public static string productName
 	{
 		[FreeFunction("GetPlayerSettings().GetProductName")]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static bool runInBackground
@@ -207,7 +194,7 @@ public class Application
 	public static string streamingAssetsPath
 	{
 		[FreeFunction("GetStreamingAssetsPath", IsThreadSafe = True)]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static SystemLanguage systemLanguage
@@ -227,19 +214,19 @@ public class Application
 	public static string temporaryCachePath
 	{
 		[FreeFunction("GetTemporaryCachePathApplicationSpecific")]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static string unityVersion
 	{
 		[FreeFunction("Application_Bindings::GetUnityVersion", IsThreadSafe = True)]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	public static string version
 	{
 		[FreeFunction("GetApplicationInfo().GetVersion")]
-		 get { } //Length: 42
+		 get { } //Length: 222
 	}
 
 	private static Application() { }
@@ -251,8 +238,6 @@ public class Application
 	public static void add_focusChanged(Action<Boolean> value) { }
 
 	public static void add_logMessageReceived(LogCallback value) { }
-
-	public static void add_logMessageReceivedThreaded(LogCallback value) { }
 
 	[CompilerGenerated]
 	public static void add_lowMemory(LowMemoryCallback value) { }
@@ -266,17 +251,20 @@ public class Application
 	[RequiredByNativeCode]
 	internal static void CallLowMemory(ApplicationMemoryUsage usage) { }
 
-	[FreeFunction("Application_Bindings::GetBuildGUID")]
-	public static string get_buildGUID() { }
-
 	[FreeFunction("GetPlayerSettings().GetCloudProjectId")]
 	public static string get_cloudProjectId() { }
+
+	private static void get_cloudProjectId_Injected(out ManagedSpanWrapper ret) { }
 
 	[FreeFunction("GetAppDataPath", IsThreadSafe = True)]
 	public static string get_dataPath() { }
 
+	private static void get_dataPath_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("GetApplicationInfo().GetApplicationIdentifier")]
 	public static string get_identifier() { }
+
+	private static void get_identifier_Injected(out ManagedSpanWrapper ret) { }
 
 	[FreeFunction("GetInternetReachability")]
 	public static NetworkReachability get_internetReachability() { }
@@ -299,17 +287,23 @@ public class Application
 	[FreeFunction("GetPersistentDataPathApplicationSpecific")]
 	public static string get_persistentDataPath() { }
 
+	private static void get_persistentDataPath_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("systeminfo::GetRuntimePlatform", IsThreadSafe = True)]
 	public static RuntimePlatform get_platform() { }
 
 	[FreeFunction("GetPlayerSettings().GetProductName")]
 	public static string get_productName() { }
 
+	private static void get_productName_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("GetPlayerSettingsRunInBackground")]
 	public static bool get_runInBackground() { }
 
 	[FreeFunction("GetStreamingAssetsPath", IsThreadSafe = True)]
 	public static string get_streamingAssetsPath() { }
+
+	private static void get_streamingAssetsPath_Injected(out ManagedSpanWrapper ret) { }
 
 	[FreeFunction("(SystemLanguage)systeminfo::GetSystemLanguage")]
 	public static SystemLanguage get_systemLanguage() { }
@@ -320,20 +314,20 @@ public class Application
 	[FreeFunction("GetTemporaryCachePathApplicationSpecific")]
 	public static string get_temporaryCachePath() { }
 
+	private static void get_temporaryCachePath_Injected(out ManagedSpanWrapper ret) { }
+
 	[FreeFunction("Application_Bindings::GetUnityVersion", IsThreadSafe = True)]
 	public static string get_unityVersion() { }
+
+	private static void get_unityVersion_Injected(out ManagedSpanWrapper ret) { }
 
 	[FreeFunction("GetApplicationInfo().GetVersion")]
 	public static string get_version() { }
 
-	[FreeFunction("GetStackTraceLogType")]
-	public static StackTraceLogType GetStackTraceLogType(LogType logType) { }
+	private static void get_version_Injected(out ManagedSpanWrapper ret) { }
 
 	[RequiredByNativeCode]
 	internal static bool HasLogCallback() { }
-
-	[RequiredByNativeCode]
-	private static void Internal_ApplicationInit() { }
 
 	[RequiredByNativeCode]
 	private static void Internal_ApplicationQuit() { }
@@ -343,6 +337,12 @@ public class Application
 
 	[RequiredByNativeCode]
 	private static bool Internal_ApplicationWantsToQuit() { }
+
+	[RequiredByNativeCode]
+	private static void Internal_InitializeExitCancellationToken() { }
+
+	[RequiredByNativeCode]
+	private static void Internal_RaiseExitCancellationToken() { }
 
 	[RequiredByNativeCode]
 	internal static void InvokeDeepLinkActivated(string url) { }
@@ -356,15 +356,12 @@ public class Application
 	[FreeFunction("OpenURL")]
 	public static void OpenURL(string url) { }
 
-	[FreeFunction("GetInputManager().QuitApplication")]
-	public static void Quit(int exitCode) { }
+	private static void OpenURL_Injected(ref ManagedSpanWrapper url) { }
 
 	public static void Quit() { }
 
-	[Obsolete("Application.RegisterLogCallback is deprecated. Use Application.logMessageReceived instead.")]
-	public static void RegisterLogCallback(LogCallback handler) { }
-
-	private static void RegisterLogCallback(LogCallback handler, bool threaded) { }
+	[FreeFunction("GetInputManager().QuitApplication")]
+	public static void Quit(int exitCode) { }
 
 	[CompilerGenerated]
 	public static void remove_deepLinkActivated(Action<String> value) { }
@@ -373,8 +370,6 @@ public class Application
 	public static void remove_focusChanged(Action<Boolean> value) { }
 
 	public static void remove_logMessageReceived(LogCallback value) { }
-
-	public static void remove_logMessageReceivedThreaded(LogCallback value) { }
 
 	[CompilerGenerated]
 	public static void remove_lowMemory(LowMemoryCallback value) { }

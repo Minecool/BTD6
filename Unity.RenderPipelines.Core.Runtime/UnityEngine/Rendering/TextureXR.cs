@@ -42,7 +42,7 @@ public static class TextureXR
 
 	public static bool useTexArray
 	{
-		 get { } //Length: 69
+		 get { } //Length: 60
 	}
 
 	private static TextureXR() { }

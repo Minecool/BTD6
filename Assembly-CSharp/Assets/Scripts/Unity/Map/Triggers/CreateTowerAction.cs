@@ -16,7 +16,7 @@ public class CreateTowerAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 942
+		 get { } //Length: 929
 	}
 
 	public CreateTowerAction() { }

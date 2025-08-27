@@ -1,7 +1,7 @@
 namespace System.Threading.Tasks;
 
 [IsReadOnly]
-internal struct ForceAsyncAwaiter : ICriticalNotifyCompletion
+internal struct ForceAsyncAwaiter : ICriticalNotifyCompletion, INotifyCompletion
 {
 	private readonly Task _task; //Field offset: 0x0
 
@@ -17,6 +17,8 @@ internal struct ForceAsyncAwaiter : ICriticalNotifyCompletion
 	public ForceAsyncAwaiter GetAwaiter() { }
 
 	public void GetResult() { }
+
+	public override void OnCompleted(Action action) { }
 
 	public override void UnsafeOnCompleted(Action action) { }
 

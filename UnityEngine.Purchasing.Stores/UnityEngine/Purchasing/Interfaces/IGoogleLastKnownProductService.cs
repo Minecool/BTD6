@@ -16,7 +16,7 @@ internal interface IGoogleLastKnownProductService
 		 set { } //Length: 0
 	}
 
-	public Nullable<GooglePlayProrationMode> LastKnownProrationMode
+	public Nullable<GooglePlayReplacementMode> LastKnownReplacementMode
 	{
 		 get { } //Length: 0
 		 set { } //Length: 0
@@ -26,13 +26,13 @@ internal interface IGoogleLastKnownProductService
 
 	public string get_LastKnownProductId() { }
 
-	public Nullable<GooglePlayProrationMode> get_LastKnownProrationMode() { }
+	public Nullable<GooglePlayReplacementMode> get_LastKnownReplacementMode() { }
 
 	public void set_LastKnownOldProductId(string value) { }
 
 	public void set_LastKnownProductId(string value) { }
 
-	public void set_LastKnownProrationMode(Nullable<GooglePlayProrationMode> value) { }
+	public void set_LastKnownReplacementMode(Nullable<GooglePlayReplacementMode> value) { }
 
 }
 

@@ -37,12 +37,12 @@ internal sealed class SocketAsyncResult : IOAsyncResult
 
 	public SocketError ErrorCode
 	{
-		 get { } //Length: 150
+		 get { } //Length: 110
 	}
 
 	public IntPtr Handle
 	{
-		 get { } //Length: 21
+		 get { } //Length: 19
 	}
 
 	public SocketAsyncResult() { }

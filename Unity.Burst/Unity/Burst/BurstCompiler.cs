@@ -19,6 +19,29 @@ public static class BurstCompiler
 	[BurstCompile]
 	public static class BurstCompilerHelper
 	{
+		public static class IsBurstEnabled_00000146$BurstDirectCall
+		{
+			private static IntPtr Pointer; //Field offset: 0x0
+
+			private static IntPtr GetFunctionPointer() { }
+
+			[BurstDiscard]
+			private static void GetFunctionPointerDiscard(ref IntPtr unnamed_param_0) { }
+
+			public static bool Invoke() { }
+
+		}
+
+		[UnmanagedFunctionPointer(CallingConvention::Cdecl (2))]
+		public sealed class IsBurstEnabled_00000146$PostfixBurstDelegate : MulticastDelegate
+		{
+
+			public IsBurstEnabled_00000146$PostfixBurstDelegate(object unnamed_param_0, IntPtr unnamed_param_1) { }
+
+			public override bool Invoke() { }
+
+		}
+
 		[UnmanagedFunctionPointer(CallingConvention::Cdecl (2))]
 		private sealed class IsBurstEnabledDelegate : MulticastDelegate
 		{
@@ -41,6 +64,10 @@ public static class BurstCompiler
 		[MonoPInvokeCallback(typeof(IsBurstEnabledDelegate))]
 		private static bool IsBurstEnabled() { }
 
+		[BurstCompile]
+		[MonoPInvokeCallback(typeof(IsBurstEnabledDelegate))]
+		internal static bool IsBurstEnabled$BurstManaged() { }
+
 		private static bool IsCompiledByBurst(Delegate del) { }
 
 	}
@@ -57,26 +84,14 @@ public static class BurstCompiler
 			 get { } //Length: 5
 		}
 
-		public FakeDelegate(MethodInfo method) { }
-
 		[CompilerGenerated]
 		public MethodInfo get_Method() { }
 
 	}
 
-	[AttributeUsage(AttributeTargets::Assembly (1), AllowMultiple = True)]
-	public class StaticTypeReinitAttribute : Attribute
-	{
-		public readonly Type reinitType; //Field offset: 0x10
-
-		public StaticTypeReinitAttribute(Type toReinit) { }
-
-	}
-
 	internal static bool _IsEnabled; //Field offset: 0x0
 	public static readonly BurstCompilerOptions Options; //Field offset: 0x8
-	internal static Action OnCompileILPPMethod2; //Field offset: 0x10
-	private static readonly MethodInfo DummyMethodInfo; //Field offset: 0x18
+	private static readonly MethodInfo DummyMethodInfo; //Field offset: 0x10
 
 	public static bool IsEnabled
 	{
@@ -85,15 +100,15 @@ public static class BurstCompiler
 
 	private static BurstCompiler() { }
 
+	private static Void* Compile(object delegateObj, bool isFunctionPointer) { }
+
 	private static Void* Compile(object delegateObj, MethodInfo methodInfo, bool isFunctionPointer, bool isILPostProcessing) { }
 
-	public static IntPtr CompileILPPMethod2(RuntimeMethodHandle burstMethodHandle) { }
+	public static FunctionPointer<T> CompileFunctionPointer(T delegateMethod) { }
 
 	private static void DummyMethod() { }
 
 	public static bool get_IsEnabled() { }
-
-	public static Void* GetILPPMethodFunctionPointer2(IntPtr ilppMethod, RuntimeMethodHandle managedMethodHandle, RuntimeTypeHandle delegateTypeHandle) { }
 
 }
 

@@ -2,6 +2,20 @@ namespace UnityEngine.Rendering.Universal.Internal;
 
 public class ForwardLights
 {
+	[CompilerGenerated]
+	private sealed class <>c
+	{
+		public static readonly <>c <>9; //Field offset: 0x0
+		public static BaseRenderFunc<SetupLightPassData, UnsafeGraphContext> <>9__44_0; //Field offset: 0x8
+
+		private static <>c() { }
+
+		public <>c() { }
+
+		internal void <SetupRenderGraphLights>b__44_0(SetupLightPassData data, UnsafeGraphContext rgContext) { }
+
+	}
+
 	public struct InitParams
 	{
 		public LightCookieManager lightCookieManager; //Field offset: 0x0
@@ -27,11 +41,23 @@ public class ForwardLights
 
 	}
 
+	private class SetupLightPassData
+	{
+		internal UniversalRenderingData renderingData; //Field offset: 0x10
+		internal UniversalCameraData cameraData; //Field offset: 0x18
+		internal UniversalLightData lightData; //Field offset: 0x20
+		internal ForwardLights forwardLights; //Field offset: 0x28
+
+		public SetupLightPassData() { }
+
+	}
+
 	private const string k_SetupLightConstants = "Setup Light Constants"; //Field offset: 0x0
 	private static readonly ProfilingSampler m_ProfilingSampler; //Field offset: 0x0
 	private static readonly ProfilingSampler m_ProfilingSamplerFPSetup; //Field offset: 0x8
 	private static readonly ProfilingSampler m_ProfilingSamplerFPComplete; //Field offset: 0x10
 	private static readonly ProfilingSampler m_ProfilingSamplerFPUpload; //Field offset: 0x18
+	private static ProfilingSampler s_SetupForwardLights; //Field offset: 0x20
 	private int m_AdditionalLightsBufferId; //Field offset: 0x10
 	private int m_AdditionalLightsIndicesId; //Field offset: 0x14
 	private MixedLightingSetup m_MixedLightingSetup; //Field offset: 0x18
@@ -53,22 +79,22 @@ public class ForwardLights
 	private GraphicsBuffer m_TileMasksBuffer; //Field offset: 0xA0
 	private LightCookieManager m_LightCookieManager; //Field offset: 0xA8
 	private ReflectionProbeManager m_ReflectionProbeManager; //Field offset: 0xB0
-	private int m_WordsPerTile; //Field offset: 0x130
-	private float m_ZBinScale; //Field offset: 0x134
-	private float m_ZBinOffset; //Field offset: 0x138
-	private int m_LightCount; //Field offset: 0x13C
-	private int m_BinCount; //Field offset: 0x140
+	private int m_WordsPerTile; //Field offset: 0x138
+	private float m_ZBinScale; //Field offset: 0x13C
+	private float m_ZBinOffset; //Field offset: 0x140
+	private int m_LightCount; //Field offset: 0x144
+	private int m_BinCount; //Field offset: 0x148
 
 	internal ReflectionProbeManager reflectionProbeManager
 	{
-		internal get { } //Length: 91
+		internal get { } //Length: 107
 	}
 
 	private static ForwardLights() { }
 
-	public ForwardLights() { }
-
 	internal ForwardLights(InitParams initParams) { }
+
+	public ForwardLights() { }
 
 	[CompilerGenerated]
 	internal static bool <PreSetup>g__IsProbeGreater|40_0(VisibleReflectionProbe probe, VisibleReflectionProbe otherProbe) { }
@@ -83,19 +109,23 @@ public class ForwardLights
 
 	private void GetViewParams(Camera camera, float4x4 viewToClip, out float viewPlaneBot, out float viewPlaneTop, out float4 viewToViewportScaleBias) { }
 
-	private void InitializeLightConstants(NativeArray<VisibleLight> lights, int lightIndex, out Vector4 lightPos, out Vector4 lightColor, out Vector4 lightAttenuation, out Vector4 lightSpotDir, out Vector4 lightOcclusionProbeChannel, out uint lightLayerMask, out bool isSubtractive) { }
+	private void InitializeLightConstants(NativeArray<VisibleLight> lights, int lightIndex, bool supportsLightLayers, out Vector4 lightPos, out Vector4 lightColor, out Vector4 lightAttenuation, out Vector4 lightSpotDir, out Vector4 lightOcclusionProbeChannel, out uint lightLayerMask, out bool isSubtractive) { }
 
-	internal void PreSetup(ref RenderingData renderingData) { }
+	internal void PreSetup(UniversalRenderingData renderingData, UniversalCameraData cameraData, UniversalLightData lightData) { }
 
 	public void Setup(ScriptableRenderContext context, ref RenderingData renderingData) { }
 
-	private void SetupAdditionalLightConstants(CommandBuffer cmd, ref RenderingData renderingData) { }
+	private void SetupAdditionalLightConstants(UnsafeCommandBuffer cmd, ref CullingResults cullResults, UniversalLightData lightData) { }
 
-	private void SetupMainLightConstants(CommandBuffer cmd, ref LightData lightData) { }
+	internal void SetupLights(UnsafeCommandBuffer cmd, UniversalRenderingData renderingData, UniversalCameraData cameraData, UniversalLightData lightData) { }
 
-	private int SetupPerObjectLightIndices(CullingResults cullResults, ref LightData lightData) { }
+	private void SetupMainLightConstants(UnsafeCommandBuffer cmd, UniversalLightData lightData) { }
 
-	private void SetupShaderLightConstants(CommandBuffer cmd, ref RenderingData renderingData) { }
+	private int SetupPerObjectLightIndices(CullingResults cullResults, UniversalLightData lightData) { }
+
+	internal void SetupRenderGraphLights(RenderGraph renderGraph, UniversalRenderingData renderingData, UniversalCameraData cameraData, UniversalLightData lightData) { }
+
+	private void SetupShaderLightConstants(UnsafeCommandBuffer cmd, ref CullingResults cullResults, UniversalLightData lightData) { }
 
 }
 

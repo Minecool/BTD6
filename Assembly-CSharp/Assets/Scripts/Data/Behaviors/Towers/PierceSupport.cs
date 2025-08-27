@@ -10,7 +10,7 @@ public class PierceSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 255
+		 get { } //Length: 289
 	}
 
 	public PierceSupport() { }

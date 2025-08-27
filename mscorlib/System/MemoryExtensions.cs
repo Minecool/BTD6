@@ -8,6 +8,9 @@ public static class MemoryExtensions
 	public static ReadOnlyMemory<Char> AsMemory(string text) { }
 
 	[Extension]
+	public static ReadOnlySpan<Char> AsSpan(string text, int start, int length) { }
+
+	[Extension]
 	public static Span<T> AsSpan(T[] array, int start, int length) { }
 
 	[Extension]
@@ -20,7 +23,7 @@ public static class MemoryExtensions
 	public static ReadOnlySpan<Char> AsSpan(string text, int start) { }
 
 	[Extension]
-	public static ReadOnlySpan<Char> AsSpan(string text, int start, int length) { }
+	public static Span<T> AsSpan(T[] array) { }
 
 	[Extension]
 	internal static bool Contains(ReadOnlySpan<Char> source, char value) { }
@@ -29,16 +32,22 @@ public static class MemoryExtensions
 	public static void CopyTo(T[] source, Span<T> destination) { }
 
 	[Extension]
-	public static bool EndsWith(ReadOnlySpan<Char> span, ReadOnlySpan<Char> value, StringComparison comparisonType) { }
+	public static bool EndsWith(ReadOnlySpan<T> span, ReadOnlySpan<T> value) { }
 
 	[Extension]
-	public static bool EndsWith(ReadOnlySpan<T> span, ReadOnlySpan<T> value) { }
+	public static bool EndsWith(ReadOnlySpan<Char> span, ReadOnlySpan<Char> value, StringComparison comparisonType) { }
 
 	[Extension]
 	internal static bool EqualsOrdinal(ReadOnlySpan<Char> span, ReadOnlySpan<Char> value) { }
 
 	[Extension]
 	internal static bool EqualsOrdinalIgnoreCase(ReadOnlySpan<Char> span, ReadOnlySpan<Char> value) { }
+
+	[Extension]
+	public static int IndexOf(Span<T> span, T value) { }
+
+	[Extension]
+	public static int IndexOf(Span<T> span, ReadOnlySpan<T> value) { }
 
 	[Extension]
 	public static int IndexOf(ReadOnlySpan<T> span, T value) { }

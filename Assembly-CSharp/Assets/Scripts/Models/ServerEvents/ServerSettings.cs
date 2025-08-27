@@ -49,6 +49,11 @@ public class ServerSettings
 	public PowerCostOverride[] powerCostOverrides; //Field offset: 0x148
 	public SkinCostOverride[] skinCostOverrides; //Field offset: 0x150
 	public bool ignoreIapSales; //Field offset: 0x158
+	public Dictionary<String, Single> tutorialDrawChances; //Field offset: 0x160
+	public MailboxSettings mailbox; //Field offset: 0x168
+	public string patchNotesUrl; //Field offset: 0x170
+	public Dictionary<Int32, DateTime> patchNotesReleaseDates; //Field offset: 0x178
+	public int simultaneousStatsDownloads; //Field offset: 0x180
 
 	[JsonIgnore]
 	public bool useSteamDlc

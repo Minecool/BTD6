@@ -16,7 +16,7 @@ public class MoabShoveZone : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 343
+		 get { } //Length: 339
 	}
 
 	public MoabShoveZone() { }

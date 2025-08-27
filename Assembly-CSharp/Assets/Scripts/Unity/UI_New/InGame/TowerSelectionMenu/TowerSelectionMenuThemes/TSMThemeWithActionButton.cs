@@ -2,11 +2,11 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeWithActionButton : TSMThemeDefault
 {
-	public String[] targetTypesToShowButtonFor; //Field offset: 0xC0
-	public TSMButton actionButton; //Field offset: 0xC8
-	protected readonly TSMInfoModel info; //Field offset: 0xD0
-	public bool showOnlyIfTargetTypeActionable; //Field offset: 0xD8
-	protected bool hideActionButton; //Field offset: 0xD9
+	public String[] targetTypesToShowButtonFor; //Field offset: 0xD8
+	public TSMButton actionButton; //Field offset: 0xE0
+	protected readonly TSMInfoModel info; //Field offset: 0xE8
+	public bool showOnlyIfTargetTypeActionable; //Field offset: 0xF0
+	protected bool hideActionButton; //Field offset: 0xF1
 
 	public TSMThemeWithActionButton() { }
 
@@ -22,7 +22,7 @@ public class TSMThemeWithActionButton : TSMThemeDefault
 
 	public virtual void TowerInfoChanged(TowerToSimulation tower) { }
 
-	private void UpdateActionButton(TowerToSimulation tower) { }
+	protected override void UpdateActionButton(TowerToSimulation tower) { }
 
 }
 

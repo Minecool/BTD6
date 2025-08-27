@@ -5,6 +5,11 @@ internal class RectIntPropertyBag : ContainerPropertyBag<RectInt>
 	private class HeightProperty : Property<RectInt, Int32>
 	{
 
+		public virtual bool IsReadOnly
+		{
+			 get { } //Length: 3
+		}
+
 		public virtual string Name
 		{
 			 get { } //Length: 44
@@ -12,12 +17,23 @@ internal class RectIntPropertyBag : ContainerPropertyBag<RectInt>
 
 		public HeightProperty() { }
 
+		public virtual bool get_IsReadOnly() { }
+
 		public virtual string get_Name() { }
+
+		public virtual int GetValue(ref RectInt container) { }
+
+		public virtual void SetValue(ref RectInt container, int value) { }
 
 	}
 
 	private class WidthProperty : Property<RectInt, Int32>
 	{
+
+		public virtual bool IsReadOnly
+		{
+			 get { } //Length: 3
+		}
 
 		public virtual string Name
 		{
@@ -26,12 +42,23 @@ internal class RectIntPropertyBag : ContainerPropertyBag<RectInt>
 
 		public WidthProperty() { }
 
+		public virtual bool get_IsReadOnly() { }
+
 		public virtual string get_Name() { }
+
+		public virtual int GetValue(ref RectInt container) { }
+
+		public virtual void SetValue(ref RectInt container, int value) { }
 
 	}
 
 	private class XProperty : Property<RectInt, Int32>
 	{
+
+		public virtual bool IsReadOnly
+		{
+			 get { } //Length: 3
+		}
 
 		public virtual string Name
 		{
@@ -40,12 +67,23 @@ internal class RectIntPropertyBag : ContainerPropertyBag<RectInt>
 
 		public XProperty() { }
 
+		public virtual bool get_IsReadOnly() { }
+
 		public virtual string get_Name() { }
+
+		public virtual int GetValue(ref RectInt container) { }
+
+		public virtual void SetValue(ref RectInt container, int value) { }
 
 	}
 
 	private class YProperty : Property<RectInt, Int32>
 	{
+
+		public virtual bool IsReadOnly
+		{
+			 get { } //Length: 3
+		}
 
 		public virtual string Name
 		{
@@ -54,7 +92,13 @@ internal class RectIntPropertyBag : ContainerPropertyBag<RectInt>
 
 		public YProperty() { }
 
+		public virtual bool get_IsReadOnly() { }
+
 		public virtual string get_Name() { }
+
+		public virtual int GetValue(ref RectInt container) { }
+
+		public virtual void SetValue(ref RectInt container, int value) { }
 
 	}
 

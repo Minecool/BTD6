@@ -12,20 +12,27 @@ public class Bank : TowerBehavior
 	public float Cash
 	{
 		 get { } //Length: 9
-		 set { } //Length: 358
+		 set { } //Length: 361
+	}
+
+	public bool IsAtMaxCapacity
+	{
+		 get { } //Length: 38
 	}
 
 	public Bank() { }
 
 	public virtual void Attatched() { }
 
-	public void Collect() { }
+	public float Collect() { }
 
 	public void DepositCash(float amount) { }
 
 	private void DisplayFull() { }
 
 	public float get_Cash() { }
+
+	public bool get_IsAtMaxCapacity() { }
 
 	public virtual void GetSaveMetaData(Dictionary<String, String> metaData) { }
 

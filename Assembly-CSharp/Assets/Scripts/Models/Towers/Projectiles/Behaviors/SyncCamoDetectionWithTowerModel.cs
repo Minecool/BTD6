@@ -16,7 +16,7 @@ public class SyncCamoDetectionWithTowerModel : ProjectileBehaviorModel
 
 	public VisibilityMutator Mutator
 	{
-		 get { } //Length: 207
+		 get { } //Length: 211
 	}
 
 	public SyncCamoDetectionWithTowerModel(string name) { }

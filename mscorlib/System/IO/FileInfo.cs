@@ -10,7 +10,7 @@ public sealed class FileInfo : FileSystemInfo
 
 	public long Length
 	{
-		 get { } //Length: 246
+		 get { } //Length: 243
 	}
 
 	public virtual string Name

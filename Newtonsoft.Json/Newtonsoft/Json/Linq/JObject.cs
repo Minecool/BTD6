@@ -96,14 +96,14 @@ public class JObject : JContainer, IDictionary<String, JToken>, ICollection<KeyV
 	[Nullable(2)]
 	public virtual JToken Item
 	{
-		 get { } //Length: 256
+		 get { } //Length: 244
 	}
 
 	[Nullable(2)]
 	public override JToken Item
 	{
-		 get { } //Length: 127
-		 set { } //Length: 303
+		 get { } //Length: 125
+		 set { } //Length: 301
 	}
 
 	private override bool System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<System.String,Newtonsoft.Json.Linq.JToken>>.IsReadOnly
@@ -143,6 +143,8 @@ public class JObject : JContainer, IDictionary<String, JToken>, ICollection<KeyV
 
 	public override bool ContainsKey(string propertyName) { }
 
+	internal virtual bool DeepEquals(JToken node) { }
+
 	public static JObject FromObject(object o) { }
 
 	public static JObject FromObject(object o, JsonSerializer jsonSerializer) { }
@@ -154,6 +156,8 @@ public class JObject : JContainer, IDictionary<String, JToken>, ICollection<KeyV
 	public override JToken get_Item(string propertyName) { }
 
 	public virtual JTokenType get_Type() { }
+
+	internal virtual int GetDeepHashCode() { }
 
 	[IteratorStateMachine(typeof(<GetEnumerator>d__64))]
 	public override IEnumerator<KeyValuePair`2<String, JToken>> GetEnumerator() { }
@@ -170,9 +174,9 @@ public class JObject : JContainer, IDictionary<String, JToken>, ICollection<KeyV
 
 	internal void InternalPropertyChanging(JProperty childProperty) { }
 
-	public static JObject Load(JsonReader reader, JsonLoadSettings settings) { }
-
 	public static JObject Load(JsonReader reader) { }
+
+	public static JObject Load(JsonReader reader, JsonLoadSettings settings) { }
 
 	protected override void OnPropertyChanged(string propertyName) { }
 

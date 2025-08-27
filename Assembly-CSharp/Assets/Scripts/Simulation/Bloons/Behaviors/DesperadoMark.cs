@@ -6,7 +6,7 @@ public class DesperadoMark : BloonBehavior
 
 	public DesperadoMark() { }
 
-	public virtual float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile) { }
+	public virtual float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile, out bool preventFurtherModifications) { }
 
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 

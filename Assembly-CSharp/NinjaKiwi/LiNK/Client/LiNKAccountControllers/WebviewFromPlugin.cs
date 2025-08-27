@@ -6,39 +6,59 @@ public class WebviewFromPlugin : MonoBehaviour
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static ShouldCloseDelegate <>9__43_0; //Field offset: 0x8
+		public static ShouldCloseDelegate <>9__42_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <monitorEvents>b__43_0(UniWebView _) { }
+		internal bool <MonitorEvents>b__42_0(UniWebView _) { }
 
 	}
 
 	[CompilerGenerated]
 	private sealed class <>c__DisplayClass34_0
 	{
-		public WebviewFromPlugin <>4__this; //Field offset: 0x10
-		public PageFinishedDelegate OnPageFinished; //Field offset: 0x18
-		public LoadingErrorReceivedDelegate OnLoadingErrorReceived; //Field offset: 0x20
-		public ObjectWasDestroyed OnObjectWasDestroyed; //Field offset: 0x28
-		public CancellationTokenSource timeoutCanceller; //Field offset: 0x30
-		public TaskCompletionSource<Boolean> taskCompletionSource; //Field offset: 0x38
+		private struct <<ShowPage>g__StartTimeout|4>d : IAsyncStateMachine
+		{
+			public int <>1__state; //Field offset: 0x0
+			public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
+			public <>c__DisplayClass34_0 <>4__this; //Field offset: 0x20
+			private TaskAwaiter <>u__1; //Field offset: 0x28
+
+			private override void MoveNext() { }
+
+			[DebuggerHidden]
+			private override void SetStateMachine(IAsyncStateMachine stateMachine) { }
+
+		}
+
+		public CancellationTokenSource timeoutCanceller; //Field offset: 0x10
+		public WebviewFromPlugin <>4__this; //Field offset: 0x18
+		public PageFinishedDelegate OnPageFinished; //Field offset: 0x20
+		public LoadingErrorReceivedDelegate OnLoadingErrorReceived; //Field offset: 0x28
+		public ObjectWasDestroyed OnObjectWasDestroyed; //Field offset: 0x30
+		public TaskCompletionSource<Boolean> showPageTcs; //Field offset: 0x38
 		public string url; //Field offset: 0x40
+		public CancellationToken timeoutCancellationToken; //Field offset: 0x48
 
 		public <>c__DisplayClass34_0() { }
 
-		internal void <ShowPage>b__0(UniWebView _dontUseWebView, int statusCode, string finishedUrl) { }
+		internal void <ShowPage>b__1(UniWebView _dontUseWebView, int statusCode, string finishedUrl) { }
 
-		internal void <ShowPage>b__1(UniWebView _dontUseWebView, int errorCode, string errorMessage, UniWebViewNativeResultPayload payload) { }
+		internal void <ShowPage>b__2(UniWebView _dontUseWebView, int errorCode, string errorMessage, UniWebViewNativeResultPayload payload) { }
 
-		internal void <ShowPage>b__2() { }
+		internal void <ShowPage>b__3() { }
+
+		internal void <ShowPage>g__CancelAndDisposeTimeoutCts|0() { }
+
+		[AsyncStateMachine(typeof(<<ShowPage>g__StartTimeout|4>d))]
+		internal Task <ShowPage>g__StartTimeout|4() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <ShowInSeconds>d__38 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <ShowInSeconds>d__37 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -58,49 +78,7 @@ public class WebviewFromPlugin : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <ShowInSeconds>d__38(int <>1__state) { }
-
-		private override bool MoveNext() { }
-
-		[DebuggerHidden]
-		private override object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
-
-		[DebuggerHidden]
-		private override object System.Collections.IEnumerator.get_Current() { }
-
-		[DebuggerHidden]
-		private override void System.Collections.IEnumerator.Reset() { }
-
-		[DebuggerHidden]
-		private override void System.IDisposable.Dispose() { }
-
-	}
-
-	[CompilerGenerated]
-	private sealed class <startTimeout>d__35 : IEnumerator<Object>, IEnumerator, IDisposable
-	{
-		private int <>1__state; //Field offset: 0x10
-		private object <>2__current; //Field offset: 0x18
-		public CancellationToken canceller; //Field offset: 0x20
-		public WebviewFromPlugin <>4__this; //Field offset: 0x28
-		public TaskCompletionSource<Boolean> taskCompletionSource; //Field offset: 0x30
-		public string url; //Field offset: 0x38
-		private DateTime <timeoutEnd>5__2; //Field offset: 0x40
-
-		private override object System.Collections.Generic.IEnumerator<System.Object>.Current
-		{
-			[DebuggerHidden]
-			private get { } //Length: 5
-		}
-
-		private override object System.Collections.IEnumerator.Current
-		{
-			[DebuggerHidden]
-			private get { } //Length: 5
-		}
-
-		[DebuggerHidden]
-		public <startTimeout>d__35(int <>1__state) { }
+		public <ShowInSeconds>d__37(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -141,7 +119,7 @@ public class WebviewFromPlugin : MonoBehaviour
 
 	}
 
-	public static float TIMEOUT_SECONDS; //Field offset: 0x0
+	private static readonly TimeSpan Timeout; //Field offset: 0x0
 	private const string PROVIDER_APPLE = "apple"; //Field offset: 0x0
 	private const string PROVIDER_GOOGLEPLAY = "googleplay"; //Field offset: 0x0
 	private const string PROVIDER_FACEBOOK = "facebook"; //Field offset: 0x0
@@ -175,7 +153,7 @@ public class WebviewFromPlugin : MonoBehaviour
 	[CompilerGenerated]
 	private Action<AuthProviderType> LoginToAuthProviderEvent; //Field offset: 0x48
 	[CompilerGenerated]
-	private Action<LoginResponseModel> LoggedInEvent; //Field offset: 0x50
+	private Action<LiNKAccountModel> LoggedInEvent; //Field offset: 0x50
 	[CompilerGenerated]
 	private Action LogoutEvent; //Field offset: 0x58
 	[CompilerGenerated]
@@ -217,7 +195,7 @@ public class WebviewFromPlugin : MonoBehaviour
 		 remove { } //Length: 158
 	}
 
-	public event Action<LoginResponseModel> LoggedInEvent
+	public event Action<LiNKAccountModel> LoggedInEvent
 	{
 		[CompilerGenerated]
 		 add { } //Length: 172
@@ -265,8 +243,6 @@ public class WebviewFromPlugin : MonoBehaviour
 		 remove { } //Length: 172
 	}
 
-	private void _receivedMessageHandler(UniWebView webview, UniWebViewMessage message) { }
-
 	private static WebviewFromPlugin() { }
 
 	public WebviewFromPlugin() { }
@@ -284,7 +260,7 @@ public class WebviewFromPlugin : MonoBehaviour
 	public void add_LoadedEvent(Action value) { }
 
 	[CompilerGenerated]
-	public void add_LoggedInEvent(Action<LoginResponseModel> value) { }
+	public void add_LoggedInEvent(Action<LiNKAccountModel> value) { }
 
 	[CompilerGenerated]
 	public void add_LoginToAuthProviderEvent(Action<AuthProviderType> value) { }
@@ -303,17 +279,17 @@ public class WebviewFromPlugin : MonoBehaviour
 
 	private void Awake() { }
 
-	private static T deserialise(string encoded) { }
+	private static T Deserialise(string base64String) { }
 
 	public void Destroy() { }
 
-	private AuthProviderType getAuthProviderType(string providerName) { }
+	private AuthProviderType GetAuthProviderType(string providerName) { }
 
 	public void Hide() { }
 
-	private void monitorEvents(UniWebView uniWebview) { }
+	private void MonitorEvents(UniWebView uniWebview) { }
 
-	private void receivedMessageHandler(UniWebView webview, UniWebViewMessage message) { }
+	private void ReceivedMessageHandler(UniWebView webview, UniWebViewMessage message) { }
 
 	[CompilerGenerated]
 	public void remove_CloseEvent(Action value) { }
@@ -328,7 +304,7 @@ public class WebviewFromPlugin : MonoBehaviour
 	public void remove_LoadedEvent(Action value) { }
 
 	[CompilerGenerated]
-	public void remove_LoggedInEvent(Action<LoginResponseModel> value) { }
+	public void remove_LoggedInEvent(Action<LiNKAccountModel> value) { }
 
 	[CompilerGenerated]
 	public void remove_LoginToAuthProviderEvent(Action<AuthProviderType> value) { }
@@ -349,17 +325,16 @@ public class WebviewFromPlugin : MonoBehaviour
 
 	public void Show() { }
 
-	[IteratorStateMachine(typeof(<ShowInSeconds>d__38))]
+	[IteratorStateMachine(typeof(<ShowInSeconds>d__37))]
 	private IEnumerator ShowInSeconds(float seconds) { }
 
 	public Task ShowPage(string url) { }
 
-	[IteratorStateMachine(typeof(<startTimeout>d__35))]
-	private IEnumerator startTimeout(string url, CancellationToken canceller, TaskCompletionSource<Boolean> taskCompletionSource) { }
+	private void TriggerEvent(Action<T> eventToTrigger, T argument, string eventName) { }
 
-	private void triggerEvent(Action<T> eventToTrigger, T argument, string eventName) { }
+	private void TriggerEvent(Action eventToTrigger, string eventName) { }
 
-	private void triggerEvent(Action eventToTrigger, string eventName) { }
+	private void TryReceivedMessageHandler(UniWebView webview, UniWebViewMessage message) { }
 
 	public void TryShowErrorToolTip(AuthProviderType provider) { }
 

@@ -43,10 +43,6 @@ public sealed class ConditionalWeakTable : IEnumerable<KeyValuePair`2<TKey, TVal
 
 	}
 
-	private const int INITIAL_SIZE = 13; //Field offset: 0x0
-	private const float LOAD_FACTOR = 0.7; //Field offset: 0x0
-	private const float COMPACT_FACTOR = 0.5; //Field offset: 0x0
-	private const float EXPAND_FACTOR = 1.1; //Field offset: 0x0
 	private Ephemeron[] data; //Field offset: 0x0
 	private object _lock; //Field offset: 0x0
 	private int size; //Field offset: 0x0

@@ -17,8 +17,12 @@ internal struct BatchRendererCullingOutput
 	public BatchCullingFlags cullingFlags; //Field offset: 0x7C
 	public ulong viewID; //Field offset: 0x80
 	public uint cullingLayerMask; //Field offset: 0x88
+	public byte splitExclusionMask; //Field offset: 0x8C
 	public ulong sceneCullingMask; //Field offset: 0x90
 	public BatchCullingOutputDrawCommands* drawCommands; //Field offset: 0x98
+	public uint brgId; //Field offset: 0xA0
+	public IntPtr occlusionBuffer; //Field offset: 0xA8
+	public IntPtr customCullingResult; //Field offset: 0xB0
 
 }
 

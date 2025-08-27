@@ -9,7 +9,7 @@ public class ToolboxItemAttribute : Attribute
 
 	public string ToolboxItemTypeName
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	private static ToolboxItemAttribute() { }

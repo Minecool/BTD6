@@ -327,25 +327,21 @@ public class DebugUI
 		public bool opened; //Field offset: 0x50
 		public bool isHeader; //Field offset: 0x51
 		public List<ContextMenuItem> contextMenuItems; //Field offset: 0x58
-		[CompilerGenerated]
-		private String[] <columnLabels>k__BackingField; //Field offset: 0x60
-		[CompilerGenerated]
-		private String[] <columnTooltips>k__BackingField; //Field offset: 0x68
+		private bool m_Dirty; //Field offset: 0x60
+		private String[] m_ColumnLabels; //Field offset: 0x68
+		private String[] m_ColumnTooltips; //Field offset: 0x70
+		private List<GUIContent> m_RowContents; //Field offset: 0x78
 
 		public String[] columnLabels
 		{
-			[CompilerGenerated]
 			 get { } //Length: 5
-			[CompilerGenerated]
-			 set { } //Length: 5
+			 set { } //Length: 9
 		}
 
 		public String[] columnTooltips
 		{
-			[CompilerGenerated]
 			 get { } //Length: 5
-			[CompilerGenerated]
-			 set { } //Length: 5
+			 set { } //Length: 9
 		}
 
 		public bool isReadOnly
@@ -353,24 +349,27 @@ public class DebugUI
 			 get { } //Length: 3
 		}
 
+		internal List<GUIContent> rowContents
+		{
+			internal get { } //Length: 640
+		}
+
 		public Foldout() { }
 
 		public Foldout(string displayName, ObservableList<Widget> children, String[] columnLabels = null, String[] columnTooltips = null) { }
 
-		[CompilerGenerated]
 		public String[] get_columnLabels() { }
 
-		[CompilerGenerated]
 		public String[] get_columnTooltips() { }
 
 		public bool get_isReadOnly() { }
 
+		internal List<GUIContent> get_rowContents() { }
+
 		public bool GetValue() { }
 
-		[CompilerGenerated]
 		public void set_columnLabels(String[] value) { }
 
-		[CompilerGenerated]
 		public void set_columnTooltips(String[] value) { }
 
 		public override void SetValue(object value) { }
@@ -507,6 +506,18 @@ public class DebugUI
 
 	}
 
+	[Obsolete("Mask field is not longer supported. Please use a BitField or implement your own Widget. #from(6000.2)", False)]
+	internal class MaskField : EnumField<UInt32>
+	{
+
+		public MaskField() { }
+
+		public void Fill(String[] names) { }
+
+		public virtual void SetValue(uint value) { }
+
+	}
+
 	internal class MessageBox : Widget
 	{
 		internal enum Style
@@ -517,8 +528,16 @@ public class DebugUI
 		}
 
 		public Style style; //Field offset: 0x48
+		public Func<String> messageCallback; //Field offset: 0x50
+
+		public string message
+		{
+			 get { } //Length: 32
+		}
 
 		public MessageBox() { }
+
+		public string get_message() { }
 
 	}
 
@@ -640,7 +659,7 @@ public class DebugUI
 
 		public bool isInactiveInEditor
 		{
-			 get { } //Length: 87
+			 get { } //Length: 90
 		}
 
 		public bool isRuntimeOnly
@@ -721,6 +740,111 @@ public class DebugUI
 
 	}
 
+	internal class RenderingLayerField : Field<RenderingLayerMask>, IContainer
+	{
+		[CompilerGenerated]
+		private sealed class <>c__DisplayClass5_0
+		{
+			public int index; //Field offset: 0x10
+			public RenderingLayerField <>4__this; //Field offset: 0x18
+
+			public <>c__DisplayClass5_0() { }
+
+			internal Color <Resize>b__0() { }
+
+			internal void <Resize>b__1(Color value) { }
+
+		}
+
+		private static readonly NameAndTooltip s_RenderingLayerColors; //Field offset: 0x0
+		private String[] m_RenderingLayersNames; //Field offset: 0x60
+		private int m_DefinedRenderingLayersCount; //Field offset: 0x68
+		private ObservableList<Widget> m_RenderingLayersColors; //Field offset: 0x70
+		[CompilerGenerated]
+		private Func<Int32, Vector4> <getRenderingLayerColor>k__BackingField; //Field offset: 0x78
+		[CompilerGenerated]
+		private Action<Vector4, Int32> <setRenderingLayerColor>k__BackingField; //Field offset: 0x80
+
+		public override ObservableList<Widget> children
+		{
+			 get { } //Length: 101
+		}
+
+		public Func<Int32, Vector4> getRenderingLayerColor
+		{
+			[CompilerGenerated]
+			 get { } //Length: 70
+			[CompilerGenerated]
+			 set { } //Length: 5
+		}
+
+		private int maxRenderingLayerCount
+		{
+			private get { } //Length: 64
+		}
+
+		public String[] renderingLayersNames
+		{
+			 get { } //Length: 101
+		}
+
+		public Action<Vector4, Int32> setRenderingLayerColor
+		{
+			[CompilerGenerated]
+			 get { } //Length: 8
+			[CompilerGenerated]
+			 set { } //Length: 8
+		}
+
+		private static RenderingLayerField() { }
+
+		public RenderingLayerField() { }
+
+		internal virtual void GenerateQueryPath() { }
+
+		public override ObservableList<Widget> get_children() { }
+
+		[CompilerGenerated]
+		public Func<Int32, Vector4> get_getRenderingLayerColor() { }
+
+		private int get_maxRenderingLayerCount() { }
+
+		public String[] get_renderingLayersNames() { }
+
+		[CompilerGenerated]
+		public Action<Vector4, Int32> get_setRenderingLayerColor() { }
+
+		private void Resize() { }
+
+		[CompilerGenerated]
+		public void set_getRenderingLayerColor(Func<Int32, Vector4> value) { }
+
+		[CompilerGenerated]
+		public void set_setRenderingLayerColor(Action<Vector4, Int32> value) { }
+
+	}
+
+	internal class RuntimeDebugShadersMessageBox : MessageBox
+	{
+		[CompilerGenerated]
+		private sealed class <>c
+		{
+			public static readonly <>c <>9; //Field offset: 0x0
+			public static Func<Boolean> <>9__0_0; //Field offset: 0x8
+
+			private static <>c() { }
+
+			public <>c() { }
+
+			internal bool <.ctor>b__0_0() { }
+
+		}
+
+
+		public RuntimeDebugShadersMessageBox() { }
+
+	}
+
 	internal class Table : Container
 	{
 		internal class Row : Foldout
@@ -730,13 +854,16 @@ public class DebugUI
 
 		}
 
+		private static GUIStyle columnHeaderStyle; //Field offset: 0x0
 		public bool isReadOnly; //Field offset: 0x50
 		private Boolean[] m_Header; //Field offset: 0x58
 
 		public Boolean[] VisibleColumns
 		{
-			 get { } //Length: 624
+			 get { } //Length: 614
 		}
+
+		private static Table() { }
 
 		public Table() { }
 
@@ -903,7 +1030,7 @@ public class DebugUI
 
 		public bool isInactiveInEditor
 		{
-			 get { } //Length: 87
+			 get { } //Length: 90
 		}
 
 		public bool isRuntimeOnly
@@ -913,7 +1040,7 @@ public class DebugUI
 
 		public NameAndTooltip nameAndTooltip
 		{
-			 set { } //Length: 16
+			 set { } //Length: 174
 		}
 
 		public internal override Panel panel

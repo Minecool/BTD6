@@ -36,7 +36,7 @@ internal static class TypeCache
 		public string name
 		{
 			[CompilerGenerated]
-			 get { } //Length: 5
+			 get { } //Length: 291
 		}
 
 		public NamedAssembly(Assembly assembly) { }

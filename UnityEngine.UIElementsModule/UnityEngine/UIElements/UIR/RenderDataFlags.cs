@@ -3,6 +3,10 @@ namespace UnityEngine.UIElements.UIR;
 [Flags]
 internal enum RenderDataFlags
 {
-	IsIgnoringDynamicColorHint = 1,
+	IsInChain = 1,
+	IsGroupTransform = 2,
+	IsIgnoringDynamicColorHint = 4,
+	HasExtraData = 8,
+	HasExtraMeshes = 16,
 }
 

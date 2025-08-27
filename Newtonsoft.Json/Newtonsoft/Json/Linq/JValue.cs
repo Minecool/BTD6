@@ -89,6 +89,9 @@ public class JValue : JToken, IEquatable<JValue>, IFormattable, IComparable, ICo
 	[NullableContext(1)]
 	public static JValue CreateUndefined() { }
 
+	[NullableContext(1)]
+	internal virtual bool DeepEquals(JToken node) { }
+
 	public override bool Equals(JValue other) { }
 
 	public virtual bool Equals(object obj) { }
@@ -98,6 +101,8 @@ public class JValue : JToken, IEquatable<JValue>, IFormattable, IComparable, ICo
 	public virtual JTokenType get_Type() { }
 
 	public object get_Value() { }
+
+	internal virtual int GetDeepHashCode() { }
 
 	public virtual int GetHashCode() { }
 

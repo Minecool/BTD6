@@ -7,175 +7,205 @@ public sealed class LineRenderer : Renderer
 
 	public LineAlignment alignment
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	public Gradient colorGradient
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 139
+		 set { } //Length: 199
 	}
 
 	public Color endColor
 	{
-		 get { } //Length: 75
-		 set { } //Length: 66
+		 get { } //Length: 142
+		 set { } //Length: 133
 	}
 
 	public float endWidth
 	{
-		 get { } //Length: 51
-		 set { } //Length: 67
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public bool generateLightingData
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public bool loop
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public SpriteMaskInteraction maskInteraction
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	public int numCapVertices
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	public int numCornerVertices
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	[Obsolete("Use positionCount instead (UnityUpgradable) -> positionCount", False)]
 	public int numPositions
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	[NativeProperty("PositionsCount")]
 	public int positionCount
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	public float shadowBias
 	{
-		 get { } //Length: 51
-		 set { } //Length: 67
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public Color startColor
 	{
-		 get { } //Length: 75
-		 set { } //Length: 66
+		 get { } //Length: 142
+		 set { } //Length: 133
 	}
 
 	public float startWidth
 	{
-		 get { } //Length: 51
-		 set { } //Length: 67
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public LineTextureMode textureMode
 	{
-		 get { } //Length: 51
-		 set { } //Length: 64
+		 get { } //Length: 118
+		 set { } //Length: 131
 	}
 
 	public Vector2 textureScale
 	{
-		 get { } //Length: 68
-		 set { } //Length: 61
+		 get { } //Length: 137
+		 set { } //Length: 128
 	}
 
 	public bool useWorldSpace
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public AnimationCurve widthCurve
 	{
-		 get { } //Length: 51
-		 set { } //Length: 66
+		 get { } //Length: 139
+		 set { } //Length: 199
 	}
 
 	public float widthMultiplier
 	{
-		 get { } //Length: 51
-		 set { } //Length: 67
+		 get { } //Length: 118
+		 set { } //Length: 134
 	}
 
 	public LineRenderer() { }
 
-	public void BakeMesh(Mesh mesh, Camera camera, bool useTransform = false) { }
-
 	public void BakeMesh(Mesh mesh, bool useTransform = false) { }
 
+	public void BakeMesh(Mesh mesh, Camera camera, bool useTransform = false) { }
+
+	private static void BakeMesh_Injected(IntPtr _unity_self, IntPtr mesh, IntPtr camera, bool useTransform) { }
+
 	public LineAlignment get_alignment() { }
+
+	private static LineAlignment get_alignment_Injected(IntPtr _unity_self) { }
 
 	public Gradient get_colorGradient() { }
 
 	public Color get_endColor() { }
 
-	private void get_endColor_Injected(out Color ret) { }
+	private static void get_endColor_Injected(IntPtr _unity_self, out Color ret) { }
 
 	public float get_endWidth() { }
 
+	private static float get_endWidth_Injected(IntPtr _unity_self) { }
+
 	public bool get_generateLightingData() { }
+
+	private static bool get_generateLightingData_Injected(IntPtr _unity_self) { }
 
 	public bool get_loop() { }
 
+	private static bool get_loop_Injected(IntPtr _unity_self) { }
+
 	public SpriteMaskInteraction get_maskInteraction() { }
+
+	private static SpriteMaskInteraction get_maskInteraction_Injected(IntPtr _unity_self) { }
 
 	public int get_numCapVertices() { }
 
+	private static int get_numCapVertices_Injected(IntPtr _unity_self) { }
+
 	public int get_numCornerVertices() { }
+
+	private static int get_numCornerVertices_Injected(IntPtr _unity_self) { }
 
 	public int get_numPositions() { }
 
 	public int get_positionCount() { }
 
+	private static int get_positionCount_Injected(IntPtr _unity_self) { }
+
 	public float get_shadowBias() { }
+
+	private static float get_shadowBias_Injected(IntPtr _unity_self) { }
 
 	public Color get_startColor() { }
 
-	private void get_startColor_Injected(out Color ret) { }
+	private static void get_startColor_Injected(IntPtr _unity_self, out Color ret) { }
 
 	public float get_startWidth() { }
 
+	private static float get_startWidth_Injected(IntPtr _unity_self) { }
+
 	public LineTextureMode get_textureMode() { }
+
+	private static LineTextureMode get_textureMode_Injected(IntPtr _unity_self) { }
 
 	public Vector2 get_textureScale() { }
 
-	private void get_textureScale_Injected(out Vector2 ret) { }
+	private static void get_textureScale_Injected(IntPtr _unity_self, out Vector2 ret) { }
 
 	public bool get_useWorldSpace() { }
+
+	private static bool get_useWorldSpace_Injected(IntPtr _unity_self) { }
 
 	public AnimationCurve get_widthCurve() { }
 
 	public float get_widthMultiplier() { }
 
+	private static float get_widthMultiplier_Injected(IntPtr _unity_self) { }
+
 	private Gradient GetColorGradientCopy() { }
+
+	private static IntPtr GetColorGradientCopy_Injected(IntPtr _unity_self) { }
 
 	public Vector3 GetPosition(int index) { }
 
-	private void GetPosition_Injected(int index, out Vector3 ret) { }
+	private static void GetPosition_Injected(IntPtr _unity_self, int index, out Vector3 ret) { }
 
 	public int GetPositions(out NativeSlice<Vector3> positions) { }
 
@@ -184,73 +214,111 @@ public sealed class LineRenderer : Renderer
 
 	public int GetPositions(out NativeArray<Vector3> positions) { }
 
+	private static int GetPositions_Injected(IntPtr _unity_self, out BlittableArrayWrapper positions) { }
+
 	[FreeFunction(Name = "LineRendererScripting::GetPositionsWithNativeContainer", HasExplicitThis = True)]
 	private int GetPositionsWithNativeContainer(IntPtr positions, int length) { }
 
+	private static int GetPositionsWithNativeContainer_Injected(IntPtr _unity_self, IntPtr positions, int length) { }
+
 	private AnimationCurve GetWidthCurveCopy() { }
 
+	private static IntPtr GetWidthCurveCopy_Injected(IntPtr _unity_self) { }
+
 	public void set_alignment(LineAlignment value) { }
+
+	private static void set_alignment_Injected(IntPtr _unity_self, LineAlignment value) { }
 
 	public void set_colorGradient(Gradient value) { }
 
 	public void set_endColor(Color value) { }
 
-	private void set_endColor_Injected(ref Color value) { }
+	private static void set_endColor_Injected(IntPtr _unity_self, in Color value) { }
 
 	public void set_endWidth(float value) { }
 
+	private static void set_endWidth_Injected(IntPtr _unity_self, float value) { }
+
 	public void set_generateLightingData(bool value) { }
+
+	private static void set_generateLightingData_Injected(IntPtr _unity_self, bool value) { }
 
 	public void set_loop(bool value) { }
 
+	private static void set_loop_Injected(IntPtr _unity_self, bool value) { }
+
 	public void set_maskInteraction(SpriteMaskInteraction value) { }
+
+	private static void set_maskInteraction_Injected(IntPtr _unity_self, SpriteMaskInteraction value) { }
 
 	public void set_numCapVertices(int value) { }
 
+	private static void set_numCapVertices_Injected(IntPtr _unity_self, int value) { }
+
 	public void set_numCornerVertices(int value) { }
+
+	private static void set_numCornerVertices_Injected(IntPtr _unity_self, int value) { }
 
 	public void set_numPositions(int value) { }
 
 	public void set_positionCount(int value) { }
 
+	private static void set_positionCount_Injected(IntPtr _unity_self, int value) { }
+
 	public void set_shadowBias(float value) { }
+
+	private static void set_shadowBias_Injected(IntPtr _unity_self, float value) { }
 
 	public void set_startColor(Color value) { }
 
-	private void set_startColor_Injected(ref Color value) { }
+	private static void set_startColor_Injected(IntPtr _unity_self, in Color value) { }
 
 	public void set_startWidth(float value) { }
 
+	private static void set_startWidth_Injected(IntPtr _unity_self, float value) { }
+
 	public void set_textureMode(LineTextureMode value) { }
+
+	private static void set_textureMode_Injected(IntPtr _unity_self, LineTextureMode value) { }
 
 	public void set_textureScale(Vector2 value) { }
 
-	private void set_textureScale_Injected(ref Vector2 value) { }
+	private static void set_textureScale_Injected(IntPtr _unity_self, in Vector2 value) { }
 
 	public void set_useWorldSpace(bool value) { }
+
+	private static void set_useWorldSpace_Injected(IntPtr _unity_self, bool value) { }
 
 	public void set_widthCurve(AnimationCurve value) { }
 
 	public void set_widthMultiplier(float value) { }
 
+	private static void set_widthMultiplier_Injected(IntPtr _unity_self, float value) { }
+
 	private void SetColorGradient(Gradient curve) { }
+
+	private static void SetColorGradient_Injected(IntPtr _unity_self, IntPtr curve) { }
 
 	[Obsolete("Use startColor, endColor or colorGradient instead.", False)]
 	public void SetColors(Color start, Color end) { }
 
 	public void SetPosition(int index, Vector3 position) { }
 
-	private void SetPosition_Injected(int index, ref Vector3 position) { }
-
-	public void SetPositions(NativeArray<Vector3> positions) { }
-
-	public void SetPositions(NativeSlice<Vector3> positions) { }
+	private static void SetPosition_Injected(IntPtr _unity_self, int index, in Vector3 position) { }
 
 	[FreeFunction(Name = "LineRendererScripting::SetPositions", HasExplicitThis = True)]
 	public void SetPositions(Vector3[] positions) { }
 
+	public void SetPositions(NativeSlice<Vector3> positions) { }
+
+	public void SetPositions(NativeArray<Vector3> positions) { }
+
+	private static void SetPositions_Injected(IntPtr _unity_self, ref ManagedSpanWrapper positions) { }
+
 	[FreeFunction(Name = "LineRendererScripting::SetPositionsWithNativeContainer", HasExplicitThis = True)]
 	private void SetPositionsWithNativeContainer(IntPtr positions, int count) { }
+
+	private static void SetPositionsWithNativeContainer_Injected(IntPtr _unity_self, IntPtr positions, int count) { }
 
 	[Obsolete("Use positionCount instead.", False)]
 	public void SetVertexCount(int count) { }
@@ -260,7 +328,11 @@ public sealed class LineRenderer : Renderer
 
 	private void SetWidthCurve(AnimationCurve curve) { }
 
+	private static void SetWidthCurve_Injected(IntPtr _unity_self, IntPtr curve) { }
+
 	public void Simplify(float tolerance) { }
+
+	private static void Simplify_Injected(IntPtr _unity_self, float tolerance) { }
 
 }
 

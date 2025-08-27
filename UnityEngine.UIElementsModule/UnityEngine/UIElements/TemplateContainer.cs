@@ -1,7 +1,10 @@
 namespace UnityEngine.UIElements;
 
+[HideInInspector]
+[UxmlElement("Instance")]
 public class TemplateContainer : BindableElement
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<TemplateContainer, UxmlTraits>
 	{
 
@@ -23,9 +26,10 @@ public class TemplateContainer : BindableElement
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private UxmlStringAttributeDescription m_Template; //Field offset: 0x78
+		private UxmlStringAttributeDescription m_Template; //Field offset: 0x90
 
 		public UxmlTraits() { }
 
@@ -33,17 +37,20 @@ public class TemplateContainer : BindableElement
 
 	}
 
+	internal static readonly BindingId templateIdProperty; //Field offset: 0x0
+	internal static readonly BindingId templateSourceProperty; //Field offset: 0x98
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private string <templateId>k__BackingField; //Field offset: 0x3D8
-	private VisualElement m_ContentContainer; //Field offset: 0x3E0
-	private VisualTreeAsset m_TemplateSource; //Field offset: 0x3E8
+	private string <templateId>k__BackingField; //Field offset: 0x4B8
+	private VisualElement m_ContentContainer; //Field offset: 0x4C0
+	private VisualTreeAsset m_TemplateSource; //Field offset: 0x4C8
 
 	public virtual VisualElement contentContainer
 	{
 		 get { } //Length: 10
 	}
 
+	[CreateProperty(ReadOnly = True)]
 	public private string templateId
 	{
 		[CompilerGenerated]
@@ -52,25 +59,34 @@ public class TemplateContainer : BindableElement
 		private set { } //Length: 8
 	}
 
-	internal VisualTreeAsset templateSource
+	[CreateProperty(ReadOnly = True)]
+	public internal VisualTreeAsset templateSource
 	{
+		 get { } //Length: 8
 		internal set { } //Length: 8
 	}
+
+	private static TemplateContainer() { }
 
 	public TemplateContainer() { }
 
 	public TemplateContainer(string templateId) { }
+
+	internal TemplateContainer(string templateId, VisualTreeAsset templateSource) { }
 
 	public virtual VisualElement get_contentContainer() { }
 
 	[CompilerGenerated]
 	public string get_templateId() { }
 
+	public VisualTreeAsset get_templateSource() { }
+
 	[CompilerGenerated]
 	private void set_templateId(string value) { }
 
 	internal void set_templateSource(VisualTreeAsset value) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void SetContentContainer(VisualElement content) { }
 
 }

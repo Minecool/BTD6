@@ -2,7 +2,6 @@ namespace System.Text;
 
 public abstract class EncoderFallbackBuffer
 {
-	private const int iMaxRecursion = 250; //Field offset: 0x0
 	internal Char* charStart; //Field offset: 0x10
 	internal Char* charEnd; //Field offset: 0x18
 	internal EncoderNLS encoder; //Field offset: 0x20

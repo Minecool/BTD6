@@ -23,17 +23,17 @@ public struct RectInt : IEquatable<RectInt>, IFormattable
 	public int x
 	{
 		 get { } //Length: 5
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public int xMax
 	{
-		 get { } //Length: 100
+		 get { } //Length: 90
 	}
 
 	public int xMin
 	{
-		 get { } //Length: 100
+		 get { } //Length: 90
 	}
 
 	public int y
@@ -44,17 +44,19 @@ public struct RectInt : IEquatable<RectInt>, IFormattable
 
 	public int yMax
 	{
-		 get { } //Length: 101
+		 get { } //Length: 91
 	}
 
 	public int yMin
 	{
-		 get { } //Length: 101
+		 get { } //Length: 91
 	}
 
 	public RectInt(int xMin, int yMin, int width, int height) { }
 
 	public override bool Equals(RectInt other) { }
+
+	public virtual bool Equals(object other) { }
 
 	public int get_height() { }
 
@@ -72,6 +74,8 @@ public struct RectInt : IEquatable<RectInt>, IFormattable
 
 	public int get_yMin() { }
 
+	public virtual int GetHashCode() { }
+
 	public bool Overlaps(RectInt other) { }
 
 	public void set_height(int value) { }
@@ -82,9 +86,9 @@ public struct RectInt : IEquatable<RectInt>, IFormattable
 
 	public void set_y(int value) { }
 
-	public override string ToString(string format, IFormatProvider formatProvider) { }
-
 	public virtual string ToString() { }
+
+	public override string ToString(string format, IFormatProvider formatProvider) { }
 
 }
 

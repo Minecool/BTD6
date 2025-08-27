@@ -31,7 +31,7 @@ public class KineticChargeProjectileModel : ProjectileBehaviorModel
 
 	public DisplayMutator BloonDisplayMutator
 	{
-		 get { } //Length: 129
+		 get { } //Length: 230
 	}
 
 	public KineticChargeProjectileModel(string name, float deployRadiusMax, float deployTime, float duration, float travelSpeed, int maxAdditionalDamageAmount, int damageTakenMaxAmount, ProjectileModel projectileExplosionModel, EffectModel projectileExplosionEffectModel, int attackState, string overlay) { }

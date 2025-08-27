@@ -69,13 +69,13 @@ public struct ArraySegment : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerab
 
 	private override T System.Collections.Generic.IList<T>.Item
 	{
-		private get { } //Length: 194
-		private set { } //Length: 208
+		private get { } //Length: 192
+		private set { } //Length: 206
 	}
 
 	private override T System.Collections.Generic.IReadOnlyList<T>.Item
 	{
-		private get { } //Length: 194
+		private get { } //Length: 192
 	}
 
 	private static ArraySegment`1() { }

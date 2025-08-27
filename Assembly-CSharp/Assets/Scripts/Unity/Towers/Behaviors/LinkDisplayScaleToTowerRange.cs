@@ -12,7 +12,7 @@ public class LinkDisplayScaleToTowerRange : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 414
+		 get { } //Length: 402
 	}
 
 	public LinkDisplayScaleToTowerRange() { }

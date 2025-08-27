@@ -1,8 +1,8 @@
 namespace UnityEngine.Experimental.Playables;
 
-[NativeHeader("Runtime/Export/Director/MaterialEffectPlayable.bindings.h")]
-[NativeHeader("Runtime/Shaders/Director/MaterialEffectPlayable.h")]
 [NativeHeader("Runtime/Director/Core/HPlayable.h")]
+[NativeHeader("Runtime/Shaders/Director/MaterialEffectPlayable.h")]
+[NativeHeader("Runtime/Export/Director/MaterialEffectPlayable.bindings.h")]
 [RequiredByNativeCode]
 [StaticAccessor("MaterialEffectPlayableBindings", StaticAccessorType::DoubleColon (2))]
 public struct MaterialEffectPlayable : IPlayable, IEquatable<MaterialEffectPlayable>

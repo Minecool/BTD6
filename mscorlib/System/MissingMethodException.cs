@@ -5,7 +5,7 @@ public class MissingMethodException : MissingMemberException
 
 	public virtual string Message
 	{
-		 get { } //Length: 290
+		 get { } //Length: 242
 	}
 
 	public MissingMethodException() { }

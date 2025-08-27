@@ -26,8 +26,7 @@ public static class SubsystemManager
 	[RequiredByNativeCode]
 	private static void ClearSubsystems() { }
 
-	public static void GetInstances(List<T> subsystems) { }
-
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.XRModule"}])]
 	internal static IntegratedSubsystem GetIntegratedSubsystemByPtr(IntPtr ptr) { }
 
 	public static void GetSubsystems(List<T> subsystems) { }

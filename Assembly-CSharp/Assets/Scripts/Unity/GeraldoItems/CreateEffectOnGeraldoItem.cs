@@ -3,13 +3,13 @@ namespace Assets.Scripts.Unity.GeraldoItems;
 public class CreateEffectOnGeraldoItem : GeraldoItemBehavior
 {
 	[SerializeField]
-	private PrefabReference effect; //Field offset: 0x10
+	private PrefabReference effect; //Field offset: 0x18
 	[SerializeField]
-	private float lifespan; //Field offset: 0x18
+	private float lifespan; //Field offset: 0x20
 	[SerializeField]
-	private bool fullScreen; //Field offset: 0x1C
+	private bool fullScreen; //Field offset: 0x24
 	[SerializeField]
-	private bool useCenterPosition; //Field offset: 0x1D
+	private bool useCenterPosition; //Field offset: 0x25
 
 	public virtual GeraldoItemBehaviorModel Def
 	{

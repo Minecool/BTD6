@@ -25,6 +25,7 @@ public class PlayerServiceConfiguration
 	public int dataMigrationSaveCountThreshold; //Field offset: 0x98
 	public int dataMigrationSupportEarliestVersion; //Field offset: 0x9C
 	public HttpRequestFactory customHttpRequestFactory; //Field offset: 0xA0
+	public Func<Task`1<String>> getSessionTicket; //Field offset: 0xA8
 
 	public PlayerServiceConfiguration() { }
 

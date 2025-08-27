@@ -6,19 +6,19 @@ internal abstract class VerticalVirtualizationController : CollectionVirtualizat
 	private sealed class <>c
 	{
 		public static readonly <>c<T> <>9; //Field offset: 0x0
-		public static Func<T> <>9__30_0; //Field offset: 0x0
-		public static Action<T> <>9__30_1; //Field offset: 0x0
-		public static Action<T> <>9__30_2; //Field offset: 0x0
+		public static Func<T> <>9__35_0; //Field offset: 0x0
+		public static Action<T> <>9__35_1; //Field offset: 0x0
+		public static Action<T> <>9__35_2; //Field offset: 0x0
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal T <.ctor>b__30_0() { }
+		internal T <.ctor>b__35_0() { }
 
-		internal void <.ctor>b__30_1(T i) { }
+		internal void <.ctor>b__35_1(T i) { }
 
-		internal void <.ctor>b__30_2(T i) { }
+		internal void <.ctor>b__35_2(T i) { }
 
 	}
 
@@ -26,6 +26,11 @@ internal abstract class VerticalVirtualizationController : CollectionVirtualizat
 	protected BaseVerticalCollectionView m_CollectionView; //Field offset: 0x0
 	protected List<T> m_ActiveItems; //Field offset: 0x0
 	protected T m_DraggedItem; //Field offset: 0x0
+	private Nullable<Int32> m_DeferredScrollToItemIndex; //Field offset: 0x0
+	private readonly Action m_PerformDeferredScrollToItem; //Field offset: 0x0
+	private IVisualElementScheduledItem m_ScheduleDeferredScrollToItem; //Field offset: 0x0
+	private IVisualElementScheduledItem m_ScrollScheduledItem; //Field offset: 0x0
+	private Action m_ScrollCallback; //Field offset: 0x0
 	private int m_LastFocusedElementIndex; //Field offset: 0x0
 	private List<Int32> m_LastFocusedElementTreeChildIndexes; //Field offset: 0x0
 	protected readonly Func<T, Boolean> m_VisibleItemPredicateDelegate; //Field offset: 0x0
@@ -44,18 +49,18 @@ internal abstract class VerticalVirtualizationController : CollectionVirtualizat
 
 	public virtual int firstVisibleIndex
 	{
-		 get { } //Length: 114
+		 get { } //Length: 106
 		 set { } //Length: 38
 	}
 
 	internal T firstVisibleItem
 	{
-		internal get { } //Length: 28
+		internal get { } //Length: 345
 	}
 
 	internal int itemsCount
 	{
-		internal get { } //Length: 218
+		internal get { } //Length: 88
 	}
 
 	protected float lastHeight
@@ -65,7 +70,7 @@ internal abstract class VerticalVirtualizationController : CollectionVirtualizat
 
 	internal T lastVisibleItem
 	{
-		internal get { } //Length: 28
+		internal get { } //Length: 158
 	}
 
 	protected SerializedVirtualizationData serializedData
@@ -75,7 +80,7 @@ internal abstract class VerticalVirtualizationController : CollectionVirtualizat
 
 	public virtual int visibleItemCount
 	{
-		 get { } //Length: 28
+		 get { } //Length: 326
 	}
 
 	protected VerticalVirtualizationController`1(BaseVerticalCollectionView collectionView) { }
@@ -106,21 +111,35 @@ internal abstract class VerticalVirtualizationController : CollectionVirtualizat
 
 	private void HandleFocus(ReusableCollectionItem recycledItem, int previousIndex) { }
 
-	public virtual void OnBlur(VisualElement willFocus) { }
-
 	private void OnDestroyItem(ReusableCollectionItem item) { }
 
-	public virtual void OnFocus(VisualElement leafTarget) { }
+	private void OnDetachFromPanelEvent(DetachFromPanelEvent evt) { }
+
+	public virtual void OnFocusIn(VisualElement leafTarget) { }
+
+	public virtual void OnFocusOut(VisualElement willFocus) { }
+
+	protected override void OnScrollUpdate() { }
+
+	private void PerformDeferredScrollToItem() { }
 
 	public virtual void Refresh(bool rebuild) { }
 
 	internal override void ReleaseItem(int activeItemsIndex) { }
 
+	protected void ScheduleDeferredScrollToItem() { }
+
+	protected void ScheduleScroll() { }
+
 	protected virtual void set_firstVisibleIndex(int value) { }
 
 	protected void Setup(T recycledItem, int newIndex) { }
 
+	protected bool ShouldDeferScrollToItem(int index) { }
+
 	internal virtual void StartDragItem(ReusableCollectionItem item) { }
+
+	public virtual void UnbindAll() { }
 
 	public virtual void UpdateBackground() { }
 

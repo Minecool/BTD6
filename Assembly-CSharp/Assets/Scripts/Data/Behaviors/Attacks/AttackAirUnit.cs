@@ -6,7 +6,7 @@ public class AttackAirUnit : Attack
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 828
+		 get { } //Length: 827
 	}
 
 	public AttackAirUnit() { }

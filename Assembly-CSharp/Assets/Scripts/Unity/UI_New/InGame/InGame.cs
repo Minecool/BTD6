@@ -6,75 +6,75 @@ public class InGame : MonoBehaviour
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Action<GameObject> <>9__162_2; //Field offset: 0x8
-		public static Action<GameObject> <>9__162_3; //Field offset: 0x10
-		public static Action<GameObject> <>9__162_6; //Field offset: 0x18
-		public static Action<GameObject> <>9__162_7; //Field offset: 0x20
-		public static Action<GameObject> <>9__162_4; //Field offset: 0x28
-		public static Action<GameObject> <>9__167_0; //Field offset: 0x30
-		public static Func<GeraldoStockItem, <>f__AnonymousType0`2<String, Int32>> <>9__180_0; //Field offset: 0x38
-		public static Func<<>f__AnonymousType0`2<String, Int32>, Boolean> <>9__180_1; //Field offset: 0x40
-		public static Func<<>f__AnonymousType0`2<String, Int32>, String> <>9__180_2; //Field offset: 0x48
-		public static Func<<>f__AnonymousType0`2<String, Int32>, Int32> <>9__180_3; //Field offset: 0x50
-		public static Func<TowerHistory, String> <>9__189_0; //Field offset: 0x58
-		public static Func<TowerHistory, String> <>9__189_1; //Field offset: 0x60
-		public static Func<TowerHistory, String> <>9__189_2; //Field offset: 0x68
-		public static Func<TowerHistory, String> <>9__189_3; //Field offset: 0x70
+		public static Action<GameObject> <>9__167_2; //Field offset: 0x8
+		public static Action<GameObject> <>9__167_3; //Field offset: 0x10
+		public static Action<GameObject> <>9__167_6; //Field offset: 0x18
+		public static Action<GameObject> <>9__167_7; //Field offset: 0x20
+		public static Action<GameObject> <>9__167_4; //Field offset: 0x28
+		public static Action<GameObject> <>9__172_0; //Field offset: 0x30
+		public static Func<GeraldoStockItem, <>f__AnonymousType0`2<String, Int32>> <>9__185_0; //Field offset: 0x38
+		public static Func<<>f__AnonymousType0`2<String, Int32>, Boolean> <>9__185_1; //Field offset: 0x40
+		public static Func<<>f__AnonymousType0`2<String, Int32>, String> <>9__185_2; //Field offset: 0x48
+		public static Func<<>f__AnonymousType0`2<String, Int32>, Int32> <>9__185_3; //Field offset: 0x50
+		public static Func<TowerHistory, String> <>9__194_0; //Field offset: 0x58
+		public static Func<TowerHistory, String> <>9__194_1; //Field offset: 0x60
+		public static Func<TowerHistory, String> <>9__194_2; //Field offset: 0x68
+		public static Func<TowerHistory, String> <>9__194_3; //Field offset: 0x70
 		[TupleElementNames(new IL2CPP_TYPE_STRING[] {"menuName", "menuData"}])]
-		public static Func<ValueTuple`2<String, Object>, Boolean> <>9__225_0; //Field offset: 0x78
-		public static Func<SweepstakesStatsForTask, Boolean> <>9__376_1; //Field offset: 0x80
-		public static Func<SweepstakesStatsForTask, Boolean> <>9__376_2; //Field offset: 0x88
-		public static Func<MapEditorAreaData, Boolean> <>9__382_0; //Field offset: 0x90
+		public static Func<ValueTuple`2<String, Object>, Boolean> <>9__229_0; //Field offset: 0x78
+		public static Func<SweepstakesStatsForTask, Boolean> <>9__381_1; //Field offset: 0x80
+		public static Func<SweepstakesStatsForTask, Boolean> <>9__381_2; //Field offset: 0x88
+		public static Func<MapEditorAreaData, Boolean> <>9__387_0; //Field offset: 0x90
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <BossDefeated>b__376_1(SweepstakesStatsForTask x) { }
+		internal bool <BossDefeated>b__381_1(SweepstakesStatsForTask x) { }
 
-		internal bool <BossDefeated>b__376_2(SweepstakesStatsForTask x) { }
+		internal bool <BossDefeated>b__381_2(SweepstakesStatsForTask x) { }
 
-		internal string <CheckForCompletedAchievements>b__189_0(TowerHistory x) { }
+		internal string <CheckForCompletedAchievements>b__194_0(TowerHistory x) { }
 
-		internal string <CheckForCompletedAchievements>b__189_1(TowerHistory x) { }
+		internal string <CheckForCompletedAchievements>b__194_1(TowerHistory x) { }
 
-		internal string <CheckForCompletedAchievements>b__189_2(TowerHistory x) { }
+		internal string <CheckForCompletedAchievements>b__194_2(TowerHistory x) { }
 
-		internal string <CheckForCompletedAchievements>b__189_3(TowerHistory x) { }
+		internal string <CheckForCompletedAchievements>b__194_3(TowerHistory x) { }
 
-		internal bool <GetCustomMapModelWithVisibleLayers>b__382_0(MapEditorAreaData a) { }
+		internal bool <GetCustomMapModelWithVisibleLayers>b__387_0(MapEditorAreaData a) { }
 
-		internal void <Initialise>b__162_2(GameObject uiObject) { }
+		internal void <Initialise>b__167_2(GameObject uiObject) { }
 
-		internal void <Initialise>b__162_3(GameObject uiObject) { }
+		internal void <Initialise>b__167_3(GameObject uiObject) { }
 
-		internal void <Initialise>b__162_4(GameObject uiObject) { }
+		internal void <Initialise>b__167_4(GameObject uiObject) { }
 
-		internal void <Initialise>b__162_6(GameObject uiObject) { }
+		internal void <Initialise>b__167_6(GameObject uiObject) { }
 
-		internal void <Initialise>b__162_7(GameObject uiObject) { }
+		internal void <Initialise>b__167_7(GameObject uiObject) { }
 
-		internal bool <ReturnToMainMenu>b__225_0(ValueTuple<String, Object> x) { }
+		internal bool <ReturnToMainMenu>b__229_0(ValueTuple<String, Object> x) { }
 
-		internal <>f__AnonymousType0<String, Int32> <RoundEnd>b__180_0(GeraldoStockItem x) { }
+		internal <>f__AnonymousType0<String, Int32> <RoundEnd>b__185_0(GeraldoStockItem x) { }
 
-		internal bool <RoundEnd>b__180_1(<>f__AnonymousType0<String, Int32> x) { }
+		internal bool <RoundEnd>b__185_1(<>f__AnonymousType0<String, Int32> x) { }
 
-		internal string <RoundEnd>b__180_2(<>f__AnonymousType0<String, Int32> x) { }
+		internal string <RoundEnd>b__185_2(<>f__AnonymousType0<String, Int32> x) { }
 
-		internal int <RoundEnd>b__180_3(<>f__AnonymousType0<String, Int32> x) { }
+		internal int <RoundEnd>b__185_3(<>f__AnonymousType0<String, Int32> x) { }
 
-		internal void <StartTutorial>b__167_0(GameObject tutObj) { }
+		internal void <StartTutorial>b__172_0(GameObject tutObj) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass162_0
+	private sealed class <>c__DisplayClass167_0
 	{
 		public InGame <>4__this; //Field offset: 0x10
 		public Btd6CoopGame coopGame; //Field offset: 0x18
 
-		public <>c__DisplayClass162_0() { }
+		public <>c__DisplayClass167_0() { }
 
 		internal void <Initialise>b__0(GameObject uiObject) { }
 
@@ -87,62 +87,62 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass162_1
+	private sealed class <>c__DisplayClass167_1
 	{
 		public Task drawMapTask; //Field offset: 0x10
 
-		public <>c__DisplayClass162_1() { }
+		public <>c__DisplayClass167_1() { }
 
 		internal bool <Initialise>b__5() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass162_2
+	private sealed class <>c__DisplayClass167_2
 	{
 		public byte playerNumber; //Field offset: 0x10
 
-		public <>c__DisplayClass162_2() { }
+		public <>c__DisplayClass167_2() { }
 
 		internal bool <Initialise>b__10(CoopPlayerInfo o) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass163_0
+	private sealed class <>c__DisplayClass168_0
 	{
 		public string id; //Field offset: 0x10
 
-		public <>c__DisplayClass163_0() { }
+		public <>c__DisplayClass168_0() { }
 
 		internal bool <InstantiateUiObject>b__0(InGameMenuDef x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass282_0
+	private sealed class <>c__DisplayClass287_0
 	{
 		public int playerInputID; //Field offset: 0x10
 
-		public <>c__DisplayClass282_0() { }
+		public <>c__DisplayClass287_0() { }
 
 		internal bool <HandleHeroShorcutKey>b__0(TowerToSimulation x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass286_0
+	private sealed class <>c__DisplayClass291_0
 	{
 		public TowerToSimulation tower; //Field offset: 0x10
 
-		public <>c__DisplayClass286_0() { }
+		public <>c__DisplayClass291_0() { }
 
 		internal bool <TowerCreated>b__0(TowerDetailsModel x) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass343_0
+	private sealed class <>c__DisplayClass348_0
 	{
 		public InGame <>4__this; //Field offset: 0x10
 		public string name; //Field offset: 0x18
@@ -150,7 +150,7 @@ public class InGame : MonoBehaviour
 		public ReturnCallback <>9__1; //Field offset: 0x28
 		public ReturnCallback <>9__2; //Field offset: 0x30
 
-		public <>c__DisplayClass343_0() { }
+		public <>c__DisplayClass348_0() { }
 
 		internal void <OnSetNamedMonkeyName>b__0(bool noProfanity) { }
 
@@ -161,51 +161,51 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass353_0
+	private sealed class <>c__DisplayClass358_0
 	{
 		public InGame <>4__this; //Field offset: 0x10
 		public bool pauseGame; //Field offset: 0x18
 		public Action onEndCallback; //Field offset: 0x20
 
-		public <>c__DisplayClass353_0() { }
+		public <>c__DisplayClass358_0() { }
 
 		internal void <ShowEventPopup>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass353_1
+	private sealed class <>c__DisplayClass358_1
 	{
 		public bool clockStopped; //Field offset: 0x10
-		public <>c__DisplayClass353_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass358_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass353_1() { }
+		public <>c__DisplayClass358_1() { }
 
 		internal void <ShowEventPopup>g__resumeGame|1() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass376_0
+	private sealed class <>c__DisplayClass381_0
 	{
 		public InGame <>4__this; //Field offset: 0x10
 		public int bossTier; //Field offset: 0x18
 		public bool isShowingBossLeaderboardScore; //Field offset: 0x1C
 
-		public <>c__DisplayClass376_0() { }
+		public <>c__DisplayClass381_0() { }
 
 		internal void <BossDefeated>b__0() { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass376_1
+	private sealed class <>c__DisplayClass381_1
 	{
 		private struct <<BossDefeated>g__WaitAndShowRewardsPopup|3>d : IAsyncStateMachine
 		{
 			public int <>1__state; //Field offset: 0x0
 			public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
-			public <>c__DisplayClass376_1 <>4__this; //Field offset: 0x20
+			public <>c__DisplayClass381_1 <>4__this; //Field offset: 0x20
 			private TaskAwaiter <>u__1; //Field offset: 0x28
 
 			private override void MoveNext() { }
@@ -216,9 +216,9 @@ public class InGame : MonoBehaviour
 		}
 
 		public LootSet lootSet; //Field offset: 0x10
-		public <>c__DisplayClass376_0 CS$<>8__locals1; //Field offset: 0x18
+		public <>c__DisplayClass381_0 CS$<>8__locals1; //Field offset: 0x18
 
-		public <>c__DisplayClass376_1() { }
+		public <>c__DisplayClass381_1() { }
 
 		[AsyncStateMachine(typeof(<<BossDefeated>g__WaitAndShowRewardsPopup|3>d))]
 		internal Task <BossDefeated>g__WaitAndShowRewardsPopup|3() { }
@@ -226,18 +226,18 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass400_0
+	private sealed class <>c__DisplayClass405_0
 	{
 		public List<String> winningTowerIds; //Field offset: 0x10
 
-		public <>c__DisplayClass400_0() { }
+		public <>c__DisplayClass405_0() { }
 
 		internal bool <OnTowerPollFinished>b__0(string x) { }
 
 	}
 
 	[CompilerGenerated]
-	private struct <CheckForProfanity>d__345 : IAsyncStateMachine
+	private struct <CheckForProfanity>d__350 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -254,18 +254,19 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <Initialise>d__162 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <Initialise>d__167 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
 		public InGame <>4__this; //Field offset: 0x20
 		public Btd6CoopGame coopGame; //Field offset: 0x28
-		private <>c__DisplayClass162_0 <>8__1; //Field offset: 0x30
-		private <>c__DisplayClass162_1 <>8__2; //Field offset: 0x38
+		private <>c__DisplayClass167_0 <>8__1; //Field offset: 0x30
+		private <>c__DisplayClass167_1 <>8__2; //Field offset: 0x38
 		private Enumerator<InGameMenuDef> <>7__wrap1; //Field offset: 0x40
 		private DynamicUiObject[] <>7__wrap2; //Field offset: 0x58
 		private int <>7__wrap3; //Field offset: 0x60
 		private SimulationBehavior[] <>7__wrap4; //Field offset: 0x68
+		private AsyncOperationHandle<GameObject> <handle>5__6; //Field offset: 0x70
 
 		private override object System.Collections.Generic.IEnumerator<System.Object>.Current
 		{
@@ -280,7 +281,7 @@ public class InGame : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <Initialise>d__162(int <>1__state) { }
+		public <Initialise>d__167(int <>1__state) { }
 
 		private void <>m__Finally1() { }
 
@@ -301,7 +302,7 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <InstantiateUiObject>d__163 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <InstantiateUiObject>d__168 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -322,7 +323,7 @@ public class InGame : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <InstantiateUiObject>d__163(int <>1__state) { }
+		public <InstantiateUiObject>d__168(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -341,7 +342,7 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <InstantiateUiObject>d__164 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <InstantiateUiObject>d__169 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -362,7 +363,7 @@ public class InGame : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <InstantiateUiObject>d__164(int <>1__state) { }
+		public <InstantiateUiObject>d__169(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -381,7 +382,7 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <ReturnToMainMenu>d__225 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <ReturnToMainMenu>d__229 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -401,7 +402,7 @@ public class InGame : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <ReturnToMainMenu>d__225(int <>1__state) { }
+		public <ReturnToMainMenu>d__229(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -420,7 +421,7 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <SetupSceneMapEditorMode>d__173 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <SetupSceneMapEditorMode>d__178 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -439,7 +440,7 @@ public class InGame : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <SetupSceneMapEditorMode>d__173(int <>1__state) { }
+		public <SetupSceneMapEditorMode>d__178(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -458,7 +459,7 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private struct <ShowEventPopup>d__353 : IAsyncStateMachine
+	private struct <ShowEventPopup>d__358 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -471,9 +472,9 @@ public class InGame : MonoBehaviour
 		public string title; //Field offset: 0x58
 		public string body; //Field offset: 0x60
 		public bool showEverytime; //Field offset: 0x68
-		private <>c__DisplayClass353_0 <>8__1; //Field offset: 0x70
+		private <>c__DisplayClass358_0 <>8__1; //Field offset: 0x70
 		public float delay; //Field offset: 0x78
-		private <>c__DisplayClass353_1 <>8__2; //Field offset: 0x80
+		private <>c__DisplayClass358_1 <>8__2; //Field offset: 0x80
 		public bool overrideCancelSelection; //Field offset: 0x88
 		public bool showHintPopup; //Field offset: 0x89
 		public int image; //Field offset: 0x8C
@@ -489,7 +490,7 @@ public class InGame : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class <ShowVictoryScreen>d__194 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <ShowVictoryScreen>d__199 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
@@ -509,7 +510,7 @@ public class InGame : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <ShowVictoryScreen>d__194(int <>1__state) { }
+		public <ShowVictoryScreen>d__199(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -624,19 +625,6 @@ public class InGame : MonoBehaviour
 
 	}
 
-	internal sealed class TutorialCompleted : MulticastDelegate
-	{
-
-		public TutorialCompleted(object object, IntPtr method) { }
-
-		public override IAsyncResult BeginInvoke(bool isVictory, AsyncCallback callback, object object) { }
-
-		public override void EndInvoke(IAsyncResult result) { }
-
-		public override void Invoke(bool isVictory) { }
-
-	}
-
 	internal sealed class UpdateUi : MulticastDelegate
 	{
 
@@ -701,70 +689,71 @@ public class InGame : MonoBehaviour
 	private File<MapSaveDataModel> mapSaveFile; //Field offset: 0xE8
 	public bool mapEditorInSandboxMode; //Field offset: 0xF0
 	private int highestRoundHintShown; //Field offset: 0xF4
-	private string selectedNamedMonkeyKey; //Field offset: 0xF8
-	public DebugTowerGroupPlacer debugTowerGroupPlacer; //Field offset: 0x100
+	public HudController hudController; //Field offset: 0xF8
+	private string selectedNamedMonkeyKey; //Field offset: 0x100
+	public DebugTowerGroupPlacer debugTowerGroupPlacer; //Field offset: 0x108
 	[CompilerGenerated]
-	private Action OnCoopReconnectCompleted; //Field offset: 0x108
+	private UpdateUi OnUpdate; //Field offset: 0x110
 	[CompilerGenerated]
-	private Action OnCheckpointSaveCreated; //Field offset: 0x110
+	private Action OnCoopReconnectCompleted; //Field offset: 0x118
 	[CompilerGenerated]
-	private UpdateUi OnUpdate; //Field offset: 0x118
-	private BloonCauseOfDefeat causeOfDefeat; //Field offset: 0x120
+	private Action OnCheckpointSaveCreated; //Field offset: 0x120
+	private BloonCauseOfDefeat causeOfDefeat; //Field offset: 0x128
 	[CompilerGenerated]
-	private CustomMapManagers <CustomMapManagers>k__BackingField; //Field offset: 0x128
+	private CustomMapManagers <CustomMapManagers>k__BackingField; //Field offset: 0x130
 	[CompilerGenerated]
-	private MapEditorSceneController <MapEditorSceneController>k__BackingField; //Field offset: 0x130
-	public List<InGameMenuDef> inGameMenuDefs; //Field offset: 0x138
-	private int currentRoundId; //Field offset: 0x140
-	public bool forcePlayerSaveEndOfRound; //Field offset: 0x144
-	public bool hasSentEndGameAnalytics; //Field offset: 0x145
-	private bool _reviewMapMode; //Field offset: 0x146
-	private bool quitting; //Field offset: 0x147
+	private MapEditorSceneController <MapEditorSceneController>k__BackingField; //Field offset: 0x138
+	public List<InGameMenuDef> inGameMenuDefs; //Field offset: 0x140
+	private int currentRoundId; //Field offset: 0x148
+	public bool forcePlayerSaveEndOfRound; //Field offset: 0x14C
+	public bool hasSentEndGameAnalytics; //Field offset: 0x14D
+	private bool _reviewMapMode; //Field offset: 0x14E
+	private bool quitting; //Field offset: 0x14F
 	[CompilerGenerated]
-	private int <GameId>k__BackingField; //Field offset: 0x148
+	private int <GameId>k__BackingField; //Field offset: 0x150
 	[CompilerGenerated]
-	private int <AttemptId>k__BackingField; //Field offset: 0x14C
+	private int <AttemptId>k__BackingField; //Field offset: 0x154
 	[CompilerGenerated]
-	private int <ContinuesUsed>k__BackingField; //Field offset: 0x150
-	private double stepTarget; //Field offset: 0x158
-	private bool stoppedClockForMenuOpen; //Field offset: 0x160
-	private int lastHeroShortcutKeyActivationFrame; //Field offset: 0x164
-	public bool playBtnDisabled; //Field offset: 0x168
-	private Dictionary<String, Tuple`2<String, Int32>> firstTimeBloonTagLocs; //Field offset: 0x170
-	public int goldenBloonsPopped; //Field offset: 0x178
-	public int goldenBloonMMEarnt; //Field offset: 0x17C
+	private int <ContinuesUsed>k__BackingField; //Field offset: 0x158
+	private double stepTarget; //Field offset: 0x160
+	private bool stoppedClockForMenuOpen; //Field offset: 0x168
+	private int lastHeroShortcutKeyActivationFrame; //Field offset: 0x16C
+	public bool playBtnDisabled; //Field offset: 0x170
+	private Dictionary<String, Tuple`2<String, Int32>> firstTimeBloonTagLocs; //Field offset: 0x178
+	public int goldenBloonsPopped; //Field offset: 0x180
+	public int goldenBloonMMEarnt; //Field offset: 0x184
 	[CompilerGenerated]
-	private Nullable<LeaderboardScoreData> <PreviousBosssLeaderboardScore>k__BackingField; //Field offset: 0x180
+	private Nullable<LeaderboardScoreData> <PreviousBosssLeaderboardScore>k__BackingField; //Field offset: 0x188
 	[CompilerGenerated]
-	private List<Nullable`1<LeaderboardScoreData>> <SubmittedBosssLeaderboardScores>k__BackingField; //Field offset: 0x198
-	private CancellationTokenSource customMapCancallationSource; //Field offset: 0x1A0
-	private string tier5BossLoot; //Field offset: 0x1A8
-	private DateTime lastPauseResumeTime; //Field offset: 0x1B0
-	private KonFuze cooledDownPauseCount; //Field offset: 0x1B8
-	private TimeSpan raceTimePenalty; //Field offset: 0x1C0
+	private List<Nullable`1<LeaderboardScoreData>> <SubmittedBosssLeaderboardScores>k__BackingField; //Field offset: 0x1A0
+	private CancellationTokenSource customMapCancallationSource; //Field offset: 0x1A8
+	private string tier5BossLoot; //Field offset: 0x1B0
+	private DateTime lastPauseResumeTime; //Field offset: 0x1B8
+	private KonFuze cooledDownPauseCount; //Field offset: 0x1C0
+	private TimeSpan raceTimePenalty; //Field offset: 0x1C8
 
 	public event Action OnCheckpointSaveCreated
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event Action OnCoopReconnectCompleted
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event UpdateUi OnUpdate
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public ActiveKnowledge ActiveKnowledge
@@ -777,7 +766,7 @@ public class InGame : MonoBehaviour
 
 	public AnalyticsEventGroup AnalyticsGroup
 	{
-		 get { } //Length: 220
+		 get { } //Length: 206
 	}
 
 	public int AttemptId
@@ -805,7 +794,7 @@ public class InGame : MonoBehaviour
 
 	public string ChallengeId
 	{
-		 get { } //Length: 361
+		 get { } //Length: 333
 	}
 
 	public int ContinuesUsed
@@ -833,7 +822,7 @@ public class InGame : MonoBehaviour
 
 	public Nullable<Int32> CoopPlayerCount
 	{
-		 get { } //Length: 204
+		 get { } //Length: 195
 	}
 
 	public Dictionary<String, String> CurrentGameMetaData
@@ -851,7 +840,7 @@ public class InGame : MonoBehaviour
 
 	private bool DisableHints
 	{
-		private get { } //Length: 203
+		private get { } //Length: 204
 	}
 
 	private bool DisablePopups
@@ -884,7 +873,7 @@ public class InGame : MonoBehaviour
 
 	private bool IsActiveRace
 	{
-		private get { } //Length: 267
+		private get { } //Length: 270
 	}
 
 	public bool IsApopalypse
@@ -904,7 +893,7 @@ public class InGame : MonoBehaviour
 
 	public bool IsCustomMapPlayMode
 	{
-		 get { } //Length: 194
+		 get { } //Length: 196
 	}
 
 	public bool IsEditingMap
@@ -914,12 +903,22 @@ public class InGame : MonoBehaviour
 
 	private bool IsFreePlay
 	{
-		private get { } //Length: 111
+		private get { } //Length: 113
 	}
 
 	public bool IsHeroPurchasesLocked
 	{
 		 get { } //Length: 13
+	}
+
+	public bool IsMovieclipPlaying
+	{
+		 get { } //Length: 22
+	}
+
+	public bool IsOldTutorial
+	{
+		 get { } //Length: 69
 	}
 
 	public bool IsQuestPlayMode
@@ -939,7 +938,7 @@ public class InGame : MonoBehaviour
 
 	public bool IsTutorial
 	{
-		 get { } //Length: 69
+		 get { } //Length: 132
 	}
 
 	private LegendsDataModel LegendsData
@@ -960,7 +959,7 @@ public class InGame : MonoBehaviour
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 4
+		 set { } //Length: 86
 	}
 
 	public string MapDataSaveId
@@ -1007,7 +1006,7 @@ public class InGame : MonoBehaviour
 	public private bool ReviewMapMode
 	{
 		 get { } //Length: 8
-		private set { } //Length: 441
+		private set { } //Length: 444
 	}
 
 	private RogueGameSaveData RogueSaveData
@@ -1071,7 +1070,7 @@ public class InGame : MonoBehaviour
 		[CompilerGenerated]
 		 get { } //Length: 8
 		[CompilerGenerated]
-		private set { } //Length: 95
+		private set { } //Length: 8
 	}
 
 	public int TileId
@@ -1092,13 +1091,13 @@ public class InGame : MonoBehaviour
 	public InGame() { }
 
 	[CompilerGenerated]
-	private void <SetupSceneMapEditorMode>b__173_0(AsyncOperationHandle<GameObject> h) { }
+	private void <SetupSceneMapEditorMode>b__178_0(AsyncOperationHandle<GameObject> h) { }
 
 	[CompilerGenerated]
-	private void <StartMatchApop>b__249_0() { }
+	private void <StartMatchApop>b__254_0() { }
 
 	[CompilerGenerated]
-	private void <TryQuitToMenu>b__203_0() { }
+	private void <TryQuitToMenu>b__208_0() { }
 
 	[CompilerGenerated]
 	public void add_OnCheckpointSaveCreated(Action value) { }
@@ -1145,7 +1144,7 @@ public class InGame : MonoBehaviour
 
 	public void CheckForMissedBossTierRewards(int lastBossTierDefeated) { }
 
-	[AsyncStateMachine(typeof(<CheckForProfanity>d__345))]
+	[AsyncStateMachine(typeof(<CheckForProfanity>d__350))]
 	private void CheckForProfanity(string str, ProfanityFinish callOnFinish) { }
 
 	public void CheckForQuestAndBind(bool bindListeners = true, bool isLoadingSave = false) { }
@@ -1251,6 +1250,10 @@ public class InGame : MonoBehaviour
 
 	public bool get_IsHeroPurchasesLocked() { }
 
+	public bool get_IsMovieclipPlaying() { }
+
+	public bool get_IsOldTutorial() { }
+
 	public bool get_IsQuestPlayMode() { }
 
 	private bool get_IsRogueBossGame() { }
@@ -1332,9 +1335,9 @@ public class InGame : MonoBehaviour
 
 	private string GetContinueSaveId() { }
 
-	public CustomInput GetCustomInput(TowerToSimulation tower, string customInputId = null, string buttonId = null) { }
-
 	public CustomInput GetCustomInput(PropToSimulation prop, string customInputId = null, string buttonId = null) { }
+
+	public CustomInput GetCustomInput(TowerToSimulation tower, string customInputId = null, string buttonId = null) { }
 
 	public static CustomInput GetCustomInputAbility(AbilityToSimulation ability, bool onAbilityActived = true) { }
 
@@ -1398,15 +1401,17 @@ public class InGame : MonoBehaviour
 
 	public void HotkeysChanged() { }
 
+	public void IncrementGameID(MapSaveDataModel mapSaveData) { }
+
 	private void IncrementGamesPlayed() { }
 
-	[IteratorStateMachine(typeof(<Initialise>d__162))]
+	[IteratorStateMachine(typeof(<Initialise>d__167))]
 	public IEnumerator Initialise(Btd6CoopGame coopGame) { }
 
-	[IteratorStateMachine(typeof(<InstantiateUiObject>d__163))]
+	[IteratorStateMachine(typeof(<InstantiateUiObject>d__168))]
 	public IEnumerator InstantiateUiObject(string id, Action<GameObject> onComplete = null) { }
 
-	[IteratorStateMachine(typeof(<InstantiateUiObject>d__164))]
+	[IteratorStateMachine(typeof(<InstantiateUiObject>d__169))]
 	private IEnumerator InstantiateUiObject(InGameMenuDef menuDef, Action<GameObject> onComplete = null) { }
 
 	public bool IsBlockingHotkeys() { }
@@ -1524,7 +1529,7 @@ public class InGame : MonoBehaviour
 
 	public void RetrieveTopScoreAndPostAnalytics(EndMapState wonLostQuit) { }
 
-	[IteratorStateMachine(typeof(<ReturnToMainMenu>d__225))]
+	[IteratorStateMachine(typeof(<ReturnToMainMenu>d__229))]
 	private IEnumerator ReturnToMainMenu() { }
 
 	public void RoundEnd(int completedRound, int highestCompletedRound) { }
@@ -1589,21 +1594,21 @@ public class InGame : MonoBehaviour
 
 	private void SetRichPresenceStatus() { }
 
-	[IteratorStateMachine(typeof(<SetupSceneMapEditorMode>d__173))]
+	[IteratorStateMachine(typeof(<SetupSceneMapEditorMode>d__178))]
 	private IEnumerator SetupSceneMapEditorMode() { }
 
-	[AsyncStateMachine(typeof(<ShowEventPopup>d__353))]
+	[AsyncStateMachine(typeof(<ShowEventPopup>d__358))]
 	public void ShowEventPopup(string eventName, int image, bool showEverytime = false, Action onEndCallback = null, float delay = 0.5, string eventChecker = "", string title = "", string body = "", bool pauseGame = true, bool overrideDisablePopups = false, bool showHintPopup = false, bool overrideCancelSelection = false) { }
 
 	public void ShowPopupForCoopDeflation() { }
 
-	public void ShowPurchasePowerUpScreen(PowerModel powerModel) { }
-
-	public void ShowUpgradeTree(TowerModel towerModel, bool doubleTapTowerPanel = false) { }
+	public void ShowPurchasePowerUpScreen(PowerModel powerModel, bool showUpgrades) { }
 
 	public void ShowUpgradeTree() { }
 
-	[IteratorStateMachine(typeof(<ShowVictoryScreen>d__194))]
+	public void ShowUpgradeTree(TowerModel towerModel, bool doubleTapTowerPanel = false) { }
+
+	[IteratorStateMachine(typeof(<ShowVictoryScreen>d__199))]
 	private IEnumerator ShowVictoryScreen(LootSet victoryLoot) { }
 
 	private void StartBossGame() { }

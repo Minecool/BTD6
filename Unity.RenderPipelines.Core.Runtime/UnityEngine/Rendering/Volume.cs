@@ -8,12 +8,9 @@ public class Volume : MonoBehaviour, IVolume
 	[SerializeField]
 	private bool m_IsGlobal; //Field offset: 0x20
 	[Delayed]
-	[Tooltip("A value which determines which Volume is being used when Volumes have an equal amount of influence on the Scene. Volumes with a higher priority will override lower ones.")]
 	public float priority; //Field offset: 0x24
-	[Tooltip("Sets the outer distance to start blending from. A value of 0 means no blending and Unity applies the Volume overrides immediately upon entry.")]
 	public float blendDistance; //Field offset: 0x28
 	[Range(0, 1)]
-	[Tooltip("Sets the total weight of this Volume in the Scene. 0 means no effect and 1 means full effect.")]
 	public float weight; //Field offset: 0x2C
 	public VolumeProfile sharedProfile; //Field offset: 0x30
 	internal List<Collider> m_Colliders; //Field offset: 0x38
@@ -26,7 +23,6 @@ public class Volume : MonoBehaviour, IVolume
 		 get { } //Length: 5
 	}
 
-	[Tooltip("When enabled, the Volume is applied to the entire Scene.")]
 	public override bool isGlobal
 	{
 		 get { } //Length: 5
@@ -60,6 +56,8 @@ public class Volume : MonoBehaviour, IVolume
 
 	private void OnEnable() { }
 
+	private void OnValidate() { }
+
 	public override void set_isGlobal(bool value) { }
 
 	public void set_profile(VolumeProfile value) { }
@@ -67,6 +65,8 @@ public class Volume : MonoBehaviour, IVolume
 	private void Update() { }
 
 	internal void UpdateLayer() { }
+
+	internal void UpdatePriority() { }
 
 }
 

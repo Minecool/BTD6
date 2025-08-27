@@ -3,12 +3,6 @@ namespace System;
 [IsReadOnly]
 public struct DateTimeOffset : IComparable, IFormattable, IComparable<DateTimeOffset>, IEquatable<DateTimeOffset>, ISerializable, IDeserializationCallback, ISpanFormattable
 {
-	internal const long MaxOffset = 504000000000; //Field offset: 0x0
-	internal const long MinOffset = -504000000000; //Field offset: 0x0
-	private const long UnixEpochSeconds = 62135596800; //Field offset: 0x0
-	private const long UnixEpochMilliseconds = 62135596800000; //Field offset: 0x0
-	internal const long UnixMinSeconds = -62135596800; //Field offset: 0x0
-	internal const long UnixMaxSeconds = 253402300799; //Field offset: 0x0
 	public static readonly DateTimeOffset MinValue; //Field offset: 0x0
 	public static readonly DateTimeOffset MaxValue; //Field offset: 0x10
 	public static readonly DateTimeOffset UnixEpoch; //Field offset: 0x20
@@ -27,7 +21,7 @@ public struct DateTimeOffset : IComparable, IFormattable, IComparable<DateTimeOf
 
 	public int Day
 	{
-		 get { } //Length: 179
+		 get { } //Length: 178
 	}
 
 	public int Hour
@@ -52,7 +46,7 @@ public struct DateTimeOffset : IComparable, IFormattable, IComparable<DateTimeOf
 
 	public int Month
 	{
-		 get { } //Length: 179
+		 get { } //Length: 178
 	}
 
 	public static DateTimeOffset Now
@@ -82,7 +76,7 @@ public struct DateTimeOffset : IComparable, IFormattable, IComparable<DateTimeOf
 
 	public DateTime UtcDateTime
 	{
-		 get { } //Length: 162
+		 get { } //Length: 160
 	}
 
 	public static DateTimeOffset UtcNow

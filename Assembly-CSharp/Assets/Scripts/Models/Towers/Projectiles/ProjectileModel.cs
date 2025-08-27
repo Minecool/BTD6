@@ -47,7 +47,7 @@ public class ProjectileModel : Model
 
 	public float CappedPierce
 	{
-		 get { } //Length: 28
+		 get { } //Length: 30
 	}
 
 	public ProjectileModel(PrefabReference display, string id = "", float radius = 0.01, float vsBlockerRadius = 0.01, float pierce = 1, float maxPierce = -1, Model[] behaviors = null, FilterModel[] filters = null, bool ignoreBlockers = false, bool usePointCollisionWithBloons = false, bool canCollisionBeBlockedByMapLos = false, float scale = 1, Int32[] collisionPasses = null, bool dontUseCollisionChecker = false, float checkCollisionInterval = 0, bool ignoreNonTargetable = false, bool ignorePierceExhaustion = false, string saveId = null, DisplayModel displayModel = null) { }

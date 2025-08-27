@@ -10,19 +10,21 @@ public class TargetSupplierSharedRange : TargetSupplier
 
 	public TargetSupplierSharedRange() { }
 
-	private List<PathSegmentInRange> GenerateSharedCamoGlobalGrid(Dictionary<PathSegment, List`1<PathSegmentInRange>> sharedSegments) { }
+	private List<PathSegmentInRange> GenerateSharedCamoGlobalGrid(Dictionary<PathSegment, List`1<SharedPathSegmentsInRange>> sharedSegments, string specifiedTowerType) { }
 
 	private void GenerateTowerFullSightGrid() { }
 
-	protected IEnumerable<Target> GetTargets(TargetType targetType, bool global = false) { }
+	protected IEnumerable<Target> GetTargets(TargetType targetType, bool global = false, string towerType = "", string specifiedTowerType = "") { }
 
 	public virtual void Initialise(Entity target, Model modelToUse) { }
+
+	private bool isTowerTypeValid(SharedPathSegmentsInRange seg, string towerType) { }
 
 	protected virtual void OnDestroy() { }
 
 	private void OnGridChanged() { }
 
-	private List<PathSegmentInRange> PressTheGridsTogether(Dictionary<PathSegment, List`1<PathSegmentInRange>> sharedSegments) { }
+	private List<PathSegmentInRange> PressTheGridsTogether(Dictionary<PathSegment, List`1<SharedPathSegmentsInRange>> sharedSegments, string specifiedTowerType, string towerType) { }
 
 	public virtual void ThrowCacheUpdated() { }
 

@@ -1,5 +1,6 @@
 namespace UnityEngine;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule", "UnityEditor.UIBuilderModule"}])]
 internal class TextSelectingUtilities
 {
 	private enum CharacterType
@@ -27,33 +28,42 @@ internal class TextSelectingUtilities
 	private bool m_MouseDragSelectsWholeWords; //Field offset: 0x1A
 	private int m_DblClickInitPosStart; //Field offset: 0x1C
 	private int m_DblClickInitPosEnd; //Field offset: 0x20
-	private TextHandle m_TextHandle; //Field offset: 0x28
+	public TextHandle textHandle; //Field offset: 0x28
 	private bool m_RevealCursor; //Field offset: 0x30
 	private int m_CursorIndex; //Field offset: 0x34
 	internal int m_SelectIndex; //Field offset: 0x38
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal Action OnCursorIndexChange; //Field offset: 0x40
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal Action OnSelectIndexChange; //Field offset: 0x48
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal Action OnRevealCursorChange; //Field offset: 0x50
 
 	private int characterCount
 	{
-		private get { } //Length: 221
+		private get { } //Length: 200
 	}
 
 	public int cursorIndex
 	{
-		 get { } //Length: 11
+		 get { } //Length: 100
 		 set { } //Length: 37
+	}
+
+	internal int cursorIndexNoValidation
+	{
+		internal get { } //Length: 6
+		internal set { } //Length: 37
 	}
 
 	public bool hasSelection
 	{
-		 get { } //Length: 56
+		 get { } //Length: 182
 	}
 
 	private int m_CharacterCount
 	{
-		private get { } //Length: 38
+		private get { } //Length: 29
 	}
 
 	private TextElementInfo[] m_TextElementInfos
@@ -69,13 +79,18 @@ internal class TextSelectingUtilities
 
 	public string selectedText
 	{
-		 get { } //Length: 260
+		 get { } //Length: 449
 	}
 
 	public int selectIndex
 	{
-		 get { } //Length: 11
+		 get { } //Length: 100
 		 set { } //Length: 37
+	}
+
+	internal int selectIndexNoValidation
+	{
+		internal set { } //Length: 37
 	}
 
 	public TextSelectingUtilities(TextHandle textHandle) { }
@@ -89,8 +104,6 @@ internal class TextSelectingUtilities
 	public void Copy() { }
 
 	public void DblClickSnap(DblClickSnapping snapping) { }
-
-	internal int EnsureValidCodePointIndex(int index) { }
 
 	public void ExpandSelectGraphicalLineEnd() { }
 
@@ -110,6 +123,8 @@ internal class TextSelectingUtilities
 
 	public int get_cursorIndex() { }
 
+	internal int get_cursorIndexNoValidation() { }
+
 	public bool get_hasSelection() { }
 
 	private int get_m_CharacterCount() { }
@@ -126,13 +141,12 @@ internal class TextSelectingUtilities
 
 	private int GetGraphicalLineStart(int p) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	internal bool HandleKeyEvent(Event e) { }
 
 	private int IndexOfEndOfLine(int startIndex) { }
 
 	private void InitKeyActions() { }
-
-	private bool IsValidCodePointIndex(int index) { }
 
 	private static void MapKey(string key, TextSelectOp action) { }
 
@@ -220,9 +234,13 @@ internal class TextSelectingUtilities
 
 	public void set_cursorIndex(int value) { }
 
+	internal void set_cursorIndexNoValidation(int value) { }
+
 	public void set_revealCursor(bool value) { }
 
 	public void set_selectIndex(int value) { }
+
+	internal void set_selectIndexNoValidation(int value) { }
 
 	internal void SetCursorIndexWithoutNotify(int index) { }
 

@@ -49,7 +49,7 @@ public class FileStream : Stream
 
 	public virtual bool CanRead
 	{
-		 get { } //Length: 17
+		 get { } //Length: 16
 	}
 
 	public virtual bool CanSeek
@@ -59,7 +59,7 @@ public class FileStream : Stream
 
 	public virtual bool CanWrite
 	{
-		 get { } //Length: 17
+		 get { } //Length: 18
 	}
 
 	public virtual long Length
@@ -74,7 +74,7 @@ public class FileStream : Stream
 
 	public virtual long Position
 	{
-		 get { } //Length: 436
+		 get { } //Length: 434
 		 set { } //Length: 153
 	}
 
@@ -87,10 +87,6 @@ public class FileStream : Stream
 
 	internal FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, bool anonymous, FileOptions options) { }
 
-	public FileStream(SafeFileHandle handle, FileAccess access, int bufferSize, bool isAsync) { }
-
-	public FileStream(SafeFileHandle handle, FileAccess access) { }
-
 	public FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options) { }
 
 	internal FileStream(IntPtr handle, FileAccess access, bool ownsHandle, int bufferSize, bool isAsync, bool isConsoleWrapper) { }
@@ -98,8 +94,6 @@ public class FileStream : Stream
 	public FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize) { }
 
 	public FileStream(string path, FileMode mode, FileAccess access, FileShare share) { }
-
-	public FileStream(string path, FileMode mode) { }
 
 	public FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, bool useAsync) { }
 
@@ -139,9 +133,9 @@ public class FileStream : Stream
 
 	public override SafeFileHandle get_SafeFileHandle() { }
 
-	private string GetSecureFileName(string filename) { }
-
 	private string GetSecureFileName(string filename, bool full) { }
+
+	private string GetSecureFileName(string filename) { }
 
 	private void Init(SafeFileHandle safeHandle, FileAccess access, bool ownsHandle, int bufferSize, bool isAsync, bool isConsoleWrapper) { }
 

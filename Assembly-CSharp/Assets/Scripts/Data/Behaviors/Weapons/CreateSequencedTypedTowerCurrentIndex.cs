@@ -8,7 +8,7 @@ public class CreateSequencedTypedTowerCurrentIndex : WeaponBehavior
 
 	public virtual WeaponBehaviorModel Def
 	{
-		 get { } //Length: 508
+		 get { } //Length: 516
 	}
 
 	public CreateSequencedTypedTowerCurrentIndex() { }

@@ -14,12 +14,12 @@ public class XmlArrayItemAttribute : Attribute
 
 	public string DataType
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	public string ElementName
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 	}
 
 	public XmlSchemaForm Form

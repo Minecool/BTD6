@@ -6,6 +6,8 @@ internal static class EventInterestReflectionUtils
 	{
 		public int DefaultActionCategories; //Field offset: 0x0
 		public int DefaultActionAtTargetCategories; //Field offset: 0x4
+		public int HandleEventTrickleDownCategories; //Field offset: 0x8
+		public int HandleEventBubbleUpCategories; //Field offset: 0xC
 
 	}
 
@@ -16,7 +18,7 @@ internal static class EventInterestReflectionUtils
 
 	private static int ComputeDefaultEventInterests(Type elementType, string methodName) { }
 
-	internal static void GetDefaultEventInterests(Type elementType, out int defaultActionCategories, out int defaultActionAtTargetCategories) { }
+	internal static void GetDefaultEventInterests(Type elementType, out int defaultActionCategories, out int defaultActionAtTargetCategories, out int handleEventTrickleDownCategories, out int handleEventBubbleUpCategories) { }
 
 	internal static EventCategory GetEventCategory(Type eventType) { }
 

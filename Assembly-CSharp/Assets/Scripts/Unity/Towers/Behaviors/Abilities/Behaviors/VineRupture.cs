@@ -20,7 +20,7 @@ public class VineRupture : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 1118
+		 get { } //Length: 1101
 	}
 
 	public VineRupture() { }

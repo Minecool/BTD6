@@ -19,6 +19,8 @@ public class DebugShapes
 
 	private void BuildCone(ref Mesh outputMesh, float height, float topRadius, float bottomRadius, int nbSides) { }
 
+	public Mesh BuildCustomSphereMesh(float radius, uint longSubdiv, uint latSubdiv) { }
+
 	private void BuildPyramid(ref Mesh outputMesh, float width, float height, float depth) { }
 
 	private void BuildShapes() { }

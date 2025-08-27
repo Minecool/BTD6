@@ -24,7 +24,7 @@ public class TMP_GlyphPairAdjustmentRecord
 	public TMP_GlyphAdjustmentRecord secondAdjustmentRecord
 	{
 		 get { } //Length: 17
-		 set { } //Length: 14
+		 set { } //Length: 165
 	}
 
 	public TMP_GlyphPairAdjustmentRecord(TMP_GlyphAdjustmentRecord firstAdjustmentRecord, TMP_GlyphAdjustmentRecord secondAdjustmentRecord) { }

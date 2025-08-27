@@ -3,7 +3,7 @@ namespace Assets.Scripts.Unity.SimulationBehaviors;
 public class TriggerVictoryOnBossDefeat : SimulationBehavior
 {
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
 		 get { } //Length: 68
 	}
@@ -15,7 +15,7 @@ public class TriggerVictoryOnBossDefeat : SimulationBehavior
 
 	public TriggerVictoryOnBossDefeat() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

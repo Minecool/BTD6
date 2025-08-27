@@ -18,7 +18,7 @@ public class Eruption : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 587
+		 get { } //Length: 581
 	}
 
 	public Eruption() { }

@@ -29,7 +29,7 @@ public abstract class DesignerOptionService
 
 			public virtual Type PropertyType
 			{
-				 get { } //Length: 45
+				 get { } //Length: 1931
 			}
 
 			internal WrappedPropertyDescriptor(PropertyDescriptor property, object target) { }
@@ -72,7 +72,7 @@ public abstract class DesignerOptionService
 
 		public PropertyDescriptorCollection Properties
 		{
-			 get { } //Length: 1691
+			 get { } //Length: 1690
 		}
 
 		private override bool System.Collections.ICollection.IsSynchronized

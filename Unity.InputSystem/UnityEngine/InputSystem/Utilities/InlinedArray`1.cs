@@ -42,7 +42,7 @@ internal struct InlinedArray : IEnumerable<TValue>, IEnumerable
 	public TValue Item
 	{
 		 get { } //Length: 143
-		 set { } //Length: 3270
+		 set { } //Length: 143
 	}
 
 	public InlinedArray`1(TValue value) { }

@@ -9,9 +9,12 @@ public class LoadingScreen : GenericAnimatedScene
 	[SerializeField]
 	private Animator UiAnimator; //Field offset: 0x28
 	[SerializeField]
-	private GameObject modsDetectedObj; //Field offset: 0x30
+	private float failsafeOpenTime; //Field offset: 0x30
 	[SerializeField]
-	private RuntimeAnimatorController visionOSAnimationSwap; //Field offset: 0x38
+	private GameObject modsDetectedObj; //Field offset: 0x38
+	[SerializeField]
+	private RuntimeAnimatorController visionOSAnimationSwap; //Field offset: 0x40
+	private float unscaledTimeAlive; //Field offset: 0x48
 
 	private static LoadingScreen Instance
 	{
@@ -46,6 +49,8 @@ public class LoadingScreen : GenericAnimatedScene
 	private void Start() { }
 
 	public virtual IEnumerator StartCloseAnimation() { }
+
+	private void Update() { }
 
 }
 

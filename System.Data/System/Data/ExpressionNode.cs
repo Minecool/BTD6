@@ -6,7 +6,7 @@ internal abstract class ExpressionNode
 
 	internal IFormatProvider FormatProvider
 	{
-		internal get { } //Length: 93
+		internal get { } //Length: 91
 	}
 
 	internal override bool IsSqlColumn

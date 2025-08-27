@@ -8,7 +8,7 @@ internal class BranchInstruction : OffsetInstruction
 
 	public virtual Instruction[] Cache
 	{
-		 get { } //Length: 610
+		 get { } //Length: 623
 	}
 
 	public virtual int ConsumedStack

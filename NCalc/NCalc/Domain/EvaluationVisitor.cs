@@ -38,14 +38,14 @@ public class EvaluationVisitor : LogicalExpressionVisitor
 
 	public event EvaluateFunctionHandler EvaluateFunction
 	{
-		 add { } //Length: 148
-		 remove { } //Length: 148
+		 add { } //Length: 144
+		 remove { } //Length: 144
 	}
 
 	public event EvaluateParameterHandler EvaluateParameter
 	{
-		 add { } //Length: 148
-		 remove { } //Length: 148
+		 add { } //Length: 144
+		 remove { } //Length: 144
 	}
 
 	private bool IgnoreCase

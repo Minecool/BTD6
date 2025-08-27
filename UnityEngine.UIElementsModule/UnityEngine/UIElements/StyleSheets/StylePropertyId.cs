@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal enum StylePropertyId
 {
 	Unknown = 0,
@@ -77,24 +78,27 @@ internal enum StylePropertyId
 	Translate = 327683,
 	UnityBackgroundImageTintColor = 196610,
 	UnityBackgroundScaleMode = 262153,
-	UnityFont = 65540,
-	UnityFontDefinition = 65541,
-	UnityFontStyleAndWeight = 65542,
+	UnityEditorTextRenderingMode = 65540,
+	UnityFont = 65541,
+	UnityFontDefinition = 65542,
+	UnityFontStyleAndWeight = 65543,
 	UnityOverflowClipBox = 196611,
-	UnityParagraphSpacing = 65543,
+	UnityParagraphSpacing = 65544,
 	UnitySliceBottom = 196612,
 	UnitySliceLeft = 196613,
 	UnitySliceRight = 196614,
 	UnitySliceScale = 196615,
 	UnitySliceTop = 196616,
-	UnityTextAlign = 65544,
+	UnitySliceType = 196617,
+	UnityTextAlign = 65545,
+	UnityTextGenerator = 65546,
 	UnityTextOutline = 262154,
-	UnityTextOutlineColor = 65545,
-	UnityTextOutlineWidth = 65546,
-	UnityTextOverflowPosition = 196617,
-	Visibility = 65547,
-	WhiteSpace = 65548,
+	UnityTextOutlineColor = 65547,
+	UnityTextOutlineWidth = 65548,
+	UnityTextOverflowPosition = 196618,
+	Visibility = 65549,
+	WhiteSpace = 65550,
 	Width = 131104,
-	WordSpacing = 65549,
+	WordSpacing = 65551,
 }
 

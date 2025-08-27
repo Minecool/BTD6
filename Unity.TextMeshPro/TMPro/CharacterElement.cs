@@ -8,7 +8,7 @@ internal struct CharacterElement
 	public uint Unicode
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public CharacterElement(TMP_TextElement textElement) { }

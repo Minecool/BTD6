@@ -11,7 +11,7 @@ public class OnProjectileHitTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 423
+		 get { } //Length: 411
 	}
 
 	public OnProjectileHitTrigger() { }

@@ -5,7 +5,7 @@ public class CorrelationManager
 
 	public Stack LogicalOperationStack
 	{
-		 get { } //Length: 185
+		 get { } //Length: 170
 	}
 
 	internal CorrelationManager() { }

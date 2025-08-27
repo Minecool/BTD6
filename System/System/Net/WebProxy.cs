@@ -24,8 +24,8 @@ public class WebProxy : IWebProxy, ISerializable
 
 	public bool UseDefaultCredentials
 	{
-		 get { } //Length: 105
-		 set { } //Length: 166
+		 get { } //Length: 101
+		 set { } //Length: 106
 	}
 
 	public WebProxy() { }

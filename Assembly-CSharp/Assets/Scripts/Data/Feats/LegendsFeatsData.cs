@@ -14,7 +14,7 @@ public class LegendsFeatsData : ScriptableObject
 
 	}
 
-	[SerializeReference]
+	[SerializeField]
 	public List<LegendsFeatData> featDatas; //Field offset: 0x18
 	public readonly List<LegendsFeatActive> activeFeats; //Field offset: 0x20
 

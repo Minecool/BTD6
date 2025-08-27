@@ -23,12 +23,6 @@ public static class Addressables
 		 get { } //Length: 141
 	}
 
-	[Obsolete]
-	public static AsyncOperationHandle<IResourceLocator> InitializationOperation
-	{
-		 get { } //Length: 16
-	}
-
 	internal static AddressablesImpl Instance
 	{
 		internal get { } //Length: 138
@@ -98,23 +92,17 @@ public static class Addressables
 
 	public static void ClearDependencyCacheAsync(IList<IResourceLocation> locations) { }
 
-	[Obsolete]
-	public static void ClearDependencyCacheAsync(IList<Object> keys) { }
-
 	public static void ClearDependencyCacheAsync(IEnumerable keys) { }
 
 	public static void ClearDependencyCacheAsync(string key) { }
 
 	public static AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(object key, bool autoReleaseHandle) { }
 
+	public static AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(string key, bool autoReleaseHandle) { }
+
 	public static AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(IList<IResourceLocation> locations, bool autoReleaseHandle) { }
 
 	public static AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(IEnumerable keys, bool autoReleaseHandle) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(IList<Object> keys, bool autoReleaseHandle) { }
-
-	public static AsyncOperationHandle<Boolean> ClearDependencyCacheAsync(string key, bool autoReleaseHandle) { }
 
 	public static void ClearResourceLocators() { }
 
@@ -124,21 +112,13 @@ public static class Addressables
 
 	public static ResourceLocationBase CreateCatalogLocationWithHashDependencies(IResourceLocation remoteCatalogLocation) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle DownloadDependencies(object key) { }
-
 	public static AsyncOperationHandle DownloadDependenciesAsync(IEnumerable keys, MergeMode mode, bool autoReleaseHandle = false) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle DownloadDependenciesAsync(IList<Object> keys, MergeMode mode, bool autoReleaseHandle = false) { }
 
 	public static AsyncOperationHandle DownloadDependenciesAsync(IList<IResourceLocation> locations, bool autoReleaseHandle = false) { }
 
 	public static AsyncOperationHandle DownloadDependenciesAsync(object key, bool autoReleaseHandle = false) { }
 
 	public static string get_BuildPath() { }
-
-	public static AsyncOperationHandle<IResourceLocator> get_InitializationOperation() { }
 
 	internal static AddressablesImpl get_Instance() { }
 
@@ -162,46 +142,21 @@ public static class Addressables
 
 	public static Action<UnityWebRequest> get_WebRequestOverride() { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<Int64> GetDownloadSize(object key) { }
+	public static AsyncOperationHandle<Int64> GetDownloadSizeAsync(IEnumerable keys) { }
 
 	public static AsyncOperationHandle<Int64> GetDownloadSizeAsync(string key) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<Int64> GetDownloadSizeAsync(IList<Object> keys) { }
-
-	public static AsyncOperationHandle<Int64> GetDownloadSizeAsync(IEnumerable keys) { }
-
 	public static AsyncOperationHandle<Int64> GetDownloadSizeAsync(object key) { }
-
-	public static ResourceLocatorInfo GetLocatorInfo(string locatorId) { }
 
 	public static ResourceLocatorInfo GetLocatorInfo(IResourceLocator locator) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<IResourceLocator> Initialize() { }
+	public static ResourceLocatorInfo GetLocatorInfo(string locatorId) { }
 
 	public static AsyncOperationHandle<IResourceLocator> InitializeAsync() { }
 
 	public static AsyncOperationHandle<IResourceLocator> InitializeAsync(bool autoReleaseHandle) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<GameObject> Instantiate(IResourceLocation location, Transform parent = null, bool instantiateInWorldSpace = false, bool trackHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<GameObject> Instantiate(object key, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<GameObject> Instantiate(object key, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<GameObject> Instantiate(IResourceLocation location, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<GameObject> Instantiate(IResourceLocation location, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<GameObject> Instantiate(object key, Transform parent = null, bool instantiateInWorldSpace = false, bool trackHandle = true) { }
+	public static AsyncOperationHandle<GameObject> InstantiateAsync(object key, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
 
 	public static AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, Transform parent = null, bool instantiateInWorldSpace = false, bool trackHandle = true) { }
 
@@ -209,11 +164,9 @@ public static class Addressables
 
 	public static AsyncOperationHandle<GameObject> InstantiateAsync(object key, Transform parent = null, bool instantiateInWorldSpace = false, bool trackHandle = true) { }
 
-	public static AsyncOperationHandle<GameObject> InstantiateAsync(object key, Vector3 position, Quaternion rotation, Transform parent = null, bool trackHandle = true) { }
+	public static AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
 
 	public static AsyncOperationHandle<GameObject> InstantiateAsync(object key, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
-
-	public static AsyncOperationHandle<GameObject> InstantiateAsync(IResourceLocation location, InstantiationParameters instantiateParameters, bool trackHandle = true) { }
 
 	[Conditional("ADDRESSABLES_LOG_ALL")]
 	internal static void InternalSafeSerializationLog(string msg, LogType logType = 3) { }
@@ -221,76 +174,49 @@ public static class Addressables
 	[Conditional("ADDRESSABLES_LOG_ALL")]
 	internal static void InternalSafeSerializationLogFormat(string format, LogType logType = 3, Object[] args) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<TObject> LoadAsset(IResourceLocation location) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<TObject> LoadAsset(object key) { }
+	public static AsyncOperationHandle<TObject> LoadAssetAsync(object key) { }
 
 	public static AsyncOperationHandle<TObject> LoadAssetAsync(IResourceLocation location) { }
 
-	public static AsyncOperationHandle<TObject> LoadAssetAsync(object key) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssets(IList<Object> keys, Action<TObject> callback, MergeMode mode) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssets(object key, Action<TObject> callback) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssets(IList<IResourceLocation> locations, Action<TObject> callback) { }
-
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IEnumerable keys, Action<TObject> callback, MergeMode mode) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IList<Object> keys, Action<TObject> callback, MergeMode mode, bool releaseDependenciesOnFailure) { }
-
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IEnumerable keys, Action<TObject> callback, MergeMode mode, bool releaseDependenciesOnFailure) { }
+	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(object key, Action<TObject> callback, bool releaseDependenciesOnFailure) { }
 
 	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(object key, Action<TObject> callback) { }
 
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(object key, Action<TObject> callback, bool releaseDependenciesOnFailure) { }
+	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(string key, bool releaseDependenciesOnFailure, Action<TObject> callback = null) { }
 
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IList<IResourceLocation> locations, Action<TObject> callback) { }
+	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IEnumerable keys, Action<TObject> callback, MergeMode mode, bool releaseDependenciesOnFailure) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IList<Object> keys, Action<TObject> callback, MergeMode mode) { }
+	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(string key, Action<TObject> callback = null) { }
+
+	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IEnumerable keys, Action<TObject> callback, MergeMode mode) { }
 
 	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IList<IResourceLocation> locations, Action<TObject> callback, bool releaseDependenciesOnFailure) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<IResourceLocator> LoadContentCatalog(string catalogPath, string providerSuffix = null) { }
+	public static AsyncOperationHandle<IList`1<TObject>> LoadAssetsAsync(IList<IResourceLocation> locations, Action<TObject> callback) { }
 
 	public static AsyncOperationHandle<IResourceLocator> LoadContentCatalogAsync(string catalogPath, bool autoReleaseHandle, string providerSuffix = null) { }
 
 	public static AsyncOperationHandle<IResourceLocator> LoadContentCatalogAsync(string catalogPath, string providerSuffix = null) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocations(object key, Type type = null) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocations(IList<Object> keys, MergeMode mode, Type type = null) { }
-
 	public static AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsAsync(object key, Type type = null) { }
 
 	public static AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsAsync(IEnumerable keys, MergeMode mode, Type type = null) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<IList`1<IResourceLocation>> LoadResourceLocationsAsync(IList<Object> keys, MergeMode mode, Type type = null) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<SceneInstance> LoadScene(object key, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<SceneInstance> LoadScene(IResourceLocation location, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100) { }
-
-	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneParameters loadSceneParameters, bool activateOnLoad = true, int priority = 100) { }
-
-	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100) { }
+	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneMode loadMode, SceneReleaseMode releaseMode, bool activateOnLoad = true, int priority = 100) { }
 
 	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key, LoadSceneParameters loadSceneParameters, bool activateOnLoad = true, int priority = 100) { }
 
-	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100) { }
+	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key, LoadSceneParameters loadSceneParameters, SceneReleaseMode releaseMode, bool activateOnLoad = true, int priority = 100) { }
+
+	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100) { }
+
+	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneParameters loadSceneParameters, bool activateOnLoad = true, int priority = 100) { }
+
+	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(IResourceLocation location, LoadSceneParameters loadSceneParameters, SceneReleaseMode releaseMode, bool activateOnLoad = true, int priority = 100) { }
+
+	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key, LoadSceneMode loadMode, SceneReleaseMode releaseMode, bool activateOnLoad = true, int priority = 100) { }
+
+	public static AsyncOperationHandle<SceneInstance> LoadSceneAsync(object key, LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100, SceneReleaseMode releaseMode = 0) { }
 
 	[Conditional("ADDRESSABLES_LOG_ALL")]
 	public static void Log(string msg) { }
@@ -310,17 +236,17 @@ public static class Addressables
 
 	public static void LogWarningFormat(string format, Object[] args) { }
 
-	public static void Release(AsyncOperationHandle handle) { }
+	public static void Release(TObject obj) { }
 
 	public static void Release(AsyncOperationHandle<TObject> handle) { }
 
-	public static void Release(TObject obj) { }
+	public static void Release(AsyncOperationHandle handle) { }
+
+	public static bool ReleaseInstance(AsyncOperationHandle<GameObject> handle) { }
 
 	public static bool ReleaseInstance(GameObject instance) { }
 
 	public static bool ReleaseInstance(AsyncOperationHandle handle) { }
-
-	public static bool ReleaseInstance(AsyncOperationHandle<GameObject> handle) { }
 
 	public static void RemoveResourceLocator(IResourceLocator locator) { }
 
@@ -330,25 +256,13 @@ public static class Addressables
 
 	public static void set_WebRequestOverride(Action<UnityWebRequest> value) { }
 
-	[Obsolete]
-	public static AsyncOperationHandle<SceneInstance> UnloadScene(AsyncOperationHandle handle, bool autoReleaseHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<SceneInstance> UnloadScene(SceneInstance scene, bool autoReleaseHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<SceneInstance> UnloadScene(AsyncOperationHandle<SceneInstance> handle, UnloadSceneOptions unloadOptions, bool autoReleaseHandle = true) { }
-
-	[Obsolete]
-	public static AsyncOperationHandle<SceneInstance> UnloadScene(AsyncOperationHandle<SceneInstance> handle, bool autoReleaseHandle = true) { }
-
-	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(SceneInstance scene, UnloadSceneOptions unloadOptions, bool autoReleaseHandle = true) { }
+	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(AsyncOperationHandle handle, bool autoReleaseHandle = true) { }
 
 	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(AsyncOperationHandle handle, UnloadSceneOptions unloadOptions, bool autoReleaseHandle = true) { }
 
-	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(SceneInstance scene, bool autoReleaseHandle = true) { }
+	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(SceneInstance scene, UnloadSceneOptions unloadOptions, bool autoReleaseHandle = true) { }
 
-	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(AsyncOperationHandle handle, bool autoReleaseHandle = true) { }
+	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(SceneInstance scene, bool autoReleaseHandle = true) { }
 
 	public static AsyncOperationHandle<SceneInstance> UnloadSceneAsync(AsyncOperationHandle<SceneInstance> handle, bool autoReleaseHandle = true) { }
 

@@ -7,6 +7,7 @@ internal struct NavigationModel
 	public MoveDirection lastMoveDirection; //Field offset: 0xC
 	public float lastMoveTime; //Field offset: 0x10
 	public AxisEventData eventData; //Field offset: 0x18
+	public InputDevice device; //Field offset: 0x20
 
 	public void Reset() { }
 

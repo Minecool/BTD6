@@ -15,19 +15,19 @@ internal class XmlNodeWrapper : IXmlNode
 	public override List<IXmlNode> Attributes
 	{
 		[NullableContext(1)]
-		 get { } //Length: 1113
+		 get { } //Length: 1528
 	}
 
 	[Nullable(1)]
 	public override List<IXmlNode> ChildNodes
 	{
 		[NullableContext(1)]
-		 get { } //Length: 969
+		 get { } //Length: 1400
 	}
 
 	private bool HasAttributes
 	{
-		private get { } //Length: 207
+		private get { } //Length: 184
 	}
 
 	public override string LocalName
@@ -47,7 +47,7 @@ internal class XmlNodeWrapper : IXmlNode
 
 	public override IXmlNode ParentNode
 	{
-		 get { } //Length: 186
+		 get { } //Length: 155
 	}
 
 	public override string Value

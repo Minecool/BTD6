@@ -9,7 +9,7 @@ public struct AsyncValueTaskMethodBuilder
 
 	public ValueTask<TResult> Task
 	{
-		 get { } //Length: 260
+		 get { } //Length: 258
 	}
 
 	public void AwaitUnsafeOnCompleted(ref TAwaiter awaiter, ref TStateMachine stateMachine) { }

@@ -5,7 +5,7 @@ internal sealed class PrimitiveParameterExpression : ParameterExpression
 
 	public virtual Type Type
 	{
-		 get { } //Length: 87
+		 get { } //Length: 56
 	}
 
 	internal PrimitiveParameterExpression`1(string name) { }

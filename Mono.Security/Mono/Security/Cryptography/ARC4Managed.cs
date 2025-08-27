@@ -21,7 +21,7 @@ public class ARC4Managed : RC4, ICryptoTransform, IDisposable
 	public virtual Byte[] Key
 	{
 		 get { } //Length: 145
-		 set { } //Length: 461
+		 set { } //Length: 451
 	}
 
 	public override int OutputBlockSize

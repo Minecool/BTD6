@@ -11,9 +11,16 @@ public abstract class EntityTrigger : RootBehavior
 		 get { } //Length: 5
 	}
 
+	public Vector2 Position
+	{
+		 get { } //Length: 142
+	}
+
 	protected EntityTrigger() { }
 
 	public bool get_IsTriggered() { }
+
+	public Vector2 get_Position() { }
 
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 

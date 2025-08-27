@@ -20,7 +20,7 @@ public class TranceBloon : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 418
+		 get { } //Length: 421
 	}
 
 	public TranceBloon() { }

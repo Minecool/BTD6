@@ -1,5 +1,6 @@
 namespace UnityEngine.Rendering;
 
+[Obsolete("VolumeComponentMenuForRenderPipelineAttribute is deprecated. Use VolumeComponentMenu with SupportedOnCurrentPipeline instead. #from(2023.1)", False)]
 public class VolumeComponentMenuForRenderPipeline : VolumeComponentMenu
 {
 	[CompilerGenerated]

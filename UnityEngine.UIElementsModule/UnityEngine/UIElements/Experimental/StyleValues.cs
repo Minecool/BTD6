@@ -6,7 +6,7 @@ public struct StyleValues
 
 	public Color backgroundColor
 	{
-		 set { } //Length: 172
+		 set { } //Length: 159
 	}
 
 	public float borderBottomLeftRadius
@@ -26,7 +26,7 @@ public struct StyleValues
 
 	public Color borderColor
 	{
-		 set { } //Length: 172
+		 set { } //Length: 159
 	}
 
 	public float borderLeftWidth
@@ -61,7 +61,7 @@ public struct StyleValues
 
 	public Color color
 	{
-		 set { } //Length: 172
+		 set { } //Length: 159
 	}
 
 	public float flexGrow
@@ -142,7 +142,7 @@ public struct StyleValues
 
 	public Color unityBackgroundImageTintColor
 	{
-		 set { } //Length: 172
+		 set { } //Length: 159
 	}
 
 	public float width

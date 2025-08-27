@@ -6,7 +6,7 @@ internal class UnityLogWriter : TextWriter
 
 	public virtual Encoding Encoding
 	{
-		 get { } //Length: 87
+		 get { } //Length: 9
 	}
 
 	public UnityLogWriter() { }
@@ -26,6 +26,8 @@ internal class UnityLogWriter : TextWriter
 
 	[FreeFunction(IsThreadSafe = True)]
 	private static void WriteStringToUnityLogImpl(string s) { }
+
+	private static void WriteStringToUnityLogImpl_Injected(ref ManagedSpanWrapper s) { }
 
 }
 

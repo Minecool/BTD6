@@ -52,17 +52,23 @@ internal struct ReflectionProbeManager : IDisposable
 	private int2 m_Resolution; //Field offset: 0x0
 	private RenderTexture m_AtlasTexture0; //Field offset: 0x8
 	private RenderTexture m_AtlasTexture1; //Field offset: 0x10
-	private BuddyAllocator m_AtlasAllocator; //Field offset: 0x18
-	private Dictionary<Int32, CachedProbe> m_Cache; //Field offset: 0x40
-	private Dictionary<Int32, Int32> m_WarningCache; //Field offset: 0x48
-	private List<Int32> m_NeedsUpdate; //Field offset: 0x50
-	private List<Int32> m_NeedsRemove; //Field offset: 0x58
-	private Vector4[] m_BoxMax; //Field offset: 0x60
-	private Vector4[] m_BoxMin; //Field offset: 0x68
-	private Vector4[] m_ProbePosition; //Field offset: 0x70
-	private Vector4[] m_MipScaleOffset; //Field offset: 0x78
+	private RTHandle m_AtlasTexture0Handle; //Field offset: 0x18
+	private BuddyAllocator m_AtlasAllocator; //Field offset: 0x20
+	private Dictionary<Int32, CachedProbe> m_Cache; //Field offset: 0x48
+	private Dictionary<Int32, Int32> m_WarningCache; //Field offset: 0x50
+	private List<Int32> m_NeedsUpdate; //Field offset: 0x58
+	private List<Int32> m_NeedsRemove; //Field offset: 0x60
+	private Vector4[] m_BoxMax; //Field offset: 0x68
+	private Vector4[] m_BoxMin; //Field offset: 0x70
+	private Vector4[] m_ProbePosition; //Field offset: 0x78
+	private Vector4[] m_MipScaleOffset; //Field offset: 0x80
 
 	public RenderTexture atlasRT
+	{
+		 get { } //Length: 291
+	}
+
+	public RTHandle atlasRTHandle
 	{
 		 get { } //Length: 5
 	}
@@ -73,11 +79,13 @@ internal struct ReflectionProbeManager : IDisposable
 
 	public RenderTexture get_atlasRT() { }
 
+	public RTHandle get_atlasRTHandle() { }
+
 	private float4 GetScaleOffset(int level, int dataIndex, bool includePadding, bool yflip) { }
 
 	private void Init() { }
 
-	public void UpdateGpuData(CommandBuffer cmd, ref RenderingData renderingData) { }
+	public void UpdateGpuData(CommandBuffer cmd, ref CullingResults cullResults) { }
 
 }
 

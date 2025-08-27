@@ -60,6 +60,10 @@ public class MainMenuDebugPanel : MonoBehaviour
 	public Button clearQuestData; //Field offset: 0x1D8
 	public Button clearActorData; //Field offset: 0x1E0
 	public Button copyInstasButton; //Field offset: 0x1E8
+	[SerializeField]
+	private Button startV50QuestTutorialBtn; //Field offset: 0x1F0
+	[SerializeField]
+	private Button startOriginalTutorialBtn; //Field offset: 0x1F8
 
 	public MainMenuDebugPanel() { }
 

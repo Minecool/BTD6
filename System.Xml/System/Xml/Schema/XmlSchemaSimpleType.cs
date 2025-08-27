@@ -5,8 +5,8 @@ public class XmlSchemaSimpleType : XmlSchemaType
 	private XmlSchemaSimpleTypeContent content; //Field offset: 0x98
 
 	[XmlElement("restriction", typeof(XmlSchemaSimpleTypeRestriction))]
-	[XmlElement("union", typeof(XmlSchemaSimpleTypeUnion))]
 	[XmlElement("list", typeof(XmlSchemaSimpleTypeList))]
+	[XmlElement("union", typeof(XmlSchemaSimpleTypeUnion))]
 	public XmlSchemaSimpleTypeContent Content
 	{
 		 get { } //Length: 8

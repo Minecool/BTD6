@@ -19,7 +19,7 @@ public class WWWForm
 
 	public Byte[] data
 	{
-		 get { } //Length: 3881
+		 get { } //Length: 3924
 	}
 
 	internal static Encoding DefaultEncoding
@@ -29,7 +29,7 @@ public class WWWForm
 
 	public Dictionary<String, String> headers
 	{
-		 get { } //Length: 301
+		 get { } //Length: 297
 	}
 
 	private static WWWForm() { }

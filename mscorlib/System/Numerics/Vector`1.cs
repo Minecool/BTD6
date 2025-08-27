@@ -26,7 +26,7 @@ public struct Vector : IEquatable<Vector`1<T>>, IFormattable
 	public T Item
 	{
 		[Intrinsic]
-		 get { } //Length: 2894
+		 get { } //Length: 2654
 	}
 
 	public static Vector<T> Zero

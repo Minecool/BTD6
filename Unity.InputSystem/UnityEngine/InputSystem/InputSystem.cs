@@ -53,10 +53,9 @@ public static class InputSystem
 
 	}
 
-	internal const string kAssemblyVersion = "1.11.2"; //Field offset: 0x0
-	internal const string kDocUrl = "https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11"; //Field offset: 0x0
+	internal const string kAssemblyVersion = "1.14.1"; //Field offset: 0x0
+	internal const string kDocUrl = "https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14"; //Field offset: 0x0
 	private static readonly ProfilerMarker k_InputResetMarker; //Field offset: 0x0
-	internal const float scrollWheelDeltaPerTick = 1; //Field offset: 0x0
 	internal static InputManager s_Manager; //Field offset: 0x8
 	internal static InputRemoting s_Remote; //Field offset: 0x10
 
@@ -74,38 +73,38 @@ public static class InputSystem
 
 	public static event Action onAfterUpdate
 	{
-		 add { } //Length: 272
-		 remove { } //Length: 272
+		 add { } //Length: 262
+		 remove { } //Length: 262
 	}
 
 	public static event Action onBeforeUpdate
 	{
-		 add { } //Length: 272
-		 remove { } //Length: 272
+		 add { } //Length: 262
+		 remove { } //Length: 262
 	}
 
 	public static event Action<InputDevice, InputDeviceChange> onDeviceChange
 	{
-		 add { } //Length: 354
-		 remove { } //Length: 354
+		 add { } //Length: 344
+		 remove { } //Length: 344
 	}
 
 	public static event InputDeviceCommandDelegate onDeviceCommand
 	{
-		 add { } //Length: 354
-		 remove { } //Length: 354
+		 add { } //Length: 344
+		 remove { } //Length: 344
 	}
 
 	public static event InputDeviceFindControlLayoutDelegate onFindLayoutForDevice
 	{
-		 add { } //Length: 272
-		 remove { } //Length: 272
+		 add { } //Length: 262
+		 remove { } //Length: 262
 	}
 
 	public static event Action<String, InputControlLayoutChange> onLayoutChange
 	{
-		 add { } //Length: 272
-		 remove { } //Length: 272
+		 add { } //Length: 262
+		 remove { } //Length: 262
 	}
 
 	public static event Action onSettingsChange
@@ -127,7 +126,7 @@ public static class InputSystem
 
 	public static ReadOnlyArray<InputDevice> disconnectedDevices
 	{
-		 get { } //Length: 154
+		 get { } //Length: 153
 	}
 
 	internal static bool isProcessingEvents
@@ -166,6 +165,11 @@ public static class InputSystem
 	{
 		 get { } //Length: 129
 		 set { } //Length: 257
+	}
+
+	internal static float scrollWheelDeltaPerTick
+	{
+		internal get { } //Length: 219
 	}
 
 	public static InputSettings settings
@@ -253,6 +257,8 @@ public static class InputSystem
 
 	public static bool get_runInBackground() { }
 
+	internal static float get_scrollWheelDeltaPerTick() { }
+
 	public static InputSettings get_settings() { }
 
 	public static Version get_version() { }
@@ -315,13 +321,13 @@ public static class InputSystem
 
 	public static void RegisterBindingComposite(Type type, string name) { }
 
-	public static void RegisterInteraction(string name = null) { }
-
 	public static void RegisterInteraction(Type type, string name = null) { }
 
-	public static void RegisterLayout(Type type, string name = null, Nullable<InputDeviceMatcher> matches = null) { }
+	public static void RegisterInteraction(string name = null) { }
 
 	public static void RegisterLayout(string json, string name = null, Nullable<InputDeviceMatcher> matches = null) { }
+
+	public static void RegisterLayout(Type type, string name = null, Nullable<InputDeviceMatcher> matches = null) { }
 
 	public static void RegisterLayout(string name = null, Nullable<InputDeviceMatcher> matches = null) { }
 
@@ -387,9 +393,9 @@ public static class InputSystem
 
 	public static void set_settings(InputSettings value) { }
 
-	public static void SetDeviceUsage(InputDevice device, string usage) { }
-
 	public static void SetDeviceUsage(InputDevice device, InternedString usage) { }
+
+	public static void SetDeviceUsage(InputDevice device, string usage) { }
 
 	public static string TryFindMatchingLayout(InputDeviceDescription deviceDescription) { }
 

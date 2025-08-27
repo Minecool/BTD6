@@ -7,7 +7,7 @@ public class CreateAreasAction : MapAction
 
 	public virtual MapActionModel Def
 	{
-		 get { } //Length: 495
+		 get { } //Length: 485
 	}
 
 	public CreateAreasAction() { }

@@ -311,13 +311,13 @@ public class Socket : IDisposable
 
 	public bool DontFragment
 	{
-		 set { } //Length: 146
+		 set { } //Length: 144
 	}
 
 	public bool DualMode
 	{
-		 get { } //Length: 223
-		 set { } //Length: 153
+		 get { } //Length: 193
+		 set { } //Length: 151
 	}
 
 	internal static int FamilyHint
@@ -337,7 +337,7 @@ public class Socket : IDisposable
 
 	private bool IsDualMode
 	{
-		private get { } //Length: 237
+		private get { } //Length: 91
 	}
 
 	public EndPoint LocalEndPoint
@@ -347,7 +347,7 @@ public class Socket : IDisposable
 
 	public bool NoDelay
 	{
-		 set { } //Length: 133
+		 set { } //Length: 131
 	}
 
 	public static bool OSSupportsIPv4

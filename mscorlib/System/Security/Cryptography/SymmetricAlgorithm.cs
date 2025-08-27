@@ -16,7 +16,7 @@ public abstract class SymmetricAlgorithm : IDisposable
 	public override int BlockSize
 	{
 		 get { } //Length: 94
-		 set { } //Length: 341
+		 set { } //Length: 267
 	}
 
 	public override int FeedbackSize

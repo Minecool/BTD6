@@ -49,7 +49,7 @@ internal sealed class XPathDocumentNavigator : XPathNavigator, IXmlLineInfo
 
 	public virtual string Value
 	{
-		 get { } //Length: 600
+		 get { } //Length: 596
 	}
 
 	public XPathDocumentNavigator(XPathNode[] pageCurrent, int idxCurrent, XPathNode[] pageParent, int idxParent) { }

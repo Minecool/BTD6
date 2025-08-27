@@ -85,7 +85,7 @@ public class PropToSimulation : Selectable
 
 	public Vector3 Position
 	{
-		 get { } //Length: 214
+		 get { } //Length: 203
 	}
 
 	public Vector3 Rotation
@@ -95,7 +95,7 @@ public class PropToSimulation : Selectable
 
 	public Vector3 Scale
 	{
-		 get { } //Length: 219
+		 get { } //Length: 208
 	}
 
 	public TargetType TargetType

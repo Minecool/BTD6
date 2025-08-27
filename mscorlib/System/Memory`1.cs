@@ -5,7 +5,6 @@ namespace System;
 [IsReadOnly]
 public struct Memory : IEquatable<Memory`1<T>>
 {
-	private const int RemoveFlagsBitMask = 2147483647; //Field offset: 0x0
 	private readonly object _object; //Field offset: 0x0
 	private readonly int _index; //Field offset: 0x0
 	private readonly int _length; //Field offset: 0x0
@@ -17,7 +16,7 @@ public struct Memory : IEquatable<Memory`1<T>>
 
 	public Span<T> Span
 	{
-		 get { } //Length: 1017
+		 get { } //Length: 898
 	}
 
 	public Memory`1(T[] array) { }

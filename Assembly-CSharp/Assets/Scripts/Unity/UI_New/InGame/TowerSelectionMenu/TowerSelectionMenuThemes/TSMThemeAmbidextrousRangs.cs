@@ -2,9 +2,9 @@ namespace Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMe
 
 public class TSMThemeAmbidextrousRangs : TSMThemeDefault
 {
-	public TSMButton leftHandButton; //Field offset: 0xC0
-	public TSMButton rightHandButton; //Field offset: 0xC8
-	private bool isMonkeyPortraitFlipped; //Field offset: 0xD0
+	public TSMButton leftHandButton; //Field offset: 0xD8
+	public TSMButton rightHandButton; //Field offset: 0xE0
+	private bool isMonkeyPortraitFlipped; //Field offset: 0xE8
 
 	public TSMThemeAmbidextrousRangs() { }
 

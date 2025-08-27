@@ -1,6 +1,7 @@
 namespace TMPro;
 
 [ExcludeFromPreset]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/TextMeshPro/Settings.html")]
 public class TMP_Settings : ScriptableObject
 {
 	internal class LineBreakingTable

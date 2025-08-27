@@ -12,7 +12,7 @@ public abstract class Encoder
 
 	public EncoderFallbackBuffer FallbackBuffer
 	{
-		 get { } //Length: 253
+		 get { } //Length: 248
 	}
 
 	internal bool InternalHasFallbackBuffer

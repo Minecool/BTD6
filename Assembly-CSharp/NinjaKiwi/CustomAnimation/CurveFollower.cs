@@ -55,7 +55,7 @@ public class CurveFollower : MonoBehaviour
 
 	public float Progress
 	{
-		 get { } //Length: 172
+		 get { } //Length: 175
 	}
 
 	public CurveFollower() { }

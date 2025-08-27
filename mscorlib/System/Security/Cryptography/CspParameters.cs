@@ -12,7 +12,7 @@ public sealed class CspParameters
 	public CspProviderFlags Flags
 	{
 		 get { } //Length: 4
-		 set { } //Length: 231
+		 set { } //Length: 223
 	}
 
 	public CspParameters() { }

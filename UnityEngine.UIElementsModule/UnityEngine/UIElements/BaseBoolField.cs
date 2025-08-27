@@ -2,20 +2,60 @@ namespace UnityEngine.UIElements;
 
 public abstract class BaseBoolField : BaseField<Boolean>
 {
-	protected Label m_Label; //Field offset: 0x440
-	protected readonly VisualElement m_CheckMark; //Field offset: 0x448
-	internal Clickable m_Clickable; //Field offset: 0x450
-	private string m_OriginalText; //Field offset: 0x458
+	internal static readonly BindingId textProperty; //Field offset: 0x0
+	internal static readonly BindingId toggleOnLabelClickProperty; //Field offset: 0x98
+	protected Label m_Label; //Field offset: 0x538
+	protected private readonly VisualElement m_CheckMark; //Field offset: 0x540
+	internal readonly Clickable m_Clickable; //Field offset: 0x548
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private bool <toggleOnLabelClick>k__BackingField; //Field offset: 0x550
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private bool <toggleOnTextClick>k__BackingField; //Field offset: 0x551
+	private string m_OriginalText; //Field offset: 0x558
 
+	internal bool acceptClicksIfDisabled
+	{
+		internal set { } //Length: 118
+	}
+
+	[CreateProperty]
 	public string text
 	{
 		 get { } //Length: 47
-		 set { } //Length: 152
+		 set { } //Length: 251
 	}
+
+	[CreateProperty]
+	public bool toggleOnLabelClick
+	{
+		[CompilerGenerated]
+		 get { } //Length: 8
+		[CompilerGenerated]
+		 set { } //Length: 7
+	}
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal bool toggleOnTextClick
+	{
+		[CompilerGenerated]
+		internal get { } //Length: 8
+		[CompilerGenerated]
+		internal set { } //Length: 7
+	}
+
+	private static BaseBoolField() { }
 
 	public BaseBoolField(string label) { }
 
 	public string get_text() { }
+
+	[CompilerGenerated]
+	public bool get_toggleOnLabelClick() { }
+
+	[CompilerGenerated]
+	internal bool get_toggleOnTextClick() { }
 
 	protected override void InitLabel() { }
 
@@ -25,9 +65,19 @@ public abstract class BaseBoolField : BaseField<Boolean>
 
 	internal virtual void RegisterEditingCallbacks() { }
 
+	internal void set_acceptClicksIfDisabled(bool value) { }
+
 	public void set_text(string value) { }
 
+	[CompilerGenerated]
+	public void set_toggleOnLabelClick(bool value) { }
+
+	[CompilerGenerated]
+	internal void set_toggleOnTextClick(bool value) { }
+
 	public virtual void SetValueWithoutNotify(bool newValue) { }
+
+	private bool ShouldIgnoreClick(Vector3 position) { }
 
 	protected override void ToggleValue() { }
 

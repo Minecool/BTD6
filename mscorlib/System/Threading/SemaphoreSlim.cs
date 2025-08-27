@@ -39,7 +39,6 @@ public class SemaphoreSlim : IDisposable
 	}
 
 	private static readonly Task<Boolean> s_trueTask; //Field offset: 0x0
-	private const int NO_MAXIMUM = 2147483647; //Field offset: 0x0
 	private static readonly Task<Boolean> s_falseTask; //Field offset: 0x8
 	private static Action<Object> s_cancellationTokenCanceledEventHandler; //Field offset: 0x10
 	private int m_currentCount; //Field offset: 0x10

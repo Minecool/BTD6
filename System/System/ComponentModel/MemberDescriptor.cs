@@ -19,22 +19,22 @@ public abstract class MemberDescriptor
 	protected override Attribute[] AttributeArray
 	{
 		 get { } //Length: 36
-		 set { } //Length: 167
+		 set { } //Length: 157
 	}
 
 	public override AttributeCollection Attributes
 	{
-		 get { } //Length: 212
+		 get { } //Length: 202
 	}
 
 	public override string DisplayName
 	{
-		 get { } //Length: 328
+		 get { } //Length: 293
 	}
 
 	public override string Name
 	{
-		 get { } //Length: 67
+		 get { } //Length: 61
 	}
 
 	protected override int NameHashCode

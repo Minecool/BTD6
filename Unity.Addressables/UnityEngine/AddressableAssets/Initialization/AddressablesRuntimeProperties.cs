@@ -13,9 +13,11 @@ public static class AddressablesRuntimeProperties
 
 	public static string EvaluateProperty(string name) { }
 
-	public static string EvaluateString(string input) { }
+	public static string EvaluateString(string inputString) { }
 
 	public static string EvaluateString(string inputString, char startDelimiter, char endDelimiter, Func<String, String> varFunc) { }
+
+	private static string EvaluateStringInternal(string inputString, char startDelimiter, char endDelimiter, Func<String, String> varFunc) { }
 
 	private static Assembly[] GetAssemblies() { }
 

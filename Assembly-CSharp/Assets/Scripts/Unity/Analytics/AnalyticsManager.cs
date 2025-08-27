@@ -26,7 +26,7 @@ public class AnalyticsManager
 	}
 
 	[CompilerGenerated]
-	private struct <GetHackerStatus>d__54 : IAsyncStateMachine
+	private struct <GetHackerStatus>d__55 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder<Nullable`1<Boolean>> <>t__builder; //Field offset: 0x8
@@ -107,7 +107,7 @@ public class AnalyticsManager
 	}
 
 	[CompilerGenerated]
-	private struct <StartSession>d__53 : IAsyncStateMachine
+	private struct <StartSession>d__54 : IAsyncStateMachine
 	{
 		public int <>1__state; //Field offset: 0x0
 		public AsyncVoidMethodBuilder <>t__builder; //Field offset: 0x8
@@ -148,7 +148,7 @@ public class AnalyticsManager
 	public static bool EventsEnabled
 	{
 		 get { } //Length: 7
-		 set { } //Length: 103
+		 set { } //Length: 100
 	}
 
 	private int GameId
@@ -183,7 +183,7 @@ public class AnalyticsManager
 	public AnalyticsManager() { }
 
 	[CompilerGenerated]
-	internal static string <EndBoss>g__padMilliSeconds|83_0(int ms) { }
+	internal static string <EndBoss>g__padMilliSeconds|84_0(int ms) { }
 
 	public void AccessBossMenu(string from) { }
 
@@ -315,6 +315,8 @@ public class AnalyticsManager
 
 	public void FailedLeaderboardSubmission(LeaderboardType leaderboardType, string leaderboardId, ulong score, bool isMini, string exception, bool isElite = false, int teamSize = 1) { }
 
+	public void FailedParsingGift(string giftId, string giftJson, string exception) { }
+
 	private void FirstPurchase(string itemName, float amountSpent, string currency) { }
 
 	private void FirstSession() { }
@@ -350,7 +352,7 @@ public class AnalyticsManager
 
 	private string GetEventName(string baseName, bool isCheated) { }
 
-	[AsyncStateMachine(typeof(<GetHackerStatus>d__54))]
+	[AsyncStateMachine(typeof(<GetHackerStatus>d__55))]
 	private static Task<Nullable`1<Boolean>> GetHackerStatus() { }
 
 	public void GetInstaMonkey(string monkey_name, Int32[] rawTier, LootFrom source) { }
@@ -358,6 +360,8 @@ public class AnalyticsManager
 	private LeakedBloon GetLeakedBloon(List<LeakedBloon> bloonsList, string bloon, int round) { }
 
 	public void GetPower(string powerName, int quantity, int mmSpent, LootFrom gainedBy) { }
+
+	public void GetPowersPro(string powerName, int quantity, int mmSpent, LootFrom gainedBy) { }
 
 	private string GetRankedLeaderboardId() { }
 
@@ -535,6 +539,10 @@ public class AnalyticsManager
 
 	public void PlayerLoaded(Btd6Player player) { }
 
+	public void PowersProGainXP(string powerId, int xpGained, int xpCost, int xpCurrent, int tierUnlock, bool fromPro) { }
+
+	public void PowersProUnlockTier(string powerId, int previousTier, int currentTier) { }
+
 	public void PresentAvailable(int playerRank, string towerName) { }
 
 	public void PresentOpened(int playerRank, string towerName) { }
@@ -581,6 +589,8 @@ public class AnalyticsManager
 
 	public void RestartRace(string eventID, int mmSpent, int mmLeft, bool hasRacePass) { }
 
+	public void RolledRandomTutorial(TutorialType randomTutorialType) { }
+
 	private void RoundBalance(int gameId, int attemptId, AnalyticsGameSessionInfo sessionInfo, AnalyticsEventGroup analyticsGroup) { }
 
 	public void SavedGame(GameEditorModel gameEditorModel, string creationId) { }
@@ -612,6 +622,10 @@ public class AnalyticsManager
 	private void SendLiNKAttributionEvent() { }
 
 	public void SendMute(bool muted) { }
+
+	public void SendQuestAnalyticEvent(QuestGameData quest, string analyticEventId) { }
+
+	public void SendQuestAnalyticEventHookEvent(QuestGameData quest, EventHookToSimulation eventHook, HookConditionModel condition, bool isStartHookCondition) { }
 
 	public static void set_EventsEnabled(bool value) { }
 
@@ -646,7 +660,7 @@ public class AnalyticsManager
 
 	public void StartRace(string eventID, string startMethod, int mmSpent, int mmLeft) { }
 
-	[AsyncStateMachine(typeof(<StartSession>d__53))]
+	[AsyncStateMachine(typeof(<StartSession>d__54))]
 	public void StartSession(bool isOfflineMode) { }
 
 	public void StartTrack(string gameMode, bool resumedGame, bool coopMode, string mapName, string difficulty, bool overwroteSave, float monkeyMoney, int knowledgePoints, string heroSelected, string heroSkin, string eventId, int rank, bool isRestart, bool doubleCash, bool fastTrack) { }
@@ -693,9 +707,13 @@ public class AnalyticsManager
 
 	public void UnlockMapEditor(string unlockedWith, bool unlocked) { }
 
+	public void UnlockPowersPro(string powerId) { }
+
 	public void UnlockPropPack(string proppack, string unlockedWith, bool unlocked) { }
 
 	public void UnlockTowerTier(Int32[] rawTiers, string towerName, string upgradeName, int xpSpent, int xpLeftover) { }
+
+	public void UpgradePowersPro(int gameId, int attemptId, TowerUpgradeInfo upgradeInfo, AnalyticsGameSessionInfo sessionInfo, AnalyticsEventGroup analyticsGroup) { }
 
 	private void UpgradeUnit(int gameId, int attemptId, TowerUpgradeInfo upgradeInfo, AnalyticsGameSessionInfo sessionInfo, AnalyticsEventGroup analyticsGroup) { }
 
@@ -703,9 +721,9 @@ public class AnalyticsManager
 
 	public void UseCheckpoint(int roundReachedReal, int roundReached, int mmSpent, string eventId, bool isRanked, bool isElite, bool isCoop, int players) { }
 
-	private void UseContinue(string map, string difficulty, int mmSpent, int roundReached) { }
-
 	public void UseContinue(string map, string difficulty, int mmSpent, int roundReached, bool isCoop) { }
+
+	private void UseContinue(string map, string difficulty, int mmSpent, int roundReached) { }
 
 	private void UseCoopContinue(string map, string difficulty, int mmSpent, int roundReached) { }
 

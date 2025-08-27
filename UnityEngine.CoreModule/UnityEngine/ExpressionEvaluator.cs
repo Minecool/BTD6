@@ -23,6 +23,7 @@ public class ExpressionEvaluator
 		Right = 1,
 	}
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
 	public class Expression
 	{
 		internal readonly String[] rpnTokens; //Field offset: 0x10
@@ -30,7 +31,13 @@ public class ExpressionEvaluator
 
 		internal Expression(string expression) { }
 
+		public virtual bool Equals(object obj) { }
+
 		public bool Evaluate(ref T value, int index = 0, int count = 1) { }
+
+		public virtual int GetHashCode() { }
+
+		public virtual string ToString() { }
 
 	}
 

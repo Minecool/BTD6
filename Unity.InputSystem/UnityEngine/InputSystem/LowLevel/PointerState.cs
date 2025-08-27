@@ -18,12 +18,12 @@ internal struct PointerState : IInputStateTypeInfo
 
 	public override FourCC format
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public static FourCC kFormat
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public override FourCC get_format() { }

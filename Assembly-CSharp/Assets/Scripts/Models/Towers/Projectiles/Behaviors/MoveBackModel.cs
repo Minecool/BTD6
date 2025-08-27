@@ -23,7 +23,7 @@ public class MoveBackModel : ProjectileBehaviorModel
 
 	public MoveBackMutator Mutator
 	{
-		 get { } //Length: 209
+		 get { } //Length: 213
 	}
 
 	public MoveBackModel(string name, float multiplier, float lifespan, string mutationId, int layers) { }

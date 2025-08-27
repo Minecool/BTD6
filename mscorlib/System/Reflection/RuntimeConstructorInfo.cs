@@ -53,7 +53,7 @@ internal class RuntimeConstructorInfo : ConstructorInfo, ISerializable
 
 	public virtual string Name
 	{
-		 get { } //Length: 16
+		 get { } //Length: 14
 	}
 
 	public virtual Type ReflectedType
@@ -63,7 +63,7 @@ internal class RuntimeConstructorInfo : ConstructorInfo, ISerializable
 
 	private RuntimeType ReflectedTypeInternal
 	{
-		private get { } //Length: 125
+		private get { } //Length: 129
 	}
 
 	public RuntimeConstructorInfo() { }

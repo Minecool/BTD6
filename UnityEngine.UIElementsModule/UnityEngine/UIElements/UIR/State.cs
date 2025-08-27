@@ -6,6 +6,7 @@ internal struct State
 	public TextureId texture; //Field offset: 0x8
 	public int stencilRef; //Field offset: 0xC
 	public float sdfScale; //Field offset: 0x10
+	public float sharpness; //Field offset: 0x14
 
 }
 

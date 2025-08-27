@@ -37,7 +37,7 @@ public class DamageOverTime : BloonBehavior
 
 	public virtual BloonBehaviorModel Def
 	{
-		 get { } //Length: 2176
+		 get { } //Length: 2165
 	}
 
 	public DamageOverTime() { }

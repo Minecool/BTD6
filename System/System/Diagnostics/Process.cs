@@ -70,21 +70,21 @@ public class Process : Component
 	[MonitoringDescription("Indicates if the associated process has been terminated.")]
 	public bool HasExited
 	{
-		 get { } //Length: 834
+		 get { } //Length: 821
 	}
 
 	[DesignerSerializationVisibility(DesignerSerializationVisibility::Hidden (0))]
 	[MonitoringDescription("The unique identifier for the process.")]
 	public int Id
 	{
-		 get { } //Length: 31
+		 get { } //Length: 30
 	}
 
 	[DesignerSerializationVisibility(DesignerSerializationVisibility::Hidden (0))]
 	[MonitoringDescription("The name of this process.")]
 	public string ProcessName
 	{
-		 get { } //Length: 545
+		 get { } //Length: 528
 	}
 
 	[Browsable(False)]
@@ -92,7 +92,7 @@ public class Process : Component
 	[MonitoringDescription("The object used to marshal the event handler calls issued as a result of a Process exit.")]
 	public ISynchronizeInvoke SynchronizingObject
 	{
-		 get { } //Length: 367
+		 get { } //Length: 355
 	}
 
 	private Process(string machineName, bool isRemoteMachine, int processId, ProcessInfo processInfo) { }

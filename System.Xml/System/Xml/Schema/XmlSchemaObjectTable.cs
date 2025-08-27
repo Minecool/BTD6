@@ -58,17 +58,17 @@ public class XmlSchemaObjectTable
 
 		public override DictionaryEntry Entry
 		{
-			 get { } //Length: 415
+			 get { } //Length: 398
 		}
 
 		public override object Key
 		{
-			 get { } //Length: 388
+			 get { } //Length: 371
 		}
 
 		public override object Value
 		{
-			 get { } //Length: 388
+			 get { } //Length: 371
 		}
 
 		internal XSODictionaryEnumerator(List<XmlSchemaObjectEntry> entries, int size, EnumeratorType enumType) { }
@@ -92,7 +92,7 @@ public class XmlSchemaObjectTable
 
 		public override object Current
 		{
-			 get { } //Length: 537
+			 get { } //Length: 520
 		}
 
 		internal XSOEnumerator(List<XmlSchemaObjectEntry> entries, int size, EnumeratorType enumType) { }

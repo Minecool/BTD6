@@ -6,6 +6,7 @@ public class StoreScreenMenuData
 	private readonly StoreCategoryFilter <StoreCategoryFilter>k__BackingField; //Field offset: 0x10
 	[CompilerGenerated]
 	private readonly string <SelectedProductId>k__BackingField; //Field offset: 0x18
+	public bool ForceRefresh; //Field offset: 0x20
 
 	public string SelectedProductId
 	{
@@ -19,7 +20,7 @@ public class StoreScreenMenuData
 		 get { } //Length: 94
 	}
 
-	public StoreScreenMenuData(StoreCategoryFilter storeCategoryFilter, string selectedProductId) { }
+	public StoreScreenMenuData(StoreCategoryFilter storeCategoryFilter, string selectedProductId, bool forceRefresh = false) { }
 
 	[CompilerGenerated]
 	public string get_SelectedProductId() { }

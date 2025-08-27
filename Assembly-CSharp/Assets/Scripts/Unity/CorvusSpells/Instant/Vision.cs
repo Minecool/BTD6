@@ -6,7 +6,7 @@ public class Vision : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1123
+		 get { } //Length: 783
 	}
 
 	public Vision() { }

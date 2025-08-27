@@ -13,7 +13,7 @@ public struct TopContributor
 	{
 		[CompilerGenerated]
 		[IsReadOnly]
-		 get { } //Length: 5
+		 get { } //Length: 291
 		[CompilerGenerated]
 		 set { } //Length: 5
 	}

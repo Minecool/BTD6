@@ -1,6 +1,6 @@
 namespace NinjaKiwi.LiNK.Client.Files;
 
-internal class RevisionStrategy : FileSystemStorage
+internal sealed class RevisionStrategy : FileSystemStorage
 {
 	[CompilerGenerated]
 	private sealed class <GetAllReadStreams>d__2 : IEnumerable<Stream>, IEnumerable, IEnumerator<Stream>, IEnumerator, IDisposable

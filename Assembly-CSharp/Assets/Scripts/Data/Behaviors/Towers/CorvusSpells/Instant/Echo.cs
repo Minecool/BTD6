@@ -7,7 +7,7 @@ public class Echo : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 644
+		 get { } //Length: 658
 	}
 
 	public Echo() { }

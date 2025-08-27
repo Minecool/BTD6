@@ -79,7 +79,7 @@ public class GameEditorData : ScriptableObject
 
 	public Dictionary<Type, PrefabReference> VariableViewPrefabs
 	{
-		 get { } //Length: 580
+		 get { } //Length: 529
 	}
 
 	public GameEditorData() { }

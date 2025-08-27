@@ -116,7 +116,7 @@ public class InputControlLayout
 		public string extendsLayout
 		{
 			 get { } //Length: 5
-			 set { } //Length: 50
+			 set { } //Length: 49
 		}
 
 		public string name
@@ -956,7 +956,7 @@ public class InputControlLayout
 
 	public internal Nullable<Boolean> canRunInBackground
 	{
-		 get { } //Length: 91
+		 get { } //Length: 89
 		internal set { } //Length: 149
 	}
 
@@ -988,17 +988,17 @@ public class InputControlLayout
 
 	public bool isControlLayout
 	{
-		 get { } //Length: 144
+		 get { } //Length: 132
 	}
 
 	public bool isDeviceLayout
 	{
-		 get { } //Length: 138
+		 get { } //Length: 126
 	}
 
 	public internal bool isGenericTypeOfDevice
 	{
-		 get { } //Length: 11
+		 get { } //Length: 10
 		internal set { } //Length: 31
 	}
 
@@ -1016,7 +1016,7 @@ public class InputControlLayout
 
 	public ControlItem Item
 	{
-		 get { } //Length: 441
+		 get { } //Length: 427
 	}
 
 	public InternedString name

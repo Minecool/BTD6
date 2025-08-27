@@ -8,13 +8,13 @@ public class VariableViewModel : VariableBaseViewModel
 
 	public bool IsHidden
 	{
-		 get { } //Length: 250
+		 get { } //Length: 238
 	}
 
 	public virtual object UntypedValue
 	{
 		 get { } //Length: 43
-		 set { } //Length: 348
+		 set { } //Length: 340
 	}
 
 	public T Value

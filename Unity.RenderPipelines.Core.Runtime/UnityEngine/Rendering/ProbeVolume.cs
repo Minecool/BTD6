@@ -1,6 +1,6 @@
 namespace UnityEngine.Rendering;
 
-[AddComponentMenu("Rendering/Probe Volume")]
+[AddComponentMenu("Rendering/Adaptive Probe Volume")]
 [ExecuteAlways]
 public class ProbeVolume : MonoBehaviour
 {
@@ -15,7 +15,8 @@ public class ProbeVolume : MonoBehaviour
 	{
 		Initial = 0,
 		LocalMode = 1,
-		Count = 2,
+		InvertOverrideLevels = 2,
+		Count = 3,
 	}
 
 	[Tooltip("When set to Global this Probe Volume considers all renderers with Contribute Global Illumination enabled. Local only considers renderers in the scene.\nThis list updates every time the Scene is saved or the lighting is baked.")]
@@ -41,7 +42,7 @@ public class ProbeVolume : MonoBehaviour
 	[SerializeField]
 	internal int cachedHashCode; //Field offset: 0x88
 	[HideInInspector]
-	[Tooltip("Whether spaces with no renderers need to be filled with bricks at lowest subdivision level.")]
+	[Tooltip("Whether Unity should fill empty space between renderers with bricks at the highest subdivision level.")]
 	public bool fillEmptySpaces; //Field offset: 0x8C
 	[SerializeField]
 	private Version version; //Field offset: 0x90

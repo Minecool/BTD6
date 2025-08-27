@@ -189,7 +189,7 @@ internal class WebRequestStream : WebConnectionStream
 
 	internal int WriteBufferLength
 	{
-		internal get { } //Length: 92
+		internal get { } //Length: 83
 	}
 
 	private static WebRequestStream() { }

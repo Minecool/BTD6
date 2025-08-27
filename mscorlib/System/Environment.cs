@@ -98,12 +98,12 @@ public static class Environment
 
 	public static string NewLine
 	{
-		 get { } //Length: 96
+		 get { } //Length: 101
 	}
 
 	public static OperatingSystem OSVersion
 	{
-		 get { } //Length: 647
+		 get { } //Length: 629
 	}
 
 	internal static PlatformID Platform
@@ -124,7 +124,7 @@ public static class Environment
 
 	public static string SystemDirectory
 	{
-		 get { } //Length: 598
+		 get { } //Length: 586
 	}
 
 	public static int TickCount

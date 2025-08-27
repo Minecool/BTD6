@@ -16,7 +16,7 @@ public class UriBuilder
 
 	public string Fragment
 	{
-		 set { } //Length: 153
+		 set { } //Length: 141
 	}
 
 	public string Host
@@ -26,18 +26,20 @@ public class UriBuilder
 
 	public string Path
 	{
-		 set { } //Length: 159
+		 set { } //Length: 157
 	}
 
 	public string Query
 	{
-		 set { } //Length: 153
+		 set { } //Length: 141
 	}
 
 	public Uri Uri
 	{
 		 get { } //Length: 149
 	}
+
+	public UriBuilder() { }
 
 	public UriBuilder(string uri) { }
 

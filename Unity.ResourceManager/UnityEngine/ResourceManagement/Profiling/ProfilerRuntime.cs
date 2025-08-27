@@ -34,6 +34,8 @@ internal static class ProfilerRuntime
 
 	private static string GetContainingBundleNameForLocation(IResourceLocation location) { }
 
+	internal static int GetSceneLoadCounterValue() { }
+
 	public static void Initialise() { }
 
 	private static void InstanceOnOnLateUpdateDelegate(float deltaTime) { }

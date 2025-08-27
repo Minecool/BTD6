@@ -89,7 +89,7 @@ public class ImageManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 270
+		private get { } //Length: 258
 	}
 
 	internal ImageManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

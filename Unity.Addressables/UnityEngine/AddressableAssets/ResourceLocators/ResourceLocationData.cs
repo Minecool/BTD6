@@ -22,7 +22,7 @@ public class ResourceLocationData
 
 	public object Data
 	{
-		 get { } //Length: 69
+		 get { } //Length: 64
 		 set { } //Length: 162
 	}
 

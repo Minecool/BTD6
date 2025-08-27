@@ -245,7 +245,7 @@ public class TeamsStoreScreen : GameMenu
 
 	private bool CanShowRelics
 	{
-		private get { } //Length: 189
+		private get { } //Length: 288
 	}
 
 	private CtEvent CtEvent

@@ -25,7 +25,7 @@ public class BottleHotSauceBehaviorModel : GeraldoItemBehaviorModel
 
 	public BottleHotSauceMutator Mutator
 	{
-		 get { } //Length: 271
+		 get { } //Length: 275
 	}
 
 	public BottleHotSauceBehaviorModel(string name, PrefabReference buffDisplayPath, string buffLocsName, string buffIconName, PrefabReference effectAtTowerId, int v2At) { }

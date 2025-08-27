@@ -22,12 +22,12 @@ internal class ProviderOperation : AsyncOperationBase<TObject>, IGenericProvider
 
 	protected virtual string DebugName
 	{
-		 get { } //Length: 285
+		 get { } //Length: 268
 	}
 
 	public override int DependencyCount
 	{
-		 get { } //Length: 167
+		 get { } //Length: 162
 	}
 
 	public override IResourceLocation Location
@@ -37,7 +37,7 @@ internal class ProviderOperation : AsyncOperationBase<TObject>, IGenericProvider
 
 	protected virtual float Progress
 	{
-		 get { } //Length: 733
+		 get { } //Length: 819
 	}
 
 	public override int ProvideHandleVersion
@@ -47,7 +47,7 @@ internal class ProviderOperation : AsyncOperationBase<TObject>, IGenericProvider
 
 	public override Type RequestedType
 	{
-		 get { } //Length: 88
+		 get { } //Length: 57
 	}
 
 	private override IOperationCacheKey UnityEngine.ResourceManagement.AsyncOperations.ICachable.Key

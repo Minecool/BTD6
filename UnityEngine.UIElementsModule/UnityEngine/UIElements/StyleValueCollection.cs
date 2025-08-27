@@ -6,7 +6,19 @@ internal class StyleValueCollection
 
 	public StyleValueCollection() { }
 
+	public StyleBackground GetStyleBackground(StylePropertyId id) { }
+
+	public StyleBackgroundPosition GetStyleBackgroundPosition(StylePropertyId id) { }
+
+	public StyleBackgroundRepeat GetStyleBackgroundRepeat(StylePropertyId id) { }
+
+	public StyleColor GetStyleColor(StylePropertyId id) { }
+
 	public StyleFloat GetStyleFloat(StylePropertyId id) { }
+
+	public StyleFont GetStyleFont(StylePropertyId id) { }
+
+	public StyleFontDefinition GetStyleFontDefinition(StylePropertyId id) { }
 
 	public StyleInt GetStyleInt(StylePropertyId id) { }
 

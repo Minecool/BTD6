@@ -17,7 +17,7 @@ public class ArriveAtTarget : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 517
+		 get { } //Length: 519
 	}
 
 	public ArriveAtTarget() { }

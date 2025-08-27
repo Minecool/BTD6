@@ -10,7 +10,7 @@ public class BloonsPoppedTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 461
+		 get { } //Length: 450
 	}
 
 	public BloonsPoppedTrigger() { }

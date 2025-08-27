@@ -20,7 +20,7 @@ public class Slow : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 571
+		 get { } //Length: 579
 	}
 
 	public Slow() { }

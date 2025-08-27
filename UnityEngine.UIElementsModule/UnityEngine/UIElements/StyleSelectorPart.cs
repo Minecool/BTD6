@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal struct StyleSelectorPart
 {
 	[SerializeField]
@@ -11,6 +12,7 @@ internal struct StyleSelectorPart
 	public internal StyleSelectorType type
 	{
 		 get { } //Length: 6
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal set { } //Length: 4
 	}
 
@@ -29,6 +31,7 @@ internal struct StyleSelectorPart
 
 	public string get_value() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal void set_type(StyleSelectorType value) { }
 
 	public virtual string ToString() { }

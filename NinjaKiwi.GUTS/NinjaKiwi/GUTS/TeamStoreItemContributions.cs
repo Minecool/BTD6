@@ -20,7 +20,7 @@ public class TeamStoreItemContributions
 
 	public int PercentageFunded
 	{
-		 get { } //Length: 220
+		 get { } //Length: 224
 	}
 
 	public int Price

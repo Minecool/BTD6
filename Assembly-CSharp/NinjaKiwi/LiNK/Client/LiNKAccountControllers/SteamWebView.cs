@@ -3,12 +3,12 @@ namespace NinjaKiwi.LiNK.Client.LiNKAccountControllers;
 public class SteamWebView : MonoBehaviour
 {
 	[CompilerGenerated]
-	private sealed class <LoadAsync>d__34 : IEnumerator<Object>, IEnumerator, IDisposable
+	private sealed class <LoadAsync>d__29 : IEnumerator<Object>, IEnumerator, IDisposable
 	{
 		private int <>1__state; //Field offset: 0x10
 		private object <>2__current; //Field offset: 0x18
-		public SteamWebView <>4__this; //Field offset: 0x20
-		public string url; //Field offset: 0x28
+		public string url; //Field offset: 0x20
+		public SteamWebView <>4__this; //Field offset: 0x28
 
 		private override object System.Collections.Generic.IEnumerator<System.Object>.Current
 		{
@@ -23,7 +23,7 @@ public class SteamWebView : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		public <LoadAsync>d__34(int <>1__state) { }
+		public <LoadAsync>d__29(int <>1__state) { }
 
 		private override bool MoveNext() { }
 
@@ -73,18 +73,14 @@ public class SteamWebView : MonoBehaviour
 	public bool browserReady; //Field offset: 0x21
 	public Texture2D texture; //Field offset: 0x28
 	private Vector2 lastMousePos; //Field offset: 0x30
-	private uint verticalScrollMax; //Field offset: 0x38
-	private uint veritcalScrollCurrent; //Field offset: 0x3C
-	private uint horizontalScrollMax; //Field offset: 0x40
-	private uint horizontalScrollCurrent; //Field offset: 0x44
-	private bool hidden; //Field offset: 0x48
-	private bool loadingUrl; //Field offset: 0x49
+	private bool hidden; //Field offset: 0x38
+	private bool loadingUrl; //Field offset: 0x39
 	[CompilerGenerated]
-	private MessageReceivedDelegate OnMessageReceived; //Field offset: 0x50
+	private MessageReceivedDelegate OnMessageReceived; //Field offset: 0x40
 	[CompilerGenerated]
-	private PageFinishedDelegate OnPageFinished; //Field offset: 0x58
+	private PageFinishedDelegate OnPageFinished; //Field offset: 0x48
 	[CompilerGenerated]
-	private LoadingErrorReceivedDelegate OnLoadingErrorReceived; //Field offset: 0x60
+	private LoadingErrorReceivedDelegate OnLoadingErrorReceived; //Field offset: 0x50
 
 	public event LoadingErrorReceivedDelegate OnLoadingErrorReceived
 	{
@@ -118,10 +114,10 @@ public class SteamWebView : MonoBehaviour
 	public SteamWebView() { }
 
 	[CompilerGenerated]
-	private void <Awake>b__29_0() { }
+	private void <Awake>b__24_0() { }
 
 	[CompilerGenerated]
-	private void <Awake>b__29_1() { }
+	private void <Awake>b__24_1() { }
 
 	[CompilerGenerated]
 	public void add_OnLoadingErrorReceived(LoadingErrorReceivedDelegate value) { }
@@ -136,9 +132,7 @@ public class SteamWebView : MonoBehaviour
 
 	private bool ConvertSpecialKeyToVirtualKey(KeyCode keyCode, ref uint vKey) { }
 
-	private void DebugLog(string msg) { }
-
-	private void DebugLogTag(string tag, string msg) { }
+	private static void DebugLog(string msg) { }
 
 	public void EvaluateJavaScript(string javascript) { }
 
@@ -150,12 +144,12 @@ public class SteamWebView : MonoBehaviour
 
 	public void Load(string url) { }
 
-	[IteratorStateMachine(typeof(<LoadAsync>d__34))]
+	[IteratorStateMachine(typeof(<LoadAsync>d__29))]
 	private IEnumerator LoadAsync(string url) { }
 
-	private void LogErrorTag(string tag, string msg) { }
+	private static void LogError(string msg) { }
 
-	private void LogWarningTag(string tag, string msg) { }
+	private static void LogWarning(string msg) { }
 
 	public static string MakeLinkUserAgentName(string gameName, RuntimePlatform platform, string appVersion) { }
 

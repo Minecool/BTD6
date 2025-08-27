@@ -2,6 +2,7 @@ namespace UnityEngine.TextCore.LowLevel;
 
 [DebuggerDisplay("{familyName} - {styleName}")]
 [UsedByNativeCode]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.TextCoreTextEngineModule"}])]
 internal struct FontReference
 {
 	public string familyName; //Field offset: 0x0

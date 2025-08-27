@@ -17,7 +17,7 @@ internal class DateTimeFormatInfoScanner
 
 	private static Dictionary<String, String> KnownWords
 	{
-		private get { } //Length: 1030
+		private get { } //Length: 1018
 	}
 
 	public DateTimeFormatInfoScanner() { }

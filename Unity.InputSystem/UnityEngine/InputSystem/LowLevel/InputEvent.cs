@@ -18,7 +18,7 @@ public struct InputEvent
 	public int eventId
 	{
 		 get { } //Length: 8
-		 set { } //Length: 14
+		 set { } //Length: 11
 	}
 
 	public bool handled
@@ -48,7 +48,7 @@ public struct InputEvent
 	public FourCC type
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public InputEvent(FourCC type, int sizeInBytes, int deviceId, double time = -1) { }

@@ -10,27 +10,11 @@ public struct SortingLayerRange : IEquatable<SortingLayerRange>
 		 get { } //Length: 13
 	}
 
-	public short lowerBound
-	{
-		 get { } //Length: 6
-	}
-
-	public short upperBound
-	{
-		 get { } //Length: 7
-	}
-
-	public SortingLayerRange(short lowerBound, short upperBound) { }
-
 	public override bool Equals(SortingLayerRange other) { }
 
 	public virtual bool Equals(object obj) { }
 
 	public static SortingLayerRange get_all() { }
-
-	public short get_lowerBound() { }
-
-	public short get_upperBound() { }
 
 	public virtual int GetHashCode() { }
 

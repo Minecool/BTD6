@@ -9,7 +9,7 @@ public class DamageTypeSupport : SupportBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 284
+		 get { } //Length: 318
 	}
 
 	public DamageTypeSupport() { }

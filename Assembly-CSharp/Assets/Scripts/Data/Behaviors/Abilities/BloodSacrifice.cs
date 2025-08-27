@@ -20,7 +20,7 @@ public class BloodSacrifice : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 592
+		 get { } //Length: 591
 	}
 
 	public BloodSacrifice() { }

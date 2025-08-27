@@ -24,12 +24,12 @@ internal sealed class XmlNameEx : XmlName
 
 	public virtual XmlSchemaAttribute SchemaAttribute
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public virtual XmlSchemaElement SchemaElement
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
 	}
 
 	public virtual XmlSchemaType SchemaType

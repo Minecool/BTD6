@@ -12,7 +12,7 @@ public sealed class SqlBytes : INullable, IXmlSerializable, ISerializable
 
 	public Byte[] Buffer
 	{
-		 get { } //Length: 368
+		 get { } //Length: 366
 	}
 
 	public override bool IsNull
@@ -32,7 +32,7 @@ public sealed class SqlBytes : INullable, IXmlSerializable, ISerializable
 
 	public Byte[] Value
 	{
-		 get { } //Length: 562
+		 get { } //Length: 547
 	}
 
 	public SqlBytes() { }

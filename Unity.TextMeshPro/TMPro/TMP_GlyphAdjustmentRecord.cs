@@ -10,7 +10,7 @@ public struct TMP_GlyphAdjustmentRecord
 	public uint glyphIndex
 	{
 		 get { } //Length: 3
-		 set { } //Length: 3
+		 set { } //Length: 8900
 	}
 
 	public TMP_GlyphValueRecord glyphValueRecord

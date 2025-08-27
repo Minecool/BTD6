@@ -7,7 +7,7 @@ public class Storm : CorvusContinuousSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 715
+		 get { } //Length: 726
 	}
 
 	public Storm() { }

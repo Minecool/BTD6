@@ -33,14 +33,14 @@ internal class XmlTypeMapMember
 
 	public bool IsOptionalValueType
 	{
-		 get { } //Length: 8
-		 set { } //Length: 43
+		 get { } //Length: 7
+		 set { } //Length: 25
 	}
 
 	public bool IsReturnValue
 	{
 		 get { } //Length: 8
-		 set { } //Length: 43
+		 set { } //Length: 25
 	}
 
 	public string Name

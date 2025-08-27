@@ -73,7 +73,7 @@ public class SceneManager
 	[StaticAccessor("SceneManagerBindings", StaticAccessorType::DoubleColon (2))]
 	public static Scene GetSceneByName(string name) { }
 
-	private static void GetSceneByName_Injected(string name, out Scene ret) { }
+	private static void GetSceneByName_Injected(ref ManagedSpanWrapper name, out Scene ret) { }
 
 	[RequiredByNativeCode]
 	private static void Internal_ActiveSceneChanged(Scene previousActiveScene, Scene newActiveScene) { }
@@ -113,7 +113,7 @@ public class SceneManager
 	[StaticAccessor("SceneManagerBindings", StaticAccessorType::DoubleColon (2))]
 	private static AsyncOperation UnloadSceneAsyncInternal(Scene scene, UnloadSceneOptions options) { }
 
-	private static AsyncOperation UnloadSceneAsyncInternal_Injected(ref Scene scene, UnloadSceneOptions options) { }
+	private static IntPtr UnloadSceneAsyncInternal_Injected(in Scene scene, UnloadSceneOptions options) { }
 
 	private static AsyncOperation UnloadSceneNameIndexInternal(string sceneName, int sceneBuildIndex, bool immediately, UnloadSceneOptions options, out bool outSuccess) { }
 

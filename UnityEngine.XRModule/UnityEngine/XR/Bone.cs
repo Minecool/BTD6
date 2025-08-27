@@ -1,9 +1,9 @@
 namespace UnityEngine.XR;
 
 [NativeConditional("ENABLE_VR")]
+[NativeHeader("Modules/XR/XRPrefix.h")]
 [NativeHeader("XRScriptingClasses.h")]
 [NativeHeader("Modules/XR/Subsystems/Input/Public/XRInputDevices.h")]
-[NativeHeader("Modules/XR/XRPrefix.h")]
 [RequiredByNativeCode]
 [StaticAccessor("XRInputDevices::Get()", StaticAccessorType::Dot (0))]
 public struct Bone : IEquatable<Bone>

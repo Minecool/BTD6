@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-internal enum DragAndDropPosition
+public enum DragAndDropPosition
 {
 	OverItem = 0,
 	BetweenItems = 1,

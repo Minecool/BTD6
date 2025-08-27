@@ -2,11 +2,17 @@ namespace UnityEngine.UIElements;
 
 internal class TextEditingManipulator
 {
-	private TextElement m_TextElement; //Field offset: 0x10
-	internal TextEditorEventHandler editingEventHandler; //Field offset: 0x18
+	private readonly TextElement m_TextElement; //Field offset: 0x10
+	private TextEditorEventHandler m_EditingEventHandler; //Field offset: 0x18
 	internal TextEditingUtilities editingUtilities; //Field offset: 0x20
 	private bool m_TouchScreenTextFieldInitialized; //Field offset: 0x28
 	private IVisualElementScheduledItem m_HardwareKeyboardPoller; //Field offset: 0x30
+
+	internal TextEditorEventHandler editingEventHandler
+	{
+		internal get { } //Length: 5
+		internal set { } //Length: 93
+	}
 
 	private bool touchScreenTextFieldChanged
 	{
@@ -16,17 +22,23 @@ internal class TextEditingManipulator
 	public TextEditingManipulator(TextElement textElement) { }
 
 	[CompilerGenerated]
-	private void <OnFocusInEvent>b__10_0() { }
+	private void <OnFocusInEvent>b__14_0() { }
 
-	internal void ExecuteDefaultActionAtTarget(EventBase evt) { }
+	internal TextEditorEventHandler get_editingEventHandler() { }
 
 	private bool get_touchScreenTextFieldChanged() { }
 
+	internal void HandleEventBubbleUp(EventBase evt) { }
+
 	private void InitTextEditorEventHandler() { }
 
-	private void OnFocusInEvent(FocusInEvent _) { }
+	private void OnFocusInEvent() { }
 
-	private void OnFocusOutEvent(FocusOutEvent _) { }
+	private void OnFocusOutEvent() { }
+
+	public void Reset() { }
+
+	internal void set_editingEventHandler(TextEditorEventHandler value) { }
 
 }
 

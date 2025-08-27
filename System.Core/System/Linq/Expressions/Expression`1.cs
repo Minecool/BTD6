@@ -5,12 +5,12 @@ public class Expression : LambdaExpression
 
 	internal virtual Type PublicType
 	{
-		internal get { } //Length: 88
+		internal get { } //Length: 57
 	}
 
 	internal virtual Type TypeCore
 	{
-		internal get { } //Length: 87
+		internal get { } //Length: 56
 	}
 
 	internal Expression`1(Expression body) { }

@@ -1,7 +1,7 @@
 namespace NinjaKiwi.Common;
 
-[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 [Il2CppSetOption(Option::NullChecks (1), False)]
+[Il2CppSetOption(Option::ArrayBoundsChecks (2), False)]
 public class SortedListLite : ListLite<T>
 {
 	internal sealed class SortFunction : MulticastDelegate

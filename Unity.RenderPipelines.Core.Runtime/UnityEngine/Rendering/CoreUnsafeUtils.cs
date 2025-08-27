@@ -60,6 +60,13 @@ public static class CoreUnsafeUtils
 
 	}
 
+	public struct UlongKeyGetter : IKeyGetter<UInt64, UInt64>
+	{
+
+		public override ulong Get(ref ulong v) { }
+
+	}
+
 
 	private static void CalculateRadixParams(int radixBits, out int bitStates) { }
 
@@ -100,6 +107,8 @@ public static class CoreUnsafeUtils
 	private static int Partition(Void* data, int left, int right) { }
 
 	public static void QuickSort(UInt32[] arr, int left, int right) { }
+
+	public static void QuickSort(UInt64[] arr, int left, int right) { }
 
 	public static void QuickSort(int count, Void* data) { }
 

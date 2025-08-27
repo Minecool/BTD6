@@ -8,12 +8,16 @@ public struct StyleRotate : IStyleValue<Rotate>, IEquatable<StyleRotate>
 	public override StyleKeyword keyword
 	{
 		 get { } //Length: 6
+		 set { } //Length: 4
 	}
 
 	public override Rotate value
 	{
-		 get { } //Length: 301
+		 get { } //Length: 300
+		 set { } //Length: 24
 	}
+
+	public StyleRotate(Rotate v) { }
 
 	public StyleRotate(StyleKeyword keyword) { }
 
@@ -32,6 +36,12 @@ public struct StyleRotate : IStyleValue<Rotate>, IEquatable<StyleRotate>
 	public static bool op_Equality(StyleRotate lhs, StyleRotate rhs) { }
 
 	public static StyleRotate op_Implicit(StyleKeyword keyword) { }
+
+	public static StyleRotate op_Implicit(Rotate v) { }
+
+	public override void set_keyword(StyleKeyword value) { }
+
+	public override void set_value(Rotate value) { }
 
 	public virtual string ToString() { }
 

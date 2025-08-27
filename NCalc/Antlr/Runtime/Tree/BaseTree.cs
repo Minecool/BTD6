@@ -11,7 +11,7 @@ public abstract class BaseTree : ITree
 
 	public override int ChildCount
 	{
-		 get { } //Length: 78
+		 get { } //Length: 76
 	}
 
 	public override int ChildIndex

@@ -1,5 +1,6 @@
 namespace UnityEngine.TextCore.Text;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.IMGUIModule", "UnityEngine.UIElementsModule"}])]
 internal struct LinkInfo
 {
 	public int hashCode; //Field offset: 0x0
@@ -7,6 +8,7 @@ internal struct LinkInfo
 	public int linkIdLength; //Field offset: 0x8
 	public int linkTextfirstCharacterIndex; //Field offset: 0xC
 	public int linkTextLength; //Field offset: 0x10
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.IMGUIModule", "UnityEngine.UIElementsModule"}])]
 	internal Char[] linkId; //Field offset: 0x18
 	private string m_LinkIdString; //Field offset: 0x20
 	private string m_LinkTextString; //Field offset: 0x28

@@ -9,7 +9,7 @@ public abstract class RC2 : SymmetricAlgorithm
 
 	public override int EffectiveKeySize
 	{
-		 get { } //Length: 14
+		 get { } //Length: 11
 	}
 
 	public virtual int KeySize

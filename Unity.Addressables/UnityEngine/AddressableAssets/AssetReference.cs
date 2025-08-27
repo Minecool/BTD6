@@ -13,7 +13,7 @@ public class AssetReference : IKeyEvaluator
 
 	public override object Asset
 	{
-		 get { } //Length: 154
+		 get { } //Length: 151
 	}
 
 	public override string AssetGUID
@@ -34,7 +34,7 @@ public class AssetReference : IKeyEvaluator
 
 	public override object RuntimeKey
 	{
-		 get { } //Length: 129
+		 get { } //Length: 117
 	}
 
 	public override string SubObjectName
@@ -43,9 +43,9 @@ public class AssetReference : IKeyEvaluator
 		 set { } //Length: 5
 	}
 
-	internal override Type SubOjbectType
+	internal override Type SubObjectType
 	{
-		internal get { } //Length: 143
+		internal get { } //Length: 129
 	}
 
 	public AssetReference(string guid) { }
@@ -66,13 +66,7 @@ public class AssetReference : IKeyEvaluator
 
 	public override string get_SubObjectName() { }
 
-	internal override Type get_SubOjbectType() { }
-
-	[Obsolete]
-	public AsyncOperationHandle<GameObject> Instantiate(Transform parent = null, bool instantiateInWorldSpace = false) { }
-
-	[Obsolete]
-	public AsyncOperationHandle<GameObject> Instantiate(Vector3 position, Quaternion rotation, Transform parent = null) { }
+	internal override Type get_SubObjectType() { }
 
 	public override AsyncOperationHandle<GameObject> InstantiateAsync(Transform parent = null, bool instantiateInWorldSpace = false) { }
 
@@ -80,13 +74,7 @@ public class AssetReference : IKeyEvaluator
 
 	public bool IsValid() { }
 
-	[Obsolete]
-	public AsyncOperationHandle<TObject> LoadAsset() { }
-
 	public override AsyncOperationHandle<TObject> LoadAssetAsync() { }
-
-	[Obsolete]
-	public AsyncOperationHandle<SceneInstance> LoadScene() { }
 
 	public override AsyncOperationHandle<SceneInstance> LoadSceneAsync(LoadSceneMode loadMode = 0, bool activateOnLoad = true, int priority = 100) { }
 

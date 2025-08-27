@@ -1,8 +1,8 @@
 namespace UnityEngine.Audio;
 
 [NativeHeader("Runtime/Director/Core/HPlayable.h")]
-[NativeHeader("Modules/Audio/Public/Director/AudioMixerPlayable.h")]
 [NativeHeader("Modules/Audio/Public/ScriptBindings/AudioMixerPlayable.bindings.h")]
+[NativeHeader("Modules/Audio/Public/Director/AudioMixerPlayable.h")]
 [RequiredByNativeCode]
 [StaticAccessor("AudioMixerPlayableBindings", StaticAccessorType::DoubleColon (2))]
 public struct AudioMixerPlayable : IPlayable, IEquatable<AudioMixerPlayable>

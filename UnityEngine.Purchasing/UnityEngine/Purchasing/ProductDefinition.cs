@@ -49,6 +49,8 @@ public class ProductDefinition
 		private set { } //Length: 4
 	}
 
+	private ProductDefinition() { }
+
 	public ProductDefinition(string id, string storeSpecificId, ProductType type) { }
 
 	public ProductDefinition(string id, string storeSpecificId, ProductType type, bool enabled) { }

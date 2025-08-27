@@ -14,12 +14,12 @@ internal static class ParameterizedStrings
 
 		public object Object
 		{
-			 get { } //Length: 75
+			 get { } //Length: 41
 		}
 
 		public string String
 		{
-			 get { } //Length: 69
+			 get { } //Length: 27
 		}
 
 		public FormatParam(int value) { }

@@ -59,10 +59,10 @@ public sealed class DictationRecognizer
 	private void DictationRecognizer_InvokeErrorEvent(string error, int hresult) { }
 
 	[RequiredByNativeCode]
-	private void DictationRecognizer_InvokeHypothesisGeneratedEvent(string keyword) { }
+	private void DictationRecognizer_InvokeHypothesisGeneratedEvent(IntPtr keyword, int keywordLength) { }
 
 	[RequiredByNativeCode]
-	private void DictationRecognizer_InvokeResultGeneratedEvent(string keyword, ConfidenceLevel minimumConfidence) { }
+	private void DictationRecognizer_InvokeResultGeneratedEvent(IntPtr keyword, int keywordLength, ConfidenceLevel minimumConfidence) { }
 
 }
 

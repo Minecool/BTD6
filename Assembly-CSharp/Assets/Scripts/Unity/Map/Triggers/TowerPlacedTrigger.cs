@@ -10,7 +10,7 @@ public class TowerPlacedTrigger : MapTrigger
 
 	public virtual MapTriggerModel Def
 	{
-		 get { } //Length: 237
+		 get { } //Length: 228
 	}
 
 	public TowerPlacedTrigger() { }

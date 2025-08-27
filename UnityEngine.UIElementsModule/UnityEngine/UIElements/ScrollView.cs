@@ -23,6 +23,7 @@ public class ScrollView : VisualElement
 		Block = 2,
 	}
 
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<ScrollView, UxmlTraits>
 	{
 
@@ -30,21 +31,21 @@ public class ScrollView : VisualElement
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits
 	{
-		private UxmlEnumAttributeDescription<ScrollViewMode> m_ScrollViewMode; //Field offset: 0x70
-		private UxmlEnumAttributeDescription<NestedInteractionKind> m_NestedInteractionKind; //Field offset: 0x78
-		private UxmlBoolAttributeDescription m_ShowHorizontal; //Field offset: 0x80
-		private UxmlBoolAttributeDescription m_ShowVertical; //Field offset: 0x88
-		private UxmlEnumAttributeDescription<ScrollerVisibility> m_HorizontalScrollerVisibility; //Field offset: 0x90
-		private UxmlEnumAttributeDescription<ScrollerVisibility> m_VerticalScrollerVisibility; //Field offset: 0x98
-		private UxmlFloatAttributeDescription m_HorizontalPageSize; //Field offset: 0xA0
-		private UxmlFloatAttributeDescription m_VerticalPageSize; //Field offset: 0xA8
-		private UxmlFloatAttributeDescription m_MouseWheelScrollSize; //Field offset: 0xB0
-		private UxmlEnumAttributeDescription<TouchScrollBehavior> m_TouchScrollBehavior; //Field offset: 0xB8
-		private UxmlFloatAttributeDescription m_ScrollDecelerationRate; //Field offset: 0xC0
-		private UxmlFloatAttributeDescription m_Elasticity; //Field offset: 0xC8
-		private UxmlLongAttributeDescription m_ElasticAnimationIntervalMs; //Field offset: 0xD0
+		private UxmlEnumAttributeDescription<ScrollViewMode> m_ScrollViewMode; //Field offset: 0x88
+		private UxmlEnumAttributeDescription<NestedInteractionKind> m_NestedInteractionKind; //Field offset: 0x90
+		private UxmlBoolAttributeDescription m_ShowHorizontal; //Field offset: 0x98
+		private UxmlBoolAttributeDescription m_ShowVertical; //Field offset: 0xA0
+		private UxmlEnumAttributeDescription<ScrollerVisibility> m_HorizontalScrollerVisibility; //Field offset: 0xA8
+		private UxmlEnumAttributeDescription<ScrollerVisibility> m_VerticalScrollerVisibility; //Field offset: 0xB0
+		private UxmlFloatAttributeDescription m_HorizontalPageSize; //Field offset: 0xB8
+		private UxmlFloatAttributeDescription m_VerticalPageSize; //Field offset: 0xC0
+		private UxmlFloatAttributeDescription m_MouseWheelScrollSize; //Field offset: 0xC8
+		private UxmlEnumAttributeDescription<TouchScrollBehavior> m_TouchScrollBehavior; //Field offset: 0xD0
+		private UxmlFloatAttributeDescription m_ScrollDecelerationRate; //Field offset: 0xD8
+		private UxmlFloatAttributeDescription m_Elasticity; //Field offset: 0xE0
 
 		public UxmlTraits() { }
 
@@ -52,72 +53,87 @@ public class ScrollView : VisualElement
 
 	}
 
-	private static readonly float k_DefaultScrollDecelerationRate; //Field offset: 0x0
-	private static readonly float k_DefaultElasticity; //Field offset: 0x4
-	private static readonly long k_DefaultElasticAnimationInterval; //Field offset: 0x8
-	public static readonly string ussClassName; //Field offset: 0x10
-	public static readonly string viewportUssClassName; //Field offset: 0x18
-	public static readonly string horizontalVariantViewportUssClassName; //Field offset: 0x20
-	public static readonly string verticalVariantViewportUssClassName; //Field offset: 0x28
-	public static readonly string verticalHorizontalVariantViewportUssClassName; //Field offset: 0x30
-	public static readonly string contentAndVerticalScrollUssClassName; //Field offset: 0x38
-	public static readonly string contentUssClassName; //Field offset: 0x40
-	public static readonly string horizontalVariantContentUssClassName; //Field offset: 0x48
-	public static readonly string verticalVariantContentUssClassName; //Field offset: 0x50
-	public static readonly string verticalHorizontalVariantContentUssClassName; //Field offset: 0x58
-	public static readonly string hScrollerUssClassName; //Field offset: 0x60
-	public static readonly string vScrollerUssClassName; //Field offset: 0x68
-	public static readonly string horizontalVariantUssClassName; //Field offset: 0x70
-	public static readonly string verticalVariantUssClassName; //Field offset: 0x78
-	public static readonly string verticalHorizontalVariantUssClassName; //Field offset: 0x80
-	public static readonly string scrollVariantUssClassName; //Field offset: 0x88
-	private int m_FirstLayoutPass; //Field offset: 0x3C8
-	private ScrollerVisibility m_HorizontalScrollerVisibility; //Field offset: 0x3CC
-	private ScrollerVisibility m_VerticalScrollerVisibility; //Field offset: 0x3D0
-	private VisualElement m_AttachedRootVisualContainer; //Field offset: 0x3D8
-	private float m_SingleLineHeight; //Field offset: 0x3E0
-	internal bool m_MouseWheelScrollSizeIsInline; //Field offset: 0x3E4
-	private float m_HorizontalPageSize; //Field offset: 0x3E8
-	private float m_VerticalPageSize; //Field offset: 0x3EC
-	private float m_MouseWheelScrollSize; //Field offset: 0x3F0
-	private float m_ScrollDecelerationRate; //Field offset: 0x3F4
-	private float k_ScaledPixelsPerPointMultiplier; //Field offset: 0x3F8
-	private float k_TouchScrollInertiaBaseTimeInterval; //Field offset: 0x3FC
-	private float m_Elasticity; //Field offset: 0x400
-	private TouchScrollBehavior m_TouchScrollBehavior; //Field offset: 0x404
-	private NestedInteractionKind m_NestedInteractionKind; //Field offset: 0x408
-	private long m_ElasticAnimationIntervalMs; //Field offset: 0x410
+	internal static readonly BindingId horizontalScrollerVisibilityProperty; //Field offset: 0x0
+	internal static readonly BindingId verticalScrollerVisibilityProperty; //Field offset: 0x98
+	internal static readonly BindingId scrollOffsetProperty; //Field offset: 0x130
+	internal static readonly BindingId horizontalPageSizeProperty; //Field offset: 0x1C8
+	internal static readonly BindingId verticalPageSizeProperty; //Field offset: 0x260
+	internal static readonly BindingId mouseWheelScrollSizeProperty; //Field offset: 0x2F8
+	internal static readonly BindingId scrollDecelerationRateProperty; //Field offset: 0x390
+	internal static readonly BindingId elasticityProperty; //Field offset: 0x428
+	internal static readonly BindingId touchScrollBehaviorProperty; //Field offset: 0x4C0
+	internal static readonly BindingId nestedInteractionKindProperty; //Field offset: 0x558
+	internal static readonly BindingId modeProperty; //Field offset: 0x5F0
+	internal static readonly BindingId elasticAnimationIntervalMsProperty; //Field offset: 0x688
+	private static readonly float k_DefaultScrollDecelerationRate; //Field offset: 0x720
+	private static readonly float k_DefaultElasticity; //Field offset: 0x724
+	public static readonly string ussClassName; //Field offset: 0x728
+	public static readonly string viewportUssClassName; //Field offset: 0x730
+	public static readonly string horizontalVariantViewportUssClassName; //Field offset: 0x738
+	public static readonly string verticalVariantViewportUssClassName; //Field offset: 0x740
+	public static readonly string verticalHorizontalVariantViewportUssClassName; //Field offset: 0x748
+	public static readonly string contentAndVerticalScrollUssClassName; //Field offset: 0x750
+	public static readonly string contentUssClassName; //Field offset: 0x758
+	public static readonly string horizontalVariantContentUssClassName; //Field offset: 0x760
+	public static readonly string verticalVariantContentUssClassName; //Field offset: 0x768
+	public static readonly string verticalHorizontalVariantContentUssClassName; //Field offset: 0x770
+	public static readonly string hScrollerUssClassName; //Field offset: 0x778
+	public static readonly string vScrollerUssClassName; //Field offset: 0x780
+	public static readonly string horizontalVariantUssClassName; //Field offset: 0x788
+	public static readonly string verticalVariantUssClassName; //Field offset: 0x790
+	public static readonly string verticalHorizontalVariantUssClassName; //Field offset: 0x798
+	public static readonly string scrollVariantUssClassName; //Field offset: 0x7A0
+	private int m_FirstLayoutPass; //Field offset: 0x4A8
+	private ScrollerVisibility m_HorizontalScrollerVisibility; //Field offset: 0x4AC
+	private ScrollerVisibility m_VerticalScrollerVisibility; //Field offset: 0x4B0
+	private long m_ElasticAnimationIntervalMs; //Field offset: 0x4B8
+	private VisualElement m_AttachedRootVisualContainer; //Field offset: 0x4C0
+	private float m_SingleLineHeight; //Field offset: 0x4C8
+	private bool m_SingleLineHeightDirtyFlag; //Field offset: 0x4CC
+	internal bool m_MouseWheelScrollSizeIsInline; //Field offset: 0x4CD
+	[DontCreateProperty]
+	[SerializeField]
+	private Vector2 m_ScrollOffset; //Field offset: 0x4D0
+	private float m_HorizontalPageSize; //Field offset: 0x4D8
+	private float m_VerticalPageSize; //Field offset: 0x4DC
+	private float m_MouseWheelScrollSize; //Field offset: 0x4E0
+	private float m_ScrollDecelerationRate; //Field offset: 0x4E4
+	private float k_ScaledPixelsPerPointMultiplier; //Field offset: 0x4E8
+	private float k_TouchScrollInertiaBaseTimeInterval; //Field offset: 0x4EC
+	private float m_Elasticity; //Field offset: 0x4F0
+	private TouchScrollBehavior m_TouchScrollBehavior; //Field offset: 0x4F4
+	private NestedInteractionKind m_NestedInteractionKind; //Field offset: 0x4F8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly VisualElement <contentViewport>k__BackingField; //Field offset: 0x418
+	private readonly VisualElement <contentViewport>k__BackingField; //Field offset: 0x500
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly Scroller <horizontalScroller>k__BackingField; //Field offset: 0x420
+	private readonly Scroller <horizontalScroller>k__BackingField; //Field offset: 0x508
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly Scroller <verticalScroller>k__BackingField; //Field offset: 0x428
-	private VisualElement m_ContentContainer; //Field offset: 0x430
-	private VisualElement m_ContentAndVerticalScrollContainer; //Field offset: 0x438
-	private float previousVerticalTouchScrollTimeStamp; //Field offset: 0x440
-	private float previousHorizontalTouchScrollTimeStamp; //Field offset: 0x444
-	private float elapsedTimeSinceLastVerticalTouchScroll; //Field offset: 0x448
-	private float elapsedTimeSinceLastHorizontalTouchScroll; //Field offset: 0x44C
-	private ScrollViewMode m_Mode; //Field offset: 0x450
-	private IVisualElementScheduledItem m_ScheduledLayoutPassResetItem; //Field offset: 0x458
-	private Vector2 m_StartPosition; //Field offset: 0x460
-	private Vector2 m_PointerStartPosition; //Field offset: 0x468
-	private Vector2 m_Velocity; //Field offset: 0x470
-	private Vector2 m_SpringBackVelocity; //Field offset: 0x478
-	private Vector2 m_LowBounds; //Field offset: 0x480
-	private Vector2 m_HighBounds; //Field offset: 0x488
-	private float m_LastVelocityLerpTime; //Field offset: 0x490
-	private bool m_StartedMoving; //Field offset: 0x494
-	private bool m_TouchPointerMoveAllowed; //Field offset: 0x495
-	private bool m_TouchStoppedVelocity; //Field offset: 0x496
-	private VisualElement m_CapturedTarget; //Field offset: 0x498
-	private EventCallback<PointerMoveEvent> m_CapturedTargetPointerMoveCallback; //Field offset: 0x4A0
-	private EventCallback<PointerUpEvent> m_CapturedTargetPointerUpCallback; //Field offset: 0x4A8
-	internal IVisualElementScheduledItem m_PostPointerUpAnimation; //Field offset: 0x4B0
+	private readonly Scroller <verticalScroller>k__BackingField; //Field offset: 0x510
+	private VisualElement m_ContentContainer; //Field offset: 0x518
+	private VisualElement m_ContentAndVerticalScrollContainer; //Field offset: 0x520
+	private float previousVerticalTouchScrollTimeStamp; //Field offset: 0x528
+	private float previousHorizontalTouchScrollTimeStamp; //Field offset: 0x52C
+	private float elapsedTimeSinceLastVerticalTouchScroll; //Field offset: 0x530
+	private float elapsedTimeSinceLastHorizontalTouchScroll; //Field offset: 0x534
+	private ScrollViewMode m_Mode; //Field offset: 0x538
+	private IVisualElementScheduledItem m_ScheduledLayoutPassResetItem; //Field offset: 0x540
+	private Vector2 m_StartPosition; //Field offset: 0x548
+	private Vector2 m_PointerStartPosition; //Field offset: 0x550
+	private Vector2 m_Velocity; //Field offset: 0x558
+	private Vector2 m_SpringBackVelocity; //Field offset: 0x560
+	private Vector2 m_LowBounds; //Field offset: 0x568
+	private Vector2 m_HighBounds; //Field offset: 0x570
+	private float m_LastVelocityLerpTime; //Field offset: 0x578
+	private bool m_StartedMoving; //Field offset: 0x57C
+	private bool m_TouchPointerMoveAllowed; //Field offset: 0x57D
+	private bool m_TouchStoppedVelocity; //Field offset: 0x57E
+	private VisualElement m_CapturedTarget; //Field offset: 0x580
+	private EventCallback<PointerMoveEvent> m_CapturedTargetPointerMoveCallback; //Field offset: 0x588
+	private EventCallback<PointerUpEvent> m_CapturedTargetPointerUpCallback; //Field offset: 0x590
+	internal IVisualElementScheduledItem m_PostPointerUpAnimation; //Field offset: 0x598
 
 	public virtual VisualElement contentContainer
 	{
@@ -130,15 +146,18 @@ public class ScrollView : VisualElement
 		 get { } //Length: 8
 	}
 
+	[CreateProperty]
 	public long elasticAnimationIntervalMs
 	{
-		 set { } //Length: 241
+		 get { } //Length: 10
+		 set { } //Length: 313
 	}
 
+	[CreateProperty]
 	public float elasticity
 	{
 		 get { } //Length: 11
-		 set { } //Length: 18
+		 set { } //Length: 258
 	}
 
 	private bool hasInertia
@@ -146,9 +165,11 @@ public class ScrollView : VisualElement
 		private get { } //Length: 20
 	}
 
+	[CreateProperty]
 	public float horizontalPageSize
 	{
-		 set { } //Length: 15
+		 get { } //Length: 11
+		 set { } //Length: 171
 	}
 
 	public Scroller horizontalScroller
@@ -157,10 +178,11 @@ public class ScrollView : VisualElement
 		 get { } //Length: 8
 	}
 
+	[CreateProperty]
 	public ScrollerVisibility horizontalScrollerVisibility
 	{
 		 get { } //Length: 9
-		 set { } //Length: 156
+		 set { } //Length: 263
 	}
 
 	internal bool isHorizontalScrollDisplayed
@@ -173,16 +195,18 @@ public class ScrollView : VisualElement
 		internal get { } //Length: 97
 	}
 
+	[CreateProperty]
 	public ScrollViewMode mode
 	{
 		 get { } //Length: 7
-		 set { } //Length: 17
+		 set { } //Length: 147
 	}
 
+	[CreateProperty]
 	public float mouseWheelScrollSize
 	{
 		 get { } //Length: 11
-		 set { } //Length: 130
+		 set { } //Length: 198
 	}
 
 	internal bool needsHorizontal
@@ -192,13 +216,15 @@ public class ScrollView : VisualElement
 
 	internal bool needsVertical
 	{
+		[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 		internal get { } //Length: 70
 	}
 
+	[CreateProperty]
 	public NestedInteractionKind nestedInteractionKind
 	{
 		 get { } //Length: 7
-		 set { } //Length: 7
+		 set { } //Length: 126
 	}
 
 	internal float scrollableHeight
@@ -211,16 +237,18 @@ public class ScrollView : VisualElement
 		internal get { } //Length: 110
 	}
 
+	[CreateProperty]
 	public float scrollDecelerationRate
 	{
 		 get { } //Length: 11
-		 set { } //Length: 18
+		 set { } //Length: 258
 	}
 
+	[CreateProperty]
 	public Vector2 scrollOffset
 	{
-		 get { } //Length: 127
-		 set { } //Length: 376
+		 get { } //Length: 25
+		 set { } //Length: 542
 	}
 
 	[Obsolete("showHorizontal is obsolete. Use horizontalScrollerVisibility instead")]
@@ -235,15 +263,18 @@ public class ScrollView : VisualElement
 		 set { } //Length: 28
 	}
 
+	[CreateProperty]
 	public TouchScrollBehavior touchScrollBehavior
 	{
 		 get { } //Length: 9
-		 set { } //Length: 198
+		 set { } //Length: 287
 	}
 
+	[CreateProperty]
 	public float verticalPageSize
 	{
-		 set { } //Length: 15
+		 get { } //Length: 11
+		 set { } //Length: 171
 	}
 
 	public Scroller verticalScroller
@@ -252,10 +283,11 @@ public class ScrollView : VisualElement
 		 get { } //Length: 8
 	}
 
+	[CreateProperty]
 	public ScrollerVisibility verticalScrollerVisibility
 	{
 		 get { } //Length: 9
-		 set { } //Length: 165
+		 set { } //Length: 279
 	}
 
 	private static ScrollView() { }
@@ -265,10 +297,10 @@ public class ScrollView : VisualElement
 	public ScrollView() { }
 
 	[CompilerGenerated]
-	private void <.ctor>b__126_0(float value) { }
+	private void <.ctor>b__140_0(float value) { }
 
 	[CompilerGenerated]
-	private void <.ctor>b__126_1(float value) { }
+	private void <.ctor>b__140_1(float value) { }
 
 	private void AdjustScrollers() { }
 
@@ -289,9 +321,13 @@ public class ScrollView : VisualElement
 	[CompilerGenerated]
 	public VisualElement get_contentViewport() { }
 
+	public long get_elasticAnimationIntervalMs() { }
+
 	public float get_elasticity() { }
 
 	private bool get_hasInertia() { }
+
+	public float get_horizontalPageSize() { }
 
 	[CompilerGenerated]
 	public Scroller get_horizontalScroller() { }
@@ -308,6 +344,7 @@ public class ScrollView : VisualElement
 
 	internal bool get_needsHorizontal() { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 	internal bool get_needsVertical() { }
 
 	public NestedInteractionKind get_nestedInteractionKind() { }
@@ -322,6 +359,8 @@ public class ScrollView : VisualElement
 
 	public TouchScrollBehavior get_touchScrollBehavior() { }
 
+	public float get_verticalPageSize() { }
+
 	[CompilerGenerated]
 	public Scroller get_verticalScroller() { }
 
@@ -335,6 +374,8 @@ public class ScrollView : VisualElement
 
 	internal void InitTouchScrolling(Vector2 position) { }
 
+	private void MarkSingleLineHeightDirty() { }
+
 	private void OnAttachToPanel(AttachToPanelEvent evt) { }
 
 	private void OnDetachFromPanel(DetachFromPanelEvent evt) { }
@@ -342,6 +383,10 @@ public class ScrollView : VisualElement
 	private void OnGeometryChanged(GeometryChangedEvent evt) { }
 
 	private void OnHorizontalScrollDragElementChanged(GeometryChangedEvent evt) { }
+
+	private void OnHorizontalScrollerSetValueWithoutNotify(float value) { }
+
+	private void OnHorizontalSliderViewDataRestored() { }
 
 	private void OnPointerCancel(PointerCancelEvent evt) { }
 
@@ -364,6 +409,12 @@ public class ScrollView : VisualElement
 	private void OnScrollWheel(WheelEvent evt) { }
 
 	private void OnVerticalScrollDragElementChanged(GeometryChangedEvent evt) { }
+
+	private void OnVerticalScrollerSetValueWithoutNotify(float value) { }
+
+	private void OnVerticalSliderViewDataRestored() { }
+
+	internal virtual void OnViewDataReady() { }
 
 	private void PostPointerUpAnimation() { }
 
@@ -404,6 +455,8 @@ public class ScrollView : VisualElement
 	public void set_verticalPageSize(float value) { }
 
 	public void set_verticalScrollerVisibility(ScrollerVisibility value) { }
+
+	internal void SetScrollOffsetWithoutNotify(Vector2 value) { }
 
 	private void SetScrollViewMode(ScrollViewMode mode) { }
 

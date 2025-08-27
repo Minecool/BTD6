@@ -13,7 +13,9 @@ public class Achievement : ScriptableObject
 	public bool hidden; //Field offset: 0x58
 	[TypeSelectionAsString("Assets.Scripts.Unity.Achievements.List", typeof(ActiveAchievement))]
 	public string type; //Field offset: 0x60
-	public string googlePlayId; //Field offset: 0x68
+	public string AppleId; //Field offset: 0x68
+	public string AppleArcadeId; //Field offset: 0x70
+	public string googlePlayId; //Field offset: 0x78
 
 	public Achievement() { }
 

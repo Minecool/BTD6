@@ -21,7 +21,7 @@ internal sealed class BackupTimer
 
 	public TimeSpan Period
 	{
-		 get { } //Length: 172
+		 get { } //Length: 171
 	}
 
 	public BackupTimer(PlayerOptions options, OnTimeUp onCompleteAction) { }

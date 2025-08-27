@@ -6,7 +6,7 @@ public class ZeroRotationOnAbility : AbilityBehavior
 
 	public virtual AbilityBehaviorModel Def
 	{
-		 get { } //Length: 602
+		 get { } //Length: 175
 	}
 
 	public ZeroRotationOnAbility() { }

@@ -3,6 +3,13 @@ namespace UnityEngine.Networking;
 [NativeHeader("Modules/UnityWebRequest/Public/UnityWebRequest.h")]
 public class UnityWebRequest : IDisposable
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(UnityWebRequest unityWebRequest) { }
+
+	}
+
 	internal enum Result
 	{
 		InProgress = 0,
@@ -90,7 +97,7 @@ public class UnityWebRequest : IDisposable
 	public CertificateHandler certificateHandler
 	{
 		 get { } //Length: 7
-		 set { } //Length: 259
+		 set { } //Length: 346
 	}
 
 	public bool disposeCertificateHandlerOnDispose
@@ -119,91 +126,97 @@ public class UnityWebRequest : IDisposable
 
 	public ulong downloadedBytes
 	{
-		 get { } //Length: 51
+		 get { } //Length: 81
 	}
 
 	public DownloadHandler downloadHandler
 	{
 		 get { } //Length: 7
-		 set { } //Length: 259
+		 set { } //Length: 346
 	}
 
 	public string error
 	{
-		 get { } //Length: 359
+		 get { } //Length: 396
 	}
 
 	public bool isDone
 	{
-		 get { } //Length: 56
+		 get { } //Length: 86
 	}
 
 	public bool isModifiable
 	{
 		[NativeMethod("IsModifiable")]
-		 get { } //Length: 51
+		 get { } //Length: 81
 	}
 
 	public string method
 	{
-		 get { } //Length: 222
+		 get { } //Length: 238
 		 set { } //Length: 592
 	}
 
 	public int redirectLimit
 	{
-		 set { } //Length: 64
+		 set { } //Length: 88
 	}
 
 	public long responseCode
 	{
-		 get { } //Length: 51
+		 get { } //Length: 81
 	}
 
 	public Result result
 	{
 		[NativeMethod("GetResult")]
-		 get { } //Length: 51
+		 get { } //Length: 81
 	}
 
 	public int timeout
 	{
-		 set { } //Length: 324
+		 set { } //Length: 389
 	}
 
 	public UploadHandler uploadHandler
 	{
 		 get { } //Length: 159
-		 set { } //Length: 259
+		 set { } //Length: 346
 	}
 
 	public Uri uri
 	{
-		 get { } //Length: 123
+		 get { } //Length: 97
 		 set { } //Length: 231
 	}
 
 	public string url
 	{
-		 get { } //Length: 51
+		 get { } //Length: 9
 		 set { } //Length: 132
 	}
+
+	public UnityWebRequest(Uri uri, string method) { }
 
 	public UnityWebRequest(Uri uri, string method, DownloadHandler downloadHandler, UploadHandler uploadHandler) { }
 
 	public UnityWebRequest(string url, string method, DownloadHandler downloadHandler, UploadHandler uploadHandler) { }
 
-	public UnityWebRequest(Uri uri, string method) { }
-
 	public UnityWebRequest(string url, string method) { }
 
 	public UnityWebRequest(string url) { }
 
+	public UnityWebRequest() { }
+
 	[NativeMethod(IsThreadSafe = True)]
 	public void Abort() { }
 
+	private static void Abort_Injected(IntPtr _unity_self) { }
+
 	[NativeThrows]
 	internal UnityWebRequestAsyncOperation BeginWebRequest() { }
+
+	private static IntPtr BeginWebRequest_Injected(IntPtr _unity_self) { }
 
 	[NativeThrows]
 	internal static IntPtr Create() { }
@@ -235,6 +248,8 @@ public class UnityWebRequest : IDisposable
 
 	public ulong get_downloadedBytes() { }
 
+	private static ulong get_downloadedBytes_Injected(IntPtr _unity_self) { }
+
 	public DownloadHandler get_downloadHandler() { }
 
 	public string get_error() { }
@@ -244,12 +259,18 @@ public class UnityWebRequest : IDisposable
 	[NativeMethod("IsModifiable")]
 	public bool get_isModifiable() { }
 
+	private static bool get_isModifiable_Injected(IntPtr _unity_self) { }
+
 	public string get_method() { }
 
 	public long get_responseCode() { }
 
+	private static long get_responseCode_Injected(IntPtr _unity_self) { }
+
 	[NativeMethod("GetResult")]
 	public Result get_result() { }
+
+	private static Result get_result_Injected(IntPtr _unity_self) { }
 
 	public UploadHandler get_uploadHandler() { }
 
@@ -259,24 +280,40 @@ public class UnityWebRequest : IDisposable
 
 	internal string GetCustomMethod() { }
 
+	private static void GetCustomMethod_Injected(IntPtr _unity_self, out ManagedSpanWrapper ret) { }
+
 	private UnityWebRequestError GetError() { }
+
+	private static UnityWebRequestError GetError_Injected(IntPtr _unity_self) { }
 
 	[VisibleToOtherModules]
 	internal static string GetHTTPStatusString(long responseCode) { }
 
+	private static void GetHTTPStatusString_Injected(long responseCode, out ManagedSpanWrapper ret) { }
+
 	internal UnityWebRequestMethod GetMethod() { }
+
+	private static UnityWebRequestMethod GetMethod_Injected(IntPtr _unity_self) { }
 
 	public string GetResponseHeader(string name) { }
 
+	private static void GetResponseHeader_Injected(IntPtr _unity_self, ref ManagedSpanWrapper name, out ManagedSpanWrapper ret) { }
+
 	internal String[] GetResponseHeaderKeys() { }
+
+	private static String[] GetResponseHeaderKeys_Injected(IntPtr _unity_self) { }
 
 	public Dictionary<String, String> GetResponseHeaders() { }
 
 	private string GetUrl() { }
 
+	private static void GetUrl_Injected(IntPtr _unity_self, out ManagedSpanWrapper ret) { }
+
 	[NativeConditional("ENABLE_UNITYWEBREQUEST")]
 	[NativeMethod(IsThreadSafe = True)]
 	private static string GetWebErrorString(UnityWebRequestError err) { }
+
+	private static void GetWebErrorString_Injected(UnityWebRequestError err, out ManagedSpanWrapper ret) { }
 
 	internal void InternalDestroy() { }
 
@@ -289,18 +326,22 @@ public class UnityWebRequest : IDisposable
 	[NativeMethod("SetRequestHeader")]
 	internal UnityWebRequestError InternalSetRequestHeader(string name, string value) { }
 
-	private void InternalSetUrl(string url) { }
+	private static UnityWebRequestError InternalSetRequestHeader_Injected(IntPtr _unity_self, ref ManagedSpanWrapper name, ref ManagedSpanWrapper value) { }
 
-	public static UnityWebRequest Post(Uri uri, WWWForm formData) { }
+	private void InternalSetUrl(string url) { }
 
 	public static UnityWebRequest Post(string uri, List<IMultipartFormSection> multipartFormSections, Byte[] boundary) { }
 
 	public static UnityWebRequest Post(string uri, WWWForm formData) { }
 
+	public static UnityWebRequest Post(Uri uri, WWWForm formData) { }
+
 	public static UnityWebRequest Post(string uri, List<IMultipartFormSection> multipartFormSections) { }
 
 	[NativeMethod(IsThreadSafe = True)]
 	private void Release() { }
+
+	private static void Release_Injected(IntPtr _unity_self) { }
 
 	public UnityWebRequestAsyncOperation SendWebRequest() { }
 
@@ -333,30 +374,46 @@ public class UnityWebRequest : IDisposable
 
 	private UnityWebRequestError SetCertificateHandler(CertificateHandler ch) { }
 
+	private static UnityWebRequestError SetCertificateHandler_Injected(IntPtr _unity_self, IntPtr ch) { }
+
 	private UnityWebRequestError SetCustomMethod(string customMethodName) { }
+
+	private static UnityWebRequestError SetCustomMethod_Injected(IntPtr _unity_self, ref ManagedSpanWrapper customMethodName) { }
 
 	private UnityWebRequestError SetDownloadHandler(DownloadHandler dh) { }
 
+	private static UnityWebRequestError SetDownloadHandler_Injected(IntPtr _unity_self, IntPtr dh) { }
+
 	private UnityWebRequestError SetMethod(UnityWebRequestMethod methodType) { }
+
+	private static UnityWebRequestError SetMethod_Injected(IntPtr _unity_self, UnityWebRequestMethod methodType) { }
 
 	[NativeThrows]
 	private void SetRedirectLimitFromScripting(int limit) { }
+
+	private static void SetRedirectLimitFromScripting_Injected(IntPtr _unity_self, int limit) { }
 
 	public void SetRequestHeader(string name, string value) { }
 
 	private UnityWebRequestError SetTimeoutMsec(int timeout) { }
 
+	private static UnityWebRequestError SetTimeoutMsec_Injected(IntPtr _unity_self, int timeout) { }
+
 	private UnityWebRequestError SetUploadHandler(UploadHandler uh) { }
 
-	private static void SetupPost(UnityWebRequest request, WWWForm formData) { }
+	private static UnityWebRequestError SetUploadHandler_Injected(IntPtr _unity_self, IntPtr uh) { }
 
 	private static void SetupPost(UnityWebRequest request, List<IMultipartFormSection> multipartFormSections, Byte[] boundary) { }
 
+	private static void SetupPost(UnityWebRequest request, WWWForm formData) { }
+
 	private UnityWebRequestError SetUrl(string url) { }
 
-	public static string UnEscapeURL(string s) { }
+	private static UnityWebRequestError SetUrl_Injected(IntPtr _unity_self, ref ManagedSpanWrapper url) { }
 
 	public static string UnEscapeURL(string s, Encoding e) { }
+
+	public static string UnEscapeURL(string s) { }
 
 }
 

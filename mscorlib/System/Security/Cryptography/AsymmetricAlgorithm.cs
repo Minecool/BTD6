@@ -9,7 +9,7 @@ public abstract class AsymmetricAlgorithm : IDisposable
 	public override int KeySize
 	{
 		 get { } //Length: 94
-		 set { } //Length: 324
+		 set { } //Length: 262
 	}
 
 	protected AsymmetricAlgorithm() { }

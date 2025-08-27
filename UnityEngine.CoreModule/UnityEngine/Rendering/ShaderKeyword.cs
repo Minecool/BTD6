@@ -21,6 +21,8 @@ public struct ShaderKeyword
 	[FreeFunction("ShaderScripting::CreateGlobalKeyword")]
 	internal static void CreateGlobalKeyword(string keyword) { }
 
+	private static void CreateGlobalKeyword_Injected(ref ManagedSpanWrapper keyword) { }
+
 	public string get_name() { }
 
 	[FreeFunction("ShaderScripting::GetGlobalKeywordCount")]
@@ -28,6 +30,8 @@ public struct ShaderKeyword
 
 	[FreeFunction("ShaderScripting::GetGlobalKeywordIndex")]
 	internal static uint GetGlobalKeywordIndex(string keyword) { }
+
+	private static uint GetGlobalKeywordIndex_Injected(ref ManagedSpanWrapper keyword) { }
 
 	public virtual string ToString() { }
 

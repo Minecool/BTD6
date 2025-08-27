@@ -20,7 +20,7 @@ public class TraceEventCache
 
 	public Stack LogicalOperationStack
 	{
-		 get { } //Length: 326
+		 get { } //Length: 312
 	}
 
 	public int ProcessId

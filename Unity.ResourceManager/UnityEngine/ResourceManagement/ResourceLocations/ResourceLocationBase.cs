@@ -30,7 +30,7 @@ public class ResourceLocationBase : IResourceLocation
 
 	public override bool HasDependencies
 	{
-		 get { } //Length: 69
+		 get { } //Length: 65
 	}
 
 	public override string InternalId

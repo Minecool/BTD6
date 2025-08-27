@@ -3,13 +3,13 @@ namespace UnityEngine.ResourceManagement;
 public class ResourceManager : IDisposable
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass101_0
+	private sealed class <>c__DisplayClass90_0
 	{
 		public Action<TObject> callback; //Field offset: 0x0
 		public bool releaseDependenciesOnFailure; //Field offset: 0x0
 		public ResourceManager <>4__this; //Field offset: 0x0
 
-		public <>c__DisplayClass101_0`1() { }
+		public <>c__DisplayClass90_0`1() { }
 
 		internal void <ProvideResources>b__0(AsyncOperationHandle x) { }
 
@@ -49,91 +49,6 @@ public class ResourceManager : IDisposable
 
 	}
 
-	internal struct DiagnosticEventContext
-	{
-		[CompilerGenerated]
-		private readonly AsyncOperationHandle <OperationHandle>k__BackingField; //Field offset: 0x0
-		[CompilerGenerated]
-		private readonly DiagnosticEventType <Type>k__BackingField; //Field offset: 0x18
-		[CompilerGenerated]
-		private readonly int <EventValue>k__BackingField; //Field offset: 0x1C
-		[CompilerGenerated]
-		private readonly IResourceLocation <Location>k__BackingField; //Field offset: 0x20
-		[CompilerGenerated]
-		private readonly object <Context>k__BackingField; //Field offset: 0x28
-		[CompilerGenerated]
-		private readonly string <Error>k__BackingField; //Field offset: 0x30
-
-		public object Context
-		{
-			[CompilerGenerated]
-			[IsReadOnly]
-			 get { } //Length: 5
-		}
-
-		public string Error
-		{
-			[CompilerGenerated]
-			[IsReadOnly]
-			 get { } //Length: 5
-		}
-
-		public int EventValue
-		{
-			[CompilerGenerated]
-			[IsReadOnly]
-			 get { } //Length: 4
-		}
-
-		public IResourceLocation Location
-		{
-			[CompilerGenerated]
-			[IsReadOnly]
-			 get { } //Length: 5
-		}
-
-		public AsyncOperationHandle OperationHandle
-		{
-			[CompilerGenerated]
-			[IsReadOnly]
-			 get { } //Length: 20
-		}
-
-		public DiagnosticEventType Type
-		{
-			[CompilerGenerated]
-			[IsReadOnly]
-			 get { } //Length: 4
-		}
-
-		public DiagnosticEventContext(AsyncOperationHandle op, DiagnosticEventType type, int eventValue = 0, string error = null, object context = null) { }
-
-		[CompilerGenerated]
-		[IsReadOnly]
-		public object get_Context() { }
-
-		[CompilerGenerated]
-		[IsReadOnly]
-		public string get_Error() { }
-
-		[CompilerGenerated]
-		[IsReadOnly]
-		public int get_EventValue() { }
-
-		[CompilerGenerated]
-		[IsReadOnly]
-		public IResourceLocation get_Location() { }
-
-		[CompilerGenerated]
-		[IsReadOnly]
-		public AsyncOperationHandle get_OperationHandle() { }
-
-		[CompilerGenerated]
-		[IsReadOnly]
-		public DiagnosticEventType get_Type() { }
-
-	}
-
 	internal enum DiagnosticEventType
 	{
 		AsyncOperationFail = 0,
@@ -154,7 +69,7 @@ public class ResourceManager : IDisposable
 
 		protected virtual string DebugName
 		{
-			 get { } //Length: 266
+			 get { } //Length: 260
 		}
 
 		protected virtual float Progress
@@ -188,35 +103,31 @@ public class ResourceManager : IDisposable
 	private static Action<AsyncOperationHandle, Exception> <ExceptionHandler>k__BackingField; //Field offset: 0x0
 	private static int s_GroupOperationTypeHash; //Field offset: 0x8
 	private static int s_InstanceOperationTypeHash; //Field offset: 0xC
-	internal bool postProfilerEvents; //Field offset: 0x10
 	[CompilerGenerated]
-	private Func<IResourceLocation, String> <InternalIdTransformFunc>k__BackingField; //Field offset: 0x18
+	private Func<IResourceLocation, String> <InternalIdTransformFunc>k__BackingField; //Field offset: 0x10
 	[CompilerGenerated]
-	private Action<UnityWebRequest> <WebRequestOverride>k__BackingField; //Field offset: 0x20
-	internal bool CallbackHooksEnabled; //Field offset: 0x28
-	private ListWithEvents<IResourceProvider> m_ResourceProviders; //Field offset: 0x30
-	private IAllocationStrategy m_allocator; //Field offset: 0x38
-	internal ListWithEvents<IUpdateReceiver> m_UpdateReceivers; //Field offset: 0x40
-	private List<IUpdateReceiver> m_UpdateReceiversToRemove; //Field offset: 0x48
-	private bool m_UpdatingReceivers; //Field offset: 0x50
-	private bool m_InsideUpdateMethod; //Field offset: 0x51
-	internal Dictionary<Int32, IResourceProvider> m_providerMap; //Field offset: 0x58
-	private Dictionary<IOperationCacheKey, IAsyncOperation> m_AssetOperationCache; //Field offset: 0x60
-	private HashSet<InstanceOperation> m_TrackedInstanceOperations; //Field offset: 0x68
-	internal DelegateList<Single> m_UpdateCallbacks; //Field offset: 0x70
-	private List<IAsyncOperation> m_DeferredCompleteCallbacks; //Field offset: 0x78
-	private HashSet<IResourceProvider> m_AssetBundleProviders; //Field offset: 0x80
-	private bool m_InsideExecuteDeferredCallbacksMethod; //Field offset: 0x88
-	private List<DeferredCallbackRegisterRequest> m_DeferredCallbacksToRegister; //Field offset: 0x90
-	private Action<AsyncOperationHandle, DiagnosticEventType, Int32, Object> m_obsoleteDiagnosticsHandler; //Field offset: 0x98
-	private Action<DiagnosticEventContext> m_diagnosticsHandler; //Field offset: 0xA0
-	private Action<IAsyncOperation> m_ReleaseOpNonCached; //Field offset: 0xA8
-	private Action<IAsyncOperation> m_ReleaseOpCached; //Field offset: 0xB0
-	private Action<IAsyncOperation> m_ReleaseInstanceOp; //Field offset: 0xB8
+	private Action<UnityWebRequest> <WebRequestOverride>k__BackingField; //Field offset: 0x18
+	internal bool CallbackHooksEnabled; //Field offset: 0x20
+	private ListWithEvents<IResourceProvider> m_ResourceProviders; //Field offset: 0x28
+	private IAllocationStrategy m_allocator; //Field offset: 0x30
+	internal ListWithEvents<IUpdateReceiver> m_UpdateReceivers; //Field offset: 0x38
+	private List<IUpdateReceiver> m_UpdateReceiversToRemove; //Field offset: 0x40
+	private bool m_UpdatingReceivers; //Field offset: 0x48
+	private bool m_InsideUpdateMethod; //Field offset: 0x49
+	internal Dictionary<Int32, IResourceProvider> m_providerMap; //Field offset: 0x50
+	private Dictionary<IOperationCacheKey, IAsyncOperation> m_AssetOperationCache; //Field offset: 0x58
+	private HashSet<InstanceOperation> m_TrackedInstanceOperations; //Field offset: 0x60
+	internal DelegateList<Single> m_UpdateCallbacks; //Field offset: 0x68
+	private List<IAsyncOperation> m_DeferredCompleteCallbacks; //Field offset: 0x70
+	private bool m_InsideExecuteDeferredCallbacksMethod; //Field offset: 0x78
+	private List<DeferredCallbackRegisterRequest> m_DeferredCallbacksToRegister; //Field offset: 0x80
+	private Action<IAsyncOperation> m_ReleaseOpNonCached; //Field offset: 0x88
+	private Action<IAsyncOperation> m_ReleaseOpCached; //Field offset: 0x90
+	private Action<IAsyncOperation> m_ReleaseInstanceOp; //Field offset: 0x98
 	[CompilerGenerated]
-	private CertificateHandler <CertificateHandlerInstance>k__BackingField; //Field offset: 0xC0
-	private bool m_RegisteredForCallbacks; //Field offset: 0xC8
-	private Dictionary<Type, Type> m_ProviderOperationTypeCache; //Field offset: 0xD0
+	private CertificateHandler <CertificateHandlerInstance>k__BackingField; //Field offset: 0xA0
+	private bool m_RegisteredForCallbacks; //Field offset: 0xA8
+	private Dictionary<Type, Type> m_ProviderOperationTypeCache; //Field offset: 0xB0
 
 	public IAllocationStrategy Allocator
 	{
@@ -286,7 +197,7 @@ public class ResourceManager : IDisposable
 	public ResourceManager(IAllocationStrategy alloc = null) { }
 
 	[CompilerGenerated]
-	private void <.ctor>b__58_0(IUpdateReceiver x) { }
+	private void <.ctor>b__53_0(IUpdateReceiver x) { }
 
 	public AsyncOperationHandle<TObject> Acquire(AsyncOperationHandle<TObject> handle) { }
 
@@ -304,22 +215,17 @@ public class ResourceManager : IDisposable
 
 	public void CleanupSceneInstances(Scene scene) { }
 
-	public void ClearDiagnosticCallbacks() { }
-
-	[Obsolete("ClearDiagnosticsCallback is Obsolete, use ClearDiagnosticCallbacks instead.")]
-	public void ClearDiagnosticsCallback() { }
-
 	internal void ClearOperationCache() { }
 
 	internal IOperationCacheKey CreateCacheKeyForLocation(IResourceProvider provider, IResourceLocation location, Type desiredType = null) { }
 
-	public AsyncOperationHandle<TObject> CreateChainOperation(AsyncOperationHandle dependentOp, Func<AsyncOperationHandle, AsyncOperationHandle`1<TObject>> callback) { }
+	public AsyncOperationHandle<TObject> CreateChainOperation(AsyncOperationHandle<TObjectDependency> dependentOp, Func<AsyncOperationHandle`1<TObjectDependency>, AsyncOperationHandle`1<TObject>> callback) { }
 
-	public AsyncOperationHandle<TObject> CreateChainOperation(AsyncOperationHandle dependentOp, Func<AsyncOperationHandle, AsyncOperationHandle`1<TObject>> callback, bool releaseDependenciesOnFailure = true) { }
+	public AsyncOperationHandle<TObject> CreateChainOperation(AsyncOperationHandle dependentOp, Func<AsyncOperationHandle, AsyncOperationHandle`1<TObject>> callback) { }
 
 	public AsyncOperationHandle<TObject> CreateChainOperation(AsyncOperationHandle<TObjectDependency> dependentOp, Func<AsyncOperationHandle`1<TObjectDependency>, AsyncOperationHandle`1<TObject>> callback, bool releaseDependenciesOnFailure = true) { }
 
-	public AsyncOperationHandle<TObject> CreateChainOperation(AsyncOperationHandle<TObjectDependency> dependentOp, Func<AsyncOperationHandle`1<TObjectDependency>, AsyncOperationHandle`1<TObject>> callback) { }
+	public AsyncOperationHandle<TObject> CreateChainOperation(AsyncOperationHandle dependentOp, Func<AsyncOperationHandle, AsyncOperationHandle`1<TObject>> callback, bool releaseDependenciesOnFailure = true) { }
 
 	public AsyncOperationHandle<TObject> CreateCompletedOperation(TObject result, string errorMsg) { }
 
@@ -329,9 +235,9 @@ public class ResourceManager : IDisposable
 
 	public AsyncOperationHandle<IList`1<AsyncOperationHandle>> CreateGenericGroupOperation(List<AsyncOperationHandle> operations, bool releasedCachedOpOnComplete = false) { }
 
-	internal AsyncOperationHandle<IList`1<AsyncOperationHandle>> CreateGroupOperation(IList<IResourceLocation> locations, bool allowFailedDependencies) { }
-
 	public AsyncOperationHandle<IList`1<AsyncOperationHandle>> CreateGroupOperation(IList<IResourceLocation> locations) { }
+
+	internal AsyncOperationHandle<IList`1<AsyncOperationHandle>> CreateGroupOperation(IList<IResourceLocation> locations, bool allowFailedDependencies) { }
 
 	internal T CreateOperation(Type actualType, int typeHash, IOperationCacheKey cacheKey, Action<IAsyncOperation> onDestroyAction) { }
 
@@ -381,13 +287,11 @@ public class ResourceManager : IDisposable
 
 	private void OnOperationDestroyNonCached(IAsyncOperation o) { }
 
-	internal void PostDiagnosticEvent(DiagnosticEventContext context) { }
-
 	public AsyncOperationHandle<GameObject> ProvideInstance(IInstanceProvider provider, IResourceLocation location, InstantiationParameters instantiateParameters) { }
 
-	private AsyncOperationHandle ProvideResource(IResourceLocation location, Type desiredType = null, bool releaseDependenciesOnFailure = true) { }
-
 	public AsyncOperationHandle<TObject> ProvideResource(IResourceLocation location) { }
+
+	private AsyncOperationHandle ProvideResource(IResourceLocation location, Type desiredType = null, bool releaseDependenciesOnFailure = true) { }
 
 	internal AsyncOperationHandle<IList`1<AsyncOperationHandle>> ProvideResourceGroupCached(IList<IResourceLocation> locations, int groupHash, Type desiredType, Action<AsyncOperationHandle> callback, bool releaseDependenciesOnFailure = true) { }
 
@@ -395,14 +299,11 @@ public class ResourceManager : IDisposable
 
 	public AsyncOperationHandle<IList`1<TObject>> ProvideResources(IList<IResourceLocation> locations, bool releaseDependenciesOnFailure, Action<TObject> callback = null) { }
 
-	public AsyncOperationHandle<SceneInstance> ProvideScene(ISceneProvider sceneProvider, IResourceLocation location, LoadSceneParameters loadSceneParameters, bool activateOnLoad, int priority) { }
-
 	public AsyncOperationHandle<SceneInstance> ProvideScene(ISceneProvider sceneProvider, IResourceLocation location, LoadSceneMode loadSceneMode, bool activateOnLoad, int priority) { }
 
-	[Obsolete]
-	public void RegisterDiagnosticCallback(Action<AsyncOperationHandle, DiagnosticEventType, Int32, Object> func) { }
+	public AsyncOperationHandle<SceneInstance> ProvideScene(ISceneProvider sceneProvider, IResourceLocation location, LoadSceneParameters loadSceneParameters, bool activateOnLoad, int priority) { }
 
-	public void RegisterDiagnosticCallback(Action<DiagnosticEventContext> func) { }
+	public AsyncOperationHandle<SceneInstance> ProvideScene(ISceneProvider sceneProvider, IResourceLocation location, LoadSceneParameters loadSceneParameters, SceneReleaseMode releaseMode, bool activateOnLoad, int priority) { }
 
 	internal void RegisterForCallbacks() { }
 
@@ -430,13 +331,11 @@ public class ResourceManager : IDisposable
 	[CompilerGenerated]
 	public void set_WebRequestOverride(Action<UnityWebRequest> value) { }
 
-	public AsyncOperationHandle<TObject> StartOperation(AsyncOperationBase<TObject> operation, AsyncOperationHandle dependency) { }
-
 	internal AsyncOperationHandle StartOperation(IAsyncOperation operation, AsyncOperationHandle dependency) { }
 
-	public string TransformInternalId(IResourceLocation location) { }
+	public AsyncOperationHandle<TObject> StartOperation(AsyncOperationBase<TObject> operation, AsyncOperationHandle dependency) { }
 
-	public void UnregisterDiagnosticCallback(Action<DiagnosticEventContext> func) { }
+	public string TransformInternalId(IResourceLocation location) { }
 
 	internal void Update(float unscaledDeltaTime) { }
 

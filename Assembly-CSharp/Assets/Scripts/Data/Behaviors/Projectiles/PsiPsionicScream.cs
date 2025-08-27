@@ -12,7 +12,7 @@ public class PsiPsionicScream : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 360
+		 get { } //Length: 356
 	}
 
 	public PsiPsionicScream() { }

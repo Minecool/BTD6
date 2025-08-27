@@ -10,7 +10,7 @@ public class TeamStoreRelic
 
 	public bool IsAvailable
 	{
-		 get { } //Length: 294
+		 get { } //Length: 297
 	}
 
 	public TeamStoreRelic(ContestedTerritoryRelicType relicType, Nullable<DateTime> expiresAt, Nullable<DateTime> unlocksAt, TeamStoreItemContributions contributions, string contributionId) { }

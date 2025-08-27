@@ -6,29 +6,29 @@ public struct RendererListParams : IEquatable<RendererListParams>
 	public CullingResults cullingResults; //Field offset: 0x0
 	public DrawingSettings drawSettings; //Field offset: 0x10
 	public FilteringSettings filteringSettings; //Field offset: 0xD4
-	public ShaderTagId tagName; //Field offset: 0xEC
-	public bool isPassTagName; //Field offset: 0xF0
-	public Nullable<NativeArray`1<ShaderTagId>> tagValues; //Field offset: 0xF8
-	public Nullable<NativeArray`1<RenderStateBlock>> stateBlocks; //Field offset: 0x110
+	public ShaderTagId tagName; //Field offset: 0xF4
+	public bool isPassTagName; //Field offset: 0xF8
+	public Nullable<NativeArray`1<ShaderTagId>> tagValues; //Field offset: 0x100
+	public Nullable<NativeArray`1<RenderStateBlock>> stateBlocks; //Field offset: 0x118
 
 	internal int numStateBlocks
 	{
-		internal get { } //Length: 100
+		internal get { } //Length: 96
 	}
 
 	internal IntPtr stateBlocksPtr
 	{
-		internal get { } //Length: 145
+		internal get { } //Length: 141
 	}
 
 	internal IntPtr tagsValuePtr
 	{
-		internal get { } //Length: 145
+		internal get { } //Length: 141
 	}
 
 	private static RendererListParams() { }
 
-	internal void Dispose() { }
+	public RendererListParams(CullingResults cullingResults, DrawingSettings drawSettings, FilteringSettings filteringSettings) { }
 
 	public override bool Equals(RendererListParams other) { }
 

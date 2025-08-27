@@ -12,7 +12,7 @@ public class QuestPartData
 	[ReorderableList("Dialogues", True)]
 	[SerializeField]
 	private QuestDialogueContainer QuestDialogueContainer; //Field offset: 0x28
-	[SerializeReference]
+	[SerializeField]
 	public TaskData[] TasksData; //Field offset: 0x30
 	[ReorderableList("items", True)]
 	[SerializeField]

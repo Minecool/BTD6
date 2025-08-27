@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal static class StyleSheetColor
 {
 	private static Dictionary<String, Color32> s_NameToColor; //Field offset: 0x0

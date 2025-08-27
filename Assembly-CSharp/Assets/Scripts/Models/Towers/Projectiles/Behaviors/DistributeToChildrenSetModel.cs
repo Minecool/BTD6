@@ -17,7 +17,7 @@ public class DistributeToChildrenSetModel : ProjectileBehaviorModel
 
 	public Mutator mutator
 	{
-		 get { } //Length: 220
+		 get { } //Length: 224
 	}
 
 	public DistributeToChildrenSetModel(string name, int layers, Mutator mutator = null) { }

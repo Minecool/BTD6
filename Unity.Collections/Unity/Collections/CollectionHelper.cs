@@ -1,8 +1,18 @@
 namespace Unity.Collections;
 
-[BurstCompatible]
+[GenerateTestsForBurstCompatibility]
 public static class CollectionHelper
 {
+	[BurstCompile]
+	internal struct DummyJob : IJob
+	{
+
+		public override void Execute() { }
+
+	}
+
+
+	public static int Align(int size, int alignmentPowerOfTwo) { }
 
 	internal static int AssumePositive(int value) { }
 

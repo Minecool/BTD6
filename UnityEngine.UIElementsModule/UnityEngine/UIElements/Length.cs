@@ -2,6 +2,83 @@ namespace UnityEngine.UIElements;
 
 public struct Length : IEquatable<Length>
 {
+	public class PropertyBag : ContainerPropertyBag<Length>
+	{
+		private class UnitProperty : Property<Length, LengthUnit>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public UnitProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual LengthUnit GetValue(ref Length container) { }
+
+			public virtual void SetValue(ref Length container, LengthUnit value) { }
+
+		}
+
+		private class ValueProperty : Property<Length, Single>
+		{
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly string <Name>k__BackingField; //Field offset: 0x18
+			[CompilerGenerated]
+			[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+			private readonly bool <IsReadOnly>k__BackingField; //Field offset: 0x20
+
+			public virtual bool IsReadOnly
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public virtual string Name
+			{
+				[CompilerGenerated]
+				 get { } //Length: 5
+			}
+
+			public ValueProperty() { }
+
+			[CompilerGenerated]
+			public virtual bool get_IsReadOnly() { }
+
+			[CompilerGenerated]
+			public virtual string get_Name() { }
+
+			public virtual float GetValue(ref Length container) { }
+
+			public virtual void SetValue(ref Length container, float value) { }
+
+		}
+
+
+		public PropertyBag() { }
+
+	}
+
 	private enum Unit
 	{
 		Pixel = 0,
@@ -19,6 +96,7 @@ public struct Length : IEquatable<Length>
 	public LengthUnit unit
 	{
 		 get { } //Length: 4
+		 set { } //Length: 4
 	}
 
 	public float value
@@ -58,6 +136,8 @@ public struct Length : IEquatable<Length>
 	public static bool op_Inequality(Length lhs, Length rhs) { }
 
 	public static Length Percent(float value) { }
+
+	public void set_unit(LengthUnit value) { }
 
 	public void set_value(float value) { }
 

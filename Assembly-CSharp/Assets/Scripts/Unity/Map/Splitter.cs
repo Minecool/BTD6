@@ -8,7 +8,7 @@ public class Splitter : MonoBehaviour
 
 	public override SplitterModel Def
 	{
-		 get { } //Length: 505
+		 get { } //Length: 498
 	}
 
 	public Splitter() { }

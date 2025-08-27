@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::StyleTransition (12))]
+[EventCategory(EventCategory::StyleTransition (13))]
 public abstract class TransitionEventBase : EventBase<T>
 {
 	[CompilerGenerated]
@@ -13,13 +13,13 @@ public abstract class TransitionEventBase : EventBase<T>
 	protected double elapsedTime
 	{
 		[CompilerGenerated]
-		 set { } //Length: 9
+		 set { } //Length: 6
 	}
 
 	public override StylePropertyNameCollection stylePropertyNames
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 	}
 
 	protected TransitionEventBase`1() { }

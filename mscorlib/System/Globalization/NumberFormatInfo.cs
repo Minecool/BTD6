@@ -50,7 +50,7 @@ public sealed class NumberFormatInfo : ICloneable, IFormatProvider
 	public int CurrencyDecimalDigits
 	{
 		 get { } //Length: 7
-		 set { } //Length: 282
+		 set { } //Length: 266
 	}
 
 	public string CurrencyDecimalSeparator
@@ -85,7 +85,7 @@ public sealed class NumberFormatInfo : ICloneable, IFormatProvider
 
 	public static NumberFormatInfo CurrentInfo
 	{
-		 get { } //Length: 266
+		 get { } //Length: 254
 	}
 
 	public static NumberFormatInfo InvariantInfo
@@ -117,7 +117,7 @@ public sealed class NumberFormatInfo : ICloneable, IFormatProvider
 	public int NumberDecimalDigits
 	{
 		 get { } //Length: 7
-		 set { } //Length: 282
+		 set { } //Length: 266
 	}
 
 	public string NumberDecimalSeparator
@@ -170,7 +170,7 @@ public sealed class NumberFormatInfo : ICloneable, IFormatProvider
 	public int PercentPositivePattern
 	{
 		 get { } //Length: 7
-		 set { } //Length: 282
+		 set { } //Length: 266
 	}
 
 	public string PercentSymbol

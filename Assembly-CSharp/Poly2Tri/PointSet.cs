@@ -55,7 +55,7 @@ public class PointSet : Point2DList, ITriangulatable, IEnumerable<TriangulationP
 
 	public override TriangulationPoint Item
 	{
-		 get { } //Length: 187
+		 get { } //Length: 183
 		 set { } //Length: 97
 	}
 

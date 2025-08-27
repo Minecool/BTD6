@@ -28,17 +28,17 @@ public class WebHeaderCollection : NameValueCollection, ISerializable
 
 	private bool AllowHttpRequestHeader
 	{
-		private get { } //Length: 39
+		private get { } //Length: 44
 	}
 
 	public virtual int Count
 	{
-		 get { } //Length: 59
+		 get { } //Length: 57
 	}
 
 	private NameValueCollection InnerCollection
 	{
-		private get { } //Length: 174
+		private get { } //Length: 173
 	}
 
 	private static WebHeaderCollection() { }

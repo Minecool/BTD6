@@ -49,10 +49,12 @@ public class Ability : TowerBehavior
 	public string expStartOffCooldown; //Field offset: 0x1F8
 	public bool alwaysSetAnimationState; //Field offset: 0x200
 	public string expAlwaysSetAnimationState; //Field offset: 0x208
+	public int rechargeMonkeyMoneyCost; //Field offset: 0x210
+	public string expRechargeMonkeyMoneyCost; //Field offset: 0x218
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 967
+		 get { } //Length: 994
 	}
 
 	public Ability() { }

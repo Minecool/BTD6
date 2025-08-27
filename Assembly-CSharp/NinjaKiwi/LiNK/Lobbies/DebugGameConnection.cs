@@ -192,17 +192,17 @@ public class DebugGameConnection : GameConnection
 	public event Action<TimeSpan, TimeSpan, Boolean> OtherPlayerLatencyUpdatedEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public event Action<TimeSpan, TimeSpan> OtherPlayerPredictionUpdatedEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 186
+		 add { } //Length: 174
 		[CompilerGenerated]
-		 remove { } //Length: 186
+		 remove { } //Length: 174
 	}
 
 	public IEnumerable<DebugPlayer> AllPlayers

@@ -49,7 +49,7 @@ public class Achievement
 		[CompilerGenerated]
 		 get { } //Length: 5
 		[CompilerGenerated]
-		private set { } //Length: 4
+		private set { } //Length: 86
 	}
 
 	private DateTime UnlockTime

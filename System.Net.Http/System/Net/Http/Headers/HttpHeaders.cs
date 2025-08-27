@@ -51,7 +51,7 @@ public abstract class HttpHeaders : IEnumerable<KeyValuePair`2<String, IEnumerab
 
 		public bool HasStringValues
 		{
-			 get { } //Length: 69
+			 get { } //Length: 65
 		}
 
 		public List<String> Values

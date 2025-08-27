@@ -14,7 +14,7 @@ public class CommonErrorNode : CommonTree
 
 	public virtual string Text
 	{
-		 get { } //Length: 762
+		 get { } //Length: 760
 	}
 
 	public virtual int Type

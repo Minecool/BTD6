@@ -13,7 +13,7 @@ public class ParagonOverlaySwap : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 257
+		 get { } //Length: 245
 	}
 
 	public ParagonOverlaySwap() { }

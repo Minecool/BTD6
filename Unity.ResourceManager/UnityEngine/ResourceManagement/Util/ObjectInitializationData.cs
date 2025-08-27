@@ -2,6 +2,32 @@ namespace UnityEngine.ResourceManagement.Util;
 
 public struct ObjectInitializationData
 {
+	public class Serializer : ISerializationAdapter<ObjectInitializationData>, ISerializationAdapter
+	{
+		private struct Data
+		{
+			public uint id; //Field offset: 0x0
+			public uint type; //Field offset: 0x4
+			public uint data; //Field offset: 0x8
+
+		}
+
+
+		public override IEnumerable<ISerializationAdapter> Dependencies
+		{
+			 get { } //Length: 3
+		}
+
+		public Serializer() { }
+
+		public override object Deserialize(Reader reader, Type t, uint offset) { }
+
+		public override IEnumerable<ISerializationAdapter> get_Dependencies() { }
+
+		public override uint Serialize(Writer writer, object val) { }
+
+	}
+
 	[FormerlySerializedAs("m_id")]
 	[SerializeField]
 	private string m_Id; //Field offset: 0x0

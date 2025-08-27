@@ -1,6 +1,6 @@
 namespace UnityEngine.UIElements;
 
-[EventCategory(EventCategory::Keyboard (5))]
+[EventCategory(EventCategory::Keyboard (6))]
 public abstract class KeyboardEventBase : EventBase<T>, IKeyboardEvent
 {
 	[CompilerGenerated]
@@ -15,59 +15,61 @@ public abstract class KeyboardEventBase : EventBase<T>, IKeyboardEvent
 
 	public override bool actionKey
 	{
-		 get { } //Length: 138
+		 get { } //Length: 128
 	}
 
 	public override bool altKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 10
 	}
 
 	public override char character
 	{
 		[CompilerGenerated]
-		 get { } //Length: 8
+		 get { } //Length: 5
 		[CompilerGenerated]
-		 set { } //Length: 8
+		 set { } //Length: 5
 	}
 
 	public override bool commandKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 10
 	}
 
 	public override bool ctrlKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 10
 	}
 
 	internal bool functionKey
 	{
-		internal get { } //Length: 13
+		internal get { } //Length: 10
 	}
 
 	public override KeyCode keyCode
 	{
 		[CompilerGenerated]
-		 get { } //Length: 7
+		 get { } //Length: 4
 		[CompilerGenerated]
-		 set { } //Length: 7
+		 set { } //Length: 4
 	}
 
 	public override EventModifiers modifiers
 	{
 		[CompilerGenerated]
-		 get { } //Length: 7
+		 get { } //Length: 4
 		[CompilerGenerated]
-		 set { } //Length: 7
+		 set { } //Length: 4
 	}
 
 	public override bool shiftKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 10
 	}
 
 	protected KeyboardEventBase`1() { }
+
+	internal virtual void Dispatch(BaseVisualElementPanel panel) { }
 
 	public override bool get_actionKey() { }
 
@@ -89,6 +91,8 @@ public abstract class KeyboardEventBase : EventBase<T>, IKeyboardEvent
 	public override EventModifiers get_modifiers() { }
 
 	public override bool get_shiftKey() { }
+
+	public static T GetPooled(char c, KeyCode keyCode, EventModifiers modifiers) { }
 
 	public static T GetPooled(Event systemEvent) { }
 

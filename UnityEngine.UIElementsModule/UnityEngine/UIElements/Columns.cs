@@ -1,19 +1,20 @@
 namespace UnityEngine.UIElements;
 
 [DefaultMember("Item")]
-public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
+[UxmlObject]
+public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable, INotifyBindablePropertyChanged
 {
 	[CompilerGenerated]
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Predicate<Column> <>9__76_0; //Field offset: 0x8
+		public static Predicate<Column> <>9__87_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <UpdateVisibleColumns>b__76_0(Column c) { }
+		internal bool <UpdateVisibleColumns>b__87_0(Column c) { }
 
 	}
 
@@ -23,6 +24,15 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 		GrowAndFill = 1,
 	}
 
+	[Obsolete("UxmlObjectFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
+	public class UxmlObjectFactory : UxmlObjectFactory<Columns>
+	{
+
+		public UxmlObjectFactory() { }
+
+	}
+
+	[Obsolete("UxmlObjectFactory<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectFactory : UxmlObjectFactory<T, UxmlObjectTraits`1<T>>
 	{
 
@@ -30,6 +40,7 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 
 	}
 
+	[Obsolete("UxmlObjectTraits<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectTraits : UxmlObjectTraits<T>
 	{
 		private readonly UxmlStringAttributeDescription m_PrimaryColumnName; //Field offset: 0x0
@@ -45,6 +56,11 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 
 	}
 
+	private static readonly BindingId primaryColumnNameProperty; //Field offset: 0x0
+	private static readonly BindingId reorderableProperty; //Field offset: 0x98
+	private static readonly BindingId resizableProperty; //Field offset: 0x130
+	private static readonly BindingId resizePreviewProperty; //Field offset: 0x1C8
+	private static readonly BindingId stretchModeProperty; //Field offset: 0x260
 	private IList<Column> m_Columns; //Field offset: 0x10
 	private List<Column> m_DisplayColumns; //Field offset: 0x18
 	private List<Column> m_VisibleColumns; //Field offset: 0x20
@@ -56,22 +72,25 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 	private string m_PrimaryColumnName; //Field offset: 0x38
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<ColumnsDataType> changed; //Field offset: 0x40
+	private EventHandler<BindablePropertyChangedEventArgs> propertyChanged; //Field offset: 0x40
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Column, Int32> columnAdded; //Field offset: 0x48
+	private Action<ColumnsDataType> changed; //Field offset: 0x48
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Column> columnRemoved; //Field offset: 0x50
+	private Action<Column, Int32> columnAdded; //Field offset: 0x50
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Column, ColumnDataType> columnChanged; //Field offset: 0x58
+	private Action<Column> columnRemoved; //Field offset: 0x58
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Column> columnResized; //Field offset: 0x60
+	private Action<Column, ColumnDataType> columnChanged; //Field offset: 0x60
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Column, Int32, Int32> columnReordered; //Field offset: 0x68
+	private Action<Column> columnResized; //Field offset: 0x68
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Action<Column, Int32, Int32> columnReordered; //Field offset: 0x70
 
 	internal event Action<ColumnsDataType> changed
 	{
@@ -121,6 +140,14 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 		internal remove { } //Length: 172
 	}
 
+	public override event EventHandler<BindablePropertyChangedEventArgs> propertyChanged
+	{
+		[CompilerGenerated]
+		 add { } //Length: 172
+		[CompilerGenerated]
+		 remove { } //Length: 172
+	}
+
 	public override int Count
 	{
 		 get { } //Length: 70
@@ -143,43 +170,50 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 
 	public Column Item
 	{
-		 get { } //Length: 372
+		 get { } //Length: 369
 	}
 
+	[CreateProperty]
 	public string primaryColumnName
 	{
 		 get { } //Length: 5
-		 set { } //Length: 69
+		 set { } //Length: 149
 	}
 
+	[CreateProperty]
 	public bool reorderable
 	{
 		 get { } //Length: 5
-		 set { } //Length: 42
+		 set { } //Length: 146
 	}
 
+	[CreateProperty]
 	public bool resizable
 	{
 		 get { } //Length: 5
-		 set { } //Length: 42
+		 set { } //Length: 146
 	}
 
+	[CreateProperty]
 	public bool resizePreview
 	{
 		 get { } //Length: 5
-		 set { } //Length: 42
+		 set { } //Length: 146
 	}
 
+	[CreateProperty]
 	public StretchMode stretchMode
 	{
 		 get { } //Length: 4
-		 set { } //Length: 42
+		 set { } //Length: 143
 	}
 
 	internal IEnumerable<Column> visibleList
 	{
 		internal get { } //Length: 454
 	}
+
+	private static Columns() { }
 
 	public Columns() { }
 
@@ -202,6 +236,9 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 
 	[CompilerGenerated]
 	internal void add_columnResized(Action<Column> value) { }
+
+	[CompilerGenerated]
+	public override void add_propertyChanged(EventHandler<BindablePropertyChangedEventArgs> value) { }
 
 	public override void Clear() { }
 
@@ -247,9 +284,13 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 
 	private void NotifyChange(ColumnsDataType type) { }
 
+	private void NotifyPropertyChanged(in BindingId property) { }
+
 	private void OnColumnChanged(Column column, ColumnDataType type) { }
 
 	private void OnColumnResized(Column column) { }
+
+	private void OnColumnsPropertyChanged(object sender, BindablePropertyChangedEventArgs args) { }
 
 	public override bool Remove(Column column) { }
 
@@ -270,6 +311,9 @@ public class Columns : ICollection<Column>, IEnumerable<Column>, IEnumerable
 
 	[CompilerGenerated]
 	internal void remove_columnResized(Action<Column> value) { }
+
+	[CompilerGenerated]
+	public override void remove_propertyChanged(EventHandler<BindablePropertyChangedEventArgs> value) { }
 
 	public void ReorderDisplay(int from, int to) { }
 

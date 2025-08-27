@@ -12,7 +12,7 @@ public sealed class BitArray : ICollection, IEnumerable, ICloneable
 
 		public override object Current
 		{
-			 get { } //Length: 284
+			 get { } //Length: 270
 		}
 
 		internal BitArrayEnumeratorSimple(BitArray bitarray) { }
@@ -45,13 +45,13 @@ public sealed class BitArray : ICollection, IEnumerable, ICloneable
 	public bool Item
 	{
 		 get { } //Length: 8
-		 set { } //Length: 295
+		 set { } //Length: 287
 	}
 
 	public int Length
 	{
 		 get { } //Length: 4
-		 set { } //Length: 423
+		 set { } //Length: 410
 	}
 
 	public override object SyncRoot
@@ -84,6 +84,8 @@ public sealed class BitArray : ICollection, IEnumerable, ICloneable
 	private static int GetArrayLength(int n, int div) { }
 
 	public override IEnumerator GetEnumerator() { }
+
+	public BitArray Or(BitArray value) { }
 
 	public void Set(int index, bool value) { }
 

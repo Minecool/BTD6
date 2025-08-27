@@ -29,7 +29,7 @@ public class PierceUpTowersModel : ProjectileBehaviorModel
 
 	public PierceUpMutator Mutator
 	{
-		 get { } //Length: 289
+		 get { } //Length: 293
 	}
 
 	public PierceUpTowersModel(string name, float increase, float lifespan, bool useClosest, string mutatorId, int priority, bool useTowerPosition, PrefabReference displayToAddPath) { }

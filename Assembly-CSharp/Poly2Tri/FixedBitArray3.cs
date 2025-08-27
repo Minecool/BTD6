@@ -22,7 +22,7 @@ public struct FixedBitArray3 : IEnumerable<Boolean>, IEnumerable
 		private override object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
-			private get { } //Length: 68
+			private get { } //Length: 34
 		}
 
 		[DebuggerHidden]

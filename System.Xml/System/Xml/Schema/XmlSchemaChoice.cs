@@ -9,10 +9,10 @@ public class XmlSchemaChoice : XmlSchemaGroupBase
 		internal get { } //Length: 7
 	}
 
-	[XmlElement("group", typeof(XmlSchemaGroupRef))]
-	[XmlElement("sequence", typeof(XmlSchemaSequence))]
-	[XmlElement("choice", typeof(XmlSchemaChoice))]
 	[XmlElement("any", typeof(XmlSchemaAny))]
+	[XmlElement("group", typeof(XmlSchemaGroupRef))]
+	[XmlElement("choice", typeof(XmlSchemaChoice))]
+	[XmlElement("sequence", typeof(XmlSchemaSequence))]
 	[XmlElement("element", typeof(XmlSchemaElement))]
 	public virtual XmlSchemaObjectCollection Items
 	{

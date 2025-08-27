@@ -9,12 +9,12 @@ public class HoldInteraction : IInputInteraction
 
 	private float durationOrDefault
 	{
-		private get { } //Length: 108
+		private get { } //Length: 99
 	}
 
 	private float pressPointOrDefault
 	{
-		private get { } //Length: 83
+		private get { } //Length: 74
 	}
 
 	public HoldInteraction() { }

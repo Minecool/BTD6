@@ -6,13 +6,13 @@ public class OnlineProfileModel
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static Predicate<BaseSaveDataModel> <>9__39_0; //Field offset: 0x8
+		public static Predicate<BaseSaveDataModel> <>9__38_0; //Field offset: 0x8
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal bool <Validate>b__39_0(BaseSaveDataModel x) { }
+		internal bool <Validate>b__38_0(BaseSaveDataModel x) { }
 
 	}
 
@@ -46,13 +46,12 @@ public class OnlineProfileModel
 	public DateTime lastGuildJoinTime; //Field offset: 0xD0
 	public HashSet<String> seenInboxMessageIds; //Field offset: 0xD8
 	public Dictionary<String, SweepstakesWinnerMessage> sweepstakesWinnerMessages; //Field offset: 0xE0
-	public HashSet<String> seenSweepstakesEvents; //Field offset: 0xE8
-	public HashSet<String> participatedSweepstakesEvents; //Field offset: 0xF0
-	public Dictionary<String, DateTime> lastReceivedPubsubChannelTimes; //Field offset: 0xF8
+	public HashSet<String> participatedSweepstakesEvents; //Field offset: 0xE8
+	public Dictionary<String, DateTime> lastReceivedPubsubChannelTimes; //Field offset: 0xF0
 	[CompilerGenerated]
-	private CTEventData <CurrentCTEventData>k__BackingField; //Field offset: 0x100
+	private CTEventData <CurrentCTEventData>k__BackingField; //Field offset: 0xF8
 	[CompilerGenerated]
-	private BossRushSaveData <CurrentBossRushEventData>k__BackingField; //Field offset: 0x108
+	private BossRushSaveData <CurrentBossRushEventData>k__BackingField; //Field offset: 0x100
 
 	[JsonIgnore]
 	public BossRushSaveData CurrentBossRushEventData

@@ -25,6 +25,8 @@ public static class XRBuiltinShaderConstants
 
 	public static void SetBuiltinShaderConstants(CommandBuffer cmd) { }
 
+	public static void SetBuiltinShaderConstants(RasterCommandBuffer cmd) { }
+
 	public static void Update(XRPass xrPass, CommandBuffer cmd, bool renderIntoTexture) { }
 
 	public static void UpdateBuiltinShaderConstants(Matrix4x4 viewMatrix, Matrix4x4 projMatrix, bool renderIntoTexture, int viewIndex) { }

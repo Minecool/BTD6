@@ -13,5 +13,6 @@ public enum Characters
 	BeastHandler = 8,
 	SheRa = 9,
 	MajorMonkey = 10,
+	Quincy = 11,
 }
 

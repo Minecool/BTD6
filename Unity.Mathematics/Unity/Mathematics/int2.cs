@@ -17,7 +17,7 @@ public struct int2 : IEquatable<int2>, IFormattable
 	[EditorBrowsable(EditorBrowsableState::Never (1))]
 	public int4 xyxy
 	{
-		 get { } //Length: 25
+		 get { } //Length: 23
 	}
 
 	public int2(int x, int y) { }

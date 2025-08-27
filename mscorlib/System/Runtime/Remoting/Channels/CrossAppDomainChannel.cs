@@ -6,7 +6,7 @@ internal class CrossAppDomainChannel : IChannel, IChannelSender, IChannelReceive
 
 	public override object ChannelData
 	{
-		 get { } //Length: 190
+		 get { } //Length: 178
 	}
 
 	public override string ChannelName

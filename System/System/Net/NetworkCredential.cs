@@ -9,7 +9,7 @@ public class NetworkCredential : ICredentials
 	public string Domain
 	{
 		 get { } //Length: 5
-		 set { } //Length: 96
+		 set { } //Length: 35
 	}
 
 	public string Password
@@ -21,7 +21,7 @@ public class NetworkCredential : ICredentials
 	public string UserName
 	{
 		 get { } //Length: 5
-		 set { } //Length: 96
+		 set { } //Length: 35
 	}
 
 	public NetworkCredential(string userName, string password) { }

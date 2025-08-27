@@ -21,6 +21,8 @@ public abstract class UnityEventBase : ISerializationCallbackReceiver
 
 	protected abstract MethodInfo FindMethod_Impl(string name, Type targetObjType) { }
 
+	internal int GetCallsCount() { }
+
 	internal abstract BaseInvokableCall GetDelegate(object target, MethodInfo theFunction) { }
 
 	public static MethodInfo GetValidMethodInfo(Type objectType, string functionName, Type[] argumentTypes) { }

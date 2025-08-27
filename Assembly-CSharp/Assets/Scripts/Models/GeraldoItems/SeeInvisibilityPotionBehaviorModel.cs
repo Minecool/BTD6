@@ -46,7 +46,7 @@ public class SeeInvisibilityPotionBehaviorModel : GeraldoItemBehaviorModel
 
 	public SeeInvisibilityPotionEffectMutator EffectMutator
 	{
-		 get { } //Length: 234
+		 get { } //Length: 238
 	}
 
 	private static SeeInvisibilityPotionBehaviorModel() { }

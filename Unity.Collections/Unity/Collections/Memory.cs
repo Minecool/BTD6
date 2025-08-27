@@ -1,12 +1,12 @@
 namespace Unity.Collections;
 
-[BurstCompatible]
+[GenerateTestsForBurstCompatibility]
 internal struct Memory
 {
-	[BurstCompatible]
+	[GenerateTestsForBurstCompatibility]
 	public struct Unmanaged
 	{
-		[BurstCompatible]
+		[GenerateTestsForBurstCompatibility]
 		public struct Array
 		{
 
@@ -16,7 +16,7 @@ internal struct Memory
 
 			internal static Void* Resize(Void* oldPointer, long oldCount, long newCount, AllocatorHandle allocator, long size, int align) { }
 
-			[BurstCompatible(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int}])]
+			[GenerateTestsForBurstCompatibility(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int}])]
 			internal static T* Resize(T* oldPointer, long oldCount, long newCount, AllocatorHandle allocator) { }
 
 		}
@@ -26,7 +26,7 @@ internal struct Memory
 
 		internal static void Free(Void* pointer, AllocatorHandle allocator) { }
 
-		[BurstCompatible(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int}])]
+		[GenerateTestsForBurstCompatibility(GenericTypeArguments = new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {typeof(int}])]
 		internal static void Free(T* pointer, AllocatorHandle allocator) { }
 
 	}

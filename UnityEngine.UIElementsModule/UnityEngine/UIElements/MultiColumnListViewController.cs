@@ -9,11 +9,6 @@ public class MultiColumnListViewController : BaseListViewController
 		 get { } //Length: 5
 	}
 
-	internal MultiColumnCollectionHeader header
-	{
-		internal get { } //Length: 15
-	}
-
 	public MultiColumnListViewController(Columns columns, SortColumnDescriptions sortDescriptions, List<SortColumnDescription> sortedColumns) { }
 
 	protected virtual void BindItem(VisualElement element, int index) { }
@@ -24,13 +19,23 @@ public class MultiColumnListViewController : BaseListViewController
 
 	public MultiColumnController get_columnController() { }
 
-	internal MultiColumnCollectionHeader get_header() { }
+	public virtual int GetIdForIndex(int index) { }
+
+	public virtual int GetIndexForId(int id) { }
+
+	public virtual object GetItemForIndex(int index) { }
+
+	internal virtual void InvokeBindItem(ReusableCollectionItem reusableItem, int index) { }
 
 	internal virtual void InvokeMakeItem(ReusableCollectionItem reusableItem) { }
 
 	protected virtual VisualElement MakeItem() { }
 
 	protected virtual void PrepareView() { }
+
+	internal virtual void PreRefresh() { }
+
+	private void SortIfNeeded() { }
 
 	protected virtual void UnbindItem(VisualElement element, int index) { }
 

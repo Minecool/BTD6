@@ -8,7 +8,7 @@ public class TravelCurvy : TravelStrait
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 202
+		 get { } //Length: 194
 	}
 
 	public TravelCurvy() { }

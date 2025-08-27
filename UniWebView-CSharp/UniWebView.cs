@@ -337,9 +337,9 @@ public class UniWebView : MonoBehaviour
 	public event KeyCodeReceivedDelegate OnKeyCodeReceived
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event LoadingErrorReceivedDelegate OnLoadingErrorReceived
@@ -361,17 +361,17 @@ public class UniWebView : MonoBehaviour
 	public event MultipleWindowClosedDelegate OnMultipleWindowClosed
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event MultipleWindowOpenedDelegate OnMultipleWindowOpened
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public event OrientationChangedDelegate OnOrientationChanged

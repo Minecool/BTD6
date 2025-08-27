@@ -18,9 +18,9 @@ public class BossRushManager : SimulationBehavior
 	[SerializeReference]
 	public BloonBehaviorModel[] behaviorModels; //Field offset: 0x50
 
-	public virtual SimulationBehaviorModel Def
+	public virtual Model Model
 	{
-		 get { } //Length: 392
+		 get { } //Length: 394
 	}
 
 	public virtual string Type
@@ -30,7 +30,7 @@ public class BossRushManager : SimulationBehavior
 
 	public BossRushManager() { }
 
-	public virtual SimulationBehaviorModel get_Def() { }
+	public virtual Model get_Model() { }
 
 	public virtual string get_Type() { }
 

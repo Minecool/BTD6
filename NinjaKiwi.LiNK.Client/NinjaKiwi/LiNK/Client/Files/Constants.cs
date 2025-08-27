@@ -10,11 +10,13 @@ internal static class Constants
 	public const CompressionLevel ZLIB_LEVEL = 3; //Field offset: 0x0
 	public const int ZLIB_BUFFER_BYTES = 2048; //Field offset: 0x0
 
-	public static AesManaged CreateAes(string password, out Byte[] salt) { }
+	public static Aes CreateAes(string password, out Byte[] salt) { }
 
-	public static AesManaged CreateAes(string password, Byte[] salt) { }
+	public static Aes CreateAes(string password, Byte[] salt) { }
 
-	private static AesManaged CreateAes(Rfc2898DeriveBytes pbkdf) { }
+	private static Aes CreateAes(Rfc2898DeriveBytes pbkdf) { }
+
+	public static Byte[] ReadSalt(BinaryReader binaryReader) { }
 
 }
 

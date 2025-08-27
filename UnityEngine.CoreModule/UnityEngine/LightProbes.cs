@@ -13,8 +13,6 @@ public sealed class LightProbes : object
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
 	private static Action needsRetetrahedralization; //Field offset: 0x10
 
-	private LightProbes() { }
-
 	[RequiredByNativeCode]
 	private static void Internal_CallLightProbesUpdatedFunction() { }
 

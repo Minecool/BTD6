@@ -15,7 +15,7 @@ public class PanelSettings : ScriptableObject
 
 		internal BaseRuntimePanel panel
 		{
-			internal get { } //Length: 627
+			internal get { } //Length: 900
 		}
 
 		internal RuntimePanelAccess(PanelSettings settings) { }
@@ -32,6 +32,8 @@ public class PanelSettings : ScriptableObject
 
 		internal void MarkPotentiallyEmpty() { }
 
+		internal void SetPanelChangeReceiver() { }
+
 		internal void SetSortingPriority() { }
 
 		internal void SetTargetDisplay() { }
@@ -47,57 +49,90 @@ public class PanelSettings : ScriptableObject
 	[SerializeField]
 	private ThemeStyleSheet themeUss; //Field offset: 0x18
 	[SerializeField]
-	private RenderTexture m_TargetTexture; //Field offset: 0x20
+	private bool m_DisableNoThemeWarning; //Field offset: 0x20
 	[SerializeField]
-	private PanelScaleMode m_ScaleMode; //Field offset: 0x28
+	private RenderTexture m_TargetTexture; //Field offset: 0x28
 	[SerializeField]
-	private float m_ReferenceSpritePixelsPerUnit; //Field offset: 0x2C
+	private PanelRenderMode m_RenderMode; //Field offset: 0x30
 	[SerializeField]
-	private float m_Scale; //Field offset: 0x30
+	private int m_WorldSpaceLayer; //Field offset: 0x34
 	[SerializeField]
-	private float m_ReferenceDpi; //Field offset: 0x34
+	private PanelScaleMode m_ScaleMode; //Field offset: 0x38
 	[SerializeField]
-	private float m_FallbackDpi; //Field offset: 0x38
+	private float m_ReferenceSpritePixelsPerUnit; //Field offset: 0x3C
 	[SerializeField]
-	private Vector2Int m_ReferenceResolution; //Field offset: 0x3C
+	private float m_PixelsPerUnit; //Field offset: 0x40
 	[SerializeField]
-	private PanelScreenMatchMode m_ScreenMatchMode; //Field offset: 0x44
+	private float m_Scale; //Field offset: 0x44
+	[SerializeField]
+	private float m_ReferenceDpi; //Field offset: 0x48
+	[SerializeField]
+	private float m_FallbackDpi; //Field offset: 0x4C
+	[SerializeField]
+	private Vector2Int m_ReferenceResolution; //Field offset: 0x50
+	[SerializeField]
+	private PanelScreenMatchMode m_ScreenMatchMode; //Field offset: 0x58
 	[Range(0, 1)]
 	[SerializeField]
-	private float m_Match; //Field offset: 0x48
+	private float m_Match; //Field offset: 0x5C
 	[SerializeField]
-	private float m_SortingOrder; //Field offset: 0x4C
+	private float m_SortingOrder; //Field offset: 0x60
 	[SerializeField]
-	private int m_TargetDisplay; //Field offset: 0x50
+	private int m_TargetDisplay; //Field offset: 0x64
 	[SerializeField]
-	private bool m_ClearDepthStencil; //Field offset: 0x54
+	private BindingLogLevel m_BindingLogLevel; //Field offset: 0x68
 	[SerializeField]
-	private bool m_ClearColor; //Field offset: 0x55
+	private bool m_ClearDepthStencil; //Field offset: 0x6C
 	[SerializeField]
-	private Color m_ColorClearValue; //Field offset: 0x58
-	private RuntimePanelAccess m_PanelAccess; //Field offset: 0x68
-	internal UIDocumentList m_AttachedUIDocumentsList; //Field offset: 0x70
+	private bool m_ClearColor; //Field offset: 0x6D
+	[SerializeField]
+	private Color m_ColorClearValue; //Field offset: 0x70
+	[SerializeField]
+	private uint m_VertexBudget; //Field offset: 0x80
+	private RuntimePanelAccess m_PanelAccess; //Field offset: 0x88
+	internal UIDocumentList m_AttachedUIDocumentsList; //Field offset: 0x90
 	[HideInInspector]
 	[SerializeField]
-	private DynamicAtlasSettings m_DynamicAtlasSettings; //Field offset: 0x78
+	private DynamicAtlasSettings m_DynamicAtlasSettings; //Field offset: 0x98
 	[HideInInspector]
 	[SerializeField]
-	private Shader m_AtlasBlitShader; //Field offset: 0x80
+	private Shader m_AtlasBlitShader; //Field offset: 0xA0
 	[HideInInspector]
 	[SerializeField]
-	private Shader m_RuntimeShader; //Field offset: 0x88
+	private Shader m_RuntimeShader; //Field offset: 0xA8
 	[HideInInspector]
 	[SerializeField]
-	private Shader m_RuntimeWorldShader; //Field offset: 0x90
+	private Shader m_RuntimeWorldShader; //Field offset: 0xB0
+	[HideInInspector]
 	[SerializeField]
-	public PanelTextSettings textSettings; //Field offset: 0x98
-	private Rect m_TargetRect; //Field offset: 0xA0
-	private float m_ResolvedScale; //Field offset: 0xB0
-	private StyleSheet m_OldThemeUss; //Field offset: 0xB8
+	private Shader m_SDFShader; //Field offset: 0xB8
+	[HideInInspector]
+	[SerializeField]
+	private Shader m_BitmapShader; //Field offset: 0xC0
+	[HideInInspector]
+	[SerializeField]
+	private Shader m_SpriteShader; //Field offset: 0xC8
+	[HideInInspector]
+	[SerializeField]
+	internal TextAsset m_ICUDataAsset; //Field offset: 0xD0
+	[SerializeField]
+	public bool forceGammaRendering; //Field offset: 0xD8
+	[SerializeField]
+	public PanelTextSettings textSettings; //Field offset: 0xE0
+	private Rect m_TargetRect; //Field offset: 0xE8
+	private float m_ResolvedScale; //Field offset: 0xF8
+	private StyleSheet m_OldThemeUss; //Field offset: 0x100
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private float <ScreenDPI>k__BackingField; //Field offset: 0xC0
-	private Func<Vector2, Vector2> m_AssignedScreenToPanel; //Field offset: 0xC8
+	private float <ScreenDPI>k__BackingField; //Field offset: 0x108
+	private IDebugPanelChangeReceiver m_PanelChangeReceiver; //Field offset: 0x110
+	private Func<Vector2, Vector2> m_AssignedScreenToPanel; //Field offset: 0x118
+
+	public BindingLogLevel bindingLogLevel
+	{
+		 get { } //Length: 4
+		 set { } //Length: 64
+	}
 
 	public bool clearColor
 	{
@@ -124,8 +159,8 @@ public class PanelSettings : ScriptableObject
 
 	public DynamicAtlasSettings dynamicAtlasSettings
 	{
-		 get { } //Length: 70
-		 set { } //Length: 5
+		 get { } //Length: 8
+		 set { } //Length: 8
 	}
 
 	public float fallbackDpi
@@ -136,7 +171,7 @@ public class PanelSettings : ScriptableObject
 
 	internal bool isInitialized
 	{
-		internal get { } //Length: 19
+		internal get { } //Length: 22
 	}
 
 	public float match
@@ -147,7 +182,13 @@ public class PanelSettings : ScriptableObject
 
 	internal BaseRuntimePanel panel
 	{
-		internal get { } //Length: 29
+		internal get { } //Length: 32
+	}
+
+	internal float pixelsPerUnit
+	{
+		internal get { } //Length: 8
+		internal set { } //Length: 6
 	}
 
 	public float referenceDpi
@@ -166,6 +207,12 @@ public class PanelSettings : ScriptableObject
 	{
 		 get { } //Length: 8
 		 set { } //Length: 6
+	}
+
+	internal PanelRenderMode renderMode
+	{
+		internal get { } //Length: 4
+		internal set { } //Length: 4
 	}
 
 	public float scale
@@ -197,19 +244,19 @@ public class PanelSettings : ScriptableObject
 	public float sortingOrder
 	{
 		 get { } //Length: 6
-		 set { } //Length: 65
+		 set { } //Length: 66
 	}
 
 	public int targetDisplay
 	{
 		 get { } //Length: 4
-		 set { } //Length: 55
+		 set { } //Length: 56
 	}
 
 	public RenderTexture targetTexture
 	{
 		 get { } //Length: 5
-		 set { } //Length: 58
+		 set { } //Length: 59
 	}
 
 	public ThemeStyleSheet themeStyleSheet
@@ -218,9 +265,21 @@ public class PanelSettings : ScriptableObject
 		 set { } //Length: 14
 	}
 
+	public uint vertexBudget
+	{
+		 get { } //Length: 7
+		 set { } //Length: 7
+	}
+
 	internal VisualElement visualTree
 	{
-		internal get { } //Length: 57
+		internal get { } //Length: 60
+	}
+
+	internal int worldSpaceLayer
+	{
+		internal get { } //Length: 4
+		internal set { } //Length: 4
 	}
 
 	private PanelSettings() { }
@@ -231,11 +290,15 @@ public class PanelSettings : ScriptableObject
 
 	private void ApplyThemeStyleSheet(VisualElement root = null) { }
 
+	internal bool AssignICUData() { }
+
 	internal void AttachAndInsertUIDocumentToVisualTree(UIDocument uiDocument) { }
 
 	internal void DetachUIDocument(UIDocument uiDocument) { }
 
 	internal void DisposePanel() { }
+
+	public BindingLogLevel get_bindingLogLevel() { }
 
 	public bool get_clearColor() { }
 
@@ -255,11 +318,15 @@ public class PanelSettings : ScriptableObject
 
 	internal BaseRuntimePanel get_panel() { }
 
+	internal float get_pixelsPerUnit() { }
+
 	public float get_referenceDpi() { }
 
 	public Vector2Int get_referenceResolution() { }
 
 	public float get_referenceSpritePixelsPerUnit() { }
+
+	internal PanelRenderMode get_renderMode() { }
 
 	public float get_scale() { }
 
@@ -278,9 +345,15 @@ public class PanelSettings : ScriptableObject
 
 	public ThemeStyleSheet get_themeStyleSheet() { }
 
+	public uint get_vertexBudget() { }
+
 	internal VisualElement get_visualTree() { }
 
+	internal int get_worldSpaceLayer() { }
+
 	internal Rect GetDisplayRect() { }
+
+	internal IDebugPanelChangeReceiver GetPanelChangeReceiver() { }
 
 	private void InitializeShaders() { }
 
@@ -291,6 +364,8 @@ public class PanelSettings : ScriptableObject
 	private void Reset() { }
 
 	internal float ResolveScale(Rect targetRect, float screenDpi) { }
+
+	public void set_bindingLogLevel(BindingLogLevel value) { }
 
 	public void set_clearColor(bool value) { }
 
@@ -304,11 +379,15 @@ public class PanelSettings : ScriptableObject
 
 	public void set_match(float value) { }
 
+	internal void set_pixelsPerUnit(float value) { }
+
 	public void set_referenceDpi(float value) { }
 
 	public void set_referenceResolution(Vector2Int value) { }
 
 	public void set_referenceSpritePixelsPerUnit(float value) { }
+
+	internal void set_renderMode(PanelRenderMode value) { }
 
 	public void set_scale(float value) { }
 
@@ -326,6 +405,13 @@ public class PanelSettings : ScriptableObject
 	public void set_targetTexture(RenderTexture value) { }
 
 	public void set_themeStyleSheet(ThemeStyleSheet value) { }
+
+	public void set_vertexBudget(uint value) { }
+
+	internal void set_worldSpaceLayer(int value) { }
+
+	[Conditional("ENABLE_PROFILER")]
+	public void SetPanelChangeReceiver(IDebugPanelChangeReceiver value) { }
 
 	public void SetScreenToPanelSpaceFunction(Func<Vector2, Vector2> screentoPanelSpaceFunction) { }
 

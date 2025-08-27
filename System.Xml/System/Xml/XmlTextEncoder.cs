@@ -11,7 +11,7 @@ internal class XmlTextEncoder
 
 	internal string AttributeValue
 	{
-		internal get { } //Length: 105
+		internal get { } //Length: 70
 	}
 
 	internal char QuoteChar

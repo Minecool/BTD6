@@ -4,6 +4,13 @@ namespace UnityEngine.VFX;
 [RequiredByNativeCode]
 public sealed class VFXEventAttribute : IDisposable
 {
+	public static class BindingsMarshaller
+	{
+
+		public static IntPtr ConvertToNative(VFXEventAttribute eventAttibute) { }
+
+	}
+
 	private IntPtr m_Ptr; //Field offset: 0x10
 	private bool m_Owner; //Field offset: 0x18
 	private VisualEffectAsset m_VfxAsset; //Field offset: 0x20
@@ -22,6 +29,8 @@ public sealed class VFXEventAttribute : IDisposable
 	internal static void Internal_Destroy(IntPtr ptr) { }
 
 	internal void Internal_InitFromAsset(VisualEffectAsset vfxAsset) { }
+
+	private static void Internal_InitFromAsset_Injected(IntPtr _unity_self, IntPtr vfxAsset) { }
 
 	internal static VFXEventAttribute Internal_InstanciateVFXEventAttribute(VisualEffectAsset vfxAsset) { }
 

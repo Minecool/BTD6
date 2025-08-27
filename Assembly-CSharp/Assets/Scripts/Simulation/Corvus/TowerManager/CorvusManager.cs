@@ -124,7 +124,7 @@ public class CorvusManager
 
 	public string AvailableManaString
 	{
-		 get { } //Length: 131
+		 get { } //Length: 119
 	}
 
 	public SpiritTower GetDuplicateSpiritTower

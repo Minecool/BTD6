@@ -80,7 +80,7 @@ public class GraphNodeModelDescriptorDef
 
 	public bool HasDerivedTypes
 	{
-		 get { } //Length: 164
+		 get { } //Length: 173
 	}
 
 	public private bool IsArray
@@ -132,7 +132,7 @@ public class GraphNodeModelDescriptorDef
 	public Type Type
 	{
 		[NullableContext(1)]
-		 get { } //Length: 139
+		 get { } //Length: 127
 	}
 
 	public GraphNodeModelDescriptorDef(Type type) { }

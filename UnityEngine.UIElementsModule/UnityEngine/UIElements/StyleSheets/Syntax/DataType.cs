@@ -1,5 +1,6 @@
 namespace UnityEngine.UIElements.StyleSheets.Syntax;
 
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
 internal enum DataType
 {
 	None = 0,

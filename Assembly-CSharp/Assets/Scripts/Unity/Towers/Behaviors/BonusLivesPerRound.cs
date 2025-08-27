@@ -12,7 +12,7 @@ public class BonusLivesPerRound : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 1097
+		 get { } //Length: 1137
 	}
 
 	public BonusLivesPerRound() { }

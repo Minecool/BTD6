@@ -20,7 +20,7 @@ public sealed class ClickEvent : PointerEventBase<ClickEvent>
 
 	public ClickEvent() { }
 
-	internal static ClickEvent GetPooled(PointerUpEvent pointerEvent, int clickCount) { }
+	internal static ClickEvent GetPooled(IPointerEvent pointerEvent, int clickCount) { }
 
 	protected virtual void Init() { }
 

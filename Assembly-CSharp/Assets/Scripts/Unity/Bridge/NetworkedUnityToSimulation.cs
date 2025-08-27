@@ -66,12 +66,12 @@ public class NetworkedUnityToSimulation : UnityToSimulation
 
 	private bool AnyPlayerIsOutOfSync
 	{
-		private get { } //Length: 387
+		private get { } //Length: 384
 	}
 
 	private bool AnyPlayerIsRejoining
 	{
-		private get { } //Length: 387
+		private get { } //Length: 384
 	}
 
 	public bool CanAutoResync

@@ -10,7 +10,7 @@ public class CommonTree : BaseTree
 
 	public virtual int CharPositionInLine
 	{
-		 get { } //Length: 206
+		 get { } //Length: 204
 	}
 
 	public virtual int ChildIndex
@@ -25,17 +25,17 @@ public class CommonTree : BaseTree
 
 	public virtual int Line
 	{
-		 get { } //Length: 205
+		 get { } //Length: 203
 	}
 
 	public virtual ITree Parent
 	{
-		 set { } //Length: 173
+		 set { } //Length: 165
 	}
 
 	public virtual string Text
 	{
-		 get { } //Length: 78
+		 get { } //Length: 76
 	}
 
 	public override IToken Token
@@ -55,7 +55,7 @@ public class CommonTree : BaseTree
 
 	public virtual int Type
 	{
-		 get { } //Length: 75
+		 get { } //Length: 73
 	}
 
 	public CommonTree() { }

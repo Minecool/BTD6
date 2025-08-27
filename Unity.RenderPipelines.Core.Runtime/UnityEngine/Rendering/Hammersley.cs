@@ -1,8 +1,8 @@
 namespace UnityEngine.Rendering;
 
-internal static class Hammersley
+public static class Hammersley
 {
-	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.11\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
+	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@da6c8615357e\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
 	private struct Hammersley2dSeq16
 	{
 		[CompilerGenerated]
@@ -19,7 +19,7 @@ internal static class Hammersley
 
 	}
 
-	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.11\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
+	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@da6c8615357e\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
 	private struct Hammersley2dSeq256
 	{
 		[CompilerGenerated]
@@ -36,7 +36,7 @@ internal static class Hammersley
 
 	}
 
-	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.11\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
+	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@da6c8615357e\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
 	private struct Hammersley2dSeq32
 	{
 		[CompilerGenerated]
@@ -53,7 +53,7 @@ internal static class Hammersley
 
 	}
 
-	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.11\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
+	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@da6c8615357e\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = False, generateCBuffer = True)]
 	private struct Hammersley2dSeq64
 	{
 		[CompilerGenerated]

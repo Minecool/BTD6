@@ -41,7 +41,7 @@ public class FireballActionModel : BloonBehaviorActionModel
 
 	public MagmaPoolMutator MagmaMutator
 	{
-		 get { } //Length: 341
+		 get { } //Length: 345
 	}
 
 	public TowerFreezeMutator StunMutator

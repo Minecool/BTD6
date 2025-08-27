@@ -6,183 +6,162 @@ public class ProbeReferenceVolume
 	private sealed class <>c
 	{
 		public static readonly <>c <>9; //Field offset: 0x0
-		public static UnityAction<CellInfo> <>9__120_0; //Field offset: 0x8
-		public static UnityAction<BlendingCellInfo> <>9__120_1; //Field offset: 0x10
-		public static Func<Single> <>9__171_7; //Field offset: 0x18
-		public static Func<Single> <>9__171_16; //Field offset: 0x20
-		public static Func<Single> <>9__171_17; //Field offset: 0x28
-		public static Func<Int32> <>9__171_22; //Field offset: 0x30
-		public static Func<Int32> <>9__171_23; //Field offset: 0x38
-		public static Func<Int32> <>9__171_26; //Field offset: 0x40
-		public static Func<Int32> <>9__171_27; //Field offset: 0x48
-		public static Func<Single> <>9__171_32; //Field offset: 0x50
-		public static Func<Single> <>9__171_33; //Field offset: 0x58
-		public static Func<Single> <>9__171_36; //Field offset: 0x60
-		public static Func<Int32> <>9__171_39; //Field offset: 0x68
-		public static Action<Int32> <>9__171_40; //Field offset: 0x70
-		public static Func<Int32> <>9__171_41; //Field offset: 0x78
-		public static Func<Int32> <>9__171_43; //Field offset: 0x80
-		public static Action<Int32> <>9__171_44; //Field offset: 0x88
-		public static Func<Int32> <>9__171_45; //Field offset: 0x90
-		public static Func<Single> <>9__171_46; //Field offset: 0x98
-		public static Action<Single> <>9__171_47; //Field offset: 0xA0
-		public static Func<Single> <>9__171_48; //Field offset: 0xA8
-		public static Func<Single> <>9__171_49; //Field offset: 0xB0
-		public static Func<Single> <>9__171_54; //Field offset: 0xB8
-		public static Action<Single> <>9__171_55; //Field offset: 0xC0
-		public static Func<Single> <>9__171_56; //Field offset: 0xC8
-		public static Func<Single> <>9__171_57; //Field offset: 0xD0
+		public static UnityAction<Cell> <>9__152_0; //Field offset: 0x8
+		public static UnityAction<CellStreamingRequest> <>9__152_1; //Field offset: 0x10
+		public static Func<Boolean> <>9__223_1; //Field offset: 0x18
+		public static Func<Single> <>9__223_8; //Field offset: 0x20
+		public static Func<Single> <>9__223_18; //Field offset: 0x28
+		public static Func<Single> <>9__223_19; //Field offset: 0x30
+		public static Func<Int32> <>9__223_25; //Field offset: 0x38
+		public static Func<Int32> <>9__223_29; //Field offset: 0x40
+		public static Func<Single> <>9__223_36; //Field offset: 0x48
+		public static Func<Single> <>9__223_37; //Field offset: 0x50
+		public static Func<Single> <>9__223_45; //Field offset: 0x58
+		public static Func<Single> <>9__223_46; //Field offset: 0x60
+		public static Func<Single> <>9__223_50; //Field offset: 0x68
+		public static Func<Boolean> <>9__223_60; //Field offset: 0x70
+		public static Action<Boolean> <>9__223_61; //Field offset: 0x78
+		public static Func<Boolean> <>9__223_62; //Field offset: 0x80
+		public static Func<Int32> <>9__223_63; //Field offset: 0x88
+		public static Action<Int32> <>9__223_64; //Field offset: 0x90
+		public static Func<Int32> <>9__223_65; //Field offset: 0x98
+		public static Func<Int32> <>9__223_66; //Field offset: 0xA0
+		public static Func<Object> <>9__223_70; //Field offset: 0xA8
+		public static Func<Int32> <>9__223_76; //Field offset: 0xB0
+		public static Action<Int32> <>9__223_77; //Field offset: 0xB8
+		public static Func<Int32> <>9__223_78; //Field offset: 0xC0
+		public static Func<Single> <>9__223_79; //Field offset: 0xC8
+		public static Action<Single> <>9__223_80; //Field offset: 0xD0
+		public static Func<Single> <>9__223_81; //Field offset: 0xD8
+		public static Func<Single> <>9__223_82; //Field offset: 0xE0
+		public static Func<Single> <>9__223_87; //Field offset: 0xE8
+		public static Action<Single> <>9__223_88; //Field offset: 0xF0
+		public static Func<Single> <>9__223_89; //Field offset: 0xF8
+		public static Func<Single> <>9__223_90; //Field offset: 0x100
+		public static BaseRenderFunc<RenderFragmentationOverlayPassData, RenderGraphContext> <>9__226_0; //Field offset: 0x108
+		public static UnityAction<CellStreamingRequest> <>9__287_0; //Field offset: 0x110
 
 		private static <>c() { }
 
 		public <>c() { }
 
-		internal void <.ctor>b__120_0(CellInfo x) { }
+		internal void <.ctor>b__152_0(Cell x) { }
 
-		internal void <.ctor>b__120_1(BlendingCellInfo x) { }
+		internal void <.ctor>b__152_1(CellStreamingRequest val) { }
 
-		internal float <RegisterDebug>b__171_16() { }
+		internal void <CleanupStreaming>b__287_0(CellStreamingRequest val) { }
 
-		internal float <RegisterDebug>b__171_17() { }
+		internal bool <RegisterDebug>b__223_1() { }
 
-		internal int <RegisterDebug>b__171_22() { }
+		internal float <RegisterDebug>b__223_18() { }
 
-		internal int <RegisterDebug>b__171_23() { }
+		internal float <RegisterDebug>b__223_19() { }
 
-		internal int <RegisterDebug>b__171_26() { }
+		internal int <RegisterDebug>b__223_25() { }
 
-		internal int <RegisterDebug>b__171_27() { }
+		internal int <RegisterDebug>b__223_29() { }
 
-		internal float <RegisterDebug>b__171_32() { }
+		internal float <RegisterDebug>b__223_36() { }
 
-		internal float <RegisterDebug>b__171_33() { }
+		internal float <RegisterDebug>b__223_37() { }
 
-		internal float <RegisterDebug>b__171_36() { }
+		internal float <RegisterDebug>b__223_45() { }
 
-		internal int <RegisterDebug>b__171_39() { }
+		internal float <RegisterDebug>b__223_46() { }
 
-		internal void <RegisterDebug>b__171_40(int value) { }
+		internal float <RegisterDebug>b__223_50() { }
 
-		internal int <RegisterDebug>b__171_41() { }
+		internal bool <RegisterDebug>b__223_60() { }
 
-		internal int <RegisterDebug>b__171_43() { }
+		internal void <RegisterDebug>b__223_61(bool value) { }
 
-		internal void <RegisterDebug>b__171_44(int value) { }
+		internal bool <RegisterDebug>b__223_62() { }
 
-		internal int <RegisterDebug>b__171_45() { }
+		internal int <RegisterDebug>b__223_63() { }
 
-		internal float <RegisterDebug>b__171_46() { }
+		internal void <RegisterDebug>b__223_64(int value) { }
 
-		internal void <RegisterDebug>b__171_47(float value) { }
+		internal int <RegisterDebug>b__223_65() { }
 
-		internal float <RegisterDebug>b__171_48() { }
+		internal int <RegisterDebug>b__223_66() { }
 
-		internal float <RegisterDebug>b__171_49() { }
+		internal object <RegisterDebug>b__223_70() { }
 
-		internal float <RegisterDebug>b__171_54() { }
+		internal int <RegisterDebug>b__223_76() { }
 
-		internal void <RegisterDebug>b__171_55(float value) { }
+		internal void <RegisterDebug>b__223_77(int value) { }
 
-		internal float <RegisterDebug>b__171_56() { }
+		internal int <RegisterDebug>b__223_78() { }
 
-		internal float <RegisterDebug>b__171_57() { }
+		internal float <RegisterDebug>b__223_79() { }
 
-		internal float <RegisterDebug>b__171_7() { }
+		internal float <RegisterDebug>b__223_8() { }
+
+		internal void <RegisterDebug>b__223_80(float value) { }
+
+		internal float <RegisterDebug>b__223_81() { }
+
+		internal float <RegisterDebug>b__223_82() { }
+
+		internal float <RegisterDebug>b__223_87() { }
+
+		internal void <RegisterDebug>b__223_88(float value) { }
+
+		internal float <RegisterDebug>b__223_89() { }
+
+		internal float <RegisterDebug>b__223_90() { }
+
+		internal void <RenderFragmentationOverlay>b__226_0(RenderFragmentationOverlayPassData data, RenderGraphContext ctx) { }
 
 	}
 
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass171_0
+	private sealed class <>c__DisplayClass318_0
 	{
-		public ProbeReferenceVolume <>4__this; //Field offset: 0x10
-		public ProbeVolumeSystemParameters parameters; //Field offset: 0x18
+		public Cell cell; //Field offset: 0x10
 
-		public <>c__DisplayClass171_0() { }
+		public <>c__DisplayClass318_0() { }
 
-		internal bool <RegisterDebug>b__1() { }
-
-		internal int <RegisterDebug>b__10() { }
-
-		internal void <RegisterDebug>b__11(int value) { }
-
-		internal int <RegisterDebug>b__12() { }
-
-		internal void <RegisterDebug>b__13(int value) { }
-
-		internal float <RegisterDebug>b__14() { }
-
-		internal void <RegisterDebug>b__15(float value) { }
-
-		internal float <RegisterDebug>b__18() { }
-
-		internal void <RegisterDebug>b__19(float value) { }
-
-		internal void <RegisterDebug>b__2(bool value) { }
-
-		internal int <RegisterDebug>b__20() { }
-
-		internal void <RegisterDebug>b__21(int v) { }
-
-		internal int <RegisterDebug>b__24() { }
-
-		internal void <RegisterDebug>b__25(int v) { }
-
-		internal bool <RegisterDebug>b__28() { }
-
-		internal void <RegisterDebug>b__29(bool value) { }
-
-		internal bool <RegisterDebug>b__3() { }
-
-		internal float <RegisterDebug>b__30() { }
-
-		internal void <RegisterDebug>b__31(float value) { }
-
-		internal float <RegisterDebug>b__34() { }
-
-		internal void <RegisterDebug>b__35(float value) { }
-
-		internal bool <RegisterDebug>b__37() { }
-
-		internal void <RegisterDebug>b__38(bool value) { }
-
-		internal void <RegisterDebug>b__4(bool value) { }
-
-		internal float <RegisterDebug>b__5() { }
-
-		internal int <RegisterDebug>b__50() { }
-
-		internal void <RegisterDebug>b__51(int value) { }
-
-		internal int <RegisterDebug>b__52() { }
-
-		internal void <RegisterDebug>b__53(int value) { }
-
-		internal void <RegisterDebug>b__6(float value) { }
-
-		internal bool <RegisterDebug>b__8() { }
-
-		internal void <RegisterDebug>b__9(bool value) { }
-
-		internal void <RegisterDebug>g__RefreshDebug|0(Field<T> field, T value) { }
-
-		internal void <RegisterDebug>g__RefreshScenarioNames|42(string guid) { }
+		internal bool <HasActiveStreamingRequest>b__0(CellStreamingRequest x) { }
 
 	}
 
-	[DebuggerDisplay("Index = {cellInfo.cell.index} Factor = {blendingFactor} Score = {streamingScore}")]
-	public class BlendingCellInfo : IComparable<BlendingCellInfo>
+	[DebuggerDisplay("Index = {desc.index} Loaded = {loaded}")]
+	public class Cell : IComparable<Cell>
 	{
-		public CellInfo cellInfo; //Field offset: 0x10
-		public List<BrickChunkAlloc> chunkList; //Field offset: 0x18
-		public float streamingScore; //Field offset: 0x20
-		public float blendingFactor; //Field offset: 0x24
-		public bool blending; //Field offset: 0x28
+		public CellDesc desc; //Field offset: 0x10
+		public CellData data; //Field offset: 0x18
+		public CellPoolInfo poolInfo; //Field offset: 0x20
+		public CellIndexInfo indexInfo; //Field offset: 0x28
+		public CellBlendingInfo blendingInfo; //Field offset: 0x30
+		public CellStreamingInfo streamingInfo; //Field offset: 0x38
+		public int referenceCount; //Field offset: 0x40
+		public bool loaded; //Field offset: 0x44
+		public PerScenarioData scenario0; //Field offset: 0x48
+		public PerScenarioData scenario1; //Field offset: 0xC8
+		public bool hasTwoScenarios; //Field offset: 0x148
+		public CellInstancedDebugProbes debugProbes; //Field offset: 0x150
 
-		public BlendingCellInfo() { }
+		public Cell() { }
 
 		public void Clear() { }
 
-		public override int CompareTo(BlendingCellInfo other) { }
+		public override int CompareTo(Cell other) { }
+
+		public bool UpdateCellScenarioData(string scenario0, string scenario1) { }
+
+	}
+
+	public class CellBlendingInfo
+	{
+		public List<BrickChunkAlloc> chunkList; //Field offset: 0x10
+		public float blendingScore; //Field offset: 0x18
+		public float blendingFactor; //Field offset: 0x1C
+		public bool blending; //Field offset: 0x20
+
+		public CellBlendingInfo() { }
+
+		public void Clear() { }
 
 		public void ForceReupload() { }
 
@@ -198,168 +177,39 @@ public class ProbeReferenceVolume
 
 	}
 
-	[DebuggerDisplay("Index = {index} position = {position}")]
-	public class Cell
+	public class CellData
 	{
 		internal struct PerScenarioData
 		{
-			[CompilerGenerated]
-			private NativeArray<UInt16> <shL0L1RxData>k__BackingField; //Field offset: 0x0
-			[CompilerGenerated]
-			private NativeArray<Byte> <shL1GL1RyData>k__BackingField; //Field offset: 0x10
-			[CompilerGenerated]
-			private NativeArray<Byte> <shL1BL1RzData>k__BackingField; //Field offset: 0x20
-			[CompilerGenerated]
-			private NativeArray<Byte> <shL2Data_0>k__BackingField; //Field offset: 0x30
-			[CompilerGenerated]
-			private NativeArray<Byte> <shL2Data_1>k__BackingField; //Field offset: 0x40
-			[CompilerGenerated]
-			private NativeArray<Byte> <shL2Data_2>k__BackingField; //Field offset: 0x50
-			[CompilerGenerated]
-			private NativeArray<Byte> <shL2Data_3>k__BackingField; //Field offset: 0x60
-
-			public internal NativeArray<UInt16> shL0L1RxData
-			{
-				[CompilerGenerated]
-				[IsReadOnly]
-				 get { } //Length: 10
-				[CompilerGenerated]
-				internal set { } //Length: 7
-			}
-
-			public internal NativeArray<Byte> shL1BL1RzData
-			{
-				[CompilerGenerated]
-				[IsReadOnly]
-				 get { } //Length: 11
-				[CompilerGenerated]
-				internal set { } //Length: 8
-			}
-
-			public internal NativeArray<Byte> shL1GL1RyData
-			{
-				[CompilerGenerated]
-				[IsReadOnly]
-				 get { } //Length: 11
-				[CompilerGenerated]
-				internal set { } //Length: 8
-			}
-
-			public internal NativeArray<Byte> shL2Data_0
-			{
-				[CompilerGenerated]
-				[IsReadOnly]
-				 get { } //Length: 11
-				[CompilerGenerated]
-				internal set { } //Length: 8
-			}
-
-			public internal NativeArray<Byte> shL2Data_1
-			{
-				[CompilerGenerated]
-				[IsReadOnly]
-				 get { } //Length: 11
-				[CompilerGenerated]
-				internal set { } //Length: 8
-			}
-
-			public internal NativeArray<Byte> shL2Data_2
-			{
-				[CompilerGenerated]
-				[IsReadOnly]
-				 get { } //Length: 11
-				[CompilerGenerated]
-				internal set { } //Length: 8
-			}
-
-			public internal NativeArray<Byte> shL2Data_3
-			{
-				[CompilerGenerated]
-				[IsReadOnly]
-				 get { } //Length: 11
-				[CompilerGenerated]
-				internal set { } //Length: 8
-			}
-
-			[CompilerGenerated]
-			[IsReadOnly]
-			public NativeArray<UInt16> get_shL0L1RxData() { }
-
-			[CompilerGenerated]
-			[IsReadOnly]
-			public NativeArray<Byte> get_shL1BL1RzData() { }
-
-			[CompilerGenerated]
-			[IsReadOnly]
-			public NativeArray<Byte> get_shL1GL1RyData() { }
-
-			[CompilerGenerated]
-			[IsReadOnly]
-			public NativeArray<Byte> get_shL2Data_0() { }
-
-			[CompilerGenerated]
-			[IsReadOnly]
-			public NativeArray<Byte> get_shL2Data_1() { }
-
-			[CompilerGenerated]
-			[IsReadOnly]
-			public NativeArray<Byte> get_shL2Data_2() { }
-
-			[CompilerGenerated]
-			[IsReadOnly]
-			public NativeArray<Byte> get_shL2Data_3() { }
-
-			[CompilerGenerated]
-			internal void set_shL0L1RxData(NativeArray<UInt16> value) { }
-
-			[CompilerGenerated]
-			internal void set_shL1BL1RzData(NativeArray<Byte> value) { }
-
-			[CompilerGenerated]
-			internal void set_shL1GL1RyData(NativeArray<Byte> value) { }
-
-			[CompilerGenerated]
-			internal void set_shL2Data_0(NativeArray<Byte> value) { }
-
-			[CompilerGenerated]
-			internal void set_shL2Data_1(NativeArray<Byte> value) { }
-
-			[CompilerGenerated]
-			internal void set_shL2Data_2(NativeArray<Byte> value) { }
-
-			[CompilerGenerated]
-			internal void set_shL2Data_3(NativeArray<Byte> value) { }
+			public NativeArray<UInt16> shL0L1RxData; //Field offset: 0x0
+			public NativeArray<Byte> shL1GL1RyData; //Field offset: 0x10
+			public NativeArray<Byte> shL1BL1RzData; //Field offset: 0x20
+			public NativeArray<Byte> shL2Data_0; //Field offset: 0x30
+			public NativeArray<Byte> shL2Data_1; //Field offset: 0x40
+			public NativeArray<Byte> shL2Data_2; //Field offset: 0x50
+			public NativeArray<Byte> shL2Data_3; //Field offset: 0x60
+			public NativeArray<Byte> probeOcclusion; //Field offset: 0x70
 
 		}
 
-		public Vector3Int position; //Field offset: 0x10
-		public int index; //Field offset: 0x1C
-		public int probeCount; //Field offset: 0x20
-		public int minSubdiv; //Field offset: 0x24
-		public int maxSubdiv; //Field offset: 0x28
-		public int indexChunkCount; //Field offset: 0x2C
-		public int shChunkCount; //Field offset: 0x30
-		public bool hasTwoScenarios; //Field offset: 0x34
-		public ProbeVolumeSHBands shBands; //Field offset: 0x38
+		public NativeArray<Byte> validityNeighMaskData; //Field offset: 0x10
 		[CompilerGenerated]
-		private NativeArray<Brick> <bricks>k__BackingField; //Field offset: 0x40
+		private NativeArray<UInt16> <skyOcclusionDataL0L1>k__BackingField; //Field offset: 0x20
 		[CompilerGenerated]
-		private NativeArray<Byte> <validityNeighMaskData>k__BackingField; //Field offset: 0x50
+		private NativeArray<Byte> <skyShadingDirectionIndices>k__BackingField; //Field offset: 0x30
+		public Dictionary<String, PerScenarioData> scenarios; //Field offset: 0x40
 		[CompilerGenerated]
-		private NativeArray<Vector3> <probePositions>k__BackingField; //Field offset: 0x60
+		private NativeArray<Brick> <bricks>k__BackingField; //Field offset: 0x48
 		[CompilerGenerated]
-		private NativeArray<Single> <touchupVolumeInteraction>k__BackingField; //Field offset: 0x70
+		private NativeArray<Vector3> <probePositions>k__BackingField; //Field offset: 0x58
 		[CompilerGenerated]
-		private NativeArray<Vector3> <offsetVectors>k__BackingField; //Field offset: 0x80
+		private NativeArray<Single> <touchupVolumeInteraction>k__BackingField; //Field offset: 0x68
 		[CompilerGenerated]
-		private NativeArray<Single> <validity>k__BackingField; //Field offset: 0x90
-		public PerScenarioData scenario0; //Field offset: 0xA0
-		public PerScenarioData scenario1; //Field offset: 0x110
-
-		public PerScenarioData bakingScenario
-		{
-			 get { } //Length: 80
-		}
+		private NativeArray<Vector3> <offsetVectors>k__BackingField; //Field offset: 0x78
+		[CompilerGenerated]
+		private NativeArray<Single> <validity>k__BackingField; //Field offset: 0x88
+		[CompilerGenerated]
+		private NativeArray<Byte> <layer>k__BackingField; //Field offset: 0x98
 
 		public internal NativeArray<Brick> bricks
 		{
@@ -369,7 +219,7 @@ public class ProbeReferenceVolume
 			internal set { } //Length: 8
 		}
 
-		public internal NativeArray<Vector3> offsetVectors
+		public internal NativeArray<Byte> layer
 		{
 			[CompilerGenerated]
 			 get { } //Length: 14
@@ -377,7 +227,31 @@ public class ProbeReferenceVolume
 			internal set { } //Length: 11
 		}
 
+		public internal NativeArray<Vector3> offsetVectors
+		{
+			[CompilerGenerated]
+			 get { } //Length: 11
+			[CompilerGenerated]
+			internal set { } //Length: 8
+		}
+
 		public internal NativeArray<Vector3> probePositions
+		{
+			[CompilerGenerated]
+			 get { } //Length: 11
+			[CompilerGenerated]
+			internal set { } //Length: 8
+		}
+
+		public internal NativeArray<UInt16> skyOcclusionDataL0L1
+		{
+			[CompilerGenerated]
+			 get { } //Length: 11
+			[CompilerGenerated]
+			internal set { } //Length: 8
+		}
+
+		public internal NativeArray<Byte> skyShadingDirectionIndices
 		{
 			[CompilerGenerated]
 			 get { } //Length: 11
@@ -401,20 +275,17 @@ public class ProbeReferenceVolume
 			internal set { } //Length: 11
 		}
 
-		public internal NativeArray<Byte> validityNeighMaskData
-		{
-			[CompilerGenerated]
-			 get { } //Length: 11
-			[CompilerGenerated]
-			internal set { } //Length: 8
-		}
+		public CellData() { }
 
-		public Cell() { }
+		public void Cleanup(bool cleanScenarioList) { }
 
-		public PerScenarioData get_bakingScenario() { }
+		public void CleanupPerScenarioData(in PerScenarioData data) { }
 
 		[CompilerGenerated]
 		public NativeArray<Brick> get_bricks() { }
+
+		[CompilerGenerated]
+		public NativeArray<Byte> get_layer() { }
 
 		[CompilerGenerated]
 		public NativeArray<Vector3> get_offsetVectors() { }
@@ -423,16 +294,22 @@ public class ProbeReferenceVolume
 		public NativeArray<Vector3> get_probePositions() { }
 
 		[CompilerGenerated]
+		public NativeArray<UInt16> get_skyOcclusionDataL0L1() { }
+
+		[CompilerGenerated]
+		public NativeArray<Byte> get_skyShadingDirectionIndices() { }
+
+		[CompilerGenerated]
 		public NativeArray<Single> get_touchupVolumeInteraction() { }
 
 		[CompilerGenerated]
 		public NativeArray<Single> get_validity() { }
 
 		[CompilerGenerated]
-		public NativeArray<Byte> get_validityNeighMaskData() { }
+		internal void set_bricks(NativeArray<Brick> value) { }
 
 		[CompilerGenerated]
-		internal void set_bricks(NativeArray<Brick> value) { }
+		internal void set_layer(NativeArray<Byte> value) { }
 
 		[CompilerGenerated]
 		internal void set_offsetVectors(NativeArray<Vector3> value) { }
@@ -441,37 +318,47 @@ public class ProbeReferenceVolume
 		internal void set_probePositions(NativeArray<Vector3> value) { }
 
 		[CompilerGenerated]
+		internal void set_skyOcclusionDataL0L1(NativeArray<UInt16> value) { }
+
+		[CompilerGenerated]
+		internal void set_skyShadingDirectionIndices(NativeArray<Byte> value) { }
+
+		[CompilerGenerated]
 		internal void set_touchupVolumeInteraction(NativeArray<Single> value) { }
 
 		[CompilerGenerated]
 		internal void set_validity(NativeArray<Single> value) { }
 
-		[CompilerGenerated]
-		internal void set_validityNeighMaskData(NativeArray<Byte> value) { }
+	}
+
+	public class CellDesc
+	{
+		public Vector3Int position; //Field offset: 0x10
+		public int index; //Field offset: 0x1C
+		public int probeCount; //Field offset: 0x20
+		public int minSubdiv; //Field offset: 0x24
+		public int indexChunkCount; //Field offset: 0x28
+		public int shChunkCount; //Field offset: 0x2C
+		public int bricksCount; //Field offset: 0x30
+		public IndirectionEntryInfo[] indirectionEntryInfo; //Field offset: 0x38
+
+		public CellDesc() { }
+
+		public virtual string ToString() { }
 
 	}
 
-	[DebuggerDisplay("Index = {cell.index} Loaded = {loaded}")]
-	public class CellInfo : IComparable<CellInfo>
+	public class CellIndexInfo
 	{
-		public Cell cell; //Field offset: 0x10
-		public BlendingCellInfo blendingCell; //Field offset: 0x18
-		public List<BrickChunkAlloc> chunkList; //Field offset: 0x20
-		public int flatIdxInCellIndices; //Field offset: 0x28
-		public bool loaded; //Field offset: 0x2C
-		public CellIndexUpdateInfo updateInfo; //Field offset: 0x30
-		public bool indexUpdated; //Field offset: 0x60
-		public CellIndexUpdateInfo tempUpdateInfo; //Field offset: 0x64
-		public int sourceAssetInstanceID; //Field offset: 0x94
-		public float streamingScore; //Field offset: 0x98
-		public int referenceCount; //Field offset: 0x9C
-		public CellInstancedDebugProbes debugProbes; //Field offset: 0xA0
+		public Int32[] flatIndicesInGlobalIndirection; //Field offset: 0x10
+		public CellIndexUpdateInfo updateInfo; //Field offset: 0x18
+		public bool indexUpdated; //Field offset: 0x20
+		public IndirectionEntryInfo[] indirectionEntryInfo; //Field offset: 0x28
+		public int indexChunkCount; //Field offset: 0x30
 
-		public CellInfo() { }
+		public CellIndexInfo() { }
 
 		public void Clear() { }
-
-		public override int CompareTo(CellInfo other) { }
 
 	}
 
@@ -485,15 +372,315 @@ public class ProbeReferenceVolume
 
 	}
 
+	public class CellPoolInfo
+	{
+		public List<BrickChunkAlloc> chunkList; //Field offset: 0x10
+		public int shChunkCount; //Field offset: 0x18
+
+		public CellPoolInfo() { }
+
+		public void Clear() { }
+
+	}
+
+	public class CellStreamingInfo
+	{
+		public CellStreamingRequest request; //Field offset: 0x10
+		public CellStreamingRequest blendingRequest0; //Field offset: 0x18
+		public CellStreamingRequest blendingRequest1; //Field offset: 0x20
+		public float streamingScore; //Field offset: 0x28
+
+		public CellStreamingInfo() { }
+
+		public void Clear() { }
+
+		public bool IsBlendingStreaming() { }
+
+		public bool IsStreaming() { }
+
+	}
+
+	[DebuggerDisplay("Index = {cell.desc.index} State = {state}")]
+	public class CellStreamingRequest
+	{
+		internal sealed class OnStreamingCompleteDelegate : MulticastDelegate
+		{
+
+			public OnStreamingCompleteDelegate(object object, IntPtr method) { }
+
+			public override IAsyncResult BeginInvoke(CellStreamingRequest request, CommandBuffer cmd, AsyncCallback callback, object object) { }
+
+			public override void EndInvoke(IAsyncResult result) { }
+
+			public override void Invoke(CellStreamingRequest request, CommandBuffer cmd) { }
+
+		}
+
+		internal enum State
+		{
+			Pending = 0,
+			Active = 1,
+			Canceled = 2,
+			Invalid = 3,
+			Complete = 4,
+		}
+
+		[CompilerGenerated]
+		private Cell <cell>k__BackingField; //Field offset: 0x10
+		[CompilerGenerated]
+		private State <state>k__BackingField; //Field offset: 0x18
+		[CompilerGenerated]
+		private CellStreamingScratchBuffer <scratchBuffer>k__BackingField; //Field offset: 0x20
+		[CompilerGenerated]
+		private CellStreamingScratchBufferLayout <scratchBufferLayout>k__BackingField; //Field offset: 0x28
+		[CompilerGenerated]
+		private PerScenarioDataInfo <scenarioData>k__BackingField; //Field offset: 0x98
+		[CompilerGenerated]
+		private int <poolIndex>k__BackingField; //Field offset: 0xA0
+		[CompilerGenerated]
+		private bool <streamSharedData>k__BackingField; //Field offset: 0xA4
+		public OnStreamingCompleteDelegate onStreamingComplete; //Field offset: 0xA8
+		public DiskStreamingRequest cellDataStreamingRequest; //Field offset: 0xB0
+		public DiskStreamingRequest cellOptionalDataStreamingRequest; //Field offset: 0xB8
+		public DiskStreamingRequest cellSharedDataStreamingRequest; //Field offset: 0xC0
+		public DiskStreamingRequest cellProbeOcclusionDataStreamingRequest; //Field offset: 0xC8
+		public DiskStreamingRequest brickStreamingRequest; //Field offset: 0xD0
+		public DiskStreamingRequest supportStreamingRequest; //Field offset: 0xD8
+		public int bytesWritten; //Field offset: 0xE0
+
+		public Cell cell
+		{
+			[CompilerGenerated]
+			 get { } //Length: 5
+			[CompilerGenerated]
+			 set { } //Length: 5
+		}
+
+		public int poolIndex
+		{
+			[CompilerGenerated]
+			 get { } //Length: 7
+			[CompilerGenerated]
+			 set { } //Length: 7
+		}
+
+		public PerScenarioDataInfo scenarioData
+		{
+			[CompilerGenerated]
+			 get { } //Length: 8
+			[CompilerGenerated]
+			 set { } //Length: 8
+		}
+
+		public CellStreamingScratchBuffer scratchBuffer
+		{
+			[CompilerGenerated]
+			 get { } //Length: 5
+			[CompilerGenerated]
+			 set { } //Length: 5
+		}
+
+		public CellStreamingScratchBufferLayout scratchBufferLayout
+		{
+			[CompilerGenerated]
+			 get { } //Length: 62
+			[CompilerGenerated]
+			 set { } //Length: 59
+		}
+
+		public State state
+		{
+			[CompilerGenerated]
+			 get { } //Length: 4
+			[CompilerGenerated]
+			 set { } //Length: 4
+		}
+
+		public bool streamSharedData
+		{
+			[CompilerGenerated]
+			 get { } //Length: 8
+			[CompilerGenerated]
+			 set { } //Length: 7
+		}
+
+		public CellStreamingRequest() { }
+
+		public void Cancel() { }
+
+		public void Clear() { }
+
+		public void Dispose() { }
+
+		[CompilerGenerated]
+		public Cell get_cell() { }
+
+		[CompilerGenerated]
+		public int get_poolIndex() { }
+
+		[CompilerGenerated]
+		public PerScenarioDataInfo get_scenarioData() { }
+
+		[CompilerGenerated]
+		public CellStreamingScratchBuffer get_scratchBuffer() { }
+
+		[CompilerGenerated]
+		public CellStreamingScratchBufferLayout get_scratchBufferLayout() { }
+
+		[CompilerGenerated]
+		public State get_state() { }
+
+		[CompilerGenerated]
+		public bool get_streamSharedData() { }
+
+		public bool IsStreaming() { }
+
+		public void Reset() { }
+
+		[CompilerGenerated]
+		public void set_cell(Cell value) { }
+
+		[CompilerGenerated]
+		public void set_poolIndex(int value) { }
+
+		[CompilerGenerated]
+		public void set_scenarioData(PerScenarioDataInfo value) { }
+
+		[CompilerGenerated]
+		public void set_scratchBuffer(CellStreamingScratchBuffer value) { }
+
+		[CompilerGenerated]
+		public void set_scratchBufferLayout(CellStreamingScratchBufferLayout value) { }
+
+		[CompilerGenerated]
+		public void set_state(State value) { }
+
+		[CompilerGenerated]
+		public void set_streamSharedData(bool value) { }
+
+		public bool UpdateRequestState(DiskStreamingRequest request, ref bool isComplete) { }
+
+		public void UpdateState() { }
+
+		public void WaitAll() { }
+
+	}
+
+	public class CellStreamingScratchBuffer
+	{
+		public NativeArray<Byte> stagingBuffer; //Field offset: 0x10
+		[CompilerGenerated]
+		private readonly int <chunkCount>k__BackingField; //Field offset: 0x20
+		[CompilerGenerated]
+		private readonly int <chunkSize>k__BackingField; //Field offset: 0x24
+		private int m_CurrentBuffer; //Field offset: 0x28
+		private GraphicsBuffer[] m_GraphicsBuffers; //Field offset: 0x30
+
+		public GraphicsBuffer buffer
+		{
+			 get { } //Length: 43
+		}
+
+		public int chunkCount
+		{
+			[CompilerGenerated]
+			 get { } //Length: 4
+		}
+
+		public int chunkSize
+		{
+			[CompilerGenerated]
+			 get { } //Length: 4
+		}
+
+		public CellStreamingScratchBuffer(int chunkCount, int chunkSize, bool allocateGraphicsBuffers) { }
+
+		public void Dispose() { }
+
+		public GraphicsBuffer get_buffer() { }
+
+		[CompilerGenerated]
+		public int get_chunkCount() { }
+
+		[CompilerGenerated]
+		public int get_chunkSize() { }
+
+		public void Swap() { }
+
+	}
+
+	[GenerateHLSL(PackingRules::Exact (0), True, False, False, 1, False, False, False, -1, ".\\Library\\PackageCache\\com.unity.render-pipelines.core@da6c8615357e\\Runtime\\Lighting\\ProbeVolume\\ProbeReferenceVolume.Streaming.cs", needAccessors = False, generateCBuffer = True)]
+	public struct CellStreamingScratchBufferLayout
+	{
+		public int _SharedDestChunksOffset; //Field offset: 0x0
+		public int _L0L1rxOffset; //Field offset: 0x4
+		public int _L1GryOffset; //Field offset: 0x8
+		public int _L1BrzOffset; //Field offset: 0xC
+		public int _ValidityOffset; //Field offset: 0x10
+		public int _ProbeOcclusionOffset; //Field offset: 0x14
+		public int _SkyOcclusionOffset; //Field offset: 0x18
+		public int _SkyShadingDirectionOffset; //Field offset: 0x1C
+		public int _L2_0Offset; //Field offset: 0x20
+		public int _L2_1Offset; //Field offset: 0x24
+		public int _L2_2Offset; //Field offset: 0x28
+		public int _L2_3Offset; //Field offset: 0x2C
+		public int _L0Size; //Field offset: 0x30
+		public int _L0ProbeSize; //Field offset: 0x34
+		public int _L1Size; //Field offset: 0x38
+		public int _L1ProbeSize; //Field offset: 0x3C
+		public int _ValiditySize; //Field offset: 0x40
+		public int _ValidityProbeSize; //Field offset: 0x44
+		public int _ProbeOcclusionSize; //Field offset: 0x48
+		public int _ProbeOcclusionProbeSize; //Field offset: 0x4C
+		public int _SkyOcclusionSize; //Field offset: 0x50
+		public int _SkyOcclusionProbeSize; //Field offset: 0x54
+		public int _SkyShadingDirectionSize; //Field offset: 0x58
+		public int _SkyShadingDirectionProbeSize; //Field offset: 0x5C
+		public int _L2Size; //Field offset: 0x60
+		public int _L2ProbeSize; //Field offset: 0x64
+		public int _ProbeCountInChunkLine; //Field offset: 0x68
+		public int _ProbeCountInChunkSlice; //Field offset: 0x6C
+
+	}
+
+	public class DiskStreamingRequest
+	{
+		private ReadHandle m_ReadHandle; //Field offset: 0x10
+		private ReadCommandArray m_ReadCommandArray; //Field offset: 0x20
+		private NativeArray<ReadCommand> m_ReadCommandBuffer; //Field offset: 0x30
+		private int m_BytesWritten; //Field offset: 0x40
+
+		public DiskStreamingRequest(int maxRequestCount) { }
+
+		public void AddReadCommand(int offset, int size, Byte* dest) { }
+
+		public void Cancel() { }
+
+		public void Clear() { }
+
+		public void Dispose() { }
+
+		public ReadStatus GetStatus() { }
+
+		public int RunCommands(FileHandle file) { }
+
+		public void Wait() { }
+
+	}
+
 	internal struct ExtraDataActionInput
 	{
 
 	}
 
-	private struct InitInfo
+	public struct IndirectionEntryInfo
 	{
-		public Vector3Int pendingMinCellPosition; //Field offset: 0x0
-		public Vector3Int pendingMaxCellPosition; //Field offset: 0xC
+		public Vector3Int positionInBricks; //Field offset: 0x0
+		public int minSubdiv; //Field offset: 0xC
+		public Vector3Int minBrickPos; //Field offset: 0x10
+		public Vector3Int maxBrickPosPlusOne; //Field offset: 0x1C
+		public bool hasMinMax; //Field offset: 0x28
+		public bool hasOnlyBiggerBricks; //Field offset: 0x29
 
 	}
 
@@ -502,6 +689,19 @@ public class ProbeReferenceVolume
 		public Vector3 posWS; //Field offset: 0x0
 		public Quaternion rot; //Field offset: 0xC
 		public float scale; //Field offset: 0x1C
+
+	}
+
+	private class RenderFragmentationOverlayPassData
+	{
+		public Material debugFragmentationMaterial; //Field offset: 0x10
+		public DebugOverlay debugOverlay; //Field offset: 0x18
+		public int chunkCount; //Field offset: 0x20
+		public ComputeBuffer debugFragmentationData; //Field offset: 0x28
+		public TextureHandle colorBuffer; //Field offset: 0x30
+		public TextureHandle depthBuffer; //Field offset: 0x40
+
+		public RenderFragmentationOverlayPassData() { }
 
 	}
 
@@ -516,7 +716,34 @@ public class ProbeReferenceVolume
 		public RenderTexture L2_1; //Field offset: 0x30
 		public RenderTexture L2_2; //Field offset: 0x38
 		public RenderTexture L2_3; //Field offset: 0x40
-		public Texture3D Validity; //Field offset: 0x48
+		public RenderTexture ProbeOcclusion; //Field offset: 0x48
+		public RenderTexture Validity; //Field offset: 0x50
+		public RenderTexture SkyOcclusionL0L1; //Field offset: 0x58
+		public RenderTexture SkyShadingDirectionIndices; //Field offset: 0x60
+		public ComputeBuffer SkyPrecomputedDirections; //Field offset: 0x68
+		public ComputeBuffer QualityLeakReductionData; //Field offset: 0x70
+
+	}
+
+	public static class ShaderIDs
+	{
+		public static readonly int _APVResIndex; //Field offset: 0x0
+		public static readonly int _APVResCellIndices; //Field offset: 0x4
+		public static readonly int _APVResL0_L1Rx; //Field offset: 0x8
+		public static readonly int _APVResL1G_L1Ry; //Field offset: 0xC
+		public static readonly int _APVResL1B_L1Rz; //Field offset: 0x10
+		public static readonly int _APVResL2_0; //Field offset: 0x14
+		public static readonly int _APVResL2_1; //Field offset: 0x18
+		public static readonly int _APVResL2_2; //Field offset: 0x1C
+		public static readonly int _APVResL2_3; //Field offset: 0x20
+		public static readonly int _APVProbeOcclusion; //Field offset: 0x24
+		public static readonly int _APVResValidity; //Field offset: 0x28
+		public static readonly int _SkyOcclusionTexL0L1; //Field offset: 0x2C
+		public static readonly int _SkyShadingDirectionIndicesTex; //Field offset: 0x30
+		public static readonly int _SkyPrecomputedDirections; //Field offset: 0x34
+		public static readonly int _AntiLeakData; //Field offset: 0x38
+
+		private static ShaderIDs() { }
 
 	}
 
@@ -549,90 +776,133 @@ public class ProbeReferenceVolume
 
 	}
 
-	internal static string defaultLightingScenario; //Field offset: 0x0
+	private const float kIndexFragmentationThreshold = 0.2; //Field offset: 0x0
+	private const int kMaxCellLoadedPerFrame = 10; //Field offset: 0x0
 	private const int kProbesPerBatch = 511; //Field offset: 0x0
+	internal static string defaultLightingScenario; //Field offset: 0x0
 	private static ProbeReferenceVolume _instance; //Field offset: 0x8
 	public static readonly string k_DebugPanelName; //Field offset: 0x10
-	private bool m_IsInitialized; //Field offset: 0x10
-	private bool m_SupportStreaming; //Field offset: 0x11
-	private RefVolTransform m_Transform; //Field offset: 0x14
-	private int m_MaxSubdivision; //Field offset: 0x34
+	internal static ProbeSamplingDebugData probeSamplingDebugData; //Field offset: 0x18
+	private static Vector4[] s_BoundsArray; //Field offset: 0x20
+	private static SortComparer<Cell> s_BlendingComparer; //Field offset: 0x28
+	private static SortComparer<Cell> s_DefragComparer; //Field offset: 0x30
+	private ComputeBuffer m_EmptyIndexBuffer; //Field offset: 0x10
+	private bool m_IsInitialized; //Field offset: 0x18
+	private bool m_SupportScenarios; //Field offset: 0x19
+	private bool m_SupportScenarioBlending; //Field offset: 0x1A
+	private bool m_ForceNoDiskStreaming; //Field offset: 0x1B
+	private bool m_SupportDiskStreaming; //Field offset: 0x1C
+	private bool m_SupportGPUStreaming; //Field offset: 0x1D
+	private bool m_UseStreamingAssets; //Field offset: 0x1E
+	private float m_MinBrickSize; //Field offset: 0x20
+	private int m_MaxSubdivision; //Field offset: 0x24
+	private Vector3 m_ProbeOffset; //Field offset: 0x28
 	private ProbeBrickPool m_Pool; //Field offset: 0x38
 	private ProbeBrickIndex m_Index; //Field offset: 0x40
-	private ProbeCellIndices m_CellIndices; //Field offset: 0x48
+	private ProbeGlobalIndirection m_CellIndices; //Field offset: 0x48
 	private ProbeBrickBlendingPool m_BlendingPool; //Field offset: 0x50
 	private List<BrickChunkAlloc> m_TmpSrcChunks; //Field offset: 0x58
 	private Single[] m_PositionOffsets; //Field offset: 0x60
 	private Bounds m_CurrGlobalBounds; //Field offset: 0x68
-	internal Dictionary<Int32, CellInfo> cells; //Field offset: 0x80
-	private ObjectPool<CellInfo> m_CellInfoPool; //Field offset: 0x88
-	private ObjectPool<BlendingCellInfo> m_BlendingCellInfoPool; //Field offset: 0x90
-	private DataLocation m_TemporaryDataLocation; //Field offset: 0x98
-	private int m_TemporaryDataLocationMemCost; //Field offset: 0xE8
-	private int m_CurrentProbeVolumeChunkSizeInBricks; //Field offset: 0xEC
-	internal ProbeVolumeSceneData sceneData; //Field offset: 0xF0
-	private Vector3Int minLoadedCellPos; //Field offset: 0xF8
-	private Vector3Int maxLoadedCellPos; //Field offset: 0x104
-	public Action<ExtraDataActionInput> retrieveExtraDataAction; //Field offset: 0x110
-	public Action checksDuringBakeAction; //Field offset: 0x118
-	private bool m_BricksLoaded; //Field offset: 0x120
-	private Dictionary<String, ProbeVolumeAsset> m_PendingAssetsToBeLoaded; //Field offset: 0x128
-	private Dictionary<String, ProbeVolumeAsset> m_PendingAssetsToBeUnloaded; //Field offset: 0x130
-	private Dictionary<String, ProbeVolumeAsset> m_ActiveAssets; //Field offset: 0x138
-	private bool m_NeedLoadAsset; //Field offset: 0x140
-	private bool m_ProbeReferenceVolumeInit; //Field offset: 0x141
-	private bool m_EnabledBySRP; //Field offset: 0x142
-	private InitInfo m_PendingInitInfo; //Field offset: 0x144
+	internal Dictionary<Int32, Cell> cells; //Field offset: 0x80
+	private ObjectPool<Cell> m_CellPool; //Field offset: 0x88
+	private DataLocation m_TemporaryDataLocation; //Field offset: 0x90
+	private int m_TemporaryDataLocationMemCost; //Field offset: 0xF8
+	[Obsolete("This field is only kept for migration purpose.")]
+	internal ProbeVolumeSceneData sceneData; //Field offset: 0x100
+	private Vector3Int minLoadedCellPos; //Field offset: 0x108
+	private Vector3Int maxLoadedCellPos; //Field offset: 0x114
+	public Action<ExtraDataActionInput> retrieveExtraDataAction; //Field offset: 0x120
+	public Action checksDuringBakeAction; //Field offset: 0x128
+	private Dictionary<String, ValueTuple`2<ProbeVolumeBakingSet, List`1<Int32>>> m_PendingScenesToBeLoaded; //Field offset: 0x130
+	private Dictionary<String, List`1<Int32>> m_PendingScenesToBeUnloaded; //Field offset: 0x138
+	private List<String> m_ActiveScenes; //Field offset: 0x140
+	private ProbeVolumeBakingSet m_CurrentBakingSet; //Field offset: 0x148
+	private ProbeVolumeBakingSet m_LazyBakingSet; //Field offset: 0x150
+	private bool m_NeedLoadAsset; //Field offset: 0x158
+	private bool m_ProbeReferenceVolumeInit; //Field offset: 0x159
+	private bool m_EnabledBySRP; //Field offset: 0x15A
+	private bool m_VertexSampling; //Field offset: 0x15B
 	private bool m_NeedsIndexRebuild; //Field offset: 0x15C
 	private bool m_HasChangedIndex; //Field offset: 0x15D
 	private int m_CBShaderID; //Field offset: 0x160
-	private int m_NumberOfCellsLoadedPerFrame; //Field offset: 0x164
-	private int m_NumberOfCellsBlendedPerFrame; //Field offset: 0x168
-	private float m_TurnoverRate; //Field offset: 0x16C
-	private ProbeVolumeTextureMemoryBudget m_MemoryBudget; //Field offset: 0x170
-	private ProbeVolumeBlendingTextureMemoryBudget m_BlendingMemoryBudget; //Field offset: 0x174
-	private ProbeVolumeSHBands m_SHBands; //Field offset: 0x178
-	private float m_ProbeVolumesWeight; //Field offset: 0x17C
-	internal bool clearAssetsOnVolumeClear; //Field offset: 0x180
+	private ProbeVolumeTextureMemoryBudget m_MemoryBudget; //Field offset: 0x164
+	private ProbeVolumeBlendingTextureMemoryBudget m_BlendingMemoryBudget; //Field offset: 0x168
+	private ProbeVolumeSHBands m_SHBands; //Field offset: 0x16C
+	internal bool clearAssetsOnVolumeClear; //Field offset: 0x170
 	[CompilerGenerated]
-	private List<ProbeVolumePerSceneData> <perSceneDataList>k__BackingField; //Field offset: 0x188
+	private List<ProbeVolumePerSceneData> <perSceneDataList>k__BackingField; //Field offset: 0x178
 	[CompilerGenerated]
-	private readonly ProbeVolumeDebug <probeVolumeDebug>k__BackingField; //Field offset: 0x190
+	private readonly ProbeVolumeDebug <probeVolumeDebug>k__BackingField; //Field offset: 0x180
 	[CompilerGenerated]
-	private readonly Color[] <subdivisionDebugColors>k__BackingField; //Field offset: 0x198
-	private Widget[] m_DebugItems; //Field offset: 0x1A0
-	private Mesh m_DebugMesh; //Field offset: 0x1A8
-	private Material m_DebugMaterial; //Field offset: 0x1B0
-	private Mesh m_DebugOffsetMesh; //Field offset: 0x1B8
-	private Material m_DebugOffsetMaterial; //Field offset: 0x1C0
-	private Plane[] m_DebugFrustumPlanes; //Field offset: 0x1C8
-	private GUIContent[] m_DebugScenarioNames; //Field offset: 0x1D0
-	private Int32[] m_DebugScenarioValues; //Field offset: 0x1D8
-	private string m_DebugActiveSceneGUID; //Field offset: 0x1E0
-	private string m_DebugActiveScenario; //Field offset: 0x1E8
-	private EnumField m_DebugScenarioField; //Field offset: 0x1F0
-	internal ProbeVolumeBakingProcessSettings bakingProcessSettings; //Field offset: 0x1F8
-	internal Dictionary<Bounds, Brick[]> realtimeSubdivisionInfo; //Field offset: 0x228
-	private bool m_MaxSubdivVisualizedIsMaxAvailable; //Field offset: 0x230
-	private DynamicArray<CellInfo> m_LoadedCells; //Field offset: 0x238
-	private DynamicArray<CellInfo> m_ToBeLoadedCells; //Field offset: 0x240
-	private DynamicArray<CellInfo> m_TempCellToLoadList; //Field offset: 0x248
-	private DynamicArray<CellInfo> m_TempCellToUnloadList; //Field offset: 0x250
-	private DynamicArray<BlendingCellInfo> m_LoadedBlendingCells; //Field offset: 0x258
-	private DynamicArray<BlendingCellInfo> m_ToBeLoadedBlendingCells; //Field offset: 0x260
-	private DynamicArray<BlendingCellInfo> m_TempBlendingCellToLoadList; //Field offset: 0x268
-	private DynamicArray<BlendingCellInfo> m_TempBlendingCellToUnloadList; //Field offset: 0x270
+	private readonly Color[] <subdivisionDebugColors>k__BackingField; //Field offset: 0x188
+	private Mesh m_DebugMesh; //Field offset: 0x190
+	private Widget[] m_DebugItems; //Field offset: 0x198
+	private Material m_DebugMaterial; //Field offset: 0x1A0
+	private Mesh m_DebugProbeSamplingMesh; //Field offset: 0x1A8
+	private Material m_ProbeSamplingDebugMaterial; //Field offset: 0x1B0
+	private Material m_ProbeSamplingDebugMaterial02; //Field offset: 0x1B8
+	private Texture m_DisplayNumbersTexture; //Field offset: 0x1C0
+	private Mesh m_DebugOffsetMesh; //Field offset: 0x1C8
+	private Material m_DebugOffsetMaterial; //Field offset: 0x1D0
+	private Material m_DebugFragmentationMaterial; //Field offset: 0x1D8
+	private Plane[] m_DebugFrustumPlanes; //Field offset: 0x1E0
+	private GUIContent[] m_DebugScenarioNames; //Field offset: 0x1E8
+	private Int32[] m_DebugScenarioValues; //Field offset: 0x1F0
+	private string m_DebugActiveSceneGUID; //Field offset: 0x1F8
+	private string m_DebugActiveScenario; //Field offset: 0x200
+	private EnumField m_DebugScenarioField; //Field offset: 0x208
+	internal Dictionary<Bounds, Brick[]> realtimeSubdivisionInfo; //Field offset: 0x210
+	private bool m_MaxSubdivVisualizedIsMaxAvailable; //Field offset: 0x218
+	private bool m_LoadMaxCellsPerFrame; //Field offset: 0x219
+	private int m_NumberOfCellsLoadedPerFrame; //Field offset: 0x21C
+	private int m_NumberOfCellsBlendedPerFrame; //Field offset: 0x220
+	private float m_TurnoverRate; //Field offset: 0x224
+	private DynamicArray<Cell> m_LoadedCells; //Field offset: 0x228
+	private DynamicArray<Cell> m_ToBeLoadedCells; //Field offset: 0x230
+	private DynamicArray<Cell> m_WorseLoadedCells; //Field offset: 0x238
+	private DynamicArray<Cell> m_BestToBeLoadedCells; //Field offset: 0x240
+	private DynamicArray<Cell> m_TempCellToLoadList; //Field offset: 0x248
+	private DynamicArray<Cell> m_TempCellToUnloadList; //Field offset: 0x250
+	private DynamicArray<Cell> m_LoadedBlendingCells; //Field offset: 0x258
+	private DynamicArray<Cell> m_ToBeLoadedBlendingCells; //Field offset: 0x260
+	private DynamicArray<Cell> m_TempBlendingCellToLoadList; //Field offset: 0x268
+	private DynamicArray<Cell> m_TempBlendingCellToUnloadList; //Field offset: 0x270
 	private Vector3 m_FrozenCameraPosition; //Field offset: 0x278
-	private bool m_HasRemainingCellsToBlend; //Field offset: 0x284
+	private Vector3 m_FrozenCameraDirection; //Field offset: 0x284
+	private bool m_IndexDefragmentationInProgress; //Field offset: 0x290
+	private ProbeBrickIndex m_DefragIndex; //Field offset: 0x298
+	private ProbeGlobalIndirection m_DefragCellIndices; //Field offset: 0x2A0
+	private DynamicArray<Cell> m_IndexDefragCells; //Field offset: 0x2A8
+	private DynamicArray<Cell> m_TempIndexDefragCells; //Field offset: 0x2B0
+	internal float minStreamingScore; //Field offset: 0x2B8
+	internal float maxStreamingScore; //Field offset: 0x2BC
+	private Queue<CellStreamingRequest> m_StreamingQueue; //Field offset: 0x2C0
+	private List<CellStreamingRequest> m_ActiveStreamingRequests; //Field offset: 0x2C8
+	private ObjectPool<CellStreamingRequest> m_StreamingRequestsPool; //Field offset: 0x2D0
+	private bool m_DiskStreamingUseCompute; //Field offset: 0x2D8
+	private ProbeVolumeScratchBufferPool m_ScratchBufferPool; //Field offset: 0x2E0
+	private OnStreamingCompleteDelegate m_OnStreamingComplete; //Field offset: 0x2E8
+	private OnStreamingCompleteDelegate m_OnBlendingStreamingComplete; //Field offset: 0x2F0
+
+	public ProbeVolumeBakingSet currentBakingSet
+	{
+		 get { } //Length: 8
+	}
+
+	private Mesh debugMesh
+	{
+		private get { } //Length: 464
+	}
+
+	internal bool diskStreamingEnabled
+	{
+		internal get { } //Length: 17
+	}
 
 	internal bool enabledBySRP
 	{
 		internal get { } //Length: 8
-	}
-
-	internal bool enableScenarioBlending
-	{
-		internal get { } //Length: 192
 	}
 
 	internal Bounds globalBounds
@@ -641,9 +911,19 @@ public class ProbeReferenceVolume
 		internal set { } //Length: 18
 	}
 
+	internal bool gpuStreamingEnabled
+	{
+		internal get { } //Length: 5
+	}
+
 	internal bool hasUnloadedCells
 	{
 		internal get { } //Length: 67
+	}
+
+	internal float indexFragmentationRate
+	{
+		internal get { } //Length: 45
 	}
 
 	public static ProbeReferenceVolume instance
@@ -653,13 +933,19 @@ public class ProbeReferenceVolume
 
 	public bool isInitialized
 	{
-		 get { } //Length: 8
+		 get { } //Length: 5
 	}
 
 	public string lightingScenario
 	{
-		 get { } //Length: 30
-		 set { } //Length: 33
+		 get { } //Length: 131
+		 set { } //Length: 141
+	}
+
+	public bool loadMaxCellsPerFrame
+	{
+		 get { } //Length: 8
+		 set { } //Length: 7
 	}
 
 	public ProbeVolumeTextureMemoryBudget memoryBudget
@@ -673,9 +959,14 @@ public class ProbeReferenceVolume
 		 set { } //Length: 19
 	}
 
-	internal int numberOfCellsLoadedPerFrame
+	private int numberOfCellsLoadedPerFrame
 	{
-		internal get { } //Length: 7
+		private get { } //Length: 92
+	}
+
+	public string otherScenario
+	{
+		 get { } //Length: 131
 	}
 
 	internal List<ProbeVolumePerSceneData> perSceneDataList
@@ -686,27 +977,36 @@ public class ProbeReferenceVolume
 		private set { } //Length: 8
 	}
 
+	public bool probeOcclusion
+	{
+		 get { } //Length: 131
+	}
+
 	internal ProbeVolumeDebug probeVolumeDebug
 	{
 		[CompilerGenerated]
 		internal get { } //Length: 8
 	}
 
-	public float probeVolumesWeight
-	{
-		 get { } //Length: 9
-		 set { } //Length: 39
-	}
-
 	public float scenarioBlendingFactor
 	{
-		 get { } //Length: 34
-		 set { } //Length: 47
+		 get { } //Length: 133
+		 set { } //Length: 145
 	}
 
 	public ProbeVolumeSHBands shBands
 	{
 		 get { } //Length: 7
+	}
+
+	public bool skyOcclusion
+	{
+		 get { } //Length: 130
+	}
+
+	public bool skyOcclusionShadingDirection
+	{
+		 get { } //Length: 130
 	}
 
 	public Color[] subdivisionDebugColors
@@ -715,35 +1015,244 @@ public class ProbeReferenceVolume
 		 get { } //Length: 8
 	}
 
+	internal bool supportLightingScenarios
+	{
+		internal get { } //Length: 5
+	}
+
+	internal bool supportScenarioBlending
+	{
+		internal get { } //Length: 5
+	}
+
 	public float turnoverRate
 	{
 		 get { } //Length: 9
 		 set { } //Length: 39
 	}
 
+	private bool useRenderingLayers
+	{
+		private get { } //Length: 36
+	}
+
+	internal bool vertexSampling
+	{
+		internal get { } //Length: 8
+	}
+
 	private static ProbeReferenceVolume() { }
 
 	private ProbeReferenceVolume() { }
 
-	private bool AddBlendingBricks(BlendingCellInfo blendingCell) { }
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_10(bool value) { }
 
-	private bool AddBricks(CellInfo cellInfo, CellIndexUpdateInfo cellUpdateInfo, bool ignoreErrorLog) { }
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_11() { }
 
-	private void AddCell(Cell cell, int assetInstanceID) { }
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_12() { }
 
-	internal void AddPendingAssetLoading(ProbeVolumeAsset asset) { }
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_13(int value) { }
 
-	internal void AddPendingAssetRemoval(ProbeVolumeAsset asset) { }
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_14() { }
 
-	private void AllocateTemporaryDataLocation() { }
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_15(int value) { }
+
+	[CompilerGenerated]
+	private float <RegisterDebug>b__223_16() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_17(float value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_2() { }
+
+	[CompilerGenerated]
+	private float <RegisterDebug>b__223_20() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_21(float value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_22() { }
+
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_23() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_24(int v) { }
+
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_26() { }
+
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_27() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_28(int v) { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_3(bool value) { }
+
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_30() { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_31() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_32(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_33() { }
+
+	[CompilerGenerated]
+	private float <RegisterDebug>b__223_34() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_35(float value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_38() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_39(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_4() { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_40() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_41(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_42() { }
+
+	[CompilerGenerated]
+	private float <RegisterDebug>b__223_43() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_44(float value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_47() { }
+
+	[CompilerGenerated]
+	private float <RegisterDebug>b__223_48() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_49(float value) { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_5(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_51() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_52(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_53() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_54(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_55() { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_56() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_57(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_58() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_59(bool value) { }
+
+	[CompilerGenerated]
+	private float <RegisterDebug>b__223_6() { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_67() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_68(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_69() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_7(float value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_71() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_72(bool value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_73() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_74(bool value) { }
+
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_83() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_84(int value) { }
+
+	[CompilerGenerated]
+	private int <RegisterDebug>b__223_85() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>b__223_86(int value) { }
+
+	[CompilerGenerated]
+	private bool <RegisterDebug>b__223_9() { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>g__RefreshDebug|223_0(Field<T> field, T value) { }
+
+	[CompilerGenerated]
+	private void <RegisterDebug>g__RefreshScenarioNames|223_75(string guid) { }
+
+	private bool AddBlendingBricks(Cell cell) { }
+
+	private bool AddBricks(Cell cell) { }
+
+	private void AddCell(int cellIndex) { }
+
+	internal void AddPendingSceneLoading(string sceneGUID, ProbeVolumeBakingSet bakingSet) { }
+
+	internal void AddPendingSceneRemoval(string sceneGUID) { }
+
+	private void AllocateScratchBufferPoolIfNeeded() { }
+
+	public void BindAPVRuntimeResources(CommandBuffer cmdBuffer, bool isProbeVolumeEnabled) { }
+
+	private static int BlendingComparer(Cell a, Cell b) { }
 
 	public void BlendLightingScenario(string otherScenario, float blendingFactor) { }
 
 	internal float BrickSize(int subdivisionLevel) { }
 
-	internal static int CellSize(int subdivisionLevel) { }
+	private void CancelBlendingStreamingRequest(Cell cell) { }
 
-	private bool CheckCompatibilityWithCollection(ProbeVolumeAsset asset, Dictionary<String, ProbeVolumeAsset> collection) { }
+	private void CancelStreamingRequest(Cell cell) { }
+
+	internal static int CellSize(int subdivisionLevel) { }
 
 	public void Cleanup() { }
 
@@ -751,33 +1260,65 @@ public class ProbeReferenceVolume
 
 	private void CleanupLoadedData() { }
 
+	private void CleanupStreaming() { }
+
 	internal void Clear() { }
 
 	private void ClearDebugData() { }
 
-	private void ComputeCellCameraDistance(Vector3 cameraPosition, DynamicArray<CellInfo> cells) { }
+	private void ComputeBestToBeLoadedCells(Vector3 cameraPosition, Vector3 cameraDirection) { }
 
-	private void ComputeStreamingScoreForBlending(DynamicArray<BlendingCellInfo> cells, float worstScore) { }
+	private void ComputeBlendingScore(DynamicArray<Cell> cells, float worstScore) { }
 
-	private CellInstancedDebugProbes CreateInstancedProbes(CellInfo cellInfo) { }
+	private void ComputeCellGlobalInfo() { }
+
+	private static void ComputeCellStreamingScore(Cell cell, Vector3 cameraPosition, Vector3 cameraDirection) { }
+
+	internal void ComputeEntryMinMax(ref IndirectionEntryInfo entryInfo, ReadOnlySpan<Brick> bricks) { }
+
+	private void ComputeMinMaxStreamingScore() { }
+
+	private void ComputeStreamingScore(Vector3 cameraPosition, Vector3 cameraDirection, DynamicArray<Cell> cells) { }
+
+	private void ComputeStreamingScoreAndWorseLoadedCells(Vector3 cameraPosition, Vector3 cameraDirection) { }
+
+	private CellInstancedDebugProbes CreateInstancedProbes(Cell cell) { }
 
 	public bool DataHasBeenLoaded() { }
 
 	private void DebugCellIndexChanged(Field<T> field, T value) { }
 
-	private void DrawProbeDebug(Camera camera) { }
+	private static int DefragComparer(Cell a, Cell b) { }
+
+	private void DeinitProbeReferenceVolume() { }
+
+	private void DrawProbeDebug(Camera camera, Texture exposureTexture) { }
+
+	public void EnableMaxCellStreaming(bool value) { }
 
 	private int FindWorstBlendingCellToBeLoaded() { }
 
+	internal void ForceMemoryBudget(ProbeVolumeTextureMemoryBudget budget) { }
+
+	internal void ForceNoDiskStreaming(bool state) { }
+
 	internal void ForceSHBand(ProbeVolumeSHBands shBands) { }
+
+	public ProbeVolumeBakingSet get_currentBakingSet() { }
+
+	private Mesh get_debugMesh() { }
+
+	internal bool get_diskStreamingEnabled() { }
 
 	internal bool get_enabledBySRP() { }
 
-	internal bool get_enableScenarioBlending() { }
-
 	internal Bounds get_globalBounds() { }
 
+	internal bool get_gpuStreamingEnabled() { }
+
 	internal bool get_hasUnloadedCells() { }
+
+	internal float get_indexFragmentationRate() { }
 
 	public static ProbeReferenceVolume get_instance() { }
 
@@ -785,58 +1326,94 @@ public class ProbeReferenceVolume
 
 	public string get_lightingScenario() { }
 
+	public bool get_loadMaxCellsPerFrame() { }
+
 	public ProbeVolumeTextureMemoryBudget get_memoryBudget() { }
 
 	public int get_numberOfCellsBlendedPerFrame() { }
 
-	internal int get_numberOfCellsLoadedPerFrame() { }
+	private int get_numberOfCellsLoadedPerFrame() { }
+
+	public string get_otherScenario() { }
 
 	[CompilerGenerated]
 	internal List<ProbeVolumePerSceneData> get_perSceneDataList() { }
 
+	public bool get_probeOcclusion() { }
+
 	[CompilerGenerated]
 	internal ProbeVolumeDebug get_probeVolumeDebug() { }
-
-	public float get_probeVolumesWeight() { }
 
 	public float get_scenarioBlendingFactor() { }
 
 	public ProbeVolumeSHBands get_shBands() { }
 
+	public bool get_skyOcclusion() { }
+
+	public bool get_skyOcclusionShadingDirection() { }
+
 	[CompilerGenerated]
 	public Color[] get_subdivisionDebugColors() { }
 
+	internal bool get_supportLightingScenarios() { }
+
+	internal bool get_supportScenarioBlending() { }
+
 	public float get_turnoverRate() { }
 
-	private bool GetCellIndexUpdate(Cell cell, out CellIndexUpdateInfo cellUpdateInfo, bool ignoreErrorLog) { }
+	private bool get_useRenderingLayers() { }
+
+	internal bool get_vertexSampling() { }
+
+	private Bounds GetCellBounds(Vector3 cellPosition) { }
 
 	internal float GetDistanceBetweenProbes(int subdivisionLevel) { }
+
+	internal float GetEntrySize() { }
+
+	internal int GetEntrySubdivLevel() { }
+
+	internal int GetGlobalIndirectionEntryMaxSubdiv() { }
 
 	internal int GetMaxSubdivision(float multiplier) { }
 
 	internal int GetMaxSubdivision() { }
 
-	internal int GetNumberOfBricksAtSubdiv(Vector3Int position, int minSubdiv, out Vector3Int minValidLocalIdxAtMaxRes, out Vector3Int sizeOfValidIndicesAtMaxRes) { }
+	internal static int GetNumberOfBricksAtSubdiv(IndirectionEntryInfo entryInfo) { }
+
+	public bool GetProbeSamplingDebugResources(Camera camera, out GraphicsBuffer resultBuffer, out Vector2 coords) { }
 
 	public RuntimeResources GetRuntimeResources() { }
 
-	private List<BrickChunkAlloc> GetSourceLocations(int count, int chunkSize, DataLocation dataLoc) { }
+	internal static string GetSceneGUID(Scene scene) { }
 
-	internal RefVolTransform GetTransform() { }
+	private List<BrickChunkAlloc> GetSourceLocations(int count, int chunkSize, DataLocation dataLoc) { }
 
 	public int GetVideoMemoryCost() { }
 
+	private bool HasActiveStreamingRequest(Cell cell) { }
+
 	public void Initialize(in ProbeVolumeSystemParameters parameters) { }
 
-	private void InitializeDebug(in ProbeVolumeSystemParameters parameters) { }
+	private void InitializeDebug() { }
 
-	private void InitProbeReferenceVolume(ProbeVolumeTextureMemoryBudget memoryBudget, ProbeVolumeBlendingTextureMemoryBudget blendingMemoryBudget, ProbeVolumeSHBands shBands) { }
+	internal void InitializeGlobalIndirection() { }
+
+	private void InitProbeReferenceVolume() { }
+
+	private void InitStreaming() { }
+
+	public bool IsProbeSamplingDebugEnabled() { }
 
 	internal void LoadAllCells() { }
 
-	private void LoadAsset(ProbeVolumeAsset asset) { }
+	internal bool LoadCell(Cell cell, bool ignoreErrorLog = false) { }
 
-	internal bool LoadCell(CellInfo cellInfo, bool ignoreErrorLog = false) { }
+	private bool LoadCells(List<Int32> cellIndices) { }
+
+	[Conditional("UNITY_EDITOR")]
+	[Conditional("DEVELOPMENT_BUILD")]
+	private void LogStreaming(string log) { }
 
 	internal float MaxBrickSize() { }
 
@@ -844,7 +1421,11 @@ public class ProbeReferenceVolume
 
 	internal float MinDistanceBetweenProbes() { }
 
+	private void OnBlendingStreamingComplete(CellStreamingRequest request, CommandBuffer cmd) { }
+
 	private void OnClearLightingdata() { }
+
+	private void OnStreamingComplete(CellStreamingRequest request, CommandBuffer cmd) { }
 
 	private void PerformPendingDeletion() { }
 
@@ -854,80 +1435,139 @@ public class ProbeReferenceVolume
 
 	public void PerformPendingOperations() { }
 
-	private void RecomputeMinMaxLoadedCellPos() { }
+	internal Vector3 ProbeOffset() { }
 
-	private void RegisterDebug(ProbeVolumeSystemParameters parameters) { }
+	private bool ProcessDiskStreamingRequest(CellStreamingRequest request) { }
+
+	private void ProcessNewRequests() { }
+
+	internal bool ProcessScheduledBakingSet() { }
+
+	private void PushDiskStreamingRequest(Cell cell, string scenario, int poolIndex, OnStreamingCompleteDelegate onStreamingComplete) { }
+
+	internal void RegisterBakingSet(ProbeVolumePerSceneData data) { }
+
+	private void RegisterDebug() { }
 
 	internal void RegisterPerSceneData(ProbeVolumePerSceneData data) { }
 
-	private void ReleaseBricks(CellInfo cellInfo) { }
+	private void ReleaseBricks(Cell cell) { }
 
-	private void RemoveCell(Cell cell) { }
+	private void ReleasePoolChunks(List<BrickChunkAlloc> chunkList) { }
 
-	internal void RemovePendingAsset(ProbeVolumeAsset asset) { }
+	private void RemoveCell(int cellIndex) { }
 
-	public void RenderDebug(Camera camera) { }
+	internal void RemovePendingScene(string sceneGUID, List<Int32> cellList) { }
+
+	[Obsolete("Use the other override to support sampling offset in debug modes.")]
+	public void RenderDebug(Camera camera, Texture exposureTexture) { }
+
+	public void RenderDebug(Camera camera, ProbeVolumesOptions options, Texture exposureTexture) { }
+
+	public void RenderFragmentationOverlay(RenderGraph renderGraph, TextureHandle colorBuffer, TextureHandle depthBuffer, DebugOverlay debugOverlay) { }
+
+	private bool ReservePoolChunks(int brickCount, List<BrickChunkAlloc> chunkList, bool ignoreErrorLog) { }
 
 	internal void ResetDebugViewToMaxSubdiv() { }
 
 	internal void ScenarioBlendingChanged(bool scenarioChanged) { }
 
+	internal bool ScheduleBakingSet(ProbeVolumeBakingSet bakingSet) { }
+
 	internal void set_globalBounds(Bounds value) { }
 
 	public void set_lightingScenario(string value) { }
+
+	public void set_loadMaxCellsPerFrame(bool value) { }
 
 	public void set_numberOfCellsBlendedPerFrame(int value) { }
 
 	[CompilerGenerated]
 	private void set_perSceneDataList(List<ProbeVolumePerSceneData> value) { }
 
-	public void set_probeVolumesWeight(float value) { }
-
 	public void set_scenarioBlendingFactor(float value) { }
 
 	public void set_turnoverRate(float value) { }
+
+	public void SetActiveBakingSet(ProbeVolumeBakingSet bakingSet) { }
+
+	internal void SetActiveScenario(string scenario, bool verbose = true) { }
+
+	public void SetActiveScene(Scene scene) { }
+
+	private void SetBakingSetAsCurrent(ProbeVolumeBakingSet bakingSet) { }
 
 	public void SetEnableStateFromSRP(bool srpEnablesPV) { }
 
 	internal void SetMaxSubdivision(int maxSubdivision) { }
 
-	internal void SetMinBrickAndMaxSubdiv(float minBrickSize, int maxSubdiv) { }
-
 	public void SetNumberOfCellsLoadedPerFrame(int numberOfCells) { }
 
-	internal void SetTRS(Vector3 position, Quaternion rotation, float minBrickSize) { }
+	internal void SetSubdivisionDimensions(float minBrickSize, int maxSubdiv, Vector3 offset) { }
+
+	public void SetVertexSamplingEnabled(bool value) { }
+
+	private bool ShouldCullCell(Vector3 cellPosition, Vector4[] adjustmentVolumeBounds, int adjustmentVolumeCount) { }
 
 	private bool ShouldCullCell(Vector3 cellPosition, Transform cameraTransform, Plane[] frustumPlanes) { }
 
-	private bool TryLoadBlendingCell(BlendingCellInfo blendingCell, DynamicArray<BlendingCellInfo> loadedCells) { }
+	private void StartIndexDefragmentation() { }
 
-	private bool TryLoadCell(CellInfo cellInfo, ref int shBudget, ref int indexBudget, DynamicArray<CellInfo> loadedCells) { }
+	private bool TryCreateDebugRenderData() { }
+
+	internal bool TryGetPerSceneData(string sceneGUID, out ProbeVolumePerSceneData perSceneData) { }
+
+	private bool TryLoadBlendingCell(Cell cell, DynamicArray<Cell> loadedCells) { }
+
+	private bool TryLoadCell(Cell cell, ref int shBudget, ref int indexBudget, DynamicArray<Cell> loadedCells) { }
 
 	internal void UnloadAllBlendingCells() { }
 
 	internal void UnloadAllCells() { }
 
-	internal void UnloadBlendingCell(BlendingCellInfo blendingCell) { }
+	internal void UnloadBakingSet() { }
 
-	private void UnloadBlendingCell(BlendingCellInfo blendingCell, DynamicArray<BlendingCellInfo> unloadedCells) { }
+	internal void UnloadBlendingCell(Cell cell) { }
 
-	internal void UnloadCell(CellInfo cellInfo) { }
+	private void UnloadBlendingCell(Cell cell, DynamicArray<Cell> unloadedCells) { }
+
+	internal void UnloadCell(Cell cell) { }
 
 	private void UnregisterDebug(bool destroyPanel) { }
 
 	internal void UnregisterPerSceneData(ProbeVolumePerSceneData data) { }
 
+	private void UpdateActiveRequests(CommandBuffer cmd) { }
+
 	private void UpdateBlendingCellStreaming(CommandBuffer cmd) { }
 
-	private void UpdateCellIndex(CellInfo cellInfo) { }
+	private void UpdateCellIndex(Cell cell) { }
 
 	public void UpdateCellStreaming(CommandBuffer cmd, Camera camera) { }
 
-	public void UpdateConstantBuffer(CommandBuffer cmd, ProbeVolumeShadingParameters parameters) { }
+	public void UpdateCellStreaming(CommandBuffer cmd, Camera camera, ProbeVolumesOptions options) { }
 
-	private void UpdatePool(List<BrickChunkAlloc> chunkList, PerScenarioData data, NativeArray<Byte> validityNeighMaskData, int chunkIndex, int poolIndex) { }
+	internal void UpdateConstantBuffer(CommandBuffer cmd, ProbeVolumeShadingParameters parameters) { }
 
-	private void UpdatePoolValidity(List<BrickChunkAlloc> chunkList, PerScenarioData data, NativeArray<Byte> validityNeighMaskData, int chunkIndex) { }
+	private void UpdateDataLocationTexture(Texture output, NativeArray<T> input) { }
+
+	private static void UpdateDebugFromSelection(ref Vector4[] _AdjustmentVolumeBounds, ref int _AdjustmentVolumeCount) { }
+
+	private void UpdateDiskStreaming(CommandBuffer cmd) { }
+
+	private void UpdateIndexDefragmentation() { }
+
+	private void UpdatePool(CommandBuffer cmd, List<BrickChunkAlloc> chunkList, CellStreamingScratchBuffer dataBuffer, CellStreamingScratchBufferLayout layout, int poolIndex) { }
+
+	private void UpdatePool(List<BrickChunkAlloc> chunkList, PerScenarioData data, NativeArray<Byte> validityNeighMaskData, NativeArray<UInt16> skyOcclusionL0L1Data, NativeArray<Byte> skyShadingDirectionIndices, int chunkIndex, int poolIndex) { }
+
+	private void UpdatePoolAndIndex(Cell cell, CellStreamingScratchBuffer dataBuffer, CellStreamingScratchBufferLayout layout, int poolIndex, CommandBuffer cmd) { }
+
+	public bool UpdateShaderVariablesProbeVolumes(CommandBuffer cmd, ProbeVolumesOptions probeVolumeOptions, int taaFrameIndex, bool supportRenderingLayers = false) { }
+
+	private void UpdateSharedData(List<BrickChunkAlloc> chunkList, NativeArray<Byte> validityNeighMaskData, NativeArray<UInt16> skyOcclusionData, NativeArray<Byte> skyShadingDirectionIndices, int chunkIndex) { }
+
+	private void UpdateValidityTextureWithoutMask(Texture output, NativeArray<Byte> input) { }
 
 }
 

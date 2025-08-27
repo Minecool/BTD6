@@ -4,38 +4,38 @@
 internal sealed class <>f__AnonymousType122
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <duration>j__TPar <duration>i__Field; //Field offset: 0x0
+	private readonly <filename>j__TPar <filename>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <gamestate>j__TPar <gamestate>i__Field; //Field offset: 0x0
+	private readonly <data>j__TPar <data>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <makeCurrent>j__TPar <makeCurrent>i__Field; //Field offset: 0x0
+	private readonly <options>j__TPar <options>i__Field; //Field offset: 0x0
 
-	public <duration>j__TPar duration
+	public <data>j__TPar data
 	{
 		 get { } //Length: 5
 	}
 
-	public <gamestate>j__TPar gamestate
+	public <filename>j__TPar filename
 	{
 		 get { } //Length: 5
 	}
 
-	public <makeCurrent>j__TPar makeCurrent
+	public <options>j__TPar options
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType122`3(<duration>j__TPar duration, <gamestate>j__TPar gamestate, <makeCurrent>j__TPar makeCurrent) { }
+	public <>f__AnonymousType122`3(<filename>j__TPar filename, <data>j__TPar data, <options>j__TPar options) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <duration>j__TPar get_duration() { }
+	public <data>j__TPar get_data() { }
 
-	public <gamestate>j__TPar get_gamestate() { }
+	public <filename>j__TPar get_filename() { }
 
-	public <makeCurrent>j__TPar get_makeCurrent() { }
+	public <options>j__TPar get_options() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

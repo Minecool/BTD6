@@ -187,7 +187,7 @@ public class LocalizationManager : ScriptableObjectSingleton<LocalizationManager
 
 	public Language CachedLanguage
 	{
-		 get { } //Length: 146
+		 get { } //Length: 134
 		 set { } //Length: 156
 	}
 

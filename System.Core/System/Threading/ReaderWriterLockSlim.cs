@@ -9,7 +9,7 @@ public class ReaderWriterLockSlim : IDisposable
 
 		public bool IsExpired
 		{
-			 get { } //Length: 76
+			 get { } //Length: 63
 		}
 
 		public int RemainingMilliseconds
@@ -48,32 +48,32 @@ public class ReaderWriterLockSlim : IDisposable
 
 	public bool IsReadLockHeld
 	{
-		 get { } //Length: 121
+		 get { } //Length: 110
 	}
 
 	public bool IsUpgradeableReadLockHeld
 	{
-		 get { } //Length: 164
+		 get { } //Length: 158
 	}
 
 	public bool IsWriteLockHeld
 	{
-		 get { } //Length: 164
+		 get { } //Length: 158
 	}
 
 	public int RecursiveReadCount
 	{
-		 get { } //Length: 117
+		 get { } //Length: 105
 	}
 
 	public int RecursiveUpgradeCount
 	{
-		 get { } //Length: 185
+		 get { } //Length: 182
 	}
 
 	public int RecursiveWriteCount
 	{
-		 get { } //Length: 185
+		 get { } //Length: 182
 	}
 
 	public int WaitingReadCount
@@ -101,13 +101,15 @@ public class ReaderWriterLockSlim : IDisposable
 
 	private void ClearWritersWaiting() { }
 
-	public override void Dispose() { }
-
 	private void Dispose(bool disposing) { }
+
+	public override void Dispose() { }
 
 	private void EnterMyLock() { }
 
 	private void EnterMyLockSpin() { }
+
+	public void EnterReadLock() { }
 
 	public void EnterUpgradeableReadLock() { }
 
@@ -120,6 +122,8 @@ public class ReaderWriterLockSlim : IDisposable
 	private void ExitAndWakeUpAppropriateWaitersPreferringWriters() { }
 
 	private void ExitMyLock() { }
+
+	public void ExitReadLock() { }
 
 	public void ExitUpgradeableReadLock() { }
 
@@ -164,6 +168,12 @@ public class ReaderWriterLockSlim : IDisposable
 	private void SetWritersWaiting() { }
 
 	private static void SpinWait(int SpinCount) { }
+
+	private bool TryEnterReadLock(TimeoutTracker timeout) { }
+
+	public bool TryEnterReadLock(int millisecondsTimeout) { }
+
+	private bool TryEnterReadLockCore(TimeoutTracker timeout) { }
 
 	private bool TryEnterUpgradeableReadLock(TimeoutTracker timeout) { }
 

@@ -9,6 +9,7 @@ public class RTHandle
 	internal bool m_EnableMSAA; //Field offset: 0x50
 	internal bool m_EnableRandomWrite; //Field offset: 0x51
 	internal bool m_EnableHWDynamicScale; //Field offset: 0x52
+	internal bool m_RTHasOwnership; //Field offset: 0x53
 	internal string m_Name; //Field offset: 0x58
 	internal bool m_UseCustomHandleScales; //Field offset: 0x60
 	internal RTHandleProperties m_CustomHandleProperties; //Field offset: 0x64
@@ -19,6 +20,11 @@ public class RTHandle
 	private bool <useScaling>k__BackingField; //Field offset: 0xA8
 	[CompilerGenerated]
 	private Vector2Int <referenceSize>k__BackingField; //Field offset: 0xAC
+
+	public Texture externalTexture
+	{
+		 get { } //Length: 5
+	}
 
 	public bool isMSAAEnabled
 	{
@@ -75,6 +81,8 @@ public class RTHandle
 
 	public void CopyToFastMemory(CommandBuffer cmd, float residencyFraction = 1, FastMemoryFlags flags = 1) { }
 
+	public Texture get_externalTexture() { }
+
 	public bool get_isMSAAEnabled() { }
 
 	public string get_name() { }
@@ -119,7 +127,7 @@ public class RTHandle
 
 	public void SetCustomHandleProperties(in RTHandleProperties properties) { }
 
-	internal void SetRenderTexture(RenderTexture rt) { }
+	internal void SetRenderTexture(RenderTexture rt, bool transferOwnership = true) { }
 
 	internal void SetTexture(Texture tex) { }
 

@@ -25,7 +25,7 @@ public abstract class MethodBase : MemberInfo
 
 	public override bool IsConstructor
 	{
-		 get { } //Length: 149
+		 get { } //Length: 148
 	}
 
 	public override bool IsGenericMethod

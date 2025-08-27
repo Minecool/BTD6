@@ -1,10 +1,13 @@
 namespace UnityEngine.TextCore.Text;
 
 [Extension]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.IMGUIModule", "UnityEngine.UIElementsModule"}])]
 internal static class TextGeneratorUtilities
 {
 	public static readonly Vector2 largePositiveVector2; //Field offset: 0x0
 	public static readonly Vector2 largeNegativeVector2; //Field offset: 0x8
+	private static readonly HashSet<UInt32> k_EmojiLookup; //Field offset: 0x10
+	private static readonly HashSet<UInt32> k_EmojiPresentationFormLookup; //Field offset: 0x18
 
 	private static TextGeneratorUtilities() { }
 
@@ -28,27 +31,31 @@ internal static class TextGeneratorUtilities
 
 	public static int GetAttributeParameters(Char[] chars, int startIndex, int length, ref Single[] parameters) { }
 
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal static HorizontalAlignment GetHorizontalAlignment(TextAnchor anchor) { }
+
 	public static int GetMarkupTagHashCode(UInt32[] styleDefinition, int readIndex) { }
 
 	public static int GetMarkupTagHashCode(TextBackingContainer styleDefinition, int readIndex) { }
 
 	public static TextStyle GetStyle(TextGenerationSettings generationSetting, int hashCode) { }
 
-	public static int GetStyleHashCode(ref TextBackingContainer text, int index, out int closeIndex) { }
-
 	public static int GetStyleHashCode(ref UInt32[] text, int index, out int closeIndex) { }
 
-	public static uint GetUTF16(TextBackingContainer text, int i) { }
+	public static int GetStyleHashCode(ref TextBackingContainer text, int index, out int closeIndex) { }
 
 	public static uint GetUTF16(UInt32[] text, int i) { }
 
-	public static uint GetUTF32(UInt32[] text, int i) { }
+	public static uint GetUTF16(TextBackingContainer text, int i) { }
 
 	public static uint GetUTF32(TextBackingContainer text, int i) { }
 
-	public static Color32 HexCharsToColor(Char[] hexChars, int tagCount) { }
+	public static uint GetUTF32(UInt32[] text, int i) { }
 
-	public static Color32 HexCharsToColor(Char[] hexChars, int startIndex, int length) { }
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule"}])]
+	internal static VerticalAlignment GetVerticalAlignment(TextAnchor anchor) { }
+
+	public static Color32 HexCharsToColor(Char[] hexChars, int startIndex, int tagCount) { }
 
 	public static uint HexToInt(char hex) { }
 
@@ -68,6 +75,10 @@ internal static class TextGeneratorUtilities
 
 	internal static bool IsCJK(uint c) { }
 
+	internal static bool IsEmoji(uint c) { }
+
+	internal static bool IsEmojiPresentationForm(uint c) { }
+
 	internal static bool IsHangul(uint c) { }
 
 	public static bool IsValidUTF16(TextBackingContainer text, int index) { }
@@ -81,8 +92,6 @@ internal static class TextGeneratorUtilities
 	[Extension]
 	public static Color MinAlpha(Color c1, Color c2) { }
 
-	public static Vector2 PackUV(float x, float y, float scale) { }
-
 	public static void ReplaceClosingStyleTag(ref TextProcessingElement[] charBuffer, ref int writeIndex, ref int textStyleStackDepth, ref TextProcessingStack<Int32>[]& textStyleStacks, ref TextGenerationSettings generationSettings) { }
 
 	private static bool ReplaceOpeningStyleTag(ref UInt32[] sourceText, int srcIndex, out int srcOffset, ref TextProcessingElement[] charBuffer, ref int writeIndex, ref int textStyleStackDepth, ref TextProcessingStack<Int32>[]& textStyleStacks, ref TextGenerationSettings generationSettings) { }
@@ -95,9 +104,9 @@ internal static class TextGeneratorUtilities
 
 	public static void ResizeLineExtents(int size, TextInfo textInfo) { }
 
-	public static char ToUpperASCIIFast(char c) { }
-
 	public static uint ToUpperASCIIFast(uint c) { }
+
+	public static char ToUpperASCIIFast(char c) { }
 
 	public static char ToUpperFast(char c) { }
 

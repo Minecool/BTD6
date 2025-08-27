@@ -20,7 +20,7 @@ public class IncreaseBloonWorthWithTierModel : ProjectileBehaviorWithOverlayMode
 
 	public BloonWorthMutator mutator
 	{
-		 get { } //Length: 261
+		 get { } //Length: 265
 	}
 
 	public IncreaseBloonWorthWithTierModel(string name, string mutatorId, float cashPerTier, string overlayType, BloonWorthMutator mutator = null) { }

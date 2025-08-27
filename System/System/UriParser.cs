@@ -85,6 +85,8 @@ public abstract class UriParser
 
 	private static UriParser() { }
 
+	protected UriParser() { }
+
 	internal UriParser(UriSyntaxFlags flags) { }
 
 	internal static UriParser FindOrFetchAsUnknownV1Syntax(string lwrCaseScheme) { }

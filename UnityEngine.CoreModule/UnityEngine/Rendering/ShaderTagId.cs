@@ -8,7 +8,7 @@ public struct ShaderTagId : IEquatable<ShaderTagId>
 	internal int id
 	{
 		internal get { } //Length: 5
-		internal set { } //Length: 3
+		internal set { } //Length: 8900
 	}
 
 	public ShaderTagId(string name) { }

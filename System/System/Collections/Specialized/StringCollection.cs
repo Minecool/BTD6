@@ -17,7 +17,7 @@ public class StringCollection : IList, ICollection, IEnumerable
 
 	public string Item
 	{
-		 get { } //Length: 126
+		 get { } //Length: 79
 		 set { } //Length: 39
 	}
 
@@ -38,8 +38,8 @@ public class StringCollection : IList, ICollection, IEnumerable
 
 	private override object System.Collections.IList.Item
 	{
-		private get { } //Length: 126
-		private set { } //Length: 135
+		private get { } //Length: 79
+		private set { } //Length: 84
 	}
 
 	public StringCollection() { }

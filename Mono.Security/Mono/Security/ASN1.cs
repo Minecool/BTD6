@@ -9,17 +9,17 @@ public class ASN1
 
 	public int Count
 	{
-		 get { } //Length: 34
+		 get { } //Length: 32
 	}
 
 	public ASN1 Item
 	{
-		 get { } //Length: 195
+		 get { } //Length: 187
 	}
 
 	public int Length
 	{
-		 get { } //Length: 18
+		 get { } //Length: 14
 	}
 
 	public byte Tag

@@ -27,7 +27,7 @@ public class CountAllCategoriesBehaviorModel : ItemArtifactBehaviorModel
 
 	public TowerSetMutator Mutator
 	{
-		 get { } //Length: 327
+		 get { } //Length: 331
 	}
 
 	public CountAllCategoriesBehaviorModel(string name, TowerSet[] towerSetList, TowerSet[] alsoCountsAsList, bool inverseTowerSets, String[] towerTypes, bool inverseTowerTypes, Int32[] tiers, bool tiersMustBeEqual, bool inverseTiers) { }

@@ -2,6 +2,7 @@ namespace UnityEngine.UIElements;
 
 internal class ButtonStripField : BaseField<Int32>
 {
+	[Obsolete("UxmlFactory is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlFactory : UxmlFactory<ButtonStripField, UxmlTraits>
 	{
 
@@ -9,6 +10,7 @@ internal class ButtonStripField : BaseField<Int32>
 
 	}
 
+	[Obsolete("UxmlTraits is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	internal class UxmlTraits : UxmlTraits<Int32>
 	{
 
@@ -16,7 +18,7 @@ internal class ButtonStripField : BaseField<Int32>
 
 	}
 
-	private List<Button> m_Buttons; //Field offset: 0x440
+	private readonly List<Button> m_Buttons; //Field offset: 0x538
 
 	public ButtonStripField() { }
 

@@ -9,7 +9,7 @@ internal class DelegateList
 
 	public int Count
 	{
-		 get { } //Length: 18
+		 get { } //Length: 14
 	}
 
 	public DelegateList`1(Func<Action`1<T>, LinkedListNode`1<Action`1<T>>> acquireFunc, Action<LinkedListNode`1<Action`1<T>>> releaseFunc) { }

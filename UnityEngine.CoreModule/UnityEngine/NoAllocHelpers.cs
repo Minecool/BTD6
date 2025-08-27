@@ -1,20 +1,23 @@
 namespace UnityEngine;
 
-[NativeHeader("Runtime/Export/Scripting/NoAllocHelpers.bindings.h")]
-internal sealed class NoAllocHelpers
+internal static class NoAllocHelpers
 {
+	private class ListPrivateFieldAccess
+	{
+		internal T[] _items; //Field offset: 0x0
+		internal int _size; //Field offset: 0x0
+		internal int _version; //Field offset: 0x0
+
+	}
+
 
 	public static void EnsureListElemCount(List<T> list, int count) { }
 
-	[FreeFunction("NoAllocHelpers_Bindings::ExtractArrayFromList")]
-	public static Array ExtractArrayFromList(object list) { }
+	public static T[] ExtractArrayFromList(List<T> list) { }
 
-	public static T[] ExtractArrayFromListT(List<T> list) { }
+	public static void ResetListContents(List<T> list, ReadOnlySpan<T> span) { }
 
-	[FreeFunction("NoAllocHelpers_Bindings::Internal_ResizeList")]
-	internal static void Internal_ResizeList(object list, int size) { }
-
-	public static void ResizeList(List<T> list, int size) { }
+	public static void ResetListSize(List<T> list, int size) { }
 
 	public static int SafeLength(Array values) { }
 

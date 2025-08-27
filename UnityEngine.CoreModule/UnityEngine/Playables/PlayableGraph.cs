@@ -1,9 +1,9 @@
 namespace UnityEngine.Playables;
 
-[NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
 [NativeHeader("Runtime/Director/Core/HPlayable.h")]
-[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
 [NativeHeader("Runtime/Export/Director/PlayableGraph.bindings.h")]
+[NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
+[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
 [UsedByNativeCode]
 public struct PlayableGraph
 {
@@ -15,39 +15,31 @@ public struct PlayableGraph
 	[FreeFunction("PlayableGraphBindings::ConnectInternal", HasExplicitThis = True, ThrowsException = True)]
 	private bool ConnectInternal(PlayableHandle source, int sourceOutputPort, PlayableHandle destination, int destinationInputPort) { }
 
-	private static bool ConnectInternal_Injected(ref PlayableGraph _unity_self, ref PlayableHandle source, int sourceOutputPort, ref PlayableHandle destination, int destinationInputPort) { }
+	private static bool ConnectInternal_Injected(ref PlayableGraph _unity_self, in PlayableHandle source, int sourceOutputPort, in PlayableHandle destination, int destinationInputPort) { }
 
 	public static PlayableGraph Create() { }
 
 	public static PlayableGraph Create(string name) { }
 
-	private static void Create_Injected(string name, out PlayableGraph ret) { }
+	private static void Create_Injected(ref ManagedSpanWrapper name, out PlayableGraph ret) { }
 
 	[FreeFunction("PlayableGraphBindings::Destroy", HasExplicitThis = True, ThrowsException = True)]
 	public void Destroy() { }
-
-	private static void Destroy_Injected(ref PlayableGraph _unity_self) { }
 
 	public void DestroyPlayable(U playable) { }
 
 	[FreeFunction("PlayableGraphBindings::DestroyPlayableInternal", HasExplicitThis = True, ThrowsException = True)]
 	private void DestroyPlayableInternal(PlayableHandle playable) { }
 
-	private static void DestroyPlayableInternal_Injected(ref PlayableGraph _unity_self, ref PlayableHandle playable) { }
+	private static void DestroyPlayableInternal_Injected(ref PlayableGraph _unity_self, in PlayableHandle playable) { }
 
 	public bool IsValid() { }
-
-	private static bool IsValid_Injected(ref PlayableGraph _unity_self) { }
 
 	[FreeFunction("PlayableGraphBindings::Play", HasExplicitThis = True, ThrowsException = True)]
 	public void Play() { }
 
-	private static void Play_Injected(ref PlayableGraph _unity_self) { }
-
 	[FreeFunction("PlayableGraphBindings::SetTimeUpdateMode", HasExplicitThis = True, ThrowsException = True)]
 	public void SetTimeUpdateMode(DirectorUpdateMode value) { }
-
-	private static void SetTimeUpdateMode_Injected(ref PlayableGraph _unity_self, DirectorUpdateMode value) { }
 
 }
 

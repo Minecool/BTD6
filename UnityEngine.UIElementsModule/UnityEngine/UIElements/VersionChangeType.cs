@@ -1,7 +1,7 @@
 namespace UnityEngine.UIElements;
 
 [Flags]
-internal enum VersionChangeType
+public enum VersionChangeType
 {
 	Bindings = 1,
 	ViewData = 2,
@@ -20,6 +20,9 @@ internal enum VersionChangeType
 	RenderHints = 16384,
 	TransitionProperty = 32768,
 	EventCallbackCategories = 65536,
+	DisableRendering = 131072,
+	BindingRegistration = 262144,
+	DataSource = 524288,
 	Picking = 1048576,
 }
 

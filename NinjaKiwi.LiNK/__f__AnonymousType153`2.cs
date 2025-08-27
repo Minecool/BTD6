@@ -4,29 +4,29 @@
 internal sealed class <>f__AnonymousType153
 {
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <index>j__TPar <index>i__Field; //Field offset: 0x0
+	private readonly <userid>j__TPar <userid>i__Field; //Field offset: 0x0
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private readonly <payload>j__TPar <payload>i__Field; //Field offset: 0x0
+	private readonly <token>j__TPar <token>i__Field; //Field offset: 0x0
 
-	public <index>j__TPar index
+	public <token>j__TPar token
 	{
 		 get { } //Length: 5
 	}
 
-	public <payload>j__TPar payload
+	public <userid>j__TPar userid
 	{
 		 get { } //Length: 5
 	}
 
 	[DebuggerHidden]
-	public <>f__AnonymousType153`2(<index>j__TPar index, <payload>j__TPar payload) { }
+	public <>f__AnonymousType153`2(<userid>j__TPar userid, <token>j__TPar token) { }
 
 	[DebuggerHidden]
 	public virtual bool Equals(object value) { }
 
-	public <index>j__TPar get_index() { }
+	public <token>j__TPar get_token() { }
 
-	public <payload>j__TPar get_payload() { }
+	public <userid>j__TPar get_userid() { }
 
 	[DebuggerHidden]
 	public virtual int GetHashCode() { }

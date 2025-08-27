@@ -193,10 +193,10 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	[FormerlySerializedAs("characterLimit")]
 	[SerializeField]
 	private int m_CharacterLimit; //Field offset: 0x134
-	[FormerlySerializedAs("m_EndEdit")]
-	[FormerlySerializedAs("m_OnEndEdit")]
 	[FormerlySerializedAs("onSubmit")]
 	[FormerlySerializedAs("m_OnSubmit")]
+	[FormerlySerializedAs("m_EndEdit")]
+	[FormerlySerializedAs("m_OnEndEdit")]
 	[SerializeField]
 	private SubmitEvent m_OnSubmit; //Field offset: 0x138
 	[SerializeField]
@@ -281,19 +281,19 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public int caretPosition
 	{
 		 get { } //Length: 40
-		 set { } //Length: 181
+		 set { } //Length: 179
 	}
 
 	protected int caretPositionInternal
 	{
 		 get { } //Length: 40
-		 set { } //Length: 70
+		 set { } //Length: 65
 	}
 
 	protected int caretSelectPositionInternal
 	{
 		 get { } //Length: 40
-		 set { } //Length: 70
+		 set { } //Length: 65
 	}
 
 	public int caretWidth
@@ -305,13 +305,13 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public int characterLimit
 	{
 		 get { } //Length: 7
-		 set { } //Length: 171
+		 set { } //Length: 166
 	}
 
 	public CharacterValidation characterValidation
 	{
 		 get { } //Length: 7
-		 set { } //Length: 104
+		 set { } //Length: 103
 	}
 
 	private static string clipboard
@@ -328,7 +328,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public ContentType contentType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 520
+		 set { } //Length: 404
 	}
 
 	public bool customCaretColor
@@ -360,7 +360,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public InputType inputType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 104
+		 set { } //Length: 103
 	}
 
 	public bool isFocused
@@ -371,7 +371,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public TouchScreenKeyboardType keyboardType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 104
+		 set { } //Length: 103
 	}
 
 	public override int layoutPriority
@@ -382,7 +382,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public LineType lineType
 	{
 		 get { } //Length: 7
-		 set { } //Length: 216
+		 set { } //Length: 215
 	}
 
 	protected Mesh mesh
@@ -402,7 +402,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 
 	public bool multiLine
 	{
-		 get { } //Length: 23
+		 get { } //Length: 21
 	}
 
 	public EndEditEvent onEndEdit
@@ -449,7 +449,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 
 	public override float preferredWidth
 	{
-		 get { } //Length: 474
+		 get { } //Length: 492
 	}
 
 	public bool readOnly
@@ -461,7 +461,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public int selectionAnchorPosition
 	{
 		 get { } //Length: 40
-		 set { } //Length: 107
+		 set { } //Length: 106
 	}
 
 	public Color selectionColor
@@ -473,7 +473,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public int selectionFocusPosition
 	{
 		 get { } //Length: 40
-		 set { } //Length: 107
+		 set { } //Length: 106
 	}
 
 	public override bool shouldActivateOnSelect
@@ -497,7 +497,7 @@ public class InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandle
 	public Text textComponent
 	{
 		 get { } //Length: 8
-		 set { } //Length: 666
+		 set { } //Length: 649
 	}
 
 	public TouchScreenKeyboard touchScreenKeyboard

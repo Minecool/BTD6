@@ -21,7 +21,7 @@ public class MagusPerfectusGraveyardStateManagerModel : TowerBehaviorModel
 
 	public RateSupportMutator RateMutator
 	{
-		 get { } //Length: 164
+		 get { } //Length: 284
 	}
 
 	private static MagusPerfectusGraveyardStateManagerModel() { }

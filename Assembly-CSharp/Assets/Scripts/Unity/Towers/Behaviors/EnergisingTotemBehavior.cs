@@ -10,7 +10,7 @@ public class EnergisingTotemBehavior : TowerBehavior
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 626
+		 get { } //Length: 628
 	}
 
 	public EnergisingTotemBehavior() { }

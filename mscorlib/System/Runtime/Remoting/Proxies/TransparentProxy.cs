@@ -8,7 +8,7 @@ internal class TransparentProxy
 
 	private bool IsContextBoundObject
 	{
-		private get { } //Length: 190
+		private get { } //Length: 177
 	}
 
 	private Context TargetContext

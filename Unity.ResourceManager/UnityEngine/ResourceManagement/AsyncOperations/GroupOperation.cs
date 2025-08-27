@@ -11,6 +11,7 @@ internal class GroupOperation : AsyncOperationBase<IList`1<AsyncOperationHandle>
 	}
 
 	private const int k_MaxDisplayedLocationLength = 45; //Field offset: 0x0
+	private const int k_MaxDebugNameLength = 2000; //Field offset: 0x0
 	private Action<AsyncOperationHandle> m_InternalOnComplete; //Field offset: 0x98
 	private int m_LoadedCount; //Field offset: 0xA0
 	private GroupOperationSettings m_Settings; //Field offset: 0xA4
@@ -21,12 +22,12 @@ internal class GroupOperation : AsyncOperationBase<IList`1<AsyncOperationHandle>
 
 	protected virtual string DebugName
 	{
-		 get { } //Length: 679
+		 get { } //Length: 729
 	}
 
 	protected virtual float Progress
 	{
-		 get { } //Length: 827
+		 get { } //Length: 798
 	}
 
 	private override IOperationCacheKey UnityEngine.ResourceManagement.AsyncOperations.ICachable.Key

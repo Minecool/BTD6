@@ -51,7 +51,7 @@ public class UniversalAdditionalLightData : MonoBehaviour, ISerializationCallbac
 
 	internal Light light
 	{
-		internal get { } //Length: 126
+		internal get { } //Length: 136
 	}
 
 	[Tooltip("Controls the offset of the cookie mask currently assigned to the light.")]
@@ -68,7 +68,7 @@ public class UniversalAdditionalLightData : MonoBehaviour, ISerializationCallbac
 		 set { } //Length: 5
 	}
 
-	[Obsolete("This is obsolete, please use renderingLayerMask instead.", False)]
+	[Obsolete("This is obsolete, please use renderingLayerMask instead.", True)]
 	public LightLayerEnum lightLayerMask
 	{
 		 get { } //Length: 4
@@ -81,7 +81,7 @@ public class UniversalAdditionalLightData : MonoBehaviour, ISerializationCallbac
 		 set { } //Length: 16
 	}
 
-	[Obsolete("This is obsolete, please use shadowRenderingLayerMask instead.", False)]
+	[Obsolete("This is obsolete, please use shadowRenderingLayerMask instead.", True)]
 	public LightLayerEnum shadowLayerMask
 	{
 		 get { } //Length: 4

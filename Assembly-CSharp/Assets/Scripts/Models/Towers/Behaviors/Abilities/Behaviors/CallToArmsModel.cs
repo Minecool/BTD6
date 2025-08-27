@@ -30,7 +30,7 @@ public class CallToArmsModel : AbilityBehaviorModel
 
 	public CallToArmsMutator Mutator
 	{
-		 get { } //Length: 293
+		 get { } //Length: 295
 	}
 
 	public CallToArmsModel(string name, float lifespan, float multiplier, bool useRadius, string buffLocsName, string buffIconName, CallToArmsMutator mutator = null) { }

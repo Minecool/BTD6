@@ -34,8 +34,8 @@ internal struct ActionEvent : IInputEventTypeInfo
 
 	public int interactionIndex
 	{
-		 get { } //Length: 22
-		 set { } //Length: 119
+		 get { } //Length: 20
+		 set { } //Length: 122
 	}
 
 	public InputActionPhase phase
@@ -58,12 +58,12 @@ internal struct ActionEvent : IInputEventTypeInfo
 
 	public static FourCC Type
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public Byte* valueData

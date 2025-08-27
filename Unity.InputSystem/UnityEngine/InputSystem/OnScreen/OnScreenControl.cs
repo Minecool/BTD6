@@ -17,7 +17,8 @@ public abstract class OnScreenControl : MonoBehaviour
 
 	}
 
-	private static InlinedArray<OnScreenDeviceInfo> s_OnScreenDevices; //Field offset: 0x0
+	private static int s_nbActiveInstances; //Field offset: 0x0
+	private static InlinedArray<OnScreenDeviceInfo> s_OnScreenDevices; //Field offset: 0x8
 	private InputControl m_Control; //Field offset: 0x20
 	private OnScreenControl m_NextControlOnDevice; //Field offset: 0x28
 	private InputEventPtr m_InputEventPtr; //Field offset: 0x30
@@ -39,6 +40,11 @@ public abstract class OnScreenControl : MonoBehaviour
 		 set { } //Length: 0
 	}
 
+	internal static bool HasAnyActive
+	{
+		internal get { } //Length: 57
+	}
+
 	protected OnScreenControl() { }
 
 	public InputControl get_control() { }
@@ -46,6 +52,8 @@ public abstract class OnScreenControl : MonoBehaviour
 	public string get_controlPath() { }
 
 	protected abstract string get_controlPathInternal() { }
+
+	internal static bool get_HasAnyActive() { }
 
 	internal string GetWarningMessage() { }
 

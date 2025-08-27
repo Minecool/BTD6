@@ -40,7 +40,7 @@ public abstract class BloonBehavior : EntityBehavior, IBloonBehavior, IEntityBeh
 	[CompilerGenerated]
 	public float get_VsBlockerRadius() { }
 
-	public override float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile) { }
+	public override float GetModifiedDamage(BloonProperties projectileImmuneProperties, BloonProperties originalProjectileImmuneProperties, float modifiedDamage, Projectile projectile, out bool preventFurtherModifications) { }
 
 	public virtual void Initialise(Entity target, Model modelToUse) { }
 

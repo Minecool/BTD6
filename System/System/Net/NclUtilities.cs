@@ -8,7 +8,7 @@ internal static class NclUtilities
 
 	internal static IPAddress[] LocalAddresses
 	{
-		internal get { } //Length: 1186
+		internal get { } //Length: 1188
 	}
 
 	private static object LocalAddressesLock

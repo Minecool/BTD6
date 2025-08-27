@@ -2,8 +2,8 @@ namespace Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers;
 
 public class InstaTowersMenu : MonoBehaviour
 {
-	private const int animationStateOpenLeft = 3; //Field offset: 0x0
 	private const int animationStateClosedLeft = 2; //Field offset: 0x0
+	private const int animationStateOpenLeft = 3; //Field offset: 0x0
 	private const int animationStateOpen = 1; //Field offset: 0x0
 	private const int animationStateClosed = 0; //Field offset: 0x0
 	public static InstaTowersMenu instaTowersInstance; //Field offset: 0x0
@@ -11,14 +11,15 @@ public class InstaTowersMenu : MonoBehaviour
 	public GameObject unusedButtons; //Field offset: 0x28
 	public GameObject powerButtonPrefab; //Field offset: 0x30
 	public ScrollRect swipe; //Field offset: 0x38
-	private readonly string visibleStateLabel; //Field offset: 0x40
-	private bool useLeftSide; //Field offset: 0x48
-	public Animator animator; //Field offset: 0x50
-	private TowerModel baseTowerModel; //Field offset: 0x58
-	private bool updateGridLayoutt; //Field offset: 0x60
-	private bool rebuildTowerSet; //Field offset: 0x61
-	private List<GameObject> powerUseButtons; //Field offset: 0x68
-	private bool showing; //Field offset: 0x70
+	public AudioClip buttonClickSound; //Field offset: 0x40
+	private readonly string visibleStateLabel; //Field offset: 0x48
+	private bool useLeftSide; //Field offset: 0x50
+	public Animator animator; //Field offset: 0x58
+	private TowerModel baseTowerModel; //Field offset: 0x60
+	private int updateGridLayoutFrames; //Field offset: 0x68
+	private bool rebuildTowerSet; //Field offset: 0x6C
+	private List<GameObject> powerUseButtons; //Field offset: 0x70
+	private bool showing; //Field offset: 0x78
 
 	public InstaTowersMenu() { }
 

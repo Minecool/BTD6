@@ -234,17 +234,17 @@ public class DefaultInputActions : IInputActionCollection2, IInputActionCollecti
 
 	public InputControlScheme GamepadScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public InputControlScheme JoystickScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public InputControlScheme KeyboardMouseScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public PlayerActions Player
@@ -254,7 +254,7 @@ public class DefaultInputActions : IInputActionCollection2, IInputActionCollecti
 
 	public InputControlScheme TouchScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public UIActions UI
@@ -264,7 +264,7 @@ public class DefaultInputActions : IInputActionCollection2, IInputActionCollecti
 
 	public InputControlScheme XRScheme
 	{
-		 get { } //Length: 200
+		 get { } //Length: 192
 	}
 
 	public DefaultInputActions() { }

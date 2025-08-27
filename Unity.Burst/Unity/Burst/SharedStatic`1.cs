@@ -10,9 +10,18 @@ public struct SharedStatic
 		 get { } //Length: 36
 	}
 
+	public Void* UnsafeDataPointer
+	{
+		 get { } //Length: 4
+	}
+
 	private SharedStatic`1(Void* buffer) { }
 
 	public T get_Data() { }
+
+	public Void* get_UnsafeDataPointer() { }
+
+	public static SharedStatic<T> GetOrCreate(uint alignment = 0) { }
 
 	public static SharedStatic<T> GetOrCreateUnsafe(uint alignment, long hashCode, long subHashCode) { }
 

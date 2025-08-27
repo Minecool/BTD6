@@ -49,7 +49,7 @@ internal sealed class HttpConnection
 
 	public IPEndPoint LocalEndPoint
 	{
-		 get { } //Length: 233
+		 get { } //Length: 222
 	}
 
 	public ListenerPrefix Prefix

@@ -7,6 +7,10 @@ public class XRPass
 	[CompilerGenerated]
 	private bool <copyDepth>k__BackingField; //Field offset: 0x20
 	[CompilerGenerated]
+	private bool <hasMotionVectorPass>k__BackingField; //Field offset: 0x21
+	[CompilerGenerated]
+	private bool <spaceWarpRightHandedNDC>k__BackingField; //Field offset: 0x22
+	[CompilerGenerated]
 	private int <multipassId>k__BackingField; //Field offset: 0x24
 	[CompilerGenerated]
 	private int <cullingPassId>k__BackingField; //Field offset: 0x28
@@ -15,11 +19,15 @@ public class XRPass
 	[CompilerGenerated]
 	private RenderTextureDescriptor <renderTargetDesc>k__BackingField; //Field offset: 0x58
 	[CompilerGenerated]
-	private ScriptableCullingParameters <cullingParams>k__BackingField; //Field offset: 0x90
+	private RenderTargetIdentifier <motionVectorRenderTarget>k__BackingField; //Field offset: 0x90
 	[CompilerGenerated]
-	private IntPtr <foveatedRenderingInfo>k__BackingField; //Field offset: 0x6C0
+	private RenderTextureDescriptor <motionVectorRenderTargetDesc>k__BackingField; //Field offset: 0xB8
 	[CompilerGenerated]
-	private float <occlusionMeshScale>k__BackingField; //Field offset: 0x6C8
+	private ScriptableCullingParameters <cullingParams>k__BackingField; //Field offset: 0xF0
+	[CompilerGenerated]
+	private IntPtr <foveatedRenderingInfo>k__BackingField; //Field offset: 0x728
+	[CompilerGenerated]
+	private float <occlusionMeshScale>k__BackingField; //Field offset: 0x730
 
 	public private bool copyDepth
 	{
@@ -58,6 +66,14 @@ public class XRPass
 		private set { } //Length: 8
 	}
 
+	public private bool hasMotionVectorPass
+	{
+		[CompilerGenerated]
+		 get { } //Length: 5
+		[CompilerGenerated]
+		private set { } //Length: 4
+	}
+
 	public bool hasValidOcclusionMesh
 	{
 		 get { } //Length: 205
@@ -73,9 +89,35 @@ public class XRPass
 		 get { } //Length: 623
 	}
 
+	public bool isFirstCameraPass
+	{
+		 get { } //Length: 8
+	}
+
 	public bool isHDRDisplayOutputActive
 	{
 		 get { } //Length: 161
+	}
+
+	public bool isLastCameraPass
+	{
+		 get { } //Length: 178
+	}
+
+	public private RenderTargetIdentifier motionVectorRenderTarget
+	{
+		[CompilerGenerated]
+		 get { } //Length: 38
+		[CompilerGenerated]
+		private set { } //Length: 35
+	}
+
+	public private RenderTextureDescriptor motionVectorRenderTargetDesc
+	{
+		[CompilerGenerated]
+		 get { } //Length: 45
+		[CompilerGenerated]
+		private set { } //Length: 42
 	}
 
 	public private int multipassId
@@ -115,9 +157,17 @@ public class XRPass
 		 get { } //Length: 64
 	}
 
+	public private bool spaceWarpRightHandedNDC
+	{
+		[CompilerGenerated]
+		 get { } //Length: 5
+		[CompilerGenerated]
+		private set { } //Length: 4
+	}
+
 	public bool supportsFoveatedRendering
 	{
-		 get { } //Length: 215
+		 get { } //Length: 200
 	}
 
 	public int viewCount
@@ -151,13 +201,26 @@ public class XRPass
 	[CompilerGenerated]
 	public IntPtr get_foveatedRenderingInfo() { }
 
+	[CompilerGenerated]
+	public bool get_hasMotionVectorPass() { }
+
 	public bool get_hasValidOcclusionMesh() { }
 
 	public ColorGamut get_hdrDisplayOutputColorGamut() { }
 
 	public HDRDisplayInformation get_hdrDisplayOutputInformation() { }
 
+	public bool get_isFirstCameraPass() { }
+
 	public bool get_isHDRDisplayOutputActive() { }
+
+	public bool get_isLastCameraPass() { }
+
+	[CompilerGenerated]
+	public RenderTargetIdentifier get_motionVectorRenderTarget() { }
+
+	[CompilerGenerated]
+	public RenderTextureDescriptor get_motionVectorRenderTargetDesc() { }
 
 	[CompilerGenerated]
 	public int get_multipassId() { }
@@ -173,11 +236,18 @@ public class XRPass
 
 	public bool get_singlePassEnabled() { }
 
+	[CompilerGenerated]
+	public bool get_spaceWarpRightHandedNDC() { }
+
 	public bool get_supportsFoveatedRendering() { }
 
 	public int get_viewCount() { }
 
 	public Mesh GetOcclusionMesh(int viewIndex = 0) { }
+
+	public Matrix4x4 GetPrevViewMatrix(int viewIndex = 0) { }
+
+	public bool GetPrevViewValid(int viewIndex = 0) { }
 
 	public Matrix4x4 GetProjMatrix(int viewIndex = 0) { }
 
@@ -191,7 +261,11 @@ public class XRPass
 
 	public override void Release() { }
 
+	public void RenderDebugXRViewsFrustum() { }
+
 	public void RenderOcclusionMesh(CommandBuffer cmd, bool renderIntoTexture = false) { }
+
+	public void RenderOcclusionMesh(RasterCommandBuffer cmd, bool renderIntoTexture = false) { }
 
 	[CompilerGenerated]
 	private void set_copyDepth(bool value) { }
@@ -206,6 +280,15 @@ public class XRPass
 	private void set_foveatedRenderingInfo(IntPtr value) { }
 
 	[CompilerGenerated]
+	private void set_hasMotionVectorPass(bool value) { }
+
+	[CompilerGenerated]
+	private void set_motionVectorRenderTarget(RenderTargetIdentifier value) { }
+
+	[CompilerGenerated]
+	private void set_motionVectorRenderTargetDesc(RenderTextureDescriptor value) { }
+
+	[CompilerGenerated]
 	private void set_multipassId(int value) { }
 
 	[CompilerGenerated]
@@ -217,9 +300,16 @@ public class XRPass
 	[CompilerGenerated]
 	private void set_renderTargetDesc(RenderTextureDescriptor value) { }
 
+	[CompilerGenerated]
+	private void set_spaceWarpRightHandedNDC(bool value) { }
+
+	public void StartSinglePass(IRasterCommandBuffer cmd) { }
+
 	public void StartSinglePass(CommandBuffer cmd) { }
 
 	public void StopSinglePass(CommandBuffer cmd) { }
+
+	public void StopSinglePass(BaseCommandBuffer cmd) { }
 
 	internal void UpdateCombinedOcclusionMesh() { }
 

@@ -10,17 +10,17 @@ public abstract class FileSystemInfo : MarshalByRefObject, ISerializable
 
 	public FileAttributes Attributes
 	{
-		 get { } //Length: 109
+		 get { } //Length: 106
 	}
 
 	internal DateTimeOffset CreationTimeCore
 	{
-		internal get { } //Length: 141
+		internal get { } //Length: 138
 	}
 
 	public DateTime CreationTimeUtc
 	{
-		 get { } //Length: 194
+		 get { } //Length: 186
 	}
 
 	public override bool Exists
@@ -30,12 +30,12 @@ public abstract class FileSystemInfo : MarshalByRefObject, ISerializable
 
 	internal bool ExistsCore
 	{
-		internal get { } //Length: 133
+		internal get { } //Length: 122
 	}
 
 	public string Extension
 	{
-		 get { } //Length: 282
+		 get { } //Length: 279
 	}
 
 	public override string FullName
@@ -45,22 +45,22 @@ public abstract class FileSystemInfo : MarshalByRefObject, ISerializable
 
 	public DateTime LastWriteTime
 	{
-		 get { } //Length: 260
+		 get { } //Length: 252
 	}
 
 	internal DateTimeOffset LastWriteTimeCore
 	{
-		internal get { } //Length: 141
+		internal get { } //Length: 138
 	}
 
 	public DateTime LastWriteTimeUtc
 	{
-		 get { } //Length: 194
+		 get { } //Length: 186
 	}
 
 	internal long LengthCore
 	{
-		internal get { } //Length: 119
+		internal get { } //Length: 116
 	}
 
 	public override string Name

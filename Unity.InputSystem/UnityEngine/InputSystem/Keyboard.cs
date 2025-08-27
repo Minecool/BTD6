@@ -2,9 +2,10 @@ namespace UnityEngine.InputSystem;
 
 [DefaultMember("Item")]
 [InputControlLayout(stateType = typeof(KeyboardState), isGenericTypeOfDevice = True)]
-public class Keyboard : InputDevice, ITextInputReceiver
+public class Keyboard : InputDevice, ITextInputReceiver, IEventPreProcessor
 {
 	public const int KeyCount = 110; //Field offset: 0x0
+	internal const int ExtendedKeyCount = 123; //Field offset: 0x0
 	[CompilerGenerated]
 	private static Keyboard <current>k__BackingField; //Field offset: 0x0
 	[CompilerGenerated]
@@ -36,7 +37,7 @@ public class Keyboard : InputDevice, ITextInputReceiver
 
 	public KeyControl aKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public ReadOnlyArray<KeyControl> allKeys
@@ -62,42 +63,42 @@ public class Keyboard : InputDevice, ITextInputReceiver
 
 	public KeyControl backquoteKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl backslashKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl backspaceKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl bKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl capsLockKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl cKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl commaKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl contextMenuKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public ButtonControl ctrlKey
@@ -118,177 +119,237 @@ public class Keyboard : InputDevice, ITextInputReceiver
 
 	public KeyControl deleteKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit0Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit1Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit2Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit3Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit4Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit5Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit6Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit7Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit8Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl digit9Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl dKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl downArrowKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl eKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl endKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl enterKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl equalsKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl escapeKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f10Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f11Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f12Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
+	}
+
+	public KeyControl f13Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f14Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f15Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f16Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f17Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f18Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f19Key
+	{
+		 get { } //Length: 12
 	}
 
 	public KeyControl f1Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
+	}
+
+	public KeyControl f20Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f21Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f22Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f23Key
+	{
+		 get { } //Length: 12
+	}
+
+	public KeyControl f24Key
+	{
+		 get { } //Length: 12
 	}
 
 	public KeyControl f2Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f3Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f4Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f5Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f6Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f7Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f8Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl f9Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl fKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl gKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl hKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl homeKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl iKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public ButtonControl imeSelected
@@ -301,17 +362,17 @@ public class Keyboard : InputDevice, ITextInputReceiver
 
 	public KeyControl insertKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl Item
 	{
-		 get { } //Length: 148
+		 get { } //Length: 145
 	}
 
 	public KeyControl jKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public string keyboardLayout
@@ -328,292 +389,292 @@ public class Keyboard : InputDevice, ITextInputReceiver
 
 	public KeyControl kKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftAltKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftAppleKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftArrowKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftBracketKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftCommandKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftCtrlKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftMetaKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftShiftKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl leftWindowsKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl lKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl minusKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl mKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl nKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numLockKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad0Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad1Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad2Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad3Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad4Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad5Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad6Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad7Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad8Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpad9Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpadDivideKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpadEnterKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpadEqualsKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpadMinusKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpadMultiplyKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpadPeriodKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl numpadPlusKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl oem1Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl oem2Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl oem3Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl oem4Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl oem5Key
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl oKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl pageDownKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl pageUpKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl pauseKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl periodKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl pKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl printScreenKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl qKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl quoteKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightAltKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightAppleKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightArrowKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightBracketKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightCommandKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightCtrlKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightMetaKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightShiftKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rightWindowsKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl rKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl scrollLockKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl semicolonKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public ButtonControl shiftKey
@@ -621,67 +682,67 @@ public class Keyboard : InputDevice, ITextInputReceiver
 		[CompilerGenerated]
 		 get { } //Length: 8
 		[CompilerGenerated]
-		 set { } //Length: 95
+		 set { } //Length: 8
 	}
 
 	public KeyControl sKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl slashKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl spaceKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl tabKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl tKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl uKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl upArrowKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl vKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl wKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl xKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl yKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public KeyControl zKey
 	{
-		 get { } //Length: 13
+		 get { } //Length: 12
 	}
 
 	public Keyboard() { }
@@ -768,7 +829,31 @@ public class Keyboard : InputDevice, ITextInputReceiver
 
 	public KeyControl get_f12Key() { }
 
+	public KeyControl get_f13Key() { }
+
+	public KeyControl get_f14Key() { }
+
+	public KeyControl get_f15Key() { }
+
+	public KeyControl get_f16Key() { }
+
+	public KeyControl get_f17Key() { }
+
+	public KeyControl get_f18Key() { }
+
+	public KeyControl get_f19Key() { }
+
 	public KeyControl get_f1Key() { }
+
+	public KeyControl get_f20Key() { }
+
+	public KeyControl get_f21Key() { }
+
+	public KeyControl get_f22Key() { }
+
+	public KeyControl get_f23Key() { }
+
+	public KeyControl get_f24Key() { }
 
 	public KeyControl get_f2Key() { }
 
@@ -991,6 +1076,8 @@ public class Keyboard : InputDevice, ITextInputReceiver
 	public void SetIMECursorPosition(Vector2 position) { }
 
 	public void SetIMEEnabled(bool enabled) { }
+
+	private override bool UnityEngine.InputSystem.LowLevel.IEventPreProcessor.PreProcessEvent(InputEventPtr currentEventPtr) { }
 
 }
 

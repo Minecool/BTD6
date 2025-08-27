@@ -14,7 +14,7 @@ internal sealed class AutoIncrementBigInteger : AutoIncrementValue
 
 	internal virtual Type DataType
 	{
-		internal get { } //Length: 89
+		internal get { } //Length: 77
 	}
 
 	internal virtual long Seed

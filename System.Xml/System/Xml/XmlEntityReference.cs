@@ -12,7 +12,7 @@ public class XmlEntityReference : XmlLinkedNode
 
 	internal string ChildBaseURI
 	{
-		internal get { } //Length: 572
+		internal get { } //Length: 532
 	}
 
 	internal virtual bool IsContainer

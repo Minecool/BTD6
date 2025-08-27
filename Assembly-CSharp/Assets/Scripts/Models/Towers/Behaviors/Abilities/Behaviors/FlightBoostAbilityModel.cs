@@ -24,7 +24,7 @@ public class FlightBoostAbilityModel : AbilityBehaviorModel
 
 	public AirUnitMutator Mutator
 	{
-		 get { } //Length: 303
+		 get { } //Length: 307
 	}
 
 	public FlightBoostAbilityModel(string name, float lifespan, float moveSpeedMultiplier, EffectModel effectDuringWorkshopModel, EffectModel effectDuringHeroModel, int animationStateOnEnd) { }

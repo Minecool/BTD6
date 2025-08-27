@@ -1,6 +1,7 @@
 namespace UnityEngine;
 
 [IsReadOnly]
+[UsedByNativeCode]
 public struct ContactPairHeader
 {
 	internal readonly int m_BodyID; //Field offset: 0x0
@@ -10,26 +11,26 @@ public struct ContactPairHeader
 	internal readonly CollisionPairHeaderFlags m_Flags; //Field offset: 0x14
 	internal readonly Vector3 m_RelativeVelocity; //Field offset: 0x18
 
-	public Component Body
+	public Component body
 	{
-		 get { } //Length: 101
+		 get { } //Length: 74
 	}
 
-	internal bool HasRemovedBody
+	internal bool hasRemovedBody
 	{
 		internal get { } //Length: 20
 	}
 
-	public Component OtherBody
+	public Component otherBody
 	{
-		 get { } //Length: 102
+		 get { } //Length: 75
 	}
 
-	public Component get_Body() { }
+	public Component get_body() { }
 
-	internal bool get_HasRemovedBody() { }
+	internal bool get_hasRemovedBody() { }
 
-	public Component get_OtherBody() { }
+	public Component get_otherBody() { }
 
 	public ContactPair GetContactPair(int index) { }
 

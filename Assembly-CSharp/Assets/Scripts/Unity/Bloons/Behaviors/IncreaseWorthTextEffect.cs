@@ -12,7 +12,7 @@ public class IncreaseWorthTextEffect : BloonBehavior
 
 	public virtual BloonBehaviorModel Def
 	{
-		 get { } //Length: 1050
+		 get { } //Length: 1090
 	}
 
 	public IncreaseWorthTextEffect() { }

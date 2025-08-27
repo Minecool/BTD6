@@ -61,7 +61,8 @@ public class TowerModel : EntityModel, IPlaceableEntity
 	private string beastHandlerLeashMutationId; //Field offset: 0x158
 	public bool loadedFromSave; //Field offset: 0x160
 	public bool useAirUnitHeight; //Field offset: 0x161
-	private TowerSize towerSize; //Field offset: 0x164
+	private PowerProTowerModel _powerProTowerModel; //Field offset: 0x168
+	private TowerSize towerSize; //Field offset: 0x170
 
 	public string BeastHandlerLeashMutationId
 	{
@@ -80,17 +81,22 @@ public class TowerModel : EntityModel, IPlaceableEntity
 
 	public bool IsBeastHandlerPet
 	{
-		 get { } //Length: 175
+		 get { } //Length: 184
 	}
 
 	public bool IsExclusivelyWaterBased
 	{
-		 get { } //Length: 150
+		 get { } //Length: 156
 	}
 
 	public bool isGeraldoItem
 	{
 		 get { } //Length: 12
+	}
+
+	public bool isPowerProTower
+	{
+		 get { } //Length: 130
 	}
 
 	public bool isPowerTower
@@ -103,9 +109,14 @@ public class TowerModel : EntityModel, IPlaceableEntity
 		 get { } //Length: 8
 	}
 
+	public PowerProTowerModel powerProTowerModel
+	{
+		 get { } //Length: 100
+	}
+
 	public bool SelectParentOnSelected
 	{
-		 get { } //Length: 175
+		 get { } //Length: 184
 	}
 
 	public TargetType[] TargetTypes
@@ -118,6 +129,8 @@ public class TowerModel : EntityModel, IPlaceableEntity
 	public bool CheckSet(TowerSet set, bool inverseSet) { }
 
 	public bool CheckTiers(Int32[] tiers, bool mustBeEqual, bool inverseTiers) { }
+
+	public bool CheckTiersAreEqual(int pathOneTier, int pathTwoTier, int pathThreeTier) { }
 
 	public virtual Model Clone() { }
 
@@ -139,9 +152,13 @@ public class TowerModel : EntityModel, IPlaceableEntity
 
 	public bool get_isGeraldoItem() { }
 
+	public bool get_isPowerProTower() { }
+
 	public bool get_isPowerTower() { }
 
 	public virtual bool get_IsSubEntity() { }
+
+	public PowerProTowerModel get_powerProTowerModel() { }
 
 	public bool get_SelectParentOnSelected() { }
 

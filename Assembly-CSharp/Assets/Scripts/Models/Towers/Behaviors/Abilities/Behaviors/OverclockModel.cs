@@ -33,7 +33,7 @@ public class OverclockModel : AbilityBehaviorModel
 
 	public OverclockMutator Mutator
 	{
-		 get { } //Length: 297
+		 get { } //Length: 301
 	}
 
 	public OverclockModel(string name, int lifespanFrames, float rateModifier, float villageRangeModifier, string mutatorId, string mutatorSaveId, int maxStacks, PrefabReference selectionObjectPath, PrefabReference buffDisplayPath, EffectModel initialEffect, Single[] tierBasedDurationMultiplier, string buffLocsName, string buffIconName, bool isParagonMode = false, float paragonZoneRange = 0, int paragonZoneLifespanFrames = 0) { }

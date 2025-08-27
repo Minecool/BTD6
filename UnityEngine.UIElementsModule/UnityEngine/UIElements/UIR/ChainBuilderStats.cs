@@ -25,7 +25,6 @@ internal struct ChainBuilderStats
 	public uint updatedMeshAllocations; //Field offset: 0x50
 	public uint newMeshAllocations; //Field offset: 0x54
 	public uint groupTransformElementsChanged; //Field offset: 0x58
-	public uint immedateRenderersActive; //Field offset: 0x5C
 
 }
 

@@ -19,7 +19,7 @@ public class QuickEntryModel : BloonBehaviorModel
 
 	public BloonSpeedMutator Mutator
 	{
-		 get { } //Length: 233
+		 get { } //Length: 237
 	}
 
 	public QuickEntryModel() { }

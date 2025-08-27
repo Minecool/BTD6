@@ -1,7 +1,7 @@
 namespace UnityEngine.InputSystem.OnScreen;
 
 [AddComponentMenu("Input/On-Screen Stick")]
-[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/OnScreen.html#on-screen-sticks")]
+[HelpURL("https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/OnScreen.html#on-screen-sticks")]
 public class OnScreenStick : OnScreenControl, IPointerDownHandler, IEventSystemHandler, IPointerUpHandler, IDragHandler
 {
 	internal enum Behaviour
@@ -39,6 +39,8 @@ public class OnScreenStick : OnScreenControl, IPointerDownHandler, IEventSystemH
 	private Vector2 m_PointerDownPos; //Field offset: 0x6C
 	private List<RaycastResult> m_RaycastResults; //Field offset: 0x78
 	private PointerEventData m_PointerEventData; //Field offset: 0x80
+	private TouchControl m_TouchControl; //Field offset: 0x88
+	private bool m_IsIsolationActive; //Field offset: 0x90
 
 	public Behaviour behaviour
 	{
@@ -55,7 +57,7 @@ public class OnScreenStick : OnScreenControl, IPointerDownHandler, IEventSystemH
 	public float dynamicOriginRange
 	{
 		 get { } //Length: 6
-		 set { } //Length: 270
+		 set { } //Length: 273
 	}
 
 	public float movementRange
@@ -97,6 +99,8 @@ public class OnScreenStick : OnScreenControl, IPointerDownHandler, IEventSystemH
 	public override void OnDrag(PointerEventData eventData) { }
 
 	private void OnDrawGizmosSelected() { }
+
+	private void OnPointerChanged(CallbackContext ctx) { }
 
 	private void OnPointerDown(CallbackContext ctx) { }
 

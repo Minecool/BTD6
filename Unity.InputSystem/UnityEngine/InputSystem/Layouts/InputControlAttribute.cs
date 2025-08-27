@@ -4,51 +4,51 @@ namespace UnityEngine.InputSystem.Layouts;
 public sealed class InputControlAttribute : PropertyAttribute
 {
 	[CompilerGenerated]
-	private string <layout>k__BackingField; //Field offset: 0x10
+	private string <layout>k__BackingField; //Field offset: 0x18
 	[CompilerGenerated]
-	private string <variants>k__BackingField; //Field offset: 0x18
+	private string <variants>k__BackingField; //Field offset: 0x20
 	[CompilerGenerated]
-	private string <name>k__BackingField; //Field offset: 0x20
+	private string <name>k__BackingField; //Field offset: 0x28
 	[CompilerGenerated]
-	private string <format>k__BackingField; //Field offset: 0x28
+	private string <format>k__BackingField; //Field offset: 0x30
 	[CompilerGenerated]
-	private string <usage>k__BackingField; //Field offset: 0x30
+	private string <usage>k__BackingField; //Field offset: 0x38
 	[CompilerGenerated]
-	private String[] <usages>k__BackingField; //Field offset: 0x38
+	private String[] <usages>k__BackingField; //Field offset: 0x40
 	[CompilerGenerated]
-	private string <parameters>k__BackingField; //Field offset: 0x40
+	private string <parameters>k__BackingField; //Field offset: 0x48
 	[CompilerGenerated]
-	private string <processors>k__BackingField; //Field offset: 0x48
+	private string <processors>k__BackingField; //Field offset: 0x50
 	[CompilerGenerated]
-	private string <alias>k__BackingField; //Field offset: 0x50
+	private string <alias>k__BackingField; //Field offset: 0x58
 	[CompilerGenerated]
-	private String[] <aliases>k__BackingField; //Field offset: 0x58
+	private String[] <aliases>k__BackingField; //Field offset: 0x60
 	[CompilerGenerated]
-	private string <useStateFrom>k__BackingField; //Field offset: 0x60
+	private string <useStateFrom>k__BackingField; //Field offset: 0x68
 	[CompilerGenerated]
-	private uint <bit>k__BackingField; //Field offset: 0x68
+	private uint <bit>k__BackingField; //Field offset: 0x70
 	[CompilerGenerated]
-	private uint <offset>k__BackingField; //Field offset: 0x6C
+	private uint <offset>k__BackingField; //Field offset: 0x74
 	[CompilerGenerated]
-	private uint <sizeInBits>k__BackingField; //Field offset: 0x70
+	private uint <sizeInBits>k__BackingField; //Field offset: 0x78
 	[CompilerGenerated]
-	private int <arraySize>k__BackingField; //Field offset: 0x74
+	private int <arraySize>k__BackingField; //Field offset: 0x7C
 	[CompilerGenerated]
-	private string <displayName>k__BackingField; //Field offset: 0x78
+	private string <displayName>k__BackingField; //Field offset: 0x80
 	[CompilerGenerated]
-	private string <shortDisplayName>k__BackingField; //Field offset: 0x80
+	private string <shortDisplayName>k__BackingField; //Field offset: 0x88
 	[CompilerGenerated]
-	private bool <noisy>k__BackingField; //Field offset: 0x88
+	private bool <noisy>k__BackingField; //Field offset: 0x90
 	[CompilerGenerated]
-	private bool <synthetic>k__BackingField; //Field offset: 0x89
+	private bool <synthetic>k__BackingField; //Field offset: 0x91
 	[CompilerGenerated]
-	private bool <dontReset>k__BackingField; //Field offset: 0x8A
+	private bool <dontReset>k__BackingField; //Field offset: 0x92
 	[CompilerGenerated]
-	private object <defaultState>k__BackingField; //Field offset: 0x90
+	private object <defaultState>k__BackingField; //Field offset: 0x98
 	[CompilerGenerated]
-	private object <minValue>k__BackingField; //Field offset: 0x98
+	private object <minValue>k__BackingField; //Field offset: 0xA0
 	[CompilerGenerated]
-	private object <maxValue>k__BackingField; //Field offset: 0xA0
+	private object <maxValue>k__BackingField; //Field offset: 0xA8
 
 	public string alias
 	{
@@ -93,9 +93,9 @@ public sealed class InputControlAttribute : PropertyAttribute
 	public string displayName
 	{
 		[CompilerGenerated]
-		 get { } //Length: 70
+		 get { } //Length: 8
 		[CompilerGenerated]
-		 set { } //Length: 5
+		 set { } //Length: 8
 	}
 
 	public bool dontReset

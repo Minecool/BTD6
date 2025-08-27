@@ -39,12 +39,12 @@ public class PhayzeBehaviorModel : BloonBehaviorModel
 
 	public RemoveCamoDetectionTowerMutator CamoDetectionTowerMutator
 	{
-		 get { } //Length: 260
+		 get { } //Length: 264
 	}
 
 	public AddCamoMutator CamoMutator
 	{
-		 get { } //Length: 228
+		 get { } //Length: 232
 	}
 
 	public SpeedPercentMutator SpeedMutator

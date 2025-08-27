@@ -18,7 +18,7 @@ public class TrackTargetOrOrbitTower : ProjectileBehavior
 
 	public virtual ProjectileBehaviorModel Def
 	{
-		 get { } //Length: 410
+		 get { } //Length: 408
 	}
 
 	public TrackTargetOrOrbitTower() { }

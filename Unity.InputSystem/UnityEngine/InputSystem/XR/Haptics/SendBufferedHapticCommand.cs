@@ -20,12 +20,12 @@ public struct SendBufferedHapticCommand : IInputDeviceCommandInfo
 
 	private static FourCC Type
 	{
-		private get { } //Length: 58
+		private get { } //Length: 53
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 58
+		 get { } //Length: 53
 	}
 
 	public static SendBufferedHapticCommand Create(Byte[] rumbleBuffer) { }

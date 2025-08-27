@@ -17,7 +17,7 @@ public sealed class PKCS8
 
 		public Byte[] EncryptedData
 		{
-			 get { } //Length: 121
+			 get { } //Length: 119
 			 set { } //Length: 141
 		}
 
@@ -71,7 +71,7 @@ public sealed class PKCS8
 
 		public Byte[] PrivateKey
 		{
-			 get { } //Length: 123
+			 get { } //Length: 121
 			 set { } //Length: 237
 		}
 

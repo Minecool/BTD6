@@ -10,13 +10,13 @@ public class XmlRootAttribute : Attribute
 
 	public string DataType
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 		 set { } //Length: 5
 	}
 
 	public string ElementName
 	{
-		 get { } //Length: 77
+		 get { } //Length: 27
 		 set { } //Length: 5
 	}
 

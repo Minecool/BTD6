@@ -45,7 +45,7 @@ public struct TouchHistory : IReadOnlyList<Touch>, IEnumerable<Touch>, IEnumerab
 
 	public override Touch Item
 	{
-		 get { } //Length: 324
+		 get { } //Length: 308
 	}
 
 	internal TouchHistory(Finger finger, InputStateHistory<TouchState> history, int startIndex = -1, int count = -1) { }

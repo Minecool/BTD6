@@ -8,8 +8,8 @@ internal sealed class SizedArray : ICloneable
 
 	internal object Item
 	{
-		internal get { } //Length: 104
-		internal set { } //Length: 287
+		internal get { } //Length: 102
+		internal set { } //Length: 271
 	}
 
 	internal SizedArray() { }

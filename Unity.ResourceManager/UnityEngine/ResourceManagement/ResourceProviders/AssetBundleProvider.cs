@@ -55,6 +55,8 @@ public class AssetBundleProvider : ResourceProviderBase
 
 	internal static void set_UnloadingBundles(Dictionary<String, AssetBundleUnloadOperation> value) { }
 
+	public override bool ShouldRetryDownloadError(UnityWebRequestResult uwrResult) { }
+
 	internal static void WaitForAllUnloadingBundlesToComplete() { }
 
 }

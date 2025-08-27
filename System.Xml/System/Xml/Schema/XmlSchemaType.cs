@@ -93,13 +93,13 @@ public class XmlSchemaType : XmlSchemaAnnotated
 	[XmlIgnore]
 	public XmlTypeCode TypeCode
 	{
-		 get { } //Length: 181
+		 get { } //Length: 179
 	}
 
 	[XmlIgnore]
 	internal XmlValueConverter ValueConverter
 	{
-		internal get { } //Length: 120
+		internal get { } //Length: 118
 	}
 
 	public XmlSchemaType() { }

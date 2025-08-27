@@ -17,7 +17,7 @@ public class PropSpawningChallenge : SimulationBehavior
 
 	public virtual SimulationBehaviorModel Def
 	{
-		 get { } //Length: 1055
+		 get { } //Length: 1075
 	}
 
 	public PropSpawningChallenge() { }

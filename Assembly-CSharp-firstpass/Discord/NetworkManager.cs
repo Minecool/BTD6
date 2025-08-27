@@ -213,7 +213,7 @@ public class NetworkManager
 
 	private FFIMethods Methods
 	{
-		private get { } //Length: 284
+		private get { } //Length: 272
 	}
 
 	internal NetworkManager(IntPtr ptr, IntPtr eventsPtr, ref FFIEvents events) { }

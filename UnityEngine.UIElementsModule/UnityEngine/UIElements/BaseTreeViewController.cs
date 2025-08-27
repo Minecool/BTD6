@@ -3,28 +3,190 @@ namespace UnityEngine.UIElements;
 public abstract class BaseTreeViewController : CollectionViewController
 {
 	[CompilerGenerated]
-	private sealed class <>c__DisplayClass20_0
+	private sealed class <GetAllItemIds>d__23 : IEnumerable<Int32>, IEnumerable, IEnumerator<Int32>, IEnumerator, IDisposable
 	{
-		public BaseTreeViewController <>4__this; //Field offset: 0x10
-		public ReusableTreeViewItem treeItem; //Field offset: 0x18
+		private int <>1__state; //Field offset: 0x10
+		private int <>2__current; //Field offset: 0x14
+		private int <>l__initialThreadId; //Field offset: 0x18
+		private IEnumerable<Int32> rootIds; //Field offset: 0x20
+		public IEnumerable<Int32> <>3__rootIds; //Field offset: 0x28
+		public BaseTreeViewController <>4__this; //Field offset: 0x30
+		private Enumerator <>s__1; //Field offset: 0x38
+		private HierarchyFlattenedNode <flattenedNode>5__2; //Field offset: 0x58
+		private IEnumerator<Int32> <>s__3; //Field offset: 0x78
+		private int <id>5__4; //Field offset: 0x80
+		private HierarchyFlattenedNodeChildren <flattenedNodeChildren>5__5; //Field offset: 0x88
+		private Enumerator <>s__6; //Field offset: 0xA0
+		private HierarchyNode <node>5__7; //Field offset: 0xD8
 
-		public <>c__DisplayClass20_0() { }
+		private override int System.Collections.Generic.IEnumerator<System.Int32>.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 4
+		}
 
-		internal void <PostInitRegistration>b__0() { }
+		private override object System.Collections.IEnumerator.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 1043
+		}
+
+		[DebuggerHidden]
+		public <GetAllItemIds>d__23(int <>1__state) { }
+
+		private void <>m__Finally1() { }
+
+		private override bool MoveNext() { }
+
+		[DebuggerHidden]
+		private override IEnumerator<Int32> System.Collections.Generic.IEnumerable<System.Int32>.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override int System.Collections.Generic.IEnumerator<System.Int32>.get_Current() { }
+
+		[DebuggerHidden]
+		private override IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override object System.Collections.IEnumerator.get_Current() { }
+
+		[DebuggerHidden]
+		private override void System.Collections.IEnumerator.Reset() { }
+
+		[DebuggerHidden]
+		private override void System.IDisposable.Dispose() { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <GetChildrenIds>d__25 : IEnumerable<Int32>, IEnumerable, IEnumerator<Int32>, IEnumerator, IDisposable
+	{
+		private int <>1__state; //Field offset: 0x10
+		private int <>2__current; //Field offset: 0x14
+		private int <>l__initialThreadId; //Field offset: 0x18
+		private int id; //Field offset: 0x1C
+		public int <>3__id; //Field offset: 0x20
+		public BaseTreeViewController <>4__this; //Field offset: 0x28
+		private HierarchyNode <nodeById>5__1; //Field offset: 0x30
+		private HierarchyNodeChildren <nodes>5__2; //Field offset: 0x38
+		private Enumerator <>s__3; //Field offset: 0x50
+		private HierarchyNode <node>5__4; //Field offset: 0x70
+
+		private override int System.Collections.Generic.IEnumerator<System.Int32>.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 4
+		}
+
+		private override object System.Collections.IEnumerator.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 1043
+		}
+
+		[DebuggerHidden]
+		public <GetChildrenIds>d__25(int <>1__state) { }
+
+		private override bool MoveNext() { }
+
+		[DebuggerHidden]
+		private override IEnumerator<Int32> System.Collections.Generic.IEnumerable<System.Int32>.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override int System.Collections.Generic.IEnumerator<System.Int32>.get_Current() { }
+
+		[DebuggerHidden]
+		private override IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override object System.Collections.IEnumerator.get_Current() { }
+
+		[DebuggerHidden]
+		private override void System.Collections.IEnumerator.Reset() { }
+
+		[DebuggerHidden]
+		private override void System.IDisposable.Dispose() { }
+
+	}
+
+	[CompilerGenerated]
+	private sealed class <GetChildrenIdsByIndex>d__41 : IEnumerable<Int32>, IEnumerable, IEnumerator<Int32>, IEnumerator, IDisposable
+	{
+		private int <>1__state; //Field offset: 0x10
+		private int <>2__current; //Field offset: 0x14
+		private int <>l__initialThreadId; //Field offset: 0x18
+		private int index; //Field offset: 0x1C
+		public int <>3__index; //Field offset: 0x20
+		public BaseTreeViewController <>4__this; //Field offset: 0x28
+		private HierarchyNodeChildren <nodes>5__1; //Field offset: 0x30
+		private Enumerator <>s__2; //Field offset: 0x48
+		private HierarchyNode <node>5__3; //Field offset: 0x68
+
+		private override int System.Collections.Generic.IEnumerator<System.Int32>.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 4
+		}
+
+		private override object System.Collections.IEnumerator.Current
+		{
+			[DebuggerHidden]
+			private get { } //Length: 1043
+		}
+
+		[DebuggerHidden]
+		public <GetChildrenIdsByIndex>d__41(int <>1__state) { }
+
+		private override bool MoveNext() { }
+
+		[DebuggerHidden]
+		private override IEnumerator<Int32> System.Collections.Generic.IEnumerable<System.Int32>.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override int System.Collections.Generic.IEnumerator<System.Int32>.get_Current() { }
+
+		[DebuggerHidden]
+		private override IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+		[DebuggerHidden]
+		private override object System.Collections.IEnumerator.get_Current() { }
+
+		[DebuggerHidden]
+		private override void System.Collections.IEnumerator.Reset() { }
+
+		[DebuggerHidden]
+		private override void System.IDisposable.Dispose() { }
 
 	}
 
 	private static readonly ProfilerMarker K_ExpandItemByIndex; //Field offset: 0x0
-	private static readonly ProfilerMarker k_CreateWrappers; //Field offset: 0x8
-	private Dictionary<Int32, TreeItem> m_TreeItems; //Field offset: 0x30
-	private List<Int32> m_RootIndices; //Field offset: 0x38
-	private List<TreeViewItemWrapper> m_ItemWrappers; //Field offset: 0x40
-	private HashSet<Int32> m_TreeItemIdsWithItemWrappers; //Field offset: 0x48
-	private List<TreeViewItemWrapper> m_WrapperInsertionList; //Field offset: 0x50
+	 Hierarchy m_Hierarchy; //Field offset: 0x30
+	 HierarchyFlattened m_HierarchyFlattened; //Field offset: 0x38
+	 HierarchyViewModel m_HierarchyViewModel; //Field offset: 0x40
+	 Dictionary<Int32, HierarchyNode> m_IdToNodeDictionary; //Field offset: 0x48
+	private IHierarchyProperty<Int32> m_TreeViewDataProperty; //Field offset: 0x50
+	private bool m_HierarchyHasPendingChanged; //Field offset: 0x58
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Action<TreeViewExpansionChangedArgs> itemExpandedChanged; //Field offset: 0x60
+
+	internal event Action<TreeViewExpansionChangedArgs> itemExpandedChanged
+	{
+		[CompilerGenerated]
+		internal add { } //Length: 172
+		[CompilerGenerated]
+		internal remove { } //Length: 172
+	}
 
 	protected BaseTreeView baseTreeView
 	{
-		 get { } //Length: 130
+		 get { } //Length: 126
+	}
+
+	 Hierarchy hierarchy
+	{
+		 get { } //Length: 5
+		 set { } //Length: 296
 	}
 
 	public virtual IList itemsSource
@@ -37,43 +199,66 @@ public abstract class BaseTreeViewController : CollectionViewController
 
 	protected BaseTreeViewController() { }
 
-	internal override bool CanChangeExpandedState(int id) { }
+	[CompilerGenerated]
+	internal void add_itemExpandedChanged(Action<TreeViewExpansionChangedArgs> value) { }
 
-	public void CollapseItem(int id, bool collapseAllChildren) { }
+	public override bool CanChangeExpandedState(int id) { }
 
-	public void CollapseItemByIndex(int index, bool collapseAllChildren) { }
+	internal void ClearIdToNodeDictionary() { }
 
-	private void CreateWrappers(IEnumerable<Int32> treeViewItemIds, int depth, ref List<TreeViewItemWrapper>& wrappers) { }
+	public void CollapseItem(int id, bool collapseAllChildren, bool refresh = true) { }
 
-	internal bool Exists(int id) { }
+	public void CollapseItemByIndex(int index, bool collapseAllChildren, bool refresh = true) { }
+
+	private void CollapseItemByNode(in HierarchyNode node, bool collapseAllChildren, bool refresh) { }
+
+	internal HierarchyNode CreateNode(in HierarchyNode parent) { }
+
+	internal void DisposeHierarchy() { }
+
+	public bool Exists(int id) { }
 
 	public void ExpandItem(int id, bool expandAllChildren, bool refresh = true) { }
 
 	public void ExpandItemByIndex(int index, bool expandAllChildren, bool refresh = true) { }
 
+	private void ExpandItemByNode(in HierarchyNode node, bool expandAllChildren, bool refresh) { }
+
+	protected virtual void Finalize() { }
+
 	protected BaseTreeView get_baseTreeView() { }
+
+	 Hierarchy get_hierarchy() { }
 
 	public virtual IList get_itemsSource() { }
 
-	public abstract IEnumerable<Int32> GetAllItemIds(IEnumerable<Int32> rootIds = null) { }
+	[IteratorStateMachine(typeof(<GetAllItemIds>d__23))]
+	public override IEnumerable<Int32> GetAllItemIds(IEnumerable<Int32> rootIds = null) { }
 
 	public int GetChildIndexForId(int id) { }
 
-	public abstract IEnumerable<Int32> GetChildrenIds(int id) { }
+	[IteratorStateMachine(typeof(<GetChildrenIds>d__25))]
+	public override IEnumerable<Int32> GetChildrenIds(int id) { }
 
+	[IteratorStateMachine(typeof(<GetChildrenIdsByIndex>d__41))]
 	public IEnumerable<Int32> GetChildrenIdsByIndex(int index) { }
+
+	[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEditor.UIBuilderModule"}])]
+	internal void GetExpandedItemIds(List<Int32> list) { }
+
+	internal HierarchyNode GetHierarchyNodeById(int id) { }
+
+	internal HierarchyNode GetHierarchyNodeByIndex(int index) { }
 
 	public virtual int GetIdForIndex(int index) { }
 
-	internal int GetIndentationDepth(int id) { }
+	public int GetIndentationDepth(int id) { }
 
-	internal int GetIndentationDepthByIndex(int index) { }
+	public int GetIndentationDepthByIndex(int index) { }
 
 	public virtual int GetIndexForId(int id) { }
 
-	public abstract int GetParentId(int id) { }
-
-	public IEnumerable<Int32> GetRootItemIds() { }
+	public override int GetParentId(int id) { }
 
 	public override bool HasChildren(int id) { }
 
@@ -85,27 +270,44 @@ public abstract class BaseTreeViewController : CollectionViewController
 
 	internal virtual void InvokeMakeItem(ReusableCollectionItem reusableItem) { }
 
+	private bool IsChildOf(int childId, int id) { }
+
 	public bool IsExpanded(int id) { }
 
 	public bool IsExpandedByIndex(int index) { }
 
 	private bool IsIndexValid(int index) { }
 
-	public abstract void Move(int id, int newParentId, int childIndex = -1, bool rebuildTree = true) { }
+	internal bool IsViewDataKeyEnabled() { }
+
+	public override void Move(int id, int newParentId, int childIndex = -1, bool rebuildTree = true) { }
 
 	private void OnItemPointerUp(PointerUpEvent evt) { }
 
 	private void OnToggleValueChanged(ChangeEvent<Boolean> evt) { }
 
+	internal void OnViewDataReadyUpdateNodes() { }
+
 	internal void PostInitRegistration(ReusableTreeViewItem treeItem) { }
+
+	internal virtual void PreRefresh() { }
+
+	private void RaiseItemExpandedChanged(int id, bool isExpanded, bool isAppliedToAllChildren) { }
 
 	internal void RaiseItemParentChanged(int id, int newParentId) { }
 
-	public void RebuildTree() { }
+	[CompilerGenerated]
+	internal void remove_itemExpandedChanged(Action<TreeViewExpansionChangedArgs> value) { }
 
-	internal void RegenerateWrappers() { }
+	 void set_hierarchy(Hierarchy value) { }
 
 	public virtual void set_itemsSource(IList value) { }
+
+	internal void UpdateHierarchy() { }
+
+	internal void UpdateIdToNodeDictionary(int id, in HierarchyNode node, bool isAdd = true) { }
+
+	internal void UpdateSortOrder(in HierarchyNode newParent, in HierarchyNode insertedNode, int insertedIndex) { }
 
 }
 

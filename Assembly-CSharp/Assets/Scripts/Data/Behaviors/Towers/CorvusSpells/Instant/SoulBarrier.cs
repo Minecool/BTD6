@@ -8,7 +8,7 @@ public class SoulBarrier : CorvusInstantSpell
 
 	public virtual TowerBehaviorModel Def
 	{
-		 get { } //Length: 646
+		 get { } //Length: 652
 	}
 
 	public SoulBarrier() { }

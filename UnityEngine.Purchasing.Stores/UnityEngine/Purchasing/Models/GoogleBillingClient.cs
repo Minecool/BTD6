@@ -31,7 +31,7 @@ internal class GoogleBillingClient : IGoogleBillingClient
 
 	public override void AcknowledgePurchase(string purchaseToken, Action<IGoogleBillingResult> onAcknowledge) { }
 
-	private static AndroidJavaObject BuildSubscriptionUpdateParams(string oldPurchaseToken, GooglePlayProrationMode prorationMode) { }
+	private static AndroidJavaObject BuildSubscriptionUpdateParams(string oldPurchaseToken, GooglePlayReplacementMode replacementMode) { }
 
 	public override void ConsumeAsync(string purchaseToken, Action<IGoogleBillingResult> onConsume) { }
 
@@ -53,9 +53,9 @@ internal class GoogleBillingClient : IGoogleBillingClient
 
 	private static AndroidJavaClass GetSubscriptionUpdateParamClass() { }
 
-	public override AndroidJavaObject LaunchBillingFlow(AndroidJavaObject productDetails, string oldPurchaseToken, Nullable<GooglePlayProrationMode> prorationMode) { }
+	public override AndroidJavaObject LaunchBillingFlow(AndroidJavaObject productDetails, string oldPurchaseToken, Nullable<GooglePlayReplacementMode> replacementMode) { }
 
-	private AndroidJavaObject MakeBillingFlowParams(AndroidJavaObject productDetailsParamsList, string oldPurchaseToken, Nullable<GooglePlayProrationMode> prorationMode) { }
+	private AndroidJavaObject MakeBillingFlowParams(AndroidJavaObject productDetailsParamsList, string oldPurchaseToken, Nullable<GooglePlayReplacementMode> replacementMode) { }
 
 	public override void QueryProductDetailsAsync(List<String> products, string type, Action<IGoogleBillingResult, List`1<AndroidJavaObject>> onProductDetailsResponseAction) { }
 

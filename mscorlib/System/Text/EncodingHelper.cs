@@ -9,7 +9,7 @@ internal static class EncodingHelper
 
 	internal static Encoding UTF8Unmarked
 	{
-		internal get { } //Length: 491
+		internal get { } //Length: 481
 	}
 
 	private static EncodingHelper() { }

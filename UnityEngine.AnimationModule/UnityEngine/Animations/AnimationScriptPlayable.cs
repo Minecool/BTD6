@@ -1,8 +1,8 @@
 namespace UnityEngine.Animations;
 
 [MovedFrom("UnityEngine.Experimental.Animations")]
-[NativeHeader("Modules/Animation/ScriptBindings/AnimationScriptPlayable.bindings.h")]
 [NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
+[NativeHeader("Modules/Animation/ScriptBindings/AnimationScriptPlayable.bindings.h")]
 [NativeHeader("Runtime/Director/Core/HPlayable.h")]
 [RequiredByNativeCode]
 [StaticAccessor("AnimationScriptPlayableBindings", StaticAccessorType::DoubleColon (2))]

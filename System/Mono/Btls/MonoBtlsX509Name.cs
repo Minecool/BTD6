@@ -15,7 +15,7 @@ internal class MonoBtlsX509Name : MonoBtlsObject
 
 	internal BoringX509NameHandle Handle
 	{
-		internal get { } //Length: 113
+		internal get { } //Length: 117
 	}
 
 	internal MonoBtlsX509Name(BoringX509NameHandle handle) { }

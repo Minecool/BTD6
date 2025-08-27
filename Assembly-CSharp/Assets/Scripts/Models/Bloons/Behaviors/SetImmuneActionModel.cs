@@ -19,7 +19,7 @@ public class SetImmuneActionModel : BloonBehaviorActionModel
 
 	public ImmunityMutator Mutator
 	{
-		 get { } //Length: 207
+		 get { } //Length: 211
 	}
 
 	public SetImmuneActionModel() { }

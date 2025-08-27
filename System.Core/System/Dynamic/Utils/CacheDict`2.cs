@@ -18,7 +18,7 @@ internal sealed class CacheDict
 
 	internal TKey Item
 	{
-		internal set { } //Length: 331
+		internal set { } //Length: 326
 	}
 
 	internal CacheDict`2(int size) { }

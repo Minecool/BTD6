@@ -15,7 +15,7 @@ public class TriDiagonalMatrixF
 
 	public int N
 	{
-		 get { } //Length: 18
+		 get { } //Length: 14
 	}
 
 	public TriDiagonalMatrixF(int n) { }

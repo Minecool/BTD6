@@ -12,7 +12,7 @@ public class WebviewBackground : MonoBehaviour
 		[CompilerGenerated]
 		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 555
+		 remove { } //Length: 1899
 	}
 
 	public WebviewBackground() { }

@@ -7,12 +7,12 @@ public class Point2DEnumerator : IEnumerator<Point2D>, IEnumerator, IDisposable
 
 	public override Point2D Current
 	{
-		 get { } //Length: 145
+		 get { } //Length: 142
 	}
 
 	private override object System.Collections.IEnumerator.Current
 	{
-		private get { } //Length: 145
+		private get { } //Length: 142
 	}
 
 	public Point2DEnumerator(IList<Point2D> points) { }

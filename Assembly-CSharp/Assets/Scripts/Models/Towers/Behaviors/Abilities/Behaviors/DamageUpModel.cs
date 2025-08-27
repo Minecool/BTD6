@@ -21,7 +21,7 @@ public class DamageUpModel : AbilityBehaviorModel
 
 	public DamageUpMutator Mutator
 	{
-		 get { } //Length: 261
+		 get { } //Length: 265
 	}
 
 	public DamageUpModel(string name, int lifespanFrames, int additionalDamage, AssetPathModel projectileDisplay) { }

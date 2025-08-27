@@ -18,7 +18,7 @@ public class Stack : ICollection, IEnumerable, ICloneable
 
 		public override object Current
 		{
-			 get { } //Length: 173
+			 get { } //Length: 174
 		}
 
 		internal StackEnumerator(Stack stack) { }
@@ -33,7 +33,6 @@ public class Stack : ICollection, IEnumerable, ICloneable
 
 	}
 
-	private const int _defaultCapacity = 10; //Field offset: 0x0
 	private Object[] _array; //Field offset: 0x10
 	private int _size; //Field offset: 0x18
 	private int _version; //Field offset: 0x1C

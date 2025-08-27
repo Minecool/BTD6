@@ -20,11 +20,18 @@ internal static class UnityTls
 		UNITYTLS_NOT_SUPPORTED = 8,
 		UNITYTLS_ENTROPY_SOURCE_FAILED = 9,
 		UNITYTLS_STREAM_CLOSED = 10,
+		UNITYTLS_DER_PARSE_ERROR = 11,
+		UNITYTLS_KEY_PARSE_ERROR = 12,
+		UNITYTLS_SSL_ERROR = 13,
 		UNITYTLS_USER_CUSTOM_ERROR_START = 1048576,
 		UNITYTLS_USER_WOULD_BLOCK = 1048577,
-		UNITYTLS_USER_READ_FAILED = 1048578,
-		UNITYTLS_USER_WRITE_FAILED = 1048579,
-		UNITYTLS_USER_UNKNOWN_ERROR = 1048580,
+		UNITYTLS_USER_WOULD_BLOCK_READ = 1048578,
+		UNITYTLS_USER_WOULD_BLOCK_WRITE = 1048579,
+		UNITYTLS_USER_READ_FAILED = 1048580,
+		UNITYTLS_USER_WRITE_FAILED = 1048581,
+		UNITYTLS_USER_UNKNOWN_ERROR = 1048582,
+		UNITYTLS_SSL_NEEDS_VERIFY = 1048583,
+		UNITYTLS_HANDSHAKE_STEP = 1048584,
 		UNITYTLS_USER_CUSTOM_ERROR_END = 2097152,
 	}
 
@@ -229,6 +236,16 @@ internal static class UnityTls
 		}
 
 		[UnmanagedFunctionPointer(CallingConvention::Cdecl (2))]
+		internal sealed class unitytls_tlsctx_set_trace_level_t : MulticastDelegate
+		{
+
+			public unitytls_tlsctx_set_trace_level_t(object object, IntPtr method) { }
+
+			public override void Invoke(unitytls_tlsctx* ctx, unitytls_log_level level) { }
+
+		}
+
+		[UnmanagedFunctionPointer(CallingConvention::Cdecl (2))]
 		internal sealed class unitytls_tlsctx_set_x509verify_callback_t : MulticastDelegate
 		{
 
@@ -338,6 +355,16 @@ internal static class UnityTls
 
 		}
 
+		[UnmanagedFunctionPointer(CallingConvention::Cdecl (2))]
+		internal sealed class unitytls_x509verify_result_to_string_t : MulticastDelegate
+		{
+
+			public unitytls_x509verify_result_to_string_t(object object, IntPtr method) { }
+
+			public override Char* Invoke(unitytls_x509verify_result v) { }
+
+		}
+
 		public readonly ulong UNITYTLS_INVALID_HANDLE; //Field offset: 0x10
 		public readonly unitytls_tlsctx_protocolrange UNITYTLS_TLSCTX_PROTOCOLRANGE_DEFAULT; //Field offset: 0x18
 		public unitytls_errorstate_create_t unitytls_errorstate_create; //Field offset: 0x20
@@ -371,6 +398,8 @@ internal static class UnityTls
 		public unitytls_tlsctx_notify_close_t unitytls_tlsctx_notify_close; //Field offset: 0x100
 		public unitytls_tlsctx_free_t unitytls_tlsctx_free; //Field offset: 0x108
 		public unitytls_random_generate_bytes_t unitytls_random_generate_bytes; //Field offset: 0x110
+		public unitytls_x509verify_result_to_string_t unitytls_x509verify_result_to_string; //Field offset: 0x118
+		public unitytls_tlsctx_set_trace_level_t unitytls_tlsctx_set_trace_level; //Field offset: 0x120
 
 		public unitytls_interface_struct() { }
 
@@ -385,6 +414,18 @@ internal static class UnityTls
 	{
 		public ulong handle; //Field offset: 0x0
 
+	}
+
+	internal enum unitytls_log_level
+	{
+		UNITYTLS_LOGLEVEL_MIN = 0,
+		UNITYTLS_LOGLEVEL_FATAL = 0,
+		UNITYTLS_LOGLEVEL_ERROR = 1,
+		UNITYTLS_LOGLEVEL_WARN = 2,
+		UNITYTLS_LOGLEVEL_INFO = 3,
+		UNITYTLS_LOGLEVEL_DEBUG = 4,
+		UNITYTLS_LOGLEVEL_TRACE = 5,
+		UNITYTLS_LOGLEVEL_MAX = 5,
 	}
 
 	internal enum unitytls_protocol
@@ -507,6 +548,22 @@ internal static class UnityTls
 		UNITYTLS_X509VERIFY_FLAG_REVOKED = 2,
 		UNITYTLS_X509VERIFY_FLAG_CN_MISMATCH = 4,
 		UNITYTLS_X509VERIFY_FLAG_NOT_TRUSTED = 8,
+		UNITYTLS_X509VERIFY_FLAG_BADCRL_NOT_TRUSTED = 16,
+		UNITYTLS_X509VERIFY_FLAG_BADCRL_EXPIRED = 32,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_MISSING = 64,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_SKIP_VERIFY = 128,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_OTHER = 256,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_FUTURE = 512,
+		UNITYTLS_X509VERIFY_FLAG_BADCRL_FUTURE = 1024,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_KEY_USAGE = 2048,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_EXT_KEY_USAGE = 4096,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_NS_CERT_TYPE = 8192,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_BAD_MD = 16384,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_BAD_PK = 32768,
+		UNITYTLS_X509VERIFY_FLAG_BADCERT_BAD_KEY = 65536,
+		UNITYTLS_X509VERIFY_FLAG_BADCRL_BAD_MD = 131072,
+		UNITYTLS_X509VERIFY_FLAG_BADCRL_BAD_PK = 262144,
+		UNITYTLS_X509VERIFY_FLAG_BADCRL_BAD_KEY = 524288,
 		UNITYTLS_X509VERIFY_FLAG_USER_ERROR1 = 65536,
 		UNITYTLS_X509VERIFY_FLAG_USER_ERROR2 = 131072,
 		UNITYTLS_X509VERIFY_FLAG_USER_ERROR3 = 262144,
@@ -527,7 +584,7 @@ internal static class UnityTls
 
 	public static unitytls_interface_struct NativeInterface
 	{
-		 get { } //Length: 198
+		 get { } //Length: 184
 	}
 
 	public static bool get_IsSupported() { }

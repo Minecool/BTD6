@@ -14,5 +14,8 @@ public static class NativeArrayUnsafeUtility
 	[Extension]
 	public static Void* GetUnsafeReadOnlyPtr(NativeArray<T> nativeArray) { }
 
+	[Extension]
+	public static Void* GetUnsafeReadOnlyPtr(ReadOnly<T> nativeArray) { }
+
 }
 

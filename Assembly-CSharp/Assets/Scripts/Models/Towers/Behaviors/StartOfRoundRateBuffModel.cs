@@ -29,7 +29,7 @@ public class StartOfRoundRateBuffModel : TowerBehaviorModel
 
 	public RateMutator mutator
 	{
-		 get { } //Length: 229
+		 get { } //Length: 231
 	}
 
 	public StartOfRoundRateBuffModel(string name, float modifier, float duration, bool isUnique = true, string mutatorId = "StartOfRoundRateBuff") { }

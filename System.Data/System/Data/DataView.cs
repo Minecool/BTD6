@@ -66,7 +66,7 @@ public class DataView : MarshalByValueComponent, IBindingList, IList, ICollectio
 
 	private int CountFromIndex
 	{
-		private get { } //Length: 43
+		private get { } //Length: 36
 	}
 
 	[Browsable(False)]
@@ -100,7 +100,7 @@ public class DataView : MarshalByValueComponent, IBindingList, IList, ICollectio
 	[DefaultValue(null)]
 	public string Sort
 	{
-		 get { } //Length: 84
+		 get { } //Length: 75
 	}
 
 	internal Comparison<DataRow> SortComparison

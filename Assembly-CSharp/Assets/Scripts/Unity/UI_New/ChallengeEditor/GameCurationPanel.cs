@@ -17,12 +17,12 @@ public class GameCurationPanel : MapPanel
 
 	private CurationBrowser CurationBrowser
 	{
-		private get { } //Length: 133
+		private get { } //Length: 129
 	}
 
 	private static int RequiredReports
 	{
-		private get { } //Length: 247
+		private get { } //Length: 249
 	}
 
 	public GameCurationPanel() { }

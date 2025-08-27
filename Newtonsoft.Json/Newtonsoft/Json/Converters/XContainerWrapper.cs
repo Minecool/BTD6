@@ -9,24 +9,24 @@ internal class XContainerWrapper : XObjectWrapper
 
 	public virtual List<IXmlNode> ChildNodes
 	{
-		 get { } //Length: 761
+		 get { } //Length: 759
 	}
 
 	private XContainer Container
 	{
-		private get { } //Length: 107
+		private get { } //Length: 103
 	}
 
 	protected override bool HasChildNodes
 	{
-		 get { } //Length: 123
+		 get { } //Length: 121
 	}
 
 	[Nullable(2)]
 	public virtual IXmlNode ParentNode
 	{
 		[NullableContext(2)]
-		 get { } //Length: 162
+		 get { } //Length: 160
 	}
 
 	public XContainerWrapper(XContainer container) { }

@@ -21,7 +21,7 @@ public class XmlSchemaAny : XmlSchemaParticle
 
 	internal virtual string NameString
 	{
-		internal get { } //Length: 1020
+		internal get { } //Length: 1042
 	}
 
 	[DefaultValue(XmlSchemaContentProcessing::None (0))]
@@ -34,13 +34,13 @@ public class XmlSchemaAny : XmlSchemaParticle
 	[XmlIgnore]
 	internal XmlSchemaContentProcessing ProcessContentsCorrect
 	{
-		internal get { } //Length: 21
+		internal get { } //Length: 17
 	}
 
 	[XmlIgnore]
 	internal string ResolvedNamespace
 	{
-		internal get { } //Length: 67
+		internal get { } //Length: 65
 	}
 
 	public XmlSchemaAny() { }

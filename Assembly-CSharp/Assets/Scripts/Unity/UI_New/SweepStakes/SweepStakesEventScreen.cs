@@ -40,10 +40,9 @@ public class SweepStakesEventScreen : GameMenu
 		public int <>1__state; //Field offset: 0x0
 		public AsyncTaskMethodBuilder <>t__builder; //Field offset: 0x8
 		public SweepStakesEventScreen <>4__this; //Field offset: 0x20
-		private OnlineProfileModel <onlineData>5__2; //Field offset: 0x28
-		private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x30
-		private TaskAwaiter<SweepstakesStatusResponse> <>u__2; //Field offset: 0x38
-		private TaskAwaiter <>u__3; //Field offset: 0x40
+		private TaskAwaiter<OnlineProfileModel> <>u__1; //Field offset: 0x28
+		private TaskAwaiter<SweepstakesStatusResponse> <>u__2; //Field offset: 0x30
+		private TaskAwaiter <>u__3; //Field offset: 0x38
 
 		private override void MoveNext() { }
 
@@ -222,7 +221,7 @@ public class SweepStakesEventScreen : GameMenu
 	private Task BindPrizeIconImage(string imageString) { }
 
 	[AsyncStateMachine(typeof(<DoubleCheckSocialBarrierAndLoadUi>d__49))]
-	private Task DoubleCheckSocialBarrierAndLoadUi() { }
+	public Task DoubleCheckSocialBarrierAndLoadUi() { }
 
 	private void GenerateOrUpdateUi() { }
 

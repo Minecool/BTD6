@@ -18,7 +18,7 @@ public class VariableBehaviorViewModel : VariableViewModel<T>, IVariableBehavior
 
 	public override bool IsTypeSwitchable
 	{
-		 get { } //Length: 219
+		 get { } //Length: 210
 	}
 
 	public virtual object UntypedValue

@@ -1,6 +1,6 @@
 namespace UnityEngine;
 
-[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule", "Unity.UIElements"}])]
+[VisibleToOtherModules(new IL2CPP_TYPE_STRING[] {"UnityEngine.UIElementsModule", "UnityEditor.CoreModule"}])]
 internal class GUILayoutGroup : GUILayoutEntry
 {
 	private static readonly GUILayoutEntry none; //Field offset: 0x0

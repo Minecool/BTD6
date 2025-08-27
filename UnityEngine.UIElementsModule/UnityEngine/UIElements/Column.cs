@@ -1,7 +1,17 @@
 namespace UnityEngine.UIElements;
 
-public class Column
+[UxmlObject]
+public class Column : INotifyBindablePropertyChanged
 {
+	[Obsolete("UxmlObjectFactory<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
+	public class UxmlObjectFactory : UxmlObjectFactory<Column>
+	{
+
+		public UxmlObjectFactory() { }
+
+	}
+
+	[Obsolete("UxmlObjectFactory<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectFactory : UxmlObjectFactory<T, UxmlObjectTraits`1<T>>
 	{
 
@@ -9,25 +19,26 @@ public class Column
 
 	}
 
+	[Obsolete("UxmlObjectTraits<T> is deprecated and will be removed. Use UxmlElementAttribute instead.", False)]
 	public class UxmlObjectTraits : UxmlObjectTraits<T>
 	{
 		[CompilerGenerated]
-		private sealed class <>c__DisplayClass15_0
+		private sealed class <>c__DisplayClass14_0
 		{
 			public VisualTreeAsset asset; //Field offset: 0x0
 
-			public <>c__DisplayClass15_0() { }
+			public <>c__DisplayClass14_0() { }
 
 			internal VisualElement <Init>b__0() { }
 
 		}
 
 		[CompilerGenerated]
-		private sealed class <>c__DisplayClass15_1
+		private sealed class <>c__DisplayClass14_1
 		{
 			public VisualTreeAsset asset; //Field offset: 0x0
 
-			public <>c__DisplayClass15_1() { }
+			public <>c__DisplayClass14_1() { }
 
 			internal VisualElement <Init>b__1() { }
 
@@ -45,6 +56,7 @@ public class Column
 		private UxmlBoolAttributeDescription m_Resizable; //Field offset: 0x0
 		private UxmlStringAttributeDescription m_HeaderTemplateId; //Field offset: 0x0
 		private UxmlStringAttributeDescription m_CellTemplateId; //Field offset: 0x0
+		private UxmlStringAttributeDescription m_BindingPath; //Field offset: 0x0
 
 		public UxmlObjectTraits`1() { }
 
@@ -54,7 +66,19 @@ public class Column
 
 	}
 
-	private static readonly string k_InvalidTemplateError; //Field offset: 0x0
+	private static readonly BindingId nameProperty; //Field offset: 0x0
+	private static readonly BindingId titleProperty; //Field offset: 0x98
+	private static readonly BindingId iconProperty; //Field offset: 0x130
+	private static readonly BindingId visibleProperty; //Field offset: 0x1C8
+	private static readonly BindingId widthProperty; //Field offset: 0x260
+	private static readonly BindingId minWidthProperty; //Field offset: 0x2F8
+	private static readonly BindingId maxWidthProperty; //Field offset: 0x390
+	private static readonly BindingId sortableProperty; //Field offset: 0x428
+	private static readonly BindingId stretchableProperty; //Field offset: 0x4C0
+	private static readonly BindingId optionalProperty; //Field offset: 0x558
+	private static readonly BindingId resizableProperty; //Field offset: 0x5F0
+	private static readonly BindingId headerTemplateProperty; //Field offset: 0x688
+	private static readonly BindingId cellTemplateProperty; //Field offset: 0x720
 	private string m_Name; //Field offset: 0x10
 	private string m_Title; //Field offset: 0x18
 	private Background m_Icon; //Field offset: 0x20
@@ -67,40 +91,59 @@ public class Column
 	private bool m_Sortable; //Field offset: 0x61
 	private bool m_Optional; //Field offset: 0x62
 	private bool m_Resizable; //Field offset: 0x63
-	private Func<VisualElement> m_MakeHeader; //Field offset: 0x68
-	private Action<VisualElement> m_BindHeader; //Field offset: 0x70
-	private Action<VisualElement> m_UnbindHeader; //Field offset: 0x78
-	private Action<VisualElement> m_DestroyHeader; //Field offset: 0x80
-	private Func<VisualElement> m_MakeCell; //Field offset: 0x88
-	private Action<VisualElement, Int32> m_BindCell; //Field offset: 0x90
-	private Action<VisualElement, Int32> m_UnbindCellItem; //Field offset: 0x98
+	private VisualTreeAsset m_HeaderTemplate; //Field offset: 0x68
+	private VisualTreeAsset m_CellTemplate; //Field offset: 0x70
+	private Func<VisualElement> m_MakeHeader; //Field offset: 0x78
+	private Action<VisualElement> m_BindHeader; //Field offset: 0x80
+	private Action<VisualElement> m_UnbindHeader; //Field offset: 0x88
+	private Action<VisualElement> m_DestroyHeader; //Field offset: 0x90
+	private Func<VisualElement> m_MakeCell; //Field offset: 0x98
+	private Action<VisualElement, Int32> m_BindCell; //Field offset: 0xA0
+	private Action<VisualElement, Int32> m_UnbindCellItem; //Field offset: 0xA8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<VisualElement> <destroyCell>k__BackingField; //Field offset: 0xA0
+	private EventHandler<BindablePropertyChangedEventArgs> propertyChanged; //Field offset: 0xB0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Columns <collection>k__BackingField; //Field offset: 0xA8
+	private Comparison<Int32> <comparison>k__BackingField; //Field offset: 0xB8
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Column, ColumnDataType> changed; //Field offset: 0xB0
+	private string <bindingPath>k__BackingField; //Field offset: 0xC0
 	[CompilerGenerated]
 	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
-	private Action<Column> resized; //Field offset: 0xB8
+	private Action<VisualElement> <destroyCell>k__BackingField; //Field offset: 0xC8
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Columns <collection>k__BackingField; //Field offset: 0xD0
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Action<Column, ColumnDataType> changed; //Field offset: 0xD8
+	[CompilerGenerated]
+	[DebuggerBrowsable(DebuggerBrowsableState::Never (0))]
+	private Action<Column> resized; //Field offset: 0xE0
 
 	internal event Action<Column, ColumnDataType> changed
 	{
 		[CompilerGenerated]
-		internal add { } //Length: 186
+		internal add { } //Length: 174
 		[CompilerGenerated]
-		internal remove { } //Length: 186
+		internal remove { } //Length: 174
+	}
+
+	public override event EventHandler<BindablePropertyChangedEventArgs> propertyChanged
+	{
+		[CompilerGenerated]
+		 add { } //Length: 174
+		[CompilerGenerated]
+		 remove { } //Length: 174
 	}
 
 	internal event Action<Column> resized
 	{
 		[CompilerGenerated]
-		internal add { } //Length: 186
+		internal add { } //Length: 174
 		[CompilerGenerated]
-		internal remove { } //Length: 186
+		internal remove { } //Length: 174
 	}
 
 	public Action<VisualElement, Int32> bindCell
@@ -110,7 +153,20 @@ public class Column
 
 	public Action<VisualElement> bindHeader
 	{
+		 get { } //Length: 8
+	}
+
+	public string bindingPath
+	{
+		[CompilerGenerated]
+		 set { } //Length: 8
+	}
+
+	[CreateProperty]
+	public VisualTreeAsset cellTemplate
+	{
 		 get { } //Length: 5
+		 set { } //Length: 212
 	}
 
 	public internal Columns collection
@@ -119,6 +175,12 @@ public class Column
 		 get { } //Length: 8
 		[CompilerGenerated]
 		internal set { } //Length: 8
+	}
+
+	public Comparison<Int32> comparison
+	{
+		[CompilerGenerated]
+		 get { } //Length: 8
 	}
 
 	internal float desiredWidth
@@ -140,17 +202,26 @@ public class Column
 
 	internal int displayIndex
 	{
-		internal get { } //Length: 276
+		internal get { } //Length: 253
 	}
 
+	[CreateProperty]
+	public VisualTreeAsset headerTemplate
+	{
+		 get { } //Length: 5
+		 set { } //Length: 212
+	}
+
+	[CreateProperty]
 	public Background icon
 	{
 		 get { } //Length: 19
+		 set { } //Length: 215
 	}
 
 	internal int index
 	{
-		internal get { } //Length: 227
+		internal get { } //Length: 113
 	}
 
 	public Func<VisualElement> makeCell
@@ -161,56 +232,64 @@ public class Column
 
 	public Func<VisualElement> makeHeader
 	{
-		 get { } //Length: 5
+		 get { } //Length: 70
 		 set { } //Length: 79
 	}
 
+	[CreateProperty]
 	public Length maxWidth
 	{
 		 get { } //Length: 5
-		 set { } //Length: 79
+		 set { } //Length: 166
 	}
 
+	[CreateProperty]
 	public Length minWidth
 	{
 		 get { } //Length: 5
-		 set { } //Length: 79
+		 set { } //Length: 166
 	}
 
+	[CreateProperty]
 	public string name
 	{
 		 get { } //Length: 5
-		 set { } //Length: 76
+		 set { } //Length: 156
 	}
 
+	[CreateProperty]
 	public bool optional
 	{
 		 get { } //Length: 5
-		 set { } //Length: 49
+		 set { } //Length: 153
 	}
 
+	[CreateProperty]
 	public bool resizable
 	{
 		 get { } //Length: 5
-		 set { } //Length: 49
+		 set { } //Length: 153
 	}
 
+	[CreateProperty]
 	public bool sortable
 	{
 		 get { } //Length: 5
-		 set { } //Length: 49
+		 set { } //Length: 153
 	}
 
+	[CreateProperty]
 	public bool stretchable
 	{
 		 get { } //Length: 5
-		 set { } //Length: 49
+		 set { } //Length: 153
 	}
 
+	[CreateProperty]
 	public string title
 	{
 		 get { } //Length: 5
-		 set { } //Length: 79
+		 set { } //Length: 166
 	}
 
 	public Action<VisualElement, Int32> unbindCell
@@ -220,24 +299,26 @@ public class Column
 
 	public Action<VisualElement> unbindHeader
 	{
-		 get { } //Length: 70
+		 get { } //Length: 8
 	}
 
+	[CreateProperty]
 	public bool visible
 	{
 		 get { } //Length: 5
-		 set { } //Length: 49
+		 set { } //Length: 153
 	}
 
 	internal int visibleIndex
 	{
-		internal get { } //Length: 169
+		internal get { } //Length: 147
 	}
 
+	[CreateProperty]
 	public Length width
 	{
 		 get { } //Length: 5
-		 set { } //Length: 128
+		 set { } //Length: 219
 	}
 
 	private static Column() { }
@@ -248,14 +329,22 @@ public class Column
 	internal void add_changed(Action<Column, ColumnDataType> value) { }
 
 	[CompilerGenerated]
+	public override void add_propertyChanged(EventHandler<BindablePropertyChangedEventArgs> value) { }
+
+	[CompilerGenerated]
 	internal void add_resized(Action<Column> value) { }
 
 	public Action<VisualElement, Int32> get_bindCell() { }
 
 	public Action<VisualElement> get_bindHeader() { }
 
+	public VisualTreeAsset get_cellTemplate() { }
+
 	[CompilerGenerated]
 	public Columns get_collection() { }
+
+	[CompilerGenerated]
+	public Comparison<Int32> get_comparison() { }
 
 	internal float get_desiredWidth() { }
 
@@ -265,6 +354,8 @@ public class Column
 	public Action<VisualElement> get_destroyHeader() { }
 
 	internal int get_displayIndex() { }
+
+	public VisualTreeAsset get_headerTemplate() { }
 
 	public Background get_icon() { }
 
@@ -308,16 +399,30 @@ public class Column
 
 	private void NotifyChange(ColumnDataType type) { }
 
+	private void NotifyPropertyChanged(in BindingId property) { }
+
 	[CompilerGenerated]
 	internal void remove_changed(Action<Column, ColumnDataType> value) { }
+
+	[CompilerGenerated]
+	public override void remove_propertyChanged(EventHandler<BindablePropertyChangedEventArgs> value) { }
 
 	[CompilerGenerated]
 	internal void remove_resized(Action<Column> value) { }
 
 	[CompilerGenerated]
+	public void set_bindingPath(string value) { }
+
+	public void set_cellTemplate(VisualTreeAsset value) { }
+
+	[CompilerGenerated]
 	internal void set_collection(Columns value) { }
 
 	internal void set_desiredWidth(float value) { }
+
+	public void set_headerTemplate(VisualTreeAsset value) { }
+
+	public void set_icon(Background value) { }
 
 	public void set_makeCell(Func<VisualElement> value) { }
 

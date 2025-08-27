@@ -40,23 +40,23 @@ public struct QueryPairedUserAccountCommand : IInputDeviceCommandInfo
 	public string id
 	{
 		 get { } //Length: 20
-		 set { } //Length: 277
+		 set { } //Length: 269
 	}
 
 	public string name
 	{
 		 get { } //Length: 17
-		 set { } //Length: 274
+		 set { } //Length: 266
 	}
 
 	public static FourCC Type
 	{
-		 get { } //Length: 58
+		 get { } //Length: 54
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 58
+		 get { } //Length: 54
 	}
 
 	public static QueryPairedUserAccountCommand Create() { }

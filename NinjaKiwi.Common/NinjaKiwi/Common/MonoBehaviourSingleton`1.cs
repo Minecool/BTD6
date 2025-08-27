@@ -7,7 +7,7 @@ public abstract class MonoBehaviourSingleton : MonoBehaviour
 
 	public static T Instance
 	{
-		 get { } //Length: 1117
+		 get { } //Length: 1071
 	}
 
 	private static MonoBehaviourSingleton`1() { }

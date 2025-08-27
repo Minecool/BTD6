@@ -21,11 +21,17 @@ internal class PlayerConnectionInternal : IPlayerEditorConnectionNative
 	[FreeFunction("PlayerConnection_Bindings::RegisterInternal")]
 	private static void RegisterInternal(string messageId) { }
 
+	private static void RegisterInternal_Injected(ref ManagedSpanWrapper messageId) { }
+
 	[FreeFunction("PlayerConnection_Bindings::SendMessage")]
 	private static void SendMessage(string messageId, Byte[] data, int playerId) { }
 
+	private static void SendMessage_Injected(ref ManagedSpanWrapper messageId, ref ManagedSpanWrapper data, int playerId) { }
+
 	[FreeFunction("PlayerConnection_Bindings::TrySendMessage")]
 	private static bool TrySendMessage(string messageId, Byte[] data, int playerId) { }
+
+	private static bool TrySendMessage_Injected(ref ManagedSpanWrapper messageId, ref ManagedSpanWrapper data, int playerId) { }
 
 	private override void UnityEngine.IPlayerEditorConnectionNative.DisconnectAll() { }
 
@@ -45,6 +51,8 @@ internal class PlayerConnectionInternal : IPlayerEditorConnectionNative
 
 	[FreeFunction("PlayerConnection_Bindings::UnregisterInternal")]
 	private static void UnregisterInternal(string messageId) { }
+
+	private static void UnregisterInternal_Injected(ref ManagedSpanWrapper messageId) { }
 
 }
 

@@ -53,8 +53,9 @@ public static class SimulationTestUtilities
 		private CustomMapManagers <customMapManagers>5__8; //Field offset: 0x98
 		private TaskAwaiter<GameObject> <>u__2; //Field offset: 0xA0
 		private TaskAwaiter <>u__3; //Field offset: 0xA8
-		private TaskAwaiter<GameModel> <>u__4; //Field offset: 0xB0
-		private TaskAwaiter<BossDataModel> <>u__5; //Field offset: 0xB8
+		private Awaiter <>u__4; //Field offset: 0xB0
+		private TaskAwaiter<GameModel> <>u__5; //Field offset: 0xB8
+		private TaskAwaiter<BossDataModel> <>u__6; //Field offset: 0xC0
 
 		private override void MoveNext() { }
 

@@ -252,7 +252,7 @@ public class RogueLegendsManager
 
 	public void IncreaseRogueStage() { }
 
-	public void InitRogueRun(bool isChimps, bool isTraining) { }
+	public void InitRogueRun(bool isChimps, bool isTraining, int seedOverride = -1) { }
 
 	public void MaxFeatProgress(int featId) { }
 
@@ -284,7 +284,7 @@ public class RogueLegendsManager
 
 	public void ReportFeatProgress(LegendsFeatActive feat) { }
 
-	public void ResetRogueRun(bool isChimps = false) { }
+	public void ResetRogueRun(bool isChimps = false, int seedOverride = -1) { }
 
 	[CompilerGenerated]
 	private void set_QuestInGameData(QuestGameData value) { }

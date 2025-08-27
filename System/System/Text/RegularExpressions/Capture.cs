@@ -40,6 +40,8 @@ public class Capture
 
 	internal Capture(string text, int index, int length) { }
 
+	internal Capture() { }
+
 	[CompilerGenerated]
 	public int get_Index() { }
 

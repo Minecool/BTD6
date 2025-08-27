@@ -10,7 +10,7 @@ public class OffsetToTrackTarget : TargetTypeBehavior
 
 	public virtual AttackBehaviorModel Def
 	{
-		 get { } //Length: 357
+		 get { } //Length: 354
 	}
 
 	public OffsetToTrackTarget() { }

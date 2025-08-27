@@ -1,7 +1,8 @@
 namespace UnityEngine.Playables;
 
-[NativeHeader("Runtime/Mono/MonoBehaviour.h")]
+[HelpURL("https://docs.unity3d.com/ScriptReference/Playables.PlayableDirector.html")]
 [NativeHeader("Modules/Director/PlayableDirector.h")]
+[NativeHeader("Runtime/Mono/MonoBehaviour.h")]
 [RequiredByNativeCode]
 public class PlayableDirector : Behaviour
 {

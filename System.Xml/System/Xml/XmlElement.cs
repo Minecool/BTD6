@@ -8,12 +8,12 @@ public class XmlElement : XmlLinkedNode
 
 	public virtual XmlAttributeCollection Attributes
 	{
-		 get { } //Length: 283
+		 get { } //Length: 273
 	}
 
 	public override bool HasAttributes
 	{
-		 get { } //Length: 51
+		 get { } //Length: 49
 	}
 
 	public virtual string InnerText
@@ -24,7 +24,7 @@ public class XmlElement : XmlLinkedNode
 
 	public virtual string InnerXml
 	{
-		 set { } //Length: 232
+		 set { } //Length: 126
 	}
 
 	internal virtual bool IsContainer
@@ -61,7 +61,7 @@ public class XmlElement : XmlLinkedNode
 
 	public virtual XmlNode NextSibling
 	{
-		 get { } //Length: 62
+		 get { } //Length: 60
 	}
 
 	public virtual XmlNodeType NodeType

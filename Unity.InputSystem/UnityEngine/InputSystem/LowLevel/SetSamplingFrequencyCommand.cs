@@ -8,12 +8,12 @@ public struct SetSamplingFrequencyCommand : IInputDeviceCommandInfo
 
 	public static FourCC Type
 	{
-		 get { } //Length: 55
+		 get { } //Length: 54
 	}
 
 	public override FourCC typeStatic
 	{
-		 get { } //Length: 55
+		 get { } //Length: 54
 	}
 
 	public static SetSamplingFrequencyCommand Create(float frequency) { }

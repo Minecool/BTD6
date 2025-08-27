@@ -37,9 +37,9 @@ public class KnowledgeSkillBtn : MonoBehaviour
 	public event ClickedEventHandler ClickedEvent
 	{
 		[CompilerGenerated]
-		 add { } //Length: 162
+		 add { } //Length: 158
 		[CompilerGenerated]
-		 remove { } //Length: 162
+		 remove { } //Length: 158
 	}
 
 	public KnowlegdeSkillBtnState CurrState
