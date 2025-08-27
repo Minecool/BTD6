@@ -1,0 +1,24 @@
+namespace Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
+
+[Implementation(typeof(TargetWererabbit), False, False, new IL2CPP_TYPE_IL2CPP_TYPE_INDEX[] {}])]
+public class TargetWererabbitModel : TargetSupplierModel
+{
+	[SerializeField]
+	private float timeUntilIdle; //Field offset: 0x38
+	public int timeUntilIdleFrames; //Field offset: 0x3C
+	public bool isSelectable; //Field offset: 0x40
+
+	public TargetWererabbitModel(string name, float timeUntilIdle, bool isSelectable, bool isOnSubTower) { }
+
+	public virtual Model Clone() { }
+
+	public virtual bool GetIsActionable() { }
+
+	public virtual string GetName() { }
+
+	protected virtual bool IsEqualAfterReferenceCheck(Model to) { }
+
+	public virtual bool IsSelectable() { }
+
+}
+
